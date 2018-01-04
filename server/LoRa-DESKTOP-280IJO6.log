@@ -1,0 +1,18 @@
+20171215T06:40:05Z DESKTOP-280IJO6 LOKI: Info: C2 server definition is suspiciously short - will not add {
+
+20171215T06:40:05Z DESKTOP-280IJO6 LOKI: Info: C2 server definition is suspiciously short - will not add }
+20171215T06:40:09Z DESKTOP-280IJO6 LOKI: Info: Processing YARA rules folder C:\Users\Stratarxis\Downloads\LoRa\server\signature-base\yara
+20171215T06:40:25Z DESKTOP-280IJO6 LOKI: Info: C2 server definition is suspiciously short - will not add {
+
+20171215T06:40:25Z DESKTOP-280IJO6 LOKI: Info: C2 server definition is suspiciously short - will not add }
+20171215T06:40:28Z DESKTOP-280IJO6 LOKI: Info: Processing YARA rules folder C:\Users\Stratarxis\Downloads\LoRa\server\signature-base\yara
+20171215T06:40:50Z DESKTOP-280IJO6 LOKI: Info: C2 server definition is suspiciously short - will not add {
+
+20171215T06:40:50Z DESKTOP-280IJO6 LOKI: Info: C2 server definition is suspiciously short - will not add }
+20171215T06:40:53Z DESKTOP-280IJO6 LOKI: Info: Processing YARA rules folder C:\Users\Stratarxis\Downloads\LoRa\server\signature-base\yara
+20171215T06:40:53Z DESKTOP-280IJO6 LOKI: Info: Initializing Yara rule iocs.yara
+20171215T06:42:34Z DESKTOP-280IJO6 LOKI: Info: C2 server definition is suspiciously short - will not add {
+
+20171215T06:42:34Z DESKTOP-280IJO6 LOKI: Info: C2 server definition is suspiciously short - will not add }
+20171215T06:42:38Z DESKTOP-280IJO6 LOKI: Info: Processing YARA rules folder C:\Users\Stratarxis\Downloads\LoRa\server\signature-base\yara
+20171215T06:42:38Z DESKTOP-280IJO6 LOKI: Info: Initializing Yara rule iocs.yara

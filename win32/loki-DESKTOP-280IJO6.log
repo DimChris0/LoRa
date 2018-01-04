@@ -1,0 +1,14 @@
+20171215T06:42:34Z DESKTOP-280IJO6 LOKI: Notice: Starting Loki Scan SYSTEM: DESKTOP-280IJO6 TIME: 20171215T06:42:34Z PLATFORM: windows
+20171215T06:42:34Z DESKTOP-280IJO6 LOKI: Info: File Name Characteristics initialized with 2568 regex patterns
+20171215T06:42:35Z DESKTOP-280IJO6 LOKI: Info: C2 server indicators initialized with 33878 elements
+20171215T06:42:37Z DESKTOP-280IJO6 LOKI: Info: Malicious MD5 Hashes initialized with 18561 hashes
+20171215T06:42:38Z DESKTOP-280IJO6 LOKI: Info: Malicious SHA1 Hashes initialized with 7818 hashes
+20171215T06:42:38Z DESKTOP-280IJO6 LOKI: Info: Malicious SHA256 Hashes initialized with 23769 hashes
+20171215T06:42:38Z DESKTOP-280IJO6 LOKI: Info: False Positive Hashes initialized with 30 hashes
+20171215T06:42:38Z DESKTOP-280IJO6 LOKI: Info: Initializing YARA rules (composed string of all rule files)
+20171215T06:42:38Z DESKTOP-280IJO6 LOKI: Info: Initialized Yara rules at once
+20171215T06:42:38Z DESKTOP-280IJO6 LOKI: Info: Current user has admin rights - very good
+20171215T06:42:38Z DESKTOP-280IJO6 LOKI: Info: Scanning C:\Users\Stratarxis\Desktop\Newfolder ...  
+20171215T06:42:38Z DESKTOP-280IJO6 LOKI: Notice: Results: 0 alerts, 0 warnings, 1 notices
+20171215T06:42:38Z DESKTOP-280IJO6 LOKI: Result: SYSTEM SEEMS TO BE CLEAN.
+20171215T06:42:38Z DESKTOP-280IJO6 LOKI: Notice: Finished LOKI Scan SYSTEM: DESKTOP-280IJO6 TIME: 20171215T06:42:38Z
