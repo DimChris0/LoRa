@@ -63,7 +63,7 @@ optional arguments:
 
 # Dependencies
 
-See the dependencies of the two tools. 
+See the dependencies of the two tools.
 cherrypy(server)
 openpyxl
 lxml
