@@ -5,7 +5,7 @@ The two specialiced scanners [LOKI](https://github.com/Neo23x0/Loki) and [Rastre
 have been merged into a new generic IOC scanner called LoRa. By using a client/server RESTful API, it can also hunt for IOCs 
 on disk and memory across multiple systems using YARA rules. The server is the one responsible for finding, downloading the IOCs
 and then serving them as yara rules to the clients. The clients recieve the data and proceeds to scan its system and produce the 
-reports of the result. The server side is inside the server folder and the client side inside win32 folder.
+reports of the result. The server side is inside the server folder(lora_server.py) and the client side inside win32 folder(lora_win32.py).
 
 
 Detection is based on four detection methods:
