@@ -1,4 +1,3 @@
-
 # LoRa
 
 Collecting & Hunting for Indicators of Compromise (IOC)
@@ -48,8 +47,8 @@ Additional Checks:
 ## Update
 
 LoRa includes a separate updater tool named `lora-upgrader.py` which downloads from hardcoded repositories different
-file types (txt, pdf, csv, yara, xlx, xlsx, ioc) and extracts from them with the help of [ioc_parser]
-(https://github.com/armbues/ioc_parser) the indicators we are interested in such as MD5s, SHA256s, URLs, Filenames, 
+file types (txt, pdf, csv, yara, xlx, xlsx, ioc) and extracts from them with the help of 
+[ioc_parser](https://github.com/armbues/ioc_parser) the indicators we are interested in such as MD5s, SHA256s, URLs, Filenames, 
 Hosts and then proceeds to build the corresponding yara rules.
 
 ```
