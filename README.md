@@ -1,4 +1,4 @@
-	# LoRa
+# LoRa
 
 Collecting & Hunting for Indicators of Compromise (IOC)
 The two specialiced scanners [LOKI](https://github.com/Neo23x0/Loki) and [Rastrea2r](https://github.com/aboutsecurity/rastrea2r) 
