@@ -5,9 +5,7 @@
 #
 # by Ismael Valenzuela @aboutsecurity / Foundstone (Intel Security)
 
-#TODO: logger arguments
-#TODO: update loki
-#TODO: import ioc_writer and ioc_parser modules
+
 #TODO: add pickle ?
 #TODO: after downloading the signatures there are conflicts in yara where there are duplicate rules or syntax errors
 
@@ -31,12 +29,8 @@ from lib.doublepulsar import DoublePulsar
 import wmi
 import win32api
 from win32com.shell import shell
-#TODO: fix next line
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'ioc_writer\\examples\\openioc_to_yara')))
-import openioc_to_yara
-from ioc_parser import *
 
-#sys.stdout = codecs.getwriter('utf8')(sys.stdout)
+sys.stdout = codecs.getwriter('utf8')(sys.stdout)
 
 __author__ = ''
 __version__ = '0.1'
@@ -172,7 +166,7 @@ def index():
                                     'filepath': dummy,
                                     'extension': dummy,
                                     'filetype': dummy,
-                                    'md5': dummy,
+                                    'md5': dummy
                                 })
                                 (loggers[client]).log("INFO", "Initializing Yara rule %s" % file)
                             except Exception, e:

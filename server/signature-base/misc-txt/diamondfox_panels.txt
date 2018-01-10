@@ -50,6 +50,7 @@ hxxp://31.220.2.120/~angelboo/,2015-11-08 18:51:46,4417fc624633c14dae76e29b710fc
 hxxp://37.187.56.97/~saverbkc/kolla/advance/,2016-06-08 05:51:57,bb01a0690f28617fce88e61c74a43242dce12bd39646294d072e42d06f2ad8cd
 hxxp://42.pxlgmz.xyz/,2016-01-14 17:20:51,df084b5001cf2d4a1f14b1aac506cbcea2ba4c14bc622223d88826b31a64483f
 hxxp://45.63.98.16/qwiruysaekhskdhgsdlgsdkjghsjg/,2017-01-29 12:41:17,522bfd670ee8ae9853a61fd4a1a7221de6097d92f6743f1eaffa82f20d28bd18
+hxxp://45.76.70.152/df/,2017-12-13 13:21:18,90ab23fd4f1d9de816eb0a539feda274847c1867a16e76594b46e71c5fafe82c
 hxxp://45df36.de/df/,2015-08-07 21:06:28,df997dcf6dcc9e2451146b05623f8950daf924c3e3125b5aef1cc9f84edf4bc9
 hxxp://51.254.170.170/mlp/,2016-10-23 10:29:13,a717a614840f9c1b0aef4e8b8842a31110b6868b04f4a9e1b7645a085edaad49
 hxxp://51.254.240.44/bot11fox/,2016-06-01 23:56:48,ed178dbd6bda570d14ff8919293b9df2cc124403348f9dfdd36c33985184fb7b
@@ -109,6 +110,8 @@ hxxp://antonmakar.beget.tech/,2017-01-17 00:05:07,f18797aa0482567de62becdb28ba43
 hxxp://anveerbsuiness.in/html/,2015-09-06 11:17:43,e383675763ad934e97a3bcfa048abe2f9fd3bafd42e0052b0423e6fe80db4bbb
 hxxp://apps-install.com/tracking1/,2016-07-16 19:46:13,54c7fb22fe3a3c4de780ff72eeea8fc494bf8eab034be4062ab1b0fa7675a9f3
 hxxp://ar0u.com/0001/,2017-03-17 00:00:00,Submission
+hxxp://areapriv8.com/fox/,2017-12-16 08:31:20,eed5822b344009e16ba8a548b858c3dc8fef9288e15e92d27483863b2fcd9f97
+hxxp://areyouserious.usa.cc/temp/dir/cls/,2018-01-08 06:11:45,8d0d2ecb9024dd11f22f5f71341cf399a5b10f838ecf0cf5b95e8ffb664c3fad
 hxxp://armandolesaj.uphero.com/bot/,2016-01-13 10:57:57,78efac8a6f7a0ac221b18f0484688722ac6c271027173936fb4132dede4fa151
 hxxp://as.large-hack.ru/bn/,2016-04-12 08:53:37,b0c2b6faa7bee249cf146de702ddfe93f2aa15e6f09bcefa6ac30b4bd2f1db5a
 hxxp://atmosbot.xyz/Panel/,2016-09-01 00:13:52,a3b06bca23a783273967f4c26f215a3d87bf27eb45cb39f1bacfc2d7bb06266e
@@ -158,6 +161,8 @@ hxxp://c4n0ntr4c3.webege.com/wdom/,2015-07-24 01:56:54,ed0c179672f244b0a2c88fb85
 hxxp://cangamstyle.xyz/gory/,2015-10-25 08:46:51,5f2e079eebc6149adcc6c13ac73e6650c45c3ad4f0f0f87ccdcb607ea2bef3f2
 hxxp://cassuall.com/file/,2016-10-03 21:44:21,929af34bb2972a19adad18cd57682d190220ab3ce5cddc0a6f1b50c468a0ee81
 hxxp://cayrated.com/wp-admin/server/,2017-08-19 14:15:40,0a5a0c044703d11dedb3521033bea557fea0474e7e3ad3608a2855408bf0550c
+hxxp://ccppwbs.com/,2017-12-13 09:33:01,939e2dac89894fa6487d0f4e2efcef7692ca4e27df24045cb017505eaa0919a0
+hxxp://ccppwbs.com/gate.php/,2017-12-13 13:29:28,d16af126ed978425c8ee334296591d133db3cac30e27f9498747959ed74fbcc7
 hxxp://centerstdiamond.16mb.com/Panel/Panel/,2015-09-16 15:21:39,088db8240dcefa389e8f3b8e301f73b4e5d30f89ca7bc5475be4f456a9fb1a09
 hxxp://chadpetersonbeaumont.com/Panel/,2017-04-27 00:00:00,Submission
 hxxp://chcfi.com/api/scp/images/icons/jpgs/,2015-08-16 16:14:16,9f47909ba9b19bb24708426b5251ab8396af2372b0a357f4e9f07973d0712ad8
@@ -222,6 +227,7 @@ hxxp://dork-system.website/Panel/,2015-12-13 03:25:41,a70b5d8cfa77cb5bd4cdc9b7f2
 hxxp://dota-hack.club/jim/,2017-01-24 13:41:09,dacc84e90a48f1c92b23e9b33147d1e7dc07e8fbf82d2f18922739da539fd32d
 hxxp://drivertech.net/gr/,2015-10-20 19:44:47,1a3c6a4299ef374354eef6a26100f07b48b27db16725ea4477776a33243af3c9
 hxxp://drsayani.com/,2017-03-17 00:00:00,Submission
+hxxp://drsayani.com/damon/,2017-11-26 08:52:42,ad4b5d412288215b0fcaf6f1a11299b120ad850b7cc7fa50fcd75e36f5ac9677
 hxxp://drugz.lol/money/,2015-10-31 05:02:50,a9805fd15eedd32e114aa4c774e9975da3af944dae476f2b8e76cdaf066c4a53
 hxxp://duda.comli.com/,2015-10-24 17:43:54,2e211ae87dbf9e0b5ca49f952b5a7819d62e1440c95a921b5c185cfe4c4fe7ff
 hxxp://dvla.gov.uk.monsashop.com/01/,2016-12-21 08:40:25,59bd547e63212aa7f31a3e19a1c6ec574221215402da823476b4e66a0ce03767
@@ -245,6 +251,7 @@ hxxp://escort18.net/cgi%20bin/Panel/,2015-06-24 06:46:30,db726b90c192151e1d6a3d9
 hxxp://evellemusic.com/AB/,2016-01-19 12:24:14,b237565b32ae8cbde21b1f8fa9039ec46ca5aadaa9290df4952a5951565b168d
 hxxp://evergreenguesthouse.com/Demon/,2016-12-01 05:02:56,580c7ffaee0004c67f6d545e11ca2837b7a8b0e22f7febbb5b2efb77752d7d39
 hxxp://everli-killer.gq/kill/queenzy/,2016-02-06 16:50:59,92b2fce83027dd242122b8f4ca6258f1b257bdcf09597abea173052727349815
+hxxp://evgenas5.beget.tech/,2017-10-30 04:46:08,d39a0c1caef78273a75465d264525e5eceb635073cf3d5c6f2d62f24b6648a91
 hxxp://exowarfare.altervista.org/,2015-09-25 21:42:14,387af9862784c883cb1476cbadd388a65f457ffbaa43f812046e714aa36e9220
 hxxp://exowarfare.altervista.org/Dia/gate.php/,2015-07-04 13:48:21,acfe9bab64ac3e91ed0f04303959e4100c83f91c358da35534475c558b380d1f
 hxxp://f0005026.xsph.ru/2/,2016-02-07 12:12:11,f919693974a766830a52fe84d83fe72c04ca87145785afdafce13069564884c5
@@ -386,6 +393,7 @@ hxxp://marson42.com/diamond/,2015-09-10 12:55:14,354899389d4881a074af47c48703fe5
 hxxp://marson42.netau.net/diamond/,2015-10-28 10:39:33,31eaa4147a93a1c558e5c0fafe63a82c3381fe988d20011891459b045ddf2c32
 hxxp://may31.ml/abc/,2015-08-07 07:13:32,28724f4d6cb9233bfddcb6f424f6a6e642e9d78c326fb764345eb1592fcaaf4d
 hxxp://mecacas.comli.com/,2016-04-05 09:39:37,4c833fc427fbaaaa28a9d867f2d68332d0ab325e30daf3f923e60533e471f8b2
+hxxp://medisonsteeltech.com/images/blissd/,2017-11-27 12:55:51,0be300a90592a82bf74fd61d1dbf51b056c9eec4c0d08d129a29e3df338c2eec
 hxxp://megazord.su/templates_c/,2016-04-16 19:07:15,91a0f0ed320cb42bd2540434ebc882dc479de922d60d128b0146974f3e56c6ed
 hxxp://mehdaaa.be/panel/,2016-04-06 05:15:49,6452908417914172523a925a7e0cccd61bf3044e0bf01e0a3d7bb8ca7db6c910
 hxxp://mentalforums.ru/foxru/,2016-01-06 16:38:25,2b0217552c5fd4fa078bb4b4f4c62c597332ee4c2133d42f2069bec499d9cd4f
@@ -452,6 +460,7 @@ hxxp://p-account.com/Fox/,2016-05-02 13:56:36,83bd2f0928fba5a9e7ae90e68aa3240434
 hxxp://pain-panel.cf/,2016-02-20 12:44:40,54cad8cea0406f98cb86bb0a4fba398cf081aa41a23f2fe4073591cdad17ea7c
 hxxp://panzey.com/askali/wp-content/plugins/demoone/test/,2015-10-09 01:43:16,1d0ffbdc5777864870a133451bd6586e50bf85a5ce2dde56beec598d6e6b52f8
 hxxp://panzey.com/askali/wp-content/plugins/demoone/test/Panel/,2015-10-09 01:43:16,1d0ffbdc5777864870a133451bd6586e50bf85a5ce2dde56beec598d6e6b52f8
+hxxp://parleg.club/Panel/,2017-11-28 19:52:34,959b1063120cacfe108b862d15ec8b6f5c5ecba6c054b982231381bd4afae255
 hxxp://paskuda.gq/,2015-10-25 08:35:41,39b66be0c68578cc5a948408874775c44827b3ac81a6ff53a61b167ab2e60ed0
 hxxp://passargad-tours.com/nray/Panel/,2015-05-08 17:51:19,4b3843f6dd367da1d6dc31c58c4f22a99a5873fec31318edd30e1a67a41e72e1
 hxxp://patient.abortionshelp.com/bot/,2017-08-09 23:05:40,d5f1c37bb3fd5bd629d72ceb10d066688de11059f5bd9cceecba31598e804dda
@@ -465,6 +474,7 @@ hxxp://plat-oplat.ru/Panel/,2016-02-12 04:37:18,33645f82f5444d2267983bd70cd508a5
 hxxp://pokemonburn.com/d1/,2016-10-28 13:35:18,9ac074226bdf4f8bcbb76a11c15e8be10c5d63f000fe1706286f7def18233343
 hxxp://poleneitor.com/fox/,2016-02-29 14:43:04,0d8150cf182f2b153a275f0587767da02e2243fc090bec26553e78352370f2b4
 hxxp://popovalx.shn-host.ru/,2016-07-13 14:43:29,a2eccb633716dd1df4e4e028d8c048bf487760fe141da9946d86257ef2adc659
+hxxp://posalive.su/4AB4XYhYqkuvK2vtFKxmRvg2GD/,2017-12-18 09:42:48,e65836e23d2225692c3ab5ee545731c90520b032b84c729f52ab68a38c595013
 hxxp://posnxqmp.posnxqmp.ru/Panel/,2017-04-25 08:15:21,69ca225fc7108ba194ce4e7eaba50c426322c8a635d20041911b071f29951af0
 hxxp://power-uping.com/PowerPanel/,2015-11-18 20:20:47,a10f541c94b5e16d9d5f8da3490b5c47b5201c62882af1eac3bb7c972d64d285
 hxxp://poweroftech.com/soul/,2016-02-22 01:24:06,f33f3f8c746ff9f32736d320535a5c49b02bf31f64460af9f8a7226830843cf2
@@ -502,6 +512,7 @@ hxxp://rootemmanuel.com/jrs/Panel/,2015-08-27 05:21:49,b12e50181578216e16c7b59ab
 hxxp://rss.mrx.com/cache/,2016-03-04 08:26:41,8715b609e1ed70da09649cb20af9f3ad2d3aaa3ea633796ded528c989b56794c
 hxxp://rss.updatewindow.xyz/ff/,2016-03-04 10:38:55,a69252ee69785e97d38cc3ee9ff026b29334d220821d862984ad41162d92a65b
 hxxp://rumahmurahbekasi.co.id/wp-includes/wp-posts/gig/wp-hosts/hosts-ftp/,2017-05-03 12:06:38,0995cf6cf6b8e64eb25ca2b728c445aa253c2a7f121b51366977cb51626985b4
+hxxp://s1.sociumin.com/,2017-10-25 16:54:51,f658dc9ce98652c7822021c1509508a1047df42a4a33dfc276569c65d15d51f2
 hxxp://s28977-hostde2.fornex.org/,2015-12-28 10:40:30,57fdf9fd5172eebc6112ba09d72066994ed5b47c274ba95456fe47d42a721fce
 hxxp://s62408.smrtp.ru/,2017-07-11 04:49:15,739b23b04f922b617aeb1625ea7ca4ccf131f576d925935a9d89a8a7b8ce3704
 hxxp://saasport.com/wp-secure/,2016-10-21 18:07:43,7619ba1ac21e70f38254ff1567af67f02854e9cacae4f7c12d76a73ed4320955
@@ -587,7 +598,9 @@ hxxp://thesites.site88.net/Panel/,2017-03-17 00:00:00,Submission
 hxxp://thesolution.pk/fox/,2015-07-05 20:36:32,593536e06cb8fc18da3af0196f650e73deecea707af5c99f4414057c88269fe1
 hxxp://thrusterrecord.bplaced.net/,2016-01-12 13:22:03,974ed0e12e10be280491e99371671e7c19ec87065cd682e6e237a1ea1f06cbbb
 hxxp://tldzadanks.ru/inhale/,2017-02-14 11:14:10,45e156dfd20867ec39d453f72efa981621cbb0703b5218f81f4b5b82bdaca74d
+hxxp://tokoyplast.com/diamond/,2017-11-07 07:55:01,c107077599ff27941b52e0f78d80d51f652791b65c2f338ae04ebc4f28f00afd
 hxxp://topcup.rs/0/temp/Panel/,2015-07-22 18:29:17,03c5e214228a8c4ac2a614ec5ad598431eedaaab81961262ab43781dbbc4381a
+hxxp://torroot.ru/toor/,2018-01-05 07:18:17,9af90e1efb095b5b29f281255805de5370eec571eabb585694536dc43632c9a2
 hxxp://tradeneww44.in.net/html/,2015-09-21 04:32:04,717e08b101d9db293f85466c86fad239df77f3d56841a4f4b23c29eb8613f96a
 hxxp://trainwreck.ru/panel/,2017-06-28 10:04:32,fcc243f74c05ea8ee0fd10a73c23f24787c8502fff2e694a327d531d16750f95
 hxxp://trialworld.cf/nel/,2017-09-26 07:35:38,97b3699fe8d21672af4483f3849266568fcc8598223f0a069712f1d7f6bc351a
@@ -615,6 +628,7 @@ hxxp://wehideourshit.xyz/gfuckingg/,2015-12-28 08:56:33,dab1f6954a8fb0d49fe85d45
 hxxp://whitecol.com/panel/,2015-11-17 14:07:56,d7083c49a0d1d9533365ceaa79be68fdbdc2f5ff82b1cf4a0bf3ff1e7db1aa59
 hxxp://wmdabesss.3eeweb.com/Panel/Panel/,2016-11-15 18:08:38,9429615cf6d44a30ab3a10c9a978ba7a73db34165965eec2e31aafe757530af5
 hxxp://work-smart-november-22.panelsinfos.com/,2016-12-08 02:53:40,01a09f091ddb77bbfa690ded8af8c806bdf2e268dadf969517fd4efab02b1d20
+hxxp://writeschools.altervista.org/Panel/gate.php/,2018-01-04 20:27:20,5aee3f75fad7005d190ccd1214f91c9ddcce67ad081b79c898a9c0cc14502bf9
 hxxp://wsedff.esy.es/Panel/Panel/,2015-09-06 09:04:51,1cae5085d427173ca4e5ddb588ffebdc233f4c224245ce23a5ae672ab28a07df
 hxxp://wtf9x.hostreo.com/Panel/Panel/,2016-02-03 00:40:36,0b82ee8db127aaa778e1febe28bbde5bf0c6a0d841d9934a41a600052f44e74a
 hxxp://wurm123.bplaced.net/test/,2015-12-31 08:47:49,824021196cb29eb09fa1102080cac33326dadea982cea7bc9c97488bad8d97ce
@@ -658,6 +672,7 @@ hxxp://www.deviceservice.name/Panel/,2015-07-17 07:13:17,2c4c36e767515efea8884e0
 hxxp://www.documents.hightradepro.com/web/,2016-03-14 21:12:07,384fbc3d6b6fc94941f487217eb2fed48a21c215dbde86d63d623b0a6cf0d65f
 hxxp://www.domedicosdelnorte.com/live/Panel/,2015-12-16 22:14:41,df098d30d2d346ff643903f3b1d2ee42f8b59eb65432a3dc4c68051b67d63f62
 hxxp://www.dropeboxs.in/fox/Panel/,2015-07-17 08:29:38,9461b1d490aac74dae823733b326f849f89e76c59479c7177f057e45644b8f41
+hxxp://www.drsayani.com/damon/,2017-11-26 08:52:42,ad4b5d412288215b0fcaf6f1a11299b120ad850b7cc7fa50fcd75e36f5ac9677
 hxxp://www.druzyonline.com/js/images/js/Panel/,2016-05-02 01:45:56,b3b45e85ac7f785c93fcd7b7987e99db201bb11b3381d303d2bff9497d727152
 hxxp://www.ebookseller.tk/Panel/,2015-08-25 10:41:36,d1145e406be130d611f25d64d209d764d82af5a7c1644b0d5542842371ab70f3
 hxxp://www.edgyfoxy.space/Panel/,2015-08-30 23:37:50,952d9bd6c9efecb278cb1167da27d3b6721c382f0259a4a85d97d5d45a341b8f

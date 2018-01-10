@@ -1,0 +1,99 @@
+execution example:
+
+python lora_win32.py -y airbnb_binaryalert.yar,apt_agent_btz.yar disk-scan C:\Users\Stratarxis\Downloads\LoRa\win32\config 
+python lora_win32.py -y all disk-scan C:\Users\Stratarxis\Downloads\LoRa\win32\config
+
+python lora_win32.py -y myrule.yar disk-scan C:\Users\Stratarxis\Desktop\Newfolder
+
+triage 		checked
+disk-scan  	checked
+mem-scan 	checked
+mem-dump 	checked
+
+######################################################################
+The self contained binary winpmem.exe
+-------------------------------------
+
+This program is easiest to use for incident response since it requires no other
+dependencies than the executable itself. The program will load the correct
+driver (32 bit or 64 bit) automatically.
+
+c:\..> winpmem_1.3.exe -h
+Winpmem - A memory imager for windows.
+Copyright Michael Cohen (scudette@gmail.com) 2012.
+
+Version 1.3. Built Nov 12 2012
+Usage:
+  winpmem_1.3.exe [option] [output path]
+
+Option:
+  -l    Load the driver and exit.
+  -u    Unload the driver and exit.
+  -h    Display this help.
+  -w    Turn on/off write mode.
+  -1    Use MmMapIoSpace method.
+  -2    Use \\Device\PhysicalMemory method (Default).
+  -d    Produce a crashdump file.
+########################################################################
+
+winpmem - checked
+
+NOTE: changed backend server to cherrypy and to do so installed with pip install the wsgiserver
+installed cherrypy-wsgiserver using this repo https://github.com/od-eon/cherrypy-wsgiserver
+and copied the wsgiserver folder to the C:\Python27\Lib\site-packages\CherryPy-12.0.1-py2.7.egg\cherrypy folder
+in order to see the functions
+
+
+for each client it produces a unique log
+
+
+for agent to start give command line argument -agent and to stop it ctrl+c and it needs a different terminal
+time interval is given in minutes
+
+
+
+(?) the iocs refering to ip addresses and domains
+
+
+
+installed ioc_parser (https://github.com/armbues/ioc_parser) through pip and through downloading and python setup.py install
+but on windows coundn't see the package and i had to rename first the file iocp (C:\Users\Stratarxis\Downloads\ioc_parser-master\ioc_parser-master\bin)
+to iocp.py and then move it one folder up in order to see the folder iocp which was needed to run
+
+
+
+changed file C:\Users\Stratarxis\Downloads\LoRa\server\ioc_parser\iocp\Output.py to create yara file in the same directory
+
+
+
+changed openioc_to_yara in order to parse the iocs of mine and produce correct yara rules and extend its functionality
+e.g. recognize the size of file and check its hash
+
+
+installed openpyxl to precess excel files
+
+PROBLEMS WITH PDF PARSING
+-------------------------
+
+Alerts DL-2011 Alerts-A-2011-02-18-01 Night Dragon Attachment 1.pdf had a problem with parsing
+Dark_Seoul_Cyberattack had a problem with parsing
+DTL_06282015_01.pdf also
+energy_at_risk.pdf
+h12756_wp_shell_crew [ERROR] Text extraction is not allowed: <open file 'C:\\Users\\Stratarxis\\Downloads\\LoRa\\server\\signature-base\\pdf\\h12756-wp-shell-crew.pdf', mode 'rb' at 0x00000000068CD8A0>
+
+solved it with printing pdf as xps and then printing the xps as pdf. DTL again cannot be parsed
+
+
+IOC Term Definitions 
+https://github.com/mandiant/OpenIOC_1.1/blob/master/IOC_Terms_Defs.md
+
+
+RAST VS LOKI VERSIONS OF DISK AND MEM SCAN
+------------------------------------------
+disk:
+rast only does rule match - loki filename and hash check
+
+mem:
+loki checks proc connections
+loki checks Sysforensics
+working size

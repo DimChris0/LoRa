@@ -4,7 +4,7 @@ rule Flash_CVE_2015_5119_APT3 {
         description = "Exploit Sample CVE-2015-5119"
         author = "Florian Roth"
         score = 70
-        yaraexchange = "No distribution without author's consent"
+        yaraexchange = "No distribution without author's consent" 
         date = "2015-08-01"
     strings:
         $s0 = "HT_exploit" fullword ascii

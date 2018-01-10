@@ -2,8 +2,11 @@
 
 #TODO: in the triage->tool list what to do with the commented ?
 #TODO: webhist, prefetch
-#TODO: dikaiologhse ta kommatia apo rast k lokilogger
-#TODO: get all the registries and check them with the ioc terms RegistryItem
+#TODO: add the filename, filesize check inside the condition of rules
+# filename is recognised by the yara-python so we can compile the Rules
+# immediately by adding to a .yar the line "filename = (value)" and not call getfilenameiocs
+# and search all the filenames of files in our scan
+
 import os
 import sys
 from sys import platform as _platform
@@ -225,7 +228,7 @@ class LoRa():
                     filePath = os.path.join(root,filename)
 
                     fileSize = os.stat(filePath).st_size
-                    #TODO: my contribution here
+                    # my contribution here
                     if fileSize == 0:
                         continue
 
@@ -1231,6 +1234,7 @@ def triage(tool_server, output_server, silent):
 
         guid  = ""
         resul = ""
+        # from here and below it checks if Mcaffe epo agent is installed
         try:
             arq = platform.architecture()
             res = arq[0]
@@ -1349,6 +1353,47 @@ def webhist(tool_server, output_server, histuser, silent):
         if os.path.exists(ie10_tmp_cache_dir):
             shutil.rmtree(ie10_tmp_cache_dir)
 
+
+
+def prefetch(tool_server, output_server, silent):
+
+    """ Prefetch collection module """
+    createt = strftime('%Y%m%d%H%M%S', gmtime())
+    try:
+        smb_bin = tool_server + r'\tools'
+        smb_data = output_server + r'\data' + r'\prefetch-' + os.environ['COMPUTERNAME'] + r'\\' + createt
+
+        if not os.path.exists(smb_data):
+            os.makedirs(smb_data)
+
+        if not silent:
+            print '\nSaving output to '+r'\\'+smb_data
+
+        user_dirs = next(os.walk('c:\\windows\\prefetch\\'))[2]
+        b = True
+        for f in user_dirs:
+            if f.endswith(".pf"):
+                cmd = r'\\' + smb_bin + r'\winprefetchview\winprefetchview.exe'
+                cmd = cmd + r' /prefetchfile '+ r'c:\windows\prefetch\\' + f + r' /scomma '  + r'\\' + smb_data + '\\' + f + r'.csv'
+                p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                p.communicate()
+                if b:
+                    b = False
+                    smb_data2 = r'\\' + output_server + r'\data' + r'\prefetch-' + os.environ['COMPUTERNAME'] + r'\\' + createt + r'\Main'
+                    if not os.path.exists(smb_data2):
+                        os.makedirs(smb_data2)
+
+                    cmd_main = r'\\' + smb_bin + r'\winprefetchview\winprefetchview.exe'
+                    cmd_main = cmd_main + r' /scomma '  + smb_data2 + '\\' + r'Global-Prefetch'+ r'.csv'
+
+                    p2 = subprocess.Popen(cmd_main, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                    p2.communicate()
+    except:
+        print "Some PF files cannot be read"
+        traceback.print_exc()
+        pass
+
+
 def walk_error(err):
     try:
         if "Error 3" in str(err):
@@ -1400,7 +1445,7 @@ def myManual(args, logger, t_hostname, isAdmin):
             webhist(args.TOOLS_server, args.DATA_server, args.username, args.silent)
 
     elif args.mode == 'prefetch':
-            prefetch(args.TOOLS_server, args.DATA_server, args.silent)
+            prefetch(r'./w1000', r'./w1000', args.silent)
 
     # Result ----------------------------------------------------------
     logger.log("NOTICE", "Results: {0} alerts, {1} warnings, {2} notices".format(logger.alerts, logger.warnings, logger.notices))
@@ -1464,22 +1509,17 @@ if __name__ == '__main__':
     list_parser = subparsers.add_parser('mem-scan', help='Scan the memory')
 
     list_parser = subparsers.add_parser('mem-dump', help='Make dump file of current memory')
-    # list_parser.add_argument('TOOLS_server', action='store', help='Binary tool server (SMB share)')
-    # list_parser.add_argument('DATA_server', action='store', help='Data output server (SMB share)')
-    list_parser.add_argument('-sil', '--silent', action='store_true', help='Suppresses standard output')
+    list_parser.add_argument('-silent', '--silent', action='store_true', help='Suppresses standard output')
 
     list_parser = subparsers.add_parser('triage', help='')
-    list_parser.add_argument('TOOLS_server', action='store', help='Binary tool server (SMB share)')
-    list_parser.add_argument('DATA_server', action='store', help='Data output server (SMB share)')
-    list_parser.add_argument('-sil', '--silent', action='store_true', help='Suppresses standard output')
+    list_parser.add_argument('-silent', '--silent', action='store_true', help='Suppresses standard output')
 
     list_parser = subparsers.add_parser('web-hist', help='')
-    list_parser.add_argument('TOOLS_server', action='store', help='Binary tool server (SMB share)')
-    list_parser.add_argument('DATA_server', action='store', help='Data output server (SMB share)')
     list_parser.add_argument('-u', '--username', action='store', default='all', help='User account to generate history for')
-    list_parser.add_argument('-s', '--silent', action='store_true', help='Suppresses standard output')
+    list_parser.add_argument('-silent', '--silent', action='store_true', help='Suppresses standard output')
 
     list_parser = subparsers.add_parser('prefetch', help='')
+    list_parser.add_argument('-silent', '--silent', action='store_true', help='Suppresses standard output')
     list_parser = subparsers.add_parser('disk-scan', help='')
     list_parser.add_argument('path', action='store', help='File or directory path to scan')
 
@@ -1495,7 +1535,7 @@ if __name__ == '__main__':
                     default=[],
                     metavar='yara-rules',
                     help="yara rule files to be checked")
-    parser.add_argument('--agent', action='store_true', help='Start the LoRa agent',  default=False)
+    parser.add_argument('--agent', help='Start the LoRa agent',  default=False)
     parser.add_argument('-timeint', help='Time interval for LoRa agent to begin checking', metavar='time-interval', default=60)
     parser.add_argument('--printAll', action='store_true', help='Print all files that are scanned', default=False)
     parser.add_argument('--allreasons', action='store_true', help='Print all reasons that caused the score', default=False)
@@ -1515,7 +1555,7 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     arg_rules = args.y
-
+    print arg_rules
 
     # Remove old log file
     if os.path.exists(args.l):
@@ -1550,7 +1590,7 @@ if __name__ == '__main__':
             logger.log("NOTICE", "Program should be run as 'root' to ensure all access rights to process memory and file objects.")
 
 
-    # TODO: agent starts here
+    # agent starts here with time interval
     # possible exec ?
     if args.agent == True:
         timeInterval = args.timeint

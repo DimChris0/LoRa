@@ -18,7 +18,8 @@ import os
 import argparse
 import traceback
 from sys import platform as _platform
-from ioc_parser.iocp import Parser
+
+from iocparser.iocp import Parser
 import sys
 import lxml.objectify
 from openpyxl import load_workbook
@@ -93,8 +94,7 @@ class LoRaUpdater(object):
 
                 # Preparations
                 try:
-                    sigDir = os.path.join(self.application_path, 'signature-base\\')
-                    print sigDir
+                    sigDir = os.path.join(self.application_path, r'signature-base/')
                     for outDir in ['', 'openiocs', 'yara', 'csv', 'misc-txt', 'excel', 'pdf']:
                         fullOutDir = os.path.join(sigDir, outDir)
                         if not os.path.exists(fullOutDir):
@@ -203,7 +203,6 @@ class LoRaUpdater(object):
 
 
 
-
     def extractFromFiles(self):
         for root, directories, files in os.walk(unicode(r'./signature-base'), onerror=walk_error, followlinks=False):
             for dirr in directories:
@@ -211,25 +210,31 @@ class LoRaUpdater(object):
                 #https://digital-forensics.sans.org/blog/2012/07/24/mutex-for-malware-discovery-and-iocs
 
                 if dirr == 'pdf':
-                	parser = Parser.Parser(None, 'pdf', True, 'pdfminer', 'yara', None)
-                	parser.parse(self.application_path + r'./signature-base/pdf')
-                elif dirr == 'openiocs':
-                    for ffile in files:
-                        parseOpenIocs()
-                if dirr == "excel":
-                    for exroot, exdirectories, exfiles in os.walk(unicode(r'./signature-base/excel'), onerror=walk_error, followlinks=False):
-                        for ffile in exfiles:
-                            self.parseExcel(ffile)
-                elif dirr == 'csv':
-                    for csvroot, csvdirectories, csvfiles in os.walk(unicode(r'./signature-base/csv'), onerror=walk_error, followlinks=False):
-                        for ffile in csvfiles:
-                            self.parseCSV(ffile)
-        # parse the text format last as we append new data to those files from the extraction from excel, csv and openioc files
-        parser = Parser.Parser(None, 'txt', True, 'pdfminer', 'yara', None)
-        parser.parse(r'./signature-base/misc-txt')
+                    filel = checkToParse(dirr, self.application_path)
+                    parser = Parser.Parser(None, 'pdf', True, 'pdfminer', 'yara', None)
+                    print self.application_path + "\\signature-base\\pdf\\"
+                    parser.parse(self.application_path + "\\signature-base\\pdf\\")
+        #         elif dirr == 'openiocs':
+        #             print dirr
+        #             ffile = checkToParse(dirr, self.application_path)
+        #             if ffile:
+        #                 self.parseOpenIocs(ffile)
+        #         elif dirr == "excel":
+        #             print dirr
+        #             ffile = checkToParse(dirr, self.application_path)
+        #             if ffile:
+        #                 self.parseExcel(ffile)
+        #         elif dirr == 'csv':
+        #             print dirr
+        #             ffile = checkToParse(dirr, self.application_path)
+        #             if ffile:
+        #                 self.parseCSV(ffile)
+        # # parse the text format last as we append new data to those files from the extraction from excel, csv and openioc files
+        # parser = Parser.Parser(None, 'txt', True, 'pdfminer', 'yara', None)
+        # parser.parse(r'./signature-base/misc-txt')
 
 
-    #TODO: remove print on excel and csv and add save
+
     def parseExcel(self, excel_file):
         wb = load_workbook(filename = self.application_path + r'./signature-base/excel/' + excel_file, read_only=True)
         # grab the active worksheet
@@ -242,16 +247,18 @@ class LoRaUpdater(object):
             colnum = 0
             for cell in row:
                 if header[colnum].value != None:
-                    if 'sha' in header[colnum].value.lower() or 'md5' in header[colnum].value.lower():
+                    headerColVal = header[colnum].value.lower()
+                    if 'sha' in headerColVal or 'md5' in headerColVal:
                         writeToFile(cell.value, "hashes.txt")
-                    elif 'domain' in header[colnum].value.lower() or 'ip' in header[colnum].value.lower() or 'c2' in header[colnum].value.lower() or 'url' in header[colnum].value.lower():
+                    elif 'domain' in headerColVal or 'ip' in headerColVal or 'c2' in headerColVal or 'url' in headerColVal:
                         writeToFile(cell.value, "c2-iocs.txt")
-                    elif 'filename' in header[colnum].value.lower() or 'file name' in header[colnum].value.lower():
+                    elif 'filename' in headerColVal or 'file name' in headerColVal:
                         writeToFile(cell.value, "filename-iocs.txt")
-                    elif 'indicator type' in header[colnum].value.lower():
-                        if 'url' in cell.value.lower() or 'c2' in cell.value.lower() or 'ip' in cell.value.lower()or 'domain' in cell.value.lower():
+                    elif 'indicator type' in headerColVal:
+                        cellVal = cell.value.lower()
+                        if 'url' in cellVal or 'c2' in cellVal or 'ip' in cellVal or 'domain' in cellVal:
                             writeToFile(row[colnum].value, "c2-iocs.txt")
-                        elif 'md5' in cell.value.lower() or 'sha' in cell.value.lower():
+                        elif 'md5' in cellVal or 'sha' in cellVal:
                             writeToFile(cell.value, "hashes.txt")
                     colnum += 1
             rownum += 1
@@ -270,17 +277,18 @@ class LoRaUpdater(object):
                 header = row
             colnum = 0
             for col in row:
-                # print "%-8s: %s" % (header[colnum], col)
-                if 'sha' in header[colnum].lower() or 'md5' in header[colnum].lower():
+                headerColVal = header[colnum].lower()
+                if 'sha' in headerColVal or 'md5' in headerColVal:
                     writeToFile(col, "hashes.txt")
-                elif 'domain' in header[colnum].lower() or 'ip' in header[colnum].lower() or 'c2' in header[colnum].lower():
+                elif 'domain' in headerColVal or 'ip' in headerColVal or 'c2' in headerColVal:
                     writeToFile(col, "c2-iocs.txt")
-                elif 'filename' in header[colnum].lower() or 'file name' in header[colnum].lower():
+                elif 'filename' in headerColVal or 'file name' in headerColVal:
                     writeToFile(col, "filename-iocs.txt")
-                elif 'indicator type' in header[colnum].lower():
-                    if 'url' in col.lower() or 'c2' in col.lower():
+                elif 'indicator type' in headerColVal:
+                    colVal = col.lower()
+                    if 'url' in colVal or 'c2' in colVal:
                         writeToFile(row[colnum], "c2-iocs.txt")
-                    elif 'md5' in col.lower() or 'sha' in col.lower():
+                    elif 'md5' in colVal or 'sha' in colVal:
                         writeToFile(col, "hashes.txt")
                 colnum += 1
             rownum += 1
@@ -290,7 +298,7 @@ class LoRaUpdater(object):
 
 
     def parseOpenIocs(self, openIOC_file):
-        ioco=lxml.objectify.parse(openIOC_file)
+        ioco=lxml.objectify.parse( r'./signature-base/openiocs/' + openIOC_file)
         root=ioco.getroot()
 
         for node in root.iter():
@@ -298,25 +306,43 @@ class LoRaUpdater(object):
             search = node.attrib.get('search')
 
             if search == "DnsEntryItem/RecordName" or search == "PortItem/remoteIP":
-                with open(r'./LoRa/server/signature-base/misc-txt/c2_ips_domains.txt', "a") as iocfile:
+                with open(r'./signature-base/misc-txt/c2_ips_domains.txt', "a+") as iocfile:
                     iocfile.write(node.getnext() + "\n")
                 iocfile.close()
             elif search == "FileItem/Md5sum" or search == "FileItem/Sha1sum" or search == "FileItem/Sha256sum":
-                with open(r'./LoRa/server/signature-base/misc-txt/hashes.txt', "a") as iocfile:
+                with open(r'./signature-base/misc-txt/hashes.txt', "a+") as iocfile:
                     iocfile.write(node.getnext() + "\n")
                 iocfile.close()
             # i add the ProcessItem here because they are scan_processes searches the filename_iocs
             elif search == "FileItem/FileName" or search == "ProcessItem/path" or search == "ProcessItem/name":
-                with open(r'./LoRa/server/signature-base/misc-txt/filenames.txt', "a") as iocfile:
+                with open(r'./signature-base/misc-txt/filenames.txt', "a+") as iocfile:
                     iocfile.write(node.getnext() + "\n")
                 iocfile.close()
 
 
 
 def writeToFile(data, fileName):
-	with open("./signature-base/misc-txt/" + fileName, 'a+') as f:
-		f.write("%s\n" % data)
-		f.close()
+    try:
+    	with open("./signature-base/misc-txt/" + fileName, 'a+') as f:
+    		f.write("%s\n" % data)
+    		f.close()
+    except Exception as e:
+        print("Error with file I/O")
+        traceback.print_exc()
+
+
+
+def checkToParse(dirr, app_path):
+    file_list = []
+    for root, directories, files in os.walk(unicode("./signature-base/" + dirr), onerror=walk_error, followlinks=False):
+        for ffile in files:
+            #check if there is the yara rule for this file first
+            if not os.path.exists(app_path + r'./signature-base/yara/' + ffile[:-3] + 'yar') and not os.path.exists(app_path + r'./signature-base/yara/' + ffile[:-4] + 'yara'):
+                #print app_path + "\\signature-base\\" + dirr +"\\"+ ffile
+                file_list.append(ffile)
+
+    return file_list
+
 
 
 def walk_error(err):
@@ -376,16 +402,9 @@ if __name__ == '__main__':
     # Update LoRa
     updater = LoRaUpdater(args.debug, logger, get_application_path())
 
-    #Updating LOKI
-    # if not args.sigsonly:
-    #     logger.log("INFO", "Updating LOKI ...")
-    #     updater.update_loki()
-    # if not args.progonly:
-    #     logger.log("INFO", "Updating Signatures ...")
-    #     updater.update_signatures()
+
     logger.log("INFO", "Updating Signatures ...")
-    updater.update_signatures()
-    #TODO: check if name of pdf exists as yara first in order to continue
+    #updater.update_signatures()
 
     updater.extractFromFiles()
     logger.log("INFO", "Update complete")

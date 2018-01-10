@@ -1,14 +1,168 @@
-20171215T06:42:34Z DESKTOP-280IJO6 LOKI: Notice: Starting Loki Scan SYSTEM: DESKTOP-280IJO6 TIME: 20171215T06:42:34Z PLATFORM: windows
-20171215T06:42:34Z DESKTOP-280IJO6 LOKI: Info: File Name Characteristics initialized with 2568 regex patterns
-20171215T06:42:35Z DESKTOP-280IJO6 LOKI: Info: C2 server indicators initialized with 33878 elements
-20171215T06:42:37Z DESKTOP-280IJO6 LOKI: Info: Malicious MD5 Hashes initialized with 18561 hashes
-20171215T06:42:38Z DESKTOP-280IJO6 LOKI: Info: Malicious SHA1 Hashes initialized with 7818 hashes
-20171215T06:42:38Z DESKTOP-280IJO6 LOKI: Info: Malicious SHA256 Hashes initialized with 23769 hashes
-20171215T06:42:38Z DESKTOP-280IJO6 LOKI: Info: False Positive Hashes initialized with 30 hashes
-20171215T06:42:38Z DESKTOP-280IJO6 LOKI: Info: Initializing YARA rules (composed string of all rule files)
-20171215T06:42:38Z DESKTOP-280IJO6 LOKI: Info: Initialized Yara rules at once
-20171215T06:42:38Z DESKTOP-280IJO6 LOKI: Info: Current user has admin rights - very good
-20171215T06:42:38Z DESKTOP-280IJO6 LOKI: Info: Scanning C:\Users\Stratarxis\Desktop\Newfolder ...  
-20171215T06:42:38Z DESKTOP-280IJO6 LOKI: Notice: Results: 0 alerts, 0 warnings, 1 notices
-20171215T06:42:38Z DESKTOP-280IJO6 LOKI: Result: SYSTEM SEEMS TO BE CLEAN.
-20171215T06:42:38Z DESKTOP-280IJO6 LOKI: Notice: Finished LOKI Scan SYSTEM: DESKTOP-280IJO6 TIME: 20171215T06:42:38Z
+20180110T11:22:26Z DESKTOP-280IJO6 LOKI: Notice: Starting Loki Scan SYSTEM: DESKTOP-280IJO6 TIME: 20180110T11:22:26Z PLATFORM: windows
+20180110T11:22:26Z DESKTOP-280IJO6 LOKI: Info: File Name Characteristics initialized with 2573 regex patterns
+20180110T11:22:28Z DESKTOP-280IJO6 LOKI: Info: C2 server indicators initialized with 40735 elements
+20180110T11:22:30Z DESKTOP-280IJO6 LOKI: Info: Malicious MD5 Hashes initialized with 22425 hashes
+20180110T11:22:30Z DESKTOP-280IJO6 LOKI: Info: Malicious SHA1 Hashes initialized with 8833 hashes
+20180110T11:22:30Z DESKTOP-280IJO6 LOKI: Info: Malicious SHA256 Hashes initialized with 27386 hashes
+20180110T11:22:30Z DESKTOP-280IJO6 LOKI: Info: False Positive Hashes initialized with 30 hashes
+20180110T11:22:30Z DESKTOP-280IJO6 LOKI: Info: Initializing YARA rules (composed string of all rule files)
+20180110T11:22:30Z DESKTOP-280IJO6 LOKI: Info: Initialized Yara rules at once
+20180110T11:22:30Z DESKTOP-280IJO6 LOKI: Info: Current user has admin rights - very good
+20180110T11:22:33Z DESKTOP-280IJO6 LOKI: Info: Skipping Process PID: 0 NAME: System Idle Process CMD: N/A
+20180110T11:22:33Z DESKTOP-280IJO6 LOKI: Info: Skipping Process PID: 4 NAME: System CMD: N/A
+20180110T11:22:33Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 352 NAME: smss.exe CMD: N/A
+20180110T11:22:33Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 480 NAME: csrss.exe CMD: N/A
+20180110T11:22:33Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 608 NAME: wininit.exe CMD: N/A
+20180110T11:22:33Z DESKTOP-280IJO6 LOKI: Notice: Listening process PID: 608 NAME: wininit.exe COMMAND: None IP: 0.0.0.0 PORT: 49664
+20180110T11:22:33Z DESKTOP-280IJO6 LOKI: Notice: Listening process PID: 608 NAME: wininit.exe COMMAND: None IP: :: PORT: 49664
+20180110T11:22:34Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 728 NAME: services.exe CMD: N/A
+20180110T11:22:34Z DESKTOP-280IJO6 LOKI: Notice: Listening process PID: 728 NAME: services.exe COMMAND: None IP: 0.0.0.0 PORT: 49668
+20180110T11:22:34Z DESKTOP-280IJO6 LOKI: Notice: Listening process PID: 728 NAME: services.exe COMMAND: None IP: :: PORT: 49668
+20180110T11:22:34Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 748 NAME: lsass.exe CMD: C:\WINDOWS\system32\lsass.exe
+20180110T11:22:34Z DESKTOP-280IJO6 LOKI: Notice: Listening process PID: 748 NAME: lsass.exe COMMAND: C:\WINDOWS\system32\lsass.exe IP: 0.0.0.0 PORT: 49665
+20180110T11:22:34Z DESKTOP-280IJO6 LOKI: Notice: Listening process PID: 748 NAME: lsass.exe COMMAND: C:\WINDOWS\system32\lsass.exe IP: :: PORT: 49665
+20180110T11:22:34Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 864 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k dcomlaunch -p -s PlugPlay
+20180110T11:22:34Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 888 NAME: svchost.exe CMD: C:\WINDOWS\system32\svchost.exe -k DcomLaunch -p
+20180110T11:22:34Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 920 NAME: fontdrvhost.exe CMD: "fontdrvhost.exe"
+20180110T11:22:34Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 1012 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k rpcss -p
+20180110T11:22:34Z DESKTOP-280IJO6 LOKI: Notice: Listening process PID: 1012 NAME: svchost.exe COMMAND: c:\windows\system32\svchost.exe -k rpcss -p IP: :: PORT: 135
+20180110T11:22:34Z DESKTOP-280IJO6 LOKI: Notice: Listening process PID: 1012 NAME: svchost.exe COMMAND: c:\windows\system32\svchost.exe -k rpcss -p IP: 0.0.0.0 PORT: 135
+20180110T11:22:34Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 324 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k dcomlaunch -p -s LSM
+20180110T11:22:34Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 720 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k dcomlaunch -p -s DeviceInstall
+20180110T11:22:34Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 1060 NAME: svchost.exe CMD: C:\WINDOWS\system32\svchost.exe -k LocalServiceNoNetwork -p
+20180110T11:22:35Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 1388 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localservicenetworkrestricted -p -s TimeBrokerSvc
+20180110T11:22:35Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 1444 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k netsvcs -p -s lfsvc
+20180110T11:22:35Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 1468 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localservicenetworkrestricted -p -s EventLog
+20180110T11:22:35Z DESKTOP-280IJO6 LOKI: Notice: Listening process PID: 1468 NAME: svchost.exe COMMAND: c:\windows\system32\svchost.exe -k localservicenetworkrestricted -p -s EventLog IP: 0.0.0.0 PORT: 49666
+20180110T11:22:35Z DESKTOP-280IJO6 LOKI: Notice: Listening process PID: 1468 NAME: svchost.exe COMMAND: c:\windows\system32\svchost.exe -k localservicenetworkrestricted -p -s EventLog IP: :: PORT: 49666
+20180110T11:22:35Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 1512 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localservice -p -s nsi
+20180110T11:22:35Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 1536 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localservicenetworkrestricted -p -s Dhcp
+20180110T11:22:35Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 1560 NAME: atiesrxx.exe CMD: C:\WINDOWS\system32\atiesrxx.exe
+20180110T11:22:35Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 1616 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k netsvcs -p -s ProfSvc
+20180110T11:22:35Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 1632 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localsystemnetworkrestricted -p -s SysMain
+20180110T11:22:36Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 1640 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k netsvcs -p -s Themes
+20180110T11:22:36Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 1648 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localservice -p -s EventSystem
+20180110T11:22:36Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 1780 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k networkservice -p -s NlaSvc
+20180110T11:22:36Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 1832 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k netsvcs -p -s SENS
+20180110T11:22:36Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 1864 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localsystemnetworkrestricted -p -s AudioEndpointBuilder
+20180110T11:22:36Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 1872 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localservice -p -s FontCache
+20180110T11:22:36Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 1912 NAME: Memory Compression CMD: N/A
+20180110T11:22:36Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 1984 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localservice -p -s netprofm
+20180110T11:22:36Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 2020 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k netsvcs -p -s UserManager
+20180110T11:22:36Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 2004 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k networkservice -p -s Dnscache
+20180110T11:22:37Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 2072 NAME: svchost.exe CMD: C:\WINDOWS\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+20180110T11:22:37Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 2224 NAME: svchost.exe CMD: C:\WINDOWS\system32\svchost.exe -k LocalServiceNetworkRestricted -p
+20180110T11:22:37Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 2232 NAME: svchost.exe CMD: C:\WINDOWS\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+20180110T11:22:37Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 2272 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localservicenetworkrestricted -p -s WinHttpAutoProxySvc
+20180110T11:22:37Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 2292 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localservice -p -s fdPHost
+20180110T11:22:37Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 2332 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localserviceandnoimpersonation -p -s FDResPub
+20180110T11:22:37Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 2364 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k netsvcs -p -s ShellHWDetection
+20180110T11:22:37Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 2512 NAME: spoolsv.exe CMD: C:\WINDOWS\System32\spoolsv.exe
+20180110T11:22:37Z DESKTOP-280IJO6 LOKI: Notice: Listening process PID: 2512 NAME: spoolsv.exe COMMAND: C:\WINDOWS\System32\spoolsv.exe IP: :: PORT: 49667
+20180110T11:22:37Z DESKTOP-280IJO6 LOKI: Notice: Listening process PID: 2512 NAME: spoolsv.exe COMMAND: C:\WINDOWS\System32\spoolsv.exe IP: 0.0.0.0 PORT: 49667
+20180110T11:22:37Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 2552 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k netsvcs -p -s Winmgmt
+20180110T11:22:37Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 2708 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k netsvcs -p -s iphlpsvc
+20180110T11:22:37Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 2744 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k networkservice -p -s CryptSvc
+20180110T11:22:38Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 2752 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localservicenetworkrestricted -p -s HomeGroupProvider
+20180110T11:22:38Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 2760 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localservicenonetwork -p -s DPS
+20180110T11:22:38Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 2772 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localsystemnetworkrestricted -p -s TrkWks
+20180110T11:22:38Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 2884 NAME: SecurityHealthService.exe CMD: N/A
+20180110T11:22:38Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 2948 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localservice -p -s WdiServiceHost
+20180110T11:22:38Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 2988 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k netsvcs -p -s LanmanServer
+20180110T11:22:38Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 3604 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localserviceandnoimpersonation -p -s SSDPSRV
+20180110T11:22:38Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 4612 NAME: msdtc.exe CMD: C:\WINDOWS\System32\msdtc.exe
+20180110T11:22:38Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 4180 NAME: dllhost.exe CMD: C:\WINDOWS\system32\DllHost.exe /Processid:{48DA6741-1BF0-4A44-8325-293086C79077}
+20180110T11:22:39Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 1796 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localsystemnetworkrestricted -p -s NcbService
+20180110T11:22:39Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 4224 NAME: SearchIndexer.exe CMD: C:\WINDOWS\system32\SearchIndexer.exe /Embedding
+20180110T11:22:39Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 4092 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k netsvcs -p -s Schedule
+20180110T11:22:39Z DESKTOP-280IJO6 LOKI: Notice: Listening process PID: 4092 NAME: svchost.exe COMMAND: c:\windows\system32\svchost.exe -k netsvcs -p -s Schedule IP: 0.0.0.0 PORT: 49681
+20180110T11:22:39Z DESKTOP-280IJO6 LOKI: Notice: Listening process PID: 4092 NAME: svchost.exe COMMAND: c:\windows\system32\svchost.exe -k netsvcs -p -s Schedule IP: :: PORT: 49681
+20180110T11:22:39Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 3828 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k networkservice -p -s LanmanWorkstation
+20180110T11:22:39Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 2532 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localservicenetworkrestricted -p -s wscsvc
+20180110T11:22:39Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 5072 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localservice -p -s CDPSvc
+20180110T11:22:39Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 1576 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k netsvcs -p -s WpnService
+20180110T11:22:41Z DESKTOP-280IJO6 LOKI: Notice: Established connection PID: 1576 NAME: svchost.exe COMMAND: c:\windows\system32\svchost.exe -k netsvcs -p -s WpnService LIP: 192.168.66.231 LPORT: 64872 RIP: 40.77.229.91 RPORT: 443
+20180110T11:22:41Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 4852 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k appmodel -p -s StateRepository
+20180110T11:22:42Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 2536 NAME: svchost.exe CMD: C:\WINDOWS\System32\svchost.exe -k utcsvc -p
+20180110T11:22:42Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 5448 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localsystemnetworkrestricted -p -s TabletInputService
+20180110T11:22:42Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 5504 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k netsvcs -p -s TokenBroker
+20180110T11:22:42Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 6112 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localsystemnetworkrestricted -p -s PcaSvc
+20180110T11:22:42Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 8988 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localsystemnetworkrestricted -p -s StorSvc
+20180110T11:22:42Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 8332 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localservice -p -s LicenseManager
+20180110T11:22:42Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 10136 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k netsvcs -p -s Appinfo
+20180110T11:22:42Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 2568 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localsystemnetworkrestricted -p -s SensorService
+20180110T11:22:42Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 1996 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k netsvcs -p -s seclogon
+20180110T11:22:42Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 11660 NAME: MsMpEng.exe CMD: N/A
+20180110T11:22:43Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 11008 NAME: NisSrv.exe CMD: N/A
+20180110T11:22:43Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 13716 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k localsystemnetworkrestricted -p -s DsSvc
+20180110T11:22:43Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 4884 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k netsvcs -p -s AppMgmt
+20180110T11:22:43Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 30592 NAME: csrss.exe CMD: N/A
+20180110T11:22:43Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 41980 NAME: winlogon.exe CMD: C:\WINDOWS\System32\WinLogon.exe -SpecialSession
+20180110T11:22:43Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 17636 NAME: fontdrvhost.exe CMD: "fontdrvhost.exe"
+20180110T11:22:43Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 20920 NAME: dwm.exe CMD: "dwm.exe"
+20180110T11:22:43Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 19968 NAME: atieclxx.exe CMD: atieclxx
+20180110T11:22:43Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 31068 NAME: svchost.exe CMD: C:\WINDOWS\System32\svchost.exe -k LocalServiceNetworkRestricted -p -s lmhosts
+20180110T11:22:44Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 22940 NAME: sihost.exe CMD: sihost.exe
+20180110T11:22:44Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 22440 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k unistacksvcgroup -s CDPUserSvc
+20180110T11:22:44Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 10168 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k unistacksvcgroup -s WpnUserService
+20180110T11:22:44Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 36164 NAME: explorer.exe CMD: C:\WINDOWS\Explorer.EXE
+20180110T11:22:44Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 30296 NAME: taskhostw.exe CMD: taskhostw.exe {222A245B-E637-4AE9-A93F-A59CA119A75E}
+20180110T11:22:44Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 6184 NAME: ShellExperienceHost.exe CMD: "C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe" -ServerName:App.AppXtk181tbxbce2qsex02s8tw7hfxa9xb3t.mca
+20180110T11:22:44Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 24988 NAME: SearchUI.exe CMD: "C:\Windows\SystemApps\Microsoft.Windows.Cortana_cw5n1h2txyewy\SearchUI.exe" -ServerName:CortanaUI.AppXa50dqqa5gqv4a428c9y1jjw7m3btvepj.mca
+20180110T11:22:44Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 6484 NAME: RuntimeBroker.exe CMD: C:\Windows\System32\RuntimeBroker.exe -Embedding
+20180110T11:22:44Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 40012 NAME: RuntimeBroker.exe CMD: C:\Windows\System32\RuntimeBroker.exe -Embedding
+20180110T11:22:44Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 10876 NAME: ctfmon.exe CMD: "ctfmon.exe"
+20180110T11:22:45Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 7596 NAME: RuntimeBroker.exe CMD: C:\Windows\System32\RuntimeBroker.exe -Embedding
+20180110T11:22:45Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 5848 NAME: MSASCuiL.exe CMD: "C:\Program Files\Windows Defender\MSASCuiL.exe" 
+20180110T11:22:45Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 37828 NAME: MicrosoftEdge.exe CMD: "C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdge.exe" -ServerName:MicrosoftEdge.AppXdnhjhccw3zf0j06tkg3jtqr00qdm0khc.mca
+20180110T11:22:45Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 17200 NAME: ApplicationFrameHost.exe CMD: C:\WINDOWS\system32\ApplicationFrameHost.exe -Embedding
+20180110T11:22:45Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 7048 NAME: browser_broker.exe CMD: C:\WINDOWS\system32\browser_broker.exe -Embedding
+20180110T11:22:45Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 20744 NAME: OneDrive.exe CMD: "C:\Users\Stratarxis\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+20180110T11:22:45Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 39432 NAME: RuntimeBroker.exe CMD: C:\Windows\System32\RuntimeBroker.exe -Embedding
+20180110T11:22:45Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 5688 NAME: MicrosoftEdgeCP.exe CMD: "C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdgeCP.exe" -ServerName:ContentProcess.AppX6z3cwk4fvgady6zya12j1cw28d228a7k.mca
+20180110T11:22:45Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 26544 NAME: RuntimeBroker.exe CMD: C:\Windows\System32\RuntimeBroker.exe -Embedding
+20180110T11:22:45Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 4124 NAME: MicrosoftEdgeCP.exe CMD: "C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdgeCP.exe" -ServerName:ContentProcess.AppX6z3cwk4fvgady6zya12j1cw28d228a7k.mca
+20180110T11:22:48Z DESKTOP-280IJO6 LOKI: Notice: Established connection PID: 4124 NAME: MicrosoftEdgeCP.exe COMMAND: "C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdgeCP.exe" -ServerName:ContentProcess.AppX6z3cwk4fvgady6zya12j1cw28d228a7k.mca LIP: 192.168.66.231 LPORT: 64923 RIP: 192.168.80.10 RPORT: 9001
+20180110T11:22:48Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 27548 NAME: MicrosoftEdgeCP.exe CMD: "C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdgeCP.exe" -ServerName:ContentProcess.AppX6z3cwk4fvgady6zya12j1cw28d228a7k.mca
+20180110T11:22:48Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 30064 NAME: MicrosoftEdgeCP.exe CMD: "C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdgeCP.exe" -ServerName:ContentProcess.AppX6z3cwk4fvgady6zya12j1cw28d228a7k.mca
+20180110T11:22:48Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 13392 NAME: MicrosoftEdgeCP.exe CMD: "C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdgeCP.exe" -ServerName:ContentProcess.AppX6z3cwk4fvgady6zya12j1cw28d228a7k.mca
+20180110T11:22:48Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 23476 NAME: MicrosoftEdgeCP.exe CMD: "C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdgeCP.exe" -ServerName:ContentProcess.AppX6z3cwk4fvgady6zya12j1cw28d228a7k.mca
+20180110T11:22:48Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 32712 NAME: dllhost.exe CMD: C:\WINDOWS\system32\DllHost.exe /Processid:{973D20D7-562D-44B9-B70B-5A0F49CCDF3F}
+20180110T11:22:48Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 27080 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k unistacksvcgroup
+20180110T11:22:48Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 42040 NAME: stritz.exe CMD: "C:\Program Files\WindowsApps\king.com.CandyCrushSodaSaga_1.104.700.0_x86__kgqvnymyfvs32\stritz.exe" -ServerName:App.AppXyy7gex6h953pybd77fmw6bne5r5qrsf1.mca
+20180110T11:22:49Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 21048 NAME: GameBarPresenceWriter.exe CMD: "C:\Windows\System32\GameBarPresenceWriter.exe" -ServerName:Windows.Gaming.GameBar.Internal.PresenceWriterServer
+20180110T11:22:49Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 12360 NAME: svchost.exe CMD: C:\WINDOWS\system32\svchost.exe -k netsvcs -p -s XblAuthManager
+20180110T11:22:49Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 36116 NAME: RuntimeBroker.exe CMD: C:\Windows\System32\RuntimeBroker.exe -Embedding
+20180110T11:22:49Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 9312 NAME: atom.exe CMD: "C:\Users\Stratarxis\AppData\Local\atom\app-1.23.3\atom.exe" 
+20180110T11:22:49Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 9816 NAME: atom.exe CMD: "C:\Users\Stratarxis\AppData\Local\atom\app-1.23.3\atom.exe" --type=gpu-process --no-sandbox --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,19,20,23,26,40,71 --gpu-vendor-id=0x1002 --gpu-device-id=0x6771 --gpu-driver-vendor="Advanced Micro Devices, Inc." --gpu-driver-version=15.201.2401.1001 --gpu-driver-date=11-25-2015 --service-request-channel-token=1A6B6024C10045C916415A4283C6F7ED --mojo-platform-channel-handle=1504 /prefetch:2
+20180110T11:22:49Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 7868 NAME: atom.exe CMD: C:\Users\Stratarxis\AppData\Local\atom\app-1.23.3\atom.exe --reporter-url=https://crashreporter.atom.io --application-name=Atom "--crashes-directory=C:\Users\STRATA~1\AppData\Local\Temp\Atom Crashes" --v=1
+20180110T11:22:49Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 7640 NAME: cmd.exe CMD: "C:\WINDOWS\system32\cmd.exe" 
+20180110T11:22:49Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 20932 NAME: conhost.exe CMD: \??\C:\WINDOWS\system32\conhost.exe 0x4
+20180110T11:22:49Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 28712 NAME: SkypeHost.exe CMD: "C:\Program Files\WindowsApps\Microsoft.SkypeApp_12.13.257.0_x64__kzf8qxf38zg5c\SkypeHost.exe" -ServerName:SkypeHost.ServerServer
+20180110T11:22:49Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 36400 NAME: RuntimeBroker.exe CMD: C:\Windows\System32\RuntimeBroker.exe -Embedding
+20180110T11:22:50Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 17000 NAME: MicrosoftEdgeCP.exe CMD: "C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdgeCP.exe" -ServerName:ContentProcess.AppX6z3cwk4fvgady6zya12j1cw28d228a7k.mca
+20180110T11:22:50Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 38600 NAME: MicrosoftEdgeCP.exe CMD: "C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdgeCP.exe" -ServerName:ContentProcess.AppX6z3cwk4fvgady6zya12j1cw28d228a7k.mca
+20180110T11:22:50Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 26764 NAME: MicrosoftEdgeCP.exe CMD: "C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdgeCP.exe" -ServerName:ContentProcess.AppX6z3cwk4fvgady6zya12j1cw28d228a7k.mca
+20180110T11:22:50Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 35944 NAME: splwow64.exe CMD: C:\WINDOWS\splwow64.exe 4096
+20180110T11:22:50Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 22976 NAME: MicrosoftEdgeCP.exe CMD: "C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdgeCP.exe" -ServerName:ContentProcess.AppX6z3cwk4fvgady6zya12j1cw28d228a7k.mca
+20180110T11:22:50Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 44656 NAME: atom.exe CMD: "C:\Users\Stratarxis\AppData\Local\atom\app-1.23.3\atom.exe" --type=renderer --enable-experimental-web-platform-features --no-sandbox --primordial-pipe-token=9D597C8FB2415A83DC161DAF2169EA51 --lang=en-US --app-user-model-id=com.squirrel.atom.x64 --app-path="C:\Users\Stratarxis\AppData\Local\atom\app-1.23.3\resources\app.asar" --node-integration=true --disable-blink-features=Auxclick --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=9D597C8FB2415A83DC161DAF2169EA51 --renderer-client-id=7 --mojo-platform-channel-handle=2484 /prefetch:1
+20180110T11:22:50Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 9512 NAME: atom.exe CMD: "C:\Users\Stratarxis\AppData\Local\atom\app-1.23.3\atom.exe" --type=renderer --enable-experimental-web-platform-features --no-sandbox --primordial-pipe-token=CE58F8C52DE10286C03EA8A76927A5C9 --lang=en-US --app-user-model-id=com.squirrel.atom.x64 --app-path="C:\Users\Stratarxis\AppData\Local\atom\app-1.23.3\resources\app.asar" --node-integration=true --hidden-page --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=CE58F8C52DE10286C03EA8A76927A5C9 --renderer-client-id=9 --mojo-platform-channel-handle=3692 /prefetch:1
+20180110T11:22:50Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 15292 NAME: MicrosoftEdgeCP.exe CMD: "C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdgeCP.exe" -ServerName:ContentProcess.AppX6z3cwk4fvgady6zya12j1cw28d228a7k.mca
+20180110T11:22:50Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 1364 NAME: MicrosoftEdgeCP.exe CMD: "C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdgeCP.exe" -ServerName:ContentProcess.AppX6z3cwk4fvgady6zya12j1cw28d228a7k.mca
+20180110T11:22:50Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 33504 NAME: MicrosoftEdgeCP.exe CMD: "C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdgeCP.exe" -ServerName:ContentProcess.AppX6z3cwk4fvgady6zya12j1cw28d228a7k.mca
+20180110T11:22:51Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 31792 NAME: cmd.exe CMD: "C:\WINDOWS\system32\cmd.exe" 
+20180110T11:22:51Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 34964 NAME: conhost.exe CMD: \??\C:\WINDOWS\system32\conhost.exe 0x4
+20180110T11:22:51Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 580 NAME: python.exe CMD: python  lora_server.py
+20180110T11:22:51Z DESKTOP-280IJO6 LOKI: Notice: Listening process PID: 580 NAME: python.exe COMMAND: python  lora_server.py IP: ::1 PORT: 8080
+20180110T11:22:51Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 8940 NAME: backgroundTaskHost.exe CMD: "C:\WINDOWS\system32\backgroundTaskHost.exe" -ServerName:App.AppXe9cvj1thv1hmcw0cs98xm3r97tyzy2xs.mca
+20180110T11:22:53Z DESKTOP-280IJO6 LOKI: Notice: Established connection PID: 8940 NAME: backgroundTaskHost.exe COMMAND: "C:\WINDOWS\system32\backgroundTaskHost.exe" -ServerName:App.AppXe9cvj1thv1hmcw0cs98xm3r97tyzy2xs.mca LIP: 192.168.66.231 LPORT: 52756 RIP: 92.123.88.139 RPORT: 443
+20180110T11:22:53Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 2860 NAME: RuntimeBroker.exe CMD: C:\Windows\System32\RuntimeBroker.exe -Embedding
+20180110T11:22:53Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 33616 NAME: svchost.exe CMD: c:\windows\system32\svchost.exe -k netsvcs
+20180110T11:22:53Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 31052 NAME: WmiPrvSE.exe CMD: C:\WINDOWS\system32\wbem\wmiprvse.exe
+20180110T11:22:54Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 12320 NAME: SearchProtocolHost.exe CMD: "C:\WINDOWS\system32\SearchProtocolHost.exe" Global\UsGthrFltPipeMssGthrPipe155_ Global\UsGthrCtrlFltPipeMssGthrPipe155 1 -2147483646 "Software\Microsoft\Windows Search" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT; MS Search 4.0 Robot)" "C:\ProgramData\Microsoft\Search\Data\Temp\usgthrsvc" "DownLevelDaemon" 
+20180110T11:22:54Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 20368 NAME: SearchFilterHost.exe CMD: "C:\WINDOWS\system32\SearchFilterHost.exe" 0 764 768 776 8192 772 
+20180110T11:22:54Z DESKTOP-280IJO6 LOKI: Info: Skipping LOKI Process PID: 35544 NAME: python.exe CMD: python  lora_win32.py -y myrule.yar mem-scan
+20180110T11:22:54Z DESKTOP-280IJO6 LOKI: Info: Scanning Process PID: 23716 NAME: WmiPrvSE.exe CMD: C:\WINDOWS\system32\wbem\wmiprvse.exe
+20180110T11:22:54Z DESKTOP-280IJO6 LOKI: Notice: Results: 0 alerts, 0 warnings, 19 notices
+20180110T11:22:54Z DESKTOP-280IJO6 LOKI: Result: SYSTEM SEEMS TO BE CLEAN.
+20180110T11:22:54Z DESKTOP-280IJO6 LOKI: Notice: Finished LOKI Scan SYSTEM: DESKTOP-280IJO6 TIME: 20180110T11:22:54Z

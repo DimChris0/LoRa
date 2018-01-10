@@ -11,7 +11,7 @@ Date: 2017-03-28
 rule apt_RU_MoonlightMaze_customlokitools {
 
 meta:
-	
+
 	author = "Kaspersky Lab"
 	date = "2017-03-15"
 	version = "1.1"
@@ -26,7 +26,7 @@ meta:
 
 strings:
 
-	$a1="Write file Ok..." ascii wide 
+	$a1="Write file Ok..." ascii wide
 	$a2="ERROR: Can not open socket...." ascii wide
 	$a3="Error in parametrs:"  ascii wide
 	$a4="Usage: @<get/put> <IP> <PORT> <file>"  ascii wide
@@ -41,16 +41,15 @@ strings:
 	$a11="ork error" ascii fullword
 
 condition:
-
-	((any of ($a*)))
-
+	// Added filesize due to false positives with Nvidia drivers in process memory
+	filesize < 5000KB and 3 of ($a*)
 }
 
 
 rule apt_RU_MoonlightMaze_customsniffer {
 
 meta:
-	
+
 	author = "Kaspersky Lab"
 	date = "2017-03-15"
 	version = "1.1"
@@ -59,7 +58,7 @@ meta:
 	hash = "7b86f40e861705d59f5206c482e1f2a5"
 	hash = "927426b558888ad680829bd34b0ad0e7"
 	original_filename = "ora;tdn"
-	
+
 strings:
 
 
@@ -74,16 +73,14 @@ strings:
 	$a6="mydevname= |%s|" fullword
 
 condition:
-
-	((any of ($a*)))
-
+	2 of ($a*)
 }
 
 
 rule loki2crypto {
 
 meta:
-	
+
 	author = "Costin Raiu, Kaspersky Lab"
 	date = "2017-03-21"
 	version = "1.0"
@@ -111,7 +108,7 @@ condition:
 rule apt_RU_MoonlightMaze_de_tool {
 
 meta:
-	
+
 	author = "Kaspersky Lab"
 	date = "2017-03-27"
 	version = "1.0"
@@ -139,7 +136,7 @@ condition:
 rule apt_RU_MoonlightMaze_cle_tool {
 
 meta:
-	
+
 	author = "Kaspersky Lab"
 	date = "2017-03-27"
 	version = "1.0"
@@ -148,7 +145,7 @@ meta:
 	description = "Rule to detect Moonlight Maze 'cle' log cleaning tool"
 	hash = "647d7b711f7b4434145ea30d0ef207b0"
 
-	
+
 strings:
 
 	$a1="./a filename template_file" ascii wide
@@ -168,7 +165,7 @@ condition:
 rule apt_RU_MoonlightMaze_xk_keylogger {
 
 meta:
-	
+
 	author = "Kaspersky Lab"
 	date = "2017-03-27"
 	version = "1.0"
@@ -201,7 +198,7 @@ condition:
 rule apt_RU_MoonlightMaze_encrypted_keylog {
 
 meta:
-	
+
 	author = "Kaspersky Lab"
 	date = "2017-03-27"
 	version = "1.0"
@@ -222,7 +219,7 @@ condition:
 rule apt_RU_MoonlightMaze_IRIX_exploit_GEN {
 
 meta:
-	
+
 	author = "Kaspersky Lab"
 	date = "2017-03-27"
 	version = "1.0"
@@ -251,7 +248,7 @@ condition:
 rule apt_RU_MoonlightMaze_u_logcleaner {
 
 meta:
-	
+
 	author = "Kaspersky Lab"
 	date = "2017-03-27"
 	version = "1.0"
@@ -278,7 +275,7 @@ condition:
 rule apt_RU_MoonlightMaze_wipe {
 
 meta:
-	
+
 	author = "Kaspersky Lab"
 	date = "2017-03-27"
 	version = "1.0"
@@ -300,4 +297,3 @@ condition:
 	(uint32(0)==0x464c457f) and (2 of them)
 
 }
-
