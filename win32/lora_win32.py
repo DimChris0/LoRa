@@ -3,7 +3,7 @@
 #TODO: in the triage->tool list what to do with the commented ?
 #TODO: webhist, prefetch
 #TODO: add the filename, filesize check inside the condition of rules
-# filename is recognised by the yara-python so we can compile the Rules
+# filename and filesize are recognised by the yara-python so we can compile the Rules
 # immediately by adding to a .yar the line "filename = (value)" and not call getfilenameiocs
 # and search all the filenames of files in our scan
 
@@ -929,9 +929,6 @@ class LoRa():
         return False,""
 
 
-
-
-
     def initialize_yara_rules(self, rules):
 
         if 'all' in rules:
@@ -1216,17 +1213,17 @@ def triage(tool_server, output_server, silent):
     )
     """ BATCH files must be called with the .bat extension """
 
-    with open(smb_data + createt + '-'+os.environ['COMPUTERNAME'] + '-' + 'sha256-hashing.log','a') as g:
+    with open(smb_data + createt + '-' + os.environ['COMPUTERNAME'] + '-' + 'sha256-hashing.log','a') as g:
         for task in tool: # Iterates over the list of commands
 
             fullcommand=task.split()
             commandname=fullcommand[0].split('.')
 
             if not silent:
-                print '\nSaving output of ' + task + ' to ' + smb_data + createt + '-' + os.environ['COMPUTERNAME']\
+                print '\nSaving output of ' + task + ' to ' + smb_data + "\\" + createt + '-' + os.environ['COMPUTERNAME']\
                     +'-'+commandname[0]+'.log\n'
 
-            f=open(smb_data + createt + '-' + os.environ['COMPUTERNAME'] + '-' + commandname[0]+'.log','w')
+            f=open(smb_data + "\\" + createt + '-' + os.environ['COMPUTERNAME'] + '-' + commandname[0]+'.log','w')
             print task
             pst = subprocess.call(smb_bin + "\\" + task, stdout=f)
 
@@ -1240,14 +1237,14 @@ def triage(tool_server, output_server, silent):
             res = arq[0]
             if (res == "32bit"):
                 #x32
-                hKey = _winreg.OpenKey(_winreg.HKEY_LOCAL_MACHINE,r"SOFTWARE\Network Associates\ePolicy Orchestrator\Agent")
+                hKey = _winreg.OpenKey(_winreg.HKEY_LOCAL_MACHINE, r"SOFTWARE\Network Associates\ePolicy Orchestrator\Agent")
                 if (hKey != 0):
                     result = _winreg.QueryValueEx(hKey, "AgentGUID")
                     _winreg.CloseKey(hKey)
                     guid = result[0]
             else:
                 #x64
-                hKey2 = _winreg.OpenKey(_winreg.HKEY_LOCAL_MACHINE,r"SOFTWARE\Wow6432Node\Network Associates\ePolicy Orchestrator\Agent")
+                hKey2 = _winreg.OpenKey(_winreg.HKEY_LOCAL_MACHINE, r"SOFTWARE\Wow6432Node\Network Associates\ePolicy Orchestrator\Agent")
                 if (hKey2 != 0):
                     result = _winreg.QueryValueEx(hKey2, "AgentGUID")
                     _winreg.CloseKey(hKey2)
@@ -1274,15 +1271,17 @@ def webhist(tool_server, output_server, histuser, silent):
     """ Web History collection module """
 
     createt = strftime('%Y%m%d%H%M%S', gmtime()) # Timestamp in GMT
-    smb_bin = tool_server + r'\tools' # TOOLS Read-only share with third-party binary tools
+    path = get_application_path() + "\\"
+    smb_bin = path + tool_server + r'\tools' # TOOLS Read-only share with third-party binary tools
 
     # Setup startupinfo to hide console window when executing via subprocess.call
     si = subprocess.STARTUPINFO()
     si.dwFlags = subprocess.CREATE_NEW_CONSOLE | subprocess.STARTF_USESHOWWINDOW
     si.wShowWindow = subprocess.SW_HIDE
 
-    smb_data = output_server + r'\data' + r'\webhistory-' + os.environ['COMPUTERNAME'] + '\\' + createt # DATA Write-only share for output data
-    if not os.path.exists(r'\\' + smb_data):
+
+    smb_data = path + output_server + r'\data' + r'\webhistory-' + os.environ['COMPUTERNAME'] + '\\' + createt # DATA Write-only share for output data
+    if not os.path.exists(smb_data):
         os.makedirs(smb_data)
 
     if not silent:
@@ -1314,7 +1313,8 @@ def webhist(tool_server, output_server, histuser, silent):
                 os.makedirs(ie10_tmp_cache_dir)
             #copy contents of IE webcache to temp webcache folder
             for i in os.listdir(ie10_cache_dir):
-                subprocess.call(smb_bin + '\\RawCopy\\RawCopy.exe ' + ie10_cache_dir + i + ' ' + ie10_tmp_cache_dir, startupinfo=si)
+                print "ie10_cache_dir %s" % ie10_cache_dir + i + ' ' + ie10_tmp_cache_dir
+                subprocess.call(smb_bin + '\\RawCopy\\RawCopy.exe ' + "/FileNamePath:" + ie10_cache_dir + i + '  /OutputPath:' + ie10_tmp_cache_dir, startupinfo=si)
             #insure webcachev01.dat is "clean" before parsing
             subprocess.call('esentutl /r V01 /d', cwd=ie10_tmp_cache_dir)
             bhv_command = bhv_command + ' /CustomFiles.IE10Files "' + ie10_tmp_cache_dir + 'webcachev01.dat"'
@@ -1359,6 +1359,7 @@ def prefetch(tool_server, output_server, silent):
 
     """ Prefetch collection module """
     createt = strftime('%Y%m%d%H%M%S', gmtime())
+    path = get_application_path() + "\\"
     try:
         smb_bin = tool_server + r'\tools'
         smb_data = output_server + r'\data' + r'\prefetch-' + os.environ['COMPUTERNAME'] + r'\\' + createt
@@ -1371,20 +1372,24 @@ def prefetch(tool_server, output_server, silent):
 
         user_dirs = next(os.walk('c:\\windows\\prefetch\\'))[2]
         b = True
+        print "gop"
         for f in user_dirs:
             if f.endswith(".pf"):
-                cmd = r'\\' + smb_bin + r'\winprefetchview\winprefetchview.exe'
-                cmd = cmd + r' /prefetchfile '+ r'c:\windows\prefetch\\' + f + r' /scomma '  + r'\\' + smb_data + '\\' + f + r'.csv'
+                cmd = path + smb_bin + r'\winprefetchview\winprefetchview.exe'
+                cmd = cmd + r' /prefetchfile '+ "c:\windows\prefetch\\" + f + r' /scomma ' + path + smb_data + '\\' + f + r'.csv'
+                print "cmd \n %s" % cmd
                 p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 p.communicate()
                 if b:
                     b = False
-                    smb_data2 = r'\\' + output_server + r'\data' + r'\prefetch-' + os.environ['COMPUTERNAME'] + r'\\' + createt + r'\Main'
+                    smb_data2 = path + output_server + r'\data' + r'\prefetch-' + os.environ['COMPUTERNAME'] + "\\" + createt + r'\Main'
+                    print "smb_data2 \n %s" % smb_data2
                     if not os.path.exists(smb_data2):
                         os.makedirs(smb_data2)
 
-                    cmd_main = r'\\' + smb_bin + r'\winprefetchview\winprefetchview.exe'
+                    cmd_main = smb_bin + r'\winprefetchview\winprefetchview.exe'
                     cmd_main = cmd_main + r' /scomma '  + smb_data2 + '\\' + r'Global-Prefetch'+ r'.csv'
+                    print "cmd_main \n %s" % cmd_main
 
                     p2 = subprocess.Popen(cmd_main, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                     p2.communicate()
@@ -1436,16 +1441,16 @@ def myManual(args, logger, t_hostname, isAdmin):
                 logger.log("NOTICE", "Skipping process memory check. User has no admin rights.")
 
     elif args.mode == 'mem-dump' or args.mode == 'all':
-            memdump(args.TOOLS_server, args.DATA_server, args.silent)
+            memdump('w1000', 'w1000', args.silent)
 
     elif args.mode == 'triage' or args.mode == 'all':
-            triage(args.TOOLS_server, args.DATA_server, args.silent)
+            triage('w1000', 'w1000', args.silent)
 
     elif args.mode == 'web-hist':
-            webhist(args.TOOLS_server, args.DATA_server, args.username, args.silent)
+            webhist('w1000', 'w1000', args.username, args.silent)
 
     elif args.mode == 'prefetch':
-            prefetch(r'./w1000', r'./w1000', args.silent)
+            prefetch('w1000', 'w1000', args.silent)
 
     # Result ----------------------------------------------------------
     logger.log("NOTICE", "Results: {0} alerts, {1} warnings, {2} notices".format(logger.alerts, logger.warnings, logger.notices))
@@ -1506,6 +1511,7 @@ if __name__ == '__main__':
     subparsers = parser.add_subparsers(dest="mode", help='modes of operation')
 
     list_parser = subparsers.add_parser('all', help='Scan the memory')
+
     list_parser = subparsers.add_parser('mem-scan', help='Scan the memory')
 
     list_parser = subparsers.add_parser('mem-dump', help='Make dump file of current memory')
@@ -1520,6 +1526,7 @@ if __name__ == '__main__':
 
     list_parser = subparsers.add_parser('prefetch', help='')
     list_parser.add_argument('-silent', '--silent', action='store_true', help='Suppresses standard output')
+
     list_parser = subparsers.add_parser('disk-scan', help='')
     list_parser.add_argument('path', action='store', help='File or directory path to scan')
 
@@ -1555,7 +1562,6 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     arg_rules = args.y
-    print arg_rules
 
     # Remove old log file
     if os.path.exists(args.l):
@@ -1572,7 +1578,8 @@ if __name__ == '__main__':
         t_hostname, getSyslogTimestamp(), pplatform))
 
     # LoRa
-    lora = LoRa(args.intense, arg_rules)
+    if args.mode == 'mem-scan' or args.mode == 'disk-scan':
+        lora = LoRa(args.intense, arg_rules)
 
     # Check if admin
     isAdmin = False

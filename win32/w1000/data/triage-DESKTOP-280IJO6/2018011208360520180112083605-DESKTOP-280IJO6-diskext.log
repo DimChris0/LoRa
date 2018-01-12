@@ -1,0 +1,24 @@
+Volume: \\?\Volume{56cb166c-0000-0000-0000-100000000000}\
+   Mounted at: <unmounted>
+   Extent [1]:
+       Disk:   0
+       Offset: 1048576
+       Length: 524288000
+Volume: \\?\Volume{56cb166c-0000-0000-0000-501f00000000}\
+   Mounted at: C:\
+   Extent [1]:
+       Disk:   0
+       Offset: 525336576
+       Length: 145616797696
+Volume: \\?\Volume{56cb166c-0000-0000-0000-c00622000000}\
+   Mounted at: D:\
+   Extent [1]:
+       Disk:   0
+       Offset: 146142134272
+       Length: 104855502848
+Volume: \\?\Volume{80d62e7c-af81-11e7-b0bc-806e6f6e6963}\
+   Mounted at: A:\
+   No Extents
+Volume: \\?\Volume{80d62e7b-af81-11e7-b0bc-806e6f6e6963}\
+   Mounted at: E:\
+   No Extents

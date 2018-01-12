@@ -1,0 +1,273 @@
+System log on \\DESKTOP-280IJO6:
+[1210] Microsoft-Windows-Time-Service
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 9:59:51 AM   ID:       158 
+   User:     NT AUTHORITY\LOCAL SERVICE
+The time provider 'VMICTimeProvider' has indicated that the current hardware and operating environment is not supported and has stopped. This behavior is expected for VMICTimeProvider on non-HyperV-guest environments. This may be the expected behavior for the current provider in the current operating environment as well.
+
+[1209] Microsoft-Windows-Kernel-General
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 9:58:58 AM   ID:       15 
+   User:     DESKTOP-280IJO6\Stratarxis
+Message text not available.  Insertion strings:
+	41 \??\C:\Windows\System32\config\components 43237376 43233280  
+
+[1208] Microsoft-Windows-Time-Service
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 9:42:47 AM   ID:       158 
+   User:     NT AUTHORITY\LOCAL SERVICE
+The time provider 'VMICTimeProvider' has indicated that the current hardware and operating environment is not supported and has stopped. This behavior is expected for VMICTimeProvider on non-HyperV-guest environments. This may be the expected behavior for the current provider in the current operating environment as well.
+
+[1207] Microsoft-Windows-Time-Service
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 9:25:43 AM   ID:       158 
+   User:     NT AUTHORITY\LOCAL SERVICE
+The time provider 'VMICTimeProvider' has indicated that the current hardware and operating environment is not supported and has stopped. This behavior is expected for VMICTimeProvider on non-HyperV-guest environments. This may be the expected behavior for the current provider in the current operating environment as well.
+
+[1206] Microsoft-Windows-Time-Service
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 9:08:39 AM   ID:       158 
+   User:     NT AUTHORITY\LOCAL SERVICE
+The time provider 'VMICTimeProvider' has indicated that the current hardware and operating environment is not supported and has stopped. This behavior is expected for VMICTimeProvider on non-HyperV-guest environments. This may be the expected behavior for the current provider in the current operating environment as well.
+
+[1205] Microsoft-Windows-Time-Service
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 8:51:19 AM   ID:       37 
+   User:     NT AUTHORITY\LOCAL SERVICE
+The time provider NtpClient is currently receiving valid time data from time.windows.com,0x9 (ntp.m|0x9|0.0.0.0:123->52.178.161.41:123).
+
+[1204] Microsoft-Windows-Time-Service
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 8:51:19 AM   ID:       158 
+   User:     NT AUTHORITY\LOCAL SERVICE
+The time provider 'VMICTimeProvider' has indicated that the current hardware and operating environment is not supported and has stopped. This behavior is expected for VMICTimeProvider on non-HyperV-guest environments. This may be the expected behavior for the current provider in the current operating environment as well.
+
+[1203] Service Control Manager
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 8:05:24 AM   ID:       7040 
+   User:     NT AUTHORITY\SYSTEM
+The start type of the Background Intelligent Transfer Service service was changed from demand start to auto start.
+
+[1202] Microsoft-Windows-Kernel-General
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:45:20 AM   ID:       16 
+   User:     NT AUTHORITY\SYSTEM
+Message text not available.  Insertion strings:
+	85 \??\C:\ProgramData\Microsoft\Provisioning\Microsoft-Desktop-Provisioning-Sequence.dat 0 0  
+
+[1201] Microsoft-Windows-Kernel-General
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:43:52 AM   ID:       16 
+   User:     DESKTOP-280IJO6\Stratarxis
+Message text not available.  Insertion strings:
+	107 \??\C:\Users\Stratarxis\AppData\Local\Packages\Microsoft.Windows.Photos_8wekyb3d8bbwe\Settings\settings.dat 11 4  
+
+[1200] Microsoft-Windows-WindowsUpdateClient
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:43:18 AM   ID:       19 
+   User:     NT AUTHORITY\SYSTEM
+Installation Successful: Windows successfully installed the following update: 9NBLGGH1ZRPV-king.com.CandyCrushSodaSaga
+
+[1199] Microsoft-Windows-WindowsUpdateClient
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:43:13 AM   ID:       43 
+   User:     NT AUTHORITY\SYSTEM
+Installation Started: Windows has started installing the following update: 9NBLGGH1ZRPV-king.com.CandyCrushSodaSaga
+
+[1198] Microsoft-Windows-Kernel-General
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:43:10 AM   ID:       16 
+   User:     NT AUTHORITY\SYSTEM
+Message text not available.  Insertion strings:
+	138 \??\C:\ProgramData\Microsoft\Windows\AppRepository\Packages\king.com.CandyCrushSodaSaga_1.105.700.0_x86__kgqvnymyfvs32\ActivationStore.dat 0 0  
+
+[1197] Service Control Manager
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:40:55 AM   ID:       7045 
+   User:     NT AUTHORITY\SYSTEM
+A service was installed in the system.
+  Service Name:  MpKsl2c90a66e
+Service File Name:  C:\ProgramData\Microsoft\Windows Defender\Definition Updates\{5B259C9D-D130-4857-970F-2BD8ED488BCC}\MpKsl2c90a66e.sys
+Service Type:  kernel mode driver
+Service Start Type:  system start
+Service Account:  ?
+
+[1196] Microsoft-Windows-WindowsUpdateClient
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:40:42 AM   ID:       19 
+   User:     NT AUTHORITY\SYSTEM
+Installation Successful: Windows successfully installed the following update: Definition Update for Windows Defender Antivirus - KB2267602 (Definition 1.259.1533.0)
+
+[1195] Service Control Manager
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:39:49 AM   ID:       7040 
+   User:     NT AUTHORITY\SYSTEM
+The start type of the Background Intelligent Transfer Service service was changed from auto start to demand start.
+
+[1194] Microsoft-Windows-WindowsUpdateClient
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:38:42 AM   ID:       43 
+   User:     NT AUTHORITY\SYSTEM
+Installation Started: Windows has started installing the following update: Definition Update for Windows Defender Antivirus - KB2267602 (Definition 1.259.1533.0)
+
+[1193] Microsoft-Windows-WindowsUpdateClient
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:38:35 AM   ID:       44 
+   User:     NT AUTHORITY\SYSTEM
+Windows Update started downloading an update.
+
+[1192] Microsoft-Windows-WindowsUpdateClient
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:38:25 AM   ID:       44 
+   User:     NT AUTHORITY\SYSTEM
+Windows Update started downloading an update.
+
+[1191] Microsoft-Windows-Kernel-General
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:37:48 AM   ID:       16 
+   User:     NT AUTHORITY\SYSTEM
+Message text not available.  Insertion strings:
+	35 \SystemRoot\System32\config\DRIVERS 1041 99  
+
+[1190] Service Control Manager
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:37:46 AM   ID:       7040 
+   User:     NT AUTHORITY\SYSTEM
+The start type of the Background Intelligent Transfer Service service was changed from demand start to auto start.
+
+[1189] Service Control Manager
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:36:52 AM   ID:       7040 
+   User:     NT AUTHORITY\SYSTEM
+The start type of the Background Intelligent Transfer Service service was changed from auto start to demand start.
+
+[1188] Microsoft-Windows-Kernel-General
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:36:29 AM   ID:       16 
+   User:     DESKTOP-280IJO6\Stratarxis
+Message text not available.  Insertion strings:
+	109 \??\C:\Users\Stratarxis\AppData\Local\Packages\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\Settings\settings.dat 4 1  
+
+[1187] Microsoft-Windows-Kernel-General
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:35:59 AM   ID:       16 
+   User:     DESKTOP-280IJO6\Stratarxis
+Message text not available.  Insertion strings:
+	105 \??\C:\Users\Stratarxis\AppData\Local\Packages\Microsoft.WindowsStore_8wekyb3d8bbwe\Settings\settings.dat 14 2  
+
+[1186] Microsoft-Windows-Kernel-General
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:35:25 AM   ID:       16 
+   User:     DESKTOP-280IJO6\Stratarxis
+Message text not available.  Insertion strings:
+	106 \??\C:\Users\Stratarxis\AppData\Local\Packages\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\Settings\settings.dat 3 1  
+
+[1185] Microsoft-Windows-Kernel-General
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:35:18 AM   ID:       16 
+   User:     DESKTOP-280IJO6\Stratarxis
+Message text not available.  Insertion strings:
+	101 \??\C:\Users\Stratarxis\AppData\Local\Packages\Microsoft.SkypeApp_kzf8qxf38zg5c\Settings\settings.dat 2 1  
+
+[1184] Microsoft-Windows-Kernel-General
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:35:15 AM   ID:       16 
+   User:     DESKTOP-280IJO6\Stratarxis
+Message text not available.  Insertion strings:
+	118 \??\C:\Users\Stratarxis\AppData\Local\Packages\microsoft.windowscommunicationsapps_8wekyb3d8bbwe\Settings\settings.dat 60 11  
+
+[1183] Microsoft-Windows-Kernel-General
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:35:03 AM   ID:       16 
+   User:     DESKTOP-280IJO6\Stratarxis
+Message text not available.  Insertion strings:
+	123 \??\C:\Users\Stratarxis\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\Settings\settings.dat 466 66  
+
+[1182] Microsoft-Windows-Power-Troubleshooter
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:34:46 AM   ID:       1 
+   User:     NT AUTHORITY\LOCAL SERVICE
+The system has returned from a low power state.
+  Sleep Time: 2018-01-10T12:47:30.309933000Z
+Wake Time: 2018-01-12T05:34:42.027905200Z
+  Wake Source: 0?
+
+[1181] Microsoft-Windows-Winlogon
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:34:46 AM   ID:       7001 
+   User:     NT AUTHORITY\SYSTEM
+User Logon Notification for Customer Experience Improvement Program
+
+[1180] Microsoft-Windows-Kernel-Boot
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:34:42 AM   ID:       32 
+Message text not available.  Insertion strings:
+	0  
+
+[1179] Microsoft-Windows-Kernel-Boot
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:34:42 AM   ID:       18 
+Message text not available.  Insertion strings:
+	1  
+
+[1178] Microsoft-Windows-Kernel-Boot
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:34:42 AM   ID:       27 
+Message text not available.  Insertion strings:
+	1   
+
+[1177] Microsoft-Windows-Kernel-Boot
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:34:42 AM   ID:       25 
+Message text not available.  Insertion strings:
+	1  
+
+[1176] Microsoft-Windows-Kernel-General
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:34:41 AM   ID:       1 
+Possible detection of CVE: 2018-01-12T05:34:41.500000000Z
+Additional Information: 2018-01-10T12:47:35.895865800Z
+  This Event is generated when an attempt to exploit a known vulnerability (2018-01-12T05:34:41.500000000Z) is detected.
+This Event is raised by a User mode process.
+  
+[1174] EventLog
+   Type:     INFORMATION 
+   Computer: DESKTOP-280IJO6
+   Time:     1/12/2018 7:34:41 AM   ID:       6013 
+The system uptime is 3107833 seconds.
+

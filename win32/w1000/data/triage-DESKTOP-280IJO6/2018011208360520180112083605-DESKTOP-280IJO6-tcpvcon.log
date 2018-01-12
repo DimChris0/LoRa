@@ -1,0 +1,360 @@
+[TCP] svchost.exe
+	PID:	1012
+	State:	LISTENING
+	Local:	DESKTOP-280IJO6
+	Remote:	DESKTOP-280IJO6
+[TCP] System
+	PID:	4
+	State:	LISTENING
+	Local:	desktop-280ijo6.agora.net
+	Remote:	DESKTOP-280IJO6
+[TCP] wininit.exe
+	PID:	608
+	State:	LISTENING
+	Local:	DESKTOP-280IJO6
+	Remote:	DESKTOP-280IJO6
+[TCP] lsass.exe
+	PID:	748
+	State:	LISTENING
+	Local:	DESKTOP-280IJO6
+	Remote:	DESKTOP-280IJO6
+[TCP] svchost.exe
+	PID:	1468
+	State:	LISTENING
+	Local:	DESKTOP-280IJO6
+	Remote:	DESKTOP-280IJO6
+[TCP] spoolsv.exe
+	PID:	2512
+	State:	LISTENING
+	Local:	DESKTOP-280IJO6
+	Remote:	DESKTOP-280IJO6
+[TCP] services.exe
+	PID:	728
+	State:	LISTENING
+	Local:	DESKTOP-280IJO6
+	Remote:	DESKTOP-280IJO6
+[TCP] svchost.exe
+	PID:	4092
+	State:	LISTENING
+	Local:	DESKTOP-280IJO6
+	Remote:	DESKTOP-280IJO6
+[TCP] svchost.exe
+	PID:	1576
+	State:	ESTABLISHED
+	Local:	desktop-280ijo6.agora.net
+	Remote:	db5sch101101739.wns.windows.com
+[TCP] MicrosoftEdgeCP.exe
+	PID:	26936
+	State:	CLOSE_WAIT
+	Local:	desktop-280ijo6.agora.net
+	Remote:	etherpad.agora.net
+[TCP] MicrosoftEdgeCP.exe
+	PID:	26936
+	State:	CLOSE_WAIT
+	Local:	desktop-280ijo6.agora.net
+	Remote:	etherpad.agora.net
+[TCP] MicrosoftEdgeCP.exe
+	PID:	26936
+	State:	CLOSE_WAIT
+	Local:	desktop-280ijo6.agora.net
+	Remote:	etherpad.agora.net
+[TCP] MicrosoftEdgeCP.exe
+	PID:	26936
+	State:	CLOSE_WAIT
+	Local:	desktop-280ijo6.agora.net
+	Remote:	etherpad.agora.net
+[TCP] MicrosoftEdgeCP.exe
+	PID:	26936
+	State:	CLOSE_WAIT
+	Local:	desktop-280ijo6.agora.net
+	Remote:	etherpad.agora.net
+[TCP] MicrosoftEdgeCP.exe
+	PID:	26936
+	State:	CLOSE_WAIT
+	Local:	desktop-280ijo6.agora.net
+	Remote:	etherpad.agora.net
+[TCP] MicrosoftEdgeCP.exe
+	PID:	26936
+	State:	ESTABLISHED
+	Local:	desktop-280ijo6.agora.net
+	Remote:	etherpad.agora.net
+[TCP] WinStore.App.exe
+	PID:	192
+	State:	CLOSE_WAIT
+	Local:	desktop-280ijo6.agora.net
+	Remote:	a92-123-88-139.deploy.akamaitechnologies.com
+[TCP] WinStore.App.exe
+	PID:	192
+	State:	CLOSE_WAIT
+	Local:	desktop-280ijo6.agora.net
+	Remote:	a92-123-88-139.deploy.akamaitechnologies.com
+[TCP] WinStore.App.exe
+	PID:	192
+	State:	CLOSE_WAIT
+	Local:	desktop-280ijo6.agora.net
+	Remote:	a92-123-88-139.deploy.akamaitechnologies.com
+[TCP] SearchUI.exe
+	PID:	11612
+	State:	CLOSE_WAIT
+	Local:	desktop-280ijo6.agora.net
+	Remote:	93.184.221.200
+[TCP] [System Process]
+	PID:	0
+	State:	TIME_WAIT
+	Local:	desktop-280ijo6.agora.net
+	Remote:	ec2-52-55-177-212.compute-1.amazonaws.com
+[TCP] [System Process]
+	PID:	0
+	State:	TIME_WAIT
+	Local:	desktop-280ijo6.agora.net
+	Remote:	ec2-52-55-177-212.compute-1.amazonaws.com
+[TCP] [System Process]
+	PID:	0
+	State:	TIME_WAIT
+	Local:	desktop-280ijo6.agora.net
+	Remote:	fra16s20-in-f14.1e100.net
+[TCP] [System Process]
+	PID:	0
+	State:	TIME_WAIT
+	Local:	desktop-280ijo6.agora.net
+	Remote:	fra16s20-in-f14.1e100.net
+[TCP] MicrosoftEdgeCP.exe
+	PID:	17048
+	State:	ESTABLISHED
+	Local:	desktop-280ijo6.agora.net
+	Remote:	lb-192-30-253-124-iad.github.com
+[TCP] [System Process]
+	PID:	0
+	State:	TIME_WAIT
+	Local:	desktop-280ijo6.agora.net
+	Remote:	65.55.44.109
+[TCP] MicrosoftEdge.exe
+	PID:	43748
+	State:	ESTABLISHED
+	Local:	desktop-280ijo6.agora.net
+	Remote:	40.68.222.212
+[TCP] MicrosoftEdge.exe
+	PID:	43748
+	State:	ESTABLISHED
+	Local:	desktop-280ijo6.agora.net
+	Remote:	40.68.222.212
+[TCP] browser_broker.exe
+	PID:	13964
+	State:	ESTABLISHED
+	Local:	desktop-280ijo6.agora.net
+	Remote:	93.184.221.200
+[TCP] System
+	PID:	4
+	State:	LISTENING
+	Local:	DESKTOP-280IJO6
+	Remote:	DESKTOP-280IJO6
+[TCP] System
+	PID:	4
+	State:	LISTENING
+	Local:	DESKTOP-280IJO6
+	Remote:	DESKTOP-280IJO6
+[UDP] svchost.exe
+	PID:	3384
+	State:	*
+	Local:	DESKTOP-280IJO6
+	Remote:	*
+[UDP] System
+	PID:	4
+	State:	*
+	Local:	desktop-280ijo6.agora.net
+	Remote:	*
+[UDP] System
+	PID:	4
+	State:	*
+	Local:	desktop-280ijo6.agora.net
+	Remote:	*
+[UDP] svchost.exe
+	PID:	3604
+	State:	*
+	Local:	DESKTOP-280IJO6
+	Remote:	*
+[UDP] svchost.exe
+	PID:	3604
+	State:	*
+	Local:	desktop-280ijo6.agora.net
+	Remote:	*
+[UDP] svchost.exe
+	PID:	2292
+	State:	*
+	Local:	DESKTOP-280IJO6
+	Remote:	*
+[UDP] svchost.exe
+	PID:	2332
+	State:	*
+	Local:	DESKTOP-280IJO6
+	Remote:	*
+[UDP] svchost.exe
+	PID:	2292
+	State:	*
+	Local:	DESKTOP-280IJO6
+	Remote:	*
+[UDP] svchost.exe
+	PID:	2332
+	State:	*
+	Local:	DESKTOP-280IJO6
+	Remote:	*
+[UDP] stritz.exe
+	PID:	812
+	State:	*
+	Local:	DESKTOP-280IJO6
+	Remote:	*
+[UDP] svchost.exe
+	PID:	5072
+	State:	*
+	Local:	DESKTOP-280IJO6
+	Remote:	*
+[UDP] svchost.exe
+	PID:	2004
+	State:	*
+	Local:	DESKTOP-280IJO6
+	Remote:	*
+[UDP] svchost.exe
+	PID:	2004
+	State:	*
+	Local:	DESKTOP-280IJO6
+	Remote:	*
+[UDP] svchost.exe
+	PID:	2332
+	State:	*
+	Local:	DESKTOP-280IJO6
+	Remote:	*
+[UDP] svchost.exe
+	PID:	2708
+	State:	*
+	Local:	DESKTOP-280IJO6
+	Remote:	*
+[UDP] svchost.exe
+	PID:	2292
+	State:	*
+	Local:	DESKTOP-280IJO6
+	Remote:	*
+[UDP] svchost.exe
+	PID:	3604
+	State:	*
+	Local:	desktop-280ijo6.agora.net
+	Remote:	*
+[UDP] svchost.exe
+	PID:	3604
+	State:	*
+	Local:	DESKTOP-280IJO6
+	Remote:	*
+[TCPV6] svchost.exe
+	PID:	1012
+	State:	LISTENING
+	Local:	desktop-280ijo6
+	Remote:	desktop-280ijo6
+[TCPV6] System
+	PID:	4
+	State:	LISTENING
+	Local:	desktop-280ijo6
+	Remote:	desktop-280ijo6
+[TCPV6] System
+	PID:	4
+	State:	LISTENING
+	Local:	desktop-280ijo6
+	Remote:	desktop-280ijo6
+[TCPV6] python.exe
+	PID:	8148
+	State:	LISTENING
+	Local:	[0:0:0:0:0:0:0:1]
+	Remote:	desktop-280ijo6
+[TCPV6] wininit.exe
+	PID:	608
+	State:	LISTENING
+	Local:	desktop-280ijo6
+	Remote:	desktop-280ijo6
+[TCPV6] lsass.exe
+	PID:	748
+	State:	LISTENING
+	Local:	desktop-280ijo6
+	Remote:	desktop-280ijo6
+[TCPV6] svchost.exe
+	PID:	1468
+	State:	LISTENING
+	Local:	desktop-280ijo6
+	Remote:	desktop-280ijo6
+[TCPV6] spoolsv.exe
+	PID:	2512
+	State:	LISTENING
+	Local:	desktop-280ijo6
+	Remote:	desktop-280ijo6
+[TCPV6] services.exe
+	PID:	728
+	State:	LISTENING
+	Local:	desktop-280ijo6
+	Remote:	desktop-280ijo6
+[TCPV6] svchost.exe
+	PID:	4092
+	State:	LISTENING
+	Local:	desktop-280ijo6
+	Remote:	desktop-280ijo6
+[UDPV6] svchost.exe
+	PID:	3384
+	State:	*
+	Local:	desktop-280ijo6
+	Remote:	*
+[UDPV6] svchost.exe
+	PID:	3604
+	State:	*
+	Local:	[0:0:0:0:0:0:0:1]
+	Remote:	*
+[UDPV6] svchost.exe
+	PID:	3604
+	State:	*
+	Local:	[fe80:0:0:0:cc7e:a9d3:79ce:95dc]
+	Remote:	*
+[UDPV6] svchost.exe
+	PID:	2332
+	State:	*
+	Local:	desktop-280ijo6
+	Remote:	*
+[UDPV6] svchost.exe
+	PID:	2292
+	State:	*
+	Local:	desktop-280ijo6
+	Remote:	*
+[UDPV6] svchost.exe
+	PID:	2292
+	State:	*
+	Local:	desktop-280ijo6
+	Remote:	*
+[UDPV6] svchost.exe
+	PID:	2332
+	State:	*
+	Local:	desktop-280ijo6
+	Remote:	*
+[UDPV6] svchost.exe
+	PID:	2004
+	State:	*
+	Local:	desktop-280ijo6
+	Remote:	*
+[UDPV6] svchost.exe
+	PID:	2004
+	State:	*
+	Local:	desktop-280ijo6
+	Remote:	*
+[UDPV6] svchost.exe
+	PID:	2332
+	State:	*
+	Local:	desktop-280ijo6
+	Remote:	*
+[UDPV6] svchost.exe
+	PID:	2292
+	State:	*
+	Local:	desktop-280ijo6
+	Remote:	*
+[UDPV6] svchost.exe
+	PID:	3604
+	State:	*
+	Local:	[fe80:0:0:0:cc7e:a9d3:79ce:95dc]
+	Remote:	*
+[UDPV6] svchost.exe
+	PID:	3604
+	State:	*
+	Local:	[0:0:0:0:0:0:0:1]
+	Remote:	*

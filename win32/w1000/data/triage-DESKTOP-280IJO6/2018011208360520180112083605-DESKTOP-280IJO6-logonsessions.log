@@ -1,0 +1,605 @@
+
+[0] Logon session 00000000:000003e7:
+    User name:    WORKGROUP\DESKTOP-280IJO6$
+    Auth package: NTLM
+    Logon type:   (none)
+    Session:      0
+    Sid:          S-1-5-18
+    Logon time:   12/7/2017 8:17:55 AM
+    Logon server: 
+    DNS Domain:   
+    UPN:          
+      748: lsass.exe
+      864: svchost.exe
+      888: svchost.exe
+      324: svchost.exe
+      720: svchost.exe
+     1444: svchost.exe
+     1560: atiesrxx.exe
+     1616: svchost.exe
+     1632: svchost.exe
+     1640: svchost.exe
+     1832: svchost.exe
+     1864: svchost.exe
+     2020: svchost.exe
+     2364: svchost.exe
+     2512: spoolsv.exe
+     2552: svchost.exe
+     2708: svchost.exe
+     2772: svchost.exe
+     2988: svchost.exe
+     1796: svchost.exe
+     4224: SearchIndexer.exe
+     4092: svchost.exe
+     1576: svchost.exe
+     4852: svchost.exe
+     2536: svchost.exe
+     5448: svchost.exe
+     5504: svchost.exe
+     6112: svchost.exe
+     8988: svchost.exe
+    10136: svchost.exe
+     2568: svchost.exe
+     1996: svchost.exe
+    13716: svchost.exe
+     4884: svchost.exe
+    27100: winlogon.exe
+    21208: atieclxx.exe
+    38780: svchost.exe
+    22644: svchost.exe
+    32196: SearchProtocolHost.exe
+     9504: SearchFilterHost.exe
+     6312: TrustedInstaller.exe
+    40708: TiWorker.exe
+    14036: WmiPrvSE.exe
+
+[1] Logon session 00000000:000083c0:
+    User name:    
+    Auth package: NTLM
+    Logon type:   (none)
+    Session:      0
+    Sid:          (none)
+    Logon time:   12/7/2017 8:17:56 AM
+    Logon server: 
+    DNS Domain:   
+    UPN:          
+
+[2] Logon session 00000000:000087ca:
+    User name:    Font Driver Host\UMFD-0
+    Auth package: Negotiate
+    Logon type:   Interactive
+    Session:      0
+    Sid:          S-1-5-96-0-0
+    Logon time:   12/7/2017 8:17:57 AM
+    Logon server: 
+    DNS Domain:   
+    UPN:          
+      920: fontdrvhost.exe
+
+[3] Logon session 00000000:000003e4:
+    User name:    WORKGROUP\DESKTOP-280IJO6$
+    Auth package: Negotiate
+    Logon type:   Service
+    Session:      0
+    Sid:          S-1-5-20
+    Logon time:   12/7/2017 8:18:00 AM
+    Logon server: 
+    DNS Domain:   
+    UPN:          
+     1012: svchost.exe
+     1780: svchost.exe
+     2004: svchost.exe
+     2744: svchost.exe
+     4612: msdtc.exe
+     4180: dllhost.exe
+     3828: svchost.exe
+    32444: WmiPrvSE.exe
+
+[4] Logon session 00000000:000003e5:
+    User name:    NT AUTHORITY\LOCAL SERVICE
+    Auth package: Negotiate
+    Logon type:   Service
+    Session:      0
+    Sid:          S-1-5-19
+    Logon time:   12/7/2017 8:18:07 AM
+    Logon server: 
+    DNS Domain:   
+    UPN:          
+     1060: svchost.exe
+     1388: svchost.exe
+     1468: svchost.exe
+     1512: svchost.exe
+     1536: svchost.exe
+     1648: svchost.exe
+     1872: svchost.exe
+     1984: svchost.exe
+     2072: svchost.exe
+     2224: svchost.exe
+     2232: svchost.exe
+     2272: svchost.exe
+     2292: svchost.exe
+     2332: svchost.exe
+     2752: svchost.exe
+     2760: svchost.exe
+     2948: svchost.exe
+     3604: svchost.exe
+     2532: svchost.exe
+     5072: svchost.exe
+     8332: svchost.exe
+    18572: svchost.exe
+     3384: svchost.exe
+    24896: WmiPrvSE.exe
+
+[5] Logon session 00000000:0001d993:
+    User name:    NT AUTHORITY\ANONYMOUS LOGON
+    Auth package: NTLM
+    Logon type:   Network
+    Session:      0
+    Sid:          S-1-5-7
+    Logon time:   12/7/2017 8:18:56 AM
+    Logon server: 
+    DNS Domain:   
+    UPN:          
+
+[6] Logon session 00000000:001728a5:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      1
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   12/7/2017 8:26:38 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[7] Logon session 00000000:001728d9:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      1
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   12/7/2017 8:26:38 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[8] Logon session 00000000:012716bd:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      2
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   12/8/2017 7:17:15 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[9] Logon session 00000000:012716db:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      2
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   12/8/2017 7:17:15 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[10] Logon session 00000000:021c599b:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      3
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   12/11/2017 7:06:52 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[11] Logon session 00000000:021c59b9:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      3
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   12/11/2017 7:06:52 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[12] Logon session 00000000:039cbf98:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      4
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   12/12/2017 7:26:28 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[13] Logon session 00000000:039cbfb6:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      4
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   12/12/2017 7:26:28 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[14] Logon session 00000000:04875aa7:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      5
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   12/13/2017 7:26:06 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[15] Logon session 00000000:04875ac7:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      5
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   12/13/2017 7:26:06 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[16] Logon session 00000000:056e25b1:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      6
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   12/14/2017 7:11:33 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[17] Logon session 00000000:056e25cf:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      6
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   12/14/2017 7:11:33 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[18] Logon session 00000000:06579f51:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      7
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   12/15/2017 7:03:03 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[19] Logon session 00000000:06579f6f:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      7
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   12/15/2017 7:03:03 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[20] Logon session 00000000:06ef4df2:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      8
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   12/28/2017 7:14:55 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[21] Logon session 00000000:06ef4e10:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      8
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   12/28/2017 7:14:55 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[22] Logon session 00000000:07c903d7:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      9
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   12/29/2017 7:16:47 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[23] Logon session 00000000:07c903f5:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      9
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   12/29/2017 7:16:47 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[24] Logon session 00000000:0838ebca:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      10
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   1/2/2018 7:09:39 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[25] Logon session 00000000:0838ebe8:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      10
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   1/2/2018 7:09:39 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[26] Logon session 00000000:09223988:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      11
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   1/3/2018 7:15:55 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[27] Logon session 00000000:092239a6:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      11
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   1/3/2018 7:15:55 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[28] Logon session 00000000:0a1be83e:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      12
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   1/4/2018 7:13:38 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[29] Logon session 00000000:0a1be892:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      12
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   1/4/2018 7:13:38 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[30] Logon session 00000000:0b284e60:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      13
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   1/5/2018 7:36:46 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[31] Logon session 00000000:0b284e87:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      13
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   1/5/2018 7:36:46 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[32] Logon session 00000000:0c1e4fd5:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      14
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   1/8/2018 7:18:30 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[33] Logon session 00000000:0c1e4ff3:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      14
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   1/8/2018 7:18:30 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[34] Logon session 00000000:0d7396bf:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      15
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   1/9/2018 7:23:24 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[35] Logon session 00000000:0d7396e9:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      15
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   1/9/2018 7:23:24 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[36] Logon session 00000000:0eb1fb93:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      16
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   1/10/2018 7:09:31 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[37] Logon session 00000000:0eb1fbb1:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      16
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   1/10/2018 7:09:31 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+
+[38] Logon session 00000000:0fe52288:
+    User name:    Font Driver Host\UMFD-17
+    Auth package: Negotiate
+    Logon type:   Interactive
+    Session:      17
+    Sid:          S-1-5-96-0-17
+    Logon time:   1/10/2018 2:47:27 PM
+    Logon server: 
+    DNS Domain:   
+    UPN:          
+     4080: fontdrvhost.exe
+
+[39] Logon session 00000000:0fe52d51:
+    User name:    Window Manager\DWM-17
+    Auth package: Negotiate
+    Logon type:   Interactive
+    Session:      17
+    Sid:          S-1-5-90-0-17
+    Logon time:   1/10/2018 2:47:27 PM
+    Logon server: 
+    DNS Domain:   
+    UPN:          
+
+[40] Logon session 00000000:0fe52d6d:
+    User name:    Window Manager\DWM-17
+    Auth package: Negotiate
+    Logon type:   Interactive
+    Session:      17
+    Sid:          S-1-5-90-0-17
+    Logon time:   1/10/2018 2:47:27 PM
+    Logon server: 
+    DNS Domain:   
+    UPN:          
+     9112: dwm.exe
+
+[41] Logon session 00000000:0fe6209a:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      17
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   1/12/2018 7:34:46 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+     6916: cmd.exe
+    16164: conhost.exe
+    39884: cmd.exe
+     4868: conhost.exe
+     8148: python.exe
+    31640: python.exe
+     4504: logonsessions.exe
+
+[42] Logon session 00000000:0fe620b8:
+    User name:    DESKTOP-280IJO6\Stratarxis
+    Auth package: NTLM
+    Logon type:   Interactive
+    Session:      17
+    Sid:          S-1-5-21-2261305653-3396329666-1248054534-1001
+    Logon time:   1/12/2018 7:34:46 AM
+    Logon server: DESKTOP-280IJO6
+    DNS Domain:   
+    UPN:          
+    15780: sihost.exe
+    19020: svchost.exe
+    19908: svchost.exe
+    41448: explorer.exe
+     3280: taskhostw.exe
+    15084: ShellExperienceHost.exe
+    11612: SearchUI.exe
+    35344: RuntimeBroker.exe
+    42476: RuntimeBroker.exe
+    36540: RuntimeBroker.exe
+    27152: ctfmon.exe
+    35012: SkypeHost.exe
+    44792: MSASCuiL.exe
+    12856: OneDrive.exe
+    43748: MicrosoftEdge.exe
+    43032: ApplicationFrameHost.exe
+    13964: browser_broker.exe
+     6936: RuntimeBroker.exe
+    22112: MicrosoftEdgeCP.exe
+    17048: MicrosoftEdgeCP.exe
+    30548: RuntimeBroker.exe
+    31436: MicrosoftEdgeCP.exe
+    26936: MicrosoftEdgeCP.exe
+    42136: MicrosoftEdgeCP.exe
+    43384: MicrosoftEdgeCP.exe
+    21700: MicrosoftEdgeCP.exe
+    17500: RuntimeBroker.exe
+    17220: svchost.exe
+      192: WinStore.App.exe
+    35236: RuntimeBroker.exe
+     9276: dllhost.exe
+      812: stritz.exe
+    39308: GameBarPresenceWriter.exe
+    14324: RuntimeBroker.exe
+    36920: atom.exe
+    18176: atom.exe
+    14104: atom.exe
+    20028: atom.exe
+    19316: atom.exe
+    34212: MicrosoftEdgeCP.exe
+    40544: MicrosoftEdgeCP.exe
+    44124: MicrosoftEdgeCP.exe
+    33480: MicrosoftEdgeCP.exe
+    39156: MicrosoftEdgeCP.exe
+    17316: MicrosoftEdgeCP.exe
+    32180: git.exe
+    38492: conhost.exe
