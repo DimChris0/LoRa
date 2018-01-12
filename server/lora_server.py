@@ -1,9 +1,8 @@
 #!/Python27/
 # -*- coding: utf-8 -*-
 #
-# rastrea2r REST Server
+# LoRa REST Server
 #
-# by Ismael Valenzuela @aboutsecurity / Foundstone (Intel Security)
 
 
 #TODO: add pickle ?

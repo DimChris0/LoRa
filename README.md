@@ -79,6 +79,7 @@ or just write 'all' for all the available rules we have. We can also do a one ti
 or make it run scans with time intervals.
 
 The available checks are {mem-scan, disk-scan, mem-dump, prefetch, triage, web-hist}
+
 mem-scan: scan the memory
 
 disk-scan: scan the disk from a path and down(excludes taken into consideration)
@@ -86,7 +87,9 @@ disk-scan: scan the disk from a path and down(excludes taken into consideration)
 mem-dump: dumps the current memory to a image file for further investigation
 
 prefetch:
+
   Info:
+  
     Each time you turn on your computer, Windows keeps track of the way your computer starts and which programs you commonly open.
     Windows saves this information as a number of small files in the prefetch folder.
     The next time you turn on your computer, Windows refers to these files to help speed the start process.
@@ -101,3 +104,10 @@ Checks if Mcaffe epo agent is installed and if not an exception is raised which 
 web-hist: Collects the web history from various internet browsers and outputs it in a different csv file for each user.
 Currently tested only for microsoft edge 10. The output has the columns below.
 URL,Title,Visit Time,Visit Count,Visited From,Visit Type,Web Browser,User Profile,Browser Profile,URL Length,Typed Count
+
+
+## Server
+
+The server is responsible for updating the signature base, delivering the rules asked by the client and
+returing in a dictionary form ioc data such as filenames, ips, hosts, hashes. The server running is cherrypy
+and it offers parallelism of requests.
