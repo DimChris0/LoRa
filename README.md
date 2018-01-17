@@ -49,7 +49,8 @@ Additional Checks:
 LoRa includes a separate updater tool named `lora-upgrader.py` which downloads from hardcoded repositories different
 file types (txt, pdf, csv, yara, xlx, xlsx, ioc) and extracts from them with the help of
 [ioc_parser](https://github.com/armbues/ioc_parser) the indicators we are interested in such as MD5s, SHA256s, URLs, Filenames,
-Hosts and then proceeds to build the corresponding yara rules.
+Hosts and then proceeds to build the corresponding yara rules. The updater can be called through the server with the  --update
+flag.
 
 ```
 usage: lora-upgrader.py [-h] [-l log-file] [--nolog] [--debug]
@@ -89,16 +90,16 @@ mem-dump: dumps the current memory to a image file for further investigation
 prefetch:
 
   Info:
-  
-    Each time you turn on your computer, Windows keeps track of the way your computer starts and which programs you commonly open.
-    Windows saves this information as a number of small files in the prefetch folder.
-    The next time you turn on your computer, Windows refers to these files to help speed the start process.
+
+  Each time you turn on your computer, Windows keeps track of the way your computer starts and which programs you commonly open.
+  Windows saves this information as a number of small files in the prefetch folder.
+  The next time you turn on your computer, Windows refers to these files to help speed the start process.
 
 With this we can identify the processes that start with booting our system and see if there is anything
-malicious. The output foramt is csv and the results are located in \LoRa\win32\w1000\data\prefetch-{name of client pc}\{folder with latest time stamp}
+malicious. The output format is csv and the results are located in \LoRa\win32\w1000\data\prefetch-{name of client pc}\{folder with latest time stamp}
 
 triage: Collects triage information from the endpoint by checking Sysinternal / third-party / BATCH files
-Checks if Mcaffe epo agent is installed and if not an exception is raised which is normal.
+Checks if Mcafee epo agent is installed and if not an exception is raised which is normal.
 
 
 web-hist: Collects the web history from various internet browsers and outputs it in a different csv file for each user.
@@ -111,3 +112,13 @@ URL,Title,Visit Time,Visit Count,Visited From,Visit Type,Web Browser,User Profil
 The server is responsible for updating the signature base, delivering the rules asked by the client and
 returing in a dictionary form ioc data such as filenames, ips, hosts, hashes. The server running is cherrypy
 and it offers parallelism of requests.
+
+
+# Problems
+
+The only problem encountered is with some protected pdf files which the pdfminer could not open to parse.
+Solution: The one responsible for the server must transform the problematic pdf files to .xps and back to .pdf.
+That way the protection is removed and we can parse the documents. There is only one corrupted file within all the
+repositories from which we build our signature-base.
+
+FIXED: bug with svchost.exe

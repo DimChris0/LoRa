@@ -4278,3 +4278,13 @@
 20180112T07:35:59Z DESKTOP-280IJO6 LOKI: Info: Initializing Yara rule XSLCmd_OSX.yar
 20180112T07:35:59Z DESKTOP-280IJO6 LOKI: Info: Initializing Yara rule XtremeRAT_fireeye.yar
 20180112T07:35:59Z DESKTOP-280IJO6 LOKI: Info: Initializing Yara rule ZoxPNG_Full_Analysis_Final.yar
+20180115T10:56:42Z DESKTOP-280IJO6 LOKI: Info: Processing YARA rules folder C:\Users\Stratarxis\Desktop\loracopy\LoRa\server\signature-base\yara
+20180115T10:56:42Z DESKTOP-280IJO6 LOKI: Info: Initializing Yara rule myrule.yar
+20180115T10:58:47Z DESKTOP-280IJO6 LOKI: Info: Processing YARA rules folder C:\Users\Stratarxis\Desktop\loracopy\LoRa\server\signature-base\yara
+20180115T10:58:47Z DESKTOP-280IJO6 LOKI: Info: Initializing Yara rule myrule.yar
+20180115T11:40:54Z DESKTOP-280IJO6 LOKI: Info: Processing YARA rules folder C:\Users\Stratarxis\Desktop\loracopy\LoRa\server\signature-base\yara
+20180115T11:40:54Z DESKTOP-280IJO6 LOKI: Info: Initializing Yara rule myrule.yar
+20180116T08:22:33Z DESKTOP-280IJO6 LOKI: Info: Processing YARA rules folder C:\Users\Stratarxis\Desktop\loracopy\LoRa\server\signature-base\yara
+20180116T08:22:33Z DESKTOP-280IJO6 LOKI: Info: Initializing Yara rule myrule.yar
+20180116T08:26:36Z DESKTOP-280IJO6 LOKI: Info: Processing YARA rules folder C:\Users\Stratarxis\Desktop\loracopy\LoRa\server\signature-base\yara
+20180116T08:26:36Z DESKTOP-280IJO6 LOKI: Info: Initializing Yara rule myrule.yar

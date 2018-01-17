@@ -4,6 +4,7 @@ python lora_win32.py -y airbnb_binaryalert.yar,apt_agent_btz.yar disk-scan C:\Us
 python lora_win32.py -y all disk-scan C:\Users\Stratarxis\Downloads\LoRa\win32\config
 
 python lora_win32.py -y myrule.yar disk-scan C:\Users\Stratarxis\Desktop\Newfolder
+python lora_win32.py -y myrule.yar mem-scan
 
 triage 		checked
 disk-scan  	checked

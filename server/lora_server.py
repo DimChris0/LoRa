@@ -328,7 +328,6 @@ def index():
     try:
         for ioc_filename in os.listdir(ioc_path):
             try:
-                #TODO: fix to search all files 1)insert c2 to all files 2)change the below to search all files and not only with c2 in name
                 if 'c2' in ioc_filename:
                     with codecs.open(os.path.join(ioc_path, ioc_filename), 'r', encoding='utf-8') as file:
                         lines = file.readlines()

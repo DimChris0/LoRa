@@ -1,11 +1,8 @@
 # -*- coding: utf-8 -*-
 
 #TODO: in the triage->tool list what to do with the commented ?
-#TODO: webhist, prefetch
-#TODO: add the filename, filesize check inside the condition of rules
-# filename and filesize are recognised by the yara-python so we can compile the Rules
-# immediately by adding to a .yar the line "filename = (value)" and not call getfilenameiocs
-# and search all the filenames of files in our scan
+#TODO: add the filesize check inside the condition of rules
+
 
 import os
 import sys
@@ -768,7 +765,7 @@ class LoRa():
             if name == "svchost.exe" and priority is not 8:
                 logger.log("NOTICE", "svchost.exe priority is not 8 PID: %s NAME: %s OWNER: %s CMD: %s PATH: %s" % (
                     str(pid), name, owner, cmd, path))
-            if name == "svchost.exe" and not ( self.check_svchost_owner(owner) or "UnistackSvcGroup" in cmd):
+            if name == "svchost.exe" and not ( self.check_svchost_owner(owner) or "unistacksvcgroup" in cmd.lower()):
                 logger.log("WARNING", "svchost.exe process owner is suspicious PID: %s NAME: %s OWNER: %s CMD: %s PATH: %s" % (
                     str(pid), name, owner, cmd, path))
 
@@ -876,7 +873,7 @@ class LoRa():
             logger.log("INFO",
                 "Process %s does not exist anymore or cannot be accessed" % str(pid))
 
-    #TODO: insert below function somehwere to work?
+
     def check_rootkit(self):
 
         logger.log("INFO", "Checking for Backdoors ...")

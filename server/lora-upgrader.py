@@ -3,6 +3,7 @@
 # -*- coding: utf-8 -*-
 #
 #  LOKI Upgrader
+
 try:
     from urllib2 import urlopen, HTTPError
 except ImportError:
@@ -214,24 +215,24 @@ class LoRaUpdater(object):
                     parser = Parser.Parser(None, 'pdf', True, 'pdfminer', 'yara', None)
                     print self.application_path + "\\signature-base\\pdf\\"
                     parser.parse(self.application_path + "\\signature-base\\pdf\\")
-        #         elif dirr == 'openiocs':
-        #             print dirr
-        #             ffile = checkToParse(dirr, self.application_path)
-        #             if ffile:
-        #                 self.parseOpenIocs(ffile)
-        #         elif dirr == "excel":
-        #             print dirr
-        #             ffile = checkToParse(dirr, self.application_path)
-        #             if ffile:
-        #                 self.parseExcel(ffile)
-        #         elif dirr == 'csv':
-        #             print dirr
-        #             ffile = checkToParse(dirr, self.application_path)
-        #             if ffile:
-        #                 self.parseCSV(ffile)
-        # # parse the text format last as we append new data to those files from the extraction from excel, csv and openioc files
-        # parser = Parser.Parser(None, 'txt', True, 'pdfminer', 'yara', None)
-        # parser.parse(r'./signature-base/misc-txt')
+                elif dirr == 'openiocs':
+                    print dirr
+                    ffile = checkToParse(dirr, self.application_path)
+                    if ffile:
+                        self.parseOpenIocs(ffile)
+                elif dirr == "excel":
+                    print dirr
+                    ffile = checkToParse(dirr, self.application_path)
+                    if ffile:
+                        self.parseExcel(ffile)
+                elif dirr == 'csv':
+                    print dirr
+                    ffile = checkToParse(dirr, self.application_path)
+                    if ffile:
+                        self.parseCSV(ffile)
+        # parse the text format last as we append new data to those files from the extraction from excel, csv and openioc files
+        parser = Parser.Parser(None, 'txt', True, 'pdfminer', 'yara', None)
+        parser.parse(r'./signature-base/misc-txt')
 
 
 
@@ -380,10 +381,6 @@ if __name__ == '__main__':
     # Parse Arguments
     parser = argparse.ArgumentParser(description='LoRa - Upgrader')
     parser.add_argument('-l', help='Log file', metavar='log-file', default='LoRa-upgrade.log')
-    # this is disabled as we will only do signature updates with each execution
-    #parser.add_argument('--sigsonly', action='store_true', help='Update the signatures only', default=False)
-    # this functionality is disabled for the moment
-    #parser.add_argument('--progonly', action='store_true', help='Update the program files only', default=False)
     parser.add_argument('--nolog', action='store_true', help='Don\'t write a local log file', default=False)
     parser.add_argument('--debug', action='store_true', default=False, help='Debug output')
     parser.add_argument('--detached', action='store_true', default=False, help=argparse.SUPPRESS)
@@ -402,9 +399,9 @@ if __name__ == '__main__':
     # Update LoRa
     updater = LoRaUpdater(args.debug, logger, get_application_path())
 
-
-    logger.log("INFO", "Updating Signatures ...")
-    #updater.update_signatures()
+    if args.sigs:
+        logger.log("INFO", "Updating Signatures ...")
+        updater.update_signatures()
 
     updater.extractFromFiles()
     logger.log("INFO", "Update complete")
