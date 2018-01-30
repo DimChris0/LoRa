@@ -98,3 +98,8 @@ mem:
 loki checks proc connections
 loki checks Sysforensics
 working size
+
+
+
+downloaded microsoftwebdriver to parse iocs from the threatexpert page
+it must be on the *path* system variable

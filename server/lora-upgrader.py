@@ -213,20 +213,16 @@ class LoRaUpdater(object):
                 if dirr == 'pdf':
                     filel = checkToParse(dirr, self.application_path)
                     parser = Parser.Parser(None, 'pdf', True, 'pdfminer', 'yara', None)
-                    print self.application_path + "\\signature-base\\pdf\\"
                     parser.parse(self.application_path + "\\signature-base\\pdf\\")
                 elif dirr == 'openiocs':
-                    print dirr
                     ffile = checkToParse(dirr, self.application_path)
                     if ffile:
                         self.parseOpenIocs(ffile)
                 elif dirr == "excel":
-                    print dirr
                     ffile = checkToParse(dirr, self.application_path)
                     if ffile:
                         self.parseExcel(ffile)
                 elif dirr == 'csv':
-                    print dirr
                     ffile = checkToParse(dirr, self.application_path)
                     if ffile:
                         self.parseCSV(ffile)
@@ -303,7 +299,6 @@ class LoRaUpdater(object):
         root=ioco.getroot()
 
         for node in root.iter():
-            print node.tag
             search = node.attrib.get('search')
 
             if search == "DnsEntryItem/RecordName" or search == "PortItem/remoteIP":
@@ -314,7 +309,7 @@ class LoRaUpdater(object):
                 with open(r'./signature-base/misc-txt/hashes.txt', "a+") as iocfile:
                     iocfile.write(node.getnext() + "\n")
                 iocfile.close()
-            # i add the ProcessItem here because they are scan_processes searches the filename_iocs
+            # I add the ProcessItem here because they are scan_processes searches the filename_iocs
             elif search == "FileItem/FileName" or search == "ProcessItem/path" or search == "ProcessItem/name":
                 with open(r'./signature-base/misc-txt/filenames.txt', "a+") as iocfile:
                     iocfile.write(node.getnext() + "\n")
@@ -332,14 +327,13 @@ def writeToFile(data, fileName):
         traceback.print_exc()
 
 
-
+# check if the file already exists as .yar -> not parsing it again
 def checkToParse(dirr, app_path):
     file_list = []
     for root, directories, files in os.walk(unicode("./signature-base/" + dirr), onerror=walk_error, followlinks=False):
         for ffile in files:
             #check if there is the yara rule for this file first
             if not os.path.exists(app_path + r'./signature-base/yara/' + ffile[:-3] + 'yar') and not os.path.exists(app_path + r'./signature-base/yara/' + ffile[:-4] + 'yara'):
-                #print app_path + "\\signature-base\\" + dirr +"\\"+ ffile
                 file_list.append(ffile)
 
     return file_list

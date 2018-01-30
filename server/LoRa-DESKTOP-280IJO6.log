@@ -4288,3 +4288,23 @@
 20180116T08:22:33Z DESKTOP-280IJO6 LOKI: Info: Initializing Yara rule myrule.yar
 20180116T08:26:36Z DESKTOP-280IJO6 LOKI: Info: Processing YARA rules folder C:\Users\Stratarxis\Desktop\loracopy\LoRa\server\signature-base\yara
 20180116T08:26:36Z DESKTOP-280IJO6 LOKI: Info: Initializing Yara rule myrule.yar
+20180117T06:34:49Z DESKTOP-280IJO6 LOKI: Info: Processing YARA rules folder C:\Users\Stratarxis\Desktop\loracopy\LoRa\server\signature-base\yara
+20180117T06:34:49Z DESKTOP-280IJO6 LOKI: Info: Initializing Yara rule myrule.yar
+20180117T06:38:22Z DESKTOP-280IJO6 LOKI: Info: Processing YARA rules folder C:\Users\Stratarxis\Desktop\loracopy\LoRa\server\signature-base\yara
+20180117T06:38:22Z DESKTOP-280IJO6 LOKI: Info: Initializing Yara rule myrule.yar
+20180125T06:03:58Z DESKTOP-280IJO6 LOKI: Info: Processing YARA rules folder C:\Users\Stratarxis\Desktop\loracopy\LoRa\server\signature-base\yara
+20180125T06:03:59Z DESKTOP-280IJO6 LOKI: Info: Initializing Yara rule myrule.yar
+20180125T06:13:52Z DESKTOP-280IJO6 LOKI: Info: Processing YARA rules folder C:\Users\Stratarxis\Desktop\loracopy\LoRa\server\signature-base\yara
+20180125T06:13:52Z DESKTOP-280IJO6 LOKI: Error: Error while initializing Yara rule myrule.yar
+20180125T06:14:12Z DESKTOP-280IJO6 LOKI: Info: Processing YARA rules folder C:\Users\Stratarxis\Desktop\loracopy\LoRa\server\signature-base\yara
+20180125T06:14:12Z DESKTOP-280IJO6 LOKI: Info: Initializing Yara rule myrule.yar
+20180125T06:17:30Z DESKTOP-280IJO6 LOKI: Info: Processing YARA rules folder C:\Users\Stratarxis\Desktop\loracopy\LoRa\server\signature-base\yara
+20180125T06:17:30Z DESKTOP-280IJO6 LOKI: Info: Initializing Yara rule myrule.yar
+20180125T06:18:40Z DESKTOP-280IJO6 LOKI: Info: Processing YARA rules folder C:\Users\Stratarxis\Desktop\loracopy\LoRa\server\signature-base\yara
+20180125T06:18:40Z DESKTOP-280IJO6 LOKI: Info: Initializing Yara rule myrule.yar
+20180125T06:19:43Z DESKTOP-280IJO6 LOKI: Info: Processing YARA rules folder C:\Users\Stratarxis\Desktop\loracopy\LoRa\server\signature-base\yara
+20180125T06:19:43Z DESKTOP-280IJO6 LOKI: Info: Initializing Yara rule myrule.yar
+20180125T10:04:20Z DESKTOP-280IJO6 LOKI: Info: Processing YARA rules folder C:\Users\Stratarxis\Desktop\loracopy\LoRa\server\signature-base\yara
+20180125T10:04:20Z DESKTOP-280IJO6 LOKI: Error: Error while initializing Yara rule myrule.yar
+20180125T10:04:43Z DESKTOP-280IJO6 LOKI: Info: Processing YARA rules folder C:\Users\Stratarxis\Desktop\loracopy\LoRa\server\signature-base\yara
+20180125T10:04:43Z DESKTOP-280IJO6 LOKI: Info: Initializing Yara rule myrule.yar

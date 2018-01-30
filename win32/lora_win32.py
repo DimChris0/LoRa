@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 #TODO: in the triage->tool list what to do with the commented ?
-#TODO: add the filesize check inside the condition of rules
 
 
 import os
@@ -9,7 +8,7 @@ import sys
 from sys import platform as _platform
 import platform
 import yara
-import psutil  # New multiplatform library
+import psutil
 import subprocess
 import hashlib
 import zipfile
@@ -138,7 +137,6 @@ class LoRa():
                 if k == "regex" or k == "regex_fp":
                     value[k] = re.compile(self.raw_string(v))
             self.filename_iocs.append(value)
-
 
         if self.filename_iocs is None:
             sys.exit(1)
@@ -1369,24 +1367,20 @@ def prefetch(tool_server, output_server, silent):
 
         user_dirs = next(os.walk('c:\\windows\\prefetch\\'))[2]
         b = True
-        print "gop"
         for f in user_dirs:
             if f.endswith(".pf"):
                 cmd = path + smb_bin + r'\winprefetchview\winprefetchview.exe'
                 cmd = cmd + r' /prefetchfile '+ "c:\windows\prefetch\\" + f + r' /scomma ' + path + smb_data + '\\' + f + r'.csv'
-                print "cmd \n %s" % cmd
                 p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 p.communicate()
                 if b:
                     b = False
                     smb_data2 = path + output_server + r'\data' + r'\prefetch-' + os.environ['COMPUTERNAME'] + "\\" + createt + r'\Main'
-                    print "smb_data2 \n %s" % smb_data2
                     if not os.path.exists(smb_data2):
                         os.makedirs(smb_data2)
 
                     cmd_main = smb_bin + r'\winprefetchview\winprefetchview.exe'
                     cmd_main = cmd_main + r' /scomma '  + smb_data2 + '\\' + r'Global-Prefetch'+ r'.csv'
-                    print "cmd_main \n %s" % cmd_main
 
                     p2 = subprocess.Popen(cmd_main, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                     p2.communicate()
@@ -1593,6 +1587,11 @@ if __name__ == '__main__':
         else:
             logger.log("NOTICE", "Program should be run as 'root' to ensure all access rights to process memory and file objects.")
 
+
+
+    # Scan for Rootkits -----------------------------------------------
+    if args.rootkit and os_platform == "windows":
+        lora.check_rootkit()
 
     # agent starts here with time interval
     # possible exec ?

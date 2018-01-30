@@ -35,6 +35,7 @@ Additional Checks:
   - Provide the folder to a target system that should be scanned: removable media, network share, folder on target system
   - Open a command line "cmd.exe" as Administrator and run it from there (you can also run LoRa without administrative privileges but some checks will be disabled and relevant objects on disk will not be accessible)
 
+
 ### Reports
 
   - The resulting report will show a GREEN, YELLOW or RED result line.
@@ -43,6 +44,7 @@ Additional Checks:
     2. Search the web for the filename
     3. Search the web for keywords from the rule name (e.g. EQUATIONGroupMalware_1 > search for "Equation Group")
     4. Search the web for the MD5 hash of the sample
+
 
 ## Update
 
@@ -64,11 +66,13 @@ optional arguments:
 
 ## Dependencies
 
-See the dependencies of the two tools.<br />
-cherrypy(server)<br />
-openpyxl<br />
-lxml<br />
+See the dependencies of the two tools.
 
+cherrypy(server)
+
+openpyxl
+
+lxml
 
 
 
@@ -114,6 +118,25 @@ returing in a dictionary form ioc data such as filenames, ips, hosts, hashes. Th
 and it offers parallelism of requests.
 
 
+# Loki vs Rastrea2r
+
+The two tools had some code blocks with the same functionality. In order to merge them in one tool I had to
+choose which specific parts of both are going to survive to the final product. Through comparison and checking
+I concluded to the following:
+
+disk-scan:
+
+rastrea2r only does rule match - loki filename and hash check
+
+mem-scan:
+
+loki checks processes connections
+
+loki checks Sysforensics
+
+loki does not check if working size bigger than a default due to performance
+
+
 # Problems
 
 The only problem encountered is with some protected pdf files which the pdfminer could not open to parse.
@@ -121,4 +144,7 @@ Solution: The one responsible for the server must transform the problematic pdf 
 That way the protection is removed and we can parse the documents. There is only one corrupted file within all the
 repositories from which we build our signature-base.
 
-FIXED: bug with svchost.exe
+# Added features
+
+Searching and parsing iocs from the site threatexpert. Scanning the registries for indicators that malware creates as well
+as mutexes.

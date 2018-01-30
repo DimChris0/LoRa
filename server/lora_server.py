@@ -5,7 +5,6 @@
 #
 
 
-#TODO: add pickle ?
 #TODO: after downloading the signatures there are conflicts in yara where there are duplicate rules or syntax errors
 
 from time import gmtime, strftime
@@ -244,6 +243,7 @@ def index():
     client = request.forms.get('client')
     filename_iocs = {}
     counter = 0
+    output = open('filename_iocs.pkl', 'wb')
     try:
         for ioc_filename in os.listdir(ioc_path):
             if 'filename' in ioc_filename:
@@ -305,6 +305,7 @@ def index():
 
                             filename_iocs["a" + str(counter)] = fioc
                             counter += 1
+
                         except Exception, e:
                             (loggers[client]).log("ERROR", "Error reading line: %s" % line)
                             traceback.print_exc()
