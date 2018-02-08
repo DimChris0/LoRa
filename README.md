@@ -74,6 +74,8 @@ openpyxl
 
 lxml
 
+easy_install winpaths
+
 
 
 ## Client
@@ -115,7 +117,7 @@ URL,Title,Visit Time,Visit Count,Visited From,Visit Type,Web Browser,User Profil
 
 The server is responsible for updating the signature base, delivering the rules asked by the client and
 returing in a dictionary form ioc data such as filenames, ips, hosts, hashes. The server running is cherrypy
-and it offers parallelism of requests.
+and it offers parallelism of requests. It produces a unique log file for each client.
 
 
 # Loki vs Rastrea2r
@@ -144,7 +146,22 @@ Solution: The one responsible for the server must transform the problematic pdf 
 That way the protection is removed and we can parse the documents. There is only one corrupted file within all the
 repositories from which we build our signature-base.
 
-# Added features
+
+## Added features
+
+
+# threatexpert
 
 Searching and parsing iocs from the site threatexpert. Scanning the registries for indicators that malware creates as well
-as mutexes.
+as mutexes, apart from hashes and file names etc.
+
+# ClamAV
+
+Also I extract signatures from the ClamAV databases. The process to do it was to install it on windows first and
+from the folder conf_examples of the installation directory, copy the file freshclam.conf.sample to the installation directory
+and rename it freshclam.conf in order for the freshclam.exe to be able to start downloading the databases. The command given was
+freshclam.exe --datadir=C:\Users\{User Name}\Desktop\clamAV or any other folder path could be given. Then, in order to extract
+the sigs from the .cvd files, I used e.g. sigtool -u main.cvd but i had to delete or rename the folder COPYING because it threw an
+error. From ClamAV 0.99 we can use the clamav_to_yara.py file to convert the clam signatures into yara rules.
+Once you have the .ndb file from the sigtool operation you can proceed to converting as follows:
+$ python clamav_to_yara.py -f {signature name}.ndb -o {Output File Name}.yara

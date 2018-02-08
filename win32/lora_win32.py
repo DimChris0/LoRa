@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 
-#TODO: in the triage->tool list what to do with the commented ?
-
-
+# TODO: in the triage->tool list what to do with the commented ?
+# TODO: add the registries and mutex scan (https://digital-forensics.sans.org/blog/2012/07/24/mutex-for-malware-discovery-and-iocs)
+# TODO: add baselining
+# TODO: get from clamav the unofficial sigs by installing it first to ubuntu and then getting them to windows
 import os
 import sys
-from sys import platform as _platform
+import subprocess
+import csv
 import platform
 import yara
 import psutil
@@ -22,11 +24,11 @@ import stat
 import ast
 import _winreg
 import signal as signal_module
+import time
+from sys import platform as _platform
+from time import gmtime, strftime
 from collections import Counter
 from requests import post
-import time
-from time import gmtime, strftime
-
 # LOKI Modules
 from lib.lokilogger import *
 
@@ -73,8 +75,7 @@ EVIL_EXTENSIONS = [".vbs", ".ps", ".ps1", ".rar", ".tmp", ".bas", ".bat", ".chm"
                    ".psm1", ".ps1xml", ".clixml", ".psc1", ".pssc", ".pl", ".www", ".rdp", ".jar", ".docm"]
 
 SCRIPT_EXTENSIONS = [".asp", ".vbs", ".ps1", ".bas", ".bat", ".js", ".vb", ".vbe", ".vbs", ".wsc", ".wsf",
-                     ".wsh",  ".jsp", ".php", ".asp", ".aspx", ".psd1", ".psm1", ".ps1xml", ".clixml", ".psc1",
-                     ".pssc"]
+                     ".wsh",  ".jsp", ".php", ".aspx", ".psd1", ".psm1", ".ps1xml", ".clixml", ".psc1", ".pssc"]
 
 SCRIPT_TYPES = ["VBS", "PHP", "JSP", "ASP", "BATCH"]
 
@@ -91,6 +92,8 @@ class LoRa():
     hashes_sha256 = {}
     false_hashes = {}
     c2_server = {}
+    mutexes = Set([])
+    regKeys = Set([])
 
     # Yara rule directories
     yara_rule_directories = []
@@ -459,7 +462,6 @@ class LoRa():
                         sys.exit(1)
 
     def scan_data(self, fileData, fileType="-", fileName="-", filePath="-", extension="-", md5="-"):
-
         # Scan parameters
         # print fileType, fileName, filePath, extension, md5
         # Scan with yara
@@ -924,6 +926,34 @@ class LoRa():
         return False,""
 
 
+
+    #TODO: fix warning message, get the data from server and populate mutexes Set
+    def check_mutexes(self):
+        with open('./w1000/data/regtmp.txt', 'r+') as output:
+            p = subprocess.Popen(['./w1000/tools/handle.exe', '-a'], stdout=output, stderr=subprocess.PIPE)
+            pp = p.communicate()
+            q = subprocess.Popen(['findstr', "Mutant", './w1000/data/regtmp.txt'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            res = str(q.communicate()[0])
+            reader = csv.DictReader(res.decode('ascii').splitlines(),
+                                delimiter=' ', skipinitialspace=True,
+                                fieldnames=['number', 'type', 'name'])
+            for row in reader:
+                if row['name'] != "":
+                    if row['name'] in mutexes:
+                        print "Threat Detected"
+
+
+    def scan_registries(self):
+        while len(regKeys) > 0:
+            try:
+                reg = regKeys.pop()
+                hKey = _winreg.OpenKey(_winreg.HKEY_LOCAL_MACHINE, reg)
+                if (hKey != 0):
+                    print "Threat Detected - Registry Value %s found!" % reg
+            except:
+                print "Opening registry key problem encountered"
+
+
     def initialize_yara_rules(self, rules):
 
         if 'all' in rules:
@@ -1232,7 +1262,7 @@ def triage(tool_server, output_server, silent):
             res = arq[0]
             if (res == "32bit"):
                 #x32
-                hKey = _winreg.OpenKey(_winreg.HKEY_LOCAL_MACHINE, r"SOFTWARE\Network Associates\ePolicy Orchestrator\Agent")
+                hKey = _winreg.OpenKey(_winreg.HKEY_LOCAL_MACHINE, r'SOFTWARE\Network Associates\ePolicy Orchestrator\Agent')
                 if (hKey != 0):
                     result = _winreg.QueryValueEx(hKey, "AgentGUID")
                     _winreg.CloseKey(hKey)

@@ -49,7 +49,6 @@ elif _platform == "win32":
 
 class LoRaUpdater(object):
 
-
     UPDATE_URL_SIGS = ["https://github.com/Neo23x0/signature-base/archive/master.zip",
                        # Disabled until yara-python supports the hash.md5() function again
                        # "https://github.com/SupportIntelligence/Icewater/archive/master.zip"
@@ -62,7 +61,7 @@ class LoRaUpdater(object):
                        "https://github.com/kbandla/APTnotes/archive/master.zip"
                        ]
 
-    UPDATE_URL_LOKI = "https://api.github.com/repos/Neo23x0/Loki/releases/latest"
+    UPDATE_URL_LORA = ""
 
     def __init__(self, debug, logger, application_path):
         self.debug = debug
@@ -78,7 +77,6 @@ class LoRaUpdater(object):
                 sys.exit(1)
         except UnicodeError, e:
             print "Unicode decode error in walk error message"
-
 
 
     def update_signatures(self):
@@ -154,7 +152,6 @@ class LoRaUpdater(object):
 
     def update_lora(self):
         try:
-
             # Downloading the info for latest release
             try:
                 self.logger.log("INFO", "Checking location of latest release %s ..." % self.UPDATE_URL_LOKI)
@@ -207,9 +204,6 @@ class LoRaUpdater(object):
     def extractFromFiles(self):
         for root, directories, files in os.walk(unicode(r'./signature-base'), onerror=walk_error, followlinks=False):
             for dirr in directories:
-                #TODO add the mutex extraction from excel file with Handle
-                #https://digital-forensics.sans.org/blog/2012/07/24/mutex-for-malware-discovery-and-iocs
-
                 if dirr == 'pdf':
                     filel = checkToParse(dirr, self.application_path)
                     parser = Parser.Parser(None, 'pdf', True, 'pdfminer', 'yara', None)
@@ -337,19 +331,6 @@ def checkToParse(dirr, app_path):
                 file_list.append(ffile)
 
     return file_list
-
-
-
-def walk_error(err):
-    try:
-        if "Error 3" in str(err):
-            logger.log('ERROR', removeNonAsciiDrop(str(err)))
-        elif args.debug:
-            print "Directory walk error"
-            sys.exit(1)
-    except UnicodeError, e:
-        print "Unicode decode error in walk error message"
-
 
 
 def get_application_path():

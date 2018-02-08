@@ -6,11 +6,6 @@ python lora_win32.py -y all disk-scan C:\Users\Stratarxis\Downloads\LoRa\win32\c
 python lora_win32.py -y myrule.yar disk-scan C:\Users\Stratarxis\Desktop\Newfolder
 python lora_win32.py -y myrule.yar mem-scan
 
-triage 		checked
-disk-scan  	checked
-mem-scan 	checked
-mem-dump 	checked
-
 ######################################################################
 The self contained binary winpmem.exe
 -------------------------------------
@@ -37,30 +32,20 @@ Option:
   -d    Produce a crashdump file.
 ########################################################################
 
-winpmem - checked
-
 NOTE: changed backend server to cherrypy and to do so installed with pip install the wsgiserver
 installed cherrypy-wsgiserver using this repo https://github.com/od-eon/cherrypy-wsgiserver
 and copied the wsgiserver folder to the C:\Python27\Lib\site-packages\CherryPy-12.0.1-py2.7.egg\cherrypy folder
 in order to see the functions
 
 
-for each client it produces a unique log
-
-
-for agent to start give command line argument -agent and to stop it ctrl+c and it needs a different terminal
+for agent to start give command line argument -agent and to stop it ctrl+c
+make it begin at startup?
 time interval is given in minutes
-
-
-
-(?) the iocs refering to ip addresses and domains
-
 
 
 installed ioc_parser (https://github.com/armbues/ioc_parser) through pip and through downloading and python setup.py install
 but on windows coundn't see the package and i had to rename first the file iocp (C:\Users\Stratarxis\Downloads\ioc_parser-master\ioc_parser-master\bin)
 to iocp.py and then move it one folder up in order to see the folder iocp which was needed to run
-
 
 
 changed file C:\Users\Stratarxis\Downloads\LoRa\server\ioc_parser\iocp\Output.py to create yara file in the same directory
@@ -99,7 +84,3 @@ loki checks proc connections
 loki checks Sysforensics
 working size
 
-
-
-downloaded microsoftwebdriver to parse iocs from the threatexpert page
-it must be on the *path* system variable
