@@ -165,3 +165,5 @@ the sigs from the .cvd files, I used e.g. sigtool -u main.cvd but i had to delet
 error. From ClamAV 0.99 we can use the clamav_to_yara.py file to convert the clam signatures into yara rules.
 Once you have the .ndb file from the sigtool operation you can proceed to converting as follows:
 $ python clamav_to_yara.py -f {signature name}.ndb -o {Output File Name}.yara
+
+For the unofficial signatures of clamav I had to use an Ubuntu system and follow the instructions in this [repo](https://github.com/extremeshok/clamav-unofficial-sigs). It is not noted that inside the .conf files the lines user_configuration_complete flags will have to be uncommented and set to "yes" when done.
