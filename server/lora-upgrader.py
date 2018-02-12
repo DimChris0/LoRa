@@ -200,6 +200,10 @@ class LoRaUpdater(object):
         return True
 
 
+    def threatExpert(self):
+        tE = threatExpertParser()
+        tE.parsePages()
+
 
     def extractFromFiles(self):
         for root, directories, files in os.walk(unicode(r'./signature-base'), onerror=walk_error, followlinks=False):

@@ -1,0 +1,1 @@
+powershell "Get-Process"

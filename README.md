@@ -161,9 +161,11 @@ Also I extract signatures from the ClamAV databases. The process to do it was to
 from the folder conf_examples of the installation directory, copy the file freshclam.conf.sample to the installation directory
 and rename it freshclam.conf in order for the freshclam.exe to be able to start downloading the databases. The command given was
 freshclam.exe --datadir=C:\Users\{User Name}\Desktop\clamAV or any other folder path could be given. Then, in order to extract
-the sigs from the .cvd files, I used e.g. sigtool -u main.cvd but i had to delete or rename the folder COPYING because it threw an
+the sigs from the .cvd files, I used e.g. sigtool -u main.cvd but I had to delete or rename the folder COPYING because it threw an
 error. From ClamAV 0.99 we can use the clamav_to_yara.py file to convert the clam signatures into yara rules.
 Once you have the .ndb file from the sigtool operation you can proceed to converting as follows:
 $ python clamav_to_yara.py -f {signature name}.ndb -o {Output File Name}.yara
+I have not included the necessary files in the project because as a vendor they will have to be provided and not force the users to do
+this job.
 
 For the unofficial signatures of clamav I had to use an Ubuntu system and follow the instructions in this [repo](https://github.com/extremeshok/clamav-unofficial-sigs). It is not noted that inside the .conf files the lines user_configuration_complete flags will have to be uncommented and set to "yes" when done.

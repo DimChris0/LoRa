@@ -41,7 +41,7 @@ if platform == "linux" or platform == "osx":
 else:
     t_hostname = os.environ['COMPUTERNAME']
 
-serverlogger = LokiLogger(False, "LoRaServer-"+t_hostname+".log", t_hostname, None, 514, False, False, False,
+serverlogger = LokiLogger(False, "LoRaServer-" + t_hostname + ".log", t_hostname, None, 514, False, False, False,
                     platform=platform, caller='main')
 loggers = {}
 
@@ -464,6 +464,41 @@ def index():
         traceback.print_exc()
         (loggers[client]).log("ERROR", "reading Hash file: %s" % filetype_magics_file)
         return None
+
+@post('/initmutexes')
+def index():
+    client = request.forms.get('client')
+    result = {}
+    try:
+        with open('./signature-base/misc-txt/mutexesThreatExpert.txt') as f:
+            lines = f.read()
+            result['entry'] = lines
+        f.close()
+    except Exception, e:
+        traceback.print_exc()
+        (loggers[client]).log("ERROR", "I/O operation with file: /signature-base/misc-txt/mutexesThreatExpert.txt")
+        return None
+
+
+
+@post('/initregistries')
+def index():
+    client = request.forms.get('client')
+    result = {}
+    try:
+        with open('./signature-base/misc-txt/registryKeysThreatExpert.txt') as f:
+            lines = f.read()
+            result['entry'] = lines
+        f.close()
+    except Exception, e:
+        traceback.print_exc()
+        (loggers[client]).log("ERROR", "I/O operation with file: /signature-base/misc-txt/mutexesThreatExpert.txt")
+        return None
+
+
+
+
+
 
 
 

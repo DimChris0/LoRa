@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 
-# TODO: in the triage->tool list what to do with the commented ?
-# TODO: add the registries and mutex scan (https://digital-forensics.sans.org/blog/2012/07/24/mutex-for-malware-discovery-and-iocs)
-# TODO: add baselining
-# TODO: get from clamav the unofficial sigs by installing it first to ubuntu and then getting them to windows
+# TODO: in the baselineTriage add more tools?
+# TODO: check if yara works with hash.md5()
 import os
 import sys
 import subprocess
@@ -92,7 +90,6 @@ class LoRa():
     hashes_sha256 = {}
     false_hashes = {}
     c2_server = {}
-    mutexes = Set([])
     regKeys = Set([])
 
     # Yara rule directories
@@ -159,6 +156,22 @@ class LoRa():
         listOfDicts = post('http://'+server+':'+str(server_port)+'/initHashIocs',  data={'client': t_hostname})
         if listOfDicts is None:
             sys.exit(1)
+
+        #######TODO check the results
+        mutexDict = post('http://'+server+':'+str(server_port)+'/initmutexes',  data={'client': t_hostname})
+        if mutexDict is None:
+            sys.exit(1)
+        tmp = ast.literal_eval(mutexDict.text)
+        self.mutexes_iocs = tmp['entry'].splitlines()
+
+
+        regDict = post('http://'+server+':'+str(server_port)+'/initregistries',  data={'client': t_hostname})
+        if regDict is None:
+            sys.exit(1)
+        tmp = ast.literal_eval(regDict.text)
+        self.registries_iocs = tmp['entry'].splitlines()
+        ########
+
 
         tempDict = ast.literal_eval(listOfDicts.text)
         self.hashes_md5 = tempDict["md5"]
@@ -476,7 +489,6 @@ class LoRa():
                                           'filetype': fileType,
                                           'md5': md5
                                       })
-
                 # If matched
                 if matches:
                     for match in matches:
@@ -927,7 +939,6 @@ class LoRa():
 
 
 
-    #TODO: fix warning message, get the data from server and populate mutexes Set
     def check_mutexes(self):
         with open('./w1000/data/regtmp.txt', 'r+') as output:
             p = subprocess.Popen(['./w1000/tools/handle.exe', '-a'], stdout=output, stderr=subprocess.PIPE)
@@ -938,9 +949,8 @@ class LoRa():
                                 delimiter=' ', skipinitialspace=True,
                                 fieldnames=['number', 'type', 'name'])
             for row in reader:
-                if row['name'] != "":
-                    if row['name'] in mutexes:
-                        print "Threat Detected"
+                if row['name'] in mutexes:
+                    logger.log("ALERT", "Threat Detected, mutex object %s found!" % row['name'])
 
 
     def scan_registries(self):
@@ -949,7 +959,7 @@ class LoRa():
                 reg = regKeys.pop()
                 hKey = _winreg.OpenKey(_winreg.HKEY_LOCAL_MACHINE, reg)
                 if (hKey != 0):
-                    print "Threat Detected - Registry Value %s found!" % reg
+                    logger.log("ALERT", "Threat Detected - Registry Value %s found!" % reg)
             except:
                 print "Opening registry key problem encountered"
 
@@ -1187,7 +1197,7 @@ def memdump(tool_server, output_server, silent):
         g.write("%s - %s \n\n" % (f.name, hashfile(f.name)))
 
 
-def triage(tool_server, output_server, silent):
+def baselineTriage(tool_server, output_server, silent):
 
     """ Triage collection module """
 
@@ -1205,24 +1215,24 @@ def triage(tool_server, output_server, silent):
     """ Add your list of Sysinternal / third-party / BATCH files here """
 
     tool=(
+         #many come from the System32 folder in order to catch both 32 and 64-bit
          'systeminfo.exe', # Gathers systeminfo
          'ipconfig.exe', # Gathers IP information
-         #'ip-routes.cmd', # Gathers IP routing information
-         #'arp.cmd', # Gathers ARP table information
-         #'dns.cmd', # Gathers DNS Cache information
-         #'users.cmd', # Gathers User/local Admin accounts
-         #'ShareEnum.exe', # Gathers local shares information
-         #'firewall.cmd', # Gathers local firewall information
-         #'hosts.cmd', # Captures Host file information
-         #'sessions.cmd', # Gathers Active Session information
-         #'nbtstat.cmd', # Gathers NetBios Sessions information
-         #'netstat.cmd', # Gathers Netstat with process IDs
-         #'services.cmd', # Gathers services information
-         #'process-list.cmd', # Gathers WMIC Proccess list full
-         #'tasklist.cmd', # Gathers Tasklist /m information
-         #'at-schtasks.cmd', # Gathers scheduled tasks information
-         #'startup-list.cmd', # Gathers WMIC Startup list full
-         #'zRemote.bat',
+         'ip-routes.cmd', # Gathers IP routing information
+         'arp.cmd', # Gathers ARP table information
+         'dns.cmd', # Gathers DNS Cache information
+         'Get-Users.cmd', # Gathers User/local Admin accounts
+         'ShareEnum.exe', # Gathers local shares information, takes a few seconds to show result
+         'firewall.cmd', # Gathers local firewall information
+         'hosts.cmd', # Captures Host file information
+         'sessions.cmd', # Gathers Active Session information
+         'nbtstat.exe -n', # Gathers NetBios Sessions information
+         'netstat.exe', # Gathers Netstat with process IDs
+         'services.cmd', # Gathers services information
+         'process-list.cmd', # Gathers WMIC Proccess list full
+         'tasklist.exe', # Gathers Tasklist /m information
+         'schtasks.exe', # Gathers scheduled tasks information
+         'startup-list.cmd', # Gathers WMIC Startup list full
          'psinfo.exe /accepteula', # Gathers basic system information
          'diskext.exe /accepteula', # Gathers disks mounted
          'logonsessions.exe /p /accepteula', # Gathers logon sessions and process running in them
@@ -1275,7 +1285,7 @@ def triage(tool_server, output_server, silent):
                     _winreg.CloseKey(hKey2)
                     guid = result[0]
 
-            smb_data = output_server + r'\data' + r'\triage-' + os.environ['COMPUTERNAME'] + "\\" + createt
+            smb_data = output_server + r'\data' + r'\Baseline-Triage-' + os.environ['COMPUTERNAME'] + "\\" + createt
             if not os.path.exists(smb_data):
                 os.makedirs(smb_data)
 
@@ -1464,8 +1474,8 @@ def myManual(args, logger, t_hostname, isAdmin):
     elif args.mode == 'mem-dump' or args.mode == 'all':
             memdump('w1000', 'w1000', args.silent)
 
-    elif args.mode == 'triage' or args.mode == 'all':
-            triage('w1000', 'w1000', args.silent)
+    elif args.mode == 'baseline' or args.mode == 'all':
+            baselineTriage('w1000', 'w1000', args.silent)
 
     elif args.mode == 'web-hist':
             webhist('w1000', 'w1000', args.username, args.silent)
@@ -1506,7 +1516,6 @@ def myAgent(args, logger, t_hostname, isAdmin, timeInterval):
     print args
     while(1):
         if curtime > target_time:
-            print "entered"
             myManual(args, logger, t_hostname, isAdmin)
             target_time = curtime + datetime.timedelta(minutes = timeInterval)
         else:
@@ -1538,7 +1547,7 @@ if __name__ == '__main__':
     list_parser = subparsers.add_parser('mem-dump', help='Make dump file of current memory')
     list_parser.add_argument('-silent', '--silent', action='store_true', help='Suppresses standard output')
 
-    list_parser = subparsers.add_parser('triage', help='')
+    list_parser = subparsers.add_parser('baseline', help='')
     list_parser.add_argument('-silent', '--silent', action='store_true', help='Suppresses standard output')
 
     list_parser = subparsers.add_parser('web-hist', help='')
