@@ -1,4 +1,4 @@
-rule NetTraveler_Makeover_th_Birthday
+rule NetTraveler_Makeover_10th_Birthday
 {
 	strings:
 		$Filename1 = "ashkarilanmaqta.doc"

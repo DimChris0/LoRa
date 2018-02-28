@@ -1,4 +1,4 @@
-rule rpt_fin
+rule rpt_fin4
 {
 	strings:
 		$URL1 = "http://forum.<domain>/redirect"

@@ -1,4 +1,4 @@
-rule roaming_tiger_zeronights_
+rule roaming_tiger_zeronights_2014
 {
 	strings:
 		$Email1 = "cherepanov@eset.sk"

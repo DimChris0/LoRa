@@ -1,4 +1,4 @@
-rule RAP_APT_Technical_backstage__
+rule RAP002_APT1_Technical_backstage_1_0
 {
 	strings:
 		$URL1 = "http://intelreport.mandiant.com"

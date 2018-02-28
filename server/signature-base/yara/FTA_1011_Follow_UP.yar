@@ -1,4 +1,4 @@
-rule FTA__Follow_UP
+rule FTA_1011_Follow_UP
 {
 	strings:
 		$Filename1 = "netsat.exe"

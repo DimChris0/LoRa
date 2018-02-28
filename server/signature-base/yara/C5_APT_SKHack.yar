@@ -1,4 +1,4 @@
-rule C_APT_SKHack
+rule C5_APT_SKHack
 {
 	strings:
 		$Filename1 = "ALCMUpdate.exe"

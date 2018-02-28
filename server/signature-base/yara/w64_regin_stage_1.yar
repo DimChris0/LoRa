@@ -1,4 +1,4 @@
-rule w_regin_stage_
+rule w64_regin_stage_1
 {
 	strings:
 		$SHA11 = "5191d7e28ffd1bc76ec7ed02d861679a77f2c239"

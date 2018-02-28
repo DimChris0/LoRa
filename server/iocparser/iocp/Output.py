@@ -29,8 +29,7 @@ class OutputHandler(object):
 		pass
 
 	def print_error(self, fpath, exception):
-		print "print error"
-		print("[ERROR] %s" % (exception))
+		print("[ERROR] %s : %s" % (fpath, exception))
 
 class OutputHandler_csv(OutputHandler):
 	def __init__(self):
@@ -79,11 +78,11 @@ class OutputHandler_yara(OutputHandler):
 		self.rule_enc = ''.join(chr(c) if chr(c).isupper() or chr(c).islower() or chr(c).isdigit() else '_' for c in range(256))
 
 	def print_match(self, fpath, page, name, match):
+		rule_file = os.path.splitext(os.path.basename(fpath))[0].translate(self.rule_enc)
 		if name in self.cnt:
 			self.cnt[name] += 1
 		else:
 			self.cnt[name] = 1
-		rule_file = os.path.splitext(os.path.basename(fpath))[0].translate(self.rule_enc)
 		string_id = "$%s%d" % (name, self.cnt[name])
 		self.sids.append(string_id)
 		string_value = match.replace('\\', '\\\\')
@@ -95,10 +94,8 @@ class OutputHandler_yara(OutputHandler):
 
 	def print_header(self, fpath):
 		rule_file= os.path.splitext(os.path.basename(fpath))[0].translate(self.rule_enc)
-		rule_name = ''.join([i for i in rule_file if not i.isdigit()])
+		rule_name = rule_file.lstrip('0123456789')
 		print("rule %s" % (rule_name))
-		#print("{")
-		#print("\tstrings:")
 		with open('./signature-base/yara/' + rule_file + ".yar", 'a+') as f:
 			f.write("rule %s" % (rule_name) + "\n{\n\tstrings:\n")
 			f.close()
@@ -106,11 +103,8 @@ class OutputHandler_yara(OutputHandler):
 		self.sids = []
 
 	def print_footer(self, fpath):
-		cond = ' or '.join(self.sids)
 		rule_file = os.path.splitext(os.path.basename(fpath))[0].translate(self.rule_enc)
-		#print("\tcondition:")
-		#print("\t\t" + cond)
-		#print("}")
+		cond = ' or '.join(self.sids)
 		with open("./signature-base/yara/"+rule_file+".yar", 'a+') as f:
 			f.write("\tcondition:\n" + "\t\t" + cond +"\n}")
 			f.close()

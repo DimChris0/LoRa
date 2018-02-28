@@ -1,0 +1,5 @@
+netids.dll
+svchost.exe
+Local Settings\Application Data
+AppData\Local
+rundll32.exe

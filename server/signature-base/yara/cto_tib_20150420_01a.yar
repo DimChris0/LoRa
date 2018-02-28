@@ -1,4 +1,4 @@
-rule cto_tib__a
+rule cto_tib_20150420_01a
 {
 	strings:
 		$Email1 = "threatintelligence@uk.pwc"

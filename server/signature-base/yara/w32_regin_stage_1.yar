@@ -1,4 +1,4 @@
-rule w_regin_stage_
+rule w32_regin_stage_1
 {
 	strings:
 		$Filename1 = "usbclass.sys"

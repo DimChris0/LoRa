@@ -1,4 +1,4 @@
-rule C_APT_ADecadeInReview
+rule C5_APT_ADecadeInReview
 {
 	strings:
 		$Host1 = "login.skype.com"

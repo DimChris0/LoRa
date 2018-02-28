@@ -1,4 +1,4 @@
-rule in_depth_analysis_of_hydraq_final_
+rule in_depth_analysis_of_hydraq_final_231538
 {
 	strings:
 		$CVE1 = "CVE-2010-0249"

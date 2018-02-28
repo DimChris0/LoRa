@@ -1,4 +1,4 @@
-rule sec_paper_hardy
+rule sec14_paper_hardy
 {
 	strings:
 		$URL1 = "https://www.hex-rays.com/products/ida"

@@ -1,4 +1,4 @@
-rule Sandworm_briefing
+rule Sandworm_briefing2
 {
 	strings:
 		$CVE1 = "CVE-2014-4114"

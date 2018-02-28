@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 # TODO: in the baselineTriage add more tools?
-# TODO: check if yara works with hash.md5()
 import os
 import sys
 import subprocess
@@ -27,6 +26,7 @@ from sys import platform as _platform
 from time import gmtime, strftime
 from collections import Counter
 from requests import post
+from sets import Set
 # LOKI Modules
 from lib.lokilogger import *
 
@@ -104,7 +104,7 @@ class LoRa():
     filetype_magics = {}
     max_filetype_magics = 0
 
-    # Predefined paths to skip (Linux pplatform)
+    # Predefined paths to skip (Linux platform)
     LINUX_PATH_SKIPS_START = set(["/proc", "/dev", "/media", "/sys/kernel/debug", "/sys/kernel/slab", "/sys/devices", "/usr/src/linux" ])
     LINUX_PATH_SKIPS_END = set(["/initctl"])
 
@@ -135,7 +135,7 @@ class LoRa():
         for key, value in (tmpDict.iteritems()):
             for k, v in (value.iteritems()):
                 if k == "regex" or k == "regex_fp":
-                    value[k] = re.compile(self.raw_string(v))
+                    value[k] = re.compile(repr(v))
             self.filename_iocs.append(value)
 
         if self.filename_iocs is None:
@@ -157,7 +157,6 @@ class LoRa():
         if listOfDicts is None:
             sys.exit(1)
 
-        #######TODO check the results
         mutexDict = post('http://'+server+':'+str(server_port)+'/initmutexes',  data={'client': t_hostname})
         if mutexDict is None:
             sys.exit(1)
@@ -170,7 +169,6 @@ class LoRa():
             sys.exit(1)
         tmp = ast.literal_eval(regDict.text)
         self.registries_iocs = tmp['entry'].splitlines()
-        ########
 
 
         tempDict = ast.literal_eval(listOfDicts.text)
@@ -239,7 +237,7 @@ class LoRa():
                     filePath = os.path.join(root,filename)
 
                     fileSize = os.stat(filePath).st_size
-                    # my contribution here
+
                     if fileSize == 0:
                         continue
 
@@ -882,8 +880,7 @@ class LoRa():
             if args.debug:
                 traceback.print_exc()
                 sys.exit(1)
-            logger.log("INFO",
-                "Process %s does not exist anymore or cannot be accessed" % str(pid))
+            logger.log("INFO", "Process %s does not exist anymore or cannot be accessed" % str(pid))
 
 
     def check_rootkit(self):
@@ -1266,10 +1263,11 @@ def baselineTriage(tool_server, output_server, silent):
 
         guid  = ""
         resul = ""
-        # from here and below it checks if Mcaffe epo agent is installed
+
         try:
             arq = platform.architecture()
             res = arq[0]
+            # checks if Mcaffe epo agent is installed
             if (res == "32bit"):
                 #x32
                 hKey = _winreg.OpenKey(_winreg.HKEY_LOCAL_MACHINE, r'SOFTWARE\Network Associates\ePolicy Orchestrator\Agent')
@@ -1409,6 +1407,8 @@ def prefetch(tool_server, output_server, silent):
         b = True
         for f in user_dirs:
             if f.endswith(".pf"):
+                with open(path + smb_data + '\\' + f + r'.csv') as ffile:
+                    ffile.write("%s,%s,%s,%s" % "Filename", "Full Path", "Device Path", "Index")
                 cmd = path + smb_bin + r'\winprefetchview\winprefetchview.exe'
                 cmd = cmd + r' /prefetchfile '+ "c:\windows\prefetch\\" + f + r' /scomma ' + path + smb_data + '\\' + f + r'.csv'
                 p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -1540,25 +1540,24 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='LoRa - Simple IOC Scanner')
     subparsers = parser.add_subparsers(dest="mode", help='modes of operation')
 
-    list_parser = subparsers.add_parser('all', help='Scan the memory')
+    list_parser = subparsers.add_parser('all', help='Start all the scans')
 
     list_parser = subparsers.add_parser('mem-scan', help='Scan the memory')
 
     list_parser = subparsers.add_parser('mem-dump', help='Make dump file of current memory')
     list_parser.add_argument('-silent', '--silent', action='store_true', help='Suppresses standard output')
 
-    list_parser = subparsers.add_parser('baseline', help='')
-    list_parser.add_argument('-silent', '--silent', action='store_true', help='Suppresses standard output')
+    list_parser = subparsers.add_parser('baseline', help='Creates a baseline to compare states at any time')
+    list_parser.add_argument('-baseline', '--baseline', action='store_true', help='')
 
-    list_parser = subparsers.add_parser('web-hist', help='')
-    list_parser.add_argument('-u', '--username', action='store', default='all', help='User account to generate history for')
-    list_parser.add_argument('-silent', '--silent', action='store_true', help='Suppresses standard output')
+    list_parser = subparsers.add_parser('web-hist', help='User account to generate history for')
+    list_parser.add_argument('-u', '--username', action='store', default='all', help='')
 
-    list_parser = subparsers.add_parser('prefetch', help='')
-    list_parser.add_argument('-silent', '--silent', action='store_true', help='Suppresses standard output')
+    list_parser = subparsers.add_parser('prefetch', help='The Windows prefetch folder is a specific location within the Windows operating system (OS) that contains a series of small files detailing the startup activities and frequently-used application programs.')
+    list_parser.add_argument('-silent', '--silent', action='store_true', help='')
 
-    list_parser = subparsers.add_parser('disk-scan', help='')
-    list_parser.add_argument('path', action='store', help='File or directory path to scan')
+    list_parser = subparsers.add_parser('disk-scan', help='Disk scanning opeation')
+    list_parser.add_argument('path', metavar='path-to-scan', action='store', help='File or directory path to scan')
 
     parser.add_argument('-s', help='Maximum file size to check in KB (default 5000 KB)', metavar='kilobyte', default=5000)
     parser.add_argument('-l', help='Log file', metavar='log-file', default='loki-%s.log' % t_hostname)
@@ -1573,7 +1572,7 @@ if __name__ == '__main__':
                     metavar='yara-rules',
                     help="yara rule files to be checked")
     parser.add_argument('--agent', help='Start the LoRa agent',  default=False)
-    parser.add_argument('-timeint', help='Time interval for LoRa agent to begin checking', metavar='time-interval', default=60)
+    parser.add_argument('-timeint', help='Time interval for LoRa agent to begin checking, default is 60 mins', metavar='time-interval', default=60)
     parser.add_argument('--printAll', action='store_true', help='Print all files that are scanned', default=False)
     parser.add_argument('--allreasons', action='store_true', help='Print all reasons that caused the score', default=False)
     parser.add_argument('--noprocscan', action='store_true', help='Skip the process scan', default=False)
@@ -1633,7 +1632,6 @@ if __name__ == '__main__':
         lora.check_rootkit()
 
     # agent starts here with time interval
-    # possible exec ?
     if args.agent == True:
         timeInterval = args.timeint
         myAgent(args, logger, t_hostname, isAdmin, int(timeInterval))

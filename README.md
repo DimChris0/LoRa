@@ -139,12 +139,22 @@ loki checks Sysforensics
 loki does not check if working size bigger than a default due to performance
 
 
-# Problems
+# PDF files Problems
+On Windows:
 
 The only problem encountered is with some protected pdf files which the pdfminer could not open to parse.
-Solution: The one responsible for the server must transform the problematic pdf files to .xps and back to .pdf.
-That way the protection is removed and we can parse the documents. There is only one corrupted file within all the
-repositories from which we build our signature-base.
+Solution: The one responsible for the server must transform the problematic pdf files to xps or oxps(h12756-wp-shell-crew
+had size zero when tranformed to .xps while was normal in .oxps) and back to pdf.
+That way the protection is removed and we can parse the documents. Until now the problematic pdfs are:
+1. Alerts DL-2011 Alerts-A-2011-02-18-01 Night Dragon Attachment 1
+2. Ashmore - Impact of Alleged Russian Cyber Attacks
+3. Dark_Seoul_Cyberattack
+4. DTL-06282015-01
+5. energy-at-risk
+6. h12756-wp-shell-crew
+To transform them to xps one must choose to print them and then save them as .xps files.
+There is only one corrupted file within all the repositories from which we build our signature-base and that is
+DTL-06282015-01.pdf. As for now these pdfs are manually transformed and parsed from the folder problematicPDFs.
 
 
 ## Added features

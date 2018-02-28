@@ -1,4 +1,4 @@
-rule duqu_crysys
+rule duqu2_crysys
 {
 	strings:
 		$MD51 = "c7c647a14cb1b8bc141b089775130834"

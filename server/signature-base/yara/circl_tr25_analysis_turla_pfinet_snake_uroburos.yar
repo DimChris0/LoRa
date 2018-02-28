@@ -1,4 +1,4 @@
-rule circl_tr_analysis_turla_pfinet_snake_uroburos
+rule circl_tr25_analysis_turla_pfinet_snake_uroburos
 {
 	strings:
 		$URL1 = "http://www.circl.lu/pub/tr-25"

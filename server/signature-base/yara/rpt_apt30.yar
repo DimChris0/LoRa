@@ -1,4 +1,4 @@
-rule rpt_apt
+rule rpt_apt30
 {
 	strings:
 		$Host1 = "km-nyc.com"

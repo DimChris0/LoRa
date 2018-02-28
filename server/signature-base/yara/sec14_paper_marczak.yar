@@ -1,4 +1,4 @@
-rule sec_paper_marczak
+rule sec14_paper_marczak
 {
 	strings:
 		$Host1 = "iplogger.org"

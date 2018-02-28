@@ -1,4 +1,4 @@
-rule FTA__Bots_Machines_and_the_Matrix
+rule FTA_1014_Bots_Machines_and_the_Matrix
 {
 	strings:
 		$Host1 = "kaddafi.me"

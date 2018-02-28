@@ -1,4 +1,4 @@
-rule GDATA_TooHash_CaseStudy__EN_v
+rule GDATA_TooHash_CaseStudy_102014_EN_v1
 {
 	strings:
 		$CVE1 = "CVE-2012-0158"

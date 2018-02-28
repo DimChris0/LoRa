@@ -1,4 +1,4 @@
-rule w_stuxnet_dossier
+rule w32_stuxnet_dossier
 {
 	strings:
 		$Filename1 = "MrxNet.sys"

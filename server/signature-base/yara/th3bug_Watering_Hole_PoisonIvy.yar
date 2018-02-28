@@ -1,4 +1,4 @@
-rule thbug_Watering_Hole_PoisonIvy
+rule th3bug_Watering_Hole_PoisonIvy
 {
 	strings:
 		$IP1 = "115.23.172.151"

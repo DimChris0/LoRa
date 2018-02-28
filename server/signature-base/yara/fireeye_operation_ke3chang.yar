@@ -1,4 +1,4 @@
-rule fireeye_operation_kechang
+rule fireeye_operation_ke3chang
 {
 	strings:
 		$CVE1 = "CVE-2012-4681"

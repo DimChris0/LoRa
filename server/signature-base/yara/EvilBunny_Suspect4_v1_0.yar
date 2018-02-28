@@ -1,4 +1,4 @@
-rule EvilBunny_Suspect_v_
+rule EvilBunny_Suspect4_v1_0
 {
 	strings:
 		$SHA11 = "1e8b4c374db03dcca026c5feba0a5c117f740233"

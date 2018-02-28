@@ -1,4 +1,4 @@
-rule Cyber_
+rule Cyber_030
 {
 	strings:
 		$Host1 = "ngc.com"

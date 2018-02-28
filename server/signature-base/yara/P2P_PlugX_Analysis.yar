@@ -1,4 +1,4 @@
-rule PP_PlugX_Analysis
+rule P2P_PlugX_Analysis
 {
 	strings:
 		$Host1 = "jpcert.or.jp"

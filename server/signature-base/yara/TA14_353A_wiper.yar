@@ -1,4 +1,4 @@
-rule TA_A_wiper
+rule TA14_353A_wiper
 {
 	strings:
 		$Filename1 = "sensvc.exe"

@@ -1,4 +1,4 @@
-rule TheNaikonAPT_MsnMM
+rule TheNaikonAPT_MsnMM1
 {
 	strings:
 		$CVE1 = "CVE-2012-0158"

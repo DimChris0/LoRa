@@ -1,4 +1,4 @@
-rule GData_Uroburos_RedPaper_EN_v
+rule GData_Uroburos_RedPaper_EN_v1
 {
 	strings:
 		$URL1 = "http://www.mspaintadventures.com/?s=6"

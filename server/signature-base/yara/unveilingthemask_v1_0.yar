@@ -1,4 +1,4 @@
-rule unveilingthemask_v_
+rule unveilingthemask_v1_0
 {
 	strings:
 		$Host1 = "linkconf.net"

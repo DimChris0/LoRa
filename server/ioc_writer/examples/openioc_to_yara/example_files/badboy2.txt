@@ -1,3 +1,0 @@
-C:\windows\win.exe
-
-http://foo.com/badfile2.exe

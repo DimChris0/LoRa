@@ -1,6 +1,6 @@
 execution example:
 
-python lora_win32.py -y airbnb_binaryalert.yar,apt_agent_btz.yar disk-scan C:\Users\Stratarxis\Downloads\LoRa\win32\config 
+python lora_win32.py -y airbnb_binaryalert.yar,apt_agent_btz.yar disk-scan C:\Users\Stratarxis\Downloads\LoRa\win32\config
 python lora_win32.py -y all disk-scan C:\Users\Stratarxis\Downloads\LoRa\win32\config
 
 python lora_win32.py -y myrule.yar disk-scan C:\Users\Stratarxis\Desktop\Newfolder
@@ -39,7 +39,6 @@ in order to see the functions
 
 
 for agent to start give command line argument -agent and to stop it ctrl+c
-make it begin at startup?
 time interval is given in minutes
 
 
@@ -49,11 +48,6 @@ to iocp.py and then move it one folder up in order to see the folder iocp which 
 
 
 changed file C:\Users\Stratarxis\Downloads\LoRa\server\ioc_parser\iocp\Output.py to create yara file in the same directory
-
-
-
-changed openioc_to_yara in order to parse the iocs of mine and produce correct yara rules and extend its functionality
-e.g. recognize the size of file and check its hash
 
 
 installed openpyxl to precess excel files
@@ -70,7 +64,7 @@ h12756_wp_shell_crew [ERROR] Text extraction is not allowed: <open file 'C:\\Use
 solved it with printing pdf as xps and then printing the xps as pdf. DTL again cannot be parsed
 
 
-IOC Term Definitions 
+IOC Term Definitions
 https://github.com/mandiant/OpenIOC_1.1/blob/master/IOC_Terms_Defs.md
 
 
@@ -84,3 +78,5 @@ loki checks proc connections
 loki checks Sysforensics
 working size
 
+
+See threat miner site

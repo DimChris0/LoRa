@@ -1,0 +1,2 @@
+# This is a configuration file for my threat expert parser in order to not download again signatures between two dates, the latest and oldest signature.
+<>

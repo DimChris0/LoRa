@@ -1,4 +1,4 @@
-rule Group_
+rule Group_72
 {
 	strings:
 		$CVE1 = "CVE-2014-0322"

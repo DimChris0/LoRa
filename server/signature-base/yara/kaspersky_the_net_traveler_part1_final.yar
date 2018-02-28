@@ -1,4 +1,4 @@
-rule kaspersky_the_net_traveler_part_final
+rule kaspersky_the_net_traveler_part1_final
 {
 	strings:
 		$Filename1 = "update.exe"

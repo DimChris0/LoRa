@@ -1,4 +1,4 @@
-rule EB_YetiJuly_Public
+rule EB_YetiJuly2014_Public
 {
 	strings:
 		$CVE1 = "CVE-2011-0611"

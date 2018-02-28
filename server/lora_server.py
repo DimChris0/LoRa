@@ -4,9 +4,6 @@
 # LoRa REST Server
 #
 
-
-#TODO: after downloading the signatures there are conflicts in yara where there are duplicate rules or syntax errors
-
 from time import gmtime, strftime
 from bottle import route, get, run, post, request
 import codecs
@@ -73,40 +70,69 @@ def walk_error(err):
     except UnicodeError, e:
         print "Unicode decode error in walk error message"
 
-
-# Yara rule directories
-yara_rule_directories = []
 # Get application path
 app_path = get_application_path()
-
+# Yara rule directories
+yara_rule_directories = []
 yara_rule_directories.append(os.path.join(app_path, 'signature-base\\yara'))
+yara_rule_directories.append(os.path.join(app_path, 'signature-base\\clamav-unofficial-sigs'))
+
 
 # Set IOC path
 ioc_path = os.path.join(app_path, "signature-base\\misc-txt")
 filetype_magics_file = os.path.join(app_path, 'signature-base\\misc-txt\\file-type-signatures.txt')
 
 
-def updateLoki(sigsOnly):
+def updateLora(threxp, from_page, to_page, level):
     serverlogger.log("INFO", "Starting separate updater process ...")
     pArgs = []
 
     # Updater
     if os.path.exists(os.path.join(get_application_path(), 'loki-upgrader.py')):
         pArgs.append('python')
-        pArgs.append('loki-upgrader.py')
-    elif os.path.exists(os.path.join(get_application_path(), 'loki-upgrader.exe')) and platform == "windows":
-        pArgs.append('loki-upgrader.exe')
+        pArgs.append('lora-upgrader.py')
     else:
         serverlogger.log("ERROR", "Cannot find neither loki-upgrader.exe nor loki-upgrader.py in the current workign directory.")
 
-    if sigsOnly:
-        pArgs.append('--sigsonly')
+    if threxp:
+        pArgs.append('--threxp')
+        if from_page:
+            pArgs.append('-f ' + from_page)
+        if to_page:
+            pArgs.append('-t ' + to_page)
+        if level:
+            pArgs.append('-v ' + level)
+
         p = Popen(pArgs, shell=False)
         p.communicate()
     else:
         pArgs.append('--detached')
         Popen(pArgs, shell=False)
 
+
+def deleteDuplicateRules():
+    DIR = os.path.join(app_path, 'signature-base\\yara\\')
+    rules_seen = set() # holds lines already seen
+    for filename in os.listdir(DIR):
+        f = open(DIR + filename, "r")
+        toWriteLine = ""
+        for line in f:
+            if "rule" in line and line not in rules_seen: # not a duplicate
+                toWriteLine += line
+                for line2 in f:
+                    toWriteLine += line2
+                    if "}" in line2:
+                        break
+                rules_seen.add(line)
+            elif line in rules_seen: #duplicate
+                for line2 in f:      #pass it
+                    if "}" in line2:
+                        break
+        f.close()
+        f = open(DIR + filename, "w")
+        f.write(toWriteLine + "\n")
+        f.close()
+    f.close()
 
 
 @post('/loginfo')
@@ -134,7 +160,6 @@ def index():
     if not os.path.exists(sig_dir) or os.listdir(sig_dir) == []:
         (loggers[client]).log("INFO", "The 'signature-base' subdirectory doesn't exist or is empty. Trying to retrieve the signature database automatically.")
         updateLoki(sigsOnly=True)
-
     try:
         for yara_rule_directory in yara_rule_directories:
             if not os.path.exists(yara_rule_directory):
@@ -243,7 +268,8 @@ def index():
     client = request.forms.get('client')
     filename_iocs = {}
     counter = 0
-    output = open('filename_iocs.pkl', 'wb')
+    score = 0
+    desc = ""
     try:
         for ioc_filename in os.listdir(ioc_path):
             if 'filename' in ioc_filename:
@@ -278,13 +304,12 @@ def index():
                                 if not score.isdigit():
                                     desc = score        # score is description (old format)
                                     score = 60          # default value
-
                             # Elements without description
                             else:
                                 regex = line
+                                score = 60
 
                             # Replace environment variables
-
                             regex = replaceEnvVars(regex)
                             # OS specific transforms
                             regex = transformOS(regex, platform)
@@ -332,7 +357,6 @@ def index():
                 if 'c2' in ioc_filename:
                     with codecs.open(os.path.join(ioc_path, ioc_filename), 'r', encoding='utf-8') as file:
                         lines = file.readlines()
-
                         for line in lines:
                             try:
                                 # Comments and empty lines
@@ -346,17 +370,14 @@ def index():
                                     comment = row[1].rstrip(" ").rstrip("\n")
                                 else:
                                     c2 = row[0]
-
+                                    comment = ""
                                 # Check length
                                 if len(c2) < 4:
                                     (loggers[client]).log("INFO", "C2 server definition is suspiciously short - will not add %s" %c2)
                                     continue
-
                                 # Add to the LOKI iocs
                                 c2_server[c2.lower()] = comment
-
                             except Exception,e:
-                                print 3
                                 (loggers[client]).log("ERROR", "Cannot read line: %s" % line)
                                 return None
             except OSError, e:
@@ -479,6 +500,8 @@ def index():
         (loggers[client]).log("ERROR", "I/O operation with file: /signature-base/misc-txt/mutexesThreatExpert.txt")
         return None
 
+    return result
+
 
 
 @post('/initregistries')
@@ -494,7 +517,7 @@ def index():
         traceback.print_exc()
         (loggers[client]).log("ERROR", "I/O operation with file: /signature-base/misc-txt/mutexesThreatExpert.txt")
         return None
-
+    return result
 
 
 
@@ -505,15 +528,18 @@ def index():
 ################################## MAIN ########################################
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='LoRa - Simple IOC Scanner')
-    parser.add_argument('-s', help='Server address', metavar='server-address', default='localhost')
+    parser.add_argument('-s', help='Server address', metavar='', default='localhost')
     parser.add_argument('-p', help='Port', metavar='', default='8080')
     parser.add_argument('--update', action='store_true', default=False, help='Update the signatures from the "signature-base" sub repository')
+    parser.add_argument('--threxp', action='store_true', default=False, help='Search and parse the threat expert website for signatures')
 
     args = parser.parse_args()
     server_address = args.s
     server_port = args.p
-    if args.update:
-        updateLoki(True)
+    if args.sigs:
+        updateLora(args.threxp)
 
+    #TODO: uncomment
+    #deleteDuplicateRules()
 
     run(server='cherrypy', host=server_address, port=8080)

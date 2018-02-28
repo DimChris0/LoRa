@@ -1,4 +1,4 @@
-rule Terracotta_VPN_Report_Final__
+rule Terracotta_VPN_Report_Final_8_3
 {
 	strings:
 		$URL1 = "https://github.com/CoreSecurity/impacket/blob/master/examples/wmiexec.py"

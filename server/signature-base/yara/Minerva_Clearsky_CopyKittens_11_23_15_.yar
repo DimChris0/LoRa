@@ -1,4 +1,4 @@
-rule Minerva_Clearsky_CopyKittens____
+rule Minerva_Clearsky_CopyKittens_11_23_15_
 {
 	strings:
 		$URL1 = "https://en.wikipedia.org/wiki/Matryoshka_doll"

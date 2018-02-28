@@ -1,0 +1,26 @@
+msinm.exe
+CTFM0N.exe
+CTFM0N
+Messenger\BIN
+Microsoft Office\BIN
+winword.exe
+msmsgs.exe
+UpdateWord.exe
+WordPlug.exe
+WordForVista.exe
+UpdateMessenger.exe
+MessengerPlug.exe
+MessengerForVista.exe
+msmsgr.exe
+visit.exe
+visit.exe
+Documents and Settings\All Users
+ProgramData
+Visual Studio.lnk
+MSN.lnk
+WINWORD.lnk
+VFP6.lnk
+Symantec LiveUpdate.lnk
+Update.exe
+Info.txt
+OtherInfo.txt

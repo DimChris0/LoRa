@@ -1,4 +1,4 @@
-rule bcs_wp_InceptionReport_EN_v
+rule bcs_wp_InceptionReport_EN_v12914
 {
 	strings:
 		$CVE1 = "CVE-2014-1761"

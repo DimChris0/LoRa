@@ -1,4 +1,4 @@
-rule FTA__RAT_in_a_jar
+rule FTA_1013_RAT_in_a_jar
 {
 	strings:
 		$Filename1 = "Invoice.jar"

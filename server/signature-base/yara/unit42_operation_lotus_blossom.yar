@@ -1,4 +1,4 @@
-rule unit_operation_lotus_blossom
+rule unit42_operation_lotus_blossom
 {
 	strings:
 		$CVE1 = "CVE-2012-0158"

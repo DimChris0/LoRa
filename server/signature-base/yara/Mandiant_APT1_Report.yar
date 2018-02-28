@@ -1,4 +1,4 @@
-rule Mandiant_APT_Report
+rule Mandiant_APT1_Report
 {
 	strings:
 		$URL1 = "http://intelligence.house.gov/sites/intelligence.house.gov/files/documents/100411CyberHearingRogers"

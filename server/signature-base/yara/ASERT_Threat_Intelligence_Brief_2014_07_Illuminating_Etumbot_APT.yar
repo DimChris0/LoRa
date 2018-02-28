@@ -1,4 +1,4 @@
-rule ASERT_Threat_Intelligence_Brief___Illuminating_Etumbot_APT
+rule ASERT_Threat_Intelligence_Brief_2014_07_Illuminating_Etumbot_APT
 {
 	strings:
 		$Filepath1 = "C:\\Documents"

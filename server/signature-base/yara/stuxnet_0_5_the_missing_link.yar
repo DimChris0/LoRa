@@ -1,4 +1,4 @@
-rule stuxnet___the_missing_link
+rule stuxnet_0_5_the_missing_link
 {
 	strings:
 		$CVE1 = "CVE-2010-3888"

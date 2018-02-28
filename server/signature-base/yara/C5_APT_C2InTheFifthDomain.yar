@@ -1,4 +1,4 @@
-rule C_APT_CInTheFifthDomain
+rule C5_APT_C2InTheFifthDomain
 {
 	strings:
 		$Host1 = "update.alyac.org"

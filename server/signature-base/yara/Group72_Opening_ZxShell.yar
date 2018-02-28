@@ -1,4 +1,4 @@
-rule Group_Opening_ZxShell
+rule Group72_Opening_ZxShell
 {
 	strings:
 		$Filename1 = "msvcrt.dll"

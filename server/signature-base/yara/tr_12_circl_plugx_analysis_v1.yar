@@ -1,4 +1,4 @@
-rule tr__circl_plugx_analysis_v
+rule tr_12_circl_plugx_analysis_v1
 {
 	strings:
 		$Host1 = "circl.lu"

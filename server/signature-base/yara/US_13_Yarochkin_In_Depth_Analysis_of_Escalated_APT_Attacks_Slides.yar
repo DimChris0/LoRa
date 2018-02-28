@@ -1,4 +1,4 @@
-rule US__Yarochkin_In_Depth_Analysis_of_Escalated_APT_Attacks_Slides
+rule US_13_Yarochkin_In_Depth_Analysis_of_Escalated_APT_Attacks_Slides
 {
 	strings:
 		$Filename1 = "31805794.html"

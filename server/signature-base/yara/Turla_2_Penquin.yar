@@ -1,4 +1,4 @@
-rule Turla__Penquin
+rule Turla_2_Penquin
 {
 	strings:
 		$MD51 = "0994d9deb50352e76b0322f48ee576c6"

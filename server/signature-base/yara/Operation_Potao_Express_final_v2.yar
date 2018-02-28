@@ -1,4 +1,4 @@
-rule Operation_Potao_Express_final_v
+rule Operation_Potao_Express_final_v2
 {
 	strings:
 		$Host1 = "truecryptrussia.ru"

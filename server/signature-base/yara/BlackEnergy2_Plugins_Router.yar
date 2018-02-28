@@ -1,4 +1,4 @@
-rule BlackEnergy_Plugins_Router
+rule BlackEnergy2_Plugins_Router
 {
 	strings:
 		$Filename1 = "main.dll"

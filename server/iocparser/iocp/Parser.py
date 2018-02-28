@@ -214,7 +214,7 @@ class Parser(object):
 
 			self.handler.print_header(fpath)
 			page_num = 0
-			for page in PDFPage.get_pages(f, pagenos, check_extractable=True):
+			for page in PDFPage.get_pages(f, pagenos, check_extractable=False):
 				page_num += 1
 				retstr = StringIO()
 				device = TextConverter(rsrcmgr, retstr, codec='utf-8', laparams=laparams)
@@ -306,3 +306,4 @@ class Parser(object):
 			raise
 		except Exception as e:
 			self.handler.print_error(path, e)
+			return -1

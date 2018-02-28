@@ -1,4 +1,4 @@
-rule FTA__STTEAM_Final
+rule FTA_1012_STTEAM_Final
 {
 	strings:
 		$URL1 = "hxxp://www.zone-hack[dot]com"

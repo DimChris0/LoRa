@@ -1,4 +1,4 @@
-rule w_flamer_newsforyou
+rule w32_flamer_newsforyou
 {
 	strings:
 		$Host1 = "dnslocation.info"

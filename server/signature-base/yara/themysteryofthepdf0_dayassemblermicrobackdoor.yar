@@ -1,4 +1,4 @@
-rule themysteryofthepdf_dayassemblermicrobackdoor
+rule themysteryofthepdf0_dayassemblermicrobackdoor
 {
 	strings:
 		$URL1 = "http://blog.seculert.com/2013/02/spear-phishing-with-mandiant-apt"

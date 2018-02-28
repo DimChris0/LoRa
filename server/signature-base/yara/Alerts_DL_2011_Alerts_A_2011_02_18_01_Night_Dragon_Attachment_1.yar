@@ -1,21 +1,3 @@
-rule Alerts_DL__Alerts_A_____Night_Dragon_Attachment_
-{
-	strings:
-rule Alerts_DL__Alerts_A_____Night_Dragon_Attachment_
-{
-	strings:
-rule Alerts_DL__Alerts_A_____Night_Dragon_Attachment_
-{
-	strings:
-rule Alerts_DL__Alerts_A_____Night_Dragon_Attachment_
-{
-	strings:
-rule Alerts_DL__Alerts_A_____Night_Dragon_Attachment_
-{
-	strings:
-rule Alerts_DL__Alerts_A_____Night_Dragon_Attachment_
-{
-	strings:
-rule Alerts_DL__Alerts_A_____Night_Dragon_Attachment_
+rule Alerts_DL_2011_Alerts_A_2011_02_18_01_Night_Dragon_Attachment_1
 {
 	strings:

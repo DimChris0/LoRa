@@ -1,4 +1,4 @@
-rule KL_Epic_Turla_Technical_Appendix_
+rule KL_Epic_Turla_Technical_Appendix_20140806
 {
 	strings:
 		$MD51 = "a3cbf6179d437909eb532b7319b3dafe"

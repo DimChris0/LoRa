@@ -1,4 +1,4 @@
-rule UnFINished_Business_pwd
+rule UnFIN4ished_Business_pwd
 {
 	strings:
 		$MD51 = "d102693540b53f9a564e3a550f938709"

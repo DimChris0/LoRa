@@ -1,4 +1,4 @@
-rule FTA__FINAL___
+rule FTA_1001_FINAL_1_15_14
 {
 	strings:
 		$Filename1 = "netsat.exe"

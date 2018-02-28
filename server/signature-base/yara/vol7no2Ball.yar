@@ -1,4 +1,4 @@
-rule volnoBall
+rule vol7no2Ball
 {
 	strings:
 		$URL1 = "http://www.chinareviewnews.com/doc/1013/8/7/2/101387269.html?coluid=7&kindid=0&docid"

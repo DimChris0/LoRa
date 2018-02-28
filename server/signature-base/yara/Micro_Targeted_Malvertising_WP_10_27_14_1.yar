@@ -1,4 +1,4 @@
-rule Micro_Targeted_Malvertising_WP____
+rule Micro_Targeted_Malvertising_WP_10_27_14_1
 {
 	strings:
 		$Host1 = "earthlink.net"

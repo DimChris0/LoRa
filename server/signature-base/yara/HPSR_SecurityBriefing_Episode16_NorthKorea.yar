@@ -1,4 +1,4 @@
-rule HPSR_SecurityBriefing_Episode_NorthKorea
+rule HPSR_SecurityBriefing_Episode16_NorthKorea
 {
 	strings:
 		$URL1 = "http://thecable.foreignpolicy.com/posts/2010/05/25/why_the_state_department_wont_put_north_korea_back_on_the_terror_list"

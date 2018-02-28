@@ -1,4 +1,4 @@
-rule The_Mystery_of_Duqu___a_sophisticated_cyberespionage_actor_returns
+rule The_Mystery_of_Duqu_2_0_a_sophisticated_cyberespionage_actor_returns
 {
 	strings:
 		$Filename1 = "msi.dll"

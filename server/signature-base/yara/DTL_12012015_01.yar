@@ -1,4 +1,4 @@
-rule DTL__
+rule DTL_12012015_01
 {
 	strings:
 		$CVE1 = "CVE-2014-6332"

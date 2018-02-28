@@ -1,4 +1,4 @@
-rule VOHO_WP_FINAL_READY_FOR_Publication__AC
+rule VOHO_WP_FINAL_READY_FOR_Publication_09242012_AC
 {
 	strings:
 		$URL1 = "hxxp://www.xxxxxxxxtrust.com"

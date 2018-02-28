@@ -1,4 +1,4 @@
-rule apt_hammertoss_stealthy_tactics_define_a
+rule apt29_hammertoss_stealthy_tactics_define_a
 {
 	strings:
 		$MD51 = "d3109c83e07dd5d7fe032dc80c581d08"

@@ -1,4 +1,4 @@
-rule IEXPLRE_RAT
+rule IEXPL0RE_RAT
 {
 	strings:
 		$Filename1 = "config.dll"

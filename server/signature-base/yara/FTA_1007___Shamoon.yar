@@ -1,4 +1,4 @@
-rule FTA____Shamoon
+rule FTA_1007___Shamoon
 {
 	strings:
 		$URL1 = "http://blog.seculert.com/2012/08/shamoon-two-stage-targeted-attack.html"

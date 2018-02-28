@@ -1,4 +1,4 @@
-rule FTA____njRAT_The_Saga_Continues
+rule FTA_1010___njRAT_The_Saga_Continues
 {
 	strings:
 		$URL1 = "http://www.fidelissecurity.com/threatadvisory"

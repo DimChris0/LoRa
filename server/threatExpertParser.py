@@ -4,11 +4,11 @@ import tempfile
 import urllib2
 import re
 import winpaths
+import datetime
 from bs4 import BeautifulSoup, SoupStrainer
 from sets import Set
 
-# TODO: check the date of sigs(newest, oldest) in order to not download them again
-# TODO: fix threat level vairable
+
 #for windows
 _WINDIR = os.environ['WINDIR']
 _TEMPDIR = tempfile.gettempdir()
@@ -21,18 +21,19 @@ _APPDATA = winpaths.get_local_appdata()
 _COMMONAPPDATA = winpaths.get_common_appdata()
 _COMMONPROGRAMS = winpaths.get_program_files_common()
 _FONTS = os.path.join(os.environ['WINDIR'], 'Fonts')
+records = []
 
-class threatExpertParser(object):
-
-    records = []
+class ThreatExpertParser(object):
 
     def __init__(self, fromPage=1, toPage=10, threatLevel=3):
         self.fromPage = fromPage
         self.toPage = toPage
         self.threatLevel = threatLevel
+        self.firstDate = ""
+        self.lastDate = ""
 
     def parsePages(self):
-        for i in range(fromPage, toPage):
+        for i in range(self.fromPage, self.toPage):
             website = urllib2.urlopen('http://www.threatexpert.com/reports.aspx?page=' + str(i))
             html = website.read()
             parsed_html = BeautifulSoup(html, 'lxml')
@@ -44,10 +45,13 @@ class threatExpertParser(object):
             for tr in res:
                 tds = tr.find_all('td')
                 danger = tds[1].img.get('src')
-                if ('l3' in danger) or ('l4' in danger) or ('l5' in danger):
+                dg = int(filter(str.isdigit, danger))
+                if self.threatLevel <= dg and self.checkDate(tds[0].text):
                     records.append(str(tds[3].a.get('href')))
-
-
+                    if not self.firstDate:
+                        self.firstDate = tds[0].text
+                    self.lastDate = tds[0].text
+        self.updateDateFile()
         filenames = Set([])
         regKeys = Set([])
         mutex = Set([])
@@ -142,9 +146,9 @@ class threatExpertParser(object):
                 i = mutex.pop()
                 writeToFile(i, "mutexesThreatExpert.txt")
             for i in md5:
-                writeToFile(i, "hashes.txt")
+                writeToFile(i, "hashesThreatExpert.txt")
             for i in sha1:
-                writeToFile(i, "hashes.txt")
+                writeToFile(i, "hashesThreatExpert.txt")
             # print "Filenames:\n", filenames
             # print "#########################################"
             # print "regKeys:\n", regKeys
@@ -157,6 +161,49 @@ class threatExpertParser(object):
             # print "\n\n\n"
             # name = raw_input('Press Enter to continue...')
 
+
+    def checkDate(self, date_and_time):
+        datesList = []
+        with open("./threatExpertDates.txt", 'r+') as f:
+            content = f.read()
+            datesList = re.findall(r'\((.*?,.*?)\)', content)
+            f.close()
+        if datesList is None:
+            return True
+        sigDate = datetime.datetime.strptime(date_and_time, "%m/%d/%Y %H:%M:%S %p")
+        for tupl in datesList:
+            dates = tupl.split(',')
+            date1 = datetime.datetime.strptime(dates[0], "%m/%d/%Y %H:%M:%S %p")
+            date2 = datetime.datetime.strptime(dates[1], "%m/%d/%Y %H:%M:%S %p")
+            if date1 >= sigDate and sigDate >= date2:
+                print "Signature already donwloaded from Threat Expert"
+                return False
+        return True
+
+
+    #TODO: for the list to not get very big check for date overlaps and just change the 1st or 2nd date in a tuple
+    # to be tested
+    def updateDateFile(self):
+        with open("./threatExpertDates.txt", 'r+') as f:
+            content = f.read()
+            datesList = re.findall(r'\((.*?,.*?)\)', content)
+            f.close()
+            if datesList is None:
+                # Go to the 3rd byte before the end
+                f.seek(-1, 2)
+                f.write("(" + self.firstDate + "," + self.lastDate + ")>")
+            else:
+                replaceList = ""
+                for tupl in datesList:
+                    dates = tupl.split(',')
+                    date1 = datetime.datetime.strptime(dates[0], "%m/%d/%Y %H:%M:%S %p")
+                    date2 = datetime.datetime.strptime(dates[1], "%m/%d/%Y %H:%M:%S %p")
+                    if date1 < self.firstDate and self.firstDate < date2:
+                        replaceList += "(" + self.firstDate + "," + date2 + ")"
+                    elif date1 > self.lastDate and self.lastDate > date2:
+                        replaceList += "(" + date1+ "," + self.lastDate + ")"
+                    else:
+                        replaceList += "(" + self.firstDate + "," + self.lastDate + ")"
 
 
 def writeToFile(data, fileName):

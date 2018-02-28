@@ -1,4 +1,4 @@
-rule winnti_more_than_just_a_game_
+rule winnti_more_than_just_a_game_130410
 {
 	strings:
 		$URL1 = "http://www.bbc.co.uk/news/technology-14323787"

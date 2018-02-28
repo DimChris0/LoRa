@@ -1,4 +1,4 @@
-rule theteamspystory_final_t
+rule theteamspystory_final_t2
 {
 	strings:
 		$URL1 = "http://www.teamviewer.com/en/index.aspx"

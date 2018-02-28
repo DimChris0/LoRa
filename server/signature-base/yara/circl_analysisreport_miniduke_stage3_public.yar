@@ -1,4 +1,4 @@
-rule circl_analysisreport_miniduke_stage_public
+rule circl_analysisreport_miniduke_stage3_public
 {
 	strings:
 		$Host1 = "circl.lu"

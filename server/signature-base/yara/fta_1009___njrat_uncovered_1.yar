@@ -1,4 +1,4 @@
-rule fta____njrat_uncovered_
+rule fta_1009___njrat_uncovered_1
 {
 	strings:
 		$Filename1 = "v0.994.exe"

@@ -1,4 +1,4 @@
-rule apt
+rule apt28
 {
 	strings:
 		$URL1 = "http://www.nytimes.com/2008/08/13/technology/13cyber.html"

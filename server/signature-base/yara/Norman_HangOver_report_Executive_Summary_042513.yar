@@ -1,4 +1,4 @@
-rule Norman_HangOver_report_Executive_Summary_
+rule Norman_HangOver_report_Executive_Summary_042513
 {
 	strings:
 		$Host1 = "claritycommunications.us"

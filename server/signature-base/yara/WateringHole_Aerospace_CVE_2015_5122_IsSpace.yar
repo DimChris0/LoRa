@@ -1,4 +1,4 @@
-rule WateringHole_Aerospace_CVE___IsSpace
+rule WateringHole_Aerospace_CVE_2015_5122_IsSpace
 {
 	strings:
 		$Filename1 = "movie.swf"
