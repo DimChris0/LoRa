@@ -1,9 +1,0 @@
-20180223T10:04:25Z DESKTOP-280IJO6 LOKI: Notice: Starting Loki Scan SYSTEM: DESKTOP-280IJO6 TIME: 20180223T10:04:25Z PLATFORM: windows
-20180223T10:04:28Z DESKTOP-280IJO6 LOKI: Info: File Name Characteristics initialized with 18370 regex patterns
-20180223T10:04:31Z DESKTOP-280IJO6 LOKI: Info: C2 server indicators initialized with 88192 elements
-20180223T10:04:34Z DESKTOP-280IJO6 LOKI: Info: Malicious MD5 Hashes initialized with 23475 hashes
-20180223T10:04:34Z DESKTOP-280IJO6 LOKI: Info: Malicious SHA1 Hashes initialized with 9206 hashes
-20180223T10:04:34Z DESKTOP-280IJO6 LOKI: Info: Malicious SHA256 Hashes initialized with 31142 hashes
-20180223T10:04:34Z DESKTOP-280IJO6 LOKI: Info: False Positive Hashes initialized with 30 hashes
-20180223T10:04:56Z DESKTOP-280IJO6 LOKI: Info: Initializing YARA rules (composed string of all rule files)
-20180223T10:05:00Z DESKTOP-280IJO6 LOKI: Error: Error during YARA rule compilation - please fix the issue in the rule set

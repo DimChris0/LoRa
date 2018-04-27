@@ -1,0 +1,1386 @@
+    C: Mutant        \KernelObjects\BcdSyncMutant
+  22C: Mutant        
+  23C: Mutant        \BaseNamedObjects\SM0:628:120:WilError_01
+   9C: Mutant        \BaseNamedObjects\SM0:700:304:WilStaging_02
+   64: Mutant        
+   A4: Mutant        
+   B0: Mutant        
+   B8: Mutant        
+  120: Mutant        
+  128: Mutant        
+  100: Mutant        
+  108: Mutant        
+  24C: Mutant        \BaseNamedObjects\SM0:928:304:WilStaging_02
+  278: Mutant        \BaseNamedObjects\SM0:928:120:WilError_01
+  338: Mutant        \BaseNamedObjects\{A3BD3259-3E4F-428a-84C8-F0463A9D3EB5}
+  3DC: Mutant        
+  4A4: Mutant        
+  DA0: Mutant        
+   F4: Mutant        
+   FC: Mutant        
+  41C: Mutant        \BaseNamedObjects\SM0:336:304:WilStaging_02
+  154: Mutant        
+  15C: Mutant        
+  154: Mutant        
+  15C: Mutant        
+  22C: Mutant        \BaseNamedObjects\SM0:1136:304:WilStaging_02
+  154: Mutant        
+  15C: Mutant        
+  280: Mutant        
+  49C: Mutant        \BaseNamedObjects\SM0:1168:304:WilStaging_02
+  150: Mutant        
+  158: Mutant        
+  1F8: Mutant        \BaseNamedObjects\SM0:1228:304:WilStaging_02
+  3B8: Mutant        \BaseNamedObjects\SM0:1228:120:WilError_01
+   F4: Mutant        
+  1A4: Mutant        
+  1EC: Mutant        \BaseNamedObjects\SM0:1328:304:WilStaging_02
+  3AC: Mutant        
+   CC: Mutant        
+   D4: Mutant        
+  13C: Mutant        \BaseNamedObjects\AMDServiceMutex
+  144: Mutant        \BaseNamedObjects\EEU Memory Map Mutex
+  204: Mutant        
+  20C: Mutant        
+  134: Mutant        
+  13C: Mutant        
+  13C: Mutant        
+  144: Mutant        
+  320: Mutant        \BaseNamedObjects\SM0:1440:304:WilStaging_02
+  360: Mutant        
+  364: Mutant        
+  13C: Mutant        
+  144: Mutant        
+  330: Mutant        
+  65C: Mutant        \BaseNamedObjects\SM0:1596:304:WilStaging_02
+  12C: Mutant        
+  134: Mutant        
+  170: Mutant        \BaseNamedObjects\SM0:1580:304:WilStaging_02
+  144: Mutant        
+  14C: Mutant        
+  15C: Mutant        \BaseNamedObjects\SM0:1588:304:WilStaging_02
+  15C: Mutant        
+  164: Mutant        
+  1A4: Mutant        \BaseNamedObjects\SM0:1604:304:WilStaging_02
+  154: Mutant        
+  15C: Mutant        
+  21C: Mutant        \BaseNamedObjects\SM0:1724:304:WilStaging_02
+  178: Mutant        
+  180: Mutant        
+  19C: Mutant        
+  1E8: Mutant        
+  234: Mutant        \BaseNamedObjects\SM0:1764:304:WilStaging_02
+  134: Mutant        
+  13C: Mutant        
+  15C: Mutant        
+  16C: Mutant        
+  174: Mutant        
+  1B8: Mutant        
+  1C8: Mutant        
+  204: Mutant        
+  138: Mutant        
+  140: Mutant        
+  154: Mutant        
+  15C: Mutant        
+  1F0: Mutant        
+  250: Mutant        
+  154: Mutant        
+  15C: Mutant        
+  148: Mutant        
+  150: Mutant        
+  174: Mutant        
+  17C: Mutant        
+  39C: Mutant        \BaseNamedObjects\SM0:2108:120:WilError_01
+  48C: Mutant        \BaseNamedObjects\SM0:2108:304:WilStaging_02
+  188: Mutant        
+  190: Mutant        
+  4CC: Mutant        
+  56C: Mutant        
+  144: Mutant        
+  14C: Mutant        
+  1A4: Mutant        \BaseNamedObjects\SM0:2212:304:WilStaging_02
+  12C: Mutant        
+  134: Mutant        
+  13C: Mutant        
+  140: Mutant        
+  18C: Mutant        \BaseNamedObjects\SM0:2316:304:WilStaging_02
+  1C0: Mutant        
+  2D8: Mutant        
+  2E0: Mutant        
+  2E8: Mutant        
+  2F0: Mutant        
+  2FC: Mutant        
+  304: Mutant        
+  30C: Mutant        
+  314: Mutant        
+  348: Mutant        
+  354: Mutant        
+  35C: Mutant        
+  368: Mutant        
+  36C: Mutant        
+  370: Mutant        
+  378: Mutant        
+  380: Mutant        
+  388: Mutant        
+  394: Mutant        
+  39C: Mutant        
+  3A8: Mutant        
+  3B8: Mutant        
+  3BC: Mutant        
+  3C4: Mutant        
+  3CC: Mutant        
+  3D8: Mutant        
+  3E0: Mutant        
+  3E8: Mutant        
+  3F0: Mutant        
+  3F8: Mutant        
+  408: Mutant        
+  410: Mutant        
+  418: Mutant        
+  420: Mutant        
+  42C: Mutant        
+  434: Mutant        
+  43C: Mutant        
+  444: Mutant        
+  458: Mutant        
+  460: Mutant        
+  468: Mutant        
+  470: Mutant        
+  494: Mutant        
+  4B4: Mutant        
+  4C0: Mutant        
+  4C4: Mutant        
+  4D8: Mutant        
+  4F0: Mutant        
+  518: Mutant        
+  520: Mutant        
+  528: Mutant        
+  530: Mutant        
+  560: Mutant        
+  568: Mutant        
+  570: Mutant        
+  578: Mutant        
+  57C: Mutant        
+  590: Mutant        
+  5A0: Mutant        
+  5A4: Mutant        
+  5B0: Mutant        
+  5B4: Mutant        
+  604: Mutant        
+  62C: Mutant        
+  640: Mutant        
+  648: Mutant        
+  664: Mutant        
+  66C: Mutant        
+  674: Mutant        
+  67C: Mutant        
+  690: Mutant        
+  6A0: Mutant        
+  6B0: Mutant        
+  6B8: Mutant        
+  6C0: Mutant        
+  2CC: Mutant        
+  2D4: Mutant        
+  368: Mutant        
+  4A0: Mutant        
+  4A8: Mutant        
+  4BC: Mutant        
+  4C8: Mutant        
+  540: Mutant        
+  134: Mutant        \BaseNamedObjects\SM0:2468:120:WilError_01
+  170: Mutant        \BaseNamedObjects\SM0:2468:304:WilStaging_02
+  1FC: Mutant        
+  204: Mutant        
+  15C: Mutant        
+  168: Mutant        
+  174: Mutant        
+  17C: Mutant        
+  1F4: Mutant        \BaseNamedObjects\SM0:2540:304:WilStaging_02
+  254: Mutant        
+  750: Mutant        
+  164: Mutant        
+  16C: Mutant        
+  1A0: Mutant        
+  1A8: Mutant        
+  1E4: Mutant        \BaseNamedObjects\SM0:2720:304:WilStaging_02
+  250: Mutant        
+  75C: Mutant        \BaseNamedObjects\SM0:2720:120:WilError_01
+  180: Mutant        
+  184: Mutant        
+  188: Mutant        
+  18C: Mutant        
+  190: Mutant        
+  194: Mutant        
+  198: Mutant        
+  19C: Mutant        
+  1A0: Mutant        
+  1B4: Mutant        
+  1BC: Mutant        
+  1DC: Mutant        
+  1E4: Mutant        
+  2D4: Mutant        
+  35C: Mutant        
+  408: Mutant        
+  430: Mutant        
+  440: Mutant        
+  444: Mutant        
+  448: Mutant        
+  51C: Mutant        \BaseNamedObjects\SM0:2824:304:WilStaging_02
+  69C: Mutant        
+  154: Mutant        
+  15C: Mutant        
+  1D4: Mutant        
+  208: Mutant        \BaseNamedObjects\SM0:2916:304:WilStaging_02
+  2E4: Mutant        
+  2F4: Mutant        
+  524: Mutant        
+  56C: Mutant        
+  12C: Mutant        
+  134: Mutant        
+  23C: Mutant        \BaseNamedObjects\SM0:2928:304:WilStaging_02
+  260: Mutant        
+  264: Mutant        
+  4BC: Mutant        \BaseNamedObjects\SM0:2928:120:WilError_01
+  1E8: Mutant        
+  1F0: Mutant        
+  210: Mutant        
+  220: Mutant        
+  228: Mutant        \BaseNamedObjects\SM0:2948:120:WilError_01
+  390: Mutant        \BaseNamedObjects\SM0:2948:304:WilStaging_02
+  700: Mutant        
+  70C: Mutant        
+  7B4: Mutant        
+  A64: Mutant        
+  120: Mutant        
+  128: Mutant        
+  150: Mutant        \BaseNamedObjects\WIATRACE_MUTEX
+  1FC: Mutant        
+  204: Mutant        
+  208: Mutant        
+  230: Mutant        
+  260: Mutant        \BaseNamedObjects\SM0:2980:304:WilStaging_02
+  2BC: Mutant        \BaseNamedObjects\WIATRACE_MUTEX
+  130: Mutant        
+  138: Mutant        
+  17C: Mutant        
+  210: Mutant        \BaseNamedObjects\SM0:3020:304:WilStaging_02
+  2C8: Mutant        
+  2CC: Mutant        
+  2D4: Mutant        
+  4BC: Mutant        
+  4C0: Mutant        \BaseNamedObjects\ZonesCacheCounterMutex
+  4D0: Mutant        \BaseNamedObjects\ZonesLockedCacheCounterMutex
+  54C: Mutant        \BaseNamedObjects\SM0:3020:120:WilError_01
+  584: Mutant        
+  5C0: Mutant        
+  66C: Mutant        
+  134: Mutant        
+  13C: Mutant        
+  14C: Mutant        \BaseNamedObjects\SM0:2140:304:WilStaging_02
+  194: Mutant        \BaseNamedObjects\SM0:2140:120:WilError_01
+  1A4: Mutant        \BaseNamedObjects\SearchServiceMUT
+  3C4: Mutant        \BaseNamedObjects\Instance0:  ESENT Performance Data Schema Version 280
+  93C: Mutant        \BaseNamedObjects\WindowsSearchService_EfsRegKeysMutex
+  968: Mutant        
+  140: Mutant        
+  148: Mutant        
+  18C: Mutant        \BaseNamedObjects\SM0:3068:304:WilStaging_02
+  2DC: Mutant        
+  31C: Mutant        \BaseNamedObjects\SM0:3068:120:WilError_01
+  414: Mutant        
+  148: Mutant        
+  150: Mutant        
+  154: Mutant        
+  15C: Mutant        
+  13C: Mutant        
+  144: Mutant        
+  124: Mutant        
+  12C: Mutant        
+  154: Mutant        
+  15C: Mutant        
+   7C: Mutant        
+   84: Mutant        
+  350: Mutant        \BaseNamedObjects\SM0:3524:304:WilStaging_02
+  37C: Mutant        
+  3B8: Mutant        
+  3BC: Mutant        
+  494: Mutant        
+  554: Mutant        
+  7CC: Mutant        
+  7D0: Mutant        \BaseNamedObjects\ZonesCacheCounterMutex
+  7E0: Mutant        \BaseNamedObjects\ZonesLockedCacheCounterMutex
+  7F4: Mutant        
+  A68: Mutant        
+  B34: Mutant        
+  B4C: Mutant        
+  DB8: Mutant        
+  E3C: Mutant        
+  EF0: Mutant        
+  F7C: Mutant        \BaseNamedObjects\SM0:3524:120:WilError_01
+  12C: Mutant        
+  134: Mutant        
+  170: Mutant        \BaseNamedObjects\SM0:3676:304:WilStaging_02
+  154: Mutant        
+  15C: Mutant        
+  154: Mutant        
+  15C: Mutant        
+  1A4: Mutant        \BaseNamedObjects\SM0:3876:304:WilStaging_02
+  140: Mutant        
+  150: Mutant        
+  158: Mutant        
+  1A0: Mutant        \BaseNamedObjects\SM0:4236:304:WilStaging_02
+  2C4: Mutant        \BaseNamedObjects\SM0:4236:120:WilError_01
+  184: Mutant        
+  18C: Mutant        
+  1DC: Mutant        \BaseNamedObjects\SM0:4440:304:WilStaging_02
+  268: Mutant        \BaseNamedObjects\SM0:4440:120:WilError_01
+  3D0: Mutant        
+  144: Mutant        \BaseNamedObjects\SM0:4604:304:WilStaging_02
+  308: Mutant        \BaseNamedObjects\SM0:4604:120:WilError_01
+  608: Mutant        
+  610: Mutant        
+  664: Mutant        
+  764: Mutant        
+  138: Mutant        
+  140: Mutant        
+  180: Mutant        
+  188: Mutant        
+  1C0: Mutant        \BaseNamedObjects\SM0:3140:304:WilStaging_02
+  234: Mutant        \BaseNamedObjects\SM0:3140:120:WilError_01
+  458: Mutant        
+  130: Mutant        
+  138: Mutant        
+  1A0: Mutant        \BaseNamedObjects\SM0:3692:304:WilStaging_02
+  244: Mutant        
+  28C: Mutant        
+  144: Mutant        
+  14C: Mutant        
+  1A8: Mutant        \BaseNamedObjects\SM0:3448:304:WilStaging_02
+  160: Mutant        
+  168: Mutant        
+  1B4: Mutant        \BaseNamedObjects\SM0:6240:304:WilStaging_02
+  588: Mutant        \BaseNamedObjects\SM0:6240:120:WilError_01
+  14C: Mutant        
+  154: Mutant        
+  1A0: Mutant        \BaseNamedObjects\SM0:4088:304:WilStaging_02
+  210: Mutant        
+  140: Mutant        
+  148: Mutant        
+  228: Mutant        
+  1BC: Mutant        \BaseNamedObjects\SM0:4100:304:WilStaging_02
+  21C: Mutant        
+  224: Mutant        
+  2D4: Mutant        
+  1A0: Mutant        
+  1A8: Mutant        
+  230: Mutant        \BaseNamedObjects\SM0:2332:304:WilStaging_02
+  54C: Mutant        \BaseNamedObjects\SM0:2332:120:WilError_01
+  17C: Mutant        
+  184: Mutant        
+  130: Mutant        \BaseNamedObjects\SM0:11928:304:WilStaging_02
+  174: Mutant        
+  17C: Mutant        
+  230: Mutant        \BaseNamedObjects\Instance2:  ESENT Performance Data Schema Version 280
+  17C: Mutant        
+  184: Mutant        
+  22C: Mutant        \BaseNamedObjects\SM0:3868:304:WilStaging_02
+  25C: Mutant        
+  220: Mutant        \Sessions\2\BaseNamedObjects\SM0:10780:120:WilError_01
+  14C: Mutant        
+  1E0: Mutant        \Sessions\2\BaseNamedObjects\SM0:3596:304:WilStaging_02
+  128: Mutant        
+  130: Mutant        
+  150: Mutant        
+  158: Mutant        
+  198: Mutant        \Sessions\2\BaseNamedObjects\SM0:7428:304:WilStaging_02
+  218: Mutant        \BaseNamedObjects\EEU Memory Map Mutex
+  278: Mutant        
+  27C: Mutant        
+  288: Mutant        
+  294: Mutant        
+  2A8: Mutant        
+  2E8: Mutant        
+  2F4: Mutant        
+  158: Mutant        
+  160: Mutant        
+  1B8: Mutant        \Sessions\2\BaseNamedObjects\SM0:11456:304:WilStaging_02
+  260: Mutant        \Sessions\2\BaseNamedObjects\SM0:11456:120:WilError_01
+  4B4: Mutant        
+  890: Mutant        
+  898: Mutant        
+  DF0: Mutant        
+  17C: Mutant        
+  184: Mutant        
+  1F4: Mutant        \Sessions\2\BaseNamedObjects\SM0:7068:304:WilStaging_02
+  338: Mutant        \Sessions\2\BaseNamedObjects\SM0:7068:120:WilError_01
+  374: Mutant        \Sessions\2\BaseNamedObjects\CDPUserSvc_Ready_54F0AB22F66547AEB397DA753C495D18
+  124: Mutant        
+  130: Mutant        
+  158: Mutant        \Sessions\2\BaseNamedObjects\SM0:10192:304:WilStaging_02
+  2A4: Mutant        
+  2E0: Mutant        \Sessions\2\BaseNamedObjects\SM0:10192:120:WilError_01
+  190: Mutant        \Sessions\2\BaseNamedObjects\SM0:10344:304:WilStaging_02
+  2E8: Mutant        
+  320: Mutant        \Sessions\2\BaseNamedObjects\SessionImmersiveColorMutex
+  394: Mutant        \Sessions\2\BaseNamedObjects\SM0:10344:120:WilError_01
+  420: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_exif.db!dfMaintainer
+  590: Mutant        
+  734: Mutant        
+  748: Mutant        
+  C68: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_1280.db!dfMaintainer
+  CB8: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_2560.db!dfMaintainer
+  E6C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  EB0: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_2560.db!dfMaintainer
+  EC0: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_wide.db!dfMaintainer
+ 10C0: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_idx.db!rwWriterMutex
+ 129C: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_256.db!dfMaintainer
+ 12AC: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_wide.db!dfMaintainer
+ 1310: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_16.db!dfMaintainer
+ 13D4: Mutant        
+ 140C: Mutant        \Sessions\2\BaseNamedObjects\_!SHMSFTHISTORY!_
+ 1410: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_1920.db!dfMaintainer
+ 1420: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_sr.db!dfMaintainer
+ 1470: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_768.db!dfMaintainer
+ 148C: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_1280.db!dfMaintainer
+ 14BC: Mutant        
+ 14D0: Mutant        
+ 14D4: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_wide_alternate.db!dfMaintainer
+ 1A54: Mutant        
+ 1A60: Mutant        
+ 1A68: Mutant        
+ 1A70: Mutant        
+ 1C58: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_768.db!dfMaintainer
+ 1C64: Mutant        \Sessions\2\BaseNamedObjects\_SHuassist.mtx
+ 1CE0: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_custom_stream.db!dfMaintainer
+ 1D2C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.CtfMonitorInstMutexDefault2
+ 1E04: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1E1C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1E50: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1F1C: Mutant        \Sessions\2\BaseNamedObjects\ZonesCacheCounterMutex
+ 1F20: Mutant        \Sessions\2\BaseNamedObjects\ZonesLockedCacheCounterMutex
+ 1FAC: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_custom_stream.db!dfMaintainer
+ 20AC: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_1920.db!dfMaintainer
+ 20B4: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_48.db!dfMaintainer
+ 20B8: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_idx.db!rwWriterMutex
+ 20BC: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_32.db!dfMaintainer
+ 20C8: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_idx.db!IconCacheInit
+ 20CC: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_96.db!dfMaintainer
+ 20D8: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 21B0: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_wide_alternate.db!dfMaintainer
+ 21CC: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_idx.db!rwWriterMutex
+ 22AC: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_idx.db!ThumbnailCacheInit
+ 2424: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_16.db!dfMaintainer
+ 248C: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_256.db!dfMaintainer
+ 2550: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_16.db!dfMaintainer
+ 2554: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_32.db!dfMaintainer
+ 2558: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_48.db!dfMaintainer
+ 255C: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_96.db!dfMaintainer
+ 2560: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_256.db!dfMaintainer
+ 2564: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_768.db!dfMaintainer
+ 2568: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_1280.db!dfMaintainer
+ 256C: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_1920.db!dfMaintainer
+ 2570: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_2560.db!dfMaintainer
+ 2574: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_sr.db!dfMaintainer
+ 2578: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_wide.db!dfMaintainer
+ 257C: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_exif.db!dfMaintainer
+ 2580: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_wide_alternate.db!dfMaintainer
+ 2584: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_custom_stream.db!dfMaintainer
+ 2610: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_96.db!dfMaintainer
+ 26F0: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_exif.db!dfMaintainer
+ 27B8: Mutant        
+ 2860: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 29A4: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_32.db!dfMaintainer
+ 2A34: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_sr.db!dfMaintainer
+ 2BA8: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_48.db!dfMaintainer
+  1F4: Mutant        \Sessions\2\BaseNamedObjects\AccessibilitySoundAgentRunning
+  220: Mutant        \Sessions\2\BaseNamedObjects\SM0:9828:304:WilStaging_02
+  298: Mutant        \Sessions\2\BaseNamedObjects\SM0:9828:120:WilError_01
+  5E0: Mutant        
+  5E4: Mutant        
+  124: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-155514346-2573954481-755741238-1654018636-1233331829-3075935687-2861478708\SM0:7412:304:WilStaging_02
+  248: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-155514346-2573954481-755741238-1654018636-1233331829-3075935687-2861478708\SM0:7412:120:WilError_01
+  374: Mutant        
+  378: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-155514346-2573954481-755741238-1654018636-1233331829-3075935687-2861478708\SessionImmersiveColorMutex
+  4A4: Mutant        
+  6F8: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-155514346-2573954481-755741238-1654018636-1233331829-3075935687-2861478708\DBWinMutex
+  B18: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  DC4: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  EA0: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  F3C: Mutant        
+  190: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-1861897761-1695161497-2927542615-642690995-327840285-2659745135-2630312742\SM0:6828:304:WilStaging_02
+  2D4: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-1861897761-1695161497-2927542615-642690995-327840285-2659745135-2630312742\SM0:6828:120:WilError_01
+  430: Mutant        
+  434: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-1861897761-1695161497-2927542615-642690995-327840285-2659745135-2630312742\SessionImmersiveColorMutex
+  588: Mutant        
+  7C0: Mutant        
+  87C: Mutant        
+  89C: Mutant        
+  A00: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-1861897761-1695161497-2927542615-642690995-327840285-2659745135-2630312742\ZonesCacheCounterMutex
+  A04: Mutant        
+  A34: Mutant        
+  A7C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-1861897761-1695161497-2927542615-642690995-327840285-2659745135-2630312742\ZonesLockedCacheCounterMutex
+  C58: Mutant        
+  C74: Mutant        
+  C98: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-1861897761-1695161497-2927542615-642690995-327840285-2659745135-2630312742\Lowhttps://www.bing.com/
+  E1C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-1861897761-1695161497-2927542615-642690995-327840285-2659745135-2630312742\LowInternetExplorerDOMStoreQuota
+  E70: Mutant        
+  E84: Mutant        
+  F90: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 100C: Mutant        
+ 1018: Mutant        
+ 1020: Mutant        
+ 105C: Mutant        
+ 109C: Mutant        
+ 1108: Mutant        
+ 116C: Mutant        
+ 1198: Mutant        
+ 11A4: Mutant        
+ 11EC: Mutant        
+ 11F8: Mutant        
+ 1240: Mutant        
+ 12BC: Mutant        
+ 1328: Mutant        
+ 1348: Mutant        
+ 13B4: Mutant        
+ 1430: Mutant        
+ 1450: Mutant        
+ 149C: Mutant        
+ 14A0: Mutant        
+ 15B8: Mutant        
+ 15C8: Mutant        
+ 15E0: Mutant        
+ 15FC: Mutant        
+ 1600: Mutant        
+ 162C: Mutant        
+ 165C: Mutant        
+ 1684: Mutant        
+ 1688: Mutant        
+ 16A4: Mutant        
+ 16BC: Mutant        
+ 1714: Mutant        
+ 1718: Mutant        
+ 172C: Mutant        
+ 1730: Mutant        
+ 177C: Mutant        
+ 178C: Mutant        
+ 17A0: Mutant        
+ 17B4: Mutant        
+ 17C0: Mutant        
+ 17E8: Mutant        
+ 17EC: Mutant        
+ 184C: Mutant        
+ 1850: Mutant        
+ 1890: Mutant        
+ 1894: Mutant        
+ 18FC: Mutant        
+ 1924: Mutant        
+ 1928: Mutant        
+ 192C: Mutant        
+ 1930: Mutant        
+ 1950: Mutant        
+ 1964: Mutant        
+ 1968: Mutant        
+ 1988: Mutant        
+ 1A0C: Mutant        
+ 1A90: Mutant        
+ 1AA8: Mutant        
+ 1AB0: Mutant        
+ 1B0C: Mutant        
+ 1B58: Mutant        
+ 1B60: Mutant        
+ 1BB0: Mutant        
+ 1C34: Mutant        
+ 1DB8: Mutant        
+ 1DD0: Mutant        
+ 1E00: Mutant        
+ 1E34: Mutant        
+ 1EB8: Mutant        
+ 1EC0: Mutant        
+ 1ED8: Mutant        
+ 1EF0: Mutant        
+ 1F00: Mutant        
+ 1F4C: Mutant        
+  150: Mutant        \Sessions\2\BaseNamedObjects\Microsoft.Windows.Cortana_cw5n1h2txyewy!CortanaUI\SM0:6888:304:WilStaging_02
+  3B8: Mutant        \Sessions\2\BaseNamedObjects\Microsoft.Windows.Cortana_cw5n1h2txyewy!CortanaUI\SM0:6888:120:WilError_01
+  650: Mutant        
+  118: Mutant        \Sessions\2\BaseNamedObjects\Microsoft.Windows.ShellExperienceHost_cw5n1h2txyewy!App\SM0:9252:304:WilStaging_02
+  218: Mutant        \Sessions\2\BaseNamedObjects\Microsoft.Windows.ShellExperienceHost_cw5n1h2txyewy!App\SM0:9252:120:WilError_01
+  134: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-2246530975-808720366-1776470054-230329187-4153223113-3550430174-4193313734\SM0:7988:304:WilStaging_02
+  18C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-2246530975-808720366-1776470054-230329187-4153223113-3550430174-4193313734\SM0:7988:120:WilError_01
+   64: Mutant        \Sessions\2\BaseNamedObjects\InputServiceHostMutex
+  110: Mutant        
+  114: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.CtfMonitorInstMutexDefault2
+  148: Mutant        \Sessions\2\BaseNamedObjects\SM0:6540:304:WilStaging_02
+  298: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.CtfServerMutexDefault2
+  440: Mutant        \Sessions\2\BaseNamedObjects\SM0:6540:120:WilError_01
+  518: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  520: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  148: Mutant        \Sessions\2\BaseNamedObjects\SM0:3232:304:WilStaging_02
+  344: Mutant        \Sessions\2\BaseNamedObjects\SM0:3232:120:WilError_01
+  534: Mutant        \Sessions\2\BaseNamedObjects\SessionImmersiveColorMutex
+  568: Mutant        
+  618: Mutant        \Sessions\2\BaseNamedObjects\_SHuassist.mtx
+  C84: Mutant        \Sessions\2\BaseNamedObjects\ZonesLockedCacheCounterMutex
+  C90: Mutant        \Sessions\2\BaseNamedObjects\ZonesCacheCounterMutex
+  138: Mutant        
+  140: Mutant        
+  168: Mutant        \Sessions\2\BaseNamedObjects\SM0:8768:304:WilStaging_02
+  168: Mutant        \Sessions\2\BaseNamedObjects\SM0:5864:168:WilStaging_02
+  244: Mutant        \Sessions\2\BaseNamedObjects\SM0:5864:64:WilError_01
+  250: Mutant        
+  2B8: Mutant        
+  2E0: Mutant        
+  364: Mutant        
+  3A8: Mutant        
+  3B0: Mutant        
+  424: Mutant        \Sessions\2\BaseNamedObjects\SkyDrive Mutex {8EAEBBD8-2370-4716-9C12-1C4BA22A988C}
+  6A0: Mutant        \Sessions\2\BaseNamedObjects\ZonesCacheCounterMutex
+  6E8: Mutant        \Sessions\2\BaseNamedObjects\ZonesLockedCacheCounterMutex
+  178: Mutant        \Sessions\2\BaseNamedObjects\SM0:6864:304:WilStaging_02
+  2A0: Mutant        
+  504: Mutant        
+  50C: Mutant        
+  528: Mutant        
+  530: Mutant        
+  660: Mutant        
+  6D4: Mutant        
+  6DC: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  9C0: Mutant        \Sessions\2\BaseNamedObjects\SM0:6864:120:WilError_01
+  DC4: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+   A0: Mutant        \Sessions\2\BaseNamedObjects\DBWinMutex
+  18C: Mutant        \Sessions\2\BaseNamedObjects\SM0:11492:304:WilStaging_02
+  2A4: Mutant        
+  1A8: Mutant        \Sessions\2\BaseNamedObjects\SM0:1176:304:WilStaging_02
+  474: Mutant        
+  478: Mutant        
+  498: Mutant        
+  49C: Mutant        
+  4A0: Mutant        
+  4A4: Mutant        
+  4C0: Mutant        
+  4C4: Mutant        
+  4E0: Mutant        
+  4E4: Mutant        
+  500: Mutant        
+  504: Mutant        
+  520: Mutant        
+  524: Mutant        
+  540: Mutant        
+  550: Mutant        
+  554: Mutant        
+  558: Mutant        
+  55C: Mutant        
+  560: Mutant        
+  564: Mutant        
+  568: Mutant        
+  584: Mutant        
+  5A4: Mutant        
+  5C4: Mutant        
+  5E4: Mutant        
+  604: Mutant        
+  624: Mutant        
+  644: Mutant        
+  664: Mutant        
+  688: Mutant        
+  68C: Mutant        
+  174: Mutant        \Sessions\2\BaseNamedObjects\SM0:9820:304:WilStaging_02
+  34C: Mutant        
+  358: Mutant        
+  37C: Mutant        
+  55C: Mutant        
+  5A8: Mutant        
+  874: Mutant        
+  894: Mutant        
+  190: Mutant        \Sessions\2\BaseNamedObjects\SM0:10380:304:WilStaging_02
+  34C: Mutant        
+  358: Mutant        
+  37C: Mutant        
+  148: Mutant        \Sessions\2\BaseNamedObjects\Microsoft.SkypeApp_kzf8qxf38zg5c!ppleae38af2e007f4358a809ac99a64a67c1\SM0:9220:304:WilStaging_02
+  1A0: Mutant        
+  1A8: Mutant        
+  1D0: Mutant        
+  27C: Mutant        \Sessions\2\BaseNamedObjects\SM0:5416:304:WilStaging_02
+  34C: Mutant        
+  144: Mutant        \Sessions\2\BaseNamedObjects\SM0:6732:304:WilStaging_02
+  154: Mutant        \Sessions\2\BaseNamedObjects\TraceLogStorageMutex
+  1B0: Mutant        \Sessions\2\BaseNamedObjects\TraceLogStorageMutex
+  260: Mutant        \Sessions\2\BaseNamedObjects\TraceLogStorageMutex
+  2B0: Mutant        \Sessions\2\BaseNamedObjects\TraceLogStorageMutex
+  2C8: Mutant        \Sessions\2\BaseNamedObjects\TraceLogStorageMutex
+  2E8: Mutant        \Sessions\2\BaseNamedObjects\TraceLogStorageMutex
+  2F4: Mutant        \Sessions\2\BaseNamedObjects\TraceLogStorageMutex
+  334: Mutant        \Sessions\2\BaseNamedObjects\TraceLogStorageMutex
+  37C: Mutant        \Sessions\2\BaseNamedObjects\SM0:6732:120:WilError_01
+  3C0: Mutant        \Sessions\2\BaseNamedObjects\TraceLogStorageMutex
+  40C: Mutant        \Sessions\2\BaseNamedObjects\TraceLogStorageMutex
+  414: Mutant        \Sessions\2\BaseNamedObjects\TraceLogStorageMutex
+  42C: Mutant        \Sessions\2\BaseNamedObjects\TraceLogStorageMutex
+  498: Mutant        \Sessions\2\BaseNamedObjects\TraceLogStorageMutex
+  248: Mutant        \Sessions\2\BaseNamedObjects\SM0:12064:304:WilStaging_02
+  374: Mutant        \Sessions\2\BaseNamedObjects\SM0:12064:120:WilError_01
+  394: Mutant        \Sessions\2\BaseNamedObjects\SessionImmersiveColorMutex
+  55C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  910: Mutant        
+  988: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  1C8: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\SM0:3748:304:WilStaging_02
+  210: Mutant        
+  218: Mutant        
+  224: Mutant        
+  354: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\URLBLOCK_DOWNLOAD_MUTEX
+  3B0: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  424: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\SM0:3748:120:WilError_01
+  654: Mutant        
+  658: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\SessionImmersiveColorMutex
+  72C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\MicrosoftEdge_SmartScreen_ClientId_Mutex
+  730: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\MicrosoftEdge_SmartScreen_AppRepSettings_Mutex
+  748: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\MicrosoftEdge_CommunicationManager_Mutex
+  7A8: Mutant        \...\URLBLOCK_L1CONFIGDATA_MUTEX_3748
+  824: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  888: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  8C4: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  980: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\MicrosoftEdge!IECompat!Mutex
+  AAC: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  AD8: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\ZonesCacheCounterMutex
+  ADC: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\ZonesLockedCacheCounterMutex
+  B70: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  BB4: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  C28: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  C60: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  C7C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  C8C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  CAC: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  CE0: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  D14: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  D30: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  D40: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  D50: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  DBC: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  E0C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  E9C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  EEC: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  F40: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  FA8: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1118: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1124: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 11DC: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 11F0: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 120C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1280: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 129C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 13D0: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 144C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 146C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1470: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 14A4: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1588: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 162C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1630: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1648: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1674: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1680: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1684: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1734: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1754: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1760: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 18B4: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1908: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 19A4: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1A28: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1A58: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1AA8: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1AB4: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1ADC: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1B30: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1B6C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1B98: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1BA4: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1C04: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1C40: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1C64: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1C7C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1C80: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1C88: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1CB4: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1CC8: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1CEC: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1D0C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1D68: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1D88: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1DB4: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1DD8: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1E4C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1EA4: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1EDC: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1F18: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1FD4: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1FDC: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 1FF8: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 2004: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 2034: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 20A4: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 20AC: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 20D8: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 20E0: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 2120: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 2128: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 2130: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 2150: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 218C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 2204: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 2220: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 222C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 22A8: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 23C0: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 23E4: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 241C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 2484: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 24B4: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 24C8: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 24DC: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 2504: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 2514: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 25B8: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 2660: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 2708: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 283C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 2868: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 28D8: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 2968: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 29E8: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 2BF4: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  174: Mutant        \Sessions\2\BaseNamedObjects\SM0:908:304:WilStaging_02
+  288: Mutant        
+  290: Mutant        
+  29C: Mutant        
+  518: Mutant        \Sessions\2\BaseNamedObjects\SM0:908:120:WilError_01
+  874: Mutant        \Sessions\2\BaseNamedObjects\!BrowserEmulation!SharedMemory!Mutex
+  8A8: Mutant        \Sessions\2\BaseNamedObjects\ZonesCacheCounterMutex
+  8B0: Mutant        \Sessions\2\BaseNamedObjects\ZonesLockedCacheCounterMutex
+  8BC: Mutant        \Sessions\2\BaseNamedObjects\MicrosoftEdge!IECompat!Mutex
+  148: Mutant        \Sessions\2\BaseNamedObjects\Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge\SM0:12276:304:WilStaging_02
+  47C: Mutant        \Sessions\2\BaseNamedObjects\Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge\SM0:12276:120:WilError_01
+  68C: Mutant        
+  104: Mutant        
+  10C: Mutant        
+  118: Mutant        
+  26C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\1821068571-1793888307-623627345-1529106238\SM0:4000:304:WilStaging_02
+  434: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\1821068571-1793888307-623627345-1529106238\SM0:4000:120:WilError_01
+  5C4: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  148: Mutant        \Sessions\2\BaseNamedObjects\Microsoft.MicrosoftEdge_8wekyb3d8bbwe!ContentProcess\SM0:5384:304:WilStaging_02
+  3B8: Mutant        
+  120: Mutant        
+  128: Mutant        
+  134: Mutant        
+  26C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\SM0:5676:304:WilStaging_02
+  3BC: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge!IECompat!Mutex
+  498: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\SM0:5676:120:WilError_01
+  730: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  7CC: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_AppRepSettings_Mutex
+  7D0: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_ClientId_Mutex
+  7D4: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_CommunicationManager_Mutex
+  804: Mutant        \...\URLBLOCK_L1CONFIGDATA_MUTEX_3748
+  818: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\UrlBlockSerializationCountMutex
+  918: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\ZonesCacheCounterMutex
+  91C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\ZonesLockedCacheCounterMutex
+  9D8: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  E50: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\LowInternetExplorerDOMStoreQuota
+  E58: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\Lowhttps://docs.google.com/
+  11C: Mutant        
+  124: Mutant        
+  130: Mutant        
+  278: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\SM0:10892:304:WilStaging_02
+  388: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\MicrosoftEdge!IECompat!Mutex
+  420: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\SM0:10892:120:WilError_01
+  6DC: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\MicrosoftEdge_SmartScreen_AppRepSettings_Mutex
+  6E0: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\MicrosoftEdge_SmartScreen_ClientId_Mutex
+  6E4: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\MicrosoftEdge_CommunicationManager_Mutex
+  718: Mutant        \...\URLBLOCK_L1CONFIGDATA_MUTEX_3748
+  730: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\UrlBlockSerializationCountMutex
+  86C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  914: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\ZonesCacheCounterMutex
+  918: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\ZonesLockedCacheCounterMutex
+  9D8: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  CD8: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\LowInternetExplorerDOMStoreQuota
+  D60: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\Lowhttps://www.msn.com/
+  E44: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  F0C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+ 11F0: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\Lowhttps://www.bing.com/
+  104: Mutant        
+  10C: Mutant        
+  118: Mutant        
+  27C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\SM0:876:304:WilStaging_02
+  440: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\SM0:876:120:WilError_01
+  704: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_AppRepSettings_Mutex
+  708: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_ClientId_Mutex
+  70C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_CommunicationManager_Mutex
+  73C: Mutant        \...\URLBLOCK_L1CONFIGDATA_MUTEX_3748
+  74C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\UrlBlockSerializationCountMutex
+  86C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  920: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\ZonesCacheCounterMutex
+  924: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\ZonesLockedCacheCounterMutex
+  A00: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  B24: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge!IECompat!Mutex
+  DC0: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\Lowhttps://lcendpoint.slack.com/
+  E28: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\LowInternetExplorerDOMStoreQuota
+  FA0: Mutant        
+  104: Mutant        
+  10C: Mutant        
+  118: Mutant        
+  27C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\SM0:8596:304:WilStaging_02
+  390: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge!IECompat!Mutex
+  430: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\SM0:8596:120:WilError_01
+  6F0: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_AppRepSettings_Mutex
+  6F4: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_ClientId_Mutex
+  6F8: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_CommunicationManager_Mutex
+  740: Mutant        \...\URLBLOCK_L1CONFIGDATA_MUTEX_3748
+  750: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\UrlBlockSerializationCountMutex
+  818: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  974: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  9E4: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\ZonesCacheCounterMutex
+  9E8: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\ZonesLockedCacheCounterMutex
+  AA4: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+   98: Mutant        
+   A0: Mutant        
+  118: Mutant        
+  284: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\SM0:10284:304:WilStaging_02
+  4A8: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\SM0:10284:120:WilError_01
+  730: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  7E0: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_AppRepSettings_Mutex
+  7E4: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_ClientId_Mutex
+  7E8: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_CommunicationManager_Mutex
+  830: Mutant        \...\URLBLOCK_L1CONFIGDATA_MUTEX_3748
+  848: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\UrlBlockSerializationCountMutex
+  948: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\ZonesCacheCounterMutex
+  94C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\ZonesLockedCacheCounterMutex
+  978: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge!IECompat!Mutex
+  A14: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  D40: Mutant        
+ 1080: Mutant        
+ 1084: Mutant        
+ 10A4: Mutant        
+ 10A8: Mutant        
+ 10AC: Mutant        
+ 10C8: Mutant        
+ 10CC: Mutant        
+ 10E8: Mutant        
+ 10EC: Mutant        
+ 1108: Mutant        
+ 110C: Mutant        
+ 1128: Mutant        
+ 112C: Mutant        
+ 1148: Mutant        
+ 1154: Mutant        
+ 1158: Mutant        
+ 115C: Mutant        
+ 1160: Mutant        
+ 1164: Mutant        
+ 1168: Mutant        
+ 116C: Mutant        
+ 1188: Mutant        
+ 11A8: Mutant        
+ 11C8: Mutant        
+ 11E8: Mutant        
+ 1208: Mutant        
+ 1228: Mutant        
+ 1248: Mutant        
+ 1268: Mutant        
+ 1284: Mutant        
+ 1288: Mutant        
+ 1324: Mutant        
+ 1354: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\Lowhttps://platform.twitter.com/
+ 1358: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\LowInternetExplorerDOMStoreQuota
+  108: Mutant        
+  110: Mutant        
+  11C: Mutant        
+  280: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\2385269614-3243675-834220592-3047885450\SM0:11116:304:WilStaging_02
+  484: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\2385269614-3243675-834220592-3047885450\SM0:11116:120:WilError_01
+  75C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\2385269614-3243675-834220592-3047885450\MicrosoftEdge_SmartScreen_AppRepSettings_Mutex
+  760: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\2385269614-3243675-834220592-3047885450\MicrosoftEdge_SmartScreen_ClientId_Mutex
+  764: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\2385269614-3243675-834220592-3047885450\MicrosoftEdge_CommunicationManager_Mutex
+  7B8: Mutant        \...\URLBLOCK_L1CONFIGDATA_MUTEX_3748
+  7C8: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\2385269614-3243675-834220592-3047885450\UrlBlockSerializationCountMutex
+  858: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  168: Mutant        
+  170: Mutant        
+  224: Mutant        
+  124: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-1609473798-1231923017-684268153-4268514328-882773646-2760585773-1760938157\SM0:7308:304:WilStaging_02
+  2BC: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-1609473798-1231923017-684268153-4268514328-882773646-2760585773-1760938157\SM0:7308:120:WilError_01
+  3F4: Mutant        
+  3F8: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-1609473798-1231923017-684268153-4268514328-882773646-2760585773-1760938157\SessionImmersiveColorMutex
+  4A8: Mutant        
+  8D4: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-1609473798-1231923017-684268153-4268514328-882773646-2760585773-1760938157\ZonesCacheCounterMutex
+  8F4: Mutant        
+  8F8: Mutant        
+  910: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-1609473798-1231923017-684268153-4268514328-882773646-2760585773-1760938157\ZonesLockedCacheCounterMutex
+  C6C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  148: Mutant        \Sessions\2\BaseNamedObjects\Microsoft.WindowsStore_8wekyb3d8bbwe!App\SM0:1552:304:WilStaging_02
+  1AC: Mutant        
+  300: Mutant        
+  304: Mutant        
+  3B8: Mutant        \Sessions\2\BaseNamedObjects\Microsoft.WindowsStore_8wekyb3d8bbwe!App\SM0:1552:120:WilError_01
+  100: Mutant        \Sessions\2\BaseNamedObjects\SM0:6136:304:WilStaging_02
+  11C: Mutant        \Sessions\2\BaseNamedObjects\SM0:6136:120:WilError_01
+  428: Mutant        
+  42C: Mutant        \Sessions\2\BaseNamedObjects\SessionImmersiveColorMutex
+  51C: Mutant        
+  54C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  128: Mutant        \Sessions\2\BaseNamedObjects\SM0:7576:304:WilStaging_02
+  188: Mutant        \Sessions\2\BaseNamedObjects\SM0:7576:120:WilError_01
+  218: Mutant        \Sessions\2\BaseNamedObjects\DBWinMutex
+  358: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  13C: Mutant        \Sessions\2\BaseNamedObjects\SM0:7488:304:WilStaging_02
+  19C: Mutant        \Sessions\2\BaseNamedObjects\SM0:7488:120:WilError_01
+  324: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  338: Mutant        \Sessions\2\BaseNamedObjects\DBWinMutex
+  128: Mutant        \Sessions\2\BaseNamedObjects\SM0:5076:304:WilStaging_02
+  354: Mutant        
+  13C: Mutant        \Sessions\2\BaseNamedObjects\SM0:4128:304:WilStaging_02
+  2DC: Mutant        
+  3A0: Mutant        \BaseNamedObjects\WIATRACE_MUTEX
+  3F8: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  488: Mutant        \Sessions\2\BaseNamedObjects\SM0:4128:120:WilError_01
+  490: Mutant        \Sessions\2\BaseNamedObjects\SessionImmersiveColorMutex
+  5EC: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_idx.db!rwWriterMutex
+  5F4: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_16.db!dfMaintainer
+  5F8: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_32.db!dfMaintainer
+  5FC: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_48.db!dfMaintainer
+  600: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_96.db!dfMaintainer
+  604: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_256.db!dfMaintainer
+  608: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_768.db!dfMaintainer
+  60C: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_1280.db!dfMaintainer
+  610: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_1920.db!dfMaintainer
+  614: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_2560.db!dfMaintainer
+  618: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_sr.db!dfMaintainer
+  61C: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_wide.db!dfMaintainer
+  620: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_exif.db!dfMaintainer
+  624: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_wide_alternate.db!dfMaintainer
+  628: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_custom_stream.db!dfMaintainer
+  62C: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:iconcache_idx.db!IconCacheInit
+  984: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_idx.db!rwWriterMutex
+  99C: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_16.db!dfMaintainer
+  9A0: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_32.db!dfMaintainer
+  9A4: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_48.db!dfMaintainer
+  9A8: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_96.db!dfMaintainer
+  9AC: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_256.db!dfMaintainer
+  9B0: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_768.db!dfMaintainer
+  9B4: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_1280.db!dfMaintainer
+  9B8: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_1920.db!dfMaintainer
+  9BC: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_2560.db!dfMaintainer
+  9C0: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_sr.db!dfMaintainer
+  9C4: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_wide.db!dfMaintainer
+  9C8: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_exif.db!dfMaintainer
+  9CC: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_wide_alternate.db!dfMaintainer
+  9D0: Mutant        \BaseNamedObjects\C::Users:Stratarxis:AppData:Local:Microsoft:Windows:Explorer:thumbcache_custom_stream.db!dfMaintainer
+  DCC: Mutant        
+  DD4: Mutant        
+  12C: Mutant        
+  134: Mutant        
+  1B0: Mutant        \BaseNamedObjects\SM0:3896:304:WilStaging_02
+  128: Mutant        \Sessions\2\BaseNamedObjects\SM0:8528:304:WilStaging_02
+  224: Mutant        \Sessions\2\BaseNamedObjects\SM0:8528:120:WilError_01
+  260: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  2FC: Mutant        
+  154: Mutant        \Sessions\2\BaseNamedObjects\SM0:8268:304:WilStaging_02
+  320: Mutant        
+  324: Mutant        
+  330: Mutant        
+  334: Mutant        
+  338: Mutant        
+  33C: Mutant        
+  340: Mutant        
+  388: Mutant        \Sessions\2\BaseNamedObjects\SM0:8268:120:WilError_01
+  13C: Mutant        \Sessions\2\BaseNamedObjects\SM0:3696:304:WilStaging_02
+  19C: Mutant        \Sessions\2\BaseNamedObjects\SM0:3696:120:WilError_01
+  2A8: Mutant        \Sessions\2\BaseNamedObjects\DBWinMutex
+  36C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  1D4: Mutant        \Sessions\2\BaseNamedObjects\SM0:5472:304:WilStaging_02
+  118: Mutant        
+  120: Mutant        
+  12C: Mutant        
+  26C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\SM0:11032:304:WilStaging_02
+  2CC: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\ZonesCacheCounterMutex
+  2D4: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\ZonesLockedCacheCounterMutex
+  474: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\SM0:11032:120:WilError_01
+  784: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_AppRepSettings_Mutex
+  788: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_ClientId_Mutex
+  7C4: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_CommunicationManager_Mutex
+  7F4: Mutant        \...\URLBLOCK_L1CONFIGDATA_MUTEX_3748
+  808: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\UrlBlockSerializationCountMutex
+  894: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  8F4: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge!IECompat!Mutex
+  A1C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  B30: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  D10: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  114: Mutant        
+  11C: Mutant        
+  128: Mutant        
+  27C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\SM0:12436:304:WilStaging_02
+  468: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\SM0:12436:120:WilError_01
+  7C8: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  820: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_AppRepSettings_Mutex
+  824: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_ClientId_Mutex
+  828: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_CommunicationManager_Mutex
+  864: Mutant        \...\URLBLOCK_L1CONFIGDATA_MUTEX_3748
+  86C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\UrlBlockSerializationCountMutex
+  8C4: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\ZonesCacheCounterMutex
+  8C8: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge!IECompat!Mutex
+  8F8: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\ZonesLockedCacheCounterMutex
+  A28: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  BE8: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  CF0: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  10C: Mutant        
+  114: Mutant        
+  120: Mutant        
+  26C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\SM0:12716:304:WilStaging_02
+  380: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge!IECompat!Mutex
+  49C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\SM0:12716:120:WilError_01
+  798: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  850: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_AppRepSettings_Mutex
+  854: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_ClientId_Mutex
+  858: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_CommunicationManager_Mutex
+  88C: Mutant        \...\URLBLOCK_L1CONFIGDATA_MUTEX_3748
+  89C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\UrlBlockSerializationCountMutex
+  9A4: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\ZonesCacheCounterMutex
+  9A8: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\ZonesLockedCacheCounterMutex
+  A5C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  E34: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\LowInternetExplorerDOMStoreQuota
+  E3C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\Lowhttps://stackoverflow.com/
+   44: Mutant        
+   90: Mutant        
+   A0: Mutant        
+  26C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\SM0:12200:304:WilStaging_02
+  380: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge!IECompat!Mutex
+  494: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\SM0:12200:120:WilError_01
+  7A4: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_ClientId_Mutex
+  7B0: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_AppRepSettings_Mutex
+  7BC: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_CommunicationManager_Mutex
+  7E4: Mutant        \...\URLBLOCK_L1CONFIGDATA_MUTEX_3748
+  7F8: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\UrlBlockSerializationCountMutex
+  880: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  980: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  A14: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\ZonesCacheCounterMutex
+  A18: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\ZonesLockedCacheCounterMutex
+  A6C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  104: Mutant        
+  10C: Mutant        
+  118: Mutant        
+  26C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\SM0:6892:304:WilStaging_02
+  3EC: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge!IECompat!Mutex
+  4AC: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\SM0:6892:120:WilError_01
+  788: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  818: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_AppRepSettings_Mutex
+  830: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_CommunicationManager_Mutex
+  834: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_ClientId_Mutex
+  868: Mutant        \...\URLBLOCK_L1CONFIGDATA_MUTEX_3748
+  878: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\UrlBlockSerializationCountMutex
+  8FC: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\ZonesCacheCounterMutex
+  900: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\ZonesLockedCacheCounterMutex
+  A18: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  C28: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  D3C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  110: Mutant        
+  118: Mutant        
+  124: Mutant        
+  278: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\SM0:1556:304:WilStaging_02
+  43C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\SM0:1556:120:WilError_01
+  7A4: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\MicrosoftEdge_SmartScreen_AppRepSettings_Mutex
+  7AC: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\MicrosoftEdge_CommunicationManager_Mutex
+  7B0: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\MicrosoftEdge_SmartScreen_ClientId_Mutex
+  7F0: Mutant        \...\URLBLOCK_L1CONFIGDATA_MUTEX_3748
+  804: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\UrlBlockSerializationCountMutex
+  870: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  128: Mutant        
+  130: Mutant        
+  13C: Mutant        
+  274: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\SM0:4992:304:WilStaging_02
+  4A0: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\SM0:4992:120:WilError_01
+  7D4: Mutant        \...\URLBLOCK_L1CONFIGDATA_MUTEX_3748
+  7D8: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_AppRepSettings_Mutex
+  7DC: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_ClientId_Mutex
+  7E0: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_CommunicationManager_Mutex
+  818: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\UrlBlockSerializationCountMutex
+  8AC: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+    8: Mutant        
+  134: Mutant        \BaseNamedObjects\SM0:13000:304:WilStaging_02
+  3C0: Mutant        \BaseNamedObjects\SM0:13000:120:WilError_01
+   EC: Mutant        
+  158: Mutant        \BaseNamedObjects\SM0:9472:304:WilStaging_02
+  128: Mutant        \Sessions\2\BaseNamedObjects\SM0:10032:304:WilStaging_02
+  3C4: Mutant        
+  4A4: Mutant        
+  174: Mutant        \Sessions\2\BaseNamedObjects\SM0:12024:168:WilStaging_02
+  128: Mutant        
+  13C: Mutant        \Sessions\2\BaseNamedObjects\SM0:12700:304:WilStaging_02
+  130: Mutant        
+  1B8: Mutant        
+  138: Mutant        
+  134: Mutant        
+  1BC: Mutant        
+  188: Mutant        \Sessions\2\BaseNamedObjects\SM0:9916:168:WilStaging_02
+  134: Mutant        \Sessions\2\BaseNamedObjects\SM0:4332:304:WilStaging_02
+  140: Mutant        \Sessions\2\BaseNamedObjects\SM0:13176:304:WilStaging_02
+  388: Mutant        
+  4A8: Mutant        
+  138: Mutant        
+  174: Mutant        \Sessions\2\BaseNamedObjects\SM0:13056:168:WilStaging_02
+  128: Mutant        
+  1B0: Mutant        
+  140: Mutant        \Sessions\2\BaseNamedObjects\SM0:5848:304:WilStaging_02
+  120: Mutant        
+  124: Mutant        \Sessions\2\BaseNamedObjects\SM0:13244:304:WilStaging_02
+  128: Mutant        
+  1B0: Mutant        
+  130: Mutant        
+  1B8: Mutant        
+  788: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_ClientId_Mutex
+  7C4: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_CommunicationManager_Mutex
+  7F4: Mutant        \...\URLBLOCK_L1CONFIGDATA_MUTEX_3748
+  808: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\UrlBlockSerializationCountMutex
+  894: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  124: Mutant        
+  12C: Mutant        
+  138: Mutant        
+  274: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\SM0:12460:304:WilStaging_02
+  494: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\SM0:12460:120:WilError_01
+  770: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\MicrosoftEdge_SmartScreen_AppRepSettings_Mutex
+  77C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\MicrosoftEdge_SmartScreen_ClientId_Mutex
+  784: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\MicrosoftEdge_CommunicationManager_Mutex
+  7B4: Mutant        \...\URLBLOCK_L1CONFIGDATA_MUTEX_3748
+  7C4: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\UrlBlockSerializationCountMutex
+  854: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+   EC: Mutant        
+  158: Mutant        \BaseNamedObjects\SM0:13012:304:WilStaging_02
+  130: Mutant        \Sessions\2\BaseNamedObjects\SM0:10276:304:WilStaging_02
+  3EC: Mutant        
+  4A0: Mutant        
+  120: Mutant        
+  174: Mutant        \Sessions\2\BaseNamedObjects\SM0:12764:168:WilStaging_02
+  128: Mutant        
+  1B0: Mutant        
+  130: Mutant        \Sessions\2\BaseNamedObjects\SM0:12404:304:WilStaging_02
+  184: Mutant        \Sessions\2\BaseNamedObjects\SM0:10948:168:WilStaging_02
+  134: Mutant        \Sessions\2\BaseNamedObjects\SM0:12784:304:WilStaging_02
+  124: Mutant        \Sessions\2\BaseNamedObjects\SM0:13056:304:WilStaging_02
+  130: Mutant        
+  1B8: Mutant        
+  128: Mutant        
+  1B0: Mutant        
+-737981194\4256926629-1688279915-2739229046-3928706915\SM0:12200:304:WilStaging_02
+  380: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge!IECompat!Mutex
+  494: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\SM0:12200:120:WilError_01
+  7A4: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_ClientId_Mutex
+  7B0: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_AppRepSettings_Mutex
+  7BC: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_CommunicationManager_Mutex
+  7E4: Mutant        \...\URLBLOCK_L1CONFIGDATA_MUTEX_3748
+  7F8: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\UrlBlockSerializationCountMutex
+  880: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  980: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  A14: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\ZonesCacheCounterMutex
+  A18: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\ZonesLockedCacheCounterMutex
+  A6C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  104: Mutant        
+  10C: Mutant        
+  118: Mutant        
+  26C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\SM0:6892:304:WilStaging_02
+  3EC: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge!IECompat!Mutex
+  4AC: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\SM0:6892:120:WilError_01
+  788: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  818: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_AppRepSettings_Mutex
+  830: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_CommunicationManager_Mutex
+  834: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_ClientId_Mutex
+  868: Mutant        \...\URLBLOCK_L1CONFIGDATA_MUTEX_3748
+  878: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\UrlBlockSerializationCountMutex
+  8FC: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\ZonesCacheCounterMutex
+  900: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\ZonesLockedCacheCounterMutex
+  A18: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  C28: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  D3C: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  110: Mutant        
+  118: Mutant        
+  124: Mutant        
+  278: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\SM0:1556:304:WilStaging_02
+  43C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\SM0:1556:120:WilError_01
+  7A4: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\MicrosoftEdge_SmartScreen_AppRepSettings_Mutex
+  7AC: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\MicrosoftEdge_CommunicationManager_Mutex
+  7B0: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\MicrosoftEdge_SmartScreen_ClientId_Mutex
+  7F0: Mutant        \...\URLBLOCK_L1CONFIGDATA_MUTEX_3748
+  804: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\UrlBlockSerializationCountMutex
+  870: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  128: Mutant        
+  130: Mutant        
+  13C: Mutant        
+  274: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\SM0:4992:304:WilStaging_02
+  4A0: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\SM0:4992:120:WilError_01
+  7D4: Mutant        \...\URLBLOCK_L1CONFIGDATA_MUTEX_3748
+  7D8: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_AppRepSettings_Mutex
+  7DC: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_ClientId_Mutex
+  7E0: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_CommunicationManager_Mutex
+  818: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\UrlBlockSerializationCountMutex
+  8AC: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  158: Mutant        
+  160: Mutant        
+    8: Mutant        
+  11C: Mutant        \BaseNamedObjects\SM0:12908:304:WilStaging_02
+  3A8: Mutant        \BaseNamedObjects\SM0:12908:120:WilError_01
+   EC: Mutant        
+  158: Mutant        \BaseNamedObjects\SM0:13036:304:WilStaging_02
+  128: Mutant        \Sessions\2\BaseNamedObjects\SM0:10340:304:WilStaging_02
+  340: Mutant        
+  4C0: Mutant        
+  138: Mutant        
+  134: Mutant        
+  1BC: Mutant        
+  188: Mutant        \Sessions\2\BaseNamedObjects\SM0:9916:168:WilStaging_02
+  134: Mutant        \Sessions\2\BaseNamedObjects\SM0:4332:304:WilStaging_02
+  140: Mutant        \Sessions\2\BaseNamedObjects\SM0:13176:304:WilStaging_02
+  388: Mutant        
+  4A8: Mutant        
+  138: Mutant        
+  174: Mutant        \Sessions\2\BaseNamedObjects\SM0:13056:168:WilStaging_02
+  128: Mutant        
+  1B0: Mutant        
+  140: Mutant        \Sessions\2\BaseNamedObjects\SM0:5848:304:WilStaging_02
+  120: Mutant        
+  124: Mutant        \Sessions\2\BaseNamedObjects\SM0:13244:304:WilStaging_02
+  128: Mutant        
+  1B0: Mutant        
+  130: Mutant        
+  1B8: Mutant        
+  788: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_SmartScreen_ClientId_Mutex
+  7C4: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\MicrosoftEdge_CommunicationManager_Mutex
+  7F4: Mutant        \...\URLBLOCK_L1CONFIGDATA_MUTEX_3748
+  808: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\4256926629-1688279915-2739229046-3928706915\UrlBlockSerializationCountMutex
+  894: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+  124: Mutant        
+  12C: Mutant        
+  138: Mutant        
+  274: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\SM0:12460:304:WilStaging_02
+  494: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\SM0:12460:120:WilError_01
+  770: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\MicrosoftEdge_SmartScreen_AppRepSettings_Mutex
+  77C: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\MicrosoftEdge_SmartScreen_ClientId_Mutex
+  784: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\MicrosoftEdge_CommunicationManager_Mutex
+  7B4: Mutant        \...\URLBLOCK_L1CONFIGDATA_MUTEX_3748
+  7C4: Mutant        \Sessions\2\AppContainerNamedObjects\S-1-15-2-3624051433-2125758914-1423191267-1740899205-1073925389-3782572162-737981194\3513710562-3729412521-1863153555-1462103995\UrlBlockSerializationCountMutex
+  854: Mutant        \Sessions\2\BaseNamedObjects\MSCTF.Asm.MutexDefault2
+   EC: Mutant        
+  158: Mutant        \BaseNamedObjects\SM0:13012:304:WilStaging_02
+  130: Mutant        \Sessions\2\BaseNamedObjects\SM0:10276:304:WilStaging_02
+  3EC: Mutant        
+  4A0: Mutant        
+  120: Mutant        
+  174: Mutant        \Sessions\2\BaseNamedObjects\SM0:12764:168:WilStaging_02
+  128: Mutant        
+  1B0: Mutant        
+  130: Mutant        \Sessions\2\BaseNamedObjects\SM0:12404:304:WilStaging_02
+  184: Mutant        \Sessions\2\BaseNamedObjects\SM0:10948:168:WilStaging_02
+  134: Mutant        \Sessions\2\BaseNamedObjects\SM0:12784:304:WilStaging_02
+  124: Mutant        \Sessions\2\BaseNamedObjects\SM0:13056:304:WilStaging_02
+  130: Mutant        
+  1B8: Mutant        
+  128: Mutant        
+  1B0: Mutant        
+:304:WilStaging_02
+  130: Mutant        
+  1B8: Mutant        
+  128: Mutant        
+  1B0: Mutant        

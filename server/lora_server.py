@@ -30,7 +30,7 @@ sys.stdout = codecs.getwriter('utf8')(sys.stdout)
 __author__ = ''
 __version__ = '0.1'
 
-platform == "windows"
+platform = "windows"
 
 # Computername
 if platform == "linux" or platform == "osx":
@@ -299,11 +299,6 @@ def index():
                                 if len(row) > 2:
                                     regex_fp = row[2]
                                 desc = last_comment
-
-                                # Catch legacy lines
-                                if not score.isdigit():
-                                    desc = score        # score is description (old format)
-                                    score = 60          # default value
                             # Elements without description
                             else:
                                 regex = line
@@ -532,14 +527,15 @@ if __name__ == '__main__':
     parser.add_argument('-p', help='Port', metavar='', default='8080')
     parser.add_argument('--update', action='store_true', default=False, help='Update the signatures from the "signature-base" sub repository')
     parser.add_argument('--threxp', action='store_true', default=False, help='Search and parse the threat expert website for signatures')
+    parser.add_argument('-f', action='store', default=1, help='The number of the first page signatures will be downloaded, default is 1')
+    parser.add_argument('-t', action='store', default=10, help='The number of the last page signatures will be downloaded, default is 10')
+    parser.add_argument('-v', action='store', default=3, help='The minimum threat level of the signatures will be downloaded from a scale 0-5, default is 3, e.g. with threat level 3 signatures with level >=3 will be downloaded')
+
 
     args = parser.parse_args()
     server_address = args.s
     server_port = args.p
-    if args.sigs:
-        updateLora(args.threxp)
-
-    #TODO: uncomment
-    #deleteDuplicateRules()
+    if args.update:
+        updateLora(args.threxp, args.f, args.t, args.v)
 
     run(server='cherrypy', host=server_address, port=8080)

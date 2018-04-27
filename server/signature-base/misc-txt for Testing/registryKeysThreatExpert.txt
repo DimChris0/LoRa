@@ -1,0 +1,1 @@
+SOFTWARE\Microsoft\.NETFramework\Security\Policy\Extensions\NamedPermissionSets\Internet\MediaPermission

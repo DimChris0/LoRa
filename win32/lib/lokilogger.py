@@ -32,6 +32,7 @@ class LokiLogger():
     linesep = "\n"
 
     def __init__(self, no_log_file, log_file, hostname, remote_host, remote_port, csv, only_relevant, debug, platform, caller):
+        self.version = __version__
         self.no_log_file = no_log_file
         self.log_file = log_file
         self.hostname = hostname

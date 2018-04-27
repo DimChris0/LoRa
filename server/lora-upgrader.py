@@ -147,59 +147,12 @@ class LoRaUpdater(object):
         return True
 
 
-    def update_lora(self):
-        try:
-            # Downloading the info for latest release
-            try:
-                self.logger.log("INFO", "Checking location of latest release %s ..." % self.UPDATE_URL_LOKI)
-                response_info = urlopen(self.UPDATE_URL_LOKI)
-                data = json.load(response_info)
-                # Get download URL
-                zip_url = data['assets'][0]['browser_download_url']
-                self.logger.log("INFO", "Downloading latest release %s ..." % zip_url)
-                response_zip = urlopen(zip_url)
-            except Exception as e:
-                traceback.print_exc()
-                self.logger.log("ERROR", "Error downloading the lora update - check your Internet connection")
-                sys.exit(1)
-
-            # Read ZIP file
-            try:
-                zipUpdate = zipfile.ZipFile(StringIO(response_zip.read()))
-                for zipFilePath in zipUpdate.namelist():
-                    if zipFilePath.endswith("/") or "/config/" in zipFilePath or "/loki-upgrader.exe" in zipFilePath:
-                        continue
-
-                    source = zipUpdate.open(zipFilePath)
-                    targetFile = "/".join(zipFilePath.split("/")[1:])
-
-                    self.logger.log("INFO", "Extracting %s ..." %targetFile)
-
-                    try:
-                        target = file(targetFile, "wb")
-                        with source, target:
-                                shutil.copyfileobj(source, target)
-                    except Exception as e:
-                        self.logger.log("ERROR", "Cannot extract %s" % targetFile)
-                        if self.debug:
-                            traceback.print_exc()
-
-            except Exception as e:
-                if self.debug:
-                    traceback.print_exc()
-                self.logger.log("ERROR", "Error while extracting the signature files from the download package")
-                sys.exit(1)
-
-        except Exception as e:
-            if self.debug:
-                traceback.print_exc()
-            return False
-        return True
 
     # Source code in threatExpertParser.py in same folder
     def threatExpert(self, from_page, to_page, level):
         tE = ThreatExpertParser(from_page, to_page, level)
         tE.parsePages()
+
 
 
     def extractFromFiles(self):
@@ -208,7 +161,10 @@ class LoRaUpdater(object):
         while len(self.newFiles) > 0:
             f = self.newFiles.pop()
             if '.pdf' == f[-4:]:
-                pdf_parser.parse(self.application_path + "\\signature-base\\pdf\\" + f)
+                if platform == "windows":
+                    pdf_parser.parse(self.application_path + "\\signature-base\\pdf\\" + f)
+                else:
+                    pdf_parser.parse(self.application_path + "/signature-base/pdf/" + f)
             elif '.ioc' == f[-4:]:
                 self.parseOpenIocs(f)
             elif ('.xlsx' == f[-5:]) or ('.xls' == f[-4:]):
@@ -216,7 +172,10 @@ class LoRaUpdater(object):
             elif '.csv' == f[-4:]:
                 self.parseCSV(f)
             elif '.txt' == f[-4:]:
-                txt_parser.parse(self.application_path + "\\signature-base\\misc-txt\\" + f)
+                if platform == "windows":
+                    txt_parser.parse(self.application_path + "\\signature-base\\misc-txt\\" + f)
+                else:
+                    txt_parser.parse(self.application_path + "/signature-base/misc-txt/" + f)
         # this code parses the pdfs inside the folder problematic pdfs, even though there is no difference
         # as the rules created are empty
         # for filename in os.listdir(self.application_path + "\\signature-base\\problematicPDFs\\"):
@@ -362,6 +321,45 @@ def get_application_path():
         traceback.print_exc()
 
 
+# TODO: maybe fixed now...
+def deleteDuplicateRules():
+    app_path = get_application_path()
+
+    if platform == "windows":
+        DIR = os.path.join(app_path, 'signature-base\\yara\\')
+    else:
+        DIR = os.path.join(app_path, 'signature-base/yara/')
+    rules_seen = set() # holds lines already seen
+    for filename in os.listdir(DIR):
+        toWriteLine = ""
+        f = open(DIR + filename, "r")
+        text = f.read()
+        if "import \"pe\"" in text:
+            imp = "import \"pe\"\n"
+        else:
+            imp = ""
+        if "import \"math\"" in text:
+            imp += "import \"math\"\n"
+
+        comments = re.findall("(\".*?\"\n|\".*?\".(?:fullword)?(?:ascii)?(?:fullword ascii)?(?:ascii fullword)?\n)|(/\*.*?\*/|//[^\r\n]*$)", text, re.DOTALL, re.MULTILINE )
+        for com in comments:
+            if com[1] != '':
+                text = text.replace(com[1], "" ) # remove all occurance streamed comments (/*COMMENT */) from text
+
+        tr = re.findall("(private\s*)?rule\s([a-zA-Z\d_]*?)\s:?\s*([a-zA-Z\d_]*?)\s?{\s*(.*?)\n}", text, re.DOTALL)
+        for t in tr: # [0]: private (optional), [1]: rule name, [2]: rule class (optional), [3]: rule body
+            if t[1] not in rules_seen:
+                rules_seen.add(t[1])
+                if t[2] == '':
+                    toWriteLine += t[0] + "rule " + t[1] + " {\n" + t[3] + "\n}\n\n"
+                else:
+                    toWriteLine += t[0] + "rule " + t[1] + " : " + t[2] + " {\n" + t[3] + "\n}\n\n"
+        f.close()
+        f = open(DIR + filename, "w")
+        f.write(imp + toWriteLine)
+        f.close()
+
+
 if __name__ == '__main__':
 
     # Parse Arguments
@@ -370,8 +368,6 @@ if __name__ == '__main__':
     parser.add_argument('--nolog', action='store_true', help='Don\'t write a local log file', default=False)
     parser.add_argument('--debug', action='store_true', default=False, help='Debug output')
     parser.add_argument('--detached', action='store_true', default=False, help=argparse.SUPPRESS)
-    # parser.add_argument('--sigsonly', action='store_true', help='Update the signatures only', default=False)
-    # parser.add_argument('--progonly', action='store_true', help='Update the program files only', default=False)
 
     parser.add_argument('--threxp', action='store_true', default=False, help='Search and parse the threat expert website for signatures')
     parser.add_argument('-f', action='store', default=1, help='The number of the first page signatures will be downloaded, default is 1')
@@ -402,6 +398,8 @@ if __name__ == '__main__':
 
     updater.extractFromFiles()
     logger.log("INFO", "Update complete")
+
+    deleteDuplicateRules()
 
     if args.detached:
         logger.log("INFO", "Press any key to return ...")

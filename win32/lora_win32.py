@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # TODO: in the baselineTriage add more tools?
+# TODO add all rules, remove selecting a set?
 import os
 import sys
 import subprocess
@@ -135,7 +136,8 @@ class LoRa():
         for key, value in (tmpDict.iteritems()):
             for k, v in (value.iteritems()):
                 if k == "regex" or k == "regex_fp":
-                    value[k] = re.compile(repr(v))
+                    if v:
+                        value[k] = re.compile(v)
             self.filename_iocs.append(value)
 
         if self.filename_iocs is None:
@@ -158,17 +160,19 @@ class LoRa():
             sys.exit(1)
 
         mutexDict = post('http://'+server+':'+str(server_port)+'/initmutexes',  data={'client': t_hostname})
-        if mutexDict is None:
-            sys.exit(1)
-        tmp = ast.literal_eval(mutexDict.text)
-        self.mutexes_iocs = tmp['entry'].splitlines()
+        if mutexDict.text == "":
+            self.mutexes_iocs = []
+        else:
+            tmp = ast.literal_eval(mutexDict.text)
+            self.mutexes_iocs = tmp['entry'].splitlines()
 
 
         regDict = post('http://'+server+':'+str(server_port)+'/initregistries',  data={'client': t_hostname})
-        if regDict is None:
-            sys.exit(1)
-        tmp = ast.literal_eval(regDict.text)
-        self.registries_iocs = tmp['entry'].splitlines()
+        if regDict.text == "":
+            self.registries_iocs = []
+        else:
+            tmp = ast.literal_eval(regDict.text)
+            self.registries_iocs = tmp['entry'].splitlines()
 
 
         tempDict = ast.literal_eval(listOfDicts.text)
@@ -192,12 +196,7 @@ class LoRa():
         max_filetype_magics = tempDict["len"]
         filetype_magics = tempDict["file"]
 
-    def raw_string(self, s):
-        if isinstance(s, str):
-            s = s.encode('string-escape')
-        elif isinstance(s, unicode):
-            s = s.encode('unicode-escape')
-        return s
+
 
     def scan_path(self, path):
         # Startup
@@ -206,7 +205,7 @@ class LoRa():
         # Counter
         c = 0
 
-        for root, directories, files in os.walk(unicode(path), onerror=walk_error, followlinks=False):
+        for root, directories, files in os.walk(path, onerror=walk_error, followlinks=False):
             # Skip paths that start with ..
             newDirectories = []
             for dir in directories:
@@ -235,6 +234,7 @@ class LoRa():
 
                     # Get the file and path
                     filePath = os.path.join(root,filename)
+
 
                     fileSize = os.stat(filePath).st_size
 
@@ -395,7 +395,6 @@ class LoRa():
 
                         # Regin .EVT FS Check
                         if len(fileData) > 11 and args.reginfs:
-
                             # Check if file is Regin virtual .evt file system
                             self.scan_regin_fs(fileData, filePath)
 
@@ -823,7 +822,6 @@ class LoRa():
 
     def check_process_connections(self, process):
         try:
-
             # Limits
             MAXIMUM_CONNECTIONS = 20
 
@@ -940,31 +938,37 @@ class LoRa():
         with open('./w1000/data/regtmp.txt', 'r+') as output:
             p = subprocess.Popen(['./w1000/tools/handle.exe', '-a'], stdout=output, stderr=subprocess.PIPE)
             pp = p.communicate()
-            q = subprocess.Popen(['findstr', "Mutant", './w1000/data/regtmp.txt'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            res = str(q.communicate()[0])
-            reader = csv.DictReader(res.decode('ascii').splitlines(),
-                                delimiter=' ', skipinitialspace=True,
-                                fieldnames=['number', 'type', 'name'])
-            for row in reader:
-                if row['name'] in mutexes:
-                    logger.log("ALERT", "Threat Detected, mutex object %s found!" % row['name'])
+            with open(r'./w1000/data/mutants.txt', 'r+') as output2:
+                q = subprocess.Popen(['findstr', 'Mutant', r'./w1000/data/regtmp.txt'], stdout=output2, stderr=subprocess.PIPE)
+                qq = q.communicate()
+                output2.close()
+            with open(r'./w1000/data/mutants.txt', 'r+') as output2:
+                reader = csv.DictReader(output2,
+                                    delimiter=' ', skipinitialspace=True,
+                                    fieldnames=['number', 'type', 'value'])
+                for row in reader:
+                    if row['value'] in self.mutexes_iocs:
+                        logger.log("ALERT", "Threat Detected, mutex object %s found!" % row['value'])
 
 
     def scan_registries(self):
-        while len(regKeys) > 0:
+        while len(self.registries_iocs) > 0:
             try:
-                reg = regKeys.pop()
+                reg = self.registries_iocs.pop()
+                print reg
                 hKey = _winreg.OpenKey(_winreg.HKEY_LOCAL_MACHINE, reg)
                 if (hKey != 0):
                     logger.log("ALERT", "Threat Detected - Registry Value %s found!" % reg)
             except:
-                print "Opening registry key problem encountered"
+                pass
 
 
     def initialize_yara_rules(self, rules):
 
         if 'all' in rules:
             yaraRules = fetchyararule(server, [])
+        elif 'builtin' in rules:
+            yaraRules = ""
         else:
             yaraRules = fetchyararule(server, rules)
         dummy = ""
@@ -1017,7 +1021,7 @@ class LoRa():
             logger.log("ERROR", "Error reading excludes file: %s" % excludes_file)
 
     def scan_regin_fs(self, fileData, filePath):
-
+        # File System Scanner for Regin Virtual Filesystems based on .evt virtual filesystem detection
         # Code section by Paul Rascagneres, G DATA Software
         # Adapted to work with the fileData already read to avoid
         # further disk I/O
@@ -1472,16 +1476,22 @@ def myManual(args, logger, t_hostname, isAdmin):
                 logger.log("NOTICE", "Skipping process memory check. User has no admin rights.")
 
     elif args.mode == 'mem-dump' or args.mode == 'all':
-            memdump('w1000', 'w1000', args.silent)
+        memdump('w1000', 'w1000', args.silent)
 
     elif args.mode == 'baseline' or args.mode == 'all':
-            baselineTriage('w1000', 'w1000', args.silent)
+        baselineTriage('w1000', 'w1000', args.silent)
 
     elif args.mode == 'web-hist':
-            webhist('w1000', 'w1000', args.username, args.silent)
+        webhist('w1000', 'w1000', args.username, args.silent)
 
     elif args.mode == 'prefetch':
-            prefetch('w1000', 'w1000', args.silent)
+        prefetch('w1000', 'w1000', args.silent)
+
+    if args.regs:
+        lora.scan_registries()
+
+    if args.mtxes:
+        lora.check_mutexes()
 
     # Result ----------------------------------------------------------
     logger.log("NOTICE", "Results: {0} alerts, {1} warnings, {2} notices".format(logger.alerts, logger.warnings, logger.notices))
@@ -1499,21 +1509,12 @@ def myManual(args, logger, t_hostname, isAdmin):
 
 # difference in minutes
 def getTimeDifferenceFromNow(TimeStart, TimeEnd):
-    # d1 = datetime.datetime(TimeStart, "%Y-%m-%d %H:%M:%S")
-    # d2 = datetime.strptime(TimeEnd, "%Y-%m-%d %H:%M:%S")
-    t = abs((TimeEnd - TimeStart).seconds // 60)
-    return t
+    return abs((TimeEnd - TimeStart).seconds // 60)
 
 
 def myAgent(args, logger, t_hostname, isAdmin, timeInterval):
     curtime = datetime.datetime.now()
-    print "curtime is "
-    print curtime
-    print "timeInt is %s" % timeInterval
     target_time = curtime + datetime.timedelta(minutes = timeInterval)
-    print "target time is "
-    print target_time
-    print args
     while(1):
         if curtime > target_time:
             myManual(args, logger, t_hostname, isAdmin)
@@ -1571,7 +1572,8 @@ if __name__ == '__main__':
                     default=[],
                     metavar='yara-rules',
                     help="yara rule files to be checked")
-    parser.add_argument('--agent', help='Start the LoRa agent',  default=False)
+    parser.add_argument('--builtin', help='Takes the built-in rules inside the file', default=False)
+    parser.add_argument('--agent', help='Start the LoRa agent', default=False)
     parser.add_argument('-timeint', help='Time interval for LoRa agent to begin checking, default is 60 mins', metavar='time-interval', default=60)
     parser.add_argument('--printAll', action='store_true', help='Print all files that are scanned', default=False)
     parser.add_argument('--allreasons', action='store_true', help='Print all reasons that caused the score', default=False)
@@ -1581,6 +1583,8 @@ if __name__ == '__main__':
     parser.add_argument('--rootkit', action='store_true', help='Skip the rootkit check', default=False)
     parser.add_argument('--noindicator', action='store_true', help='Do not show a progress indicator', default=False)
     parser.add_argument('--reginfs', action='store_true', help='Do check for Regin virtual file system', default=False)
+    parser.add_argument('--regs', action='store_true', help='Do check for registries in the system malware creates', default=False)
+    parser.add_argument('--mtxes', action='store_true', help='Do check for mutexes in the system malware creates', default=False)
     parser.add_argument('--dontwait', action='store_true', help='Do not wait on exit', default=False)
     parser.add_argument('--intense', action='store_true', help='Intense scan mode (also scan unknown file types and all extensions)', default=False)
     parser.add_argument('--csv', action='store_true', help='Write CSV log format to STDOUT (machine prcoessing)', default=False)
@@ -1590,7 +1594,10 @@ if __name__ == '__main__':
 
 
     args = parser.parse_args()
-    arg_rules = args.y
+    if args.builtin == False:
+        arg_rules = args.y
+    else:
+        arg_rules = 'builtin'
 
     # Remove old log file
     if os.path.exists(args.l):
