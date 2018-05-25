@@ -23,6 +23,7 @@ import ast
 import _winreg
 import signal as signal_module
 import time
+import binascii
 from sys import platform as _platform
 from time import gmtime, strftime
 from collections import Counter
@@ -234,8 +235,6 @@ class LoRa():
 
                     # Get the file and path
                     filePath = os.path.join(root,filename)
-
-
                     fileSize = os.stat(filePath).st_size
 
                     if fileSize == 0:
@@ -465,6 +464,10 @@ class LoRa():
                             message_body += "REASON_{0}: {1}".format(i+1, r.encode('ascii', errors='replace'))
 
                     logger.log(message_type, message_body)
+
+
+                    if checkfor_clamav_sigs:
+                        clamavScan(filePath, extension)
 
                 except Exception, e:
                     if logger.debug:
@@ -1434,6 +1437,47 @@ def prefetch(tool_server, output_server, silent):
         pass
 
 
+
+
+def clamavScan(hexFile_to_check, extension):
+
+    sigFile = './signature-base/misc-txt/clamav_hex_sigs.txt'
+
+    with open(hexFile_to_check, 'rb') as f:#'rb' for windows, read as binary
+        content = f.read()
+
+    hexDump = (binascii.hexlify(content)).upper()
+    #print hexDump
+    #create string 'hexDump' of entire file
+
+    dumpLen = len(hexDump)
+    #file length in nibbles
+    #print dumpLen
+    with open(sigFile, 'r') as s:
+    	sigs = s.read()
+
+    signature = re.split('\n',sigs) #create array split elements by new line
+    #print len(signature)
+
+    progress = [10,20,30,40,50,60,70,80,90,100]
+
+    for i in range(0, dumpLen):
+    	if(i>0):
+    		percent = 100*i/dumpLen
+    		if(percent%10 == 0):
+    			percent = percent+10 #account for starting at 0
+    			for y in range(0, len(progress)): #check if percentage is included in progress list
+    				if(progress[y] == percent): #percentage found in progress list
+    					print percent,"%"
+    					progress[y] = 0 #MARK IT ZERO! Display a percentage once
+    	if(hexDump[i] != '0'):
+    		for x in range(0, len(signature) - 1): #search for found signature in file signature list
+    			sigLen = len(signature[x])
+    			found = hexDump[i:i+sigLen]
+    			if(hexDump[i:i+sigLen] == signature[x]): #found match
+    				print "Found possible ",extension," at byte offset ",i/2," with signature ",signature[x]
+
+
 def walk_error(err):
     try:
         if "Error 3" in str(err):
@@ -1572,6 +1616,7 @@ if __name__ == '__main__':
                     default=[],
                     metavar='yara-rules',
                     help="yara rule files to be checked")
+    parser.add_argument('--clamav', help='Use the clamav official and unofficial sigs to scan files matching md5 and hex signatures', default=False)
     parser.add_argument('--builtin', help='Takes the built-in rules inside the file', default=False)
     parser.add_argument('--agent', help='Start the LoRa agent', default=False)
     parser.add_argument('-timeint', help='Time interval for LoRa agent to begin checking, default is 60 mins', metavar='time-interval', default=60)
