@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 
-# TODO: in the baselineTriage add more tools?
-# TODO add all rules, remove selecting a set?
 import os
 import sys
 import subprocess
@@ -1441,10 +1439,14 @@ def prefetch(tool_server, output_server, silent):
 
 def clamavScan(hexFile_to_check, extension):
 
-    sigFile = './signature-base/misc-txt/clamav_hex_sigs.txt'
+    content = ""
+    clamDict = post('http://'+server+':'+str(server_port)+'/initclamsigs',  data={'client': t_hostname})
+    if clamDict.text == "":
+        content = []
+    else:
+        tmp = ast.literal_eval(clamDict.text)
+        content = tmp['entry']
 
-    with open(hexFile_to_check, 'rb') as f:#'rb' for windows, read as binary
-        content = f.read()
 
     hexDump = (binascii.hexlify(content)).upper()
     #print hexDump
@@ -1616,7 +1618,7 @@ if __name__ == '__main__':
                     default=[],
                     metavar='yara-rules',
                     help="yara rule files to be checked")
-    parser.add_argument('--clamav', help='Use the clamav official and unofficial sigs to scan files matching md5 and hex signatures', default=False)
+    parser.add_argument('--clamav', action='store_true', help='Use the clamav official and unofficial sigs to scan files matching md5 and hex signatures', default=False)
     parser.add_argument('--builtin', help='Takes the built-in rules inside the file', default=False)
     parser.add_argument('--agent', help='Start the LoRa agent', default=False)
     parser.add_argument('-timeint', help='Time interval for LoRa agent to begin checking, default is 60 mins', metavar='time-interval', default=60)

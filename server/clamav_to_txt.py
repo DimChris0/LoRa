@@ -18,12 +18,10 @@ from optparse import OptionParser
 def main():
         parser = OptionParser()
         parser.add_option("-f", "--file", action="store", dest="filename",
-                     type="string", help="scanned FILENAME")
-        parser.add_option("-o", "--output-file", action="store", dest="outfile",
-                        type="string", help="output filename")
+                     type="string", help="scanned FILENAME, if \"ALL\" is given then all files are parsed")
         parser.add_option("-v", "--verbose", action="store_true", default=False,
                                         dest="verbose", help="verbose")
-        parser.add_option("-s", "--search", action="store", dest="search", 
+        parser.add_option("-s", "--search", action="store", dest="search",
                         type="string", help="search filter", default="")
 
         (opts, args) = parser.parse_args()
@@ -31,43 +29,73 @@ def main():
         if opts.filename == None:
                 parser.print_help()
                 parser.error("You must supply a filename!")
-        if not os.path.isfile(opts.filename):
+        if not os.path.isfile(opts.filename) and opts.filename != "ALL":
                 parser.error("%s does not exist" % opts.filename)
-                
-        if opts.outfile == None:
-                parser.print_help()
-                parser.error("You must specify an output filename!")
 
-        rules = {}
-        output = ""
-        data = open(opts.filename, 'rb').readlines()
-        
-        if (opts.filename.endswith(".cvd") or opts.filename.endswith(".cld")) and data[0].find("ClamAV") == 0:
-            print "It seems you're passing a compressed database."
-            print "Try using sigtool -u to decompress first."
-            return
-        
-        print "[+] Read %d lines from %s" % (len(data), opts.filename)
 
-        # ClamAV signatures are one per line
-        for line in data:
-                # signature format is
-                # name:sigtype:offset:signature
-                try:
-                        vals = line.split(':')
-                        if len(vals) < 4 or len(vals) > 6:
-                                print "**ERROR reading ClamAV signature file**"
-                                continue                                
-                        name = vals[0]
-                        sigtype = vals[1]
-                        offset = vals[2]
-                        signature = vals[3]
-                except:
-                        print "**ERROR reading ClamAV signature file**"
-                        continue
+        hextype = 0
+        clam_sigs_folder = './signature-base/clamav-unofficial-sigs/'
+        output_hex_file = "./signature-base/misc-txt/ClamAV_hex_sigs.txt"
+        output_hash_file = "./signature-base/misc-txt/ClamAV_hashes_sigs.txt"
+
+        if opts.filename == "ALL":
+            filelist = []
+            for file_ in os.listdir(clam_sigs_folder):
+                if file_.endswith(".ndb") or file_.endswith(".hdb") or file_.endswith(".hsb"):
+                    filelist.append(os.path.join(clam_sigs_folder, file_))
+        else:
+            filelist = [opts.filename]
+
+        for file_ in filelist:
+            rules = {}
+            output = ""
+            data = open(file_, 'rb').readlines()
+
+            if (file_.endswith(".cvd") or file_.endswith(".cld")) and data[0].find("ClamAV") == 0:
+                print "It seems you're passing a compressed database."
+                print "Try using sigtool -u to decompress first."
+                return
+
+            print "[+] Read %d lines from %s" % (len(data), file_)
+
+            # ClamAV signatures are one per line
+            for line in data:
+                if file_.endswith(".ndb"):
+                    # signature format is
+                    # name:sigtype:offset:signature
+                    hextype = 1
+                    try:
+                            vals = line.split(':')
+                            if len(vals) < 4 or len(vals) > 6:
+                                    print "**ERROR reading ClamAV signature file**"
+                                    continue
+                            name = vals[0]
+                            sigtype = vals[1]
+                            offset = vals[2]
+                            signature = vals[3]
+                    except:
+                            print "**ERROR reading ClamAV signature file**"
+                            continue
+                elif file_.endswith(".hdb") or file_.endswith(".hsb"):
+                    # signature format is
+                    # signature:sigtype:name:offset
+                    hextype = 0
+                    try:
+                            vals = line.split(':')
+                            if len(vals) < 3 or len(vals) > 5:
+                                    print "**ERROR reading ClamAV signature file**"
+                                    continue
+                            name = vals[2]
+                            sigtype = vals[1]
+                            signature = vals[0]
+                    except:
+                            print "**ERROR reading ClamAV signature file**"
+                            continue
+
+
                 # if specified, only parse rules that match a search criteria
                 if opts.search in name:
-                        
+
                         # sanitize rule name for YARA compatability
                         # YARA does not allow non-alphanumeric chars besides _
                         rulename_regex = re.compile('(\W)')
@@ -77,14 +105,14 @@ def main():
                         rulename_regex = re.compile('(^[0-9]{1,})')
                         rulename = rulename_regex.sub('', rulename)
 
-                        # if the rule doesn't exist, create a dict entry                        
+                        # if the rule doesn't exist, create a dict entry
                         if rulename not in rules:
                                 rules[rulename] = []
-                        
+
                         # handle the ClamAV style jumps
                         # {-n} is n or less bytes
                         jump_regex = re.compile('(\{-(\d+)\})')
-                        signature = jump_regex.sub('{0-\g<2>}', signature)      
+                        signature = jump_regex.sub('{0-\g<2>}', signature)
 
                         # {n-} is n or more bytes
                         jump_regex = re.compile('(\{(\d+)-\})')
@@ -103,7 +131,7 @@ def main():
                                                 signature = jump_regex.sub('*', signature)
 
                         # {n-m} is n to m bytes
-                        # need to make sure it's not bigger than 255, 
+                        # need to make sure it's not bigger than 255,
                         # and the high bound cannot exceed 255
                         # if it is we'll treat it like a '*'
                         jump_regex = re.compile('(\{(\d+)-(\d+)\})')
@@ -127,7 +155,7 @@ def main():
                                                 signature = jump_regex.sub('*', signature)
 
                         # {n} bytes
-                        # here we must also enforce the 255 byte maximum jump 
+                        # here we must also enforce the 255 byte maximum jump
                         # that YARA can handle
                         jump_regex = re.compile('(\{(\d+)\})')
                         matches = jump_regex.findall(signature)
@@ -143,7 +171,7 @@ def main():
                                         else:
                                                 #print "\t\t\tfound long jump, replacing with '*'"
                                                 signature = jump_regex.sub('*', signature)
-                        
+
                         # translate the '*' operator into a pair of signatures
                         # with an 'and'
                         if '*' in signature:
@@ -154,46 +182,50 @@ def main():
                                 if signature[0] != '(':
                                         rules[rulename].append(signature.strip())
 
-        for rule in rules.keys():
-                        """
-                        detects = ''
-                        conds = "\t"
-                        x = 0
-                        for detect in rules[rule]:
-                                detects += "\t$a%d = { %s }\r\n" % (x, detect)
-                                if x > 0:
-                                        conds += " and "
-                                conds += "$a%d" % (x)
-                                x += 1
-                        if detects == '':
-                                if opts.verbose:
-                                        print "\t**Found empty rule %s, skipping**" % rule
-                                continue
-                        else:
-                                output += yara_rule % (rule, detects, conds)
-                        """
-                        detects = ''
-                        conds = "\t"
-                        for detect in rules[rule]:
-                                detects += "%s\n" % detect
-                        if detects == '':
-                                if opts.verbose:
-                                        print "\t**Found empty rule %s, skipping**" % rule
-                                continue
-                        else:
-                                output += (rule, detects)
-                        
-        if len(output) > 0:
-                print "\r\n[+] Wrote %d rules to %s\r\n" % (len(rules), opts.outfile)
-                fout = open(opts.outfile, 'wb')
-                fout.write(output)
-                fout.close()
-        else:
-                print "\r\n**Could not find any signatures to convert!!!**\r\n"
+            for rule in rules.keys():
+                            """
+                            detects = ''
+                            conds = "\t"
+                            x = 0
+                            for detect in rules[rule]:
+                                    detects += "\t$a%d = { %s }\r\n" % (x, detect)
+                                    if x > 0:
+                                            conds += " and "
+                                    conds += "$a%d" % (x)
+                                    x += 1
+                            if detects == '':
+                                    if opts.verbose:
+                                            print "\t**Found empty rule %s, skipping**" % rule
+                                    continue
+                            else:
+                                    output += yara_rule % (rule, detects, conds)
+                            """
+                            detects = ''
+                            for detect in rules[rule]:
+                                    detects += "%s\n" % detect
+                            if detects == '':
+                                    if opts.verbose:
+                                            print "\t**Found empty rule %s, skipping**" % rule
+                                    continue
+                            else:
+                                    output += detects
+
+            if len(output) > 0:
+                    outfile = ""
+                    if hextype:
+                        outfile = output_hex_file
+                    else:
+                        outfile = output_hash_file
+                    print "\r\n[+] Wrote %d rules to %s\r\n" % (len(rules), outfile)
+                    fout = open(outfile, 'ab+')
+                    fout.write(output)
+                    fout.close()
+            else:
+                    print "\r\n**Could not find any signatures to convert!!!**\r\n"
 
 if __name__ == '__main__':
         print "\n" + '#' * 75
-        print "\t" + "ClamAV Signature Extractor "
-        print "\n" + '#' * 75, "\n"     
+        print "\t" + "ClamAV Signature Extractor for .ndb, .hdb and .hsb file type only"
+        print "\n" + '#' * 75, "\n"
 
         main()

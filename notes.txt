@@ -1,11 +1,3 @@
-execution example:
-
-python lora_win32.py -y airbnb_binaryalert.yar,apt_agent_btz.yar disk-scan C:\Users\Stratarxis\Downloads\LoRa\win32\config
-python lora_win32.py -y all disk-scan C:\Users\Stratarxis\Downloads\LoRa\win32\config
-
-python lora_win32.py -y myrule.yar disk-scan C:\Users\Stratarxis\Desktop\Newfolder
-python lora_win32.py -y myrule.yar mem-scan
-
 ######################################################################
 The self contained binary winpmem.exe
 -------------------------------------
@@ -37,6 +29,10 @@ installed cherrypy-wsgiserver using this repo https://github.com/od-eon/cherrypy
 and copied the wsgiserver folder to the C:\Python27\Lib\site-packages\CherryPy-12.0.1-py2.7.egg\cherrypy folder
 in order to see the functions
 
+Update on cherrypy: using only pip install cherrypy worked for an installation on a VM,
+but because there is a migration from wsgiserver to cheroot i installed CherryPy using
+the following command   pip install "cherrypy>=3.0.8,<9.0.0"
+
 
 for agent to start give command line argument -agent and to stop it ctrl+c
 time interval is given in minutes
@@ -45,9 +41,6 @@ time interval is given in minutes
 installed ioc_parser (https://github.com/armbues/ioc_parser) through pip and through downloading and python setup.py install
 but on windows coundn't see the package and i had to rename first the file iocp (C:\Users\Stratarxis\Downloads\ioc_parser-master\ioc_parser-master\bin)
 to iocp.py and then move it one folder up in order to see the folder iocp which was needed to run
-
-
-changed file C:\Users\Stratarxis\Downloads\LoRa\server\ioc_parser\iocp\Output.py to create yara file in the same directory
 
 
 installed openpyxl to precess excel files

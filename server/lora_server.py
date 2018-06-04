@@ -510,10 +510,29 @@ def index():
         f.close()
     except Exception, e:
         traceback.print_exc()
-        (loggers[client]).log("ERROR", "I/O operation with file: /signature-base/misc-txt/mutexesThreatExpert.txt")
+        (loggers[client]).log("ERROR", "I/O operation with file: /signature-base/misc-txt/registryKeysThreatExpert.txt")
         return None
+
     return result
 
+
+
+
+@post('/initclamsigs')
+def index:
+    client = request.forms.get('client')
+    result = {}
+    try:
+        with open('./signature-base/misc-txt/ClamAV_hex_sigs.txt') as f:
+            lines = f.read()
+            result['entry'] = lines
+        f.close()
+    except Exception, e:
+        traceback.print_exc()
+        (loggers[client]).log("ERROR", "I/O operation with file: /signature-base/misc-txt/ClamAV_hex_sigs.txt")
+        return None
+
+    return result
 
 
 
