@@ -1,16 +1,6 @@
-/*
-   Yara Rule Set
-   Author: ESET
-   Date: 2017-08-30
-   Identifier: Turla Gazer
-   Reference: https://www.welivesecurity.com/2017/08/30/eset-research-cyberespionage-gazer/
-*/
-
-
 import "pe"
-
 rule Gazer_certificate_subject {
-   meta:
+meta:
       description = "Detects Tura's Gazer malware"
       author = "ESET"
       reference = "https://www.welivesecurity.com/2017/08/30/eset-research-cyberespionage-gazer/"
@@ -24,7 +14,7 @@ rule Gazer_certificate_subject {
 }
 
 rule Gazer_certificate {
-   meta:
+meta:
       description = "Detects Tura's Gazer malware"
       author = "ESET"
       reference = "https://www.welivesecurity.com/2017/08/30/eset-research-cyberespionage-gazer/"
@@ -37,7 +27,7 @@ rule Gazer_certificate {
 }
 
 rule Gazer_logfile_name {
-   meta:
+meta:
       description = "Detects Tura's Gazer malware"
       author = "ESET"
       reference = "https://www.welivesecurity.com/2017/08/30/eset-research-cyberespionage-gazer/"
@@ -49,3 +39,4 @@ rule Gazer_logfile_name {
    condition:
       uint16(0) == 0x5a4d and 1 of them
 }
+

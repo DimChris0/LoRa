@@ -1,13 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2015-08-07
-	Identifier: Empire Powershell Agent
-	Comment: Reduced Subset
-*/
-
 rule Empire_Invoke_BypassUAC {
-	meta:
+meta:
 		description = "Empire - a pure PowerShell post-exploitation agent - file Invoke-BypassUAC.ps1"
 		author = "Florian Roth"
 		reference = "https://github.com/PowerShellEmpire/Empire"
@@ -24,7 +16,7 @@ rule Empire_Invoke_BypassUAC {
 }
 
 rule Empire_lib_modules_trollsploit_message {
-	meta:
+meta:
 		description = "Empire - a pure PowerShell post-exploitation agent - file message.py"
 		author = "Florian Roth"
 		reference = "https://github.com/PowerShellEmpire/Empire"
@@ -41,7 +33,7 @@ rule Empire_lib_modules_trollsploit_message {
 }
 
 rule Empire_Persistence {
-	meta:
+meta:
 		description = "Empire - a pure PowerShell post-exploitation agent - file Persistence.psm1"
 		author = "Florian Roth"
 		reference = "https://github.com/PowerShellEmpire/Empire"
@@ -57,7 +49,7 @@ rule Empire_Persistence {
 }
 
 rule Empire_portscan {
-	meta:
+meta:
 		description = "Empire - a pure PowerShell post-exploitation agent - file portscan.py"
 		author = "Florian Roth"
 		reference = "https://github.com/PowerShellEmpire/Empire"
@@ -72,7 +64,7 @@ rule Empire_portscan {
 }
 
 rule Empire_Invoke_Shellcode {
-	meta:
+meta:
 		description = "Empire - a pure PowerShell post-exploitation agent - file Invoke-Shellcode.ps1"
 		author = "Florian Roth"
 		reference = "https://github.com/PowerShellEmpire/Empire"
@@ -88,7 +80,7 @@ rule Empire_Invoke_Shellcode {
 }
 
 rule Empire_Invoke_Mimikatz {
-	meta:
+meta:
 		description = "Empire - a pure PowerShell post-exploitation agent - file Invoke-Mimikatz.ps1"
 		author = "Florian Roth"
 		reference = "https://github.com/PowerShellEmpire/Empire"
@@ -104,7 +96,7 @@ rule Empire_Invoke_Mimikatz {
 }
 
 rule Empire_lib_modules_credentials_mimikatz_pth {
-	meta:
+meta:
 		description = "Empire - a pure PowerShell post-exploitation agent - file pth.py"
 		author = "Florian Roth"
 		reference = "https://github.com/PowerShellEmpire/Empire"
@@ -119,7 +111,7 @@ rule Empire_lib_modules_credentials_mimikatz_pth {
 }
 
 rule Empire_Write_HijackDll {
-	meta:
+meta:
 		description = "Empire - a pure PowerShell post-exploitation agent - file Write-HijackDll.ps1"
 		author = "Florian Roth"
 		reference = "https://github.com/PowerShellEmpire/Empire"
@@ -135,7 +127,7 @@ rule Empire_Write_HijackDll {
 }
 
 rule Empire_skeleton_key {
-	meta:
+meta:
 		description = "Empire - a pure PowerShell post-exploitation agent - file skeleton_key.py"
 		author = "Florian Roth"
 		reference = "https://github.com/PowerShellEmpire/Empire"
@@ -152,7 +144,7 @@ rule Empire_skeleton_key {
 }
 
 rule Empire_invoke_wmi {
-	meta:
+meta:
 		description = "Empire - a pure PowerShell post-exploitation agent - file invoke_wmi.py"
 		author = "Florian Roth"
 		reference = "https://github.com/PowerShellEmpire/Empire"
@@ -166,3 +158,4 @@ rule Empire_invoke_wmi {
 	condition:
 		filesize < 20KB and 2 of them
 }
+

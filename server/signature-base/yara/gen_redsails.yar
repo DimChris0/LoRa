@@ -1,15 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-10-02
-   Identifier: Red Sails
-   Reference: https://github.com/BeetleChunks/redsails
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule redSails_EXE {
-   meta:
+meta:
       description = "Detects Red Sails Hacktool by WinDivert references"
       author = "Florian Roth"
       reference = "https://github.com/BeetleChunks/redsails"
@@ -23,7 +13,7 @@ rule redSails_EXE {
 }
 
 rule redSails_PY {
-   meta:
+meta:
       description = "Detects Red Sails Hacktool - Python"
       author = "Florian Roth"
       reference = "https://github.com/BeetleChunks/redsails"
@@ -39,3 +29,4 @@ rule redSails_PY {
    condition:
       1 of them
 }
+

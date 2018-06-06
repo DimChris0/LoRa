@@ -1,12 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2015-08-31
-	Identifier: RWMC Powershell Credential Dumper
-*/
-
 rule Reveal_MemoryCredentials {
-	meta:
+meta:
 		description = "Auto-generated rule - file Reveal-MemoryCredentials.ps1"
 		author = "Florian Roth"
 		reference = "https://github.com/giMini/RWMC/"
@@ -22,7 +15,7 @@ rule Reveal_MemoryCredentials {
 }
 
 rule MiniDumpTest_msdsc {
-	meta:
+meta:
 		description = "Auto-generated rule - file msdsc.exe"
 		author = "Florian Roth"
 		reference = "https://github.com/giMini/RWMC/"

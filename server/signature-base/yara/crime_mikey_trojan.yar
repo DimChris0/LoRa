@@ -1,6 +1,5 @@
-
 rule Gen_Trojan_Mikey {
-	meta:
+meta:
 		description = "Trojan Mikey - file sample_mikey.exe"
 		author = "Florian Roth"
 		date = "2015-05-07"

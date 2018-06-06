@@ -1,26 +1,16 @@
-/* This is an extract from THOR's anomaly detection rule set */
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-08-11
-   Identifier: PowerShell Anomalies
-   Reference: https://twitter.com/danielhbohannon/status/905096106924761088
-*/
-
 rule PowerShell_Case_Anomaly {
-   meta:
+meta:
       description = "Detects obfuscated PowerShell hacktools"
       author = "Florian Roth"
       reference = "https://twitter.com/danielhbohannon/status/905096106924761088"
       date = "2017-08-11"
       score = 70
    strings:
-      // first detect 'powershell' keyword case insensitive
+      
       $s1 = "powershell" fullword nocase ascii wide
-      // define the normal cases
+      
       $sr1 = /(powershell|Powershell|PowerShell|POWERSHELL|powerShell)/ fullword ascii wide
-      // define the normal cases
+      
       $sn1 = "powershell" fullword ascii wide
       $sn2 = "Powershell" fullword ascii wide
       $sn3 = "PowerShell" fullword ascii wide
@@ -53,21 +43,24 @@ rule PowerShell_Case_Anomaly {
 }
 
 rule WScriptShell_Case_Anomaly {
-   meta:
+meta:
       description = "Detects obfuscated wscript.shell commands"
       author = "Florian Roth"
       reference = "Internal Research"
       date = "2017-09-11"
       score = 60
    strings:
-      // first detect powershell keyword case insensitive
+      
       $s1 = "WScript.Shell\").Run" nocase ascii wide
-      // define the normal cases
+      
       $sn1 = "WScript.Shell\").Run" ascii wide
       $sn2 = "wscript.shell\").run" ascii wide
       $sn3 = "WSCRIPT.SHELL\").RUN" ascii wide
       $sn4 = "Wscript.Shell\").Run" ascii wide
+      $sn5 = "WScript.Shell\").Run" ascii wide
+      $sn6 = "WScript.shell\").Run" ascii wide
    condition:
       filesize < 800KB and
       ( $s1 and not 1 of ($sn*) )
 }
+

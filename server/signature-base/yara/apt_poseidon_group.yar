@@ -1,12 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-02-09
-	Identifier: Poseidon Group APT
-*/
-
 rule PoseidonGroup_Malware {
-	meta:
+meta:
 		description = "Detects Poseidon Group Malware"
 		author = "Florian Roth"
 		reference = "https://securelist.com/blog/research/73673/poseidon-group-a-targeted-attack-boutique-specializing-in-global-cyber-espionage/"
@@ -45,7 +38,7 @@ rule PoseidonGroup_Malware {
 }
 
 rule PoseidonGroup_MalDoc_1 {
-	meta:
+meta:
 		description = "Detects Poseidon Group - Malicious Word Document"
 		author = "Florian Roth"
 		reference = "https://securelist.com/blog/research/73673/poseidon-group-a-targeted-attack-boutique-specializing-in-global-cyber-espionage/"
@@ -59,7 +52,7 @@ rule PoseidonGroup_MalDoc_1 {
 }
 
 rule PoseidonGroup_MalDoc_2 {
-	meta:
+meta:
 		description = "Detects Poseidon Group - Malicious Word Document"
 		author = "Florian Roth"
 		reference = "https://securelist.com/blog/research/73673/poseidon-group-a-targeted-attack-boutique-specializing-in-global-cyber-espionage/"
@@ -80,3 +73,4 @@ rule PoseidonGroup_MalDoc_2 {
 	condition:
 		uint32(0) == 0x74725c7b and filesize < 500KB and 3 of them
 }
+

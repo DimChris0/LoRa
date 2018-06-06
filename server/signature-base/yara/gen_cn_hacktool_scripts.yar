@@ -1,14 +1,5 @@
-/*
-    Yara Rule Set
-    Author: Florian Roth
-    Date: 2015-06-13
-    Identifier: CN-Tools Scripts
-    Reference: Diclosed hacktool set at http://w2op.us/ (Mirror: http://tools.zjqhr.com) 
-*/
-
-
 rule CN_Tools_xbat {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file xbat.vbs"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -22,7 +13,7 @@ rule CN_Tools_xbat {
 }
 
 rule CN_Tools_Temp {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file Temp.war"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -38,7 +29,7 @@ rule CN_Tools_Temp {
 }
 
 rule CN_Tools_srss {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file srss.bat"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -52,7 +43,7 @@ rule CN_Tools_srss {
 }
 
 rule dll_UnReg {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file UnReg.bat"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -66,7 +57,7 @@ rule dll_UnReg {
 }
 
 rule dll_Reg {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file Reg.bat"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -80,7 +71,7 @@ rule dll_Reg {
 }
 
 rule sbin_squid {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file squid.bat"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -96,7 +87,7 @@ rule sbin_squid {
 }
 
 rule sql1433_creck {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file creck.bat"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -111,7 +102,7 @@ rule sql1433_creck {
 }
 
 rule sql1433_Start {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file Start.bat"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -127,3 +118,4 @@ rule sql1433_Start {
     condition:
         filesize < 1KB and 2 of them
 }
+

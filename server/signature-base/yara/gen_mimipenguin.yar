@@ -1,12 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-04-01
-   Identifier: Mimipenguin
-*/
-
 rule Mimipenguin_SH {
-   meta:
+meta:
       description = "Detects Mimipenguin Password Extractor - Linux"
       author = "Florian Roth"
       reference = "https://github.com/huntergregal/mimipenguin"
@@ -19,18 +12,8 @@ rule Mimipenguin_SH {
       1 of them
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-07-08
-   Identifier: Mimipenguin
-   Reference: https://github.com/huntergregal/mimipenguin
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule mimipenguin_1 {
-   meta:
+meta:
       description = "Detects Mimipenguin hack tool"
       author = "Florian Roth"
       reference = "https://github.com/huntergregal/mimipenguin"
@@ -46,7 +29,7 @@ rule mimipenguin_1 {
 }
 
 rule mimipenguin_2 {
-   meta:
+meta:
       description = "Detects Mimipenguin hack tool"
       author = "Florian Roth"
       reference = "https://github.com/huntergregal/mimipenguin"
@@ -61,3 +44,4 @@ rule mimipenguin_2 {
    condition:
       ( uint16(0) == 0x2123 and filesize < 20KB and 1 of them )
 }
+

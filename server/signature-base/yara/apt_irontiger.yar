@@ -1,14 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2015-09-16
-	Identifier: Iron Panda
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule IronPanda_DNSTunClient {
-	meta:
+meta:
 		description = "Iron Panda malware DnsTunClient - file named.exe"
 		author = "Florian Roth"
 		reference = "https://goo.gl/E4qia9"
@@ -34,7 +25,7 @@ rule IronPanda_DNSTunClient {
 }
 
 rule IronPanda_Malware1 {
-	meta:
+meta:
 		description = "Iron Panda Malware"
 		author = "Florian Roth"
 		reference = "https://goo.gl/E4qia9"
@@ -51,7 +42,7 @@ rule IronPanda_Malware1 {
 }
 
 rule IronPanda_Webshell_JSP {
-	meta:
+meta:
 		description = "Iron Panda Malware JSP"
 		author = "Florian Roth"
 		reference = "https://goo.gl/E4qia9"
@@ -66,7 +57,7 @@ rule IronPanda_Webshell_JSP {
 }
 
 rule IronPanda_Malware_Htran {
-	meta:
+meta:
 		description = "Iron Panda Malware Htran"
 		author = "Florian Roth"
 		reference = "https://goo.gl/E4qia9"
@@ -94,7 +85,7 @@ rule IronPanda_Malware_Htran {
 }
 
 rule IronPanda_Malware2 {
-	meta:
+meta:
 		description = "Iron Panda Malware"
 		author = "Florian Roth"
 		reference = "https://goo.gl/E4qia9"
@@ -111,7 +102,7 @@ rule IronPanda_Malware2 {
 }
 
 rule IronPanda_Malware3 {
-	meta:
+meta:
 		description = "Iron Panda Malware"
 		author = "Florian Roth"
 		reference = "https://goo.gl/E4qia9"
@@ -129,7 +120,7 @@ rule IronPanda_Malware3 {
 }
 
 rule IronPanda_Malware4 {
-	meta:
+meta:
 		description = "Iron Panda Malware"
 		author = "Florian Roth"
 		reference = "https://goo.gl/E4qia9"

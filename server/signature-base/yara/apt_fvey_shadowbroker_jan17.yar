@@ -1,14 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-01-08
-   Identifier: ShadowBroker Screenshot Rules
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule FVEY_ShadowBrokers_Jan17_Screen_Strings {
-   meta:
+meta:
       description = "Detects strings derived from the ShadowBroker's leak of Windows tools/exploits"
       author = "Florian Roth"
       reference = "https://bit.no.com:43110/theshadowbrokers.bit/post/message7/"
@@ -43,3 +34,4 @@ rule FVEY_ShadowBrokers_Jan17_Screen_Strings {
         ( uint16(0) == 0x5a4d and 3 of ($d*) )
       )
 }
+

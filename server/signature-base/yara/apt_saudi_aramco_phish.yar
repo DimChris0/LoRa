@@ -1,14 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-10-12
-   Identifier: Saudi Aramco Phishing
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Saudi_Phish_Trojan {
-   meta:
+meta:
       description = "Detects a trojan used in Saudi Aramco Phishing"
       author = "Florian Roth"
       reference = "https://goo.gl/Z3JUAA"
@@ -23,3 +14,4 @@ rule Saudi_Phish_Trojan {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 3000KB and 1 of them )
 }
+

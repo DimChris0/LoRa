@@ -1,8 +1,5 @@
-
-/* State-sponsored Casper Malware Rules by @4nc4p - attribution and analysis by @pinkflawd @r00tbsd @circl_lu */
-
 rule Casper_Backdoor_x86 {
-	meta:
+meta:
 		description = "Casper French Espionage Malware - Win32/ProxyBot.B - x86 Payload http://goo.gl/VRJNLo"
 		author = "Florian Roth"
 		reference = "http://goo.gl/VRJNLo"
@@ -33,7 +30,7 @@ rule Casper_Backdoor_x86 {
 }
 
 rule Casper_EXE_Dropper {
-	meta:
+meta:
 		description = "Casper French Espionage Malware - Win32/ProxyBot.B - Dropper http://goo.gl/VRJNLo"
 		author = "Florian Roth"
 		reference = "http://goo.gl/VRJNLo"
@@ -54,7 +51,7 @@ rule Casper_EXE_Dropper {
 }
 
 rule Casper_Included_Strings {
-	meta:
+meta:
 		description = "Casper French Espionage Malware - String Match in File - http://goo.gl/VRJNLo"
 		author = "Florian Roth"
 		reference = "http://goo.gl/VRJNLo"
@@ -78,7 +75,7 @@ rule Casper_Included_Strings {
 }
 
 rule Casper_SystemInformation_Output {
-	meta:
+meta:
 		description = "Casper French Espionage Malware - System Info Output - http://goo.gl/VRJNLo"
 		author = "Florian Roth"
 		reference = "http://goo.gl/VRJNLo"
@@ -95,3 +92,4 @@ rule Casper_SystemInformation_Output {
 	condition:
 		all of them
 }
+

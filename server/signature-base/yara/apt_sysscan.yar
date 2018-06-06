@@ -1,5 +1,5 @@
 rule xDedic_SysScan_unpacked {
-   meta:
+meta:
       author = " Kaspersky Lab"
       maltype = "crimeware"
       type ="crimeware"
@@ -26,7 +26,7 @@ rule xDedic_SysScan_unpacked {
 }
 
 rule xdedic_packed_syscan {
-   meta:
+meta:
       author = "Kaspersky Lab - modified by Florian Roth"
       company = "Kaspersky Lab"
    strings:
@@ -35,3 +35,4 @@ rule xdedic_packed_syscan {
    condition:
       uint16(0) == 0x5A4D and filesize > 500KB and filesize < 1500KB and all of them
 }
+

@@ -1,8 +1,5 @@
-/* Op Cleaver -------------------------------------------------------------- */
-
-rule OPCLEAVER_BackDoorLogger
-{
-	meta:
+rule OPCLEAVER_BackDoorLogger {
+meta:
 		description = "Keylogger used by attackers in Operation Cleaver"
 		reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
 		date = "2014/12/02"
@@ -15,9 +12,8 @@ rule OPCLEAVER_BackDoorLogger
 		all of them
 }
 
-rule OPCLEAVER_Jasus
-{
-	meta:
+rule OPCLEAVER_Jasus {
+meta:
 		description = "ARP cache poisoner used by attackers in Operation Cleaver"
 		reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
 		date = "2014/12/02"
@@ -31,9 +27,8 @@ rule OPCLEAVER_Jasus
 		all of them
 }
 
-rule OPCLEAVER_LoggerModule
-{
-	meta:
+rule OPCLEAVER_LoggerModule {
+meta:
 		description = "Keylogger used by attackers in Operation Cleaver"
 		reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
 		date = "2014/12/02"
@@ -46,9 +41,8 @@ rule OPCLEAVER_LoggerModule
 		all of them
 }
 
-rule OPCLEAVER_NetC
-{
-	meta:
+rule OPCLEAVER_NetC {
+meta:
 		description = "Net Crawler used by attackers in Operation Cleaver"
 		reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
 		date = "2014/12/02"
@@ -61,9 +55,8 @@ rule OPCLEAVER_NetC
 		all of them
 }
 
-rule OPCLEAVER_ShellCreator2
-{
-	meta:
+rule OPCLEAVER_ShellCreator2 {
+meta:
 		description = "Shell Creator used by attackers in Operation Cleaver to create ASPX web shells"
 		reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
 		date = "2014/12/02"
@@ -76,9 +69,8 @@ rule OPCLEAVER_ShellCreator2
 		all of them
 }
 
-rule OPCLEAVER_SmartCopy2
-{
-	meta:
+rule OPCLEAVER_SmartCopy2 {
+meta:
 		description = "Malware or hack tool used by attackers in Operation Cleaver"
 		reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
 		date = "2014/12/02"
@@ -91,9 +83,8 @@ rule OPCLEAVER_SmartCopy2
 		all of them
 }
 
-rule OPCLEAVER_SynFlooder
-{
-	meta:
+rule OPCLEAVER_SynFlooder {
+meta:
 		description = "Malware or hack tool used by attackers in Operation Cleaver"
 		reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
 		date = "2014/12/02"
@@ -107,9 +98,8 @@ rule OPCLEAVER_SynFlooder
 		all of them
 }
 
-rule OPCLEAVER_TinyZBot
-{
-	meta:
+rule OPCLEAVER_TinyZBot {
+meta:
 		description = "Tiny Bot used by attackers in Operation Cleaver"
 		reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
 		date = "2014/12/02"
@@ -129,9 +119,8 @@ rule OPCLEAVER_TinyZBot
 		(($s1 and $s2) or ($s3 and $s4 and $s5) or ($s6 and $s7 and $s8) or $s9)
 }
 
-rule OPCLEAVER_ZhoupinExploitCrew
-{
-	meta:
+rule OPCLEAVER_ZhoupinExploitCrew {
+meta:
 		description = "Keywords used by attackers in Operation Cleaver"
 		reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
 		date = "2014/12/02"
@@ -144,9 +133,8 @@ rule OPCLEAVER_ZhoupinExploitCrew
 		1 of them
 }
 
-rule OPCLEAVER_antivirusdetector
-{
-	meta:
+rule OPCLEAVER_antivirusdetector {
+meta:
 		description = "Hack tool used by attackers in Operation Cleaver"
 		reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
 		date = "2014/12/02"
@@ -160,9 +148,8 @@ rule OPCLEAVER_antivirusdetector
 		all of them
 }
 
-rule OPCLEAVER_csext
-{
-	meta:
+rule OPCLEAVER_csext {
+meta:
 		description = "Backdoor used by attackers in Operation Cleaver"
 		reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
 		date = "2014/12/02"
@@ -176,9 +163,8 @@ rule OPCLEAVER_csext
 		all of them
 }
 
-rule OPCLEAVER_kagent
-{
-	meta:
+rule OPCLEAVER_kagent {
+meta:
 		description = "Backdoor used by attackers in Operation Cleaver"
 		reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
 		date = "2014/12/02"
@@ -191,9 +177,8 @@ rule OPCLEAVER_kagent
 		all of them
 }
 
-rule OPCLEAVER_mimikatzWrapper
-{
-	meta:
+rule OPCLEAVER_mimikatzWrapper {
+meta:
 		description = "Mimikatz Wrapper used by attackers in Operation Cleaver"
 		reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
 		date = "2014/12/02"
@@ -206,9 +191,8 @@ rule OPCLEAVER_mimikatzWrapper
 		all of them
 }
 
-rule OPCLEAVER_pvz_in
-{
-	meta:
+rule OPCLEAVER_pvz_in {
+meta:
 		description = "Parviz tool used by attackers in Operation Cleaver"
 		reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
 		date = "2014/12/02"
@@ -221,9 +205,8 @@ rule OPCLEAVER_pvz_in
 		all of them
 }
 
-rule OPCLEAVER_pvz_out
-{
-	meta:
+rule OPCLEAVER_pvz_out {
+meta:
 		description = "Parviz tool used by attackers in Operation Cleaver"
 		reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
 		date = "2014/12/02"
@@ -236,9 +219,8 @@ rule OPCLEAVER_pvz_out
 		all of them
 }
 
-rule OPCLEAVER_wndTest
-{
-	meta:
+rule OPCLEAVER_wndTest {
+meta:
 		description = "Backdoor used by attackers in Operation Cleaver"
 		reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
 		date = "2014/12/02"
@@ -252,9 +234,8 @@ rule OPCLEAVER_wndTest
 		all of them
 }
 
-rule OPCLEAVER_zhCat
-{
-	meta:
+rule OPCLEAVER_zhCat {
+meta:
 		description = "Network tool used by Iranian hackers and used by attackers in Operation Cleaver"
 		reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
 		date = "2014/12/02"
@@ -267,9 +248,8 @@ rule OPCLEAVER_zhCat
 		all of them
 }
 
-rule OPCLEAVER_zhLookUp
-{
-	meta:
+rule OPCLEAVER_zhLookUp {
+meta:
 		description = "Hack tool used by attackers in Operation Cleaver"
 		reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
 		date = "2014/12/02"
@@ -281,9 +261,8 @@ rule OPCLEAVER_zhLookUp
 		all of them
 }
 
-rule OPCLEAVER_zhmimikatz
-{
-	meta:
+rule OPCLEAVER_zhmimikatz {
+meta:
 		description = "Mimikatz wrapper used by attackers in Operation Cleaver"
 		reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
 		date = "2014/12/02"
@@ -296,9 +275,8 @@ rule OPCLEAVER_zhmimikatz
 		all of them
 }
 
-rule OPCLEAVER_Parviz_Developer
-{
-	meta:
+rule OPCLEAVER_Parviz_Developer {
+meta:
 		description = "Parviz developer known from Operation Cleaver"
 		reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
 		date = "2014/12/02"
@@ -310,9 +288,8 @@ rule OPCLEAVER_Parviz_Developer
 		$s1
 }
 
-rule OPCLEAVER_CCProxy_Config
-{
-	meta:
+rule OPCLEAVER_CCProxy_Config {
+meta:
 		description = "CCProxy config known from Operation Cleaver"
 		reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
 		date = "2014/12/02"
@@ -327,3 +304,4 @@ rule OPCLEAVER_CCProxy_Config
 	condition:
 		all of ($s*) or $x1
 }
+

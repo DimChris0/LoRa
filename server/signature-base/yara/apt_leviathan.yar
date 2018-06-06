@@ -1,15 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-10-18
-   Identifier: Leviathan Phishing Attacks
-   Reference: https://goo.gl/MZ7dRg
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule SeDLL_Javascript_Decryptor {
-   meta:
+meta:
       description = "Detects SeDll - DLL is used for decrypting and executing another JavaScript backdoor such as Orz"
       author = "Florian Roth"
       reference = "https://goo.gl/MZ7dRg"
@@ -29,7 +19,7 @@ rule SeDLL_Javascript_Decryptor {
 }
 
 rule Leviathan_CobaltStrike_Sample_1 {
-   meta:
+meta:
       description = "Detects Cobalt Strike sample from Leviathan report"
       author = "Florian Roth"
       reference = "https://goo.gl/MZ7dRg"
@@ -51,7 +41,7 @@ rule Leviathan_CobaltStrike_Sample_1 {
 }
 
 rule MockDll_Gen {
-   meta:
+meta:
       description = "Detects MockDll - regsvr DLL loader"
       author = "Florian Roth"
       reference = "https://goo.gl/MZ7dRg"
@@ -69,7 +59,7 @@ rule MockDll_Gen {
 }
 
 rule VBScript_Favicon_File {
-   meta:
+meta:
       description = "VBScript cloaked as Favicon file used in Leviathan incident"
       author = "Florian Roth"
       reference = "https://goo.gl/MZ7dRg"
@@ -86,3 +76,4 @@ rule VBScript_Favicon_File {
       filesize < 100KB and ( uint16(0) == 0x733c and 1 of ($x*) )
       or ( 3 of them )
 }
+

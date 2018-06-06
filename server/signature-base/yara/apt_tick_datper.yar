@@ -1,17 +1,6 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-08-21
-   Identifier: Datper Malware
-   Reference: http://blog.jpcert.or.jp/2017/08/detecting-datper-malware-from-proxy-logs.html
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 import "pe"
-
 rule Datper_Backdoor {
-   meta:
+meta:
       description = "Detects Datper Malware"
       author = "Florian Roth"
       reference = "http://blog.jpcert.or.jp/2017/08/detecting-datper-malware-from-proxy-logs.html"
@@ -41,3 +30,4 @@ rule Datper_Backdoor {
          )
       )
 }
+

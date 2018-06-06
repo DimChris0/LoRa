@@ -1,14 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-04-07
-   Identifier: Quasar RAT
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Quasar_RAT_1 {
-   meta:
+meta:
       description = "Detects Quasar RAT"
       author = "Florian Roth"
       reference = "https://www.pwc.co.uk/cyber-security/pdf/cloud-hopper-annex-b-final.pdf"
@@ -31,7 +22,7 @@ rule Quasar_RAT_1 {
 }
 
 rule Quasar_RAT_2 {
-   meta:
+meta:
       description = "Detects Quasar RAT"
       author = "Florian Roth"
       reference = "https://www.pwc.co.uk/cyber-security/pdf/cloud-hopper-annex-b-final.pdf"
@@ -53,3 +44,4 @@ rule Quasar_RAT_2 {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 5000KB and $x1 ) or ( all of them )
 }
+

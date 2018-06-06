@@ -1,17 +1,6 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-07-23
-   Identifier: Operation Wilted Tulip
-   Reference: http://www.clearskysec.com/tulip
-*/
-
 import "pe"
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule WiltedTulip_Tools_back {
-   meta:
+meta:
       description = "Detects Chrome password dumper used in Operation Wilted Tulip"
       author = "Florian Roth"
       reference = "http://www.clearskysec.com/tulip"
@@ -26,7 +15,7 @@ rule WiltedTulip_Tools_back {
 }
 
 rule WiltedTulip_Tools_clrlg {
-   meta:
+meta:
       description = "Detects Windows eventlog cleaner used in Operation Wilted Tulip - file clrlg.bat"
       author = "Florian Roth"
       reference = "http://www.clearskysec.com/tulip"
@@ -40,7 +29,7 @@ rule WiltedTulip_Tools_clrlg {
 }
 
 rule WiltedTulip_powershell {
-   meta:
+meta:
       description = "Detects powershell script used in Operation Wilted Tulip"
       author = "Florian Roth"
       reference = "http://www.clearskysec.com/tulip"
@@ -53,7 +42,7 @@ rule WiltedTulip_powershell {
 }
 
 rule WiltedTulip_vminst {
-   meta:
+meta:
       description = "Detects malware used in Operation Wilted Tulip"
       author = "Florian Roth"
       reference = "http://www.clearskysec.com/tulip"
@@ -80,7 +69,7 @@ rule WiltedTulip_vminst {
 }
 
 rule WiltedTulip_Windows_UM_Task {
-   meta:
+meta:
       description = "Detects a Windows scheduled task as used in Operation Wilted Tulip"
       author = "Florian Roth"
       reference = "http://www.clearskysec.com/tulip"
@@ -97,7 +86,7 @@ rule WiltedTulip_Windows_UM_Task {
 }
 
 rule WiltedTulip_WindowsTask {
-   meta:
+meta:
       description = "Detects hack tool used in Operation Wilted Tulip - Windows Tasks"
       author = "Florian Roth"
       reference = "http://www.clearskysec.com/tulip"
@@ -116,7 +105,7 @@ rule WiltedTulip_WindowsTask {
 }
 
 rule WiltedTulip_tdtess {
-   meta:
+meta:
       description = "Detects malicious service used in Operation Wilted Tulip"
       author = "Florian Roth"
       reference = "http://www.clearskysec.com/tulip"
@@ -133,7 +122,7 @@ rule WiltedTulip_tdtess {
 }
 
 rule WiltedTulip_SilverlightMSI {
-   meta:
+meta:
       description = "Detects powershell tool call Get_AD_Users_Logon_History used in Operation Wilted Tulip"
       author = "Florian Roth"
       reference = "http://www.clearskysec.com/tulip"
@@ -149,7 +138,7 @@ rule WiltedTulip_SilverlightMSI {
 }
 
 rule WiltedTulip_matryoshka_Injector {
-   meta:
+meta:
       description = "Detects hack tool used in Operation Wilted Tulip"
       author = "Florian Roth"
       reference = "http://www.clearskysec.com/tulip"
@@ -171,7 +160,7 @@ rule WiltedTulip_matryoshka_Injector {
 }
 
 rule WiltedTulip_Zpp {
-   meta:
+meta:
       description = "Detects hack tool used in Operation Wilted Tulip"
       author = "Florian Roth"
       reference = "http://www.clearskysec.com/tulip"
@@ -194,7 +183,7 @@ rule WiltedTulip_Zpp {
 }
 
 rule WiltedTulip_Netsrv_netsrvs {
-   meta:
+meta:
       description = "Detects sample from Operation Wilted Tulip"
       author = "Florian Roth"
       reference = "http://www.clearskysec.com/tulip"
@@ -219,7 +208,7 @@ rule WiltedTulip_Netsrv_netsrvs {
 }
 
 rule WiltedTulip_ReflectiveLoader {
-   meta:
+meta:
       description = "Detects reflective loader (Cobalt Strike) used in Operation Wilted Tulip"
       author = "Florian Roth"
       reference = "http://www.clearskysec.com/tulip"
@@ -243,7 +232,7 @@ rule WiltedTulip_ReflectiveLoader {
 }
 
 rule WiltedTulip_Matryoshka_RAT {
-   meta:
+meta:
       description = "Detects Matryoshka RAT used in Operation Wilted Tulip"
       author = "Florian Roth"
       reference = "http://www.clearskysec.com/tulip"
@@ -260,3 +249,4 @@ rule WiltedTulip_Matryoshka_RAT {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 1000KB and 3 of them )
 }
+

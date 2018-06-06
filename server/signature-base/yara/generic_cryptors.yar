@@ -1,6 +1,5 @@
-
 rule DarkEYEv3_Cryptor {
-	meta:
+meta:
 		description = "Rule to detect DarkEYEv3 encrypted executables (often malware)"
 		author = "Florian Roth"
 		reference = "http://darkeyev3.blogspot.fi/"
@@ -20,3 +19,4 @@ rule DarkEYEv3_Cryptor {
 	condition:
 		uint16(0) == 0x5a4d and $s0
 }
+

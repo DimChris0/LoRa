@@ -1,6 +1,5 @@
-
 rule crime_ole_loadswf_cve_2018_4878 {
-   meta:
+meta:
       description = "Detects CVE-2018-4878"
       vuln_type = "Remote Code Execution"
       vuln_impact = "Use-after-free"
@@ -13,13 +12,13 @@ rule crime_ole_loadswf_cve_2018_4878 {
       author = "Vitali Kremez, Flashpoint"
       version = "1.1"
    strings:
-      // EMBEDDED FLASH OBJECT BIN HEADER
+      
       $header = "rdf:RDF" wide ascii
-      // OBJECT APPLICATION TYPE TITLE
+      
       $title = "Adobe Flex" wide ascii
-      // PDB PATH
+      
       $pdb = "F:\\work\\flash\\obfuscation\\loadswf\\src" wide ascii
-      // LOADER STRINGS
+      
       $s0 = "URLRequest" wide ascii
       $s1 = "URLLoader" wide ascii
       $s2 = "loadswf" wide ascii
@@ -28,3 +27,4 @@ rule crime_ole_loadswf_cve_2018_4878 {
       filesize < 500KB and all of ($header*) and
       all of ($title*) and 3 of ($s*) or all of ($pdb*) and all of ($header*) and 1 of ($s*)
 }
+

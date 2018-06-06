@@ -1,17 +1,6 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2018-02-08
-   Identifier: Disclosed Chinese Malware Set - mostly NjRAT
-   Reference: https://twitter.com/cyberintproject/status/961714165550342146
-*/
-
 import "pe"
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule CN_disclosed_20180208_lsls {
-   meta:
+meta:
       description = "Detects malware from disclosed CN malware set"
       author = "Florian Roth"
       reference = "https://twitter.com/cyberintproject/status/961714165550342146"
@@ -24,7 +13,7 @@ rule CN_disclosed_20180208_lsls {
 }
 
 rule CN_disclosed_20180208_c {
-   meta:
+meta:
       description = "Detects malware from disclosed CN malware set"
       author = "Florian Roth"
       reference = "https://twitter.com/cyberintproject/status/961714165550342146"
@@ -51,7 +40,7 @@ rule CN_disclosed_20180208_c {
 }
 
 rule CN_disclosed_20180208_System3 {
-   meta:
+meta:
       description = "Detects malware from disclosed CN malware set"
       author = "Florian Roth"
       reference = "https://twitter.com/cyberintproject/status/961714165550342146"
@@ -67,9 +56,8 @@ rule CN_disclosed_20180208_System3 {
       uint16(0) == 0x5a4d and filesize < 200KB and $a1 and 1 of ($s*)
 }
 
-
 rule CN_disclosed_20180208_Mal1 {
-   meta:
+meta:
       description = "Detects malware from disclosed CN malware set"
       author = "Florian Roth"
       reference = "https://www.virustotal.com/graph/#/selected/n120z79z208z189/drawer/graph-details"
@@ -95,7 +83,7 @@ rule CN_disclosed_20180208_Mal1 {
 }
 
 rule CN_disclosed_20180208_Mal2 {
-   meta:
+meta:
       description = "Detects malware from disclosed CN malware set"
       author = "Florian Roth"
       reference = "https://www.virustotal.com/graph/#/selected/n120z79z208z189/drawer/graph-details"
@@ -116,7 +104,7 @@ rule CN_disclosed_20180208_Mal2 {
 }
 
 rule CN_disclosed_20180208_KeyLogger_1 {
-   meta:
+meta:
       description = "Detects malware from disclosed CN malware set"
       author = "Florian Roth"
       reference = "https://www.virustotal.com/graph/#/selected/n120z79z208z189/drawer/graph-details"
@@ -133,7 +121,7 @@ rule CN_disclosed_20180208_KeyLogger_1 {
 }
 
 rule CN_disclosed_20180208_Mal4 {
-   meta:
+meta:
       description = "Detects malware from disclosed CN malware set"
       author = "Florian Roth"
       reference = "https://www.virustotal.com/graph/#/selected/n120z79z208z189/drawer/graph-details"
@@ -147,7 +135,7 @@ rule CN_disclosed_20180208_Mal4 {
 }
 
 rule CN_disclosed_20180208_Mal5 {
-   meta:
+meta:
       description = "Detects malware from disclosed CN malware set"
       author = "Florian Roth"
       reference = "https://www.virustotal.com/graph/#/selected/n120z79z208z189/drawer/graph-details"
@@ -165,3 +153,4 @@ rule CN_disclosed_20180208_Mal5 {
    condition:
       uint16(0) == 0x5a4d and filesize < 300KB and all of them
 }
+

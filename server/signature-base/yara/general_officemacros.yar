@@ -1,6 +1,5 @@
-
 rule Office_AutoOpen_Macro {
-	meta:
+meta:
 		description = "Detects an Microsoft Office file that contains the AutoOpen Macro function"
 		author = "Florian Roth"
 		date = "2015-05-28"
@@ -24,7 +23,7 @@ rule Office_AutoOpen_Macro {
 }
 
 rule Office_as_MHTML {
-	meta:
+meta:
 		description = "Detects an Microsoft Office saved as a MHTML file (false positives are possible but rare; many matches on CVE-2012-0158)"
 		author = "Florian Roth"
 		date = "2015-05-28"
@@ -46,7 +45,7 @@ rule Office_as_MHTML {
 }
 
 rule Docm_in_PDF {
-   meta:
+meta:
       description = "Detects an embedded DOCM in PDF combined with OpenAction"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -58,3 +57,4 @@ rule Docm_in_PDF {
    condition:
       uint32(0) == 0x46445025 and all of them
 }
+

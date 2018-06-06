@@ -1,6 +1,5 @@
-
 rule QuarksPwDump_Gen {
-	meta:
+meta:
 		description = "Detects all QuarksPWDump versions"
 		author = "Florian Roth"
 		date = "2015-09-29"
@@ -20,3 +19,4 @@ rule QuarksPwDump_Gen {
 	condition:
 		all of them
 }
+

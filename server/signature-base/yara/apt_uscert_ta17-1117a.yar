@@ -1,26 +1,18 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-04-27
-   Identifier: US CERT TA17-117A - APT10
-   Reference: https://www.us-cert.gov/ncas/alerts/TA17-117A
-*/
-
 rule Dropper_DeploysMalwareViaSideLoading {
-    meta:
+meta:
         description = "Detect a dropper used to deploy an implant via side loading. This dropper has specifically been observed deploying REDLEAVES & PlugX"
         author = "USG"
         reference = "https://www.us-cert.gov/ncas/alerts/TA17-117A"
         true_positive = "5262cb9791df50fafcb2fbd5f93226050b51efe400c2924eecba97b7ce437481: drops REDLEAVES. 6392e0701a77ea25354b1f40f5b867a35c0142abde785a66b83c9c8d2c14c0c3: drops plugx. "
     strings:        
-        $UniqueString = {2e 6c 6e 6b [0-14] 61 76 70 75 69 2e 65 78 65} // ".lnk" near "avpui.exe"
-        $PsuedoRandomStringGenerator = {b9 1a [0-6] f7 f9 46 80 c2 41 88 54 35 8b 83 fe 64} // Unique function that generates a 100 character pseudo random string.
+        $UniqueString = {2e 6c 6e 6b [0-14] 61 76 70 75 69 2e 65 78 65} 
+        $PsuedoRandomStringGenerator = {b9 1a [0-6] f7 f9 46 80 c2 41 88 54 35 8b 83 fe 64} 
     condition:
         any of them
 }
 
 rule REDLEAVES_DroppedFile_ImplantLoader_Starburn {
-    meta:
+meta:
         description = "Detect the DLL responsible for loading and deobfuscating the DAT file containing shellcode and core REDLEAVES RAT"
         author = "USG"
         reference = "https://www.us-cert.gov/ncas/alerts/TA17-117A"
@@ -32,7 +24,7 @@ rule REDLEAVES_DroppedFile_ImplantLoader_Starburn {
 }
 
 rule REDLEAVES_DroppedFile_ObfuscatedShellcodeAndRAT_handkerchief {
-    meta:
+meta:
         description = "Detect obfuscated .dat file containing shellcode and core REDLEAVES RAT"
         author = "USG"
         reference = "https://www.us-cert.gov/ncas/alerts/TA17-117A"
@@ -44,7 +36,7 @@ rule REDLEAVES_DroppedFile_ObfuscatedShellcodeAndRAT_handkerchief {
 }
 
 rule REDLEAVES_CoreImplant_UniqueStrings {
-    meta:
+meta:
         description = "Strings identifying the core REDLEAVES RAT in its deobfuscated state"
         reference = "https://www.us-cert.gov/ncas/alerts/TA17-117A"
         author = "USG"
@@ -57,7 +49,7 @@ rule REDLEAVES_CoreImplant_UniqueStrings {
 }
 
 rule PLUGX_RedLeaves {
-    meta:
+meta:
         author = "US-CERT Code Analysis Team"
         date = "03042017"
         reference = "https://www.us-cert.gov/ncas/alerts/TA17-117A"
@@ -83,3 +75,4 @@ rule PLUGX_RedLeaves {
     condition:
         $s0 or $s1 or $s2 and $s3 or $s4 or $s5 or $s6 or $s7 or $s8 or $s9
 }
+

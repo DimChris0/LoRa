@@ -1,14 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2016-12-14
-   Identifier: TeleBots
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule TeleBots_IntercepterNG {
-   meta:
+meta:
       description = "Detects TeleBots malware - IntercepterNG"
       author = "Florian Roth"
       reference = "https://goo.gl/4if3HG"
@@ -28,7 +19,7 @@ rule TeleBots_IntercepterNG {
 }
 
 rule TeleBots_KillDisk_1 {
-   meta:
+meta:
       description = "Detects TeleBots malware - KillDisk"
       author = "Florian Roth"
       reference = "https://goo.gl/4if3HG"
@@ -47,7 +38,7 @@ rule TeleBots_KillDisk_1 {
 }
 
 rule TeleBots_KillDisk_2 {
-   meta:
+meta:
       description = "Detects TeleBots malware - KillDisk"
       author = "Florian Roth"
       reference = "https://goo.gl/4if3HG"
@@ -62,7 +53,7 @@ rule TeleBots_KillDisk_2 {
 }
 
 rule TeleBots_CredRaptor_Password_Stealer {
-   meta:
+meta:
       description = "Detects TeleBots malware - CredRaptor Password Stealer"
       author = "Florian Roth"
       reference = "https://goo.gl/4if3HG"
@@ -80,7 +71,7 @@ rule TeleBots_CredRaptor_Password_Stealer {
 }
 
 rule TeleBots_VBS_Backdoor_1 {
-   meta:
+meta:
       description = "Detects TeleBots malware - VBS Backdoor"
       author = "Florian Roth"
       reference = "https://goo.gl/4if3HG"
@@ -96,7 +87,7 @@ rule TeleBots_VBS_Backdoor_1 {
 }
 
 rule TeleBots_VBS_Backdoor_2 {
-   meta:
+meta:
       description = "Detects TeleBots malware - VBS Backdoor"
       author = "Florian Roth"
       reference = "https://goo.gl/4if3HG"
@@ -111,7 +102,7 @@ rule TeleBots_VBS_Backdoor_2 {
 }
 
 rule TeleBots_Win64_Spy_KeyLogger_G {
-   meta:
+meta:
       description = "Detects TeleBots malware - Win64 Spy KeyLogger G"
       author = "Florian Roth"
       reference = "https://goo.gl/4if3HG"
@@ -128,3 +119,4 @@ rule TeleBots_Win64_Spy_KeyLogger_G {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 600KB and 1 of them ) or ( 3 of them )
 }
+

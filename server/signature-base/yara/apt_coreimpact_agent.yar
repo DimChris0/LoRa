@@ -1,10 +1,5 @@
-/*
-	Core Impact Agent known from RocketKitten and WoolenGoldfish APT
-*/
-
-
 rule CoreImpact_sysdll_exe {
-	meta:
+meta:
 		description = "Detects a malware sysdll.exe from the Rocket Kitten APT"
 		author = "Florian Roth"
 		score = 70
@@ -42,3 +37,4 @@ rule CoreImpact_sysdll_exe {
 		all of ($x*) or 
 		8 of ($z*)
 }
+

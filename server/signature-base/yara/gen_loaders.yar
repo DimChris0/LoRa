@@ -1,18 +1,6 @@
-/*
-   Yara Rule Set
-   Copyright: Florian Roth
-   Date: 2017-06-25
-   Identifier: Rules that detect different malware characteristics
-   Reference: Internal Research
-   License: GPL
-*/
-
 import "pe"
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule ReflectiveLoader {
-   meta:
+meta:
       description = "Detects a unspecified hack tool, crack or malware using a reflective loader - no hard match - further investigation recommended"
       reference = "Internal Research"
       score = 60
@@ -29,18 +17,8 @@ rule ReflectiveLoader {
          )
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-08-20
-   Identifier: Reflective DLL Loader
-   Reference: Internal Research
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Reflective_DLL_Loader_Aug17_1 {
-   meta:
+meta:
       description = "Detects Reflective DLL Loader"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -63,7 +41,7 @@ rule Reflective_DLL_Loader_Aug17_1 {
 }
 
 rule DLL_Injector_Lynx {
-   meta:
+meta:
       description = "Detects Lynx DLL Injector"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -85,7 +63,7 @@ rule DLL_Injector_Lynx {
 }
 
 rule Reflective_DLL_Loader_Aug17_2 {
-   meta:
+meta:
       description = "Detects Reflective DLL Loader - suspicious - Possible FP could be program crack"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -111,7 +89,7 @@ rule Reflective_DLL_Loader_Aug17_2 {
 }
 
 rule Reflective_DLL_Loader_Aug17_3 {
-   meta:
+meta:
       description = "Detects Reflective DLL Loader"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -134,7 +112,7 @@ rule Reflective_DLL_Loader_Aug17_3 {
 }
 
 rule Reflective_DLL_Loader_Aug17_4 {
-   meta:
+meta:
       description = "Detects Reflective DLL Loader"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -152,3 +130,4 @@ rule Reflective_DLL_Loader_Aug17_4 {
         filesize < 2000KB and 2 of them
       )
 }
+

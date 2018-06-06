@@ -1,12 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-08-18
-	Identifier: b374k - Back Connect Payload UPX
-*/
-
 rule b374k_back_connect {
-	meta:
+meta:
 		description = "Detects privilege escalation tool"
 		author = "Florian Roth"
 		reference = "Internal Analysis"
@@ -20,3 +13,4 @@ rule b374k_back_connect {
 	condition:
 		( uint16(0) == 0x5a4d and filesize < 10KB and all of them )
 }
+

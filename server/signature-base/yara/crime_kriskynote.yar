@@ -1,15 +1,5 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-03-03
-   Identifier: Kriskynote 03 March
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Kriskynote_Mar17_1 {
-   meta:
+meta:
       description = "Detects Kriskynote Malware"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -28,7 +18,7 @@ rule Kriskynote_Mar17_1 {
 }
 
 rule Kriskynote_Mar17_2 {
-   meta:
+meta:
       description = "Detects Kriskynote Malware"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -42,7 +32,7 @@ rule Kriskynote_Mar17_2 {
 }
 
 rule Kriskynote_Mar17_3 {
-   meta:
+meta:
       description = "Detects Kriskynote Malware"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -56,3 +46,4 @@ rule Kriskynote_Mar17_3 {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 2000KB and 2 of them )
 }
+

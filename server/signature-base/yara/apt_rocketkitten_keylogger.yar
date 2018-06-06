@@ -1,12 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2015-09-01
-	Identifier: Rocket Kitten Keylogger
-*/
-
 rule RocketKitten_Keylogger {
-	meta:
+meta:
 		description = "Detects Keylogger used in Rocket Kitten APT"
 		author = "Florian Roth"
 		reference = "https://goo.gl/SjQhlp"
@@ -26,8 +19,9 @@ rule RocketKitten_Keylogger {
 		$s3 = "strSTUP = WshShell.SpecialFolders(\"Startup\")" fullword ascii
 		$s4 = "[CapsLock]" fullword ascii
 	condition:
-		/* File detection */
+		
 		(uint16(0) == 0x5a4d and filesize < 200KB and (1 of ($x*) or ($z1 and 2 of ($s*)))) or
-		/* Memory detection */
+		
 		($z1 and all of ($s*)) 
 }
+

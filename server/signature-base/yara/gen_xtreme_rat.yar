@@ -1,18 +1,6 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-09-27
-   Identifier: Xtreme / XRat
-   Reference: Internal Research
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 import "pe"
-
 rule Xtreme_Sep17_1 {
-   meta:
+meta:
       description = "Detects XTREME sample analyzed in September 2017"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -35,7 +23,7 @@ rule Xtreme_Sep17_1 {
 }
 
 rule Xtreme_Sep17_2 {
-   meta:
+meta:
       description = "Detects XTREME sample analyzed in September 2017"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -49,7 +37,7 @@ rule Xtreme_Sep17_2 {
 }
 
 rule Xtreme_Sep17_3 {
-   meta:
+meta:
       description = "Detects XTREME sample analyzed in September 2017"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -63,7 +51,7 @@ rule Xtreme_Sep17_3 {
 }
 
 rule Xtreme_RAT_Gen_Imp {
-   meta:
+meta:
       description = "Detects XTREME sample analyzed in September 2017"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -76,3 +64,4 @@ rule Xtreme_RAT_Gen_Imp {
          pe.imphash() == "e0f7991d50ceee521d7190effa3c494e"
       )
 }
+

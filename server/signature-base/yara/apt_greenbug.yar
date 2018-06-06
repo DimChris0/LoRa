@@ -1,16 +1,6 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-01-25
-   Identifier: Greenbug Malware
-*/
-
 import "pe"
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Greenbug_Malware_1 {
-   meta:
+meta:
       description = "Detects Malware from Greenbug Incident"
       author = "Florian Roth"
       reference = "https://goo.gl/urp4CD"
@@ -24,7 +14,7 @@ rule Greenbug_Malware_1 {
 }
 
 rule Greenbug_Malware_2 {
-   meta:
+meta:
       description = "Detects Backdoor from Greenbug Incident"
       author = "Florian Roth"
       reference = "https://goo.gl/urp4CD"
@@ -50,7 +40,7 @@ rule Greenbug_Malware_2 {
 }
 
 rule Greenbug_Malware_3 {
-   meta:
+meta:
       description = "Detects Backdoor from Greenbug Incident"
       author = "Florian Roth"
       reference = "https://goo.gl/urp4CD"
@@ -67,7 +57,7 @@ rule Greenbug_Malware_3 {
 }
 
 rule Greenbug_Malware_4 {
-   meta:
+meta:
       description = "Detects ISMDoor Backdoor"
       author = "Florian Roth"
       reference = "https://goo.gl/urp4CD"
@@ -93,7 +83,7 @@ rule Greenbug_Malware_4 {
 }
 
 rule Greenbug_Malware_5 {
-   meta:
+meta:
       description = "Auto-generated rule"
       author = "Florian Roth"
       reference = "https://goo.gl/urp4CD"
@@ -116,19 +106,8 @@ rule Greenbug_Malware_5 {
       )
 }
 
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-11-26
-   Identifier: Greenbug
-   Reference: http://www.clearskysec.com/greenbug/
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Greenbug_Malware_Nov17_1 {
-   meta:
+meta:
       description = "Detects Greenbug Malware"
       author = "Florian Roth"
       reference = "http://www.clearskysec.com/greenbug/"
@@ -154,3 +133,4 @@ rule Greenbug_Malware_Nov17_1 {
         3 of them
       )
 }
+

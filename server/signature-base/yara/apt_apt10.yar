@@ -1,12 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Jonas Lejon
-	Date: 2017-04-06
-	Identifier: APT 10 Malware
-*/
-
 rule APT10_Malware_Sample_Gen {
-	meta:
+meta:
 	description = "APT 10 / Cloud Hopper malware campaign"
 	author = "Florian Roth"
 	reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
@@ -312,7 +305,7 @@ rule APT10_Malware_Sample_Gen {
 	hash299 = "FC26AD639598A92546AF2DAA6F6A7AFD"
 	hash300 = "FC7487A7F35A510246280589F228ECFC"
 strings:
-	/* C2 Servers */
+	
 	$c2_1 = "002562066559681.r3u8.com" ascii
 	$c2_2 = "031168053846049.r3u8.com" ascii
 	$c2_3 = "0625.have8000.com" ascii
@@ -1679,3 +1672,4 @@ strings:
 condition:
         1 of ($c2_*)
 }
+

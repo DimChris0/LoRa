@@ -1,5 +1,5 @@
 rule apt_nix_elf_derusbi {
-   meta:
+meta:
       description = "Detects Derusbi Backdoor ELF"
       author = "Fidelis Cybersecurity"
       date = "2016/02/29"
@@ -46,9 +46,8 @@ rule apt_nix_elf_derusbi {
       uint32(0) == 0x4464c457f and all of them
 }
 
-rule apt_nix_elf_derusbi_kernelModule
-{
-   meta:
+rule apt_nix_elf_derusbi_kernelModule {
+meta:
       description = "Detects Derusbi Backdoor ELF Kernel Module"
       author = "Fidelis Cybersecurity"
       date = "2016/02/29"
@@ -79,7 +78,7 @@ rule apt_nix_elf_derusbi_kernelModule
 }
 
 rule apt_nix_elf_Derusbi_Linux_SharedMemCreation {
-   meta:
+meta:
       description = "Detects Derusbi Backdoor ELF Shared Memory Creation"
       author = "Fidelis Cybersecurity"
       date = "2016/02/29"
@@ -91,7 +90,7 @@ rule apt_nix_elf_Derusbi_Linux_SharedMemCreation {
 }
 
 rule apt_nix_elf_Derusbi_Linux_Strings {
-   meta:
+meta:
       description = "Detects Derusbi Backdoor ELF Strings"
       author = "Fidelis Cybersecurity"
       date = "2016/02/29"
@@ -122,7 +121,7 @@ rule apt_nix_elf_Derusbi_Linux_Strings {
 }
 
 rule apt_win_exe_trojan_derusbi {
-   meta:
+meta:
       description = "Detects Derusbi Backdoor Win32"
       author = "Fidelis Cybersecurity"
       date = "2016/02/29"
@@ -148,7 +147,7 @@ rule apt_win_exe_trojan_derusbi {
       $sa_18 = "_time64"
       $sa_19 = "DllRegisterServer"
       $sa_20 = "DllUnregisterServer"
-      $sa_21 = { 8b [5] 8b ?? d3 ?? 83 ?? 08 30 [5] 40 3b [5] 72 } // Decode Driver
+      $sa_21 = { 8b [5] 8b ?? d3 ?? 83 ?? 08 30 [5] 40 3b [5] 72 } 
 
       $sb_1 = "PCC_CMD_PACKET"
       $sb_2 = "PCC_CMD"
@@ -190,3 +189,4 @@ rule apt_win_exe_trojan_derusbi {
          )
       )
 }
+

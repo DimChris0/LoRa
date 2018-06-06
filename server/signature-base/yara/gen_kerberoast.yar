@@ -1,12 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-05-21
-	Identifier: Kerberoast
-*/
-
 rule GetUserSPNs_VBS {
-	meta:
+meta:
 		description = "Auto-generated rule - file GetUserSPNs.vbs"
 		author = "Florian Roth"
 		reference = "https://github.com/skelsec/PyKerberoast"
@@ -21,7 +14,7 @@ rule GetUserSPNs_VBS {
 }
 
 rule GetUserSPNs_PS1 {
-	meta:
+meta:
 		description = "Auto-generated rule - file GetUserSPNs.ps1"
 		author = "Florian Roth"
 		reference = "https://github.com/skelsec/PyKerberoast"
@@ -37,7 +30,7 @@ rule GetUserSPNs_PS1 {
 }
 
 rule kerberoast_PY {
-	meta:
+meta:
 		description = "Auto-generated rule - file kerberoast.py"
 		author = "Florian Roth"
 		reference = "https://github.com/skelsec/PyKerberoast"
@@ -51,3 +44,4 @@ rule kerberoast_PY {
 	condition:
 		2 of them
 }
+

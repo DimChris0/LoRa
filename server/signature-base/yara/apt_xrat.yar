@@ -1,16 +1,5 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-12-11
-   Identifier: Patchwork
-   Reference: https://goo.gl/Pg3P4W
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule xRAT_1 {
-   meta:
+meta:
       description = "Detects Patchwork malware"
       author = "Florian Roth"
       reference = "https://goo.gl/Pg3P4W"
@@ -37,3 +26,4 @@ rule xRAT_1 {
          3 of them
       )
 }
+

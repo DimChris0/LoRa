@@ -1,15 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-07-07
-   Identifier: HDRoot
-   Reference: Winnti HDRoot VT
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule HDRoot_Sample_Jul17_1 {
-   meta:
+meta:
       description = "Detects HDRoot samples"
       author = "Florian Roth"
       reference = "Winnti HDRoot VT"
@@ -24,7 +14,7 @@ rule HDRoot_Sample_Jul17_1 {
 }
 
 rule HDRoot_Sample_Jul17_2 {
-   meta:
+meta:
       description = "Detects HDRoot samples"
       author = "Florian Roth"
       reference = "Winnti HDRoot VT"
@@ -60,7 +50,7 @@ rule HDRoot_Sample_Jul17_2 {
 }
 
 rule Unspecified_Malware_Jul17_1A {
-   meta:
+meta:
       description = "Detects samples of an unspecified malware - July 2017"
       author = "Florian Roth"
       reference = "Winnti HDRoot VT"
@@ -75,3 +65,4 @@ rule Unspecified_Malware_Jul17_1A {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 900KB and all of them )
 }
+

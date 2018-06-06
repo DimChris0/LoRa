@@ -1,12 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2015-05-07
-	Identifier: Kraken_Malware
-*/
-
 rule Kraken_Bot_Sample {
-	meta:
+meta:
 		description = "Kraken Bot Sample - file inf.bin"
 		author = "Florian Roth"
 		reference = "https://blog.gdatasoftware.com/blog/article/dissecting-the-kraken.html"

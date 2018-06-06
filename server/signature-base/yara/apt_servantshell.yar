@@ -1,5 +1,5 @@
 rule Servantshell {
-   meta:
+meta:
       author = "Arbor Networks ASERT Nov 2015"
       description = "Detects Servantshell malware"
       date = "2017-02-02"
@@ -14,3 +14,4 @@ rule Servantshell {
    condition:
       uint16(0) == 0x5a4d and all of them
 }
+

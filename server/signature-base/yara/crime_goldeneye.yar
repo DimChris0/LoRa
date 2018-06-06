@@ -1,14 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2016-12-06
-   Identifier: GoldenEye Ransomware
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule GoldenEye_Ransomware_XLS {
-   meta:
+meta:
       description = "GoldenEye XLS with Macro - file Schneider-Bewerbung.xls"
       author = "Florian Roth"
       reference = "https://goo.gl/jp2SkT"
@@ -22,7 +13,7 @@ rule GoldenEye_Ransomware_XLS {
 }
 
 rule GoldenEyeRansomware_Dropper_MalformedZoomit {
-   meta:
+meta:
       description = "Auto-generated rule - file b5ef16922e2c76b09edd71471dd837e89811c5e658406a8495c1364d0d9dc690"
       author = "Florian Roth"
       reference = "https://goo.gl/jp2SkT"
@@ -34,3 +25,4 @@ rule GoldenEyeRansomware_Dropper_MalformedZoomit {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 800KB and $s1 and not $n1 )
 }
+

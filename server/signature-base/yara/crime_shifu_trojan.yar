@@ -1,12 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2015-09-01
-	Identifier: Shifu
-*/
-
 rule Shifu_Banking_Trojan {
-	meta:
+meta:
 		description = "Detects Shifu Banking Trojan"
 		author = "Florian Roth"
 		reference = "https://securityintelligence.com/shifu-masterful-new-banking-trojan-is-attacking-14-japanese-banks/"
@@ -25,7 +18,7 @@ rule Shifu_Banking_Trojan {
 }
 
 rule SHIFU_Banking_Trojan {
-	meta:
+meta:
 		description = "Detects SHIFU Banking Trojan"
 		author = "Florian Roth"
 		reference = "http://goo.gl/52n8WE"
@@ -53,7 +46,8 @@ rule SHIFU_Banking_Trojan {
 		$s2 = "USER_PRIV_ADMIN" fullword wide
 		$s3 = "USER_PRIV_USER" fullword wide
 		$s4 = "PPSWVPP" fullword ascii
-		$s5 = "WinSCard.dll" fullword ascii /* Goodware String - occured 83 times */
+		$s5 = "WinSCard.dll" fullword ascii 
 	condition:
 		uint16(0) == 0x5a4d and ($x1 or 5 of ($s*))
 }
+

@@ -1,45 +1,33 @@
-/*
-
-   Generic Cloaking
-
-   Florian Roth
-   BSK Consulting GmbH
-
-	License: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
-	Copyright and related rights waived via https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-*/
-
 rule EXE_cloaked_as_TXT {
-	meta:
+meta:
 		description = "Executable with TXT extension"
 		author = "Florian Roth"
 	condition:
-		uint16(0) == 0x5a4d 					// Executable
-		and filename matches /\.txt$/is   // TXT extension (case insensitive)
+		uint16(0) == 0x5a4d 					
+		and filename matches /\.txt$/is   
 }
 
 rule EXE_extension_cloaking {
-	meta:
+meta:
 		description = "Executable showing different extension (Windows default 'hide known extension')"
 		author = "Florian Roth"
 	condition:
-		filename matches /\.txt\.exe$/is or	// Special file extensions
-		filename matches /\.pdf\.exe$/is		// Special file extensions
+		filename matches /\.txt\.exe$/is or	
+		filename matches /\.pdf\.exe$/is		
 }
 
 rule Cloaked_RAR_File {
-	meta:
+meta:
 		description = "RAR file cloaked by a different extension"
 		author = "Florian Roth"
 	condition:
-		uint32be(0) == 0x52617221							// RAR File Magic Header
-		and not filename matches /(rarnew.dat|\.rar)$/is	// not the .RAR extension
+		uint32be(0) == 0x52617221							
+		and not filename matches /(rarnew.dat|\.rar)$/is	
 		and not filepath contains "Recycle" 				// not a deleted RAR file in recycler
 }
 
 rule Base64_encoded_Executable {
-	meta:
+meta:
 		description = "Detects an base64 encoded executable (often embedded)"
 		author = "Florian Roth"
 		date = "2015-05-28"
@@ -55,7 +43,7 @@ rule Base64_encoded_Executable {
 }
 
 rule Gen_Base64_EXE {
-   meta:
+meta:
       description = "Detects Base64 encoded Executable in Executable"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -74,7 +62,7 @@ rule Gen_Base64_EXE {
 }
 
 rule Binary_Drop_Certutil {
-	meta:
+meta:
 		description = "Drop binary as base64 encoded cert trick"
 		author = "Florian Roth"
 		reference = "https://goo.gl/9DNn8q"
@@ -89,7 +77,7 @@ rule Binary_Drop_Certutil {
 }
 
 rule StegoKatz {
-	meta:
+meta:
 		description = "Encoded Mimikatz in other file types"
 		author = "Florian Roth"
 		reference = "https://goo.gl/jWPBBY"
@@ -103,7 +91,7 @@ rule StegoKatz {
 }
 
 rule Obfuscated_VBS_April17 {
-   meta:
+meta:
       description = "Detects cloaked Mimikatz in VBS obfuscation"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -115,7 +103,7 @@ rule Obfuscated_VBS_April17 {
 }
 
 rule Obfuscated_JS_April17 {
-   meta:
+meta:
       description = "Detects cloaked Mimikatz in JS obfuscation"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -127,3 +115,4 @@ rule Obfuscated_JS_April17 {
    condition:
       filesize < 500KB and all of them
 }
+

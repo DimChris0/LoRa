@@ -1,17 +1,6 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2018-01-29
-   Identifier: TopHat
-   Reference: https://researchcenter.paloaltonetworks.com/2018/01/unit42-the-tophat-campaign-attacks-within-the-middle-east-region-using-popular-third-party-services/#appendix
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 import "pe"
-
 rule TopHat_Malware_Jan18_1 {
-   meta:
+meta:
       description = "Detects malware from TopHat campaign"
       author = "Florian Roth"
       reference = "https://researchcenter.paloaltonetworks.com/2018/01/unit42-the-tophat-campaign-attacks-within-the-middle-east-region-using-popular-third-party-services/#appendix"
@@ -34,7 +23,7 @@ rule TopHat_Malware_Jan18_1 {
 }
 
 rule TopHat_Malware_Jan18_2 {
-   meta:
+meta:
       description = "Auto-generated rule - file e.exe"
       author = "Florian Roth"
       reference = "https://researchcenter.paloaltonetworks.com/2018/01/unit42-the-tophat-campaign-attacks-within-the-middle-east-region-using-popular-third-party-services/#appendix"
@@ -55,7 +44,7 @@ rule TopHat_Malware_Jan18_2 {
 }
 
 rule TopHat_BAT {
-   meta:
+meta:
       description = "Auto-generated rule - file cgen.bat"
       author = "Florian Roth"
       reference = "https://researchcenter.paloaltonetworks.com/2018/01/unit42-the-tophat-campaign-attacks-within-the-middle-east-region-using-popular-third-party-services/#appendix"
@@ -69,3 +58,4 @@ rule TopHat_BAT {
    condition:
       filesize < 5KB and all of them
 }
+

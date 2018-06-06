@@ -1,15 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-01-30
-	Identifier: Codoso
-	Comment: Reduced signature set for LOKI integration
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Codoso_PlugX_3 {
-	meta:
+meta:
 		description = "Detects Codoso APT PlugX Malware"
 		author = "Florian Roth"
 		reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
@@ -23,8 +13,9 @@ rule Codoso_PlugX_3 {
 	condition:
 		uint16(0) == 0x5a4d and filesize < 1200KB and all of them
 }
+
 rule Codoso_PlugX_2 {
-	meta:
+meta:
 		description = "Detects Codoso APT PlugX Malware"
 		author = "Florian Roth"
 		reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
@@ -39,8 +30,9 @@ rule Codoso_PlugX_2 {
 	condition:
 		( uint16(0) == 0x5a4d and filesize < 400KB and 3 of them ) or all of them
 }
+
 rule Codoso_CustomTCP_4 {
-	meta:
+meta:
 		description = "Detects Codoso APT CustomTCP Malware"
 		author = "Florian Roth"
 		reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
@@ -63,8 +55,9 @@ rule Codoso_CustomTCP_4 {
 		( uint16(0) == 0x5a4d and filesize < 400KB and 5 of them ) or
 		( $x1 and 2 of ($s*) )
 }
+
 rule Codoso_CustomTCP_3 {
-	meta:
+meta:
 		description = "Detects Codoso APT CustomTCP Malware"
 		author = "Florian Roth"
 		reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
@@ -83,8 +76,9 @@ rule Codoso_CustomTCP_3 {
 	condition:
 		( uint16(0) == 0x5a4d and filesize < 500KB and 5 of them ) or 7 of them
 }
+
 rule Codoso_CustomTCP_2 {
-	meta:
+meta:
 		description = "Detects Codoso APT CustomTCP Malware"
 		author = "Florian Roth"
 		reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
@@ -102,8 +96,9 @@ rule Codoso_CustomTCP_2 {
 	condition:
 		uint16(0) == 0x5a4d and filesize < 406KB and all of them
 }
+
 rule Codoso_PGV_PVID_6 {
-	meta:
+meta:
 		description = "Detects Codoso APT PGV_PVID Malware"
 		author = "Florian Roth"
 		reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
@@ -115,8 +110,9 @@ rule Codoso_PGV_PVID_6 {
 	condition:
 		uint16(0) == 0x5a4d and filesize < 6000KB and all of them
 }
+
 rule Codoso_Gh0st_3 {
-	meta:
+meta:
 		description = "Detects Codoso APT Gh0st Malware"
 		author = "Florian Roth"
 		reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
@@ -135,8 +131,9 @@ rule Codoso_Gh0st_3 {
 	condition:
 		uint16(0) == 0x5a4d and filesize < 195KB and $x1 or 4 of them
 }
+
 rule Codoso_Gh0st_2 {
-	meta:
+meta:
 		description = "Detects Codoso APT Gh0st Malware"
 		author = "Florian Roth"
 		reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
@@ -152,8 +149,9 @@ rule Codoso_Gh0st_2 {
 	condition:
 		uint16(0) == 0x5a4d and filesize < 500KB and 1 of them
 }
+
 rule Codoso_CustomTCP {
-	meta:
+meta:
 		description = "Codoso CustomTCP Malware"
 		author = "Florian Roth"
 		reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
@@ -169,10 +167,8 @@ rule Codoso_CustomTCP {
 		uint16(0) == 0x5a4d and filesize < 405KB and all of them
 }
 
-/* Super Rules ------------------------------------------------------------- */
-
 rule Codoso_PGV_PVID_5 {
-	meta:
+meta:
 		description = "Detects Codoso APT PGV PVID Malware"
 		author = "Florian Roth"
 		reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
@@ -186,8 +182,9 @@ rule Codoso_PGV_PVID_5 {
 	condition:
 		uint16(0) == 0x5a4d and filesize < 500KB and all of them
 }
+
 rule Codoso_Gh0st_1 {
-	meta:
+meta:
 		description = "Detects Codoso APT Gh0st Malware"
 		author = "Florian Roth"
 		reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
@@ -223,8 +220,9 @@ rule Codoso_Gh0st_1 {
 		1 of ($x*) or
 		6 of ($c*)
 }
+
 rule Codoso_PGV_PVID_4 {
-	meta:
+meta:
 		description = "Detects Codoso APT PlugX Malware"
 		author = "Florian Roth"
 		reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
@@ -249,8 +247,9 @@ rule Codoso_PGV_PVID_4 {
 	condition:
 		uint16(0) == 0x5a4d and filesize < 900KB and 2 of ($x*) and 2 of ($s*)
 }
+
 rule Codoso_PlugX_1 {
-	meta:
+meta:
 		description = "Detects Codoso APT PlugX Malware"
 		author = "Florian Roth"
 		reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
@@ -266,8 +265,9 @@ rule Codoso_PlugX_1 {
 	condition:
 		uint16(0) == 0x5a4d and filesize < 800KB and all of them
 }
+
 rule Codoso_PGV_PVID_3 {
-	meta:
+meta:
 		description = "Detects Codoso APT PGV PVID Malware"
 		author = "Florian Roth"
 		reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
@@ -284,8 +284,9 @@ rule Codoso_PGV_PVID_3 {
 	condition:
 		$x1
 }
+
 rule Codoso_PGV_PVID_2 {
-	meta:
+meta:
 		description = "Detects Codoso APT PGV PVID Malware"
 		author = "Florian Roth"
 		reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
@@ -305,8 +306,9 @@ rule Codoso_PGV_PVID_2 {
 	condition:
 		uint16(0) == 0x5a4d and filesize < 907KB and all of them
 }
+
 rule Codoso_PGV_PVID_1 {
-	meta:
+meta:
 		description = "Detects Codoso APT PGV PVID Malware"
 		author = "Florian Roth"
 		reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
@@ -328,8 +330,9 @@ rule Codoso_PGV_PVID_1 {
 		$s5 = "Microsoft Chart ActiveX Control" fullword wide
 		$s6 = "MSChartCtrl.ocx" fullword wide
 		$s7 = "{%08X-%04X-%04x-%02X%02X-%02X%02X%02X%02X%02X%02X}" fullword ascii
-		$s8 = "WUServiceMain" fullword ascii /* Goodware String - occured 2 times */
+		$s8 = "WUServiceMain" fullword ascii 
 	condition:
 		( uint16(0) == 0x5a4d and ( 1 of ($x*) or 3 of them ) ) or
 		5 of them
 }
+

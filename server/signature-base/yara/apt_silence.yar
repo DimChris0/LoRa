@@ -1,17 +1,6 @@
 import "pe"
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-11-01
-   Identifier: Silence
-   Reference: https://securelist.com/the-silence/83009/
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Silence_malware_1 {
-   meta:
+meta:
       description = "Detects malware sample mentioned in the Silence report on Securelist"
       author = "Florian Roth"
       reference = "https://securelist.com/the-silence/83009/"
@@ -36,7 +25,7 @@ rule Silence_malware_1 {
 }
 
 rule Silence_malware_2 {
-   meta:
+meta:
       description = "Detects malware sample mentioned in the Silence report on Securelist"
       author = "Florian Roth"
       reference = "https://securelist.com/the-silence/83009/"
@@ -58,3 +47,4 @@ rule Silence_malware_2 {
          )
       ) or ( 5 of them )
 }
+

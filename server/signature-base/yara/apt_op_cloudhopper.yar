@@ -1,14 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-04-03
-   Identifier: Operation Cloud Hopper
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule OpCloudHopper_Malware_1 {
-   meta:
+meta:
       description = "Detects malware from Operation Cloud Hopper"
       author = "Florian Roth"
       reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
@@ -24,7 +15,7 @@ rule OpCloudHopper_Malware_1 {
 }
 
 rule OpCloudHopper_Malware_2 {
-   meta:
+meta:
       description = "Detects malware from Operation Cloud Hopper"
       author = "Florian Roth"
       reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
@@ -52,7 +43,7 @@ rule OpCloudHopper_Malware_2 {
 }
 
 rule OpCloudHopper_Malware_3 {
-   meta:
+meta:
       description = "Detects malware from Operation Cloud Hopper"
       author = "Florian Roth"
       reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
@@ -72,7 +63,7 @@ rule OpCloudHopper_Malware_3 {
 }
 
 rule OpCloudHopper_Dropper_1 {
-   meta:
+meta:
       description = "Detects malware from Operation Cloud Hopper"
       author = "Florian Roth"
       reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
@@ -85,7 +76,7 @@ rule OpCloudHopper_Dropper_1 {
 }
 
 rule OpCloudHopper_Malware_4 {
-   meta:
+meta:
       description = "Detects malware from Operation Cloud Hopper"
       author = "Florian Roth"
       reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
@@ -100,7 +91,7 @@ rule OpCloudHopper_Malware_4 {
 }
 
 rule OpCloudHopper_Malware_5 {
-   meta:
+meta:
       description = "Detects malware from Operation Cloud Hopper"
       author = "Florian Roth"
       reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
@@ -120,7 +111,7 @@ rule OpCloudHopper_Malware_5 {
 }
 
 rule OpCloudHopper_Malware_6 {
-   meta:
+meta:
       description = "Detects malware from Operation Cloud Hopper"
       author = "Florian Roth"
       reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
@@ -136,7 +127,7 @@ rule OpCloudHopper_Malware_6 {
 }
 
 rule OpCloudHopper_Malware_7 {
-   meta:
+meta:
       description = "Detects malware from Operation Cloud Hopper"
       author = "Florian Roth"
       reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
@@ -150,7 +141,7 @@ rule OpCloudHopper_Malware_7 {
 }
 
 rule OpCloudHopper_Malware_8 {
-   meta:
+meta:
       description = "Detects malware from Operation Cloud Hopper"
       author = "Florian Roth"
       reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
@@ -169,7 +160,7 @@ rule OpCloudHopper_Malware_8 {
 }
 
 rule OpCloudHopper_Malware_9 {
-   meta:
+meta:
       description = "Detects malware from Operation Cloud Hopper"
       author = "Florian Roth"
       reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
@@ -183,7 +174,7 @@ rule OpCloudHopper_Malware_9 {
 }
 
 rule OpCloudHopper_Malware_10 {
-   meta:
+meta:
       description = "Detects malware from Operation Cloud Hopper"
       author = "Florian Roth"
       reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
@@ -198,7 +189,7 @@ rule OpCloudHopper_Malware_10 {
 }
 
 rule OpCloudHopper_Malware_11 {
-   meta:
+meta:
       description = "Detects malware from Operation Cloud Hopper"
       author = "Florian Roth"
       reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
@@ -213,17 +204,8 @@ rule OpCloudHopper_Malware_11 {
       ( uint16(0) == 0x5a4d and filesize < 200KB and 2 of them )
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-04-07
-   Identifier: Operation Cloud Hopper - Related
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule OpCloudHopper_lockdown {
-   meta:
+meta:
       description = "Tools related to Operation Cloud Hopper"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -237,7 +219,7 @@ rule OpCloudHopper_lockdown {
 }
 
 rule OpCloudHopper_WindowXarBot {
-   meta:
+meta:
       description = "Malware related to Operation Cloud Hopper"
       author = "Florian Roth"
       reference = "https://www.pwc.co.uk/cyber-security/pdf/cloud-hopper-annex-b-final.pdf"
@@ -249,7 +231,7 @@ rule OpCloudHopper_WindowXarBot {
 }
 
 rule OpCloudHopper_WmiDLL_inMemory {
-   meta:
+meta:
       description = "Malware related to Operation Cloud Hopper - Page 25"
       author = "Florian Roth"
       reference = "https://www.pwc.co.uk/cyber-security/pdf/cloud-hopper-annex-b-final.pdf"
@@ -260,22 +242,8 @@ rule OpCloudHopper_WmiDLL_inMemory {
       all of them
 }
 
-rule OpCloudHopper_Cloaked_PSCP {
-   meta:
-      description = "Tool used in Operation Cloud Hopper - pscp.exe cloaked as rundll32.exe"
-      author = "Florian Roth"
-      reference = "https://www.pwc.co.uk/cyber-security/pdf/cloud-hopper-annex-b-final.pdf"
-      date = "2017-04-07"
-      score = 90
-   strings:
-      $s1 = "AES-256 SDCTR" ascii
-      $s2 = "direct-tcpip" ascii
-   condition:
-      all of them and filename == "rundll32.exe"
-}
-
 rule VBS_WMIExec_Tool_Apr17_1 {
-   meta:
+meta:
       description = "Tools related to Operation Cloud Hopper"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -296,3 +264,4 @@ rule VBS_WMIExec_Tool_Apr17_1 {
    condition:
       ( filesize < 40KB and 1 of them ) or 3 of them
 }
+

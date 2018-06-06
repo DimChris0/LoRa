@@ -1,14 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-06-08
-	Identifier: PlugX Juni 2016
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule PlugX_J16_Gen {
-	meta:
+meta:
 		description = "Detects PlugX Malware samples from June 2016"
 		author = "Florian Roth"
 		reference = "VT Research"
@@ -38,7 +29,7 @@ rule PlugX_J16_Gen {
 }
 
 rule PlugX_J16_Gen2 {
-	meta:
+meta:
 		description = "Detects PlugX Malware Samples from June 2016"
 		author = "Florian Roth"
 		reference = "VT Research"
@@ -56,3 +47,4 @@ rule PlugX_J16_Gen2 {
 	condition:
 		( uint16(0) == 0x5a4d and filesize < 600KB and ( 2 of ($s*) ) ) or ( 5 of them )
 }
+

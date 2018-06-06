@@ -1,33 +1,14 @@
-/*
-	THOR Yara Inverse Matches
-	> Detect system file manipulations and common APT anomalies
-
-	This is an extract from the THOR signature database
-
-	Reference:
-	http://www.bsk-consulting.de/2014/05/27/inverse-yara-signature-matching/
-	https://www.bsk-consulting.de/2014/08/28/scan-system-files-manipulations-yara-inverse-matching-22/
-
-	Notice: These rules require an external variable called "filename"
-
-   License: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
-	Copyright and related rights waived via https://creativecommons.org/licenses/by-nc-sa/4.0/
-*/
-
-private rule WINDOWS_UPDATE_BDC
-{
+private rule WINDOWS_UPDATE_BDC {
 condition:
-    (uint32be(0) == 0x44434d01 and // magic: DCM PA30
+    (uint32be(0) == 0x44434d01 and 
      uint32be(4) == 0x50413330)
     or
     (uint32be(0) == 0x44434401 and
-     uint32be(12)== 0x50413330)    // magic: DCD PA30
+     uint32be(12)== 0x50413330)    
 }
 
-/* Rules -------------------------------------------------------------------- */
-
 rule iexplore_ANOMALY {
-	meta:
+meta:
 		author = "Florian Roth"
 		description = "Abnormal iexplore.exe - typical strings not found in file"
 		date = "23/04/2014"
@@ -44,7 +25,7 @@ rule iexplore_ANOMALY {
 }
 
 rule svchost_ANOMALY {
-	meta:
+meta:
 		author = "Florian Roth"
 		description = "Abnormal svchost.exe - typical strings not found in file"
 		date = "23/04/2014"
@@ -59,10 +40,8 @@ rule svchost_ANOMALY {
 		filename == "svchost.exe" and not 1 of ($win*) and not WINDOWS_UPDATE_BDC
 }
 
-/* removed 1 rule here */
-
 rule explorer_ANOMALY {
-	meta:
+meta:
 		author = "Florian Roth"
 		description = "Abnormal explorer.exe - typical strings not found in file"
 		date = "27/05/2014"
@@ -77,7 +56,7 @@ rule explorer_ANOMALY {
 }
 
 rule sethc_ANOMALY {
-	meta:
+meta:
 		description = "Sethc.exe has been replaced - Indicates Remote Access Hack RDP"
 		author = "F. Roth"
 		reference = "http://www.emc.com/collateral/white-papers/h12756-wp-shell-crew.pdf"
@@ -93,7 +72,7 @@ rule sethc_ANOMALY {
 }
 
 rule Utilman_ANOMALY {
-	meta:
+meta:
 		author = "Florian Roth"
 		description = "Abnormal utilman.exe - typical strings not found in file"
 		date = "01/06/2014"
@@ -107,7 +86,7 @@ rule Utilman_ANOMALY {
 }
 
 rule osk_ANOMALY {
-	meta:
+meta:
 		author = "Florian Roth"
 		description = "Abnormal osk.exe (On Screen Keyboard) - typical strings not found in file"
 		date = "01/06/2014"
@@ -122,7 +101,7 @@ rule osk_ANOMALY {
 }
 
 rule magnify_ANOMALY {
-	meta:
+meta:
 		author = "Florian Roth"
 		description = "Abnormal magnify.exe (Magnifier) - typical strings not found in file"
 		date = "01/06/2014"
@@ -136,7 +115,7 @@ rule magnify_ANOMALY {
 }
 
 rule narrator_ANOMALY {
-	meta:
+meta:
 		author = "Florian Roth"
 		description = "Abnormal narrator.exe - typical strings not found in file"
 		date = "01/06/2014"
@@ -152,7 +131,7 @@ rule narrator_ANOMALY {
 }
 
 rule notepad_ANOMALY {
-	meta:
+meta:
 		author = "Florian Roth"
 		description = "Abnormal notepad.exe - typical strings not found in file"
 		date = "01/06/2014"
@@ -167,10 +146,8 @@ rule notepad_ANOMALY {
 		filename == "notepad.exe" and not 1 of ($win*) and not WINDOWS_UPDATE_BDC
 }
 
-/* NEW ---------------------------------------------------------------------- */
-
 rule csrss_ANOMALY {
-	meta:
+meta:
 		description = "Anomaly rule looking for certain strings in a system file (maybe false positive on certain systems) - file csrss.exe"
 		author = "Florian Roth"
 		reference = "not set"
@@ -186,7 +163,7 @@ rule csrss_ANOMALY {
 }
 
 rule conhost_ANOMALY {
-	meta:
+meta:
 		description = "Anomaly rule looking for certain strings in a system file (maybe false positive on certain systems) - file conhost.exe"
 		author = "Florian Roth"
 		reference = "not set"
@@ -199,7 +176,7 @@ rule conhost_ANOMALY {
 }
 
 rule wininit_ANOMALY {
-	meta:
+meta:
 		description = "Anomaly rule looking for certain strings in a system file (maybe false positive on certain systems) - file wininit.exe"
 		author = "Florian Roth"
 		reference = "not set"
@@ -212,7 +189,7 @@ rule wininit_ANOMALY {
 }
 
 rule winlogon_ANOMALY {
-	meta:
+meta:
 		description = "Anomaly rule looking for certain strings in a system file (maybe false positive on certain systems) - file winlogon.exe"
 		author = "Florian Roth"
 		reference = "not set"
@@ -228,7 +205,7 @@ rule winlogon_ANOMALY {
 }
 
 rule SndVol_ANOMALY {
-	meta:
+meta:
 		description = "Anomaly rule looking for certain strings in a system file (maybe false positive on certain systems) - file SndVol.exe"
 		author = "Florian Roth"
 		reference = "not set"
@@ -241,7 +218,7 @@ rule SndVol_ANOMALY {
 }
 
 rule doskey_ANOMALY {
-	meta:
+meta:
 		description = "Anomaly rule looking for certain strings in a system file (maybe false positive on certain systems) - file doskey.exe"
 		author = "Florian Roth"
 		reference = "not set"
@@ -254,7 +231,7 @@ rule doskey_ANOMALY {
 }
 
 rule lsass_ANOMALY {
-	meta:
+meta:
 		description = "Anomaly rule looking for certain strings in a system file (maybe false positive on certain systems) - file lsass.exe"
 		author = "Florian Roth"
 		reference = "not set"
@@ -270,7 +247,7 @@ rule lsass_ANOMALY {
 }
 
 rule taskmgr_ANOMALY {
-	meta:
+meta:
 		description = "Anomaly rule looking for certain strings in a system file (maybe false positive on certain systems) - file taskmgr.exe"
 		author = "Florian Roth"
 		reference = "not set"
@@ -281,17 +258,13 @@ rule taskmgr_ANOMALY {
 		$s1 = "taskmgr.chm" fullword
 		$s2 = "TmEndTaskHandler::" ascii
       $s3 = "CM_Request_Eject_PC" /* Win XP */
+      $s4 = "NTShell Taskman Startup Mutex" fullword wide
 	condition:
 		( filename == "taskmgr.exe" or filename == "Taskmgr.exe" ) and not 1 of ($s*) and not WINDOWS_UPDATE_BDC
 }
 
-/* removed 22 rules here */
-
-/* APT ---------------------------------------------------------------------- */
-
-rule APT_Cloaked_PsExec
-	{
-	meta:
+rule APT_Cloaked_PsExec {
+meta:
 		description = "Looks like a cloaked PsExec. May be APT group activity."
 		date = "2014-07-18"
 		author = "Florian Roth"
@@ -301,15 +274,12 @@ rule APT_Cloaked_PsExec
 		$s1 = "Sysinternals PsExec" wide fullword
 	condition:
 		uint16(0) == 0x5a4d and $s0 and $s1
-		and not filename matches /(psexec.exe|PSEXESVC.EXE)$/is
-		and not filepath matches /RECYCLER\\S-1/
+		and not filename matches /(psexec.exe|PSEXESVC.EXE|PsExec64.exe)$/is
+		and not filepath matches /RECYCLE.BIN\\S-1/
 }
 
-/* removed 6 rules here */
-
-rule APT_Cloaked_SuperScan
-	{
-	meta:
+rule APT_Cloaked_SuperScan {
+meta:
 		description = "Looks like a cloaked SuperScan Port Scanner. May be APT group activity."
 		date = "2014-07-18"
 		author = "Florian Roth"
@@ -322,9 +292,8 @@ rule APT_Cloaked_SuperScan
 		( $magic at 0 ) and $s0 and $s1 and not filename contains "superscan"
 }
 
-rule APT_Cloaked_ScanLine
-	{
-	meta:
+rule APT_Cloaked_ScanLine {
+meta:
 		description = "Looks like a cloaked ScanLine Port Scanner. May be APT group activity."
 		date = "2014-07-18"
 		author = "Florian Roth"
@@ -338,9 +307,8 @@ rule APT_Cloaked_ScanLine
 		( $magic at 0 ) and $s0 and $s1 and $s2 and not filename == "sl.exe"
 }
 
-rule SAM_Hive_Backup
-{
-	meta:
+rule SAM_Hive_Backup {
+meta:
 		description = "Detects a SAM hive backup file"
 		author = "Florian Roth"
 		reference = "https://github.com/gentilkiwi/mimikatz/wiki/module-~-lsadump"
@@ -356,3 +324,4 @@ rule SAM_Hive_Backup
 			not filename == "SAM" and
 			not filename == "sam"
 }
+

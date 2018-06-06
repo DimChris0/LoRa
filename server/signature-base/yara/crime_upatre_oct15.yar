@@ -1,12 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2015-10-13
-	Identifier: Upatre Campaign October 2015
-*/
-
 rule Upatre_Hazgurut {
-	meta:
+meta:
 		description = "Detects Upatre malware - file hazgurut.exe"
 		author = "Florian Roth"
 		reference = "https://weankor.vxstream-sandbox.com/sample/6b857ef314938d37997c178ea50687a281d8ff9925f0c4e70940754643e2c0e3?environmentId=7"
@@ -41,3 +34,4 @@ rule Upatre_Hazgurut {
 		and $a1 in (0..4000)
 		and all of ($s*)
 }
+

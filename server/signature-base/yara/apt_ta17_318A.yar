@@ -1,14 +1,6 @@
-
-/*
-   Yara Rule Set
-   Author: US CERT
-   Date: 2017-11-15
-   Identifier: Hidden Cobra Fall Chill
-   Reference: https://www.us-cert.gov/ncas/alerts/TA17-318A
-*/
-
+import "pe"
 rule TA17_318A_rc4_stack_key_fallchill {
-   meta:
+meta:
       description = "HiddenCobra FallChill - rc4_stack_key"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/alerts/TA17-318B"
@@ -20,7 +12,7 @@ rule TA17_318A_rc4_stack_key_fallchill {
 }
 
 rule TA17_318A_success_fail_codes_fallchill {
-   meta:
+meta:
       description = "HiddenCobra FallChill - success_fail_codes"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/alerts/TA17-318B"
@@ -34,20 +26,8 @@ rule TA17_318A_success_fail_codes_fallchill {
       (uint16(0) == 0x5A4D and uint16(uint32(0x3c)) == 0x4550) and (($s0 and $f0) or ($s1 and $f1))
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-11-15
-   Identifier: Hidden Cobra Fall Chill
-   Reference: https://www.us-cert.gov/ncas/alerts/TA17-318A
-*/
-
-import "pe"
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule HiddenCobra_FallChill_1 {
-   meta:
+meta:
       description = "Auto-generated rule - file a606716355035d4a1ea0b15f3bee30aad41a2c32df28c2d468eafd18361d60d6"
       author = "Florian Roth"
       reference = "https://www.us-cert.gov/ncas/alerts/TA17-318A"
@@ -73,7 +53,7 @@ rule HiddenCobra_FallChill_1 {
 }
 
 rule HiddenCobra_FallChill_2 {
-   meta:
+meta:
       description = "Auto-generated rule - file 0a118eb23399000d148186b9079fa59caf4c3faa7e7a8f91533e467ac9b6ff41"
       author = "Florian Roth"
       reference = "https://www.us-cert.gov/ncas/alerts/TA17-318A"
@@ -89,3 +69,4 @@ rule HiddenCobra_FallChill_2 {
          ( 2 of them )
       )
 }
+

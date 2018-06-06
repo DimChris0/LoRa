@@ -1,17 +1,6 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2018-02-12
-   Identifier: Olympic Destroyer
-   Reference: http://blog.talosintelligence.com/2018/02/olympic-destroyer.html
-*/
-
 import "pe"
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Destructive_Ransomware_Gen1 {
-   meta:
+meta:
       description = "Detects destructive malware"
       author = "Florian Roth"
       reference = "http://blog.talosintelligence.com/2018/02/olympic-destroyer.html"
@@ -26,7 +15,7 @@ rule Destructive_Ransomware_Gen1 {
 }
 
 rule OlympicDestroyer_Gen2 {
-   meta:
+meta:
       description = "Detects Olympic Destroyer malware"
       author = "Florian Roth"
       reference = "http://blog.talosintelligence.com/2018/02/olympic-destroyer.html"
@@ -54,3 +43,4 @@ rule OlympicDestroyer_Gen2 {
          3 of them
       )
 }
+

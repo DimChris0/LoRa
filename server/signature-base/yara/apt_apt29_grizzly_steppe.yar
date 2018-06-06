@@ -1,14 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2016-12-29
-   Identifier: GRIZZLY STEPPE
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule GRIZZLY_STEPPE_Malware_1 {
-   meta:
+meta:
       description = "Auto-generated rule - file HRDG022184_certclint.dll"
       author = "Florian Roth"
       reference = "https://goo.gl/WVflzO"
@@ -26,7 +17,7 @@ rule GRIZZLY_STEPPE_Malware_1 {
 }
 
 rule GRIZZLY_STEPPE_Malware_2 {
-   meta:
+meta:
       description = "Auto-generated rule - file 9acba7e5f972cdd722541a23ff314ea81ac35d5c0c758eb708fb6e2cc4f598a0"
       author = "Florian Roth"
       reference = "https://goo.gl/WVflzO"
@@ -46,7 +37,7 @@ rule GRIZZLY_STEPPE_Malware_2 {
 }
 
 rule PAS_TOOL_PHP_WEB_KIT_mod {
-   meta:
+meta:
       description = "Detects PAS Tool PHP Web Kit"
       reference = "https://www.us-cert.gov/security-publications/GRIZZLY-STEPPE-Russian-Malicious-Cyber-Activity"
       author = "US CERT - modified by Florian Roth due to performance reasons"
@@ -68,7 +59,7 @@ rule PAS_TOOL_PHP_WEB_KIT_mod {
 }
 
 rule WebShell_PHP_Web_Kit_v3 {
-   meta:
+meta:
       description = "Detects PAS Tool PHP Web Kit"
       reference = "https://github.com/wordfence/grizzly"
       author = "Florian Roth"
@@ -87,7 +78,7 @@ rule WebShell_PHP_Web_Kit_v3 {
 }
 
 rule WebShell_PHP_Web_Kit_v4 {
-   meta:
+meta:
       description = "Detects PAS Tool PHP Web Kit"
       reference = "https://github.com/wordfence/grizzly"
       author = "Florian Roth"
@@ -103,3 +94,4 @@ rule WebShell_PHP_Web_Kit_v4 {
       filesize > 8KB and filesize < 100KB and
       2 of ($s*)
 }
+

@@ -1,14 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-06-14
-	Identifier: Sofacy June 2016
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Sofacy_Jun16_Sample1 {
-	meta:
+meta:
 		description = "Detects Sofacy Malware mentioned in PaloAltoNetworks APT report"
 		author = "Florian Roth"
 		reference = "http://goo.gl/mzAa97"
@@ -23,7 +14,7 @@ rule Sofacy_Jun16_Sample1 {
 }
 
 rule Sofacy_Jun16_Sample2 {
-	meta:
+meta:
 		description = "Detects Sofacy Malware mentioned in PaloAltoNetworks APT report"
 		author = "Florian Roth"
 		reference = "http://goo.gl/mzAa97"
@@ -45,7 +36,7 @@ rule Sofacy_Jun16_Sample2 {
 }
 
 rule Sofacy_Jun16_Sample3 {
-	meta:
+meta:
 		description = "Detects Sofacy Malware mentioned in PaloAltoNetworks APT report"
 		author = "Florian Roth"
 		reference = "http://goo.gl/mzAa97"
@@ -57,3 +48,4 @@ rule Sofacy_Jun16_Sample3 {
 	condition:
 		uint16(0) == 0x5a4d and filesize < 200KB and $s1
 }
+

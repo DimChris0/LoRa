@@ -1,14 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-10-04
-	Identifier: Mirai
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Mirai_Botnet_Malware {
-	meta:
+meta:
 		description = "Detects Mirai Botnet Malware"
 		author = "Florian Roth"
 		reference = "Internal Research"
@@ -47,18 +38,8 @@ rule Mirai_Botnet_Malware {
 		)
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-05-12
-   Identifier: Mirai
-   Reference: Internal Research
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Mirai_1_May17 {
-   meta:
+meta:
       description = "Detects Mirai Malware"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -74,7 +55,7 @@ rule Mirai_1_May17 {
 }
 
 rule Miari_2_May17 {
-   meta:
+meta:
       description = "Detects Mirai Malware"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -91,3 +72,4 @@ rule Miari_2_May17 {
    condition:
       ( uint16(0) == 0x457f and filesize < 5000KB and 2 of them )
 }
+

@@ -1,6 +1,5 @@
-
 rule Win32_Buzus_Softpulse {
-	meta:
+meta:
 		description = "Trojan Buzus / Softpulse"
 		author = "Florian Roth"
 		date = "2015-05-13"
@@ -22,3 +21,4 @@ rule Win32_Buzus_Softpulse {
 				all of ($s*) 
 			)
 }
+

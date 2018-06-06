@@ -1,0 +1,15 @@
+adobereadersetup-86x.exe
+adobesetup.exe
+adobe32en.exe
+adobereadersetup-86x.exe
+adobex86setup.sfx.exe
+google-update.exe
+adobereader-86x.exe
+adobesetupx86.exe
+adobred-86x.exe
+adobereader-86x-64x.exe
+adobeflash.exe
+adobesetup32.exe
+adobeinsx86.exe
+adobesetupx86.exe
+microtec.exe

@@ -1,14 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-02-17
-   Identifier: Magic Hound
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule APT_PupyRAT_PY {
-   meta:
+meta:
       description = "Detects Pupy RAT"
       author = "Florian Roth"
       reference = "https://www.secureworks.com/blog/iranian-pupyrat-bites-middle-eastern-organizations"
@@ -26,10 +17,8 @@ rule APT_PupyRAT_PY {
       ( uint16(0) == 0x5a4d and filesize < 20000KB and 1 of them ) or ( 2 of them )
 }
 
-/* Super Rules ------------------------------------------------------------- */
-
 rule APT_MagicHound_MalMacro {
-   meta:
+meta:
       description = "Detects malicious macro / powershell in Office document"
       author = "Florian Roth"
       reference = "https://www.secureworks.com/blog/iranian-pupyrat-bites-middle-eastern-organizations"
@@ -44,3 +33,4 @@ rule APT_MagicHound_MalMacro {
    condition:
       ( uint16(0) == 0xcfd0 and filesize < 8000KB and all of them )
 }
+

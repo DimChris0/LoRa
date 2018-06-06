@@ -1,14 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-01-14
-   Identifier: p0wnedShell
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule p0wnedPowerCat {
-   meta:
+meta:
       description = "p0wnedShell Runspace Post Exploitation Toolkit - file p0wnedPowerCat.cs"
       author = "Florian Roth"
       reference = "https://github.com/Cn33liz/p0wnedShell"
@@ -27,7 +18,7 @@ rule p0wnedPowerCat {
 }
 
 rule Hacktool_Strings_p0wnedShell {
-   meta:
+meta:
       description = "p0wnedShell Runspace Post Exploitation Toolkit - file p0wnedShell.cs"
       author = "Florian Roth"
       reference = "https://github.com/Cn33liz/p0wnedShell"
@@ -48,7 +39,7 @@ rule Hacktool_Strings_p0wnedShell {
 }
 
 rule p0wnedPotato {
-   meta:
+meta:
       description = "p0wnedShell Runspace Post Exploitation Toolkit - file p0wnedPotato.cs"
       author = "Florian Roth"
       reference = "https://github.com/Cn33liz/p0wnedShell"
@@ -65,7 +56,7 @@ rule p0wnedPotato {
 }
 
 rule p0wnedExploits {
-   meta:
+meta:
       description = "p0wnedShell Runspace Post Exploitation Toolkit - file p0wnedExploits.cs"
       author = "Florian Roth"
       reference = "https://github.com/Cn33liz/p0wnedShell"
@@ -79,7 +70,7 @@ rule p0wnedExploits {
 }
 
 rule p0wnedShellx64 {
-   meta:
+meta:
       description = "p0wnedShell Runspace Post Exploitation Toolkit - file p0wnedShellx64.exe"
       author = "Florian Roth"
       reference = "https://github.com/Cn33liz/p0wnedShell"
@@ -96,7 +87,7 @@ rule p0wnedShellx64 {
 }
 
 rule p0wnedListenerConsole {
-   meta:
+meta:
       description = "p0wnedShell Runspace Post Exploitation Toolkit - file p0wnedListenerConsole.cs"
       author = "Florian Roth"
       reference = "https://github.com/Cn33liz/p0wnedShell"
@@ -116,7 +107,7 @@ rule p0wnedListenerConsole {
 }
 
 rule p0wnedBinaries {
-   meta:
+meta:
       description = "p0wnedShell Runspace Post Exploitation Toolkit - file p0wnedBinaries.cs"
       author = "Florian Roth"
       reference = "https://github.com/Cn33liz/p0wnedShell"
@@ -135,7 +126,7 @@ rule p0wnedBinaries {
 }
 
 rule p0wnedAmsiBypass {
-   meta:
+meta:
       description = "p0wnedShell Runspace Post Exploitation Toolkit - file p0wnedAmsiBypass.cs"
       author = "Florian Roth"
       reference = "https://github.com/Cn33liz/p0wnedShell"
@@ -150,7 +141,7 @@ rule p0wnedAmsiBypass {
 }
 
 rule p0wnedShell_outputs {
-   meta:
+meta:
       description = "p0wnedShell Runspace Post Exploitation Toolkit - from files p0wnedShell.cs, p0wnedShell.cs"
       author = "Florian Roth"
       reference = "https://github.com/Cn33liz/p0wnedShell"
@@ -164,3 +155,4 @@ rule p0wnedShell_outputs {
    condition:
       1 of them
 }
+

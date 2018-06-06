@@ -1,15 +1,5 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2016-12-17
-   Identifier: Five Eyes ShadowBroker - Screenshots Extractions
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule FVEY_ShadowBroker_Auct_Dez16_Strings {
-  meta:
+meta:
      description = "String from the ShodowBroker Files Screenshots - Dec 2016"
      author = "Florian Roth"
      score = 60
@@ -70,7 +60,7 @@ rule FVEY_ShadowBroker_Auct_Dez16_Strings {
 }
 
 rule FVEY_ShadowBroker_violetspirit {
-   meta:
+meta:
       description = "Auto-generated rule - file violetspirit.README"
       author = "Florian Roth"
       reference = "https://bit.no.com:43110/theshadowbrokers.bit/post/message6/"
@@ -83,7 +73,7 @@ rule FVEY_ShadowBroker_violetspirit {
 }
 
 rule FVEY_ShadowBroker_gr_gr {
-   meta:
+meta:
       description = "Auto-generated rule - file gr.notes"
       author = "Florian Roth"
       reference = "https://bit.no.com:43110/theshadowbrokers.bit/post/message6/"
@@ -96,7 +86,7 @@ rule FVEY_ShadowBroker_gr_gr {
 }
 
 rule FVEY_ShadowBroker_user_tool_yellowspirit {
-   meta:
+meta:
       description = "Auto-generated rule - file user.tool.yellowspirit.COMMON"
       author = "Florian Roth"
       reference = "https://bit.no.com:43110/theshadowbrokers.bit/post/message6/"
@@ -110,7 +100,7 @@ rule FVEY_ShadowBroker_user_tool_yellowspirit {
 }
 
 rule FVEY_ShadowBroker_eleganteagle_opscript_1_0_0 {
-   meta:
+meta:
       description = "Auto-generated rule - file eleganteagle_opscript.1.0.0.6"
       author = "Florian Roth"
       reference = "https://bit.no.com:43110/theshadowbrokers.bit/post/message6/"
@@ -123,7 +113,7 @@ rule FVEY_ShadowBroker_eleganteagle_opscript_1_0_0 {
 }
 
 rule FVEY_ShadowBroker_opscript {
-   meta:
+meta:
       description = "Auto-generated rule - file opscript.se"
       author = "Florian Roth"
       reference = "https://bit.no.com:43110/theshadowbrokers.bit/post/message6/"
@@ -136,7 +126,7 @@ rule FVEY_ShadowBroker_opscript {
 }
 
 rule FVEY_ShadowBroker_user_tool_shentysdelight {
-   meta:
+meta:
       description = "Auto-generated rule - file user.tool.shentysdelight.COMMON"
       author = "Florian Roth"
       reference = "https://bit.no.com:43110/theshadowbrokers.bit/post/message6/"
@@ -149,7 +139,7 @@ rule FVEY_ShadowBroker_user_tool_shentysdelight {
 }
 
 rule FVEY_ShadowBroker_user_tool_epichero {
-   meta:
+meta:
       description = "Auto-generated rule - file user.tool.epichero.COMMON"
       author = "Florian Roth"
       reference = "https://bit.no.com:43110/theshadowbrokers.bit/post/message6/"
@@ -163,7 +153,7 @@ rule FVEY_ShadowBroker_user_tool_epichero {
 }
 
 rule FVEY_ShadowBroker_user_tool {
-   meta:
+meta:
       description = "Auto-generated rule - file user.tool.elatedmonkey"
       author = "Florian Roth"
       reference = "https://bit.no.com:43110/theshadowbrokers.bit/post/message6/"
@@ -176,7 +166,7 @@ rule FVEY_ShadowBroker_user_tool {
 }
 
 rule FVEY_ShadowBroker_user_tool_dubmoat {
-   meta:
+meta:
       description = "Auto-generated rule - file user.tool.dubmoat.COMMON"
       author = "Florian Roth"
       reference = "https://bit.no.com:43110/theshadowbrokers.bit/post/message6/"
@@ -190,7 +180,7 @@ rule FVEY_ShadowBroker_user_tool_dubmoat {
 }
 
 rule FVEY_ShadowBroker_strifeworld {
-   meta:
+meta:
       description = "Auto-generated rule - file strifeworld.1"
       author = "Florian Roth"
       reference = "https://bit.no.com:43110/theshadowbrokers.bit/post/message6/"
@@ -204,7 +194,7 @@ rule FVEY_ShadowBroker_strifeworld {
 }
 
 rule FVEY_ShadowBroker_user_tool_pork {
-   meta:
+meta:
       description = "Auto-generated rule - file user.tool.pork.COMMON"
       author = "Florian Roth"
       reference = "https://bit.no.com:43110/theshadowbrokers.bit/post/message6/"
@@ -219,7 +209,7 @@ rule FVEY_ShadowBroker_user_tool_pork {
 }
 
 rule FVEY_ShadowBroker_user_tool_ebbisland {
-   meta:
+meta:
       description = "Auto-generated rule - file user.tool.ebbisland.COMMON"
       author = "Florian Roth"
       reference = "https://bit.no.com:43110/theshadowbrokers.bit/post/message6/"
@@ -233,7 +223,7 @@ rule FVEY_ShadowBroker_user_tool_ebbisland {
 }
 
 rule FVEY_ShadowBroker_user_tool_stoicsurgeon {
-   meta:
+meta:
       description = "Auto-generated rule - file user.tool.stoicsurgeon.COMMON"
       author = "Florian Roth"
       reference = "https://bit.no.com:43110/theshadowbrokers.bit/post/message6/"
@@ -246,7 +236,7 @@ rule FVEY_ShadowBroker_user_tool_stoicsurgeon {
 }
 
 rule FVEY_ShadowBroker_user_tool_elgingamble {
-   meta:
+meta:
       description = "Auto-generated rule - file user.tool.elgingamble.COMMON"
       author = "Florian Roth"
       reference = "https://bit.no.com:43110/theshadowbrokers.bit/post/message6/"
@@ -259,7 +249,7 @@ rule FVEY_ShadowBroker_user_tool_elgingamble {
 }
 
 rule FVEY_ShadowBroker_README_cup {
-   meta:
+meta:
       description = "Auto-generated rule - file README.cup.NOPEN"
       author = "Florian Roth"
       reference = "https://bit.no.com:43110/theshadowbrokers.bit/post/message6/"
@@ -273,7 +263,7 @@ rule FVEY_ShadowBroker_README_cup {
 }
 
 rule FVEY_ShadowBroker_nopen_oneshot {
-   meta:
+meta:
       description = "Auto-generated rule - file oneshot.example"
       author = "Florian Roth"
       reference = "https://bit.no.com:43110/theshadowbrokers.bit/post/message6/"
@@ -286,7 +276,7 @@ rule FVEY_ShadowBroker_nopen_oneshot {
 }
 
 rule FVEY_ShadowBroker_user_tool_earlyshovel {
-   meta:
+meta:
       description = "Auto-generated rule - file user.tool.earlyshovel.COMMON"
       author = "Florian Roth"
       reference = "https://bit.no.com:43110/theshadowbrokers.bit/post/message6/"
@@ -299,7 +289,7 @@ rule FVEY_ShadowBroker_user_tool_earlyshovel {
 }
 
 rule FVEY_ShadowBroker_user_tool_envisioncollision {
-   meta:
+meta:
       description = "Auto-generated rule - file user.tool.envisioncollision.COMMON"
       author = "Florian Roth"
       reference = "https://bit.no.com:43110/theshadowbrokers.bit/post/message6/"
@@ -314,10 +304,8 @@ rule FVEY_ShadowBroker_user_tool_envisioncollision {
       1 of them
 }
 
-/* Super Rules ------------------------------------------------------------- */
-
 rule FVEY_ShadowBroker_Gen_Readme1 {
-   meta:
+meta:
       description = "Auto-generated rule"
       author = "Florian Roth"
       reference = "https://bit.no.com:43110/theshadowbrokers.bit/post/message6/"
@@ -333,7 +321,7 @@ rule FVEY_ShadowBroker_Gen_Readme1 {
 }
 
 rule FVEY_ShadowBroker_Gen_Readme2 {
-   meta:
+meta:
       description = "Auto-generated rule - from files user.tool.orleansstride.COMMON, user.tool.curserazor.COMMON"
       author = "Florian Roth"
       reference = "https://bit.no.com:43110/theshadowbrokers.bit/post/message6/"
@@ -348,7 +336,7 @@ rule FVEY_ShadowBroker_Gen_Readme2 {
 }
 
 rule FVEY_ShadowBroker_Gen_Readme3 {
-   meta:
+meta:
       description = "Auto-generated rule"
       author = "Florian Roth"
       reference = "https://bit.no.com:43110/theshadowbrokers.bit/post/message6/"
@@ -368,7 +356,7 @@ rule FVEY_ShadowBroker_Gen_Readme3 {
 }
 
 rule FVEY_ShadowBroker_Gen_Readme4 {
-   meta:
+meta:
       description = "Auto-generated rule - from files violetspirit.README, violetspirit.README"
       author = "Florian Roth"
       reference = "https://bit.no.com:43110/theshadowbrokers.bit/post/message6/"
@@ -382,3 +370,4 @@ rule FVEY_ShadowBroker_Gen_Readme4 {
    condition:
       1 of them
 }
+

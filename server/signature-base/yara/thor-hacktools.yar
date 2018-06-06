@@ -1,29 +1,6 @@
-/*
-
-   THOR APT Scanner - Hack Tool Extract
-   This rulset is a subset of all hack tool rules included in our
-   APT Scanner THOR - the full featured APT scanner.
-
-   We will frequently update this file with new rules rated TLP:WHITE
-
-   Florian Roth
-   BSK Consulting GmbH
-   Web: bsk-consulting.de
-
-   revision: 20170620
-
-   License: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
-   Copyright and related rights waived via https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-*/
-
 import "pe"
-
-/* WCE */
-
-rule WindowsCredentialEditor
-{
-    meta:
+rule WindowsCredentialEditor {
+meta:
        description = "Windows Credential Editor"
       threat_level = 10
       score = 90
@@ -34,9 +11,8 @@ rule WindowsCredentialEditor
        all of them
 }
 
-rule Amplia_Security_Tool
-{
-    meta:
+rule Amplia_Security_Tool {
+meta:
       description = "Amplia Security Tool"
       score = 60
       nodeepdive = 1
@@ -50,11 +26,8 @@ rule Amplia_Security_Tool
     condition: 1 of them
 }
 
-/* pwdump/fgdump */
-
-rule PwDump
-{
-   meta:
+rule PwDump {
+meta:
       description = "PwDump 6 variant"
       author = "Marc Stroebel"
       date = "2014-04-24"
@@ -68,7 +41,7 @@ rule PwDump
 }
 
 rule PScan_Portscan_1 {
-   meta:
+meta:
       description = "PScan - Port Scanner"
       author = "F. Roth"
       score = 50
@@ -81,7 +54,7 @@ rule PScan_Portscan_1 {
 }
 
 rule HackTool_Samples {
-   meta:
+meta:
       description = "Hacktool"
       score = 50
    strings:
@@ -115,32 +88,8 @@ rule HackTool_Samples {
       1 of them
 }
 
-rule HackTool_Producers {
-   meta:
-      description = "Hacktool Producers String"
-      threat_level = 5
-      score = 50
-      nodeepdive = 1
-   strings:
-      $a1 = "www.oxid.it"
-      $a2 = "www.analogx.com"
-      $a3 = "ntsecurity.nu"
-      $a4 = "gentilkiwi.com"
-      $a6 = "Marcus Murray"
-      $a7 = "Nsasoft US LLC0"
-      $a8 = " Nir Sofer"
-   condition:
-      uint16(0) == 0x5a4d and 1 of ($a*) and
-      not extension contains ".ini" and
-      not extension contains ".xml" and
-      not extension contains ".sqlite"
-}
-
-/* Disclosed hack tool set */
-
-rule Fierce2
-{
-   meta:
+rule Fierce2 {
+meta:
       author = "Florian Roth"
       description = "This signature detects the Fierce2 domain scanner"
       date = "07/2014"
@@ -151,9 +100,8 @@ rule Fierce2
       1 of them
 }
 
-rule Ncrack
-{
-   meta:
+rule Ncrack {
+meta:
       author = "Florian Roth"
       description = "This signature detects the Ncrack brute force tool"
       date = "07/2014"
@@ -164,9 +112,8 @@ rule Ncrack
       1 of them
 }
 
-rule SQLMap
-{
-   meta:
+rule SQLMap {
+meta:
       author = "Florian Roth"
       description = "This signature detects the SQLMap SQL injection tool"
       date = "07/2014"
@@ -178,7 +125,7 @@ rule SQLMap
 }
 
 rule PortScanner {
-   meta:
+meta:
       description = "Auto-generated rule on file PortScanner.exe"
       author = "yarGen Yara Rule Generator by Florian Roth"
       hash = "b381b9212282c0c650cb4b0323436c63"
@@ -190,7 +137,7 @@ rule PortScanner {
 }
 
 rule DomainScanV1_0 {
-   meta:
+meta:
       description = "Auto-generated rule on file DomainScanV1_0.exe"
       author = "yarGen Yara Rule Generator by Florian Roth"
       hash = "aefcd73b802e1c2bdc9b2ef206a4f24e"
@@ -208,7 +155,7 @@ rule DomainScanV1_0 {
 }
 
 rule MooreR_Port_Scanner {
-   meta:
+meta:
       description = "Auto-generated rule on file MooreR Port Scanner.exe"
       author = "yarGen Yara Rule Generator by Florian Roth"
       hash = "376304acdd0b0251c8b19fea20bb6f5b"
@@ -222,7 +169,7 @@ rule MooreR_Port_Scanner {
 }
 
 rule NetBIOS_Name_Scanner {
-   meta:
+meta:
       description = "Auto-generated rule on file NetBIOS Name Scanner.exe"
       author = "yarGen Yara Rule Generator by Florian Roth"
       hash = "888ba1d391e14c0a9c829f5a1964ca2c"
@@ -235,7 +182,7 @@ rule NetBIOS_Name_Scanner {
 }
 
 rule FeliksPack3___Scanners_ipscan {
-   meta:
+meta:
       description = "Auto-generated rule on file ipscan.exe"
       author = "yarGen Yara Rule Generator by Florian Roth"
       hash = "6c1bcf0b1297689c8c4c12cc70996a75"
@@ -248,7 +195,7 @@ rule FeliksPack3___Scanners_ipscan {
 }
 
 rule CGISscan_CGIScan {
-   meta:
+meta:
       description = "Auto-generated rule on file CGIScan.exe"
       author = "yarGen Yara Rule Generator by Florian Roth"
       hash = "338820e4e8e7c943074d5a5bc832458a"
@@ -261,7 +208,7 @@ rule CGISscan_CGIScan {
 }
 
 rule IP_Stealing_Utilities {
-   meta:
+meta:
       description = "Auto-generated rule on file IP Stealing Utilities.exe"
       author = "yarGen Yara Rule Generator by Florian Roth"
       hash = "65646e10fb15a2940a37c5ab9f59c7fc"
@@ -273,7 +220,7 @@ rule IP_Stealing_Utilities {
 }
 
 rule SuperScan4 {
-   meta:
+meta:
       description = "Auto-generated rule on file SuperScan4.exe"
       author = "yarGen Yara Rule Generator by Florian Roth"
       hash = "78f76428ede30e555044b83c47bc86f0"
@@ -285,8 +232,9 @@ rule SuperScan4 {
       all of them
 
 }
+
 rule PortRacer {
-   meta:
+meta:
       description = "Auto-generated rule on file PortRacer.exe"
       author = "yarGen Yara Rule Generator by Florian Roth"
       hash = "2834a872a0a8da5b1be5db65dfdef388"
@@ -299,7 +247,7 @@ rule PortRacer {
 }
 
 rule scanarator {
-   meta:
+meta:
       description = "Auto-generated rule on file scanarator.exe"
       author = "yarGen Yara Rule Generator by Florian Roth"
       hash = "848bd5a518e0b6c05bd29aceb8536c46"
@@ -310,7 +258,7 @@ rule scanarator {
 }
 
 rule aolipsniffer {
-   meta:
+meta:
       description = "Auto-generated rule on file aolipsniffer.exe"
       author = "yarGen Yara Rule Generator by Florian Roth"
       hash = "51565754ea43d2d57b712d9f0a3e62b8"
@@ -329,7 +277,7 @@ rule aolipsniffer {
 }
 
 rule _Bitchin_Threads_ {
-   meta:
+meta:
       description = "Auto-generated rule on file =Bitchin Threads=.exe"
       author = "yarGen Yara Rule Generator by Florian Roth"
       hash = "7491b138c1ee5a0d9d141fbfd1f0071b"
@@ -341,7 +289,7 @@ rule _Bitchin_Threads_ {
 }
 
 rule cgis4_cgis4 {
-   meta:
+meta:
       description = "Auto-generated rule on file cgis4.exe"
       author = "yarGen Yara Rule Generator by Florian Roth"
       hash = "d658dad1cd759d7f7d67da010e47ca23"
@@ -357,7 +305,7 @@ rule cgis4_cgis4 {
 }
 
 rule portscan {
-   meta:
+meta:
       description = "Auto-generated rule on file portscan.exe"
       author = "yarGen Yara Rule Generator by Florian Roth"
       hash = "a8bfdb2a925e89a281956b1e3bb32348"
@@ -369,7 +317,7 @@ rule portscan {
 }
 
 rule ProPort_zip_Folder_ProPort {
-   meta:
+meta:
       description = "Auto-generated rule on file ProPort.exe"
       author = "yarGen Yara Rule Generator by Florian Roth"
       hash = "c1937a86939d4d12d10fc44b7ab9ab27"
@@ -387,7 +335,7 @@ rule ProPort_zip_Folder_ProPort {
 }
 
 rule StealthWasp_s_Basic_PortScanner_v1_2 {
-   meta:
+meta:
       description = "Auto-generated rule on file StealthWasp's Basic PortScanner v1.2.exe"
       author = "yarGen Yara Rule Generator by Florian Roth"
       hash = "7c0f2cab134534cd35964fe4c6a1ff00"
@@ -399,7 +347,7 @@ rule StealthWasp_s_Basic_PortScanner_v1_2 {
 }
 
 rule BluesPortScan {
-   meta:
+meta:
       description = "Auto-generated rule on file BluesPortScan.exe"
       author = "yarGen Yara Rule Generator by Florian Roth"
       hash = "6292f5fc737511f91af5e35643fc9eef"
@@ -411,7 +359,7 @@ rule BluesPortScan {
 }
 
 rule scanarator_iis {
-   meta:
+meta:
       description = "Auto-generated rule on file iis.exe"
       author = "yarGen Yara Rule Generator by Florian Roth"
       hash = "3a8fc02c62c8dd65e038cc03e5451b6e"
@@ -423,7 +371,7 @@ rule scanarator_iis {
 }
 
 rule stealth_Stealth {
-   meta:
+meta:
       description = "Auto-generated rule on file Stealth.exe"
       author = "yarGen Yara Rule Generator by Florian Roth"
       hash = "8ce3a386ce0eae10fc2ce0177bbc8ffa"
@@ -435,7 +383,7 @@ rule stealth_Stealth {
 }
 
 rule Angry_IP_Scanner_v2_08_ipscan {
-   meta:
+meta:
       description = "Auto-generated rule on file ipscan.exe"
       author = "yarGen Yara Rule Generator by Florian Roth"
       hash = "70cf2c09776a29c3e837cb79d291514a"
@@ -448,7 +396,7 @@ rule Angry_IP_Scanner_v2_08_ipscan {
 }
 
 rule crack_Loader {
-   meta:
+meta:
       description = "Auto-generated rule on file Loader.exe"
       author = "yarGen Yara Rule Generator by Florian Roth"
       hash = "f4f79358a6c600c1f0ba1f7e4879a16d"
@@ -460,7 +408,7 @@ rule crack_Loader {
 }
 
 rule CN_GUI_Scanner {
-   meta:
+meta:
       description = "Detects an unknown GUI scanner tool - CN background"
       author = "Florian Roth"
       hash = "3c67bbb1911cdaef5e675c56145e1112"
@@ -477,7 +425,7 @@ rule CN_GUI_Scanner {
 }
 
 rule CN_Packed_Scanner {
-   meta:
+meta:
       description = "Suspiciously packed executable"
       author = "Florian Roth"
       hash = "6323b51c116a77e3fba98f7bb7ff4ac6"
@@ -493,7 +441,7 @@ rule CN_Packed_Scanner {
 }
 
 rule Tiny_Network_Tool_Generic {
-   meta:
+meta:
       description = "Tiny tool with suspicious function imports. (Rule based on WinEggDrop Scanner samples)"
       author = "Florian Roth"
       date = "08.10.2014"
@@ -529,7 +477,7 @@ rule Tiny_Network_Tool_Generic {
 }
 
 rule Beastdoor_Backdoor {
-   meta:
+meta:
       description = "Detects the backdoor Beastdoor"
       author = "Florian Roth"
       score = 55
@@ -549,7 +497,7 @@ rule Beastdoor_Backdoor {
 }
 
 rule Powershell_Netcat {
-   meta:
+meta:
       description = "Detects a Powershell version of the Netcat network hacking tool"
       author = "Florian Roth"
       score = 60
@@ -563,7 +511,7 @@ rule Powershell_Netcat {
 }
 
 rule Chinese_Hacktool_1014 {
-   meta:
+meta:
       description = "Detects a chinese hacktool with unknown use"
       author = "Florian Roth"
       score = 60
@@ -580,7 +528,7 @@ rule Chinese_Hacktool_1014 {
 }
 
 rule CN_Hacktool_BAT_PortsOpen {
-   meta:
+meta:
       description = "Detects a chinese BAT hacktool for local port evaluation"
       author = "Florian Roth"
       score = 60
@@ -594,7 +542,7 @@ rule CN_Hacktool_BAT_PortsOpen {
 }
 
 rule CN_Hacktool_SSPort_Portscanner {
-   meta:
+meta:
       description = "Detects a chinese Portscanner named SSPort"
       author = "Florian Roth"
       score = 70
@@ -608,7 +556,7 @@ rule CN_Hacktool_SSPort_Portscanner {
 }
 
 rule CN_Hacktool_ScanPort_Portscanner {
-   meta:
+meta:
       description = "Detects a chinese Portscanner named ScanPort"
       author = "Florian Roth"
       score = 70
@@ -622,7 +570,7 @@ rule CN_Hacktool_ScanPort_Portscanner {
 }
 
 rule CN_Hacktool_S_EXE_Portscanner {
-   meta:
+meta:
       description = "Detects a chinese Portscanner named s.exe"
       author = "Florian Roth"
       score = 70
@@ -636,7 +584,7 @@ rule CN_Hacktool_S_EXE_Portscanner {
 }
 
 rule CN_Hacktool_MilkT_BAT {
-   meta:
+meta:
       description = "Detects a chinese Portscanner named MilkT - shipped BAT"
       author = "Florian Roth"
       score = 70
@@ -649,7 +597,7 @@ rule CN_Hacktool_MilkT_BAT {
 }
 
 rule CN_Hacktool_MilkT_Scanner {
-   meta:
+meta:
       description = "Detects a chinese Portscanner named MilkT"
       author = "Florian Roth"
       score = 60
@@ -667,7 +615,7 @@ rule CN_Hacktool_MilkT_Scanner {
 }
 
 rule CN_Hacktool_1433_Scanner {
-   meta:
+meta:
       description = "Detects a chinese MSSQL scanner"
       author = "Florian Roth"
       score = 40
@@ -685,7 +633,7 @@ rule CN_Hacktool_1433_Scanner {
 }
 
 rule CN_Hacktool_1433_Scanner_Comp2 {
-   meta:
+meta:
       description = "Detects a chinese MSSQL scanner - component 2"
       author = "Florian Roth"
       score = 40
@@ -700,7 +648,7 @@ rule CN_Hacktool_1433_Scanner_Comp2 {
 }
 
 rule WCE_Modified_1_1014 {
-   meta:
+meta:
       description = "Modified (packed) version of Windows Credential Editor"
       author = "Florian Roth"
       hash = "09a412ac3c85cedce2642a19e99d8f903a2e0354"
@@ -714,7 +662,7 @@ rule WCE_Modified_1_1014 {
 }
 
 rule ReactOS_cmd_valid {
-   meta:
+meta:
       description = "ReactOS cmd.exe with correct file name - maybe packed with software or part of hacker toolset"
       author = "Florian Roth"
       date = "05.11.14"
@@ -731,7 +679,7 @@ rule ReactOS_cmd_valid {
 }
 
 rule iKAT_wmi_rundll {
-   meta:
+meta:
       description = "This exe will attempt to use WMI to Call the Win32_Process event to spawn rundll - file wmi_rundll.exe"
       author = "Florian Roth"
       date = "05.11.14"
@@ -752,7 +700,7 @@ rule iKAT_wmi_rundll {
 }
 
 rule iKAT_revelations {
-   meta:
+meta:
       description = "iKAT hack tool showing the content of password fields - file revelations.exe"
       author = "Florian Roth"
       date = "05.11.14"
@@ -769,7 +717,7 @@ rule iKAT_revelations {
 }
 
 rule iKAT_priv_esc_tasksch {
-   meta:
+meta:
       description = "Task Schedulder Local Exploit - Windows local priv-esc using Task Scheduler, published by webDevil. Supports Windows 7 and Vista."
       author = "Florian Roth"
       date = "05.11.14"
@@ -795,7 +743,7 @@ rule iKAT_priv_esc_tasksch {
 }
 
 rule iKAT_command_lines_agent {
-   meta:
+meta:
       description = "iKAT hack tools set agent - file ikat.exe"
       author = "Florian Roth"
       date = "05.11.14"
@@ -816,7 +764,7 @@ rule iKAT_command_lines_agent {
 }
 
 rule iKAT_cmd_as_dll {
-   meta:
+meta:
       description = "iKAT toolset file cmd.dll ReactOS file cloaked"
       author = "Florian Roth"
       date = "05.11.14"
@@ -834,7 +782,7 @@ rule iKAT_cmd_as_dll {
 }
 
 rule iKAT_tools_nmap {
-   meta:
+meta:
       description = "Generic rule for NMAP - based on NMAP 4 standalone"
       author = "Florian Roth"
       date = "05.11.14"
@@ -851,7 +799,7 @@ rule iKAT_tools_nmap {
 }
 
 rule iKAT_startbar {
-   meta:
+meta:
       description = "Tool to hide unhide the windows startbar from command line - iKAT hack tools - file startbar.exe"
       author = "Florian Roth"
       date = "05.11.14"
@@ -871,7 +819,7 @@ rule iKAT_startbar {
 }
 
 rule iKAT_Tool_Generic {
-   meta:
+meta:
       description = "Generic Rule for hack tool iKAT files gpdisable.exe, kitrap0d.exe, uacpoc.exe"
       author = "Florian Roth"
       date = "05.11.14"
@@ -897,7 +845,7 @@ rule iKAT_Tool_Generic {
 }
 
 rule BypassUac2 {
-   meta:
+meta:
       description = "Auto-generated rule - file BypassUac2.zip"
       author = "yarGen Yara Rule Generator"
       hash = "ef3e7dd2d1384ecec1a37254303959a43695df61"
@@ -910,7 +858,7 @@ rule BypassUac2 {
 }
 
 rule BypassUac_3 {
-   meta:
+meta:
       description = "Auto-generated rule - file BypassUacDll.dll"
       author = "yarGen Yara Rule Generator"
       hash = "1974aacd0ed987119999735cad8413031115ce35"
@@ -924,7 +872,7 @@ rule BypassUac_3 {
 }
 
 rule BypassUac_9 {
-   meta:
+meta:
       description = "Auto-generated rule - file BypassUac.zip"
       author = "yarGen Yara Rule Generator"
       hash = "93c2375b2e4f75fc780553600fbdfd3cb344e69d"
@@ -939,7 +887,7 @@ rule BypassUac_9 {
 }
 
 rule BypassUacDll_6 {
-   meta:
+meta:
       description = "Auto-generated rule - file BypassUacDll.aps"
       author = "yarGen Yara Rule Generator"
       hash = "58d7b24b6870cb7f1ec4807d2f77dd984077e531"
@@ -951,7 +899,7 @@ rule BypassUacDll_6 {
 }
 
 rule BypassUacDll_7 {
-   meta:
+meta:
       description = "Auto-generated rule - file BypassUacDll.aps"
       author = "yarGen Yara Rule Generator"
       hash = "58d7b24b6870cb7f1ec4807d2f77dd984077e531"
@@ -963,7 +911,7 @@ rule BypassUacDll_7 {
 }
 
 rule BypassUac_EXE {
-   meta:
+meta:
       description = "Auto-generated rule - file BypassUacDll.aps"
       author = "yarGen Yara Rule Generator"
       hash = "58d7b24b6870cb7f1ec4807d2f77dd984077e531"
@@ -977,9 +925,8 @@ rule BypassUac_EXE {
       all of them
 }
 
-rule APT_Proxy_Malware_Packed_dev
-{
-   meta:
+rule APT_Proxy_Malware_Packed_dev {
+meta:
       author = "FRoth"
       date = "2014-11-10"
       description = "APT Malware - Proxy"
@@ -994,7 +941,7 @@ rule APT_Proxy_Malware_Packed_dev
 }
 
 rule Tzddos_DDoS_Tool_CN {
-   meta:
+meta:
       description = "Disclosed hacktool set - file tzddos"
       author = "Florian Roth"
       date = "17.11.14"
@@ -1013,7 +960,7 @@ rule Tzddos_DDoS_Tool_CN {
 }
 
 rule Ncat_Hacktools_CN {
-   meta:
+meta:
       description = "Disclosed hacktool set - file nc.exe"
       author = "Florian Roth"
       date = "17.11.14"
@@ -1031,7 +978,7 @@ rule Ncat_Hacktools_CN {
 }
 
 rule MS08_067_Exploit_Hacktools_CN {
-   meta:
+meta:
       description = "Disclosed hacktool set - file cs.exe"
       author = "Florian Roth"
       date = "17.11.14"
@@ -1050,7 +997,7 @@ rule MS08_067_Exploit_Hacktools_CN {
 }
 
 rule Hacktools_CN_Burst_sql {
-   meta:
+meta:
       description = "Disclosed hacktool set - file sql.exe"
       author = "Florian Roth"
       date = "17.11.14"
@@ -1071,7 +1018,7 @@ rule Hacktools_CN_Burst_sql {
 }
 
 rule Hacktools_CN_Panda_445TOOL {
-   meta:
+meta:
       description = "Disclosed hacktool set - file 445TOOL.rar"
       author = "Florian Roth"
       date = "17.11.14"
@@ -1087,7 +1034,7 @@ rule Hacktools_CN_Panda_445TOOL {
 }
 
 rule Hacktools_CN_Panda_445 {
-   meta:
+meta:
       description = "Disclosed hacktool set - file 445.rar"
       author = "Florian Roth"
       date = "17.11.14"
@@ -1107,7 +1054,7 @@ rule Hacktools_CN_Panda_445 {
 }
 
 rule Hacktools_CN_WinEggDrop {
-   meta:
+meta:
       description = "Disclosed hacktool set - file s.exe"
       author = "Florian Roth"
       date = "17.11.14"
@@ -1130,7 +1077,7 @@ rule Hacktools_CN_WinEggDrop {
 }
 
 rule Hacktools_CN_Scan_BAT {
-   meta:
+meta:
       description = "Disclosed hacktool set - file scan.bat"
       author = "Florian Roth"
       date = "17.11.14"
@@ -1148,7 +1095,7 @@ rule Hacktools_CN_Scan_BAT {
 }
 
 rule Hacktools_CN_Panda_Burst {
-   meta:
+meta:
       description = "Disclosed hacktool set - file Burst.rar"
       author = "Florian Roth"
       date = "17.11.14"
@@ -1161,7 +1108,7 @@ rule Hacktools_CN_Panda_Burst {
 }
 
 rule Hacktools_CN_445_cmd {
-   meta:
+meta:
       description = "Disclosed hacktool set - file cmd.bat"
       author = "Florian Roth"
       date = "17.11.14"
@@ -1176,7 +1123,7 @@ rule Hacktools_CN_445_cmd {
 }
 
 rule Hacktools_CN_GOGOGO_Bat {
-   meta:
+meta:
       description = "Disclosed hacktool set - file GOGOGO.bat"
       author = "Florian Roth"
       date = "17.11.14"
@@ -1201,7 +1148,7 @@ rule Hacktools_CN_GOGOGO_Bat {
 }
 
 rule Hacktools_CN_Burst_pass {
-   meta:
+meta:
       description = "Disclosed hacktool set - file pass.txt"
       author = "Florian Roth"
       date = "17.11.14"
@@ -1224,7 +1171,7 @@ rule Hacktools_CN_Burst_pass {
 }
 
 rule Hacktools_CN_JoHor_Posts_Killer {
-   meta:
+meta:
       description = "Disclosed hacktool set - file JoHor_Posts_Killer.exe"
       author = "Florian Roth"
       date = "17.11.14"
@@ -1245,7 +1192,7 @@ rule Hacktools_CN_JoHor_Posts_Killer {
 }
 
 rule Hacktools_CN_Panda_tesksd {
-   meta:
+meta:
       description = "Disclosed hacktool set - file tesksd.jpg"
       author = "Florian Roth"
       date = "17.11.14"
@@ -1260,7 +1207,7 @@ rule Hacktools_CN_Panda_tesksd {
 }
 
 rule Hacktools_CN_Http {
-   meta:
+meta:
       description = "Disclosed hacktool set - file Http.exe"
       author = "Florian Roth"
       date = "17.11.14"
@@ -1276,7 +1223,7 @@ rule Hacktools_CN_Http {
 }
 
 rule Hacktools_CN_Burst_Start {
-   meta:
+meta:
       description = "Disclosed hacktool set - file Start.bat - DoS tool"
       author = "Florian Roth"
       date = "17.11.14"
@@ -1297,7 +1244,7 @@ rule Hacktools_CN_Burst_Start {
 }
 
 rule Hacktools_CN_Panda_tasksvr {
-   meta:
+meta:
       description = "Disclosed hacktool set - file tasksvr.exe"
       author = "Florian Roth"
       date = "17.11.14"
@@ -1310,8 +1257,9 @@ rule Hacktools_CN_Panda_tasksvr {
    condition:
       all of them
 }
+
 rule Hacktools_CN_Burst_Clear {
-   meta:
+meta:
       description = "Disclosed hacktool set - file Clear.bat"
       author = "Florian Roth"
       date = "17.11.14"
@@ -1332,7 +1280,7 @@ rule Hacktools_CN_Burst_Clear {
 }
 
 rule Hacktools_CN_Burst_Thecard {
-   meta:
+meta:
       description = "Disclosed hacktool set - file Thecard.bat"
       author = "Florian Roth"
       date = "17.11.14"
@@ -1349,7 +1297,7 @@ rule Hacktools_CN_Burst_Thecard {
 }
 
 rule Hacktools_CN_Burst_Blast {
-   meta:
+meta:
       description = "Disclosed hacktool set - file Blast.bat"
       author = "Florian Roth"
       date = "17.11.14"
@@ -1363,7 +1311,7 @@ rule Hacktools_CN_Burst_Blast {
 }
 
 rule VUBrute_VUBrute {
-   meta:
+meta:
       description = "PoS Scammer Toolbox - http://goo.gl/xiIphp - file VUBrute.exe"
       author = "Florian Roth"
       date = "22.11.14"
@@ -1379,7 +1327,7 @@ rule VUBrute_VUBrute {
 }
 
 rule DK_Brute {
-   meta:
+meta:
       description = "PoS Scammer Toolbox - http://goo.gl/xiIphp - file DK Brute.exe"
       author = "Florian Roth"
       date = "22.11.14"
@@ -1396,7 +1344,7 @@ rule DK_Brute {
 }
 
 rule VUBrute_config {
-   meta:
+meta:
       description = "PoS Scammer Toolbox - http://goo.gl/xiIphp - file config.ini"
       author = "Florian Roth"
       date = "22.11.14"
@@ -1416,7 +1364,7 @@ rule VUBrute_config {
 }
 
 rule sig_238_hunt {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file hunt.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1435,7 +1383,7 @@ rule sig_238_hunt {
 }
 
 rule sig_238_listip {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file listip.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1453,7 +1401,7 @@ rule sig_238_listip {
 }
 
 rule ArtTrayHookDll {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file ArtTrayHookDll.dll"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1467,7 +1415,7 @@ rule ArtTrayHookDll {
 }
 
 rule sig_238_eee {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file eee.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1486,7 +1434,7 @@ rule sig_238_eee {
 }
 
 rule aspbackdoor_asp4 {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file asp4.txt"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1506,7 +1454,7 @@ rule aspbackdoor_asp4 {
 }
 
 rule aspfile1 {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file aspfile1.asp"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1524,7 +1472,7 @@ rule aspfile1 {
 }
 
 rule EditServer {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file EditServer.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1546,7 +1494,7 @@ rule EditServer {
 }
 
 rule sig_238_letmein {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file letmein.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1562,7 +1510,7 @@ rule sig_238_letmein {
 }
 
 rule sig_238_token {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file token.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1579,7 +1527,7 @@ rule sig_238_token {
 }
 
 rule sig_238_TELNET {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file TELNET.EXE from Windows ME"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1595,7 +1543,7 @@ rule sig_238_TELNET {
 }
 
 rule snifferport {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file snifferport.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1612,7 +1560,7 @@ rule snifferport {
 }
 
 rule sig_238_webget {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file webget.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1628,7 +1576,7 @@ rule sig_238_webget {
 }
 
 rule XYZCmd_zip_Folder_XYZCmd {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file XYZCmd.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1644,7 +1592,7 @@ rule XYZCmd_zip_Folder_XYZCmd {
 }
 
 rule ASPack_Chinese {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file ASPack Chinese.ini"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1661,7 +1609,7 @@ rule ASPack_Chinese {
 }
 
 rule aspbackdoor_EDIR {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file EDIR.ASP"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1677,29 +1625,8 @@ rule aspbackdoor_EDIR {
       all of them
 }
 
-rule sig_238_filespy {
-   meta:
-      description = "Disclosed hacktool set (old stuff) - file filespy.exe"
-      author = "Florian Roth"
-      date = "23.11.14"
-      score = 50
-      hash = "89d8490039778f8c5f07aa7fd476170293d24d26"
-   strings:
-      $s0 = "Hit [Enter] to begin command mode..." fullword ascii
-      $s1 = "If you are in command mode," fullword ascii
-      $s2 = "[/l] lists all the drives the monitor is currently attached to" fullword ascii
-      $s9 = "FileSpy.exe" fullword wide
-      $s12 = "ERROR starting FileSpy..." fullword ascii
-      $s16 = "exe\\filespy.dbg" fullword ascii
-      $s17 = "[/d <drive>] detaches monitor from <drive>" fullword ascii
-      $s19 = "Should be logging to screen..." fullword ascii
-      $s20 = "Filmon:  Unknown log record type" fullword ascii
-   condition:
-      7 of them
-}
-
 rule ByPassFireWall_zip_Folder_Ie {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file Ie.dll"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1715,7 +1642,7 @@ rule ByPassFireWall_zip_Folder_Ie {
 }
 
 rule EditKeyLogReadMe {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file EditKeyLogReadMe.txt"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1733,7 +1660,7 @@ rule EditKeyLogReadMe {
 }
 
 rule PassSniffer_zip_Folder_readme {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file readme.txt"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1748,7 +1675,7 @@ rule PassSniffer_zip_Folder_readme {
 }
 
 rule sig_238_gina {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file gina.reg"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1763,7 +1690,7 @@ rule sig_238_gina {
 }
 
 rule splitjoin {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file splitjoin.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1779,7 +1706,7 @@ rule splitjoin {
 }
 
 rule EditKeyLog {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file EditKeyLog.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1795,7 +1722,7 @@ rule EditKeyLog {
 }
 
 rule PassSniffer {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file PassSniffer.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1813,7 +1740,7 @@ rule PassSniffer {
 }
 
 rule aspfile2 {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file aspfile2.asp"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1829,7 +1756,7 @@ rule aspfile2 {
 }
 
 rule UnPack_rar_Folder_InjectT {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file InjectT.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1852,7 +1779,7 @@ rule UnPack_rar_Folder_InjectT {
 }
 
 rule Jc_WinEggDrop_Shell {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file Jc.WinEggDrop Shell.txt"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1871,7 +1798,7 @@ rule Jc_WinEggDrop_Shell {
 }
 
 rule aspbackdoor_asp1 {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file asp1.txt"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1889,7 +1816,7 @@ rule aspbackdoor_asp1 {
 }
 
 rule QQ_zip_Folder_QQ {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file QQ.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1909,7 +1836,7 @@ rule QQ_zip_Folder_QQ {
 }
 
 rule UnPack_rar_Folder_TBack {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file TBack.DLL"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1937,7 +1864,7 @@ rule UnPack_rar_Folder_TBack {
 }
 
 rule sig_238_cmd_2 {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file cmd.jsp"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1954,7 +1881,7 @@ rule sig_238_cmd_2 {
 }
 
 rule RangeScan {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file RangeScan.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1971,7 +1898,7 @@ rule RangeScan {
 }
 
 rule XYZCmd_zip_Folder_Readme {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file Readme.txt"
       author = "Florian Roth"
       date = "23.11.14"
@@ -1985,7 +1912,7 @@ rule XYZCmd_zip_Folder_Readme {
 }
 
 rule ByPassFireWall_zip_Folder_Inject {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file Inject.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2000,7 +1927,7 @@ rule ByPassFireWall_zip_Folder_Inject {
 }
 
 rule sig_238_sqlcmd {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file sqlcmd.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2019,7 +1946,7 @@ rule sig_238_sqlcmd {
 }
 
 rule ASPack_ASPACK {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file ASPACK.EXE"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2034,7 +1961,7 @@ rule ASPack_ASPACK {
 }
 
 rule sig_238_2323 {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file 2323.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2052,7 +1979,7 @@ rule sig_238_2323 {
 }
 
 rule Jc_ALL_WinEggDropShell_rar_Folder_Install_2 {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file Install.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2070,7 +1997,7 @@ rule Jc_ALL_WinEggDropShell_rar_Folder_Install_2 {
 }
 
 rule sig_238_TFTPD32 {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file TFTPD32.EXE"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2091,7 +2018,7 @@ rule sig_238_TFTPD32 {
 }
 
 rule sig_238_iecv {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file iecv.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2108,7 +2035,7 @@ rule sig_238_iecv {
 }
 
 rule Antiy_Ports_1_21 {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file Antiy Ports 1.21.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2123,7 +2050,7 @@ rule Antiy_Ports_1_21 {
 }
 
 rule perlcmd_zip_Folder_cmd {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file cmd.cgi"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2143,7 +2070,7 @@ rule perlcmd_zip_Folder_cmd {
 }
 
 rule aspbackdoor_asp3 {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file asp3.txt"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2163,7 +2090,7 @@ rule aspbackdoor_asp3 {
 }
 
 rule sig_238_FPipe {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file FPipe.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2181,7 +2108,7 @@ rule sig_238_FPipe {
 }
 
 rule sig_238_concon {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file concon.com"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2194,7 +2121,7 @@ rule sig_238_concon {
 }
 
 rule aspbackdoor_regdll {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file regdll.asp"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2210,7 +2137,7 @@ rule aspbackdoor_regdll {
 }
 
 rule CleanIISLog {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file CleanIISLog.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2231,7 +2158,7 @@ rule CleanIISLog {
 }
 
 rule sqlcheck {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file sqlcheck.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2248,7 +2175,7 @@ rule sqlcheck {
 }
 
 rule sig_238_RunAsEx {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file RunAsEx.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2266,7 +2193,7 @@ rule sig_238_RunAsEx {
 }
 
 rule sig_238_nbtdump {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file nbtdump.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2285,7 +2212,7 @@ rule sig_238_nbtdump {
 }
 
 rule sig_238_Glass2k {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file Glass2k.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2302,7 +2229,7 @@ rule sig_238_Glass2k {
 }
 
 rule SplitJoin_V1_3_3_rar_Folder_3 {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file splitjoin.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2317,7 +2244,7 @@ rule SplitJoin_V1_3_3_rar_Folder_3 {
 }
 
 rule aspbackdoor_EDIT {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file EDIT.ASP"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2336,7 +2263,7 @@ rule aspbackdoor_EDIT {
 }
 
 rule aspbackdoor_entice {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file entice.asp"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2353,7 +2280,7 @@ rule aspbackdoor_entice {
 }
 
 rule FPipe2_0 {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file FPipe2.0.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2371,7 +2298,7 @@ rule FPipe2_0 {
 }
 
 rule InstGina {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file InstGina.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2386,7 +2313,7 @@ rule InstGina {
 }
 
 rule ArtTray_zip_Folder_ArtTray {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file ArtTray.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2402,7 +2329,7 @@ rule ArtTray_zip_Folder_ArtTray {
 }
 
 rule sig_238_findoor {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file findoor.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2419,7 +2346,7 @@ rule sig_238_findoor {
 }
 
 rule aspbackdoor_ipclear {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file ipclear.vbs"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2436,7 +2363,7 @@ rule aspbackdoor_ipclear {
 }
 
 rule WinEggDropShellFinal_zip_Folder_InjectT {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file InjectT.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2453,7 +2380,7 @@ rule WinEggDropShellFinal_zip_Folder_InjectT {
 }
 
 rule gina_zip_Folder_gina {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file gina.dll"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2473,7 +2400,7 @@ rule gina_zip_Folder_gina {
 }
 
 rule superscan3_0 {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file superscan3.0.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2494,7 +2421,7 @@ rule superscan3_0 {
 }
 
 rule sig_238_xsniff {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file xsniff.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2515,7 +2442,7 @@ rule sig_238_xsniff {
 }
 
 rule sig_238_fscan {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - file fscan.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2536,7 +2463,7 @@ rule sig_238_fscan {
 }
 
 rule _iissample_nesscan_twwwscan {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - from files iissample.exe, nesscan.exe, twwwscan.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2562,7 +2489,7 @@ rule _iissample_nesscan_twwwscan {
 }
 
 rule _FsHttp_FsPop_FsSniffer {
-   meta:
+meta:
       description = "Disclosed hacktool set (old stuff) - from files FsHttp.exe, FsPop.exe, FsSniffer.exe"
       author = "Florian Roth"
       date = "23.11.14"
@@ -2588,7 +2515,7 @@ rule _FsHttp_FsPop_FsSniffer {
 }
 
 rule Ammyy_Admin_AA_v3 {
-   meta:
+meta:
       description = "Remote Admin Tool used by APT group Anunak (ru) - file AA_v3.4.exe and AA_v3.5.exe"
       author = "Florian Roth"
       reference = "http://goo.gl/gkAg2E"
@@ -2611,10 +2538,8 @@ rule Ammyy_Admin_AA_v3 {
       2 of ($x*) or all of ($s*)
 }
 
-/* Other dumper and custom hack tools */
-
 rule LinuxHacktool_eyes_scanssh {
-   meta:
+meta:
       description = "Linux hack tools - file scanssh"
       author = "Florian Roth"
       reference = "not set"
@@ -2639,7 +2564,7 @@ rule LinuxHacktool_eyes_scanssh {
 }
 
 rule LinuxHacktool_eyes_pscan2 {
-   meta:
+meta:
       description = "Linux hack tools - file pscan2"
       author = "Florian Roth"
       reference = "not set"
@@ -2657,7 +2582,7 @@ rule LinuxHacktool_eyes_pscan2 {
 }
 
 rule LinuxHacktool_eyes_a {
-   meta:
+meta:
       description = "Linux hack tools - file a"
       author = "Florian Roth"
       reference = "not set"
@@ -2675,7 +2600,7 @@ rule LinuxHacktool_eyes_a {
 }
 
 rule LinuxHacktool_eyes_mass {
-   meta:
+meta:
       description = "Linux hack tools - file mass"
       author = "Florian Roth"
       reference = "not set"
@@ -2692,7 +2617,7 @@ rule LinuxHacktool_eyes_mass {
 }
 
 rule LinuxHacktool_eyes_pscan2_2 {
-   meta:
+meta:
       description = "Linux hack tools - file pscan2.c"
       author = "Florian Roth"
       reference = "not set"
@@ -2708,9 +2633,8 @@ rule LinuxHacktool_eyes_pscan2_2 {
       2 of them
 }
 
-rule CN_Portscan : APT
-{
-    meta:
+rule CN_Portscan : APT {
+meta:
         description = "CN Port Scanner"
         author = "Florian Roth"
         release_date = "2013-11-29"
@@ -2722,9 +2646,8 @@ rule CN_Portscan : APT
         uint16(0) == 0x5A4D and $s2
 }
 
-rule WMI_vbs : APT
-{
-    meta:
+rule WMI_vbs : APT {
+meta:
         description = "WMI Tool - APT"
         author = "Florian Roth"
         release_date = "2013-11-29"
@@ -2737,7 +2660,7 @@ rule WMI_vbs : APT
 }
 
 rule CN_Toolset__XScanLib_XScanLib_XScanLib {
-   meta:
+meta:
       description = "Detects a Chinese hacktool from a disclosed toolset - from files XScanLib.dll, XScanLib.dll, XScanLib.dll"
       author = "Florian Roth"
       reference = "http://qiannao.com/ls/905300366/33834c0c/"
@@ -2758,7 +2681,7 @@ rule CN_Toolset__XScanLib_XScanLib_XScanLib {
 }
 
 rule CN_Toolset_NTscan_PipeCmd {
-   meta:
+meta:
       description = "Detects a Chinese hacktool from a disclosed toolset - file PipeCmd.exe"
       author = "Florian Roth"
       reference = "http://qiannao.com/ls/905300366/33834c0c/"
@@ -2782,7 +2705,7 @@ rule CN_Toolset_NTscan_PipeCmd {
 }
 
 rule CN_Toolset_LScanPortss_2 {
-   meta:
+meta:
       description = "Detects a Chinese hacktool from a disclosed toolset - file LScanPortss.exe"
       author = "Florian Roth"
       reference = "http://qiannao.com/ls/905300366/33834c0c/"
@@ -2802,7 +2725,7 @@ rule CN_Toolset_LScanPortss_2 {
 }
 
 rule CN_Toolset_sig_1433_135_sqlr {
-   meta:
+meta:
       description = "Detects a Chinese hacktool from a disclosed toolset - file sqlr.exe"
       author = "Florian Roth"
       reference = "http://qiannao.com/ls/905300366/33834c0c/"
@@ -2818,9 +2741,8 @@ rule CN_Toolset_sig_1433_135_sqlr {
       all of them
 }
 
-rule DarkComet_Keylogger_File
-{
-   meta:
+rule DarkComet_Keylogger_File {
+meta:
       author = "Florian Roth"
       description = "Looks like a keylogger file created by DarkComet Malware"
       date = "25.07.14"
@@ -2832,10 +2754,8 @@ rule DarkComet_Keylogger_File
       uint16(0) == 0x3A3A and #entry > 10 and #timestamp > 10
 }
 
-/* Mimikatz */
-
 rule Mimikatz_Memory_Rule_1 : APT {
-   meta:
+meta:
       author = "Florian Roth"
       date = "12/22/2014"
       score = 70
@@ -2861,7 +2781,7 @@ rule Mimikatz_Memory_Rule_1 : APT {
 }
 
 rule Mimikatz_Memory_Rule_2 : APT {
-   meta:
+meta:
       description = "Mimikatz Rule generated from a memory dump"
       author = "Florian Roth - Florian Roth"
       type = "memory"
@@ -2876,9 +2796,8 @@ rule Mimikatz_Memory_Rule_2 : APT {
       $s0 and 1 of ($x*)
 }
 
-rule mimikatz
-{
-   meta:
+rule mimikatz {
+meta:
       description      = "mimikatz"
       author         = "Benjamin DELPY (gentilkiwi)"
       tool_author      = "Benjamin DELPY (gentilkiwi)"
@@ -2900,20 +2819,8 @@ rule mimikatz
       (all of ($exe_x86_*)) or (all of ($exe_x64_*)) or (all of ($dll_*)) or (any of ($sys_*))
 }
 
-rule mimikatz_lsass_mdmp
-{
-   meta:
-      description      = "LSASS minidump file for mimikatz"
-      author         = "Benjamin DELPY (gentilkiwi)"
-   strings:
-      $lsass         = "System32\\lsass.exe"   wide nocase
-   condition:
-      (uint32(0) == 0x504d444d) and $lsass and filesize > 50000KB and not filename matches /WER/
-}
-
-rule wce
-{
-   meta:
+rule wce {
+meta:
       description      = "wce"
       author         = "Benjamin DELPY (gentilkiwi)"
       tool_author      = "Hernan Ochoa (hernano)"
@@ -2925,10 +2832,8 @@ rule wce
       any of them
 }
 
-
-rule lsadump
-{
-   meta:
+rule lsadump {
+meta:
       description      = "LSA dump programe (bootkey/syskey) - pwdump and others"
       author         = "Benjamin DELPY (gentilkiwi)"
 
@@ -2948,9 +2853,8 @@ rule lsadump
       and not 1 of ($fp*)
 }
 
-rule power_pe_injection
-{
-   meta:
+rule power_pe_injection {
+meta:
       description      = "PowerShell with PE Reflective Injection"
       author         = "Benjamin DELPY (gentilkiwi)"
    strings:
@@ -2959,9 +2863,8 @@ rule power_pe_injection
       $str_loadlib
 }
 
-rule Mimikatz_Logfile
-{
-   meta:
+rule Mimikatz_Logfile {
+meta:
       description = "Detects a log file generated by malicious hack tool mimikatz"
       author = "Florian Roth"
       score = 80
@@ -2976,7 +2879,7 @@ rule Mimikatz_Logfile
 }
 
 rule Mimikatz_Strings {
-   meta:
+meta:
       description = "Detects Mimikatz strings"
       author = "Florian Roth"
       reference = "not set"
@@ -3009,7 +2912,7 @@ rule Mimikatz_Strings {
 }
 
 rule AppInitHook {
-   meta:
+meta:
       description = "AppInitGlobalHooks-Mimikatz - Hide Mimikatz From Process Lists - file AppInitHook.dll"
       author = "Florian Roth"
       reference = "https://goo.gl/Z292v6"
@@ -3029,7 +2932,7 @@ rule AppInitHook {
 }
 
 rule VSSown_VBS {
-   meta:
+meta:
       description = "Detects VSSown.vbs script - used to export shadow copy elements like NTDS to take away and crack elsewhere"
       author = "Florian Roth"
       date = "2015-10-01"
@@ -3046,7 +2949,7 @@ rule VSSown_VBS {
 }
 
 rule Netview_Hacktool {
-   meta:
+meta:
       description = "Network domain enumeration tool - often used by attackers - file Nv.exe"
       author = "Florian Roth"
       reference = "https://github.com/mubix/netview"
@@ -3069,7 +2972,7 @@ rule Netview_Hacktool {
 }
 
 rule Netview_Hacktool_Output {
-   meta:
+meta:
       description = "Network domain enumeration tool output - often used by attackers - file filename.txt"
       author = "Florian Roth"
       reference = "https://github.com/mubix/netview"
@@ -3083,17 +2986,8 @@ rule Netview_Hacktool_Output {
       2 of them
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2016-03-09
-   Identifier: PSattack
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule PSAttack_EXE {
-   meta:
+meta:
       description = "PSAttack - Powershell attack tool - file PSAttack.exe"
       author = "Florian Roth"
       reference = "https://github.com/gdssecurity/PSAttack/releases/"
@@ -3112,7 +3006,7 @@ rule PSAttack_EXE {
 }
 
 rule Powershell_Attack_Scripts {
-   meta:
+meta:
       description = "Powershell Attack Scripts"
       author = "Florian Roth"
       date = "2016-03-09"
@@ -3127,7 +3021,7 @@ rule Powershell_Attack_Scripts {
 }
 
 rule PSAttack_ZIP {
-   meta:
+meta:
       description = "PSAttack - Powershell attack tool - file PSAttack.zip"
       author = "Florian Roth"
       reference = "https://github.com/gdssecurity/PSAttack/releases/"
@@ -3140,17 +3034,8 @@ rule PSAttack_ZIP {
       uint16(0) == 0x4b50 and all of them
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2016-04-01
-   Identifier: Linux Hacktool Shark
-*/
-
-/* Super Rules ------------------------------------------------------------- */
-
 rule Linux_Portscan_Shark_1 {
-   meta:
+meta:
       description = "Detects Linux Port Scanner Shark"
       author = "Florian Roth"
       reference = "Virustotal Research - see https://github.com/Neo23x0/Loki/issues/35"
@@ -3167,7 +3052,7 @@ rule Linux_Portscan_Shark_1 {
 }
 
 rule Linux_Portscan_Shark_2 {
-   meta:
+meta:
       description = "Detects Linux Port Scanner Shark"
       author = "Florian Roth"
       reference = "Virustotal Research - see https://github.com/Neo23x0/Loki/issues/35"
@@ -3183,15 +3068,8 @@ rule Linux_Portscan_Shark_2 {
       all of them
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2016-05-15
-   Identifier: dnscat2
-*/
-
 rule dnscat2_Hacktool {
-   meta:
+meta:
       description = "Detects dnscat2 - from files dnscat, dnscat2.exe"
       author = "Florian Roth"
       reference = "https://downloads.skullsecurity.org/dnscat2/"
@@ -3210,7 +3088,7 @@ rule dnscat2_Hacktool {
 }
 
 rule WCE_in_memory {
-   meta:
+meta:
       description = "Detects Windows Credential Editor (WCE) in memory (and also on disk)"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -3224,7 +3102,7 @@ rule WCE_in_memory {
 }
 
 rule pstgdump {
-   meta:
+meta:
       description = "Detects a tool used by APT groups - file pstgdump.exe"
       author = "Florian Roth"
       reference = "http://goo.gl/igxLyF"
@@ -3242,7 +3120,7 @@ rule pstgdump {
 }
 
 rule lsremora {
-   meta:
+meta:
       description = "Detects a tool used by APT groups"
       author = "Florian Roth"
       reference = "http://goo.gl/igxLyF"
@@ -3264,7 +3142,7 @@ rule lsremora {
 }
 
 rule servpw {
-   meta:
+meta:
       description = "Detects a tool used by APT groups - file servpw.exe"
       author = "Florian Roth"
       reference = "http://goo.gl/igxLyF"
@@ -3283,7 +3161,7 @@ rule servpw {
 }
 
 rule fgexec {
-   meta:
+meta:
       description = "Detects a tool used by APT groups - file fgexec.exe"
       author = "Florian Roth"
       reference = "http://goo.gl/igxLyF"
@@ -3299,7 +3177,7 @@ rule fgexec {
 }
 
 rule cachedump {
-   meta:
+meta:
       description = "Detects a tool used by APT groups - from files cachedump.exe, cachedump64.exe"
       author = "Florian Roth"
       reference = "http://goo.gl/igxLyF"
@@ -3319,7 +3197,7 @@ rule cachedump {
 }
 
 rule PwDump_B {
-   meta:
+meta:
       description = "Detects a tool used by APT groups - file PwDump.exe"
       author = "Florian Roth"
       reference = "http://goo.gl/igxLyF"
@@ -3338,17 +3216,8 @@ rule PwDump_B {
       ( uint16(0) == 0x5a4d and filesize < 400KB and 1 of ($x*) ) or ( 3 of them )
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2016-10-07
-   Identifier: MSBuild Katz-XML
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule MSBuild_Mimikatz_Execution_via_XML {
-   meta:
+meta:
       description = "Detects an XML that executes Mimikatz on an endpoint via MSBuild"
       author = "Florian Roth"
       reference = "https://gist.github.com/subTee/c98f7d005683e616560bda3286b6a0d8#file-katz-xml"
@@ -3366,17 +3235,8 @@ rule MSBuild_Mimikatz_Execution_via_XML {
       all of them
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-01-06
-   Identifier: Fscan
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Fscan_Portscanner {
-   meta:
+meta:
       description = "Fscan port scanner scan output / strings"
       author = "Florian Roth"
       reference = "https://twitter.com/JamesHabben/status/817112447970480128"
@@ -3389,18 +3249,8 @@ rule Fscan_Portscanner {
       filesize < 20KB and 3 of them
 }
 
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-03-15
-   Identifier: Windows Password Recovery
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule WPR_loader_EXE {
-   meta:
+meta:
       description = "Windows Password Recovery - file loader.exe"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -3420,7 +3270,7 @@ rule WPR_loader_EXE {
 }
 
 rule WPR_loader_DLL {
-   meta:
+meta:
       description = "Windows Password Recovery - file loader64.dll"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -3453,7 +3303,7 @@ rule WPR_loader_DLL {
 }
 
 rule WPR_Passscape_Loader {
-   meta:
+meta:
       description = "Windows Password Recovery - file ast.exe"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -3471,7 +3321,7 @@ rule WPR_Passscape_Loader {
 }
 
 rule WPR_Asterisk_Hook_Library {
-   meta:
+meta:
       description = "Windows Password Recovery - file ast64.dll"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -3493,7 +3343,7 @@ rule WPR_Asterisk_Hook_Library {
 }
 
 rule WPR_WindowsPasswordRecovery_EXE {
-   meta:
+meta:
       description = "Windows Password Recovery - file wpr.exe"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -3522,7 +3372,7 @@ rule WPR_WindowsPasswordRecovery_EXE {
 }
 
 rule WPR_WindowsPasswordRecovery_EXE_64 {
-   meta:
+meta:
       description = "Windows Password Recovery - file ast64.exe"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -3538,18 +3388,8 @@ rule WPR_WindowsPasswordRecovery_EXE_64 {
       ( uint16(0) == 0x5a4d and filesize < 300KB and all of them )
 }
 
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-03-17
-   Identifier: BeyondExec Remote Access Tool
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule BeyondExec_RemoteAccess_Tool {
-   meta:
+meta:
       description = "Detects BeyondExec Remote Access Tool - file rexesvr.exe"
       author = "Florian Roth"
       reference = "https://goo.gl/BvYurS"
@@ -3567,7 +3407,7 @@ rule BeyondExec_RemoteAccess_Tool {
 }
 
 rule Mimikatz_Gen_Strings {
-   meta:
+meta:
       description = "Detects Mimikatz by using some special strings"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -3588,18 +3428,8 @@ rule Mimikatz_Gen_Strings {
       ( uint16(0) == 0x5a4d and filesize < 12000KB and 1 of them )
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-07-07
-   Identifier: 0day
-   Reference: Disclosed 0day Repos
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Disclosed_0day_POCs_lpe {
-   meta:
+meta:
       description = "Detects POC code from disclosed 0day hacktool set"
       author = "Florian Roth"
       reference = "Disclosed 0day Repos"
@@ -3620,7 +3450,7 @@ rule Disclosed_0day_POCs_lpe {
 }
 
 rule Disclosed_0day_POCs_exploit {
-   meta:
+meta:
       description = "Detects POC code from disclosed 0day hacktool set"
       author = "Florian Roth"
       reference = "Disclosed 0day Repos"
@@ -3634,7 +3464,7 @@ rule Disclosed_0day_POCs_exploit {
 }
 
 rule Disclosed_0day_POCs_InjectDll {
-   meta:
+meta:
       description = "Detects POC code from disclosed 0day hacktool set"
       author = "Florian Roth"
       reference = "Disclosed 0day Repos"
@@ -3651,7 +3481,7 @@ rule Disclosed_0day_POCs_InjectDll {
 }
 
 rule Disclosed_0day_POCs_payload_MSI {
-   meta:
+meta:
       description = "Detects POC code from disclosed 0day hacktool set"
       author = "Florian Roth"
       reference = "Disclosed 0day Repos"
@@ -3666,7 +3496,7 @@ rule Disclosed_0day_POCs_payload_MSI {
 }
 
 rule Disclosed_0day_POCs_injector {
-   meta:
+meta:
       description = "Detects POC code from disclosed 0day hacktool set"
       author = "Florian Roth"
       reference = "Disclosed 0day Repos"
@@ -3686,7 +3516,7 @@ rule Disclosed_0day_POCs_injector {
 }
 
 rule Disclosed_0day_POCs_lpe_2 {
-   meta:
+meta:
       description = "Detects POC code from disclosed 0day hacktool set"
       author = "Florian Roth"
       reference = "Disclosed 0day Repos"
@@ -3701,7 +3531,7 @@ rule Disclosed_0day_POCs_lpe_2 {
 }
 
 rule Disclosed_0day_POCs_shellcodegenerator {
-   meta:
+meta:
       description = "Detects POC code from disclosed 0day hacktool set"
       author = "Florian Roth"
       reference = "Disclosed 0day Repos"
@@ -3714,7 +3544,7 @@ rule Disclosed_0day_POCs_shellcodegenerator {
 }
 
 rule SecurityXploded_Producer_String {
-   meta:
+meta:
       description = "Detects hacktools by SecurityXploded"
       author = "Florian Roth"
       reference = "http://securityxploded.com/browser-password-dump.php"
@@ -3727,18 +3557,8 @@ rule SecurityXploded_Producer_String {
       ( uint16(0) == 0x5a4d and all of them )
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-07-21
-   Identifier: Kekeo
-   Reference: https://github.com/gentilkiwi/kekeo/releases
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Kekeo_Hacktool {
-   meta:
+meta:
       description = "Detects Kekeo Hacktool"
       author = "Florian Roth"
       reference = "https://github.com/gentilkiwi/kekeo/releases"
@@ -3752,19 +3572,8 @@ rule Kekeo_Hacktool {
       ( uint16(0) == 0x5a4d and filesize < 2000KB and ( 1 of ($x*) ) )
 }
 
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-07-27
-   Identifier: AllTheThings
-   Reference: https://github.com/subTee/AllTheThings
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule AllTheThings {
-   meta:
+meta:
       description = "Detects AllTheThings"
       author = "Florian Roth"
       reference = "https://github.com/subTee/AllTheThings"
@@ -3782,7 +3591,7 @@ rule AllTheThings {
 }
 
 rule Impacket_Keyword {
-   meta:
+meta:
       description = "Detects Impacket Keyword in Executable"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -3798,19 +3607,8 @@ rule Impacket_Keyword {
       ( uint16(0) == 0x5a4d and filesize < 14000KB and 1 of them )
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-08-27
-   Reference: PasswordPro
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
-import "pe"
-
 rule PasswordsPro {
-   meta:
+meta:
       description = "Auto-generated rule - file PasswordsPro.exe"
       author = "Florian Roth"
       reference = "PasswordPro"
@@ -3828,7 +3626,7 @@ rule PasswordsPro {
 }
 
 rule PasswordPro_NTLM_DLL {
-   meta:
+meta:
       description = "Auto-generated rule - file NTLM.dll"
       author = "Florian Roth"
       reference = "PasswordPro"
@@ -3845,18 +3643,8 @@ rule PasswordPro_NTLM_DLL {
       )
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-08-29
-   Identifier: KeeTheft
-   Reference: https://github.com/HarmJ0y/KeeThief
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule KeeThief_PS {
-   meta:
+meta:
       description = "Detects component of KeeTheft - KeePass dump tool - file KeeThief.ps1"
       author = "Florian Roth"
       reference = "https://github.com/HarmJ0y/KeeThief"
@@ -3873,7 +3661,7 @@ rule KeeThief_PS {
 }
 
 rule KeeTheft_EXE {
-   meta:
+meta:
       description = "Detects component of KeeTheft - KeePass dump tool - file KeeTheft.exe"
       author = "Florian Roth"
       reference = "https://github.com/HarmJ0y/KeeThief"
@@ -3888,11 +3676,11 @@ rule KeeTheft_EXE {
       $x6 = "*** Interesting... there are multiple .NET runtimes loaded in KeePass" fullword wide
       $x7 = "GetKcpPasswordInfo" fullword ascii
    condition:
-      ( uint16(0) == 0x5a4d and filesize < 200KB and 1 of them )
+      ( uint16(0) == 0x5a4d and filesize < 200KB and 2 of them )
 }
 
 rule KeeTheft_Out_Shellcode {
-   meta:
+meta:
       description = "Detects component of KeeTheft - KeePass dump tool - file Out-Shellcode.ps1"
       author = "Florian Roth"
       reference = "https://github.com/HarmJ0y/KeeThief"
@@ -3905,16 +3693,8 @@ rule KeeTheft_Out_Shellcode {
       ( filesize < 2KB and 1 of them )
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-09-23
-   Identifier: Sharpire
-   Reference: https://github.com/0xbadjuju/Sharpire
-*/
-
 rule Sharpire {
-   meta:
+meta:
       description = "Auto-generated rule - file Sharpire.exe"
       author = "Florian Roth"
       reference = "https://github.com/0xbadjuju/Sharpire"
@@ -3935,16 +3715,8 @@ rule Sharpire {
       ( uint16(0) == 0x5a4d and filesize < 100KB and ( 1 of ($x*) and 3 of them ) )
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-09-23
-   Identifier: Invoke-Metasploit
-   Reference: https://github.com/jaredhaight/Invoke-MetasploitPayload/blob/master/Invoke-MetasploitPayload.ps1
-*/
-
 rule Invoke_Metasploit {
-   meta:
+meta:
       description = "Detects Invoke-Metasploit Payload"
       author = "Florian Roth"
       reference = "https://github.com/jaredhaight/Invoke-MetasploitPayload/blob/master/Invoke-MetasploitPayload.ps1"
@@ -3959,7 +3731,7 @@ rule Invoke_Metasploit {
 }
 
 rule PowerShell_Mal_HackTool_Gen {
-   meta:
+meta:
       description = "Detects PowerShell hack tool samples - generic PE loader"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -3975,7 +3747,7 @@ rule PowerShell_Mal_HackTool_Gen {
 }
 
 rule Sig_RemoteAdmin_1 {
-   meta:
+meta:
       description = "Detects strings from well-known APT malware"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -3989,7 +3761,7 @@ rule Sig_RemoteAdmin_1 {
 }
 
 rule RemCom_RemoteCommandExecution {
-   meta:
+meta:
       description = "Detects strings from RemCom tool"
       author = "Florian Roth"
       reference = "https://goo.gl/tezXZt"
@@ -4002,3 +3774,272 @@ rule RemCom_RemoteCommandExecution {
    condition:
       1 of them
 }
+
+rule Crackmapexec_EXE {
+meta:
+      description = "Detects CrackMapExec hack tool"
+      author = "Florian Roth"
+      reference = "Internal Research"
+      date = "2018-04-06"
+      score = 85
+      hash1 = "371f104b7876b9080c519510879235f36edb6668097de475949b84ab72ee9a9a"
+   strings:
+      $s1 = "core.scripts.secretsdump(" fullword ascii
+      $s2 = "core.scripts.samrdump(" fullword ascii
+      $s3 = "core.uacdump(" fullword ascii
+   condition:
+      uint16(0) == 0x5a4d and filesize < 10000KB and 2 of them
+}
+
+rule SUSP_Imphash_PassRevealer_PY_EXE {
+meta:
+      description = "Detects an imphash used by password revealer and hack tools"
+      author = "Florian Roth"
+      reference = "Internal Research"
+      date = "2018-04-06"
+      score = 40
+      hash1 = "371f104b7876b9080c519510879235f36edb6668097de475949b84ab72ee9a9a"
+   strings:
+      $fp1 = "Assmann Electronic GmbH" ascii wide
+      $fp2 = "Oculus VR" ascii wide
+   condition:
+      uint16(0) == 0x5a4d and filesize < 10000KB
+      and pe.imphash() == "ed61beebc8d019dd9bec823e2d694afd"
+      and not 1 of ($fp*)
+}
+
+rule MAL_Unknown_PWDumper_Apr18_3 {
+meta:
+      description = "Detects sample from unknown sample set - IL origin"
+      author = "Florian Roth"
+      reference = "Internal Research"
+      date = "2018-04-06"
+      hash1 = "d435e7b6f040a186efeadb87dd6d9a14e038921dc8b8658026a90ae94b4c8b05"
+      hash2 = "8c35c71838f34f7f7a40bf06e1d2e14d58d9106e6d4e6f6e9af732511a126276"
+   strings:
+      $s1 = "loaderx86.dll" fullword ascii
+      $s2 = "tcpsvcs.exe" fullword wide
+      $s3 = "%Program Files, Common FOLDER%" fullword wide
+      $s4 = "%AllUsers, ApplicationData FOLDER%" fullword wide
+      $s5 = "loaderx86" fullword ascii
+      $s6 = "TNtDllHook$" fullword ascii
+   condition:
+      uint16(0) == 0x5a4d and filesize < 3000KB and all of them
+}
+
+rule ProcessInjector_Gen {
+meta:
+      description = "Detects a process injection utility that can be used ofr good and bad purposes"
+      author = "Florian Roth"
+      reference = "https://github.com/cuckoosandbox/monitor/blob/master/bin/inject.c"
+      date = "2018-04-23"
+      score = 60
+      hash1 = "456c1c25313ce2e2eedf24fdcd4d37048bcfff193f6848053cbb3b5e82cd527d"
+   strings:
+      $x1 = "Error injecting remote thread in process:" fullword ascii
+      $s5 = "[-] Error getting access to process: %ld!" fullword ascii
+      $s6 = "--process-name <name>  Process name to inject" fullword ascii
+      $s12 = "No injection target has been provided!" fullword ascii
+      $s17 = "[-] An app path is required when not injecting!" fullword ascii
+   condition:
+      uint16(0) == 0x5a4d and filesize < 50KB and (
+         pe.imphash() == "d27e0fa013d7ae41be12aaf221e41f9b" or
+         1 of them
+      ) or 3 of them
+}
+
+rule Lazagne_PW_Dumper {
+meta:
+      description = "Detects Lazagne PW Dumper"
+      author = "Markus Neis / Florian Roth"
+      reference = "https://github.com/AlessandroZ/LaZagne/releases/"
+      date = "2018-03-22"
+      score = 70
+   strings:
+      $s1 = "Crypto.Hash" fullword ascii
+      $s2 = "laZagne" fullword ascii
+      $s3 = "impacket.winregistry" fullword ascii
+   condition:
+      3 of them
+}
+
+rule HKTL_shellpop_TCLsh {
+meta:
+      description = "Detects suspicious TCLsh popshell"
+      author = "Tobias Michalski"
+      reference = "https://github.com/0x00-0x00/ShellPop"
+      date = "2018-05-18"
+      hash1 = "9f49d76d70d14bbe639a3c16763d3b4bee92c622ecb1c351cb4ea4371561e133"
+   strings:
+      $s1 = "{ puts -nonewline $s \"shell>\";flush $s;gets $s c;set e \"exec $c\";if" ascii
+   condition:
+      filesize < 1KB and 1 of them
+}
+
+rule HKTL_shellpop_ruby {
+meta:
+      description = "Detects suspicious ruby shellpop"
+      author = "Tobias Michalski"
+      reference = "https://github.com/0x00-0x00/ShellPop"
+      date = "2018-05-18"
+      hash1 = "6b425b37f3520fd8c778928cc160134a293db0ce6d691e56a27894354b04f783"
+   strings:
+      $x1 = ");while(cmd=c.gets);IO.popen(cmd,'r'){" ascii
+   condition:
+      filesize < 1KB and all of them
+}
+
+rule HKTL_shellpop_awk {
+meta:
+      description = "Detects suspicious AWK Shellpop"
+      author = "Tobias Michalski"
+      reference = "https://github.com/0x00-0x00/ShellPop"
+      date = "2018-05-18"
+      hash1 = "7513a0a0ba786b0e22a9a7413491b4011f60af11253c596fa6857fb92a6736fc"
+   strings:
+      $s1 = "awk 'BEGIN {s = \"/inet/tcp/0/" ascii
+      $s2 = "; while(42) " ascii
+   condition:
+      filesize < 1KB and 1 of them
+}
+
+rule HKTL_shellpop_Netcat_UDP {
+meta:
+      description = "Detects suspicious netcat popshell"
+      author = "Tobias Michalski"
+      reference = "https://github.com/0x00-0x00/ShellPop"
+      date = "2018-05-18"
+      hash1 = "d823ad91b315c25893ce8627af285bcf4e161f9bbf7c070ee2565545084e88be"
+   strings:
+      $s1 = "mkfifo fifo ; nc.traditional -u" ascii
+      $s2 = "< fifo | { bash -i; } > fifo" fullword ascii
+   condition:
+      filesize < 1KB and 1 of them
+}
+
+rule HKTL_shellpop_socat {
+meta:
+      description = "Detects suspicious socat popshell"
+      author = "Tobias Michalski"
+      reference = "https://github.com/0x00-0x00/ShellPop"
+      date = "2018-05-18"
+      hash1 = "267f69858a5490efb236628260b275ad4bbfeebf4a83fab8776e333ca706a6a0"
+   strings:
+      $s1 = "socat tcp-connect" ascii
+      $s2 = ",pty,stderr,setsid,sigint,sane" ascii
+   condition:
+      filesize < 1KB and 2 of them
+}
+
+rule HKTL_shellpop_Perl {
+meta:
+      description = "dropzone - file PerlUDP"
+      author = "Tobias Michalski"
+      reference = "https://github.com/0x00-0x00/ShellPop"
+      date = "2018-05-18"
+      hash1 = "32c3e287969398a070adaad9b819ee9228174c9cb318d230331d33cda51314eb"
+   strings:
+      $ = "perl -e 'use IO::Socket::INET;$|=1;my ($s,$r);" ascii
+      $ = ";STDIN->fdopen(\\$c,r);$~->fdopen(\\$c,w);s" ascii
+   condition:
+      filesize < 2KB and 1 of them
+}
+
+rule HKTL_shellpop_Python {
+meta:
+      description = "Detects malicious python shell"
+      author = "Tobias Michalski"
+      reference = "https://github.com/0x00-0x00/ShellPop"
+      date = "2018-05-18"
+      hash1 = "aee1c9e45a1edb5e462522e266256f68313e2ff5956a55f0a84f33bc6baa980b"
+   strings:
+      $ = "os.putenv('HISTFILE', '/dev/null');" ascii
+   condition:
+      filesize < 2KB and 1 of them
+}
+
+rule HKTL_shellpop_PHP_TCP {
+meta:
+      description = "Detects malicious PHP shell"
+      author = "Tobias Michalski"
+      reference = "https://github.com/0x00-0x00/ShellPop"
+      date = "2018-05-18"
+      hash1 = "0412e1ab9c672abecb3979a401f67d35a4a830c65f34bdee3f87e87d060f0290"
+   strings:
+      $x1 = "php -r \"\\$sock=fsockopen" ascii
+      $x2 = ";exec('/bin/sh -i <&3 >&3 2>&3');\"" ascii
+   condition:
+      filesize < 3KB and all of them
+}
+
+rule HKTL_shellpop_Powershell_TCP {
+meta:
+      description = "Detects malicious powershell"
+      author = "Tobias Michalski"
+      reference = "https://github.com/0x00-0x00/ShellPop"
+      date = "2018-05-18"
+      hash1 = "8328806700696ffe8cc37a0b81a67a6e9c86bb416364805b8aceaee5db17333f"
+   strings:
+      $ = "Something went wrong with execution of command on the target" ascii
+      $ = ";[byte[]]$bytes = 0..65535|%{0};$sendbytes =" ascii
+   condition:
+      filesize < 3KB and 1 of them
+}
+
+rule SUSP_Powershell_ShellCommand_May18_1 {
+meta:
+      description = "Detects a supcicious powershell commandline"
+      author = "Tobias Michalski"
+      reference = "https://github.com/0x00-0x00/ShellPop"
+      date = "2018-05-18"
+      hash1 = "8328806700696ffe8cc37a0b81a67a6e9c86bb416364805b8aceaee5db17333f"
+   strings:
+      $x1 = "powershell -nop -ep bypass -Command" ascii
+   condition:
+      filesize < 3KB and 1 of them
+
+}
+
+rule HKTL_shellpop_Telnet_TCP {
+meta:
+      description = "Detects malicious telnet shell"
+      author = "Tobias Michalski"
+      reference = "https://github.com/0x00-0x00/ShellPop"
+      date = "2018-05-18"
+      hash1 = "cf5232bae0364606361adafab32f19cf56764a9d3aef94890dda9f7fcd684a0e"
+   strings:
+      $x1 = "if [ -e /tmp/f ]; then rm /tmp/f;" ascii
+      $x2 = "0</tmp/f|/bin/bash 1>/tmp/f" fullword ascii
+   condition:
+      filesize < 3KB and 1 of them
+}
+
+rule SUSP_shellpop_Bash {
+meta:
+      description = "Detects susupicious bash command"
+      author = "Tobias Michalski"
+      reference = "https://github.com/0x00-0x00/ShellPop"
+      date = "2018-05-18"
+      hash1 = "36fad575a8bc459d0c2e3ad626e97d5cf4f5f8bedc56b3cc27dd2f7d88ed889b"
+   strings:
+      $ = "/bin/bash -i >& /dev/tcp/" ascii
+   condition:
+      1 of them
+}
+
+rule HKTL_shellpop_netcat {
+meta:
+      description = "Detects suspcious netcat shellpop"
+      author = "Tobias Michalski"
+      reference = "https://github.com/0x00-0x00/ShellPop"
+      date = "2018-05-18"
+      hash1 = "98e3324f4c096bb1e5533114249a9e5c43c7913afa3070488b16d5b209e015ee"
+   strings:
+      $s1 = "if [ -e /tmp/f ]; then rm /tmp/f;"  ascii
+      $s2 = "fi;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc" ascii
+      $s4 = "mknod /tmp/f p && nc" ascii
+      $s5 = "</tmp/f|/bin/bash 1>/tmp/f"  ascii
+    condition:
+      filesize < 2KB and 1 of them
+}
+

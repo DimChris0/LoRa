@@ -1,16 +1,5 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-08-04
-   Identifier: FIN7
-   Reference: https://www.proofpoint.com/us/threat-insight/post/fin7carbanak-threat-actor-unleashes-bateleur-jscript-backdoor
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule FIN7_Dropper_Aug17 {
-   meta:
+meta:
       description = "Detects Word Dropper from Proofpoint FIN7 Report"
       author = "Florian Roth"
       reference = "https://www.proofpoint.com/us/threat-insight/post/fin7carbanak-threat-actor-unleashes-bateleur-jscript-backdoor"
@@ -30,7 +19,7 @@ rule FIN7_Dropper_Aug17 {
 }
 
 rule FIN7_Backdoor_Aug17 {
-   meta:
+meta:
       description = "Detects Word Dropper from Proofpoint FIN7 Report"
       author = "Florian Roth"
       reference = "https://www.proofpoint.com/us/threat-insight/post/fin7carbanak-threat-actor-unleashes-bateleur-jscript-backdoor"
@@ -69,3 +58,4 @@ rule FIN7_Backdoor_Aug17 {
          )
       ) or 5 of them
 }
+

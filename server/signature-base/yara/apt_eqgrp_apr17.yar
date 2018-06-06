@@ -1,19 +1,5 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-04-08
-   Identifier: Equation Group hack tools leaked by ShadowBrokers
-
-   Notice: Avoiding false positives is difficult with almost no antivirus
-   coverage during the rule testing phase. Please report back false positives
-   via https://github.com/Neo23x0/signature-base/issues
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule EquationGroup_emptycriss {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file emptycriss"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -28,7 +14,7 @@ rule EquationGroup_emptycriss {
 }
 
 rule EquationGroup_scripme {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file scripme"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -44,7 +30,7 @@ rule EquationGroup_scripme {
 }
 
 rule EquationGroup_cryptTool {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file cryptTool"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -58,7 +44,7 @@ rule EquationGroup_cryptTool {
 }
 
 rule EquationGroup_dumppoppy {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file dumppoppy"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -74,7 +60,7 @@ rule EquationGroup_dumppoppy {
 }
 
 rule EquationGroup_Auditcleaner {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file Auditcleaner"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -92,7 +78,7 @@ rule EquationGroup_Auditcleaner {
 }
 
 rule EquationGroup_reverse_shell {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file reverse.shell.script"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -106,7 +92,7 @@ rule EquationGroup_reverse_shell {
 }
 
 rule EquationGroup_tnmunger {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file tnmunger"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -120,7 +106,7 @@ rule EquationGroup_tnmunger {
 }
 
 rule EquationGroup_ys_ratload {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file ys.ratload.sh"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -135,7 +121,7 @@ rule EquationGroup_ys_ratload {
 }
 
 rule EquationGroup_eh_1_1_0 {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file eh.1.1.0.0"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -150,7 +136,7 @@ rule EquationGroup_eh_1_1_0 {
 }
 
 rule EquationGroup_evolvingstrategy_1_0_1 {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file evolvingstrategy.1.0.1.1"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -168,7 +154,7 @@ rule EquationGroup_evolvingstrategy_1_0_1 {
 }
 
 rule EquationGroup_toast_v3_2_0 {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file toast_v3.2.0.1-linux"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -183,7 +169,7 @@ rule EquationGroup_toast_v3_2_0 {
 }
 
 rule EquationGroup_sshobo {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file sshobo"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -199,7 +185,7 @@ rule EquationGroup_sshobo {
 }
 
 rule EquationGroup_magicjack_v1_1_0_0_client_1_1_0_0 {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file magicjack_v1.1.0.0_client-1.1.0.0.py"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -213,7 +199,7 @@ rule EquationGroup_magicjack_v1_1_0_0_client_1_1_0_0 {
 }
 
 rule EquationGroup_packrat {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file packrat"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -228,7 +214,7 @@ rule EquationGroup_packrat {
 }
 
 rule EquationGroup_telex {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file telex"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -244,7 +230,7 @@ rule EquationGroup_telex {
 }
 
 rule EquationGroup_calserver {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file calserver"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -259,7 +245,7 @@ rule EquationGroup_calserver {
 }
 
 rule EquationGroup_porkclient {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file porkclient"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -274,7 +260,7 @@ rule EquationGroup_porkclient {
 }
 
 rule EquationGroup_electricslide {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file electricslide"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -290,7 +276,7 @@ rule EquationGroup_electricslide {
 }
 
 rule EquationGroup_libXmexploit2 {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file libXmexploit2.8"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -305,7 +291,7 @@ rule EquationGroup_libXmexploit2 {
 }
 
 rule EquationGroup_wrap_telnet {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file wrap-telnet.sh"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -320,7 +306,7 @@ rule EquationGroup_wrap_telnet {
 }
 
 rule EquationGroup_elgingamble {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file elgingamble"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -336,7 +322,7 @@ rule EquationGroup_elgingamble {
 }
 
 rule EquationGroup_cmsd {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file cmsd"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -353,7 +339,7 @@ rule EquationGroup_cmsd {
 }
 
 rule EquationGroup_ebbshave {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file ebbshave.v5"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -369,7 +355,7 @@ rule EquationGroup_ebbshave {
 }
 
 rule EquationGroup_eggbasket {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file eggbasket"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -384,7 +370,7 @@ rule EquationGroup_eggbasket {
 }
 
 rule EquationGroup_jparsescan {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file jparsescan"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -398,7 +384,7 @@ rule EquationGroup_jparsescan {
 }
 
 rule EquationGroup_sambal {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file sambal"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -415,7 +401,7 @@ rule EquationGroup_sambal {
 }
 
 rule EquationGroup_pclean_v2_1_1_2 {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file pclean.v2.1.1.0-linux-i386"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -429,7 +415,7 @@ rule EquationGroup_pclean_v2_1_1_2 {
 }
 
 rule EquationGroup_envisioncollision {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file envisioncollision"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -445,7 +431,7 @@ rule EquationGroup_envisioncollision {
 }
 
 rule EquationGroup_cmsex {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file cmsex"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -462,7 +448,7 @@ rule EquationGroup_cmsex {
 }
 
 rule EquationGroup_exze {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file exze"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -477,7 +463,7 @@ rule EquationGroup_exze {
 }
 
 rule EquationGroup_porkserver {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file porkserver"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -493,7 +479,7 @@ rule EquationGroup_porkserver {
 }
 
 rule EquationGroup_DUL {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file DUL"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -507,7 +493,7 @@ rule EquationGroup_DUL {
 }
 
 rule EquationGroup_slugger2 {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file slugger2"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -526,7 +512,7 @@ rule EquationGroup_slugger2 {
 }
 
 rule EquationGroup_ebbisland {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file ebbisland"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -544,7 +530,7 @@ rule EquationGroup_ebbisland {
 }
 
 rule EquationGroup_jackpop {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file jackpop"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -562,7 +548,7 @@ rule EquationGroup_jackpop {
 }
 
 rule EquationGroup_parsescan {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file parsescan"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -576,7 +562,7 @@ rule EquationGroup_parsescan {
 }
 
 rule EquationGroup_jscan {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file jscan"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -590,7 +576,7 @@ rule EquationGroup_jscan {
 }
 
 rule EquationGroup_promptkill {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file promptkill"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -604,7 +590,7 @@ rule EquationGroup_promptkill {
 }
 
 rule EquationGroup_epoxyresin_v1_0_0 {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file epoxyresin.v1.0.0.1"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -621,7 +607,7 @@ rule EquationGroup_epoxyresin_v1_0_0 {
 }
 
 rule EquationGroup_estopmoonlit {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file estopmoonlit"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -637,7 +623,7 @@ rule EquationGroup_estopmoonlit {
 }
 
 rule EquationGroup_envoytomato {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file envoytomato"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -651,7 +637,7 @@ rule EquationGroup_envoytomato {
 }
 
 rule EquationGroup_smash {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file smash"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -666,7 +652,7 @@ rule EquationGroup_smash {
 }
 
 rule EquationGroup_ratload {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file ratload"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -681,7 +667,7 @@ rule EquationGroup_ratload {
 }
 
 rule EquationGroup_ys {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file ys.auto"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -696,7 +682,7 @@ rule EquationGroup_ys {
 }
 
 rule EquationGroup_ewok {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file ewok"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -712,7 +698,7 @@ rule EquationGroup_ewok {
 }
 
 rule EquationGroup_xspy {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file xspy"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -725,7 +711,7 @@ rule EquationGroup_xspy {
 }
 
 rule EquationGroup_estesfox {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file estesfox"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -738,7 +724,7 @@ rule EquationGroup_estesfox {
 }
 
 rule EquationGroup_elatedmonkey_1_0_1_1 {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file elatedmonkey.1.0.1.1.sh"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -754,7 +740,7 @@ rule EquationGroup_elatedmonkey_1_0_1_1 {
 }
 
 rule EquationGroup_scanner {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- file scanner"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -768,10 +754,8 @@ rule EquationGroup_scanner {
       filesize < 250KB and 1 of them
 }
 
-/* Super Rules ------------------------------------------------------------- */
-
 rule EquationGroup__ftshell_ftshell_v3_10_3_0 {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- from files ftshell, ftshell.v3.10.3.7"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -789,7 +773,7 @@ rule EquationGroup__ftshell_ftshell_v3_10_3_0 {
 }
 
 rule EquationGroup__scanner_scanner_v2_1_2 {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- from files scanner, scanner.v2.1.2"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -808,7 +792,7 @@ rule EquationGroup__scanner_scanner_v2_1_2 {
 }
 
 rule EquationGroup__ghost_sparc_ghost_x86_3 {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- from files ghost_sparc, ghost_x86"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -826,7 +810,7 @@ rule EquationGroup__ghost_sparc_ghost_x86_3 {
 }
 
 rule EquationGroup__pclean_v2_1_1_pclean_v2_1_1_4 {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- from files pclean.v2.1.1.0-linux-i386, pclean.v2.1.1.0-linux-x86_64"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -842,7 +826,7 @@ rule EquationGroup__pclean_v2_1_1_pclean_v2_1_1_4 {
 }
 
 rule EquationGroup__jparsescan_parsescan_5 {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- from files jparsescan, parsescan"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -860,7 +844,7 @@ rule EquationGroup__jparsescan_parsescan_5 {
 }
 
 rule EquationGroup__funnelout_v4_1_0_1 {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- from files funnelout.v4.1.0.1.pl"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -877,7 +861,7 @@ rule EquationGroup__funnelout_v4_1_0_1 {
 }
 
 rule EquationGroup__magicjack_v1_1_0_0_client {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- from files magicjack_v1.1.0.0_client-1.1.0.0.py"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -894,7 +878,7 @@ rule EquationGroup__magicjack_v1_1_0_0_client {
 }
 
 rule EquationGroup__ftshell {
-   meta:
+meta:
       description = "Equation Group hack tool leaked by ShadowBrokers- from files ftshell, ftshell.v3.10.3.7"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -910,17 +894,8 @@ rule EquationGroup__ftshell {
       ( uint16(0) == 0x2123 and filesize < 100KB and 2 of them ) or ( all of them )
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-04-09
-   Identifier: Equation Group hack tools leaked by ShadowBrokers
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule EquationGroup_store_linux_i386_v_3_3_0 {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -935,7 +910,7 @@ rule EquationGroup_store_linux_i386_v_3_3_0 {
 }
 
 rule EquationGroup_morerats_client_genkey {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -949,7 +924,7 @@ rule EquationGroup_morerats_client_genkey {
 }
 
 rule EquationGroup_cursetingle_2_0_1_2_mswin32_v_2_0_1 {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -963,7 +938,7 @@ rule EquationGroup_cursetingle_2_0_1_2_mswin32_v_2_0_1 {
 }
 
 rule EquationGroup_cursesleepy_mswin32_v_1_0_0 {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -971,14 +946,14 @@ rule EquationGroup_cursesleepy_mswin32_v_1_0_0 {
       hash1 = "6293439b4b49e94f923c76e302f5fc437023c91e063e67877d22333f05a24352"
    strings:
       $s1 = "A}%j,R" fullword ascii
-      $op1 = { a1 e0 43 41 00 8b 0d 34 44 41 00 6b c0 } /* Opcode */
-      $op2 = { 33 C0 F3 A6 74 14 8B 5D 08 8B 4B 34 50 } /* Opcode */
+      $op1 = { a1 e0 43 41 00 8b 0d 34 44 41 00 6b c0 } 
+      $op2 = { 33 C0 F3 A6 74 14 8B 5D 08 8B 4B 34 50 } 
    condition:
       ( uint16(0) == 0x5a4d and filesize < 200KB and 2 of them )
 }
 
 rule EquationGroup_porkserver_v3_0_0 {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -995,7 +970,7 @@ rule EquationGroup_porkserver_v3_0_0 {
 }
 
 rule EquationGroup_cursehelper_win2k_i686_v_2_2_0 {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -1004,14 +979,14 @@ rule EquationGroup_cursehelper_win2k_i686_v_2_2_0 {
    strings:
       $s1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/{}" fullword ascii
 
-      $op1 = { 8d b5 48 ff ff ff 89 34 24 e8 56 2a 00 00 c7 44 } /* Opcode */
-      $op2 = { e9 a2 f2 ff ff ff 85 b4 fe ff ff 8b 95 a8 fe ff } /* Opcode */
+      $op1 = { 8d b5 48 ff ff ff 89 34 24 e8 56 2a 00 00 c7 44 } 
+      $op2 = { e9 a2 f2 ff ff ff 85 b4 fe ff ff 8b 95 a8 fe ff } 
    condition:
       ( uint16(0) == 0x5a4d and filesize < 500KB and all of them )
 }
 
 rule EquationGroup_morerats_client_addkey {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -1026,7 +1001,7 @@ rule EquationGroup_morerats_client_addkey {
 }
 
 rule EquationGroup_noclient_3_3_2 {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -1043,7 +1018,7 @@ rule EquationGroup_noclient_3_3_2 {
 }
 
 rule EquationGroup_curseflower_mswin32_v_1_0_0 {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -1052,13 +1027,13 @@ rule EquationGroup_curseflower_mswin32_v_1_0_0 {
    strings:
       $s1 = "<pVt,<et(<st$<ct$<nt" fullword ascii
 
-      $op1 = { 6a 04 83 c0 08 6a 01 50 e8 10 34 00 00 83 c4 10 } /* Opcode */
+      $op1 = { 6a 04 83 c0 08 6a 01 50 e8 10 34 00 00 83 c4 10 } 
    condition:
       ( uint16(0) == 0x5a4d and filesize < 300KB and all of them )
 }
 
 rule EquationGroup_tmpwatch {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -1072,7 +1047,7 @@ rule EquationGroup_tmpwatch {
 }
 
 rule EquationGroup_orleans_stride_sunos5_9_v_2_4_0 {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -1087,7 +1062,7 @@ rule EquationGroup_orleans_stride_sunos5_9_v_2_4_0 {
 }
 
 rule EquationGroup_morerats_client_noprep {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -1102,7 +1077,7 @@ rule EquationGroup_morerats_client_noprep {
 }
 
 rule EquationGroup_cursezinger_linuxrh7_3_v_2_0_0 {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -1118,7 +1093,7 @@ rule EquationGroup_cursezinger_linuxrh7_3_v_2_0_0 {
 }
 
 rule EquationGroup_seconddate_ImplantStandalone_3_0_3 {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -1133,7 +1108,7 @@ rule EquationGroup_seconddate_ImplantStandalone_3_0_3 {
 }
 
 rule EquationGroup_watcher_solaris_i386_v_3_3_0 {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -1149,7 +1124,7 @@ rule EquationGroup_watcher_solaris_i386_v_3_3_0 {
 }
 
 rule EquationGroup_gr_dev_bin_now {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -1163,7 +1138,7 @@ rule EquationGroup_gr_dev_bin_now {
 }
 
 rule EquationGroup_gr_dev_bin_post {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -1176,7 +1151,7 @@ rule EquationGroup_gr_dev_bin_post {
 }
 
 rule EquationGroup_curseyo_win2k_v_1_0_0 {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -1185,15 +1160,15 @@ rule EquationGroup_curseyo_win2k_v_1_0_0 {
    strings:
       $s1 = "0123456789abcdefABCEDF:" fullword ascii
 
-      $op0 = { c6 06 5b 8b bd 70 ff ff ff 8b 9d 64 ff ff ff 0f } /* Opcode */
-      $op1 = { 55 b8 ff ff ff ff 89 e5 83 ec 28 89 7d fc 8b 7d } /* Opcode */
-      $op2 = { ff 05 10 64 41 00 89 34 24 e8 df 1e 00 00 e9 31 } /* Opcode */
+      $op0 = { c6 06 5b 8b bd 70 ff ff ff 8b 9d 64 ff ff ff 0f } 
+      $op1 = { 55 b8 ff ff ff ff 89 e5 83 ec 28 89 7d fc 8b 7d } 
+      $op2 = { ff 05 10 64 41 00 89 34 24 e8 df 1e 00 00 e9 31 } 
    condition:
       ( uint16(0) == 0x5a4d and filesize < 200KB and all of them )
 }
 
 rule EquationGroup_gr {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -1207,7 +1182,7 @@ rule EquationGroup_gr {
 }
 
 rule EquationGroup_curseroot_win2k_v_2_1_0 {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -1215,15 +1190,15 @@ rule EquationGroup_curseroot_win2k_v_2_1_0 {
       hash1 = "a1637948ed6ebbd2e582eb99df0c06b27a77c01ad1779b3d84c65953ca2cb603"
    strings:
       $s1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/%s,%s" fullword ascii
-      $op0 = { c7 44 24 04 ff ff ff ff 89 04 24 e8 46 65 01 00 } /* Opcode */
-      $op1 = { 8d 5d 88 89 1c 24 e8 24 1b 01 00 be ff ff ff ff } /* Opcode */
-      $op2 = { d3 e0 48 e9 0c ff ff ff 8b 45 } /* Opcode */
+      $op0 = { c7 44 24 04 ff ff ff ff 89 04 24 e8 46 65 01 00 } 
+      $op1 = { 8d 5d 88 89 1c 24 e8 24 1b 01 00 be ff ff ff ff } 
+      $op2 = { d3 e0 48 e9 0c ff ff ff 8b 45 } 
    condition:
       ( uint16(0) == 0x5a4d and filesize < 400KB and $s1 and 2 of ($op*) )
 }
 
 rule EquationGroup_cursewham_curserazor_cursezinger_curseroot_win2k {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -1235,15 +1210,15 @@ rule EquationGroup_cursewham_curserazor_cursezinger_curseroot_win2k {
       $s3 = ",%02d%03d" fullword ascii
       $s4 = "[%.2u%.2u%.2u%.2u%.2u%.2u]" fullword ascii
 
-      $op1 = { 7d ec 8d 74 3f 01 0f af f7 c1 c6 05 } /* Opcode */
-      $op2 = { 29 f1 89 fb d3 eb 89 f1 d3 e7 } /* Opcode */
-      $op3 = { 7d e4 8d 5c 3f 01 0f af df c1 c3 05 } /* Opcode */
+      $op1 = { 7d ec 8d 74 3f 01 0f af f7 c1 c6 05 } 
+      $op2 = { 29 f1 89 fb d3 eb 89 f1 d3 e7 } 
+      $op3 = { 7d e4 8d 5c 3f 01 0f af df c1 c3 05 } 
    condition:
       ( uint16(0) == 0x5a4d and filesize < 400KB and 3 of them )
 }
 
 rule EquationGroup_watcher_linux_i386_v_3_3_0 {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -1260,7 +1235,7 @@ rule EquationGroup_watcher_linux_i386_v_3_3_0 {
 }
 
 rule EquationGroup_charm_saver_win2k_v_2_0_0 {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -1269,28 +1244,28 @@ rule EquationGroup_charm_saver_win2k_v_2_0_0 {
    strings:
       $s2 = "0123456789abcdefABCEDF:" fullword ascii
 
-      $op0 = { b8 ff ff ff ff 7f 65 eb 30 8b 55 0c 89 d7 0f b6 } /* Opcode */
-      $op2 = { ba ff ff ff ff 83 c4 6c 89 d0 5b 5e 5f 5d c3 90 } /* Opcode */
+      $op0 = { b8 ff ff ff ff 7f 65 eb 30 8b 55 0c 89 d7 0f b6 } 
+      $op2 = { ba ff ff ff ff 83 c4 6c 89 d0 5b 5e 5f 5d c3 90 } 
    condition:
       ( uint16(0) == 0x5a4d and filesize < 400KB and all of them )
 }
 
 rule EquationGroup_cursehappy_win2k_v_6_1_0 {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
       date = "2017-04-09"
       hash1 = "eb669afd246a7ac4de79724abcce5bda38117b3138908b90cac58936520ea632"
    strings:
-      $op1 = { e8 24 2c 01 00 85 c0 89 c6 ba ff ff ff ff 74 d6 } /* Opcode */
-      $op2 = { 89 4c 24 04 89 34 24 89 44 24 08 e8 ce 49 ff ff } /* Opcode */
+      $op1 = { e8 24 2c 01 00 85 c0 89 c6 ba ff ff ff ff 74 d6 } 
+      $op2 = { 89 4c 24 04 89 34 24 89 44 24 08 e8 ce 49 ff ff } 
    condition:
       ( uint16(0) == 0x5a4d and filesize < 400KB and all of them )
 }
 
 rule EquationGroup_morerats_client_Store {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -1306,7 +1281,7 @@ rule EquationGroup_morerats_client_Store {
 }
 
 rule EquationGroup_watcher_linux_x86_64_v_3_3_0 {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -1321,7 +1296,7 @@ rule EquationGroup_watcher_linux_x86_64_v_3_3_0 {
 }
 
 rule EquationGroup_linux_exactchange {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -1341,7 +1316,7 @@ rule EquationGroup_linux_exactchange {
 }
 
 rule EquationGroup_x86_linux_exactchange {
-   meta:
+meta:
       description = "Equation Group hack tool set"
       author = "Florian Roth"
       reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
@@ -1356,18 +1331,8 @@ rule EquationGroup_x86_linux_exactchange {
       ( uint16(0) == 0x457f and filesize < 1000KB and 1 of them )
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-04-15
-   Identifier: Equation Group Toolset - Windows Folder
-   Reference: https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule EquationGroup_Toolset_Apr17_Eclipsedwing_Rpcproxy_Pcdlllauncher {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1384,7 +1349,7 @@ rule EquationGroup_Toolset_Apr17_Eclipsedwing_Rpcproxy_Pcdlllauncher {
 }
 
 rule EquationGroup_Toolset_Apr17_Explodingcantouch_1_2_1 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1399,7 +1364,7 @@ rule EquationGroup_Toolset_Apr17_Explodingcantouch_1_2_1 {
 }
 
 rule EquationGroup_Toolset_Apr17_Architouch_1_0_0 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1412,7 +1377,7 @@ rule EquationGroup_Toolset_Apr17_Architouch_1_0_0 {
 }
 
 rule EquationGroup_Toolset_Apr17_Erraticgopher_1_0_1 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1428,7 +1393,7 @@ rule EquationGroup_Toolset_Apr17_Erraticgopher_1_0_1 {
 }
 
 rule EquationGroup_Toolset_Apr17_Esteemaudit_2_1_0 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1442,7 +1407,7 @@ rule EquationGroup_Toolset_Apr17_Esteemaudit_2_1_0 {
 }
 
 rule EquationGroup_Toolset_Apr17_Darkpulsar_1_1_0 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1456,7 +1421,7 @@ rule EquationGroup_Toolset_Apr17_Darkpulsar_1_1_0 {
 }
 
 rule EquationGroup_Toolset_Apr17_Educatedscholar_1_0_0 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1470,7 +1435,7 @@ rule EquationGroup_Toolset_Apr17_Educatedscholar_1_0_0 {
 }
 
 rule EquationGroup_Toolset_Apr17_Doublepulsar_1_3_1 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1485,7 +1450,7 @@ rule EquationGroup_Toolset_Apr17_Doublepulsar_1_3_1 {
 }
 
 rule EquationGroup_Toolset_Apr17_Erraticgophertouch_1_0_1 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1500,7 +1465,7 @@ rule EquationGroup_Toolset_Apr17_Erraticgophertouch_1_0_1 {
 }
 
 rule EquationGroup_Toolset_Apr17_Smbtouch_1_1_1 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1513,7 +1478,7 @@ rule EquationGroup_Toolset_Apr17_Smbtouch_1_1_1 {
 }
 
 rule EquationGroup_Toolset_Apr17_Educatedscholartouch_1_0_0 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1527,7 +1492,7 @@ rule EquationGroup_Toolset_Apr17_Educatedscholartouch_1_0_0 {
 }
 
 rule EquationGroup_Toolset_Apr17_Esteemaudittouch_2_1_0 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1541,7 +1506,7 @@ rule EquationGroup_Toolset_Apr17_Esteemaudittouch_2_1_0 {
 }
 
 rule EquationGroup_Toolset_Apr17_Rpctouch_2_1_0 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1555,7 +1520,7 @@ rule EquationGroup_Toolset_Apr17_Rpctouch_2_1_0 {
 }
 
 rule EquationGroup_Toolset_Apr17_Mofconfig_1_0_0 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1568,7 +1533,7 @@ rule EquationGroup_Toolset_Apr17_Mofconfig_1_0_0 {
 }
 
 rule EquationGroup_Toolset_Apr17_Easypi_Explodingcan {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1584,7 +1549,7 @@ rule EquationGroup_Toolset_Apr17_Easypi_Explodingcan {
 }
 
 rule EquationGroup_Toolset_Apr17_Eclipsedwingtouch_1_0_4 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1598,7 +1563,7 @@ rule EquationGroup_Toolset_Apr17_Eclipsedwingtouch_1_0_4 {
 }
 
 rule EquationGroup_Toolset_Apr17_Iistouch_1_2_2 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1612,7 +1577,7 @@ rule EquationGroup_Toolset_Apr17_Iistouch_1_2_2 {
 }
 
 rule EquationGroup_Toolset_Apr17_Namedpipetouch_2_0_0 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1631,7 +1596,7 @@ rule EquationGroup_Toolset_Apr17_Namedpipetouch_2_0_0 {
 }
 
 rule EquationGroup_Toolset_Apr17_Easybee_1_0_1 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1645,7 +1610,7 @@ rule EquationGroup_Toolset_Apr17_Easybee_1_0_1 {
 }
 
 rule EquationGroup_Toolset_Apr17_Regread_1_1_1 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1659,7 +1624,7 @@ rule EquationGroup_Toolset_Apr17_Regread_1_1_1 {
 }
 
 rule EquationGroup_Toolset_Apr17_Englishmansdentist_1_2_0 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1673,7 +1638,7 @@ rule EquationGroup_Toolset_Apr17_Englishmansdentist_1_2_0 {
 }
 
 rule EquationGroup_Toolset_Apr17_Architouch_Eternalsynergy_Smbtouch {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1693,7 +1658,7 @@ rule EquationGroup_Toolset_Apr17_Architouch_Eternalsynergy_Smbtouch {
 }
 
 rule EquationGroup_Toolset_Apr17_Eternalromance_2 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1710,7 +1675,7 @@ rule EquationGroup_Toolset_Apr17_Eternalromance_2 {
 }
 
 rule EquationGroup_Toolset_Apr17__Emphasismine {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1729,7 +1694,7 @@ rule EquationGroup_Toolset_Apr17__Emphasismine {
 }
 
 rule EquationGroup_Toolset_Apr17_Eternalromance {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1747,7 +1712,7 @@ rule EquationGroup_Toolset_Apr17_Eternalromance {
 }
 
 rule EquationGroup_Toolset_Apr17_Gen4 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1778,7 +1743,7 @@ rule EquationGroup_Toolset_Apr17_Gen4 {
 }
 
 rule EquationGroup_Toolset_Apr17_Gen1 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1797,7 +1762,7 @@ rule EquationGroup_Toolset_Apr17_Gen1 {
 }
 
 rule EquationGroup_Toolset_Apr17_Gen2 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1823,7 +1788,7 @@ rule EquationGroup_Toolset_Apr17_Gen2 {
 }
 
 rule EquationGroup_Toolset_Apr17_Gen3 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1850,18 +1815,8 @@ rule EquationGroup_Toolset_Apr17_Gen3 {
       ( uint16(0) == 0x5a4d and filesize < 150KB and 2 of them )
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-04-15
-   Identifier: Equation Group Tools - Resource Folder
-   Reference: https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule EquationGroup_Toolset_Apr17_yak {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1877,7 +1832,7 @@ rule EquationGroup_Toolset_Apr17_yak {
 }
 
 rule EquationGroup_Toolset_Apr17_AdUser_Implant {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1891,7 +1846,7 @@ rule EquationGroup_Toolset_Apr17_AdUser_Implant {
 }
 
 rule EquationGroup_Toolset_Apr17_RemoteExecute_Implant {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1915,7 +1870,7 @@ rule EquationGroup_Toolset_Apr17_RemoteExecute_Implant {
 }
 
 rule EquationGroup_Toolset_Apr17_Banner_Implant9x {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1930,7 +1885,7 @@ rule EquationGroup_Toolset_Apr17_Banner_Implant9x {
 }
 
 rule EquationGroup_Toolset_Apr17_greatdoc_dll_config {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1946,7 +1901,7 @@ rule EquationGroup_Toolset_Apr17_greatdoc_dll_config {
 }
 
 rule EquationGroup_Toolset_Apr17_scanner {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1963,7 +1918,7 @@ rule EquationGroup_Toolset_Apr17_scanner {
 }
 
 rule EquationGroup_Toolset_Apr17_Mcl_NtMemory_Std {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1978,7 +1933,7 @@ rule EquationGroup_Toolset_Apr17_Mcl_NtMemory_Std {
 }
 
 rule EquationGroup_Toolset_Apr17_tacothief {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -1991,7 +1946,7 @@ rule EquationGroup_Toolset_Apr17_tacothief {
 }
 
 rule EquationGroup_Toolset_Apr17_ntevt {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2010,7 +1965,7 @@ rule EquationGroup_Toolset_Apr17_ntevt {
 }
 
 rule EquationGroup_Toolset_Apr17_Processes_Target {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2025,7 +1980,7 @@ rule EquationGroup_Toolset_Apr17_Processes_Target {
 }
 
 rule EquationGroup_Toolset_Apr17_st_lp {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2041,7 +1996,7 @@ rule EquationGroup_Toolset_Apr17_st_lp {
 }
 
 rule EquationGroup_Toolset_Apr17_EpWrapper {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2056,7 +2011,7 @@ rule EquationGroup_Toolset_Apr17_EpWrapper {
 }
 
 rule EquationGroup_Toolset_Apr17_DiBa_Target_2000 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2073,7 +2028,7 @@ rule EquationGroup_Toolset_Apr17_DiBa_Target_2000 {
 }
 
 rule EquationGroup_Toolset_Apr17_DllLoad_Target {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2090,7 +2045,7 @@ rule EquationGroup_Toolset_Apr17_DllLoad_Target {
 }
 
 rule EquationGroup_Toolset_Apr17_EXPA {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2106,7 +2061,7 @@ rule EquationGroup_Toolset_Apr17_EXPA {
 }
 
 rule EquationGroup_Toolset_Apr17_RemoteExecute_Target {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2122,7 +2077,7 @@ rule EquationGroup_Toolset_Apr17_RemoteExecute_Target {
 }
 
 rule EquationGroup_Toolset_Apr17_DS_ParseLogs {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2137,7 +2092,7 @@ rule EquationGroup_Toolset_Apr17_DS_ParseLogs {
 }
 
 rule EquationGroup_Toolset_Apr17_Oracle_Implant {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2152,7 +2107,7 @@ rule EquationGroup_Toolset_Apr17_Oracle_Implant {
 }
 
 rule EquationGroup_Toolset_Apr17_DmGz_Target {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2166,7 +2121,7 @@ rule EquationGroup_Toolset_Apr17_DmGz_Target {
 }
 
 rule EquationGroup_Toolset_Apr17_SetResourceName {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2182,7 +2137,7 @@ rule EquationGroup_Toolset_Apr17_SetResourceName {
 }
 
 rule EquationGroup_Toolset_Apr17_drivers_Implant {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2198,7 +2153,7 @@ rule EquationGroup_Toolset_Apr17_drivers_Implant {
 }
 
 rule EquationGroup_Toolset_Apr17_Shares_Target {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2214,7 +2169,7 @@ rule EquationGroup_Toolset_Apr17_Shares_Target {
 }
 
 rule EquationGroup_Toolset_Apr17_ntfltmgr {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2238,7 +2193,7 @@ rule EquationGroup_Toolset_Apr17_ntfltmgr {
 }
 
 rule EquationGroup_Toolset_Apr17_DiBa_Target_BH {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2253,7 +2208,7 @@ rule EquationGroup_Toolset_Apr17_DiBa_Target_BH {
 }
 
 rule EquationGroup_Toolset_Apr17_PC_LP {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2267,7 +2222,7 @@ rule EquationGroup_Toolset_Apr17_PC_LP {
 }
 
 rule EquationGroup_Toolset_Apr17_RemoteCommand_Lp {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2281,7 +2236,7 @@ rule EquationGroup_Toolset_Apr17_RemoteCommand_Lp {
 }
 
 rule EquationGroup_Toolset_Apr17_lp_mstcp {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2300,7 +2255,7 @@ rule EquationGroup_Toolset_Apr17_lp_mstcp {
 }
 
 rule EquationGroup_Toolset_Apr17_renamer {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2314,7 +2269,7 @@ rule EquationGroup_Toolset_Apr17_renamer {
 }
 
 rule EquationGroup_Toolset_Apr17_PC_Exploit {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2330,7 +2285,7 @@ rule EquationGroup_Toolset_Apr17_PC_Exploit {
 }
 
 rule EquationGroup_Toolset_Apr17_PC_Level3_Gen {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2349,7 +2304,7 @@ rule EquationGroup_Toolset_Apr17_PC_Level3_Gen {
 }
 
 rule EquationGroup_Toolset_Apr17_put_Implant9x {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2365,7 +2320,7 @@ rule EquationGroup_Toolset_Apr17_put_Implant9x {
 }
 
 rule EquationGroup_Toolset_Apr17_promiscdetect_safe {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2380,7 +2335,7 @@ rule EquationGroup_Toolset_Apr17_promiscdetect_safe {
 }
 
 rule EquationGroup_Toolset_Apr17_PacketScan_Implant {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2395,7 +2350,7 @@ rule EquationGroup_Toolset_Apr17_PacketScan_Implant {
 }
 
 rule EquationGroup_Toolset_Apr17_SetPorts {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2409,7 +2364,7 @@ rule EquationGroup_Toolset_Apr17_SetPorts {
 }
 
 rule EquationGroup_Toolset_Apr17_GrDo_FileScanner_Implant {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2424,7 +2379,7 @@ rule EquationGroup_Toolset_Apr17_GrDo_FileScanner_Implant {
 }
 
 rule EquationGroup_Toolset_Apr17_msgks_mskgu {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2440,7 +2395,7 @@ rule EquationGroup_Toolset_Apr17_msgks_mskgu {
 }
 
 rule EquationGroup_Toolset_Apr17_Ifconfig_Target {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2456,7 +2411,7 @@ rule EquationGroup_Toolset_Apr17_Ifconfig_Target {
 }
 
 rule EquationGroup_Toolset_Apr17_DiBa_Target {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2471,7 +2426,7 @@ rule EquationGroup_Toolset_Apr17_DiBa_Target {
 }
 
 rule EquationGroup_Toolset_Apr17_Dsz_Implant {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2485,7 +2440,7 @@ rule EquationGroup_Toolset_Apr17_Dsz_Implant {
 }
 
 rule EquationGroup_Toolset_Apr17_GenKey {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2498,7 +2453,7 @@ rule EquationGroup_Toolset_Apr17_GenKey {
 }
 
 rule EquationGroup_Toolset_Apr17_wmi_Implant {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2511,7 +2466,7 @@ rule EquationGroup_Toolset_Apr17_wmi_Implant {
 }
 
 rule EquationGroup_Toolset_Apr17_clocksvc {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2531,7 +2486,7 @@ rule EquationGroup_Toolset_Apr17_clocksvc {
 }
 
 rule EquationGroup_Toolset_Apr17_xxxRIDEAREA {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2547,7 +2502,7 @@ rule EquationGroup_Toolset_Apr17_xxxRIDEAREA {
 }
 
 rule EquationGroup_Toolset_Apr17_yak_min_install {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2562,7 +2517,7 @@ rule EquationGroup_Toolset_Apr17_yak_min_install {
 }
 
 rule EquationGroup_Toolset_Apr17_SetOurAddr {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2576,7 +2531,7 @@ rule EquationGroup_Toolset_Apr17_SetOurAddr {
 }
 
 rule EquationGroup_Toolset_Apr17_GetAdmin_LSADUMP_ModifyPrivilege_Implant {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2598,7 +2553,7 @@ rule EquationGroup_Toolset_Apr17_GetAdmin_LSADUMP_ModifyPrivilege_Implant {
 }
 
 rule EquationGroup_Toolset_Apr17_SendPKTrigger {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2611,7 +2566,7 @@ rule EquationGroup_Toolset_Apr17_SendPKTrigger {
 }
 
 rule EquationGroup_Toolset_Apr17_DmGz_Target_2 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2628,7 +2583,7 @@ rule EquationGroup_Toolset_Apr17_DmGz_Target_2 {
 }
 
 rule EquationGroup_Toolset_Apr17_mstcp32_DXGHLP16_tdip {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2648,7 +2603,7 @@ rule EquationGroup_Toolset_Apr17_mstcp32_DXGHLP16_tdip {
 }
 
 rule EquationGroup_Toolset_Apr17_regprobe {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2663,7 +2618,7 @@ rule EquationGroup_Toolset_Apr17_regprobe {
 }
 
 rule EquationGroup_Toolset_Apr17_DoubleFeatureDll_dll_2 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2680,7 +2635,7 @@ rule EquationGroup_Toolset_Apr17_DoubleFeatureDll_dll_2 {
 }
 
 rule EquationGroup_Toolset_Apr17_GangsterThief_Implant {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2697,7 +2652,7 @@ rule EquationGroup_Toolset_Apr17_GangsterThief_Implant {
 }
 
 rule EquationGroup_Toolset_Apr17_SetCallbackPorts {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2711,7 +2666,7 @@ rule EquationGroup_Toolset_Apr17_SetCallbackPorts {
 }
 
 rule EquationGroup_Toolset_Apr17_DiBa_Target_BH_2000 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2725,7 +2680,7 @@ rule EquationGroup_Toolset_Apr17_DiBa_Target_BH_2000 {
 }
 
 rule EquationGroup_Toolset_Apr17_rc5 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2741,7 +2696,7 @@ rule EquationGroup_Toolset_Apr17_rc5 {
 }
 
 rule EquationGroup_Toolset_Apr17_PC_Level_Generic {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2771,7 +2726,7 @@ rule EquationGroup_Toolset_Apr17_PC_Level_Generic {
 }
 
 rule EquationGroup_Toolset_Apr17_PC_Level3_http_exe {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2788,7 +2743,7 @@ rule EquationGroup_Toolset_Apr17_PC_Level3_http_exe {
 }
 
 rule EquationGroup_Toolset_Apr17_ParseCapture {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2803,7 +2758,7 @@ rule EquationGroup_Toolset_Apr17_ParseCapture {
 }
 
 rule EquationGroup_Toolset_Apr17_ActiveDirectory_Target {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2817,7 +2772,7 @@ rule EquationGroup_Toolset_Apr17_ActiveDirectory_Target {
 }
 
 rule EquationGroup_Toolset_Apr17_PC_Legacy_dll {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2832,7 +2787,7 @@ rule EquationGroup_Toolset_Apr17_PC_Legacy_dll {
 }
 
 rule EquationGroup_Toolset_Apr17_svctouch {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2845,7 +2800,7 @@ rule EquationGroup_Toolset_Apr17_svctouch {
 }
 
 rule EquationGroup_Toolset_Apr17_pwd_Implant {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2860,7 +2815,7 @@ rule EquationGroup_Toolset_Apr17_pwd_Implant {
 }
 
 rule EquationGroup_Toolset_Apr17_KisuComms_Target_2000 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2880,7 +2835,7 @@ rule EquationGroup_Toolset_Apr17_KisuComms_Target_2000 {
 }
 
 rule EquationGroup_Toolset_Apr17_SlDecoder {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2894,7 +2849,7 @@ rule EquationGroup_Toolset_Apr17_SlDecoder {
 }
 
 rule EquationGroup_Toolset_Apr17_Windows_Implant {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2907,7 +2862,7 @@ rule EquationGroup_Toolset_Apr17_Windows_Implant {
 }
 
 rule EquationGroup_Toolset_Apr17_msgkd_msslu64_msgki_mssld {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2932,7 +2887,7 @@ rule EquationGroup_Toolset_Apr17_msgkd_msslu64_msgki_mssld {
 }
 
 rule EquationGroup_Toolset_Apr17_DoubleFeatureDll_dll_3 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2947,7 +2902,7 @@ rule EquationGroup_Toolset_Apr17_DoubleFeatureDll_dll_3 {
 }
 
 rule EquationGroup_Toolset_Apr17_SetCallback {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2961,7 +2916,7 @@ rule EquationGroup_Toolset_Apr17_SetCallback {
 }
 
 rule EquationGroup_Toolset_Apr17__DoubleFeatureReader_DoubleFeatureReader_0 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -2980,7 +2935,7 @@ rule EquationGroup_Toolset_Apr17__DoubleFeatureReader_DoubleFeatureReader_0 {
 }
 
 rule EquationGroup_Toolset_Apr17__vtuner_vtuner_1 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -3000,7 +2955,7 @@ rule EquationGroup_Toolset_Apr17__vtuner_vtuner_1 {
 }
 
 rule EquationGroup_Toolset_Apr17__ecwi_ESKE_EVFR_RPC2_2 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -3019,7 +2974,7 @@ rule EquationGroup_Toolset_Apr17__ecwi_ESKE_EVFR_RPC2_2 {
 }
 
 rule EquationGroup_Toolset_Apr17__EAFU_ecwi_ESKE_EVFR_RPC2_4 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -3042,7 +2997,7 @@ rule EquationGroup_Toolset_Apr17__EAFU_ecwi_ESKE_EVFR_RPC2_4 {
 }
 
 rule EquationGroup_Toolset_Apr17__SendCFTrigger_SendPKTrigger_6 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -3058,7 +3013,7 @@ rule EquationGroup_Toolset_Apr17__SendCFTrigger_SendPKTrigger_6 {
 }
 
 rule EquationGroup_Toolset_Apr17__AddResource {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -3075,7 +3030,7 @@ rule EquationGroup_Toolset_Apr17__AddResource {
 }
 
 rule EquationGroup_Toolset_Apr17__ESKE_RPC2_8 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -3091,7 +3046,7 @@ rule EquationGroup_Toolset_Apr17__ESKE_RPC2_8 {
 }
 
 rule EquationGroup_Toolset_Apr17__LSADUMP_Lp_ModifyPrivilege_Lp_PacketScan_Lp_put_Lp_RemoteExecute_Lp_Windows_Lp_wmi_Lp_9 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -3112,7 +3067,7 @@ rule EquationGroup_Toolset_Apr17__LSADUMP_Lp_ModifyPrivilege_Lp_PacketScan_Lp_pu
 }
 
 rule EquationGroup_Toolset_Apr17__ETBL_ETRE_10 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -3129,7 +3084,7 @@ rule EquationGroup_Toolset_Apr17__ETBL_ETRE_10 {
 }
 
 rule EquationGroup_Toolset_Apr17__ELV_ESKE_ETBL_ETRE_EVFR_11 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -3148,7 +3103,7 @@ rule EquationGroup_Toolset_Apr17__ELV_ESKE_ETBL_ETRE_EVFR_11 {
 }
 
 rule EquationGroup_Toolset_Apr17__ELV_ESKE_EVFR_RideArea2_12 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -3165,7 +3120,7 @@ rule EquationGroup_Toolset_Apr17__ELV_ESKE_EVFR_RideArea2_12 {
 }
 
 rule EquationGroup_Toolset_Apr17__ELV_ESKE_13 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -3181,7 +3136,7 @@ rule EquationGroup_Toolset_Apr17__ELV_ESKE_13 {
 }
 
 rule EquationGroup_Toolset_Apr17__NameProbe_SMBTOUCH_14 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -3198,7 +3153,7 @@ rule EquationGroup_Toolset_Apr17__NameProbe_SMBTOUCH_14 {
 }
 
 rule EquationGroup_Toolset_Apr17__ELV_ESKE_EVFR_RPC2_15 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -3216,7 +3171,7 @@ rule EquationGroup_Toolset_Apr17__ELV_ESKE_EVFR_RPC2_15 {
 }
 
 rule EquationGroup_Toolset_Apr17__ELV_ESKE_EVFR_16 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -3237,7 +3192,7 @@ rule EquationGroup_Toolset_Apr17__ELV_ESKE_EVFR_16 {
 }
 
 rule EquationGroup_Toolset_Apr17__ETBL_ETRE_SMBTOUCH_17 {
-   meta:
+meta:
       description = "Detects EquationGroup Tool - April Leak"
       author = "Florian Roth"
       reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
@@ -3253,18 +3208,8 @@ rule EquationGroup_Toolset_Apr17__ETBL_ETRE_SMBTOUCH_17 {
       ( uint16(0) == 0x5a4d and filesize < 300KB and 1 of them )
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-04-17
-   Identifier: Equation Group Tool Output
-   Reference: Internal Research
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule EquationGroup_scanner_output {
-   meta:
+meta:
       description = "Detects output generated by EQGRP scanner.exe"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -3279,3 +3224,4 @@ rule EquationGroup_scanner_output {
    condition:
       filesize < 1000KB and 2 of them
 }
+

@@ -1,45 +1,36 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-07-09
-	Identifier: Stuxnet
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule StuxNet_Malware_1 {
-	meta:
+meta:
 		description = "Stuxnet Sample - file malware.exe"
 		author = "Florian Roth"
 		reference = "Internal Research"
 		date = "2016-07-09"
 		hash1 = "9c891edb5da763398969b6aaa86a5d46971bd28a455b20c2067cb512c9f9a0f8"
 	strings:
-		 // 0x10001778 8b 45 08  mov     eax, dword ptr [ebp + 8]
-		 // 0x1000177b 35 dd 79 19 ae    xor     eax, 0xae1979dd
-		 // 0x10001780 33 c9     xor     ecx, ecx
-		 // 0x10001782 8b 55 08  mov     edx, dword ptr [ebp + 8]
-		 // 0x10001785 89 02     mov     dword ptr [edx], eax
-		 // 0x10001787 89 ?? ??  mov     dword ptr [edx + 4], ecx
+		 
+		 
+		 
+		 
+		 
+		 
 		 $op1 = { 8b 45 08 35 dd 79 19 ae 33 c9 8b 55 08 89 02 89 }
-		 // 0x10002045 74 36     je      0x1000207d
-		 // 0x10002047 8b 7f 08  mov     edi, dword ptr [edi + 8]
-		 // 0x1000204a 83 ff 00  cmp     edi, 0
-		 // 0x1000204d 74 2e     je      0x1000207d
-		 // 0x1000204f 0f b7 1f  movzx   ebx, word ptr [edi]
-		 // 0x10002052 8b 7f 04  mov     edi, dword ptr [edi + 4]
+		 
+		 
+		 
+		 
+		 
+		 
 		 $op2 = { 74 36 8b 7f 08 83 ff 00 74 2e 0f b7 1f 8b 7f 04 }
-		 // 0x100020cf 74 70     je      0x10002141
-		 // 0x100020d1 81 78 05 8d 54 24 04      cmp     dword ptr [eax + 5], 0x424548d
-		 // 0x100020d8 75 1b     jne     0x100020f5
-		 // 0x100020da 81 78 08 04 cd ?? ??      cmp     dword ptr [eax + 8], 0xc22ecd04
+		 
+		 
+		 
+		 
 		 $op3 = { 74 70 81 78 05 8d 54 24 04 75 1b 81 78 08 04 cd }
 	condition:
 		all of them
 }
 
 rule Stuxnet_Malware_2 {
-	meta:
+meta:
 		description = "Stuxnet Sample - file 63e6b8136058d7a06dfff4034b4ab17a261cdf398e63868a601f77ddd1b32802"
 		author = "Florian Roth"
 		reference = "Internal Research"
@@ -53,7 +44,7 @@ rule Stuxnet_Malware_2 {
 }
 
 rule StuxNet_dll {
-	meta:
+meta:
 		description = "Stuxnet Sample - file dll.dll"
 		author = "Florian Roth"
 		reference = "Internal Research"
@@ -66,7 +57,7 @@ rule StuxNet_dll {
 }
 
 rule Stuxnet_Shortcut_to {
-	meta:
+meta:
 		description = "Stuxnet Sample - file Copy of Shortcut to.lnk"
 		author = "Florian Roth"
 		reference = "Internal Research"
@@ -79,7 +70,7 @@ rule Stuxnet_Shortcut_to {
 }
 
 rule Stuxnet_Malware_3 {
-	meta:
+meta:
 		description = "Stuxnet Sample - file ~WTR4141.tmp"
 		author = "Florian Roth"
 		reference = "Internal Research"
@@ -100,7 +91,7 @@ rule Stuxnet_Malware_3 {
 }
 
 rule Stuxnet_Malware_4 {
-	meta:
+meta:
 		description = "Stuxnet Sample - file 0d8c2bcb575378f6a88d17b5f6ce70e794a264cdc8556c8e812f0b5f9c709198"
 		author = "Florian Roth"
 		reference = "Internal Research"
@@ -116,7 +107,7 @@ rule Stuxnet_Malware_4 {
 }
 
 rule Stuxnet_maindll_decrypted_unpacked {
-	meta:
+meta:
 		description = "Stuxnet Sample - file maindll.decrypted.unpacked.dll_"
 		author = "Florian Roth"
 		reference = "Internal Research"
@@ -136,7 +127,7 @@ rule Stuxnet_maindll_decrypted_unpacked {
 }
 
 rule Stuxnet_s7hkimdb {
-	meta:
+meta:
 		description = "Stuxnet Sample - file s7hkimdb.dll"
 		author = "Florian Roth"
 		reference = "Internal Research"
@@ -145,28 +136,29 @@ rule Stuxnet_s7hkimdb {
 	strings:
 		$x1 = "S7HKIMDX.DLL" fullword wide
 
-		/* Opcodes by Binar.ly */
+		
 
-		// 0x10001778 8b 45 08  mov     eax, dword ptr [ebp + 8]
-		// 0x1000177b 35 dd 79 19 ae    xor     eax, 0xae1979dd
-		// 0x10001780 33 c9     xor     ecx, ecx
-		// 0x10001782 8b 55 08  mov     edx, dword ptr [ebp + 8]
-		// 0x10001785 89 02     mov     dword ptr [edx], eax
-		// 0x10001787 89 ?? ??  mov     dword ptr [edx + 4], ecx
+		
+		
+		
+		
+		
+		
 		$op1 = { 8b 45 08 35 dd 79 19 ae 33 c9 8b 55 08 89 02 89 }
-		// 0x10002045 74 36     je      0x1000207d
-		// 0x10002047 8b 7f 08  mov     edi, dword ptr [edi + 8]
-		// 0x1000204a 83 ff 00  cmp     edi, 0
-		// 0x1000204d 74 2e     je      0x1000207d
-		// 0x1000204f 0f b7 1f  movzx   ebx, word ptr [edi]
-		// 0x10002052 8b 7f 04  mov     edi, dword ptr [edi + 4]
+		
+		
+		
+		
+		
+		
 		$op2 = { 74 36 8b 7f 08 83 ff 00 74 2e 0f b7 1f 8b 7f 04 }
-		// 0x100020cf 74 70     je      0x10002141
-		// 0x100020d1 81 78 05 8d 54 24 04      cmp     dword ptr [eax + 5], 0x424548d
-		// 0x100020d8 75 1b     jne     0x100020f5
-		// 0x100020da 81 78 08 04 cd ?? ??      cmp     dword ptr [eax + 8], 0xc22ecd04
+		
+		
+		
+		
 		$op3 = { 74 70 81 78 05 8d 54 24 04 75 1b 81 78 08 04 cd }
 
 	condition:
 		( uint16(0) == 0x5a4d and filesize < 40KB and $x1 and all of ($op*) )
 }
+

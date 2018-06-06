@@ -1,15 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-07-27
-   Identifier: PowerShell Empire Eval
-   2 of 8 rules
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule PowerShell_Emp_Eval_Jul17_A1 {
-   meta:
+meta:
       description = "Detects suspicious sample with PowerShell content "
       author = "Florian Roth"
       reference = "PowerShell Empire Eval"
@@ -23,7 +13,7 @@ rule PowerShell_Emp_Eval_Jul17_A1 {
 }
 
 rule PowerShell_Emp_Eval_Jul17_A2 {
-   meta:
+meta:
       description = "Detects suspicious sample with PowerShell content "
       author = "Florian Roth"
       reference = "PowerShell Empire Eval"
@@ -35,3 +25,4 @@ rule PowerShell_Emp_Eval_Jul17_A2 {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 200KB and all of them )
 }
+

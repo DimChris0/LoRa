@@ -1,5 +1,5 @@
 rule shimrat {
-   meta:
+meta:
       description = "Detects ShimRat and the ShimRat loader"
       author = "Yonathan Klijnsma (yonathan.klijnsma@fox-it.com)"
       date = "20/11/2015"
@@ -25,7 +25,7 @@ rule shimrat {
 }
 
 rule shimratreporter {
-   meta:
+meta:
       description = "Detects ShimRatReporter"
       author = "Yonathan Klijnsma (yonathan.klijnsma@fox-it.com)"
       date = "20/11/2015"
@@ -45,3 +45,4 @@ rule shimratreporter {
    condition:
       all of them
 }
+

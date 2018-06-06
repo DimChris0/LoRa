@@ -1,6 +1,5 @@
-
 rule apt_sofacy_xtunnel {
-    meta:
+meta:
         author = "Claudio Guarnieri"
         description = "Sofacy Malware - German Bundestag"
         score = 75
@@ -22,7 +21,7 @@ rule apt_sofacy_xtunnel {
 }
 
 rule Winexe_RemoteExecution {
-    meta:
+meta:
         description = "Winexe tool used by Sofacy group several APT cases"
         author = "Florian Roth"
         reference = "http://dokumente.linksfraktion.de/inhalt/report-orig.pdf"
@@ -37,7 +36,7 @@ rule Winexe_RemoteExecution {
 }
 
 rule Sofacy_Mal2 {
-    meta:
+meta:
         description = "Sofacy Group Malware Sample 2"
         author = "Florian Roth"
         reference = "http://dokumente.linksfraktion.de/inhalt/report-orig.pdf"
@@ -54,7 +53,7 @@ rule Sofacy_Mal2 {
 }
 
 rule Sofacy_Mal3 {
-    meta:
+meta:
         description = "Sofacy Group Malware Sample 3"
         author = "Florian Roth"
         reference = "http://dokumente.linksfraktion.de/inhalt/report-orig.pdf"
@@ -83,7 +82,7 @@ rule Sofacy_Mal3 {
 }
 
 rule Sofacy_Bundestag_Batch {
-    meta:
+meta:
         description = "Sofacy Bundestags APT Batch Script"
         author = "Florian Roth"
         reference = "http://dokumente.linksfraktion.de/inhalt/report-orig.pdf"
@@ -96,3 +95,4 @@ rule Sofacy_Bundestag_Batch {
     condition:
         filesize < 10KB and 2 of them
 }
+

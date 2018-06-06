@@ -1,16 +1,5 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-05-12
-   Identifier: WannaCry
-   Reference: https://goo.gl/HG2j5T
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule WannaCry_Ransomware {
-   meta:
+meta:
       description = "Detects WannaCry Ransomware"
       author = "Florian Roth (with the help of binar.ly)"
       reference = "https://goo.gl/HG2j5T"
@@ -45,7 +34,7 @@ rule WannaCry_Ransomware {
 }
 
 rule WannaCry_Ransomware_Gen {
-   meta:
+meta:
       description = "Detects WannaCry Ransomware"
       author = "Florian Roth (based on rule by US CERT)"
       reference = "https://www.us-cert.gov/ncas/alerts/TA17-132A"
@@ -64,7 +53,7 @@ rule WannaCry_Ransomware_Gen {
 }
 
 rule WannCry_m_vbs {
-   meta:
+meta:
       description = "Detects WannaCry Ransomware VBS"
       author = "Florian Roth"
       reference = "https://goo.gl/HG2j5T"
@@ -79,7 +68,7 @@ rule WannCry_m_vbs {
 }
 
 rule WannCry_BAT {
-   meta:
+meta:
       description = "Detects WannaCry Ransomware BATCH File"
       author = "Florian Roth"
       reference = "https://goo.gl/HG2j5T"
@@ -95,7 +84,7 @@ rule WannCry_BAT {
 }
 
 rule WannaCry_RansomNote {
-   meta:
+meta:
       description = "Detects WannaCry Ransomware Note"
       author = "Florian Roth"
       reference = "https://goo.gl/HG2j5T"
@@ -108,10 +97,8 @@ rule WannaCry_RansomNote {
       ( uint16(0) == 0x3a51 and filesize < 2KB and all of them )
 }
 
-/* Kaspersky Rule */
-
 rule lazaruswannacry {
-   meta:
+meta:
       description = "Rule based on shared code between Feb 2017 Wannacry sample and Lazarus backdoor from Feb 2015 discovered by Neel Mehta"
       date = "2017-05-15"
       reference = "https://twitter.com/neelmehta/status/864164081116225536"
@@ -136,3 +123,4 @@ rule lazaruswannacry {
    condition:
       uint16(0) == 0x5A4D and filesize < 15000000 and all of them
 }
+

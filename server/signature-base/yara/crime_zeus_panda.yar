@@ -1,15 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-08-04
-   Identifier: Zeus Panda
-   Reference: https://cyberwtf.files.wordpress.com/2017/07/panda-whitepaper.pdf
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Zeus_Panda {
-   meta:
+meta:
       description = "Detects ZEUS Panda Malware"
       author = "Florian Roth"
       reference = "https://cyberwtf.files.wordpress.com/2017/07/panda-whitepaper.pdf"
@@ -29,3 +19,4 @@ rule Zeus_Panda {
    condition:
       uint16(0) == 0x5a4d and filesize < 400KB and ( 2 of ($x*) or 4 of them )
 }
+

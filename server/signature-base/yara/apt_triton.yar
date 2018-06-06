@@ -1,5 +1,5 @@
 rule TRITON_ICS_FRAMEWORK {
-      meta:
+meta:
           author = "nicholas.carr @itsreallynick"
           hash = "0face841f7b2953e7c29c064d6886523"
           description = "TRITON framework recovered during Mandiant ICS incident response"
@@ -56,18 +56,8 @@ rule TRITON_ICS_FRAMEWORK {
           2 of ($python_*) and 7 of ($py_*) and filesize < 3MB
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-12-14
-   Identifier: Triton
-   Reference: https://goo.gl/vtQoCQ
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Triton_trilog {
-   meta:
+meta:
       description = "Detects Triton APT malware - file trilog.exe"
       author = "Florian Roth"
       reference = "https://goo.gl/vtQoCQ"
@@ -80,3 +70,4 @@ rule Triton_trilog {
    condition:
       uint16(0) == 0x5a4d and filesize < 60KB and all of them
 }
+

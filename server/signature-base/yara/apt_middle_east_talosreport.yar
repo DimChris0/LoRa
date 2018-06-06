@@ -1,17 +1,6 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2018-02-07
-   Identifier: ME Campaign Talos Report
-   Reference: http://blog.talosintelligence.com/2018/02/targeted-attacks-in-middle-east.html
-*/
-
 import "pe"
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule ME_Campaign_Malware_1 {
-   meta:
+meta:
       description = "Detects malware from Middle Eastern campaign reported by Talos"
       author = "Florian Roth"
       reference = "http://blog.talosintelligence.com/2018/02/targeted-attacks-in-middle-east.html"
@@ -24,7 +13,7 @@ rule ME_Campaign_Malware_1 {
 }
 
 rule ME_Campaign_Malware_2 {
-   meta:
+meta:
       description = "Detects malware from Middle Eastern campaign reported by Talos"
       author = "Florian Roth"
       reference = "http://blog.talosintelligence.com/2018/02/targeted-attacks-in-middle-east.html"
@@ -44,7 +33,7 @@ rule ME_Campaign_Malware_2 {
 }
 
 rule ME_Campaign_Malware_3 {
-   meta:
+meta:
       description = "Detects malware from Middle Eastern campaign reported by Talos"
       author = "Florian Roth"
       reference = "http://blog.talosintelligence.com/2018/02/targeted-attacks-in-middle-east.html"
@@ -60,7 +49,7 @@ rule ME_Campaign_Malware_3 {
 }
 
 rule ME_Campaign_Malware_4 {
-   meta:
+meta:
       description = "Detects malware from Middle Eastern campaign reported by Talos"
       author = "Florian Roth"
       reference = "http://blog.talosintelligence.com/2018/02/targeted-attacks-in-middle-east.html"
@@ -71,7 +60,7 @@ rule ME_Campaign_Malware_4 {
 }
 
 rule ME_Campaign_Malware_5 {
-   meta:
+meta:
       description = "Detects malware from Middle Eastern campaign reported by Talos"
       author = "Florian Roth"
       reference = "http://blog.talosintelligence.com/2018/02/targeted-attacks-in-middle-east.html"
@@ -90,3 +79,4 @@ rule ME_Campaign_Malware_5 {
         pe.imphash() == "f34d5f2d4577ed6d9ceec516c1f5a744" and ( 8 of them )
       ) or ( all of them )
 }
+

@@ -1,14 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-07-19
-	Identifier: Invoke-Mimikatz
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Invoke_Mimikatz {
-	meta:
+meta:
 		description = "Detects Invoke-Mimikatz String"
 		author = "Florian Roth"
 		reference = "https://github.com/clymb3r/PowerShell/tree/master/Invoke-Mimikatz"
@@ -20,3 +11,4 @@ rule Invoke_Mimikatz {
 	condition:
       1 of them
 }
+

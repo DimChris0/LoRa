@@ -1,17 +1,6 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2018-01-27
-   Identifier: RGDoor
-   Reference: https://researchcenter.paloaltonetworks.com/2018/01/unit42-oilrig-uses-rgdoor-iis-backdoor-targets-middle-east/
-*/
-
 import "pe"
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule OilRig_RGDoor_Gen1 {
-   meta:
+meta:
       description = "Detects RGDoor backdoor used by OilRig group"
       author = "Florian Roth"
       reference = "https://researchcenter.paloaltonetworks.com/2018/01/unit42-oilrig-uses-rgdoor-iis-backdoor-targets-middle-east/"
@@ -35,3 +24,4 @@ rule OilRig_RGDoor_Gen1 {
         2 of them
       )
 }
+

@@ -1,24 +1,16 @@
-/*
-  Yara Rule Set
-  Author: Florian Roth
-  Date: 2016-05-23
-  Identifier: Swiss RUAG APT Case
-  Reference: https://www.govcert.admin.ch/blog/22/technical-report-about-the-ruag-espionage-case 
-*/
-
 rule RUAG_Tavdig_Malformed_Executable {
-  meta:
+meta:
     description = "Detects an embedded executable with a malformed header - known from Tavdig malware"
     author = "Florian Roth"
     reference = "https://goo.gl/N5MEj0"
     score = 60
   condition:
-    uint16(0) == 0x5a4d and /* MZ Header */
-    uint32(uint32(0x3C)) == 0x0000AD0B /* malformed PE header > 0x0bad */
+    uint16(0) == 0x5a4d and 
+    uint32(uint32(0x3C)) == 0x0000AD0B 
 }
 
 rule RUAG_Bot_Config_File {
-  meta:
+meta:
     description = "Detects a specific config file used by malware in RUAG APT case"
     author = "Florian Roth"
     reference = "https://goo.gl/N5MEj0"
@@ -32,7 +24,7 @@ rule RUAG_Bot_Config_File {
 }
 
 rule RUAG_Cobra_Malware {
-  meta:
+meta:
     description = "Detects a malware mentioned in the RUAG Case called Carbon/Cobra"
     author = "Florian Roth"
     reference = "https://goo.gl/N5MEj0"
@@ -44,7 +36,7 @@ rule RUAG_Cobra_Malware {
 }
 
 rule RUAG_Cobra_Config_File {
-  meta:
+meta:
     description = "Detects a config text file used by malware Cobra in RUAG case"
     author = "Florian Roth"
     reference = "https://goo.gl/N5MEj0"
@@ -67,7 +59,7 @@ rule RUAG_Cobra_Config_File {
 }
 
 rule RUAG_Exfil_Config_File {
-  meta:
+meta:
     description = "Detects a config text file used in data exfiltration in RUAG case"
     author = "Florian Roth"
     reference = "https://goo.gl/N5MEj0"
@@ -83,3 +75,4 @@ rule RUAG_Exfil_Config_File {
   condition:
     $h1 at 0 and all of ($s*) and filesize < 1KB
 }
+

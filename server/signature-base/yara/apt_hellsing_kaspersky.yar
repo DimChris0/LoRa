@@ -1,6 +1,5 @@
-
-rule apt_hellsing_implantstrings { 
-	meta:
+rule apt_hellsing_implantstrings {
+meta:
 		version = "1.0"
 		filetype = "PE"
 		author = "Costin Raiu, Kaspersky Lab" 
@@ -28,8 +27,8 @@ rule apt_hellsing_implantstrings {
 		($mz at 0) and (all of ($a*)) or (all of ($b*)) or ($c and $d) or (any of ($debugpath*)) or ($e and $f) and filesize < 500000
 }
 
-rule apt_hellsing_installer { 
-	meta:
+rule apt_hellsing_installer {
+meta:
 		version = "1.0"
 		filetype = "PE"
 		author = "Costin Raiu, Kaspersky Lab"
@@ -53,8 +52,8 @@ rule apt_hellsing_installer {
 		($mz at 0) and ($cmd and (2 of ($a*))) and filesize < 500000
 }
 
-rule apt_hellsing_proxytool { 
-	meta:
+rule apt_hellsing_proxytool {
+meta:
 		version = "1.0"
 		filetype = "PE"
 		author = "Costin Raiu, Kaspersky Lab"
@@ -73,8 +72,8 @@ rule apt_hellsing_proxytool {
 		($mz at 0) and (2 of ($a*)) and filesize < 300000
 }
 
-rule apt_hellsing_xkat { 
-	meta:
+rule apt_hellsing_xkat {
+meta:
 		version = "1.0"
 		filetype = "PE"
 		author = "Costin Raiu, Kaspersky Lab" copyright = "Kaspersky Lab"
@@ -96,8 +95,8 @@ rule apt_hellsing_xkat {
 		($mz at 0) and (6 of ($a*)) and filesize < 300000
 }
 
-rule apt_hellsing_msgertype2 { 
-	meta:
+rule apt_hellsing_msgertype2 {
+meta:
 		version = "1.0"
 		filetype = "PE"
 		author = "Costin Raiu, Kaspersky Lab"
@@ -116,8 +115,8 @@ rule apt_hellsing_msgertype2 {
 		($mz at 0) and (4 of ($a*)) and filesize < 500000
 }
 
-rule apt_hellsing_irene { 
-	meta:
+rule apt_hellsing_irene {
+meta:
 		version = "1.0"
 		filetype = "PE"
 		author = "Costin Raiu, Kaspersky Lab"
@@ -135,3 +134,4 @@ rule apt_hellsing_irene {
 	condition:
 		($mz at 0) and (4 of ($a*)) and filesize < 500000
 }
+

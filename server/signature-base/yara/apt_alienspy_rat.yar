@@ -1,6 +1,4 @@
-
-rule crime_win_rat_AlienSpy
-{
+rule crime_win_rat_AlienSpy {
 meta:
 	description = "Alien Spy Remote Access Trojan"
 	author = "General Dynamics Fidelis Cybersecurity Solutions - Threat Research Team"
@@ -47,3 +45,4 @@ meta:
 
 	uint16(0) == 0x4B50 and filesize < 800KB and ( (all of ($sa_*)) or (all of ($sb_*)) or (all of ($sc_*)) )
 }
+

@@ -1,6 +1,5 @@
-
 rule PowerShell_Susp_Parameter_Combo {
-   meta:
+meta:
       description = "Detects PowerShell invocation with suspicious parameters"
       author = "Florian Roth"
       reference = "https://goo.gl/uAic1X"
@@ -8,7 +7,7 @@ rule PowerShell_Susp_Parameter_Combo {
       score = 60
       type = "file"
    strings:
-      /* Encoded Command */
+      
       $a1 = " -enc " ascii nocase
       $a2 = " -EncodedCommand " ascii nocase
 
@@ -36,3 +35,4 @@ rule PowerShell_Susp_Parameter_Combo {
    condition:
       filesize < 800KB and 4 of them
 }
+

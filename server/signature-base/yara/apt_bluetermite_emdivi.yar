@@ -1,13 +1,5 @@
-
-/*
-	Yara Rule Set
-	Author: Florian Roth @Cyber0ps
-	Date: 2015-08-20
-	Identifier: Emdivi
-*/
-
 rule Emdivi_SFX {
-	meta:
+meta:
 		description = "Detects Emdivi malware in SFX Archive"
 		author = "Florian Roth @Cyber0ps"
 		reference = "https://securelist.com/blog/research/71876/new-activity-of-the-blue-termite-apt/"
@@ -26,10 +18,8 @@ rule Emdivi_SFX {
 		uint16(0) == 0x5a4d and filesize < 740KB and (1 of ($x*) and all of ($s*))
 }
 
-/* Super Rules ------------------------------------------------------------- */
-
 rule Emdivi_Gen1 {
-	meta:
+meta:
 		description = "Detects Emdivi Malware"
 		author = "Florian Roth @Cyber0ps"
 		reference = "https://securelist.com/blog/research/71876/new-activity-of-the-blue-termite-apt/"
@@ -58,7 +48,7 @@ rule Emdivi_Gen1 {
 }
 
 rule Emdivi_Gen2 {
-	meta:
+meta:
 		description = "Detects Emdivi Malware"
 		author = "Florian Roth @Cyber0ps"
 		reference = "https://securelist.com/blog/research/71876/new-activity-of-the-blue-termite-apt/"
@@ -81,7 +71,7 @@ rule Emdivi_Gen2 {
 }
 
 rule Emdivi_Gen3 {
-	meta:
+meta:
 		description = "Detects Emdivi Malware"
 		author = "Florian Roth @Cyber0ps"
 		reference = "https://securelist.com/blog/research/71876/new-activity-of-the-blue-termite-apt/"
@@ -108,7 +98,7 @@ rule Emdivi_Gen3 {
 }
 
 rule Emdivi_Gen4 {
-	meta:
+meta:
 		description = "Detects Emdivi Malware"
 		author = "Florian Roth @Cyber0ps"
 		reference = "https://securelist.com/blog/research/71876/new-activity-of-the-blue-termite-apt/"
@@ -134,3 +124,4 @@ rule Emdivi_Gen4 {
 	condition:
 		uint16(0) == 0x5a4d and filesize < 853KB and all of them
 }
+

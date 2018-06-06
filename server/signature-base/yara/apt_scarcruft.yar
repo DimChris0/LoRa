@@ -1,6 +1,5 @@
-
 rule Scarcruft_malware_Feb18_1 {
-   meta:
+meta:
       description = "Detects Scarcruft malware - February 2018"
       author = "Florian rootpath"
       reference = "https://twitter.com/craiu/status/959477129795731458"
@@ -12,3 +11,4 @@ rule Scarcruft_malware_Feb18_1 {
    condition:
       uint16(0) == 0x5a4d and filesize < 2000KB and 1 of them
 }
+

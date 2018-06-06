@@ -1,12 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-03-07
-	Identifier: CN Keylogger APT
-*/
-
 rule Keylogger_CN_APT {
-	meta:
+meta:
 		description = "Keylogger - generic rule for a Chinese variant"
 		author = "Florian Roth"
 		date = "2016-03-07"
@@ -31,3 +24,4 @@ rule Keylogger_CN_APT {
 	condition:
 		( uint16(0) == 0x5a4d and filesize < 100KB and 1 of ($x*) ) or 3 of them
 }
+

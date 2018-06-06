@@ -1,6 +1,5 @@
-
 rule APTGroupX_PlugXTrojanLoader_StringDecode {
-   meta:
+meta:
       author = "Jay DiMartino"
    	description = "Rule to detect PlugX Malware"
 		score = 80
@@ -33,3 +32,4 @@ rule APTGroupX_PlugXTrojanLoader_StringDecode {
    condition:
       any of them
 }
+

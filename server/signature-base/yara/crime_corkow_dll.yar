@@ -1,7 +1,6 @@
 import "pe"
-
 rule CorkowDLL {
-    meta:
+meta:
         description = "Rule to detect the Corkow DLL files"
         author = "Group IB"
         date = "2016/02"
@@ -16,8 +15,9 @@ rule CorkowDLL {
                pe.exports("ServiceMain") or
                pe.exports("DllGetClassObject")
             ) or (
-               pe.exports("ServiceMain") and  /* Service DLL */
-               pe.exports("Control_RunDLL")   /* Sufficiently specific in this combination */
+               pe.exports("ServiceMain") and  
+               pe.exports("Control_RunDLL")   
             )
          )
 }
+

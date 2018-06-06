@@ -1,15 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Didier Stevens
-	Date: 2016-08-13
-	Identifier: KiRBi ticket for mimikatz
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
-rule mimikatz_kirbi_ticket
-{
-	meta:
+rule mimikatz_kirbi_ticket {
+meta:
 		description		= "KiRBi ticket for mimikatz"
 		author			= "Benjamin DELPY (gentilkiwi)"
 	strings:
@@ -17,3 +7,4 @@ rule mimikatz_kirbi_ticket
 	condition:
 		$asn1 at 0
 }
+

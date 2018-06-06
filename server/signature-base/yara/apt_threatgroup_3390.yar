@@ -1,12 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2015-08-06
-	Identifier: Threat Group 3390
-*/
-
 rule HttpBrowser_RAT_dropper_Gen1 {
-	meta:
+meta:
 		description = "Threat Group 3390 APT Sample - HttpBrowser RAT Dropper"
 		author = "Florian Roth"
 		reference = "http://snip.ly/giNB"
@@ -46,7 +39,7 @@ rule HttpBrowser_RAT_dropper_Gen1 {
 }
 
 rule HttpBrowser_RAT_Sample1 {
-	meta:
+meta:
 		description = "Threat Group 3390 APT Sample - HttpBrowser RAT Sample update.hancominc.com"
 		author = "Florian Roth"
 		reference = "http://snip.ly/giNB"
@@ -61,7 +54,7 @@ rule HttpBrowser_RAT_Sample1 {
 }
 
 rule HttpBrowser_RAT_Sample2 {
-	meta:
+meta:
 		description = "Threat Group 3390 APT Sample - HttpBrowser RAT Sample"
 		author = "Florian Roth"
 		reference = "http://snip.ly/giNB"
@@ -78,7 +71,7 @@ rule HttpBrowser_RAT_Sample2 {
 }
 
 rule HttpBrowser_RAT_Gen {
-	meta:
+meta:
 		description = "Threat Group 3390 APT Sample - HttpBrowser RAT Generic"
 		author = "Florian Roth"
 		reference = "http://snip.ly/giNB"
@@ -116,7 +109,7 @@ rule HttpBrowser_RAT_Gen {
 }
 
 rule PlugX_NvSmartMax_Gen {
-	meta:
+meta:
 		description = "Threat Group 3390 APT Sample - PlugX NvSmartMax Generic"
 		author = "Florian Roth"
 		reference = "http://snip.ly/giNB"
@@ -144,7 +137,7 @@ rule PlugX_NvSmartMax_Gen {
 }
 
 rule HttpBrowser_RAT_dropper_Gen2 {
-	meta:
+meta:
 		description = "Threat Group 3390 APT Sample - HttpBrowser RAT Dropper"
 		author = "Florian Roth"
 		reference = "http://snip.ly/giNB"
@@ -171,7 +164,7 @@ rule HttpBrowser_RAT_dropper_Gen2 {
 }
 
 rule ThreatGroup3390_Strings {
-	meta:
+meta:
 		description = "Threat Group 3390 APT - Strings"
 		author = "Florian Roth"
 		reference = "http://snip.ly/giNB"
@@ -188,7 +181,7 @@ rule ThreatGroup3390_Strings {
 }
 
 rule ThreatGroup3390_C2 {
-	meta:
+meta:
 		description = "Threat Group 3390 APT - C2 Server"
 		author = "Florian Roth"
 		reference = "http://snip.ly/giNB"
@@ -305,3 +298,4 @@ rule ThreatGroup3390_C2 {
 	condition:
 		uint16(0) == 0x5a4d and 1 of them
 }
+

@@ -1,6 +1,5 @@
-
 rule CredentialStealer_Generic_Backdoor {
-   meta:
+meta:
       description = "Detects credential stealer byed on many strings that indicate password store access"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -20,3 +19,4 @@ rule CredentialStealer_Generic_Backdoor {
    condition:
       ( uint16(0) == 0x5a4d and 4 of them )
 }
+

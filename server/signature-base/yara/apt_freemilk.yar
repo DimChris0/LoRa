@@ -1,17 +1,6 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-10-05
-   Identifier: FreeMilk
-   Reference: https://researchcenter.paloaltonetworks.com/2017/10/unit42-freemilk-highly-targeted-spear-phishing-campaign/
-*/
-
 import "pe"
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule FreeMilk_APT_Mal_1 {
-   meta:
+meta:
       description = "Detects malware from FreeMilk campaign"
       author = "Florian Roth"
       reference = "https://researchcenter.paloaltonetworks.com/2017/10/unit42-freemilk-highly-targeted-spear-phishing-campaign/"
@@ -37,7 +26,7 @@ rule FreeMilk_APT_Mal_1 {
 }
 
 rule FreeMilk_APT_Mal_2 {
-   meta:
+meta:
       description = "Detects malware from FreeMilk campaign"
       author = "Florian Roth"
       reference = "https://researchcenter.paloaltonetworks.com/2017/10/unit42-freemilk-highly-targeted-spear-phishing-campaign/"
@@ -56,7 +45,7 @@ rule FreeMilk_APT_Mal_2 {
 }
 
 rule FreeMilk_APT_Mal_3 {
-   meta:
+meta:
       description = "Detects malware from FreeMilk campaign"
       author = "Florian Roth"
       reference = "https://researchcenter.paloaltonetworks.com/2017/10/unit42-freemilk-highly-targeted-spear-phishing-campaign/"
@@ -72,7 +61,7 @@ rule FreeMilk_APT_Mal_3 {
 }
 
 rule FreeMilk_APT_Mal_4 {
-   meta:
+meta:
       description = "Detects malware from FreeMilk campaign"
       author = "Florian Roth"
       reference = "https://researchcenter.paloaltonetworks.com/2017/10/unit42-freemilk-highly-targeted-spear-phishing-campaign/"
@@ -94,3 +83,4 @@ rule FreeMilk_APT_Mal_4 {
          3 of them
       )
 }
+

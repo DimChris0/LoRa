@@ -1,12 +1,6 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2015-10-10
-	Identifier: Winnti Malware
-*/
-
+import "pe"
 rule Winnti_signing_cert {
-	meta:
+meta:
 		description = "Detects a signing certificate used by the Winnti APT group"
 		author = "Florian Roth"
 		reference = "https://securelist.com/analysis/publications/72275/i-am-hdroot-part-1/"
@@ -23,7 +17,7 @@ rule Winnti_signing_cert {
 }
 
 rule Winnti_malware_Nsiproxy {
-	meta:
+meta:
 		description = "Detects a Winnti rootkit"
 		author = "Florian Roth"
 		date = "2015-10-10"
@@ -49,7 +43,7 @@ rule Winnti_malware_Nsiproxy {
 }
 
 rule Winnti_malware_UpdateDLL {
-	meta:
+meta:
 		description = "Detects a Winnti malware - Update.dll"
 		author = "Florian Roth"
 		reference = "VTI research"
@@ -80,8 +74,9 @@ rule Winnti_malware_UpdateDLL {
 			( 1 of ($c*) and 3 of ($s*) ) or all of ($s*)
 		)
 }
+
 rule Winnti_malware_FWPK {
-	meta:
+meta:
 		description = "Detects a Winnti malware - FWPKCLNT.SYS"
 		author = "Florian Roth"
 		reference = "VTI research"
@@ -108,7 +103,7 @@ rule Winnti_malware_FWPK {
 }
 
 rule Winnti_malware_StreamPortal_Gen {
-	meta:
+meta:
 		description = "Detects a Winnti malware - Streamportal"
 		author = "Florian Roth"
 		reference = "VTI research"
@@ -128,3 +123,21 @@ rule Winnti_malware_StreamPortal_Gen {
 	condition:
 		uint16(0) == 0x5a4d and filesize < 275KB and all of them
 }
+
+rule WINNTI_KingSoft_Moz_Confustion {
+meta:
+      description = "Detects Barium sample with Copyright confusion"
+      author = "Markus Neis"
+      reference = "https://www.virustotal.com/en/file/070ee4a40852b26ec0cfd79e32176287a6b9d2b15e377281d8414550a83f6496/analysis/"
+      date = "2018-04-13"
+      hash1 = "070ee4a40852b26ec0cfd79e32176287a6b9d2b15e377281d8414550a83f6496"
+   condition:
+      uint16(0) == 0x5a4d and filesize < 3000KB and (
+         pe.imphash() == "7f01b23ccfd1017249c36bc1618d6892" or
+         (
+            pe.version_info["LegalCopyright"] contains "Mozilla Corporation"
+            and pe.version_info["ProductName"] contains "Kingsoft"
+         )
+      )
+}
+

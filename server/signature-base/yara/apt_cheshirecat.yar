@@ -1,15 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2015-08-08
-	Identifier: Cheshire Cat
-	Version: 0.1
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule CheshireCat_Sample2 {
-	meta:
+meta:
 		description = "Auto-generated rule - file dc18850d065ff6a8364421a9c8f9dd5fcce6c7567f4881466cee00e5cd0c7aa8"
 		author = "Florian Roth"
 		reference = "https://malware-research.org/prepare-father-of-stuxnet-news-are-coming/"
@@ -27,11 +17,8 @@ rule CheshireCat_Sample2 {
 		uint16(0) == 0x5a4d and filesize < 100KB and 4 of ($s*)
 }
 
-/* Generic Rules ----------------------------------------------------------- */
-/* Gen1 is more exact than Gen2 - until now I had no FPs with Gen2 */
-
 rule CheshireCat_Gen1 {
-	meta:
+meta:
 		description = "Auto-generated rule - file ec41b029c3ff4147b6a5252cb8b659f851f4538d4af0a574f7e16bc1cd14a300"
 		author = "Florian Roth"
 		reference = "https://malware-research.org/prepare-father-of-stuxnet-news-are-coming/"
@@ -70,7 +57,7 @@ rule CheshireCat_Gen1 {
 }
 
 rule CheshireCat_Gen2 {
-	meta:
+meta:
 		description = "Cheshire Cat Malware"
 		author = "Florian Roth"
 		reference = "https://malware-research.org/prepare-father-of-stuxnet-news-are-coming/"
@@ -100,3 +87,4 @@ rule CheshireCat_Gen2 {
 	condition:
 		uint16(0) == 0x5a4d and filesize < 200KB and 7 of ($s*) and 2 of ($a*) and 1 of ($b*)
 }
+

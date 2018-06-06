@@ -1,14 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-01-10
-   Identifier: Venom Rootkit
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Venom_Rootkit {
-   meta:
+meta:
       description = "Venom Linux Rootkit"
       author = "Florian Roth"
       reference = "https://security.web.cern.ch/security/venom.shtml"
@@ -28,3 +19,4 @@ rule Venom_Rootkit {
    condition:
       filesize < 4000KB and 2 of them
 }
+

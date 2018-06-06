@@ -1,7 +1,5 @@
-
-rule blackenergy3_installer
-{
-	meta:
+rule blackenergy3_installer {
+meta:
 		author = "Mike Schladt"
 		date = "2015-05-29"
 		description = "Matches unique code block for import name construction "
@@ -13,3 +11,4 @@ rule blackenergy3_installer
 	condition : 
 		any of them
 }
+

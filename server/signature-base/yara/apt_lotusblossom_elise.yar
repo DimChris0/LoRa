@@ -1,17 +1,6 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2018-01-24
-   Identifier: Lotus Blossom Elise Malware
-   Reference: https://community.rsa.com/community/products/netwitness/blog/2018/01/30/apt32-continues-asean-targeting
-*/
-
 import "pe"
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Elise_Jan18_1 {
-   meta:
+meta:
       description = "Detects Elise malware samples - fake Norton Security NavShExt.dll"
       author = "Florian Roth"
       reference = "https://twitter.com/blu3_team/status/955971742329135105"
@@ -28,3 +17,4 @@ rule Elise_Jan18_1 {
         ( 1 of ($s*) and $a1 )
       )
 }
+

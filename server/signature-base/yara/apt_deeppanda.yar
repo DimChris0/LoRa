@@ -1,7 +1,5 @@
-/* Deep Panda APT */
-
 rule DeepPanda_sl_txt_packed {
-	meta:
+meta:
 		description = "Hack Deep Panda - ScanLine sl-txt-packed"
 		author = "Florian Roth"
 		date = "2015/02/08"
@@ -20,7 +18,7 @@ rule DeepPanda_sl_txt_packed {
 }
 
 rule DeepPanda_lot1 {
-	meta:
+meta:
 		description = "Hack Deep Panda - lot1.tmp-pwdump"
 		author = "Florian Roth"
 		date = "2015/02/08"
@@ -45,7 +43,7 @@ rule DeepPanda_lot1 {
 }
 
 rule DeepPanda_htran_exe {
-	meta:
+meta:
 		description = "Hack Deep Panda - htran-exe"
 		author = "Florian Roth"
 		date = "2015/02/08"
@@ -64,7 +62,7 @@ rule DeepPanda_htran_exe {
 }
 
 rule DeepPanda_Trojan_Kakfum {
-	meta:
+meta:
 		description = "Hack Deep Panda - Trojan.Kakfum sqlsrv32.dll"
 		author = "Florian Roth"
 		date = "2015/02/08"
@@ -80,3 +78,4 @@ rule DeepPanda_Trojan_Kakfum {
 	condition:
 		all of them
 }
+

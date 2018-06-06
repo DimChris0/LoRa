@@ -1,0 +1,16 @@
+20180606T15:24:04Z IE11WIN7 LOKI: Notice: Starting Loki Scan SYSTEM: IE11WIN7 TIME: 20180606T15:24:04Z PLATFORM: windows
+20180606T15:24:05Z IE11WIN7 LOKI: Info: File Name Characteristics initialized with 2836 regex patterns
+20180606T15:24:06Z IE11WIN7 LOKI: Info: C2 server indicators initialized with 44735 elements
+20180606T15:24:15Z IE11WIN7 LOKI: Info: Malicious MD5 Hashes initialized with 18769 hashes
+20180606T15:24:15Z IE11WIN7 LOKI: Info: Malicious SHA1 Hashes initialized with 6927 hashes
+20180606T15:24:15Z IE11WIN7 LOKI: Info: Malicious SHA256 Hashes initialized with 22540 hashes
+20180606T15:24:15Z IE11WIN7 LOKI: Info: False Positive Hashes initialized with 30 hashes
+20180606T15:24:18Z IE11WIN7 LOKI: Info: Initializing YARA rules (composed string of all rule files)
+20180606T15:24:18Z IE11WIN7 LOKI: Info: Initialized Yara rules at once
+20180606T15:24:18Z IE11WIN7 LOKI: Notice: Program should be run 'as Administrator' to ensure all access rights to process memory and file objects.
+20180606T15:24:18Z IE11WIN7 LOKI: Info: Scanning C:\Users\IEUser\Desktop\scan test ...  
+20180606T15:24:18Z IE11WIN7 LOKI: Warning: Possible Hex sig found in C:\Users\IEUser\Desktop\scan test\hex signature test 2.txt file, at byte offset 0 with signature 6920616D206D6F7265206D616C6963696F7573207468616E20746865206F7468657220677579
+20180606T15:24:18Z IE11WIN7 LOKI: Notice: Results: 0 alerts, 1 warnings, 2 notices
+20180606T15:24:18Z IE11WIN7 LOKI: Result: Suspicious objects detected!
+20180606T15:24:18Z IE11WIN7 LOKI: Result: Loki recommends a deeper analysis of the suspicious objects.
+20180606T15:24:18Z IE11WIN7 LOKI: Notice: Finished LOKI Scan SYSTEM: IE11WIN7 TIME: 20180606T15:24:18Z

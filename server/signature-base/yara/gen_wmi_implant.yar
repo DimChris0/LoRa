@@ -1,14 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-03-24
-   Identifier: WMImplant
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule WMImplant {
-   meta:
+meta:
       description = "Auto-generated rule - file WMImplant.ps1"
       author = "Florian Roth"
       reference = "https://www.fireeye.com/blog/threat-research/2017/03/wmimplant_a_wmi_ba.html"
@@ -24,3 +15,4 @@ rule WMImplant {
    condition:
       1 of them
 }
+

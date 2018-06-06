@@ -1,12 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2015-12-04
-	Identifier: Sofacy Malware
-*/
-
 rule Sofacy_Malware_StrangeSpaces {
-	meta:
+meta:
 		description = "Detetcs strange strings from Sofacy malware with many spaces"
 		author = "Florian Roth"
 		reference = "https://securelist.com/blog/research/72924/sofacy-apt-hits-high-profile-targets-with-updated-toolset/"
@@ -21,7 +14,7 @@ rule Sofacy_Malware_StrangeSpaces {
 }
 
 rule Sofacy_Malware_AZZY_Backdoor_1 {
-	meta:
+meta:
 		description = "AZZY Backdoor - Sample 1"
 		author = "Florian Roth"
 		reference = "https://securelist.com/blog/research/72924/sofacy-apt-hits-high-profile-targets-with-updated-toolset/"
@@ -36,7 +29,7 @@ rule Sofacy_Malware_AZZY_Backdoor_1 {
 }
 
 rule Sofacy_AZZY_Backdoor_Implant_1 {
-	meta:
+meta:
 		description = "AZZY Backdoor Implant 4.3 - Sample 1"
 		author = "Florian Roth"
 		reference = "https://securelist.com/blog/research/72924/sofacy-apt-hits-high-profile-targets-with-updated-toolset/"
@@ -53,7 +46,7 @@ rule Sofacy_AZZY_Backdoor_Implant_1 {
 }
 
 rule Sofacy_AZZY_Backdoor_HelperDLL {
-	meta:
+meta:
 		description = "Dropped C&C helper DLL for AZZY 4.3"
 		author = "Florian Roth"
 		reference = "https://securelist.com/blog/research/72924/sofacy-apt-hits-high-profile-targets-with-updated-toolset/"
@@ -67,10 +60,8 @@ rule Sofacy_AZZY_Backdoor_HelperDLL {
 		uint16(0) == 0x5a4d and filesize < 100KB and all of them
 }
 
-/* Super Rules ------------------------------------------------------------- */
-
 rule Sofacy_CollectorStealer_Gen1 {
-	meta:
+meta:
 		description = "Generic rule to detect Sofacy Malware Collector Stealer"
 		author = "Florian Roth"
 		reference = "https://securelist.com/blog/research/72924/sofacy-apt-hits-high-profile-targets-with-updated-toolset/"
@@ -87,7 +78,7 @@ rule Sofacy_CollectorStealer_Gen1 {
 }
 
 rule Sofacy_CollectorStealer_Gen2 {
-	meta:
+meta:
 		description = "File collectors / USB stealers - Generic"
 		author = "Florian Roth"
 		reference = "https://securelist.com/blog/research/72924/sofacy-apt-hits-high-profile-targets-with-updated-toolset/"
@@ -104,7 +95,7 @@ rule Sofacy_CollectorStealer_Gen2 {
 }
 
 rule Sofacy_CollectorStealer_Gen3 {
-	meta:
+meta:
 		description = "File collectors / USB stealers - Generic"
 		author = "Florian Roth"
 		reference = "https://securelist.com/blog/research/72924/sofacy-apt-hits-high-profile-targets-with-updated-toolset/"
@@ -127,3 +118,4 @@ rule Sofacy_CollectorStealer_Gen3 {
 		uint16(0) == 0x5a4d and filesize < 150KB and
 		( all of ($s*) and (all of ($a*) or all of ($b*)))
 }
+

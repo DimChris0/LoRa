@@ -1,17 +1,6 @@
 import "pe"
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-10-24
-   Identifier: Kasper
-   Reference: Internal Research
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule KasperMalware_Oct17_1 {
-   meta:
+meta:
       description = "Detects Kasper Backdoor"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -26,3 +15,4 @@ rule KasperMalware_Oct17_1 {
          1 of them
       )
 }
+

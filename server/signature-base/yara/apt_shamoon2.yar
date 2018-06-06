@@ -1,14 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2016-12-01
-   Identifier: Shamoon 2.0
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Shamoon2_Wiper {
-   meta:
+meta:
       description = "Detects Shamoon 2.0 Wiper Component"
       author = "Florian Roth"
       reference = "https://goo.gl/jKIfGB"
@@ -26,7 +17,7 @@ rule Shamoon2_Wiper {
 }
 
 rule Shamoon2_ComComp {
-   meta:
+meta:
       description = "Detects Shamoon 2.0 Communication Components"
       author = "Florian Roth (with Binar.ly)"
       reference = "https://goo.gl/jKIfGB"
@@ -45,7 +36,7 @@ rule Shamoon2_ComComp {
 }
 
 rule EldoS_RawDisk {
-   meta:
+meta:
       description = "EldoS Rawdisk Device Driver (Commercial raw disk access driver - used in Operation Shamoon 2.0)"
       author = "Florian Roth (with Binar.ly)"
       reference = "https://goo.gl/jKIfGB"
@@ -70,7 +61,7 @@ rule EldoS_RawDisk {
 }
 
 rule Shamoon_Disttrack_Dropper {
-   meta:
+meta:
       description = "Detects Shamoon 2.0 Disttrack Dropper"
       author = "Florian Roth"
       reference = "https://goo.gl/jKIfGB"
@@ -90,3 +81,4 @@ rule Shamoon_Disttrack_Dropper {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 90KB and 1 of ($a*) and 1 of ($s*) )
 }
+

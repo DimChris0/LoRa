@@ -1,6 +1,5 @@
-
 rule PowerShell_Suite_Hacktools_Gen_Strings {
-   meta:
+meta:
       description = "Detects strings from scripts in the PowerShell-Suite repo"
       author = "Florian Roth"
       reference = "https://github.com/FuzzySecurity/PowerShell-Suite"
@@ -44,7 +43,7 @@ rule PowerShell_Suite_Hacktools_Gen_Strings {
 }
 
 rule PowerShell_Suite_Eidolon {
-   meta:
+meta:
       description = "Detects PowerShell Suite Eidolon script - file Start-Eidolon.ps1"
       author = "Florian Roth"
       reference = "https://github.com/FuzzySecurity/PowerShell-Suite"
@@ -57,3 +56,4 @@ rule PowerShell_Suite_Eidolon {
    condition:
       uint16(0) == 0x7566 and filesize < 13000KB and 1 of them
 }
+

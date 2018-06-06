@@ -1,12 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2015-12-02
-	Identifier: Phishing Gina Harrowell Dez 2015
-*/
-
 rule PHISH_02Dez2015_dropped_p0o6543f_1 {
-	meta:
+meta:
 		description = "Phishing Wave - file p0o6543f.exe"
 		author = "Florian Roth"
 		reference = "http://myonlinesecurity.co.uk/purchase-order-124658-gina-harrowell-clinimed-limited-word-doc-or-excel-xls-spreadsheet-malware/"
@@ -27,7 +20,7 @@ rule PHISH_02Dez2015_dropped_p0o6543f_1 {
 }
 
 rule PHISH_02Dez2015_dropped_p0o6543f_2 {
-	meta:
+meta:
 		description = "Phishing Wave used MineExplorer Game by WangLei - file p0o6543f.exe.4"
 		author = "Florian Roth"
 		reference = "http://myonlinesecurity.co.uk/purchase-order-124658-gina-harrowell-clinimed-limited-word-doc-or-excel-xls-spreadsheet-malware/"
@@ -43,7 +36,7 @@ rule PHISH_02Dez2015_dropped_p0o6543f_2 {
 }
 
 rule PHISH_02Dez2015_attach_P_ORD_C_10156_124658 {
-	meta:
+meta:
 		description = "Phishing Wave - file P-ORD-C-10156-124658.xls"
 		author = "Florian Roth"
 		reference = "http://myonlinesecurity.co.uk/purchase-order-124658-gina-harrowell-clinimed-limited-word-doc-or-excel-xls-spreadsheet-malware/"
@@ -65,3 +58,4 @@ rule PHISH_02Dez2015_attach_P_ORD_C_10156_124658 {
 	condition:
 		uint16(0) == 0xcfd0 and filesize < 200KB and all of them
 }
+

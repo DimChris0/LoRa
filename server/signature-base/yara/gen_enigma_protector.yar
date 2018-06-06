@@ -1,12 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth with the help of binar.ly
-   Date: 2017-05-02
-   Identifier: Enigma Protector
-*/
-
 rule EnigmaPacker_Rare {
-   meta:
+meta:
       description = "Detects an ENIGMA packed executable"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -21,7 +14,7 @@ rule EnigmaPacker_Rare {
 }
 
 rule Enigma_Protected_Malware_May17_RhxFiles {
-   meta:
+meta:
       description = "Auto-generated rule - file RhxFiles.dll"
       author = "Florian Roth with the help of binar.ly"
       reference = "Internal Research"
@@ -36,7 +29,7 @@ rule Enigma_Protected_Malware_May17_RhxFiles {
 }
 
 rule Enigma_Protected_Malware {
-   meta:
+meta:
       description = "Detects samples packed by Enigma Protector"
       author = "Florian Roth with the help of binar.ly"
       reference = "https://goo.gl/OEVQ9w"
@@ -49,3 +42,4 @@ rule Enigma_Protected_Malware {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 2000KB and all of them )
 }
+

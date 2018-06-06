@@ -1,16 +1,5 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-06-14
-   Identifier: Invoke-Hash / Invoke-WMIExec
-   Reference: https://github.com/Kevin-Robertson/Invoke-TheHash
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Invoke_SMBExec {
-   meta:
+meta:
       description = "Detects Invoke-WmiExec or Invoke-SmbExec"
       author = "Florian Roth"
       reference = "https://github.com/Kevin-Robertson/Invoke-TheHash"
@@ -28,7 +17,7 @@ rule Invoke_SMBExec {
 }
 
 rule Invoke_WMIExec_Gen_1 {
-   meta:
+meta:
       description = "Detects Invoke-WmiExec or Invoke-SmbExec"
       author = "Florian Roth"
       reference = "https://github.com/Kevin-Robertson/Invoke-TheHash"
@@ -47,7 +36,7 @@ rule Invoke_WMIExec_Gen_1 {
 }
 
 rule Invoke_SMBExec_Invoke_WMIExec_1 {
-   meta:
+meta:
       description = "Auto-generated rule - from files Invoke-SMBExec.ps1, Invoke-WMIExec.ps1"
       author = "Florian Roth"
       reference = "https://github.com/Kevin-Robertson/Invoke-TheHash"
@@ -64,7 +53,7 @@ rule Invoke_SMBExec_Invoke_WMIExec_1 {
 }
 
 rule Invoke_WMIExec_Gen {
-   meta:
+meta:
       description = "Auto-generated rule - from files Invoke-SMBClient.ps1, Invoke-SMBExec.ps1, Invoke-WMIExec.ps1, Invoke-WMIExec.ps1"
       author = "Florian Roth"
       reference = "https://github.com/Kevin-Robertson/Invoke-TheHash"
@@ -80,3 +69,4 @@ rule Invoke_WMIExec_Gen {
    condition:
       all of them
 }
+

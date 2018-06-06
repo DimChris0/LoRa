@@ -1,16 +1,5 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-06-13
-   Identifier: Industroyer
-   Reference: https://goo.gl/x81cSy
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Industroyer_Malware_1 {
-   meta:
+meta:
       description = "Detects Industroyer related malware"
       author = "Florian Roth"
       reference = "https://goo.gl/x81cSy"
@@ -35,7 +24,7 @@ rule Industroyer_Malware_1 {
 }
 
 rule Industroyer_Malware_2 {
-   meta:
+meta:
       description = "Detects Industroyer related malware"
       author = "Florian Roth"
       reference = "https://goo.gl/x81cSy"
@@ -73,7 +62,7 @@ rule Industroyer_Malware_2 {
 }
 
 rule Industroyer_Portscan_3 {
-   meta:
+meta:
       description = "Detects Industroyer related custom port scaner"
       author = "Florian Roth"
       reference = "https://goo.gl/x81cSy"
@@ -94,7 +83,7 @@ rule Industroyer_Portscan_3 {
 }
 
 rule Industroyer_Portscan_3_Output {
-   meta:
+meta:
       description = "Detects Industroyer related custom port scaner output file"
       author = "Florian Roth"
       reference = "https://goo.gl/x81cSy"
@@ -107,7 +96,7 @@ rule Industroyer_Portscan_3_Output {
 }
 
 rule Industroyer_Malware_4 {
-   meta:
+meta:
       description = "Detects Industroyer related malware"
       author = "Florian Roth"
       reference = "https://goo.gl/x81cSy"
@@ -124,7 +113,7 @@ rule Industroyer_Malware_4 {
 }
 
 rule Industroyer_Malware_5 {
-   meta:
+meta:
       description = "Detects Industroyer related malware"
       author = "Florian Roth"
       reference = "https://goo.gl/x81cSy"
@@ -144,3 +133,4 @@ rule Industroyer_Malware_5 {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 400KB and ( 1 of ($x*) or 4 of them ) ) or ( all of them )
 }
+

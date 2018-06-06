@@ -1,12 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-05-12
-	Identifier: ONHAT
-*/
-
 rule ONHAT_Proxy_Hacktool {
-	meta:
+meta:
 		description = "Detects ONHAT Proxy - Htran like SOCKS hack tool used by Chinese APT groups"
 		author = "Florian Roth"
 		reference = "https://goo.gl/p32Ozf"
@@ -27,3 +20,4 @@ rule ONHAT_Proxy_Hacktool {
 	condition:
 		( uint16(0) == 0x5a4d and filesize < 80KB and ( 1 of ($s*) ) ) or ( 2 of them )
 }
+

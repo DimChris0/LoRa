@@ -1,12 +1,5 @@
-/*
-	Yara Rule Set
-	Author: YarGen Rule Generator
-	Date: 2016-05-21
-	Identifier: No PowerShell
-*/
-
 rule No_PowerShell {
-	meta:
+meta:
 		description = "Detects an C# executable used to circumvent PowerShell detection - file nps.exe"
 		author = "Florian Roth"
 		reference = "https://github.com/Ben0xA/nps"
@@ -19,3 +12,4 @@ rule No_PowerShell {
 	condition:
 		( uint16(0) == 0x5a4d and filesize < 40KB and ( 1 of ($s*) ) ) or ( all of them )
 }
+

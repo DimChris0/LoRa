@@ -1,14 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-03-26
-	Identifier: Windows Shells
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule WindowsShell_s3 {
-	meta:
+meta:
 		description = "Detects simple Windows shell - file s3.exe"
 		author = "Florian Roth"
 		reference = "https://github.com/odzhan/shells/"
@@ -29,7 +20,7 @@ rule WindowsShell_s3 {
 }
 
 rule WindosShell_s1 {
-	meta:
+meta:
 		description = "Detects simple Windows shell - file s1.exe"
 		author = "Florian Roth"
 		reference = "https://github.com/odzhan/shells/"
@@ -49,7 +40,7 @@ rule WindosShell_s1 {
 }
 
 rule WindowsShell_s4 {
-	meta:
+meta:
 		description = "Detects simple Windows shell - file s4.exe"
 		author = "Florian Roth"
 		reference = "https://github.com/odzhan/shells/"
@@ -68,10 +59,8 @@ rule WindowsShell_s4 {
 		( uint16(0) == 0x5a4d and filesize < 175KB and 2 of them ) or ( 5 of them )
 }
 
-/* Super Rules ------------------------------------------------------------- */
-
 rule WindowsShell_Gen {
-	meta:
+meta:
 		description = "Detects simple Windows shell - from files keygen.exe, s1.exe, s2.exe, s3.exe, s4.exe"
 		author = "Florian Roth"
 		reference = "https://github.com/odzhan/shells/"
@@ -91,7 +80,7 @@ rule WindowsShell_Gen {
 }
 
 rule WindowsShell_Gen2 {
-	meta:
+meta:
 		description = "Detects simple Windows shell - from files s3.exe, s4.exe"
 		author = "Florian Roth"
 		reference = "https://github.com/odzhan/shells/"
@@ -110,3 +99,4 @@ rule WindowsShell_Gen2 {
 	condition:
 		( uint16(0) == 0x5a4d and filesize < 175KB and 2 of them ) or ( 5 of them )
 }
+

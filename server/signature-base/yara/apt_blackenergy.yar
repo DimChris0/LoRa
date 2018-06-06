@@ -1,12 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2015-02-19
-	Identifier: BlackEnergy Malware
-*/
-
 rule BlackEnergy_BE_2 {
-   meta:
+meta:
       description = "Detects BlackEnergy 2 Malware"
       author = "Florian Roth"
       reference = "http://goo.gl/DThzLz"
@@ -22,15 +15,8 @@ rule BlackEnergy_BE_2 {
       uint16(0) == 0x5a4d and filesize < 250KB and all of ($s*)
 }
 
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-01-03
-	Identifier: BlackEnergy Malware
-*/
-
 rule BlackEnergy_VBS_Agent {
-	meta:
+meta:
 		description = "Detects VBS Agent from BlackEnergy Report - file Dropbearrun.vbs"
 		author = "Florian Roth"
 		reference = "http://feedproxy.google.com/~r/eset/blog/~3/BXJbnGSvEFc/"
@@ -45,7 +31,7 @@ rule BlackEnergy_VBS_Agent {
 }
 
 rule DropBear_SSH_Server {
-	meta:
+meta:
 		description = "Detects DropBear SSH Server (not a threat but used to maintain access)"
 		author = "Florian Roth"
 		reference = "http://feedproxy.google.com/~r/eset/blog/~3/BXJbnGSvEFc/"
@@ -63,7 +49,7 @@ rule DropBear_SSH_Server {
 }
 
 rule BlackEnergy_BackdoorPass_DropBear_SSH {
-	meta:
+meta:
 		description = "Detects the password of the backdoored DropBear SSH Server - BlackEnergy"
 		author = "Florian Roth"
 		reference = "http://feedproxy.google.com/~r/eset/blog/~3/BXJbnGSvEFc/"
@@ -75,10 +61,8 @@ rule BlackEnergy_BackdoorPass_DropBear_SSH {
 		uint16(0) == 0x5a4d and $s1
 }
 
-/* Super Rules ------------------------------------------------------------- */
-
 rule BlackEnergy_KillDisk_1 {
-	meta:
+meta:
 		description = "Detects KillDisk malware from BlackEnergy"
 		author = "Florian Roth"
 		reference = "http://feedproxy.google.com/~r/eset/blog/~3/BXJbnGSvEFc/"
@@ -105,7 +89,7 @@ rule BlackEnergy_KillDisk_1 {
 }
 
 rule BlackEnergy_KillDisk_2 {
-	meta:
+meta:
 		description = "Detects KillDisk malware from BlackEnergy"
 		author = "Florian Roth"
 		reference = "http://feedproxy.google.com/~r/eset/blog/~3/BXJbnGSvEFc/"
@@ -125,7 +109,7 @@ rule BlackEnergy_KillDisk_2 {
 }
 
 rule BlackEnergy_Driver_USBMDM {
-	meta:
+meta:
 		description = "Black Energy Driver"
 		author = "Florian Roth"
 		reference = "http://www.welivesecurity.com/2016/01/03/blackenergy-sshbeardoor-details-2015-attacks-ukrainian-news-media-electric-industry/"
@@ -148,7 +132,7 @@ rule BlackEnergy_Driver_USBMDM {
 }
 
 rule BlackEnergy_Driver_AMDIDE {
-	meta:
+meta:
 		description = "Black Energy Malware"
 		author = "Florian Roth"
 		reference = "http://www.welivesecurity.com/2016/01/03/blackenergy-sshbeardoor-details-2015-attacks-ukrainian-news-media-electric-industry/"
@@ -169,3 +153,4 @@ rule BlackEnergy_Driver_AMDIDE {
 	condition:
 		uint16(0) == 0x5a4d and filesize < 150KB and all of them
 }
+

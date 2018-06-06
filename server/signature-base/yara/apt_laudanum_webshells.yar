@@ -1,12 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2015-06-22
-	Identifier: Laudanum
-*/
-
 rule asp_file {
-	meta:
+meta:
 		description = "Laudanum Injector Tools - file file.asp"
 		author = "Florian Roth"
 		reference = "http://laudanum.inguardians.com/"
@@ -24,7 +17,7 @@ rule asp_file {
 }
 
 rule php_killnc {
-	meta:
+meta:
 		description = "Laudanum Injector Tools - file killnc.php"
 		author = "Florian Roth"
 		reference = "http://laudanum.inguardians.com/"
@@ -41,7 +34,7 @@ rule php_killnc {
 }
 
 rule asp_shell {
-	meta:
+meta:
 		description = "Laudanum Injector Tools - file shell.asp"
 		author = "Florian Roth"
 		reference = "http://laudanum.inguardians.com/"
@@ -60,7 +53,7 @@ rule asp_shell {
 }
 
 rule settings {
-	meta:
+meta:
 		description = "Laudanum Injector Tools - file settings.php"
 		author = "Florian Roth"
 		reference = "http://laudanum.inguardians.com/"
@@ -75,7 +68,7 @@ rule settings {
 }
 
 rule asp_proxy {
-	meta:
+meta:
 		description = "Laudanum Injector Tools - file proxy.asp"
 		author = "Florian Roth"
 		reference = "http://laudanum.inguardians.com/"
@@ -93,7 +86,7 @@ rule asp_proxy {
 }
 
 rule cfm_shell {
-	meta:
+meta:
 		description = "Laudanum Injector Tools - file shell.cfm"
 		author = "Florian Roth"
 		reference = "http://laudanum.inguardians.com/"
@@ -108,7 +101,7 @@ rule cfm_shell {
 }
 
 rule aspx_shell {
-	meta:
+meta:
 		description = "Laudanum Injector Tools - file shell.aspx"
 		author = "Florian Roth"
 		reference = "http://laudanum.inguardians.com/"
@@ -124,7 +117,7 @@ rule aspx_shell {
 }
 
 rule php_shell {
-	meta:
+meta:
 		description = "Laudanum Injector Tools - file shell.php"
 		author = "Florian Roth"
 		reference = "http://laudanum.inguardians.com/"
@@ -140,7 +133,7 @@ rule php_shell {
 }
 
 rule php_reverse_shell {
-	meta:
+meta:
 		description = "Laudanum Injector Tools - file php-reverse-shell.php"
 		author = "Florian Roth"
 		reference = "http://laudanum.inguardians.com/"
@@ -155,7 +148,7 @@ rule php_reverse_shell {
 }
 
 rule php_dns {
-	meta:
+meta:
 		description = "Laudanum Injector Tools - file dns.php"
 		author = "Florian Roth"
 		reference = "http://laudanum.inguardians.com/"
@@ -171,7 +164,7 @@ rule php_dns {
 }
 
 rule WEB_INF_web {
-	meta:
+meta:
 		description = "Laudanum Injector Tools - file web.xml"
 		author = "Florian Roth"
 		reference = "http://laudanum.inguardians.com/"
@@ -185,7 +178,7 @@ rule WEB_INF_web {
 }
 
 rule jsp_cmd {
-	meta:
+meta:
 		description = "Laudanum Injector Tools - file cmd.war"
 		author = "Florian Roth"
 		reference = "http://laudanum.inguardians.com/"
@@ -202,7 +195,7 @@ rule jsp_cmd {
 }
 
 rule laudanum {
-	meta:
+meta:
 		description = "Laudanum Injector Tools - file laudanum.php"
 		author = "Florian Roth"
 		reference = "http://laudanum.inguardians.com/"
@@ -216,7 +209,7 @@ rule laudanum {
 }
 
 rule php_file {
-	meta:
+meta:
 		description = "Laudanum Injector Tools - file file.php"
 		author = "Florian Roth"
 		reference = "http://laudanum.inguardians.com/"
@@ -232,7 +225,7 @@ rule php_file {
 }
 
 rule warfiles_cmd {
-	meta:
+meta:
 		description = "Laudanum Injector Tools - file cmd.jsp"
 		author = "Florian Roth"
 		reference = "http://laudanum.inguardians.com/"
@@ -248,7 +241,7 @@ rule warfiles_cmd {
 }
 
 rule asp_dns {
-	meta:
+meta:
 		description = "Laudanum Injector Tools - file dns.asp"
 		author = "Florian Roth"
 		reference = "http://laudanum.inguardians.com/"
@@ -264,7 +257,7 @@ rule asp_dns {
 }
 
 rule php_reverse_shell_2 {
-	meta:
+meta:
 		description = "Laudanum Injector Tools - file php-reverse-shell.php"
 		author = "Florian Roth"
 		reference = "http://laudanum.inguardians.com/"
@@ -278,7 +271,7 @@ rule php_reverse_shell_2 {
 }
 
 rule Laudanum_Tools_Generic {
-	meta:
+meta:
 		description = "Laudanum Injector Tools"
 		author = "Florian Roth"
 		reference = "http://laudanum.inguardians.com/"
@@ -307,3 +300,4 @@ rule Laudanum_Tools_Generic {
 	condition:
 		filesize < 60KB and all of them
 }
+

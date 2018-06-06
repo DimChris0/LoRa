@@ -1,16 +1,6 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-08-15
-	Identifier: EQGRP
-*/
-
 import "pe"
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule EQGRP_noclient_3_0_5 {
-	meta:
+meta:
 		description = "Detects tool from EQGRP toolset - file noclient-3.0.5.3"
 		author = "Florian Roth"
 		reference = "Research"
@@ -27,7 +17,7 @@ rule EQGRP_noclient_3_0_5 {
 }
 
 rule EQGRP_installdate {
-	meta:
+meta:
 		description = "Detects tool from EQGRP toolset - file installdate.pl"
 		author = "Florian Roth"
 		reference = "Research"
@@ -46,7 +36,7 @@ rule EQGRP_installdate {
 }
 
 rule EQGRP_teflondoor {
-	meta:
+meta:
 		description = "Detects tool from EQGRP toolset - file teflondoor.exe"
 		author = "Florian Roth"
 		reference = "Research"
@@ -67,7 +57,7 @@ rule EQGRP_teflondoor {
 }
 
 rule EQGRP_durablenapkin_solaris_2_0_1 {
-	meta:
+meta:
 		description = "Detects tool from EQGRP toolset - file durablenapkin.solaris.2.0.1.1"
 		author = "Florian Roth"
 		reference = "Research"
@@ -84,7 +74,7 @@ rule EQGRP_durablenapkin_solaris_2_0_1 {
 }
 
 rule EQGRP_teflonhandle {
-	meta:
+meta:
 		description = "Detects tool from EQGRP toolset - file teflonhandle.exe"
 		author = "Florian Roth"
 		reference = "Research"
@@ -101,7 +91,7 @@ rule EQGRP_teflonhandle {
 }
 
 rule EQGRP_false {
-	meta:
+meta:
 		description = "Detects tool from EQGRP toolset - file false.exe"
 		author = "Florian Roth"
 		reference = "Research"
@@ -122,7 +112,7 @@ rule EQGRP_false {
 }
 
 rule EQGRP_dn_1_0_2_1 {
-	meta:
+meta:
 		description = "Detects tool from EQGRP toolset - file dn.1.0.2.1.linux"
 		author = "Florian Roth"
 		reference = "Research"
@@ -138,7 +128,7 @@ rule EQGRP_dn_1_0_2_1 {
 }
 
 rule EQGRP_morel {
-	meta:
+meta:
 		description = "Detects tool from EQGRP toolset - file morel.exe"
 		author = "Florian Roth"
 		reference = "Research"
@@ -154,7 +144,7 @@ rule EQGRP_morel {
 }
 
 rule EQGRP_bc_parser {
-	meta:
+meta:
 		description = "Detects tool from EQGRP toolset - file bc-parser"
 		author = "Florian Roth"
 		reference = "Research"
@@ -169,7 +159,7 @@ rule EQGRP_bc_parser {
 }
 
 rule EQGRP_1212 {
-	meta:
+meta:
 		description = "Detects tool from EQGRP toolset - file 1212.pl"
 		author = "Florian Roth"
 		reference = "Research"
@@ -187,7 +177,7 @@ rule EQGRP_1212 {
 }
 
 rule EQGRP_1212_dehex {
-	meta:
+meta:
 		description = "Detects tool from EQGRP toolset - from files 1212.pl, dehex.pl"
 		author = "Florian Roth"
 		reference = "Research"
@@ -203,17 +193,8 @@ rule EQGRP_1212_dehex {
 		( uint16(0) == 0x2123 and filesize < 6KB and ( 5 of ($s*) ) ) or ( all of them )
 }
 
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-08-16
-	Identifier: EQGRP
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule install_get_persistent_filenames {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file install_get_persistent_filenames"
 		author = "Florian Roth"
 		reference = "Research"
@@ -226,7 +207,7 @@ rule install_get_persistent_filenames {
 }
 
 rule EQGRP_create_dns_injection {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file create_dns_injection.py"
 		author = "Florian Roth"
 		reference = "Research"
@@ -240,7 +221,7 @@ rule EQGRP_create_dns_injection {
 }
 
 rule EQGRP_screamingplow {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file screamingplow.sh"
 		author = "Florian Roth"
 		reference = "Research"
@@ -254,7 +235,7 @@ rule EQGRP_screamingplow {
 }
 
 rule EQGRP_MixText {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file MixText.py"
 		author = "Florian Roth"
 		reference = "Research"
@@ -267,7 +248,7 @@ rule EQGRP_MixText {
 }
 
 rule EQGRP_tunnel_state_reader {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file tunnel_state_reader"
 		author = "Florian Roth"
 		reference = "Research"
@@ -281,7 +262,7 @@ rule EQGRP_tunnel_state_reader {
 }
 
 rule EQGRP_payload {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file payload.py"
 		author = "Florian Roth"
 		reference = "Research"
@@ -295,7 +276,7 @@ rule EQGRP_payload {
 }
 
 rule EQGRP_eligiblecandidate {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file eligiblecandidate.py"
 		author = "Florian Roth"
 		reference = "Research"
@@ -312,7 +293,7 @@ rule EQGRP_eligiblecandidate {
 }
 
 rule EQGRP_BUSURPER_2211_724 {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file BUSURPER-2211-724.exe"
 		author = "Florian Roth"
 		reference = "Research"
@@ -329,7 +310,7 @@ rule EQGRP_BUSURPER_2211_724 {
 }
 
 rule EQGRP_networkProfiler_orderScans {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file networkProfiler_orderScans.sh"
 		author = "Florian Roth"
 		reference = "Research"
@@ -343,7 +324,7 @@ rule EQGRP_networkProfiler_orderScans {
 }
 
 rule EQGRP_epicbanana_2_1_0_1 {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file epicbanana_2.1.0.1.py"
 		author = "Florian Roth"
 		reference = "Research"
@@ -357,7 +338,7 @@ rule EQGRP_epicbanana_2_1_0_1 {
 }
 
 rule EQGRP_sniffer_xml2pcap {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file sniffer_xml2pcap"
 		author = "Florian Roth"
 		reference = "Research"
@@ -371,7 +352,7 @@ rule EQGRP_sniffer_xml2pcap {
 }
 
 rule EQGRP_BananaAid {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file BananaAid"
 		author = "Florian Roth"
 		reference = "Research"
@@ -387,7 +368,7 @@ rule EQGRP_BananaAid {
 }
 
 rule EQGRP_bo {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file bo"
 		author = "Florian Roth"
 		reference = "Research"
@@ -404,7 +385,7 @@ rule EQGRP_bo {
 }
 
 rule EQGRP_SecondDate_2211 {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file SecondDate-2211.exe"
 		author = "Florian Roth"
 		reference = "Research"
@@ -420,7 +401,7 @@ rule EQGRP_SecondDate_2211 {
 }
 
 rule EQGRP_config_jp1_UA {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file config_jp1_UA.pl"
 		author = "Florian Roth"
 		reference = "Research"
@@ -436,7 +417,7 @@ rule EQGRP_config_jp1_UA {
 }
 
 rule EQGRP_userscript {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file userscript.FW"
 		author = "Florian Roth"
 		reference = "Research"
@@ -449,7 +430,7 @@ rule EQGRP_userscript {
 }
 
 rule EQGRP_BBALL_M50FW08_2201 {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file BBALL_M50FW08-2201.exe"
 		author = "Florian Roth"
 		reference = "Research"
@@ -467,7 +448,7 @@ rule EQGRP_BBALL_M50FW08_2201 {
 }
 
 rule EQGRP_BUSURPER_3001_724 {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file BUSURPER-3001-724.exe"
 		author = "Florian Roth"
 		reference = "Research"
@@ -482,7 +463,7 @@ rule EQGRP_BUSURPER_3001_724 {
 }
 
 rule EQGRP_workit {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file workit.py"
 		author = "Florian Roth"
 		reference = "Research"
@@ -505,7 +486,7 @@ rule EQGRP_workit {
 }
 
 rule EQGRP_tinyhttp_setup {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file tinyhttp_setup.sh"
 		author = "Florian Roth"
 		reference = "Research"
@@ -521,7 +502,7 @@ rule EQGRP_tinyhttp_setup {
 }
 
 rule EQGRP_shellcode {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file shellcode.py"
 		author = "Florian Roth"
 		reference = "Research"
@@ -540,7 +521,7 @@ rule EQGRP_shellcode {
 }
 
 rule EQGRP_EPBA {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file EPBA.script"
 		author = "Florian Roth"
 		reference = "Research"
@@ -559,7 +540,7 @@ rule EQGRP_EPBA {
 }
 
 rule EQGRP_BPIE {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file BPIE-2201.exe"
 		author = "Florian Roth"
 		reference = "Research"
@@ -579,7 +560,7 @@ rule EQGRP_BPIE {
 }
 
 rule EQGRP_jetplow_SH {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file jetplow.sh"
 		author = "Florian Roth"
 		reference = "Research"
@@ -595,7 +576,7 @@ rule EQGRP_jetplow_SH {
 }
 
 rule EQGRP_BBANJO {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file BBANJO-3011.exe"
 		author = "Florian Roth"
 		reference = "Research"
@@ -614,7 +595,7 @@ rule EQGRP_BBANJO {
 }
 
 rule EQGRP_BPATROL_2201 {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file BPATROL-2201.exe"
 		author = "Florian Roth"
 		reference = "Research"
@@ -631,7 +612,7 @@ rule EQGRP_BPATROL_2201 {
 }
 
 rule EQGRP_extrabacon {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file extrabacon_1.1.0.1.py"
 		author = "Florian Roth"
 		reference = "Research"
@@ -648,7 +629,7 @@ rule EQGRP_extrabacon {
 }
 
 rule EQGRP_sploit_py {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file sploit.py"
 		author = "Florian Roth"
 		reference = "Research"
@@ -663,7 +644,7 @@ rule EQGRP_sploit_py {
 }
 
 rule EQGRP_uninstallPBD {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file uninstallPBD.bat"
 		author = "Florian Roth"
 		reference = "Research"
@@ -678,7 +659,7 @@ rule EQGRP_uninstallPBD {
 }
 
 rule EQGRP_BICECREAM {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file BICECREAM-2140"
 		author = "Florian Roth"
 		reference = "Research"
@@ -699,7 +680,7 @@ rule EQGRP_BICECREAM {
 }
 
 rule EQGRP_create_http_injection {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file create_http_injection.py"
 		author = "Florian Roth"
 		reference = "Research"
@@ -717,7 +698,7 @@ rule EQGRP_create_http_injection {
 }
 
 rule EQGRP_BFLEA_2201 {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file BFLEA-2201.exe"
 		author = "Florian Roth"
 		reference = "Research"
@@ -736,7 +717,7 @@ rule EQGRP_BFLEA_2201 {
 }
 
 rule EQGRP_BpfCreator_RHEL4 {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file BpfCreator-RHEL4"
 		author = "Florian Roth"
 		reference = "Research"
@@ -753,7 +734,7 @@ rule EQGRP_BpfCreator_RHEL4 {
 }
 
 rule EQGRP_StoreFc {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file StoreFc.py"
 		author = "Florian Roth"
 		reference = "Research"
@@ -768,7 +749,7 @@ rule EQGRP_StoreFc {
 }
 
 rule EQGRP_hexdump {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file hexdump.py"
 		author = "Florian Roth"
 		reference = "Research"
@@ -784,7 +765,7 @@ rule EQGRP_hexdump {
 }
 
 rule EQGRP_BBALL {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - file BBALL_E28F6-2201.exe"
 		author = "Florian Roth"
 		reference = "Research"
@@ -802,10 +783,8 @@ rule EQGRP_BBALL {
 		( uint16(0) == 0x457f and filesize < 40KB and 4 of ($s*) ) or ( all of them )
 }
 
-/* Super Rules ------------------------------------------------------------- */
-
 rule EQGRP_BARPUNCH_BPICKER {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - from files BARPUNCH-3110, BPICKER-3100"
 		author = "Florian Roth"
 		reference = "Research"
@@ -824,7 +803,7 @@ rule EQGRP_BARPUNCH_BPICKER {
 }
 
 rule EQGRP_Implants_Gen6 {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall"
 		author = "Florian Roth"
 		reference = "Research"
@@ -852,7 +831,7 @@ rule EQGRP_Implants_Gen6 {
 }
 
 rule EQGRP_Implants_Gen5 {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall"
 		author = "Florian Roth"
 		reference = "Research"
@@ -877,7 +856,7 @@ rule EQGRP_Implants_Gen5 {
 }
 
 rule EQGRP_pandarock {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - from files pandarock_v1.11.1.1.bin, pit"
 		author = "Florian Roth"
 		reference = "Research"
@@ -904,7 +883,7 @@ rule EQGRP_pandarock {
 }
 
 rule EQGRP_BananaUsurper_writeJetPlow {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - from files BananaUsurper-2120, writeJetPlow-2130"
 		author = "Florian Roth"
 		reference = "Research"
@@ -923,7 +902,7 @@ rule EQGRP_BananaUsurper_writeJetPlow {
 }
 
 rule EQGRP_Implants_Gen4 {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - from files BLIAR-2110, BLIQUER-2230, BLIQUER-3030, BLIQUER-3120"
 		author = "Florian Roth"
 		reference = "Research"
@@ -944,7 +923,7 @@ rule EQGRP_Implants_Gen4 {
 }
 
 rule EQGRP_Implants_Gen3 {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall"
 		author = "Florian Roth"
 		reference = "Research"
@@ -967,7 +946,7 @@ rule EQGRP_Implants_Gen3 {
 }
 
 rule EQGRP_BLIAR_BLIQUER {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - from files BLIAR-2110, BLIQUER-2230"
 		author = "Florian Roth"
 		reference = "Research"
@@ -1000,7 +979,7 @@ rule EQGRP_BLIAR_BLIQUER {
 }
 
 rule EQGRP_sploit {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - from files sploit.py, sploit.py"
 		author = "Florian Roth"
 		reference = "Research"
@@ -1022,7 +1001,7 @@ rule EQGRP_sploit {
 }
 
 rule EQGRP_Implants_Gen2 {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall"
 		author = "Florian Roth"
 		reference = "Research"
@@ -1053,7 +1032,7 @@ rule EQGRP_Implants_Gen2 {
 }
 
 rule EQGRP_Implants_Gen1 {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall"
 		author = "Florian Roth"
 		reference = "Research"
@@ -1082,7 +1061,7 @@ rule EQGRP_Implants_Gen1 {
 }
 
 rule EQGRP_eligiblebombshell_generic {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - from files eligiblebombshell_1.2.0.1.py, eligiblebombshell_1.2.0.1.py"
 		author = "Florian Roth"
 		reference = "Research"
@@ -1099,7 +1078,7 @@ rule EQGRP_eligiblebombshell_generic {
 }
 
 rule EQGRP_ssh_telnet_29 {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - from files ssh.py, telnet.py"
 		author = "Florian Roth"
 		reference = "Research"
@@ -1119,10 +1098,8 @@ rule EQGRP_ssh_telnet_29 {
 		( filesize < 10KB and 2 of them ) or ( 3 of them )
 }
 
-/* Extras */
-
 rule EQGRP_tinyexec {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - from files tinyexec"
 		author = "Florian Roth"
 		reference = "Research"
@@ -1135,7 +1112,7 @@ rule EQGRP_tinyexec {
 }
 
 rule EQGRP_callbacks {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - Callback addresses"
 		author = "Florian Roth"
 		reference = "Research"
@@ -1147,7 +1124,7 @@ rule EQGRP_callbacks {
 }
 
 rule EQGRP_Extrabacon_Output {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - Extrabacon exploit output"
 		author = "Florian Roth"
 		reference = "Research"
@@ -1163,7 +1140,7 @@ rule EQGRP_Extrabacon_Output {
 }
 
 rule EQGRP_Unique_Strings {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - Unique strings"
 		author = "Florian Roth"
 		reference = "Research"
@@ -1176,35 +1153,20 @@ rule EQGRP_Unique_Strings {
 }
 
 rule EQGRP_RC5_RC6_Opcode {
-	meta:
+meta:
 		description = "EQGRP Toolset Firewall - RC5 / RC6 opcode"
 		author = "Florian Roth"
 		reference = "https://securelist.com/blog/incidents/75812/the-equation-giveaway/"
 		date = "2016-08-17"
 	strings:
-		/*
-			mov     esi, [ecx+edx*4-4]
-			sub     esi, 61C88647h
-			mov     [ecx+edx*4], esi
-			inc     edx
-			cmp     edx, 2Bh
-		*/
+		
 		$s1 = { 8B 74 91 FC 81 EE 47 86 C8 61 89 34 91 42 83 FA 2B }
 	condition:
 		1 of them
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-01-13
-   Identifier: EquationGroup - ShadowBrokers Release January 2017
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule EquationGroup_modifyAudit_Implant {
-   meta:
+meta:
       description = "EquationGroup Malware - file modifyAudit_Implant.dll"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1220,7 +1182,7 @@ rule EquationGroup_modifyAudit_Implant {
 }
 
 rule EquationGroup_modifyAudit_Lp {
-   meta:
+meta:
       description = "EquationGroup Malware - file modifyAudit_Lp.dll"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1237,7 +1199,7 @@ rule EquationGroup_modifyAudit_Lp {
 }
 
 rule EquationGroup_ProcessHide_Lp {
-   meta:
+meta:
       description = "EquationGroup Malware - file ProcessHide_Lp.dll"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1256,7 +1218,7 @@ rule EquationGroup_ProcessHide_Lp {
 }
 
 rule EquationGroup_pwdump_Implant {
-   meta:
+meta:
       description = "EquationGroup Malware - file pwdump_Implant.dll"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1271,7 +1233,7 @@ rule EquationGroup_pwdump_Implant {
 }
 
 rule EquationGroup_EquationDrug_Gen_5 {
-   meta:
+meta:
       description = "EquationGroup Malware - file PC_Level3_http_dll"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1287,7 +1249,7 @@ rule EquationGroup_EquationDrug_Gen_5 {
 }
 
 rule EquationGroup_PC_Level3_http_flav_dll {
-   meta:
+meta:
       description = "EquationGroup Malware - file PC_Level3_http_flav_dll"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1304,7 +1266,7 @@ rule EquationGroup_PC_Level3_http_flav_dll {
 }
 
 rule EquationGroup_LSADUMP_Lp {
-   meta:
+meta:
       description = "EquationGroup Malware - file LSADUMP_Lp.dll"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1317,7 +1279,7 @@ rule EquationGroup_LSADUMP_Lp {
 }
 
 rule EquationGroup_EquationDrug_mstcp32 {
-   meta:
+meta:
       description = "EquationGroup Malware - file mstcp32.sys"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1338,7 +1300,7 @@ rule EquationGroup_EquationDrug_mstcp32 {
 }
 
 rule EquationGroup_nethide_Lp {
-   meta:
+meta:
       description = "EquationGroup Malware - file nethide_Lp.dll"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1355,7 +1317,7 @@ rule EquationGroup_nethide_Lp {
 }
 
 rule EquationGroup_PC_Level4_flav_dll_x64 {
-   meta:
+meta:
       description = "EquationGroup Malware - file PC_Level4_flav_dll_x64"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1370,7 +1332,7 @@ rule EquationGroup_PC_Level4_flav_dll_x64 {
 }
 
 rule EquationGroup_PC_Level4_flav_exe {
-   meta:
+meta:
       description = "EquationGroup Malware - file PC_Level4_flav_exe"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1388,7 +1350,7 @@ rule EquationGroup_PC_Level4_flav_exe {
 }
 
 rule EquationGroup_processinfo_Implant {
-   meta:
+meta:
       description = "EquationGroup Malware - file processinfo_Implant.dll"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1403,7 +1365,7 @@ rule EquationGroup_processinfo_Implant {
 }
 
 rule EquationGroup_EquationDrug_Gen_2 {
-   meta:
+meta:
       description = "EquationGroup Malware - file PortMap_Implant.dll"
       author = "Auto Generated"
       reference = "https://goo.gl/tcSoiJ"
@@ -1417,9 +1379,8 @@ rule EquationGroup_EquationDrug_Gen_2 {
       ( uint16(0) == 0x5a4d and filesize < 250KB and all of them )
 }
 
-
 rule EquationGroup_EquationDrug_ntevt {
-   meta:
+meta:
       description = "EquationGroup Malware - file ntevt.sys"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1433,7 +1394,7 @@ rule EquationGroup_EquationDrug_ntevt {
 }
 
 rule EquationGroup_nethide_Implant {
-   meta:
+meta:
       description = "EquationGroup Malware - file nethide_Implant.dll"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1447,7 +1408,7 @@ rule EquationGroup_nethide_Implant {
 }
 
 rule EquationGroup_EquationDrug_Gen_4 {
-   meta:
+meta:
       description = "EquationGroup Malware - file PC_Level4_flav_dll"
       author = "Auto Generated"
       reference = "https://goo.gl/tcSoiJ"
@@ -1462,7 +1423,7 @@ rule EquationGroup_EquationDrug_Gen_4 {
 }
 
 rule EquationGroup_EquationDrug_tdi6 {
-   meta:
+meta:
       description = "EquationGroup Malware - file tdi6.sys"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1478,7 +1439,7 @@ rule EquationGroup_EquationDrug_tdi6 {
 }
 
 rule EquationGroup_modifyAuthentication_Implant {
-   meta:
+meta:
       description = "EquationGroup Malware - file modifyAuthentication_Implant.dll"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1495,7 +1456,7 @@ rule EquationGroup_modifyAuthentication_Implant {
 }
 
 rule EquationGroup_ntfltmgr {
-   meta:
+meta:
       description = "EquationGroup Malware - file ntfltmgr.sys"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1511,7 +1472,7 @@ rule EquationGroup_ntfltmgr {
 }
 
 rule EquationGroup_DXGHLP16 {
-   meta:
+meta:
       description = "EquationGroup Malware - file DXGHLP16.SYS"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1532,7 +1493,7 @@ rule EquationGroup_DXGHLP16 {
 }
 
 rule EquationGroup_EquationDrug_msgkd {
-   meta:
+meta:
       description = "EquationGroup Malware - file msgkd.ex_"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1546,7 +1507,7 @@ rule EquationGroup_EquationDrug_msgkd {
 }
 
 rule EquationGroup_RunAsChild_Lp {
-   meta:
+meta:
       description = "EquationGroup Malware - file RunAsChild_Lp.dll"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1561,7 +1522,7 @@ rule EquationGroup_RunAsChild_Lp {
 }
 
 rule EquationGroup_EquationDrug_Gen_6 {
-   meta:
+meta:
       description = "EquationGroup Malware - file PC_Level3_dll_x64"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1576,7 +1537,7 @@ rule EquationGroup_EquationDrug_Gen_6 {
 }
 
 rule EquationGroup_PC_Level3_http_flav_dll_x64 {
-   meta:
+meta:
       description = "EquationGroup Malware - file PC_Level3_http_flav_dll_x64"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1593,7 +1554,7 @@ rule EquationGroup_PC_Level3_http_flav_dll_x64 {
 }
 
 rule EquationGroup_EquationDrug_Gen_3 {
-   meta:
+meta:
       description = "EquationGroup Malware - file mssld.dll"
       author = "Auto Generated"
       reference = "https://goo.gl/tcSoiJ"
@@ -1608,7 +1569,7 @@ rule EquationGroup_EquationDrug_Gen_3 {
 }
 
 rule EquationGroup_GetAdmin_Lp {
-   meta:
+meta:
       description = "EquationGroup Malware - file GetAdmin_Lp.dll"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1620,9 +1581,8 @@ rule EquationGroup_GetAdmin_Lp {
       ( uint16(0) == 0x5a4d and filesize < 300KB and all of them )
 }
 
-
 rule EquationGroup_ModifyGroup_Lp {
-   meta:
+meta:
       description = "EquationGroup Malware - file ModifyGroup_Lp.dll"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1636,7 +1596,7 @@ rule EquationGroup_ModifyGroup_Lp {
 }
 
 rule EquationGroup_pwdump_Lp {
-   meta:
+meta:
       description = "EquationGroup Malware - file pwdump_Lp.dll"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1649,7 +1609,7 @@ rule EquationGroup_pwdump_Lp {
 }
 
 rule EquationGroup_EventLogEdit_Implant {
-   meta:
+meta:
       description = "EquationGroup Malware - file EventLogEdit_Implant.dll"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1664,7 +1624,7 @@ rule EquationGroup_EventLogEdit_Implant {
 }
 
 rule EquationGroup_PortMap_Lp {
-   meta:
+meta:
       description = "EquationGroup Malware - file PortMap_Lp.dll"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1679,7 +1639,7 @@ rule EquationGroup_PortMap_Lp {
 }
 
 rule EquationGroup_ProcessOptions_Lp {
-   meta:
+meta:
       description = "EquationGroup Malware - file ProcessOptions_Lp.dll"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1692,7 +1652,7 @@ rule EquationGroup_ProcessOptions_Lp {
 }
 
 rule EquationGroup_PassFreely_Lp {
-   meta:
+meta:
       description = "EquationGroup Malware - file PassFreely_Lp.dll"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1706,10 +1666,8 @@ rule EquationGroup_PassFreely_Lp {
       ( uint16(0) == 0x5a4d and filesize < 300KB and 1 of them )
 }
 
-/* Super Rules ------------------------------------------------------------- */
-
 rule EquationGroup_EquationDrug_Gen_1 {
-   meta:
+meta:
       description = "EquationGroup Malware"
       author = "Florian Roth"
       reference = "https://goo.gl/tcSoiJ"
@@ -1737,16 +1695,15 @@ rule EquationGroup_EquationDrug_Gen_1 {
       ( uint16(0) == 0x5a4d and filesize < 300KB and 1 of ($x*) ) or ( all of them )
 }
 
-/* The Cherry on the Cake */
-
 rule EquationDrug_MS_Identifier {
-	meta:
+meta:
 		description = "Microsoft Identifier used in EquationDrug Platform"
 		author = "Florian Roth @4nc4p"
 		date = "2015/03/11"
 	strings:
 		$s1 = "Microsoft(R) Windows (TM) Operating System" fullword wide
 	condition:
-		// Epoch for 01.01.2000
+		
 		$s1 and pe.timestamp > 946684800
 }
+

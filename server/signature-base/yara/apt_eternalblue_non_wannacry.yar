@@ -1,16 +1,5 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-06-04
-   Identifier: FireEye EternalBlue - Non-Wannacry Attacks
-   Reference: https://goo.gl/OOB3mH
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Backdoor_Redosdru_Jun17 {
-   meta:
+meta:
       description = "Detects malware Redosdru - file systemHome.exe"
       author = "Florian Roth"
       reference = "https://goo.gl/OOB3mH"
@@ -34,7 +23,7 @@ rule Backdoor_Redosdru_Jun17 {
 }
 
 rule Backdoor_Nitol_Jun17 {
-   meta:
+meta:
       description = "Detects malware backdoor Nitol - file wyawou.exe - Attention: this rule also matches on Upatre Downloader"
       author = "Florian Roth"
       reference = "https://goo.gl/OOB3mH"
@@ -55,3 +44,4 @@ rule Backdoor_Nitol_Jun17 {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 200KB and ( 1 of ($x*) or 5 of ($s*) ) ) or ( all of them )
 }
+

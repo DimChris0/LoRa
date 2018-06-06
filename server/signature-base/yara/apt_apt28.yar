@@ -1,14 +1,5 @@
-/*
-	Yara Rule Set
-	Author: YarGen Rule Generator
-	Date: 2015-06-02
-	Identifier: APT28
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule APT28_CHOPSTICK {
-	meta:
+meta:
 		description = "Detects a malware that behaves like CHOPSTICK mentioned in APT28 report"
 		author = "Florian Roth"
 		reference = "https://goo.gl/v3ebal"
@@ -17,20 +8,20 @@ rule APT28_CHOPSTICK {
 		score = 60
 	strings:
 		$s0 = "jhuhugit.tmp" fullword ascii /* score: '14.005' */
-		$s8 = "KERNEL32.dll" fullword ascii /* PEStudio Blacklist: strings */ /* score: '5' */ /* Goodware String - occured 14405 times */
-		$s9 = "IsDebuggerPresent" fullword ascii /* PEStudio Blacklist: strings */ /* score: '5' */ /* Goodware String - occured 3518 times */
-		$s10 = "IsProcessorFeaturePresent" fullword ascii /* PEStudio Blacklist: strings */ /* score: '5' */ /* Goodware String - occured 1383 times */
-		$s11 = "TerminateProcess" fullword ascii /* PEStudio Blacklist: strings */ /* score: '5' */ /* Goodware String - occured 13081 times */
-		$s13 = "DeleteFileA" fullword ascii /* PEStudio Blacklist: strings */ /* score: '5' */ /* Goodware String - occured 1384 times */
-		$s15 = "GetProcessHeap" fullword ascii /* PEStudio Blacklist: strings */ /* score: '5' */ /* Goodware String - occured 5875 times */
-		$s16 = "!This program cannot be run in DOS mode." fullword ascii /* PEStudio Blacklist: strings */ /* score: '5' */ /* Goodware String - occured 20908 times */
-		$s17 = "LoadLibraryA" fullword ascii /* PEStudio Blacklist: strings */ /* score: '5' */ /* Goodware String - occured 5461 times */
+		$s8 = "KERNEL32.dll" fullword ascii  /* score: '5' */ /* Goodware String - occured 14405 times */
+		$s9 = "IsDebuggerPresent" fullword ascii  /* score: '5' */ /* Goodware String - occured 3518 times */
+		$s10 = "IsProcessorFeaturePresent" fullword ascii  /* score: '5' */ /* Goodware String - occured 1383 times */
+		$s11 = "TerminateProcess" fullword ascii  /* score: '5' */ /* Goodware String - occured 13081 times */
+		$s13 = "DeleteFileA" fullword ascii  /* score: '5' */ /* Goodware String - occured 1384 times */
+		$s15 = "GetProcessHeap" fullword ascii  /* score: '5' */ /* Goodware String - occured 5875 times */
+		$s16 = "!This program cannot be run in DOS mode." fullword ascii  /* score: '5' */ /* Goodware String - occured 20908 times */
+		$s17 = "LoadLibraryA" fullword ascii  /* score: '5' */ /* Goodware String - occured 5461 times */
 	condition:
 		uint16(0) == 0x5a4d and filesize < 722KB and all of them
 }
 
 rule APT28_SourFace_Malware1 {
-	meta:
+meta:
 		description = "Detects Malware from APT28 incident - SOURFACE is a downloader that obtains a second-stage backdoor from a C2 server."
 		author = "Florian Roth"
 		reference = "https://www.fireeye.com/blog/threat-research/2014/10/apt28-a-window-into-russias-cyber-espionage-operations.html"
@@ -39,15 +30,15 @@ rule APT28_SourFace_Malware1 {
 		hash2 = "d9c53adce8c35ec3b1e015ec8011078902e6800b"
 		score = 60
 	strings:
-		$s0 = "coreshell.dll" fullword wide /* PEStudio Blacklist: strings */
-		$s1 = "Core Shell Runtime Service" fullword wide /* PEStudio Blacklist: strings */
+		$s0 = "coreshell.dll" fullword wide 
+		$s1 = "Core Shell Runtime Service" fullword wide 
 		$s2 = "\\chkdbg.log" fullword wide
 	condition:
 		uint16(0) == 0x5a4d and filesize < 62KB and all of them
 }
 
 rule APT28_SourFace_Malware2 {
-	meta:
+meta:
 		description = "Detects Malware from APT28 incident - SOURFACE is a downloader that obtains a second-stage backdoor from a C2 server."
 		author = "Florian Roth"
 		reference = "https://www.fireeye.com/blog/threat-research/2014/10/apt28-a-window-into-russias-cyber-espionage-operations.html"
@@ -61,14 +52,14 @@ rule APT28_SourFace_Malware2 {
 		hash5 = "f5b3e98c6b5d65807da66d50bd5730d35692174d"
 		score = 60
 	strings:
-		$s0 = "coreshell.dll" fullword ascii /* PEStudio Blacklist: strings */
+		$s0 = "coreshell.dll" fullword ascii 
 		$s1 = "Applicate" fullword ascii
 	condition:
 		uint16(0) == 0x5a4d and filesize < 550KB and all of them
 }
 
 rule APT28_SourFace_Malware3 {
-	meta:
+meta:
 		description = "Detects Malware from APT28 incident - SOURFACE is a downloader that obtains a second-stage backdoor from a C2 server."
 		author = "Florian Roth"
 		reference = "https://www.fireeye.com/blog/threat-research/2014/10/apt28-a-window-into-russias-cyber-espionage-operations.html"
@@ -86,8 +77,8 @@ rule APT28_SourFace_Malware3 {
 		hash9 = "e2450dffa675c61aa43077b25b12851a910eeeb6"
 		score = 60
 	strings:
-		$s0 = "coreshell.dll" fullword wide /* PEStudio Blacklist: strings */
-		$s1 = "Core Shell Runtime Service" fullword wide /* PEStudio Blacklist: strings */
+		$s0 = "coreshell.dll" fullword wide 
+		$s1 = "Core Shell Runtime Service" fullword wide 
 	condition:
 		uint16(0) == 0x5a4d and filesize < 550KB and all of them
 }

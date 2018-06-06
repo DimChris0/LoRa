@@ -1,16 +1,5 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-12-20
-   Identifier: Lazarus malware
-   Reference: https://www.proofpoint.com/us/threat-insight/post/north-korea-bitten-bitcoin-bug-financially-motivated-campaigns-reveal-new
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Lazarus_Dec_17_1 {
-   meta:
+meta:
       description = "Detects Lazarus malware from incident in Dec 2017"
       author = "Florian Roth"
       reference = "https://goo.gl/8U6fY2"
@@ -27,7 +16,7 @@ rule Lazarus_Dec_17_1 {
 }
 
 rule Lazarus_Dec_17_2 {
-   meta:
+meta:
       description = "Detects Lazarus malware from incident in Dec 2017"
       author = "Florian Roth"
       reference = "https://goo.gl/8U6fY2"
@@ -47,7 +36,7 @@ rule Lazarus_Dec_17_2 {
 }
 
 rule Lazarus_Dec_17_4 {
-   meta:
+meta:
       description = "Detects Lazarus malware from incident in Dec 2017ithumb.js"
       author = "Florian Roth"
       reference = "https://goo.gl/8U6fY2"
@@ -61,7 +50,7 @@ rule Lazarus_Dec_17_4 {
 }
 
 rule Lazarus_Dec_17_5 {
-   meta:
+meta:
       description = "Detects Lazarus malware from incident in Dec 2017"
       author = "Florian Roth"
       reference = "https://goo.gl/8U6fY2"
@@ -79,3 +68,4 @@ rule Lazarus_Dec_17_5 {
    condition:
       filesize < 500KB and 1 of them
 }
+

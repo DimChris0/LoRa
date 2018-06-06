@@ -1,14 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2015-05-05
-	Identifier: CarbonGrabber
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Rombertik_CarbonGrabber {
-	meta:
+meta:
 		description = "Detects CarbonGrabber alias Rombertik - file Copy#064046.scr"
 		author = "Florian Roth"
 		reference = "http://blogs.cisco.com/security/talos/rombertik"
@@ -29,7 +20,7 @@ rule Rombertik_CarbonGrabber {
 }
 
 rule Rombertik_CarbonGrabber_Panel_InstallScript {
-	meta:
+meta:
 		description = "Detects CarbonGrabber alias Rombertik panel install script - file install.php"
 		author = "Florian Roth"
 		reference = "http://blogs.cisco.com/security/talos/rombertik"
@@ -49,7 +40,7 @@ rule Rombertik_CarbonGrabber_Panel_InstallScript {
 }
 
 rule Rombertik_CarbonGrabber_Panel {
-	meta:
+meta:
 		description = "Detects CarbonGrabber alias Rombertik Panel - file index.php"
 		author = "Florian Roth"
 		reference = "http://blogs.cisco.com/security/talos/rombertik"
@@ -67,7 +58,7 @@ rule Rombertik_CarbonGrabber_Panel {
 }
 
 rule Rombertik_CarbonGrabber_Builder {
-	meta:
+meta:
 		description = "Detects CarbonGrabber alias Rombertik Builder - file Builder.exe"
 		author = "Florian Roth"
 		reference = "http://blogs.cisco.com/security/talos/rombertik"
@@ -84,7 +75,7 @@ rule Rombertik_CarbonGrabber_Builder {
 }
 
 rule Rombertik_CarbonGrabber_Builder_Server {
-	meta:
+meta:
 		description = "Detects CarbonGrabber alias Rombertik Builder Server - file Server.exe"
 		author = "Florian Roth"
 		reference = "http://blogs.cisco.com/security/talos/rombertik"
@@ -105,3 +96,4 @@ rule Rombertik_CarbonGrabber_Builder_Server {
 	condition:
 		uint16(0) == 0x5a4d and filesize < 250KB and 8 of them
 }
+

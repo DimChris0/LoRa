@@ -1,14 +1,5 @@
-
-/*
-   Yara Rule Set
-   Author: Ian.Ahl@fireeye.com @TekDefense, modified by Florian Roth
-   Date: 2017-06-05
-   Identifier: APT19
-   Reference: https://www.fireeye.com/blog/threat-research/2017/06/phished-at-the-request-of-counsel.html
-*/
-
 rule Beacon_K5om {
-   meta:
+meta:
       description = "Detects Meterpreter Beacon - file K5om.dll"
       author = "Florian Roth"
       reference = "https://www.fireeye.com/blog/threat-research/2017/06/phished-at-the-request-of-counsel.html"
@@ -27,17 +18,15 @@ rule Beacon_K5om {
       ( uint16(0) == 0x5a4d and filesize < 600KB and ( 1 of ($x*) or 3 of them ) )
 }
 
-/* Rule Set ----------------------------------------------------------------- */
-
 rule FE_LEGALSTRIKE_MACRO {
-   meta:
+meta:
       version=".1"
       filetype="MACRO"
       author="Ian.Ahl@fireeye.com @TekDefense - modified by Florian Roth"
       date="2017-06-02"
       description="This rule is designed to identify macros with the specific encoding used in the sample 30f149479c02b741e897cdb9ecd22da7."
    strings:
-      // OBSFUCATION
+      
       $ob1 = "ChrW(114) & ChrW(101) & ChrW(103) & ChrW(115) & ChrW(118) & ChrW(114) & ChrW(51) & ChrW(50) & ChrW(46) & ChrW(101)" ascii wide
       // wscript
       $wsobj1 = "Set Obj = CreateObject(\"WScript.Shell\")" ascii wide
@@ -47,7 +36,7 @@ rule FE_LEGALSTRIKE_MACRO {
 }
 
 rule FE_LEGALSTRIKE_RTF {
-   meta:
+meta:
       version=".1"
       filetype="MACRO"
       author="joshua.kim@FireEye. - modified by Florian Roth"
@@ -63,3 +52,4 @@ rule FE_LEGALSTRIKE_RTF {
    condition:
       uint32be(0) == 0x7B5C7274 and all of them
 }
+

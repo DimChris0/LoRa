@@ -1,16 +1,5 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-07-10
-   Identifier: Hacking Attempts
-   Reference: https://blogs.rsa.com/wp-content/uploads/2017/07/Fig8-netstat_dropped_more.png
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Recon_Commands_Windows_Gen1 {
-   meta:
+meta:
       description = "Detects a set of reconnaissance commands on Windows systems"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -44,3 +33,4 @@ rule Recon_Commands_Windows_Gen1 {
       filesize < 1000KB and 4 of them
       and not 1 of ($fp*)
 }
+

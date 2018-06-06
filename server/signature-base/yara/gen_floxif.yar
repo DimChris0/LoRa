@@ -1,6 +1,5 @@
-
 rule Malware_Floxif_mpsvc_dll {
-   meta:
+meta:
       description = "Malware - Floxif"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -13,3 +12,4 @@ rule Malware_Floxif_mpsvc_dll {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 1000KB and all of them )
 }
+

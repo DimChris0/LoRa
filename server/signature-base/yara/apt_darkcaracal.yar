@@ -1,16 +1,5 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2018-01-22
-   Identifier: Dark Caracal
-   Reference: https://www.eff.org/deeplinks/2018/01/dark-caracal-good-news-and-bad-news
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule MiniRAT_Gen_1 {
-   meta:
+meta:
       description = "Detects Mini RAT malware"
       author = "Florian Roth"
       reference = "https://www.eff.org/deeplinks/2018/01/dark-caracal-good-news-and-bad-news"
@@ -26,3 +15,4 @@ rule MiniRAT_Gen_1 {
    condition:
       uint16(0) == 0x5a4d and filesize < 7000KB and 1 of them
 }
+

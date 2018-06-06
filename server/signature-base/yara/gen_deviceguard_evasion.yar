@@ -1,5 +1,5 @@
 rule DeviceGuard_WDS_Evasion {
-   meta:
+meta:
       author = "Florian Roth"
       description = "Detects WDS file used to circumvent Device Guard"
       score = 80
@@ -11,3 +11,4 @@ rule DeviceGuard_WDS_Evasion {
    condition:
       filesize < 50KB and all of them
 }
+

@@ -1,14 +1,5 @@
-/*
-	Yara Rule Set
-	Author: FLorian Roth
-	Date: 2016-12-08
-	Identifier: Modified SysInternals Tools
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule SysInternals_Tool_Anomaly {
-   meta:
+meta:
       description = "SysInternals Tool Anomaly - does not contain Mark Russinovich as author"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -22,3 +13,4 @@ rule SysInternals_Tool_Anomaly {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 1000KB and $s1 and not $n1 and not 1 of ($nfp*) )
 }
+

@@ -1,14 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-02-04
-   Identifier: ysoserial payloads
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Ysoserial_Payload_MozillaRhino1 {
-   meta:
+meta:
       description = "Ysoserial Payloads - file MozillaRhino1.bin"
       author = "Florian Roth"
       reference = "https://github.com/frohoff/ysoserial"
@@ -21,7 +12,7 @@ rule Ysoserial_Payload_MozillaRhino1 {
 }
 
 rule Ysoserial_Payload_C3P0 {
-   meta:
+meta:
       description = "Ysoserial Payloads - file C3P0.bin"
       author = "Florian Roth"
       reference = "https://github.com/frohoff/ysoserial"
@@ -34,7 +25,7 @@ rule Ysoserial_Payload_C3P0 {
 }
 
 rule Ysoserial_Payload_Spring1 {
-   meta:
+meta:
       description = "Ysoserial Payloads - file Spring1.bin"
       author = "Florian Roth"
       reference = "https://github.com/frohoff/ysoserial"
@@ -53,7 +44,7 @@ rule Ysoserial_Payload_Spring1 {
 }
 
 rule Ysoserial_Payload {
-   meta:
+meta:
       description = "Ysoserial Payloads"
       author = "Florian Roth"
       reference = "https://github.com/frohoff/ysoserial"
@@ -82,7 +73,7 @@ rule Ysoserial_Payload {
 }
 
 rule Ysoserial_Payload_3 {
-   meta:
+meta:
       description = "Ysoserial Payloads - from files JavassistWeld1.bin, JBossInterceptors.bin"
       author = "Florian Roth"
       reference = "https://github.com/frohoff/ysoserial"
@@ -101,3 +92,4 @@ rule Ysoserial_Payload_3 {
    condition:
       ( uint16(0) == 0xedac and filesize < 10KB and $x1 ) or ( all of them )
 }
+

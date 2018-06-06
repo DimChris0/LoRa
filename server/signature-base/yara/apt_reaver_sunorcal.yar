@@ -1,18 +1,6 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-11-11
-   Identifier: SunOrcal
-   Reference: https://researchcenter.paloaltonetworks.com/2017/11/unit42-new-malware-with-ties-to-sunorcal-discovered/
-*/
-
 import "pe"
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Reaver3_Malware_Nov17_1 {
-   meta:
+meta:
       description = "Detects Reaver malware mentioned in PaloAltoNetworks report"
       author = "Florian Roth"
       reference = "https://researchcenter.paloaltonetworks.com/2017/11/unit42-new-malware-with-ties-to-sunorcal-discovered/"
@@ -25,7 +13,7 @@ rule Reaver3_Malware_Nov17_1 {
 }
 
 rule Reaver3_Malware_Nov17_2 {
-   meta:
+meta:
       description = "Detects Reaver malware mentioned in PaloAltoNetworks report"
       author = "Florian Roth"
       reference = "https://researchcenter.paloaltonetworks.com/2017/11/unit42-new-malware-with-ties-to-sunorcal-discovered/"
@@ -49,7 +37,7 @@ rule Reaver3_Malware_Nov17_2 {
 }
 
 rule Reaver3_Malware_Nov17_3 {
-   meta:
+meta:
       description = "Detects Reaver malware mentioned in PaloAltoNetworks report"
       author = "Florian Roth"
       reference = "https://researchcenter.paloaltonetworks.com/2017/11/unit42-new-malware-with-ties-to-sunorcal-discovered/"
@@ -73,7 +61,7 @@ rule Reaver3_Malware_Nov17_3 {
 }
 
 rule SunOrcal_Malware_Nov17_1 {
-   meta:
+meta:
       description = "Detects Reaver malware mentioned in PaloAltoNetworks report"
       author = "Florian Roth"
       reference = "https://researchcenter.paloaltonetworks.com/2017/11/unit42-new-malware-with-ties-to-sunorcal-discovered/"
@@ -83,7 +71,7 @@ rule SunOrcal_Malware_Nov17_1 {
       hash3 = "38ea33dab0ba2edd16ecd98cba161c550d1036b253c8666c4110d198948329fb"
    strings:
       $x1 = "kQZ6l5t1kAlsjmBzsCZPrSpQn5tFrChLtTdsgTlOsClKt5pBsDdFrSVshnxMr6ZOpn9slndBsy1jq6lIr216rSNApn9P" fullword ascii
-      /* $x2 = "!!!system" fullword ascii - more specific: */
+      
       $x2 = { 00 00 00 00 00 00 00 00 00 00 00 00 21 21 21 73
               79 73 74 65 6D 00 00 00 00 00 00 00 00 00 00 00 }
       $x3 = "!!!url!!!" fullword ascii
@@ -93,3 +81,4 @@ rule SunOrcal_Malware_Nov17_1 {
    condition:
       uint16(0) == 0x5a4d and filesize < 200KB and 1 of them
 }
+

@@ -1,21 +1,12 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2015-07-20
-	Identifier: MiniDionis
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule MiniDionis_readerView {
-	meta:
+meta:
 		description = "MiniDionis Malware - file readerView.exe / adobe.exe"
 		author = "Florian Roth"
 		reference = "http://www.kernelmode.info/forum/viewtopic.php?f=16&t=3950"
 		date = "2015-07-20"
-		/* Original Hash */
+		
 		hash1 = "ee5eb9d57c3611e91a27bb1fc2d0aaa6bbfa6c69ab16e65e7123c7c49d46f145"
-		/* Derived Samples */
+		
 		hash2 = "a713982d04d2048a575912a5fc37c93091619becd5b21e96f049890435940004"
 		hash3 = "88a40d5b679bccf9641009514b3d18b09e68b609ffaf414574a6eca6536e8b8f"
 		hash4 = "97d8725e39d263ed21856477ed09738755134b5c0d0b9ae86ebb1cdd4cdc18b7"
@@ -32,10 +23,8 @@ rule MiniDionis_readerView {
 		uint16(0) == 0x5a4d and filesize < 500KB and all of ($s*) and 1 of ($op*)
 }
 
-/* Related - SFX files or packed files with typical malware content -------- */
-
 rule Malicious_SFX1 {
-	meta:
+meta:
 		description = "SFX with voicemail content"
 		author = "Florian Roth"
 		reference = "http://www.kernelmode.info/forum/viewtopic.php?f=16&t=3950"
@@ -49,7 +38,7 @@ rule Malicious_SFX1 {
 }
 
 rule Malicious_SFX2 {
-	meta:
+meta:
 		description = "SFX with adobe.exe content"
 		author = "Florian Roth"
 		reference = "http://www.kernelmode.info/forum/viewtopic.php?f=16&t=3950"
@@ -64,7 +53,7 @@ rule Malicious_SFX2 {
 }
 
 rule MiniDionis_VBS_Dropped {
-	meta:
+meta:
 		description = "Dropped File - 1.vbs"
 		author = "Florian Roth"
 		reference = "https://malwr.com/analysis/ZDc4ZmIyZDI4MTVjNGY5NWI0YzE3YjIzNGFjZTcyYTY/"
@@ -79,3 +68,4 @@ rule MiniDionis_VBS_Dropped {
 	condition:
 		filesize < 1KB and all of them and $s1 in (0..40)
 }
+

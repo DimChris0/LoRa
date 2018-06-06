@@ -1,15 +1,5 @@
-
-/*
-   Yara Rule Set
-   Author: Cylance
-   Date: 2017-02-28
-   Identifier: Jap Threat
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Tofu_Backdoor {
-   meta:
+meta:
       description = "Detects Tofu Trojan"
       author = "Cylance"
       reference = "https://www.cylance.com/en_us/blog/the-deception-project-a-new-japanese-centric-threat.html"
@@ -21,3 +11,4 @@ rule Tofu_Backdoor {
    condition:
    	$a or $b or $c
 }
+

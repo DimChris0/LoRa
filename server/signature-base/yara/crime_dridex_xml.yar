@@ -1,5 +1,5 @@
 rule Dridex_Trojan_XML {
-	meta:
+meta:
 		description = "Dridex Malware in XML Document"
 		author = "Florian Roth @4nc4p"
 		reference = "https://threatpost.com/dridex-banking-trojan-spreading-via-macros-in-xml-files/111503"
@@ -10,7 +10,7 @@ rule Dridex_Trojan_XML {
 		hash4 = "981369cd53c022b434ee6d380aa9884459b63350"
 		hash5 = "96e1e7383457293a9b8f2c75270b58da0e630bea"
 	strings:
-		// can be ascii or wide formatted - therefore no restriction
+		
 		$c_xml      = "<?xml version="
 		$c_word     = "<?mso-application progid=\"Word.Document\"?>"
 		$c_macro    = "w:macrosPresent=\"yes\""
@@ -20,3 +20,4 @@ rule Dridex_Trojan_XML {
 	condition:
 		all of ($c*)
 }
+

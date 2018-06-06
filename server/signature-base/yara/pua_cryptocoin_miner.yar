@@ -1,6 +1,5 @@
-
 rule CoinMiner_Strings {
-   meta:
+meta:
       description = "Detects mining pool protocol string in Executable"
       author = "Florian Roth"
       score = 50
@@ -14,7 +13,7 @@ rule CoinMiner_Strings {
 }
 
 rule CoinHive_Javascript_MoneroMiner {
-   meta:
+meta:
       description = "Detects CoinHive - JavaScript Crypto Miner"
       author = "Florian Roth"
       score = 50
@@ -25,3 +24,4 @@ rule CoinHive_Javascript_MoneroMiner {
    condition:
       filesize < 65KB and 1 of them
 }
+

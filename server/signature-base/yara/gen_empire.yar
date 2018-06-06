@@ -1,14 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2016-11-05
-   Identifier: Empire
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Empire_Invoke_MetasploitPayload {
-   meta:
+meta:
       description = "Detects Empire component - file Invoke-MetasploitPayload.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -22,7 +13,7 @@ rule Empire_Invoke_MetasploitPayload {
 }
 
 rule Empire_Exploit_Jenkins {
-   meta:
+meta:
       description = "Detects Empire component - file Exploit-Jenkins.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -37,7 +28,7 @@ rule Empire_Exploit_Jenkins {
 }
 
 rule Empire_Get_SecurityPackages {
-   meta:
+meta:
       description = "Detects Empire component - file Get-SecurityPackages.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -51,7 +42,7 @@ rule Empire_Get_SecurityPackages {
 }
 
 rule Empire_Invoke_PowerDump {
-   meta:
+meta:
       description = "Detects Empire component - file Invoke-PowerDump.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -66,7 +57,7 @@ rule Empire_Invoke_PowerDump {
 }
 
 rule Empire_Install_SSP {
-   meta:
+meta:
       description = "Detects Empire component - file Install-SSP.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -79,7 +70,7 @@ rule Empire_Install_SSP {
 }
 
 rule Empire_Invoke_ShellcodeMSIL {
-   meta:
+meta:
       description = "Detects Empire component - file Invoke-ShellcodeMSIL.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -95,7 +86,7 @@ rule Empire_Invoke_ShellcodeMSIL {
 }
 
 rule Empire__Users_neo_code_Workspace_Empire_4sigs_PowerUp {
-   meta:
+meta:
       description = "Detects Empire component - file PowerUp.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -108,7 +99,7 @@ rule Empire__Users_neo_code_Workspace_Empire_4sigs_PowerUp {
 }
 
 rule Empire_Invoke_Mimikatz_Gen {
-   meta:
+meta:
       description = "Detects Empire component - file Invoke-Mimikatz.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -122,7 +113,7 @@ rule Empire_Invoke_Mimikatz_Gen {
 }
 
 rule Empire_Get_GPPPassword {
-   meta:
+meta:
       description = "Detects Empire component - file Get-GPPPassword.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -137,7 +128,7 @@ rule Empire_Get_GPPPassword {
 }
 
 rule Empire_Invoke_SmbScanner {
-   meta:
+meta:
       description = "Detects Empire component - file Invoke-SmbScanner.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -151,7 +142,7 @@ rule Empire_Invoke_SmbScanner {
 }
 
 rule Empire_Exploit_JBoss {
-   meta:
+meta:
       description = "Detects Empire component - file Exploit-JBoss.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -168,7 +159,7 @@ rule Empire_Exploit_JBoss {
 }
 
 rule Empire_dumpCredStore {
-   meta:
+meta:
       description = "Detects Empire component - file dumpCredStore.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -183,7 +174,7 @@ rule Empire_dumpCredStore {
 }
 
 rule Empire_Invoke_EgressCheck {
-   meta:
+meta:
       description = "Detects Empire component - file Invoke-EgressCheck.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -196,7 +187,7 @@ rule Empire_Invoke_EgressCheck {
 }
 
 rule Empire_ReflectivePick_x64_orig {
-   meta:
+meta:
       description = "Detects Empire component - file ReflectivePick_x64_orig.dll"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -211,7 +202,7 @@ rule Empire_ReflectivePick_x64_orig {
 }
 
 rule Empire_Out_Minidump {
-   meta:
+meta:
       description = "Detects Empire component - file Out-Minidump.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -225,7 +216,7 @@ rule Empire_Out_Minidump {
 }
 
 rule Empire_Invoke_PsExec {
-   meta:
+meta:
       description = "Detects Empire component - file Invoke-PsExec.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -240,7 +231,7 @@ rule Empire_Invoke_PsExec {
 }
 
 rule Empire_Invoke_PostExfil {
-   meta:
+meta:
       description = "Detects Empire component - file Invoke-PostExfil.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -254,7 +245,7 @@ rule Empire_Invoke_PostExfil {
 }
 
 rule Empire_Invoke_SMBAutoBrute {
-   meta:
+meta:
       description = "Detects Empire component - file Invoke-SMBAutoBrute.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -268,7 +259,7 @@ rule Empire_Invoke_SMBAutoBrute {
 }
 
 rule Empire_Get_Keystrokes {
-   meta:
+meta:
       description = "Detects Empire component - file Get-Keystrokes.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -281,7 +272,7 @@ rule Empire_Get_Keystrokes {
 }
 
 rule Empire_Invoke_DllInjection {
-   meta:
+meta:
       description = "Detects Empire component - file Invoke-DllInjection.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -294,7 +285,7 @@ rule Empire_Invoke_DllInjection {
 }
 
 rule Empire_KeePassConfig {
-   meta:
+meta:
       description = "Detects Empire component - file KeePassConfig.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -307,7 +298,7 @@ rule Empire_KeePassConfig {
 }
 
 rule Empire_Invoke_SSHCommand {
-   meta:
+meta:
       description = "Detects Empire component - file Invoke-SSHCommand.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -321,10 +312,8 @@ rule Empire_Invoke_SSHCommand {
       ( uint16(0) == 0x660a and filesize < 2000KB and 1 of them ) or all of them
 }
 
-/* Super Rules ------------------------------------------------------------- */
-
 rule Empire_PowerShell_Framework_Gen1 {
-   meta:
+meta:
       description = "Detects Empire component"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -343,7 +332,7 @@ rule Empire_PowerShell_Framework_Gen1 {
 }
 
 rule Empire_PowerUp_Gen {
-   meta:
+meta:
       description = "Detects Empire component - from files PowerUp.ps1, PowerUp.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -358,7 +347,7 @@ rule Empire_PowerUp_Gen {
 }
 
 rule Empire_PowerShell_Framework_Gen2 {
-   meta:
+meta:
       description = "Detects Empire component"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -377,7 +366,7 @@ rule Empire_PowerShell_Framework_Gen2 {
 }
 
 rule Empire_Agent_Gen {
-   meta:
+meta:
       description = "Detects Empire component - from files agent.ps1, agent.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -394,7 +383,7 @@ rule Empire_Agent_Gen {
 }
 
 rule Empire_PowerShell_Framework_Gen3 {
-   meta:
+meta:
       description = "Detects Empire component"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -412,7 +401,7 @@ rule Empire_PowerShell_Framework_Gen3 {
 }
 
 rule Empire_Invoke_InveighRelay_Gen {
-   meta:
+meta:
       description = "Detects Empire component - from files Invoke-InveighRelay.ps1, Invoke-InveighRelay.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -427,7 +416,7 @@ rule Empire_Invoke_InveighRelay_Gen {
 }
 
 rule Empire_KeePassConfig_Gen {
-   meta:
+meta:
       description = "Detects Empire component - from files KeePassConfig.ps1, KeePassConfig.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -441,7 +430,7 @@ rule Empire_KeePassConfig_Gen {
 }
 
 rule Empire_Invoke_Portscan_Gen {
-   meta:
+meta:
       description = "Detects Empire component - from files Invoke-Portscan.ps1, Invoke-Portscan.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -456,7 +445,7 @@ rule Empire_Invoke_Portscan_Gen {
 }
 
 rule Empire_PowerShell_Framework_Gen4 {
-   meta:
+meta:
       description = "Detects Empire component"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -482,7 +471,7 @@ rule Empire_PowerShell_Framework_Gen4 {
 }
 
 rule Empire_Invoke_CredentialInjection_Invoke_Mimikatz_Gen {
-   meta:
+meta:
       description = "Detects Empire component - from files Invoke-CredentialInjection.ps1, Invoke-Mimikatz.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -498,7 +487,7 @@ rule Empire_Invoke_CredentialInjection_Invoke_Mimikatz_Gen {
 }
 
 rule Empire_Invoke_Gen {
-   meta:
+meta:
       description = "Detects Empire component - from files Invoke-DCSync.ps1, Invoke-PSInject.ps1, Invoke-ReflectivePEInjection.ps1"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -515,7 +504,7 @@ rule Empire_Invoke_Gen {
 }
 
 rule Empire_PowerShell_Framework_Gen5 {
-   meta:
+meta:
       description = "Detects Empire component"
       author = "Florian Roth"
       reference = "https://github.com/adaptivethreat/Empire"
@@ -530,3 +519,4 @@ rule Empire_PowerShell_Framework_Gen5 {
    condition:
       ( uint16(0) == 0x7566 and filesize < 1000KB and 1 of them ) or all of them
 }
+

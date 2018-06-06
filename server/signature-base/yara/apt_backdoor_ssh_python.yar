@@ -1,6 +1,5 @@
-
 rule custom_ssh_backdoor_server {
-	meta:
+meta:
 		description = "Custome SSH backdoor based on python and paramiko - file server.py"
 		author = "Florian Roth"
 		reference = "https://goo.gl/S46L3o"
@@ -16,3 +15,4 @@ rule custom_ssh_backdoor_server {
 	condition:
 		filesize < 10KB and 5 of them
 }
+

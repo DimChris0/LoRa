@@ -1,15 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-06-13
-   Identifier: Hidden Cobra
-   Reference: https://www.us-cert.gov/ncas/alerts/TA17-164A
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule HiddenCobra_Rule_1 {
-   meta:
+meta:
       description = "Detects Hidden Cobra Malware"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/alerts/TA17-164A"
@@ -27,29 +17,8 @@ rule HiddenCobra_Rule_1 {
       all of them
 }
 
-/* Prone to False Positives ----------------------------------------
-rule HiddenCobra_Rule_2 {
-   meta:
-      description = "Detects Hidden Cobra Malware"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/alerts/TA17-164A"
-      date = "2017-06-13"
-   strings:
-      $STR1 = "Wating" wide ascii fullword
-      $STR2 = "Reamin" wide ascii fullword
-      $STR3 = "laptos" wide ascii fullword
-   condition:
-      ( uint16(0) == 0x5A4D or
-        uint16(0) == 0xCFD0 or
-        uint16(0) == 0xC3D4 or
-        uint32(0) == 0x46445025 or
-        uint32(1) == 0x6674725C
-      ) and all of them
-}
-*/
-
 rule HiddenCobra_Rule_3 {
-   meta:
+meta:
       description = "Detects Hidden Cobra Malware"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/alerts/TA17-164A"
@@ -78,3 +47,4 @@ rule HiddenCobra_Rule_3 {
    condition:
       $randomUrlBuilder
 }
+

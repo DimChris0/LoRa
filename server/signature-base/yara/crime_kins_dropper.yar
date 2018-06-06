@@ -1,10 +1,10 @@
 rule KINS_dropper {
-	meta:
+meta:
 		author = "AlienVault Labs aortega@alienvault.com"
 		description = "Match protocol, process injects and windows exploit present in KINS dropper"
 		reference = "http://goo.gl/arPhm3"
 	strings:
-		// Network protocol
+		
 		$n1 = "tid=%d&ta=%s-%x" fullword
 		$n2 = "fid=%d" fullword
 		$n3 = "%[^.].%[^(](%[^)])" fullword
@@ -16,7 +16,7 @@ rule KINS_dropper {
 		$i3 = "Inject::InjectProcess()"
 		$i4 = "Inject::InjectImageToProcess()"
 		$i5 = "Drop::InjectStartThread()"
-		// UAC bypass
+		
 		$uac1 = "ExploitMS10_092"
 		$uac2 = "\\globalroot\\systemroot\\system32\\tasks\\" ascii wide
 		$uac3 = "<RunLevel>HighestAvailable</RunLevel>" ascii wide
@@ -25,12 +25,12 @@ rule KINS_dropper {
 }
 
 rule KINS_DLL_zeus {
-	meta:
+meta:
 		author = "AlienVault Labs aortega@alienvault.com"
 		description = "Match default bot in KINS leaked dropper, Zeus"
 		reference = "http://goo.gl/arPhm3"
 	strings:
-		// Network protocol
+		
 		$n1 = "%BOTID%" fullword
 		$n2 = "%opensocks%" fullword
 		$n3 = "%openvnc%" fullword
@@ -44,3 +44,4 @@ rule KINS_DLL_zeus {
 	condition:
 		all of ($n*) and 1 of ($s*)
 }
+

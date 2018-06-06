@@ -1,17 +1,6 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-08-11
-   Identifier: Pupy Backdoor
-   Reference: https://github.com/n1nj4sec/pupy-binaries
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 import "pe"
-
 rule Pupy_Backdoor {
-   meta:
+meta:
       description = "Detects Pupy backdoor"
       author = "Florian Roth"
       reference = "https://github.com/n1nj4sec/pupy-binaries"
@@ -40,3 +29,4 @@ rule Pupy_Backdoor {
       or 3 of them
       or ( uint16(0) == 0x5a4d and pe.imphash() == "84a69bce2ff6d9f866b7ae63bd70b163" )
 }
+

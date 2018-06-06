@@ -1,17 +1,6 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-09-26
-   Identifier: Microcin
-   Reference: https://securelist.com/files/2017/09/Microcin_Technical-PDF_eng_final.pdf
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 import "pe"
-
 rule Microcin_Sample_1 {
-   meta:
+meta:
       description = "Malware sample mentioned in Microcin technical report by Kaspersky"
       author = "Florian Roth"
       reference = "https://securelist.com/files/2017/09/Microcin_Technical-PDF_eng_final.pdf"
@@ -34,7 +23,7 @@ rule Microcin_Sample_1 {
 }
 
 rule Microcin_Sample_2 {
-   meta:
+meta:
       description = "Malware sample mentioned in Microcin technical report by Kaspersky"
       author = "Florian Roth"
       reference = "https://securelist.com/files/2017/09/Microcin_Technical-PDF_eng_final.pdf"
@@ -48,7 +37,7 @@ rule Microcin_Sample_2 {
 }
 
 rule Microcin_Sample_3 {
-   meta:
+meta:
       description = "Malware sample mentioned in Microcin technical report by Kaspersky"
       author = "Florian Roth"
       reference = "https://securelist.com/files/2017/09/Microcin_Technical-PDF_eng_final.pdf"
@@ -62,7 +51,7 @@ rule Microcin_Sample_3 {
 }
 
 rule Microcin_Sample_4 {
-   meta:
+meta:
       description = "Malware sample mentioned in Microcin technical report by Kaspersky"
       author = "Florian Roth"
       reference = "https://securelist.com/files/2017/09/Microcin_Technical-PDF_eng_final.pdf"
@@ -82,7 +71,7 @@ rule Microcin_Sample_4 {
 }
 
 rule Microcin_Sample_5 {
-   meta:
+meta:
       description = "Malware sample mentioned in Microcin technical report by Kaspersky"
       author = "Florian Roth"
       reference = "https://securelist.com/files/2017/09/Microcin_Technical-PDF_eng_final.pdf"
@@ -100,7 +89,7 @@ rule Microcin_Sample_5 {
 }
 
 rule Microcin_Sample_6 {
-   meta:
+meta:
       description = "Malware sample mentioned in Microcin technical report by Kaspersky"
       author = "Florian Roth"
       reference = "https://securelist.com/files/2017/09/Microcin_Technical-PDF_eng_final.pdf"
@@ -114,3 +103,4 @@ rule Microcin_Sample_6 {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 600KB and all of them )
 }
+

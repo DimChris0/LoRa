@@ -1,14 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-06-10
-	Identifier: Dubnium
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Dubnium_Sample_1 {
-	meta:
+meta:
 		description = "Detects sample mentioned in the Dubnium Report"
 		author = "Florian Roth"
 		reference = "https://goo.gl/AW9Cuu"
@@ -22,7 +13,7 @@ rule Dubnium_Sample_1 {
 }
 
 rule Dubnium_Sample_2 {
-	meta:
+meta:
 		description = "Detects sample mentioned in the Dubnium Report"
 		author = "Florian Roth"
 		reference = "https://goo.gl/AW9Cuu"
@@ -36,7 +27,7 @@ rule Dubnium_Sample_2 {
 }
 
 rule Dubnium_Sample_3 {
-	meta:
+meta:
 		description = "Detects sample mentioned in the Dubnium Report"
 		author = "Florian Roth"
 		reference = "https://goo.gl/AW9Cuu"
@@ -56,7 +47,7 @@ rule Dubnium_Sample_3 {
 }
 
 rule Dubnium_Sample_5 {
-	meta:
+meta:
 		description = "Detects sample mentioned in the Dubnium Report"
 		author = "Florian Roth"
 		reference = "https://goo.gl/AW9Cuu"
@@ -79,7 +70,7 @@ rule Dubnium_Sample_5 {
 }
 
 rule Dubnium_Sample_6 {
-	meta:
+meta:
 		description = "Detects sample mentioned in the Dubnium Report"
 		author = "Florian Roth"
 		reference = "https://goo.gl/AW9Cuu"
@@ -97,7 +88,7 @@ rule Dubnium_Sample_6 {
 }
 
 rule Dubnium_Sample_7 {
-	meta:
+meta:
 		description = "Detects sample mentioned in the Dubnium Report"
 		author = "Florian Roth"
 		reference = "https://goo.gl/AW9Cuu"
@@ -119,7 +110,7 @@ rule Dubnium_Sample_7 {
 }
 
 rule Dubnium_Sample_SSHOpenSSL {
-	meta:
+meta:
 		description = "Detects sample mentioned in the Dubnium Report"
 		author = "Florian Roth"
 		reference = "https://goo.gl/AW9Cuu"
@@ -136,3 +127,4 @@ rule Dubnium_Sample_SSHOpenSSL {
 	condition:
 		uint16(0) == 0x5a4d and filesize < 9000KB and all of them
 }
+

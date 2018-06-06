@@ -1,15 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2018-02-14
-   Identifier: LokiBot Dropper
-   Reference: https://app.any.run/tasks/401df4d9-098b-4fd0-86e0-7a52ce6ddbf5
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule LokiBot_Dropper_ScanCopyPDF_Feb18 {
-   meta:
+meta:
       description = "Auto-generated rule - file Scan Copy.pdf.com"
       author = "Florian Roth"
       reference = "https://app.any.run/tasks/401df4d9-098b-4fd0-86e0-7a52ce6ddbf5"
@@ -29,7 +19,7 @@ rule LokiBot_Dropper_ScanCopyPDF_Feb18 {
 }
 
 rule LokiBot_Dropper_Packed_R11_Feb18 {
-   meta:
+meta:
       description = "Auto-generated rule - file scan copy.pdf.r11"
       author = "Florian Roth"
       reference = "https://app.any.run/tasks/401df4d9-098b-4fd0-86e0-7a52ce6ddbf5"
@@ -40,3 +30,4 @@ rule LokiBot_Dropper_Packed_R11_Feb18 {
    condition:
       uint16(0) == 0x0000 and filesize < 2000KB and 1 of them
 }
+

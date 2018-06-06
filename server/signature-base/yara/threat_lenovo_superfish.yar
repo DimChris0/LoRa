@@ -1,8 +1,5 @@
-
-/* LENOVO Superfish -------------------------------------------------------- */
-
 rule VisualDiscovery_Lonovo_Superfish_SSL_Hijack {
-	meta:
+meta:
 		description = "Lenovo Superfish SSL Interceptor - file VisualDiscovery.exe"
 		author = "Florian Roth / improved by kbandla"
 		reference = "https://twitter.com/4nc4p/status/568325493558272000"
@@ -13,7 +10,7 @@ rule VisualDiscovery_Lonovo_Superfish_SSL_Hijack {
 		hash4 = "343af97d47582c8150d63cbced601113b14fcca6"
 	strings:
 		$mz = { 4d 5a }
-		//$s1 = "VisualDiscovery.exe" fullword wide
+		
 		$s2 = "Invalid key length used to initialize BlowFish." fullword ascii
 		$s3 = "GetPCProxyHandler" fullword ascii
 		$s4 = "StartPCProxy" fullword ascii
@@ -21,3 +18,4 @@ rule VisualDiscovery_Lonovo_Superfish_SSL_Hijack {
 	condition:
 		( $mz at 0 ) and filesize < 2MB and all of ($s*)
 }
+

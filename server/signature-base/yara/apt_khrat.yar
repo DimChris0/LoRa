@@ -1,17 +1,6 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-08-31
-   Identifier: KHRAT RAT
-   Reference: https://researchcenter.paloaltonetworks.com/2017/08/unit42-updated-khrat-malware-used-in-cambodia-attacks/
-*/
-
 import "pe"
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule KHRAT_Malware {
-   meta:
+meta:
       description = "Detects an Imphash of KHRAT malware"
       author = "Florian Roth"
       reference = "https://researchcenter.paloaltonetworks.com/2017/08/unit42-updated-khrat-malware-used-in-cambodia-attacks/"
@@ -22,7 +11,7 @@ rule KHRAT_Malware {
 }
 
 rule MAL_KHRAT_script {
-   meta:
+meta:
       description = "Rule derived from KHRAT script but can match on other malicious scripts as well"
       author = "Florian Roth"
       reference = "https://researchcenter.paloaltonetworks.com/2017/08/unit42-updated-khrat-malware-used-in-cambodia-attacks/"
@@ -37,7 +26,7 @@ rule MAL_KHRAT_script {
 }
 
 rule MAL_KHRAT_scritplet {
-   meta:
+meta:
       description = "Rule derived from KHRAT scriptlet"
       author = "Florian Roth"
       reference = "https://researchcenter.paloaltonetworks.com/2017/08/unit42-updated-khrat-malware-used-in-cambodia-attacks/"
@@ -54,3 +43,4 @@ rule MAL_KHRAT_scritplet {
    condition:
       uint16(0) == 0x3f3c and filesize < 1KB and ( 1 of ($x*) or 4 of them )
 }
+

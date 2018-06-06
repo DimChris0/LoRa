@@ -1,6 +1,5 @@
-
 rule Invoke_PSImage {
-   meta:
+meta:
       description = "Detects a command to execute PowerShell from String"
       author = "Florian Roth"
       reference = "https://github.com/peewpw/Invoke-PSImage"
@@ -23,3 +22,4 @@ rule Invoke_PSImage {
    condition:
       filesize < 3000KB and 1 of them
 }
+

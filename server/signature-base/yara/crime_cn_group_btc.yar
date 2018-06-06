@@ -1,14 +1,5 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-06-22
-   Identifier: CN Group Tools
-   Reference: Internal Research
-*/
-
 rule BTC_Miner_lsass1_chrome_2 {
-   meta:
+meta:
       description = "Detects a Bitcoin Miner"
       author = "Florian Roth"
       reference = "Internal Research - CN Actor"
@@ -25,7 +16,7 @@ rule BTC_Miner_lsass1_chrome_2 {
 }
 
 rule CN_Actor_RA_Tool_Ammyy_mscorsvw {
-   meta:
+meta:
       description = "Detects Ammyy remote access tool"
       author = "Florian Roth"
       reference = "Internal Research - CN Actor"
@@ -41,7 +32,7 @@ rule CN_Actor_RA_Tool_Ammyy_mscorsvw {
 }
 
 rule CN_Actor_AmmyyAdmin {
-   meta:
+meta:
       description = "Detects Ammyy Admin Downloader"
       author = "Florian Roth"
       reference = "Internal Research - CN Actor"
@@ -53,3 +44,4 @@ rule CN_Actor_AmmyyAdmin {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 2000KB and all of them )
 }
+

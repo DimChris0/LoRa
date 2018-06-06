@@ -1,15 +1,5 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-04-07
-   Identifier: Compiled Impacket Tools
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Impacket_Tools_tracer {
-   meta:
+meta:
       description = "Compiled Impacket Tools"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -24,7 +14,7 @@ rule Impacket_Tools_tracer {
 }
 
 rule Impacket_Tools_wmiexec {
-   meta:
+meta:
       description = "Compiled Impacket Tools"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -39,7 +29,7 @@ rule Impacket_Tools_wmiexec {
 }
 
 rule Impacket_Tools_sniffer {
-   meta:
+meta:
       description = "Compiled Impacket Tools"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -53,7 +43,7 @@ rule Impacket_Tools_sniffer {
 }
 
 rule Impacket_Tools_mmcexec {
-   meta:
+meta:
       description = "Compiled Impacket Tools"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -67,7 +57,7 @@ rule Impacket_Tools_mmcexec {
 }
 
 rule Impacket_Tools_ifmap {
-   meta:
+meta:
       description = "Compiled Impacket Tools"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -81,7 +71,7 @@ rule Impacket_Tools_ifmap {
 }
 
 rule karmaSMB {
-   meta:
+meta:
       description = "Compiled Impacket Tools"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -94,7 +84,7 @@ rule karmaSMB {
 }
 
 rule samrdump {
-   meta:
+meta:
       description = "Compiled Impacket Tools"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -108,7 +98,7 @@ rule samrdump {
 }
 
 rule Impacket_Tools_rpcdump {
-   meta:
+meta:
       description = "Compiled Impacket Tools"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -122,7 +112,7 @@ rule Impacket_Tools_rpcdump {
 }
 
 rule Impacket_Tools_secretsdump {
-   meta:
+meta:
       description = "Compiled Impacket Tools"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -136,7 +126,7 @@ rule Impacket_Tools_secretsdump {
 }
 
 rule Impacket_Tools_esentutl {
-   meta:
+meta:
       description = "Compiled Impacket Tools"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -150,7 +140,7 @@ rule Impacket_Tools_esentutl {
 }
 
 rule Impacket_Tools_opdump {
-   meta:
+meta:
       description = "Compiled Impacket Tools"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -164,7 +154,7 @@ rule Impacket_Tools_opdump {
 }
 
 rule Impacket_Tools_sniff {
-   meta:
+meta:
       description = "Compiled Impacket Tools"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -178,7 +168,7 @@ rule Impacket_Tools_sniff {
 }
 
 rule Impacket_Tools_smbexec {
-   meta:
+meta:
       description = "Compiled Impacket Tools"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -192,7 +182,7 @@ rule Impacket_Tools_smbexec {
 }
 
 rule Impacket_Tools_goldenPac {
-   meta:
+meta:
       description = "Compiled Impacket Tools"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -207,7 +197,7 @@ rule Impacket_Tools_goldenPac {
 }
 
 rule Impacket_Tools_netview {
-   meta:
+meta:
       description = "Compiled Impacket Tools"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -222,7 +212,7 @@ rule Impacket_Tools_netview {
 }
 
 rule Impacket_Tools_smbtorture {
-   meta:
+meta:
       description = "Compiled Impacket Tools"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -236,7 +226,7 @@ rule Impacket_Tools_smbtorture {
 }
 
 rule Impacket_Tools_mimikatz {
-   meta:
+meta:
       description = "Compiled Impacket Tools"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -251,7 +241,7 @@ rule Impacket_Tools_mimikatz {
 }
 
 rule Impacket_Tools_smbrelayx {
-   meta:
+meta:
       description = "Compiled Impacket Tools"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -267,7 +257,7 @@ rule Impacket_Tools_smbrelayx {
 }
 
 rule Impacket_Tools_wmipersist {
-   meta:
+meta:
       description = "Compiled Impacket Tools"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -281,7 +271,7 @@ rule Impacket_Tools_wmipersist {
 }
 
 rule Impacket_Tools_lookupsid {
-   meta:
+meta:
       description = "Compiled Impacket Tools"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -295,7 +285,7 @@ rule Impacket_Tools_lookupsid {
 }
 
 rule Impacket_Tools_wmiquery {
-   meta:
+meta:
       description = "Compiled Impacket Tools"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -309,7 +299,7 @@ rule Impacket_Tools_wmiquery {
 }
 
 rule Impacket_Tools_atexec {
-   meta:
+meta:
       description = "Compiled Impacket Tools"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -325,7 +315,7 @@ rule Impacket_Tools_atexec {
 }
 
 rule Impacket_Tools_psexec {
-   meta:
+meta:
       description = "Compiled Impacket Tools"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -340,7 +330,7 @@ rule Impacket_Tools_psexec {
 }
 
 rule Impacket_Tools_Generic_1 {
-   meta:
+meta:
       description = "Compiled Impacket Tools"
       author = "Florian Roth"
       reference = "https://github.com/maaaaz/impacket-examples-windows"
@@ -369,7 +359,27 @@ rule Impacket_Tools_Generic_1 {
    strings:
       $s1 = "bpywintypes27.dll" fullword ascii
       $s2 = "hZFtPC" fullword ascii
-      $s3 = "impacket" ascii 
+      $s3 = "impacket" ascii
    condition:
       ( uint16(0) == 0x5a4d and filesize < 21000KB and all of ($s*) ) or ( all of them )
 }
+
+rule Impacket_Lateral_Movement {
+meta:
+      description = "Detects Impacket Network Aktivity for Lateral Movement"
+      author = "Markus Neis"
+      reference = "https://github.com/CoreSecurity/impacket"
+      date = "2018-03-22"
+      score = 60
+   strings:
+      $s1 = "impacket.dcerpc.v5.transport(" fullword ascii
+      $s2 = "impacket.smbconnection(" fullword ascii
+      $s3 = "impacket.dcerpc.v5.ndr(" fullword ascii
+      $s4 = "impacket.spnego(" fullword ascii
+      $s5 = "impacket.smb(" fullword ascii
+      $s6 = "impacket.ntlm(" fullword ascii
+      $s7 = "impacket.nmb(" fullword ascii
+   condition:
+      uint16(0) == 0x5a4d and filesize < 14000KB and 2 of them
+}
+

@@ -1,14 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-06-02
-	Identifier: Win Privilege Escalation
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Win_PrivEsc_gp3finder_v4_0 {
-	meta:
+meta:
 		description = "Detects a tool that can be used for privilege escalation - file gp3finder_v4.0.exe"
 		author = "Florian Roth"
 		reference = "http://grimhacker.com/2015/04/10/gp3finder-group-policy-preference-password-finder/"
@@ -24,7 +15,7 @@ rule Win_PrivEsc_gp3finder_v4_0 {
 }
 
 rule Win_PrivEsc_folderperm {
-	meta:
+meta:
 		description = "Detects a tool that can be used for privilege escalation - file folderperm.ps1"
 		author = "Florian Roth"
 		reference = "http://www.greyhathacker.net/?p=738"
@@ -40,7 +31,7 @@ rule Win_PrivEsc_folderperm {
 }
 
 rule Win_PrivEsc_ADACLScan4_3 {
-	meta:
+meta:
 		description = "Detects a tool that can be used for privilege escalation - file ADACLScan4.3.ps1"
 		author = "Florian Roth"
 		reference = "https://adaclscan.codeplex.com/"
@@ -54,3 +45,4 @@ rule Win_PrivEsc_ADACLScan4_3 {
 	condition:
 		all of them
 }
+

@@ -95,7 +95,6 @@ class OutputHandler_yara(OutputHandler):
 	def print_header(self, fpath):
 		rule_file= os.path.splitext(os.path.basename(fpath))[0].translate(self.rule_enc)
 		rule_name = rule_file.lstrip('0123456789')
-		print("rule %s" % (rule_name))
 		with open('./signature-base/yara/' + rule_file + ".yar", 'a+') as f:
 			f.write("rule %s" % (rule_name) + "\n{\n\tstrings:\n")
 			f.close()

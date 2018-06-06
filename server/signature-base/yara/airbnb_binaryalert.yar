@@ -1,29 +1,12 @@
-/*
-   Yara Rule Set
-   Author: (see the author field in the rules)
-   Date: 2017-10-20
-   Sync Date: 2017-10-20
-   Identifier: Binary Alert Rules
-   Reference: https://github.com/airbnb/binaryalert
-
-   Note: Applied some modifications to avoid false positives during full disk file system scans
-*/
-
-/* Private Rules */
-
-private rule MachO
-{
-    meta:
+private rule MachO {
+meta:
         description = "Mach-O binaries"
     condition:
         uint32(0) == 0xfeedface or uint32(0) == 0xcefaedfe or uint32(0) == 0xfeedfacf or uint32(0) == 0xcffaedfe or uint32(0) == 0xcafebabe or uint32(0) == 0xbebafeca
 }
 
-/* ./rules/public/hacktool/macos */
-
-rule hacktool_macos_exploit_cve_5889
-{
-    meta:
+rule hacktool_macos_exploit_cve_5889 {
+meta:
         description = "http://www.cvedetails.com/cve/cve-2015-5889"
         reference = "https://www.exploit-db.com/exploits/38371/"
         author = "@mimeframe"
@@ -38,9 +21,8 @@ rule hacktool_macos_exploit_cve_5889
         all of ($a*)
 }
 
-rule hacktool_macos_exploit_tpwn
-{
-    meta:
+rule hacktool_macos_exploit_tpwn {
+meta:
         description = "tpwn exploits a null pointer dereference in XNU to escalate privileges to root."
         reference = "https://www.rapid7.com/db/modules/exploit/osx/local/tpwn"
         author = "@mimeframe"
@@ -53,9 +35,8 @@ rule hacktool_macos_exploit_tpwn
         2 of ($a*)
 }
 
-rule hacktool_macos_juuso_keychaindump
-{
-    meta:
+rule hacktool_macos_juuso_keychaindump {
+meta:
         description = "For reading OS X keychain passwords as root."
         reference = "https://github.com/juuso/keychaindump"
         author = "@mimeframe"
@@ -70,9 +51,8 @@ rule hacktool_macos_juuso_keychaindump
         4 of ($a*)
 }
 
-rule hacktool_macos_keylogger_b4rsby_swiftlog
-{
-    meta:
+rule hacktool_macos_keylogger_b4rsby_swiftlog {
+meta:
         description = "Dirty user level command line keylogger hacked together in Swift."
         reference = "https://github.com/b4rsby/SwiftLog"
         author = "@mimeframe"
@@ -82,9 +62,8 @@ rule hacktool_macos_keylogger_b4rsby_swiftlog
         all of ($a*)
 }
 
-rule hacktool_macos_keylogger_caseyscarborough
-{
-    meta:
+rule hacktool_macos_keylogger_caseyscarborough {
+meta:
         description = "A simple and easy to use keylogger for macOS."
         reference = "https://github.com/caseyscarborough/keylogger"
         author = "@mimeframe"
@@ -97,9 +76,8 @@ rule hacktool_macos_keylogger_caseyscarborough
         2 of ($a*)
 }
 
-rule hacktool_macos_keylogger_dannvix
-{
-    meta:
+rule hacktool_macos_keylogger_dannvix {
+meta:
         description = "A simple keylogger for macOS."
         reference = "https://github.com/dannvix/keylogger-osx"
         author = "@mimeframe"
@@ -111,9 +89,8 @@ rule hacktool_macos_keylogger_dannvix
         all of ($a*)
 }
 
-rule hacktool_macos_keylogger_eldeveloper_keystats
-{
-    meta:
+rule hacktool_macos_keylogger_eldeveloper_keystats {
+meta:
         description = "A simple keylogger for macOS."
         reference = "https://github.com/ElDeveloper/keystats"
         author = "@mimeframe"
@@ -125,9 +102,8 @@ rule hacktool_macos_keylogger_eldeveloper_keystats
         2 of ($a*)
 }
 
-rule hacktool_macos_keylogger_giacomolaw
-{
-    meta:
+rule hacktool_macos_keylogger_giacomolaw {
+meta:
         description = "A simple keylogger for macOS."
         reference = "https://github.com/GiacomoLaw/Keylogger"
         author = "@mimeframe"
@@ -139,14 +115,13 @@ rule hacktool_macos_keylogger_giacomolaw
         2 of ($a*)
 }
 
-rule hacktool_macos_keylogger_logkext
-{
-    meta:
+rule hacktool_macos_keylogger_logkext {
+meta:
         description = "LogKext is an open source keylogger for Mac OS X, a product of FSB software."
         reference = "https://github.com/SlEePlEs5/logKext"
         author = "@mimeframe"
     strings:
-        // daemon
+        
         $a1 = "logKextPassKey" wide ascii
         $a2 = "Couldn't get system keychain:" wide ascii
         $a3 = "Error finding secret in keychain" wide ascii
@@ -165,9 +140,8 @@ rule hacktool_macos_keylogger_logkext
         3 of ($a*) or all of ($b*) or all of ($c*) or all of ($d*)
 }
 
-rule hacktool_macos_keylogger_roxlu_ofxkeylogger
-{
-    meta:
+rule hacktool_macos_keylogger_roxlu_ofxkeylogger {
+meta:
         description = "ofxKeylogger keylogger."
         reference = "https://github.com/roxlu/ofxKeylogger"
         author = "@mimeframe"
@@ -179,9 +153,8 @@ rule hacktool_macos_keylogger_roxlu_ofxkeylogger
         all of ($a*)
 }
 
-rule hacktool_macos_keylogger_skreweverything_swift
-{
-    meta:
+rule hacktool_macos_keylogger_skreweverything_swift {
+meta:
         description = "It is a simple and easy to use keylogger for macOS written in Swift."
         reference = "https://github.com/SkrewEverything/Swift-Keylogger"
         author = "@mimeframe"
@@ -195,14 +168,13 @@ rule hacktool_macos_keylogger_skreweverything_swift
         4 of ($a*)
 }
 
-rule hacktool_macos_macpmem
-{
-    meta:
+rule hacktool_macos_macpmem {
+meta:
         description = "MacPmem enables read/write access to physical memory on macOS. Can be used by CSIRT teams and attackers."
         reference = "https://github.com/google/rekall/tree/master/tools/osx/MacPmem"
         author = "@mimeframe"
     strings:
-        // osxpmem
+        
         $a1 = "%s/MacPmem.kext" wide ascii
         $a2 = "The Pmem physical memory imager." wide ascii
         $a3 = "The OSXPmem memory imager." wide ascii
@@ -216,9 +188,8 @@ rule hacktool_macos_macpmem
         MachO and 2 of ($a*) or all of ($b*)
 }
 
-rule hacktool_macos_manwhoami_icloudcontacts
-{
-    meta:
+rule hacktool_macos_manwhoami_icloudcontacts {
+meta:
         description = "Pulls iCloud Contacts for an account. No dependencies. No user notification."
         reference = "https://github.com/manwhoami/iCloudContacts"
         author = "@mimeframe"
@@ -231,9 +202,8 @@ rule hacktool_macos_manwhoami_icloudcontacts
         3 of ($a*)
 }
 
-rule hacktool_macos_manwhoami_mmetokendecrypt
-{
-    meta:
+rule hacktool_macos_manwhoami_mmetokendecrypt {
+meta:
         description = "This program decrypts / extracts all authorization tokens on macOS / OS X / OSX."
         reference = "https://github.com/manwhoami/MMeTokenDecrypt"
         author = "@mimeframe"
@@ -247,9 +217,8 @@ rule hacktool_macos_manwhoami_mmetokendecrypt
         3 of ($a*)
 }
 
-rule hacktool_macos_manwhoami_osxchromedecrypt
-{
-    meta:
+rule hacktool_macos_manwhoami_osxchromedecrypt {
+meta:
         description = "Decrypt Google Chrome / Chromium passwords and credit cards on macOS / OS X."
         reference = "https://github.com/manwhoami/OSXChromeDecrypt"
         author = "@mimeframe"
@@ -264,9 +233,8 @@ rule hacktool_macos_manwhoami_osxchromedecrypt
         3 of ($a*) or all of ($b*)
 }
 
-rule hacktool_macos_n0fate_chainbreaker
-{
-    meta:
+rule hacktool_macos_n0fate_chainbreaker {
+meta:
         description = "chainbreaker can extract user credential in a Keychain file with Master Key or user password in forensically sound manner."
         reference = "https://github.com/n0fate/chainbreaker"
         author = "@mimeframe"
@@ -278,9 +246,8 @@ rule hacktool_macos_n0fate_chainbreaker
         all of ($a*)
 }
 
-rule hacktool_macos_ptoomey3_keychain_dumper
-{
-    meta:
+rule hacktool_macos_ptoomey3_keychain_dumper {
+meta:
         description = "Keychain dumping utility."
         reference = "https://github.com/ptoomey3/Keychain-Dumper"
         author = "@mimeframe"
@@ -294,11 +261,8 @@ rule hacktool_macos_ptoomey3_keychain_dumper
         all of ($a*)
 }
 
-/* ./rules/public/hacktool/multi */
-
-rule hacktool_multi_bloodhound_owned
-{
-    meta:
+rule hacktool_multi_bloodhound_owned {
+meta:
         description = "Bloodhound: Custom queries to document a compromise, find collateral spread of owned nodes, and visualize deltas in privilege gains"
         reference = "https://github.com/porterhau5/BloodHound-Owned/"
         author = "@fusionrace"
@@ -317,9 +281,8 @@ rule hacktool_multi_bloodhound_owned
         any of them
 }
 
-rule hacktool_multi_jtesta_ssh_mitm
-{
-    meta:
+rule hacktool_multi_jtesta_ssh_mitm {
+meta:
         description = "intercepts ssh connections to capture credentials"
         reference = "https://github.com/jtesta/ssh-mitm"
         author = "@fusionrace"
@@ -330,9 +293,8 @@ rule hacktool_multi_jtesta_ssh_mitm
         all of ($a*)
 }
 
-rule hacktool_multi_masscan
-{
-    meta:
+rule hacktool_multi_masscan {
+meta:
         description = "masscan is a performant port scanner, it produces results similar to nmap"
         reference = "https://github.com/robertdavidgraham/masscan"
         author = "@mimeframe"
@@ -348,9 +310,8 @@ rule hacktool_multi_masscan
         all of ($a*) or any of ($b*)
 }
 
-rule hacktool_multi_ncc_ABPTTS
-{
-    meta:
+rule hacktool_multi_ncc_ABPTTS {
+meta:
         description = "Allows for TCP tunneling over HTTP"
         reference = "https://github.com/nccgroup/ABPTTS"
         author = "@mimeframe"
@@ -368,9 +329,8 @@ rule hacktool_multi_ncc_ABPTTS
         any of them
 }
 
-rule hacktool_multi_ntlmrelayx
-{
-    meta:
+rule hacktool_multi_ntlmrelayx {
+meta:
         description = "https://www.fox-it.com/en/insights/blogs/blog/inside-windows-network/"
         reference = "https://github.com/CoreSecurity/impacket/blob/master/examples/ntlmrelayx.py"
         author = "@mimeframe"
@@ -384,9 +344,8 @@ rule hacktool_multi_ntlmrelayx
         any of ($a*)
 }
 
-rule hacktool_multi_pyrasite_py
-{
-    meta:
+rule hacktool_multi_pyrasite_py {
+meta:
         description = "A tool for injecting arbitrary code into running Python processes."
         reference = "https://github.com/lmacken/pyrasite"
         author = "@fusionrace"
@@ -409,9 +368,8 @@ rule hacktool_multi_pyrasite_py
         any of them
 }
 
-rule hacktool_multi_responder_py
-{
-    meta:
+rule hacktool_multi_responder_py {
+meta:
         description = "Responder is a LLMNR, NBT-NS and MDNS poisoner, with built-in HTTP/SMB/MSSQL/FTP/LDAP rogue authentication server"
         reference = "http://www.c0d3xpl0it.com/2017/02/compromising-domain-admin-in-internal-pentest.html"
         author = "@fusionrace"
@@ -427,11 +385,8 @@ rule hacktool_multi_responder_py
         any of them
 }
 
-/* ./rules/public/hacktool/windows */
-
-rule hacktool_windows_hot_potato
-{
-    meta:
+rule hacktool_windows_hot_potato {
+meta:
         description = "https://foxglovesecurity.com/2016/01/16/hot-potato/"
         reference = "https://github.com/foxglovesec/Potato"
         author = "@mimeframe"
@@ -445,9 +400,8 @@ rule hacktool_windows_hot_potato
         any of ($a*)
 }
 
-rule hacktool_windows_moyix_creddump
-{
-    meta:
+rule hacktool_windows_moyix_creddump {
+meta:
         description = "creddump is a python tool to extract credentials and secrets from Windows registry hives."
         reference = "https://github.com/moyix/creddump"
         author = "@mimeframe"
@@ -462,9 +416,8 @@ rule hacktool_windows_moyix_creddump
         all of ($a*)
 }
 
-rule hacktool_windows_ncc_wmicmd
-{
-    meta:
+rule hacktool_windows_ncc_wmicmd {
+meta:
         description = "Command shell wrapper for WMI"
         reference = "https://github.com/nccgroup/WMIcmd"
         author = "@mimeframe"
@@ -481,9 +434,8 @@ rule hacktool_windows_ncc_wmicmd
         any of ($a*) or all of ($b*)
 }
 
-rule hacktool_windows_rdp_cmd_delivery
-{
-    meta:
+rule hacktool_windows_rdp_cmd_delivery {
+meta:
         description = "Delivers a text payload via RDP (rubber ducky)"
         reference = "https://github.com/nopernik/mytools/blob/master/rdp-cmd-delivery.sh"
         author = "@fusionrace"
@@ -496,9 +448,8 @@ rule hacktool_windows_rdp_cmd_delivery
         any of them
 }
 
-rule hacktool_windows_wmi_implant
-{
-    meta:
+rule hacktool_windows_wmi_implant {
+meta:
         description = "A PowerShell based tool that is designed to act like a RAT"
         reference = "https://www.fireeye.com/blog/threat-research/2017/03/wmimplant_a_wmi_ba.html"
         author = "@fusionrace"
@@ -518,9 +469,8 @@ rule hacktool_windows_wmi_implant
         any of them
 }
 
-rule hacktool_windows_mimikatz_copywrite
-{
-    meta:
+rule hacktool_windows_mimikatz_copywrite {
+meta:
         description = "Mimikatz credential dump tool: Author copywrite"
         reference = "https://github.com/gentilkiwi/mimikatz"
         author = "@fusionrace"
@@ -544,9 +494,8 @@ rule hacktool_windows_mimikatz_copywrite
         any of them
 }
 
-rule hacktool_windows_mimikatz_errors
-{
-    meta:
+rule hacktool_windows_mimikatz_errors {
+meta:
         description = "Mimikatz credential dump tool: Error messages"
         reference = "https://github.com/gentilkiwi/mimikatz"
         author = "@fusionrace"
@@ -561,9 +510,8 @@ rule hacktool_windows_mimikatz_errors
         all of them
 }
 
-rule hacktool_windows_mimikatz_files
-{
-    meta:
+rule hacktool_windows_mimikatz_files {
+meta:
         description = "Mimikatz credential dump tool: Files"
         reference = "https://github.com/gentilkiwi/mimikatz"
         author = "@fusionrace"
@@ -578,9 +526,8 @@ rule hacktool_windows_mimikatz_files
         any of them
 }
 
-rule hacktool_windows_mimikatz_modules
-{
-    meta:
+rule hacktool_windows_mimikatz_modules {
+meta:
         description = "Mimikatz credential dump tool: Modules"
         reference = "https://github.com/gentilkiwi/mimikatz"
         author = "@fusionrace"
@@ -598,9 +545,8 @@ rule hacktool_windows_mimikatz_modules
         any of them
 }
 
-rule hacktool_windows_mimikatz_sekurlsa
-{
-    meta:
+rule hacktool_windows_mimikatz_sekurlsa {
+meta:
         description = "Mimikatz credential dump tool"
         reference = "https://github.com/gentilkiwi/mimikatz"
         author = "@fusionrace"
@@ -616,3 +562,4 @@ rule hacktool_windows_mimikatz_sekurlsa
     condition:
         all of them
 }
+

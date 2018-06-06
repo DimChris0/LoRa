@@ -1,16 +1,5 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-05-18
-   Identifier: EternalRocks
-   Reference: https://twitter.com/stamparm/status/864865144748298242
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule EternalRocks_taskhost {
-   meta:
+meta:
       description = "Detects EternalRocks Malware - file taskhost.exe"
       author = "Florian Roth"
       reference = "https://twitter.com/stamparm/status/864865144748298242"
@@ -28,7 +17,7 @@ rule EternalRocks_taskhost {
 }
 
 rule EternalRocks_svchost {
-   meta:
+meta:
       description = "Detects EternalRocks Malware - file taskhost.exe"
       author = "Florian Roth"
       reference = "https://twitter.com/stamparm/status/864865144748298242"
@@ -41,3 +30,4 @@ rule EternalRocks_svchost {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 500KB and 2 of them )
 }
+

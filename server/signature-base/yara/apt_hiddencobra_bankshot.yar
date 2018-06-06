@@ -1,15 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-12-26
-   Identifier: Hidden Cobra - BANKSHOT
-   Reference: https://www.us-cert.gov/HIDDEN-COBRA-North-Korean-Malicious-Cyber-Activity
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule HiddenCobra_BANKSHOT_Gen {
-   meta:
+meta:
       description = "Detects Hidden Cobra BANKSHOT trojan"
       author = "Florian Roth"
       reference = "https://www.us-cert.gov/HIDDEN-COBRA-North-Korean-Malicious-Cyber-Activity"
@@ -60,10 +50,8 @@ rule HiddenCobra_BANKSHOT_Gen {
       )
 }
 
-/* US CERT Rule */
-
 rule Unauthorized_Proxy_Server_RAT {
-   meta:
+meta:
       author = "US-CERT Code Analysis Team"
       reference = "https://www.us-cert.gov/HIDDEN-COBRA-North-Korean-Malicious-Cyber-Activity"
       hash1 = "C74E289AD927E81D2A1A56BC73E394AB"
@@ -87,3 +75,4 @@ rule Unauthorized_Proxy_Server_RAT {
    condition:
       any of them
 }
+

@@ -1,3 +1,0 @@
-rule Alerts_DL_2011_Alerts_A_2011_02_18_01_Night_Dragon_Attachment_1
-{
-	strings:

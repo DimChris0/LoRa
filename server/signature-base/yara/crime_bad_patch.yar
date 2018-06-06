@@ -1,15 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-10-20
-   Identifier: BadPatch
-   Reference: https://goo.gl/RvDwwA
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule WinAgent_BadPatch_1 {
-   meta:
+meta:
       description = "Detects samples mentioned in BadPatch report"
       author = "Florian Roth"
       reference = "https://goo.gl/RvDwwA"
@@ -37,7 +27,7 @@ rule WinAgent_BadPatch_1 {
 }
 
 rule WinAgent_BadPatch_2 {
-   meta:
+meta:
       description = "Detects samples mentioned in BadPatch report"
       author = "Florian Roth"
       reference = "https://goo.gl/RvDwwA"
@@ -68,3 +58,4 @@ rule WinAgent_BadPatch_2 {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 700KB and 3 of them )
 }
+

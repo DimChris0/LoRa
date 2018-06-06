@@ -1,14 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-07-19
-	Identifier: Mimikittenz
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Invoke_mimikittenz {
-	meta:
+meta:
 		description = "Detects Mimikittenz - file Invoke-mimikittenz.ps1"
 		author = "Florian Roth"
 		reference = "https://github.com/putterpanda/mimikittenz"
@@ -25,3 +16,4 @@ rule Invoke_mimikittenz {
 	condition:
 		( uint16(0) == 0x7566 and filesize < 60KB and 2 of them ) or $x1
 }
+

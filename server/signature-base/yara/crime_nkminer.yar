@@ -1,15 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2018-01-09
-   Identifier: NK Miner Malware
-   Reference: https://goo.gl/PChE1z
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule NK_Miner_Malware_Jan18_1 {
-   meta:
+meta:
       description = "Detects Noth Korean Monero Miner mentioned in AlienVault report"
       author = "Florian Roth (original rule by Chris Doman)"
       reference = "https://goo.gl/PChE1z"
@@ -36,3 +26,4 @@ rule NK_Miner_Malware_Jan18_1 {
    condition:
       uint16(0) == 0x5a4d and filesize < 30KB and 1 of them
 }
+

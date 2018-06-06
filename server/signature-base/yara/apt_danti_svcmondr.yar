@@ -1,14 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-05-25
-	Identifier: Kaspersky Report on threats involving CVE-2015-2545
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Mal_Dropper_httpEXE_from_CAB {
-	meta:
+meta:
 		description = "Detects a dropper from a CAB file mentioned in the article"
 		author = "Florian Roth"
 		reference = "https://goo.gl/13Wgy1"
@@ -23,7 +14,7 @@ rule Mal_Dropper_httpEXE_from_CAB {
 }
 
 rule Mal_http_EXE {
-	meta:
+meta:
 		description = "Detects trojan from APT report named http.exe"
 		author = "Florian Roth"
 		reference = "https://goo.gl/13Wgy1"
@@ -53,7 +44,7 @@ rule Mal_http_EXE {
 }
 
 rule Mal_PotPlayer_DLL {
-	meta:
+meta:
 		description = "Detects a malicious PotPlayer.dll"
 		author = "Florian Roth"
 		reference = "https://goo.gl/13Wgy1"
@@ -68,3 +59,4 @@ rule Mal_PotPlayer_DLL {
 	condition:
 		uint16(0) == 0x5a4d and filesize < 200KB and $x1 or all of ($s*)
 }
+

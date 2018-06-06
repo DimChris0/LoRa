@@ -1,14 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-03-30
-	Identifier: TempRacer
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule TempRacer {
-	meta:
+meta:
 		description = "Detects privilege escalation tool - file TempRacer.exe"
 		author = "Florian Roth"
 		reference = "http://www.darknet.org.uk/2016/03/tempracer-windows-privilege-escalation-tool/"
@@ -23,3 +14,4 @@ rule TempRacer {
 	condition:
 		( uint16(0) == 0x5a4d and filesize < 25KB and 1 of them ) or ( 4 of them )
 }
+

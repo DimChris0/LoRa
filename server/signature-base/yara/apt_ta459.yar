@@ -1,16 +1,5 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-05-31
-   Identifier: TA 459 - April 2017
-   Reference: https://goo.gl/RLf9qU
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule TA459_Malware_May17_1 {
-   meta:
+meta:
       description = "Detects TA459 related malware"
       author = "Florian Roth"
       reference = "https://goo.gl/RLf9qU"
@@ -24,7 +13,7 @@ rule TA459_Malware_May17_1 {
 }
 
 rule TA459_Malware_May17_2 {
-   meta:
+meta:
       description = "Detects TA459 related malware"
       author = "Florian Roth"
       reference = "https://goo.gl/RLf9qU"
@@ -39,3 +28,4 @@ rule TA459_Malware_May17_2 {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 900KB and all of ($a*) and 1 of ($s*) )
 }
+

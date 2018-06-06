@@ -1,6 +1,5 @@
-
 rule ACE_Containing_EXE {
-    meta:
+meta:
         author = "Florian Roth - based on Nick Hoffman' rule - Morphick Inc"
         description = "Looks for ACE Archives containing an exe/scr file"
         date = "2015-09-09"
@@ -17,5 +16,4 @@ rule ACE_Containing_EXE {
             $ in (81..(81+uint16(79)))
         )
 }
-
 

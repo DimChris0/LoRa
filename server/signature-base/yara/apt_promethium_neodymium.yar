@@ -1,14 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2016-12-14
-   Identifier: PROMETHIUM and NEODYMIUM
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule PROMETHIUM_NEODYMIUM_Malware_1 {
-   meta:
+meta:
       description = "Detects PROMETHIUM and NEODYMIUM malware"
       author = "Florian Roth"
       reference = "https://goo.gl/8abDE6"
@@ -25,7 +16,7 @@ rule PROMETHIUM_NEODYMIUM_Malware_1 {
 }
 
 rule PROMETHIUM_NEODYMIUM_Malware_2 {
-   meta:
+meta:
       description = "Detects PROMETHIUM and NEODYMIUM malware"
       author = "Florian Roth"
       reference = "https://goo.gl/8abDE6"
@@ -41,7 +32,7 @@ rule PROMETHIUM_NEODYMIUM_Malware_2 {
 }
 
 rule PROMETHIUM_NEODYMIUM_Malware_3 {
-   meta:
+meta:
       description = "Detects PROMETHIUM and NEODYMIUM malware"
       author = "Florian Roth"
       reference = "https://goo.gl/8abDE6"
@@ -57,7 +48,7 @@ rule PROMETHIUM_NEODYMIUM_Malware_3 {
 }
 
 rule PROMETHIUM_NEODYMIUM_Malware_4 {
-   meta:
+meta:
       description = "Detects PROMETHIUM and NEODYMIUM malware"
       author = "Florian Roth"
       reference = "https://goo.gl/8abDE6"
@@ -77,7 +68,7 @@ rule PROMETHIUM_NEODYMIUM_Malware_4 {
 }
 
 rule PROMETHIUM_NEODYMIUM_Malware_5 {
-   meta:
+meta:
       description = "Detects PROMETHIUM and NEODYMIUM malware"
       author = "Florian Roth"
       reference = "https://goo.gl/8abDE6"
@@ -95,7 +86,7 @@ rule PROMETHIUM_NEODYMIUM_Malware_5 {
 }
 
 rule PROMETHIUM_NEODYMIUM_Malware_6 {
-   meta:
+meta:
       description = "Detects PROMETHIUM and NEODYMIUM malware"
       author = "Florian Roth"
       reference = "https://goo.gl/8abDE6"
@@ -111,3 +102,4 @@ rule PROMETHIUM_NEODYMIUM_Malware_6 {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 7000KB and 4 of them )
 }
+

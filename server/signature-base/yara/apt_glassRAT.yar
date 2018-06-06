@@ -1,48 +1,31 @@
-/*
-	Yara Rule Set
-	Author: RSA RESEARCH, Florian Roth
-	Date: 2015-11-23
-	Identifier: GlassRAT
-*/
-
-rule glassRAT
-{
-	meta:
+rule glassRAT {
+meta:
 		author = "RSA RESEARCH"
 		date = "3 Nov 2015"
       description = "Detects GlassRAT by RSA (modified by Florian Roth - speed improvements)"
 		Info = "GlassRat"
-		/* MD5s
-			37adc72339a0c2c755e7fef346906330
-			59b404076e1af7d0faae4a62fa41b69f
-			5c17395731ec666ad0056d3c88e99c4d
-			e98027f502f5acbcb5eda17e67a21cdc
-			87a965cf75b2da112aea737220f2b5c2
-			22e01495b4419b564d5254d2122068d9
-			42b57c0c4977a890ecb0ea9449516075
-			b7f2020208ebd137616dadb60700b847	*/
+		
 	strings:
-		$bin1 = {85 C0 B3 01} 		/* 	test    eax, eax
-										  mov     bl, 1 */
-		// $bin2 = {34 02}				// xor     al, 2 ---> XOR key for rundll32.exe
-		$bin3 = {68 4C 50 00 10}	// push    offset KeyName  ; "2"
-		$bin4 = {68 48 50 00 10}	// push    offset a3       ; "3"
-		$bin5 = {68 44 50 00 10}	// push    offset a4       ; "4"
-		$hs = {CB FF 5D C9 AD 3F 5B A1 54 13 FE FB 05 C6 22}  // Initial Handshake ---> can be added or removed for hunting for different variants
-		//$re1  = {50 00 00 00}
-		//$re2  = {BB 01 00 00}
-		// Dwords of C2 Ports (80 | 443 | 53) 2 -3 times
+		$bin1 = {85 C0 B3 01} 		
+		
+		$bin3 = {68 4C 50 00 10}	
+		$bin4 = {68 48 50 00 10}	
+		$bin5 = {68 44 50 00 10}	
+		$hs = {CB FF 5D C9 AD 3F 5B A1 54 13 FE FB 05 C6 22}  
+		
+		
+		
 		$s1 = "pwlfnn10,gzg" // rundll32.exe XOR 02
 		$s2 = "AddNum"
 		$s3 = "ServiceMain"
 		$s4 = "The Window"
 		$s5 = "off.dat"
 	condition:
-		all of ($bin*) and $hs and 3 of ($s*) //The conditions can be adjusted for hunting for different variants
+		all of ($bin*) and $hs and 3 of ($s*) 
 }
 
 rule GlassRAT_Generic {
-	meta:
+meta:
 		description = "Detects GlassRAT Malware"
 		author = "Florian Roth"
 		reference = "https://blogs.rsa.com/peering-into-glassrat/"
@@ -67,3 +50,4 @@ rule GlassRAT_Generic {
 	condition:
 		uint16(0) == 0x5a4d and filesize < 15MB and 5 of them
 }
+

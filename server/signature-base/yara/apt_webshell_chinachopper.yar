@@ -1,6 +1,5 @@
-
 rule ChinaChopper_Generic {
-	meta:
+meta:
 		description = "China Chopper Webshells - PHP and ASPX"
 		author = "Florian Roth"
 		reference = "https://www.fireeye.com/content/dam/legacy/resources/pdfs/fireeye-china-chopper-report.pdf"
@@ -11,3 +10,4 @@ rule ChinaChopper_Generic {
 	condition:
 		1 of them
 }
+

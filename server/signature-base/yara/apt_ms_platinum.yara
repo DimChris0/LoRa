@@ -1,6 +1,5 @@
-rule Trojan_Win32_PlaSrv : Platinum
-{
-	meta:
+rule Trojan_Win32_PlaSrv : Platinum {
+meta:
 		author = "Microsoft"
 		description = "Hotpatching Injector"
 		original_sample_sha1 = "ff7f949da665ba8ce9fb01da357b51415634eaad"
@@ -17,9 +16,8 @@ rule Trojan_Win32_PlaSrv : Platinum
 		$Section_name and $offset_x59
 }
 
-rule Trojan_Win32_Platual : Platinum
-{
-	meta:
+rule Trojan_Win32_Platual : Platinum {
+meta:
 		author = "Microsoft"
 		description = "Installer component"
 		original_sample_sha1 = "e0ac2ae221328313a7eee33e9be0924c46e2beb9"
@@ -36,9 +34,8 @@ rule Trojan_Win32_Platual : Platinum
 		$class_name and $scrambled_dir
 }
 
-rule Trojan_Win32_Plaplex : Platinum
-{
-	meta:
+rule Trojan_Win32_Plaplex : Platinum {
+meta:
 		author = "Microsoft"
 		description = "Variant of the JPin backdoor"
 		original_sample_sha1 = "ca3bda30a3cdc15afb78e54fa1bbb9300d268d66"
@@ -55,9 +52,8 @@ rule Trojan_Win32_Plaplex : Platinum
 		$class_name1 and $class_name2
 }
 
-rule Trojan_Win32_Dipsind_B : Platinum
-{
-	meta:
+rule Trojan_Win32_Dipsind_B : Platinum {
+meta:
 		author = "Microsoft"
 		description = "Dipsind Family"
 		sample_sha1 = "09e0dfbb5543c708c0dd6a89fd22bbb96dc4ca1c"
@@ -74,9 +70,8 @@ rule Trojan_Win32_Dipsind_B : Platinum
 		$frg1 and $frg2 and $frg3
 }
 
-rule Trojan_Win32_PlaKeylog_B : Platinum
-{
-	meta:
+rule Trojan_Win32_PlaKeylog_B : Platinum {
+meta:
 		author = "Microsoft"
 		description = "Keylogger component"
 		original_sample_sha1 = "0096a3e0c97b85ca75164f48230ae530c94a2b77"
@@ -93,9 +88,8 @@ rule Trojan_Win32_PlaKeylog_B : Platinum
 		$hook and $dasm_engine
 }
 
-rule Trojan_Win32_Adupib : Platinum
-{
-	meta:
+rule Trojan_Win32_Adupib : Platinum {
+meta:
 		author = "Microsoft"
 		description = "Adupib SSL Backdoor"
 		original_sample_sha1 = "d3ad0933e1b114b14c2b3a2c59d7f8a95ea0bcbd"
@@ -115,9 +109,8 @@ rule Trojan_Win32_Adupib : Platinum
 		$str1 and $str2 and $str3 and $str4 and $str5
 }
 
-rule Trojan_Win32_PlaLsaLog : Platinum
-{
-	meta:
+rule Trojan_Win32_PlaLsaLog : Platinum {
+meta:
 		author = "Microsoft"
 		description = "Loader / possible incomplete LSA Password Filter"
 		original_sample_sha1 = "fa087986697e4117c394c9a58cb9f316b2d9f7d8"
@@ -134,9 +127,8 @@ rule Trojan_Win32_PlaLsaLog : Platinum
 		$str1 and $str2
 }
 
-rule Trojan_Win32_Plagon : Platinum
-{
-	meta:
+rule Trojan_Win32_Plagon : Platinum {
+meta:
 		author = "Microsoft"
 		description = "Dipsind variant"
 		original_sample_sha1 = "48b89f61d58b57dba6a0ca857bce97bab636af65"
@@ -155,9 +147,8 @@ rule Trojan_Win32_Plagon : Platinum
 		$str1 and $str2 and $str3 and $str4
 }
 
-rule Trojan_Win32_Plakelog : Platinum
-{
-	meta:
+rule Trojan_Win32_Plakelog : Platinum {
+meta:
 		author = "Microsoft"
 		description = "Raw-input based keylogger"
 		original_sample_sha1 = "3907a9e41df805f912f821a47031164b6636bd04"
@@ -176,9 +167,8 @@ rule Trojan_Win32_Plakelog : Platinum
 		$str1 and $str2 and $str3 and $str4
 }
 
-rule Trojan_Win32_Plainst : Platinum
-{
-	meta:
+rule Trojan_Win32_Plainst : Platinum {
+meta:
 		author = "Microsoft"
 		description = "Installer component"
 		original_sample_sha1 = "99c08d31af211a0e17f92dd312ec7ca2b9469ecb"
@@ -195,9 +185,8 @@ rule Trojan_Win32_Plainst : Platinum
 		$str1 and $str2
 }
 
-rule Trojan_Win32_Plagicom : Platinum
-{
-	meta:
+rule Trojan_Win32_Plagicom : Platinum {
+meta:
 		author = "Microsoft"
 		description = "Installer component"
 		original_sample_sha1 = "99dcb148b053f4cef6df5fa1ec5d33971a58bd1e"
@@ -216,9 +205,8 @@ rule Trojan_Win32_Plagicom : Platinum
 		$str1 and $str2 and $str3
 }
 
-rule Trojan_Win32_Plaklog : Platinum
-{
-	meta:
+rule Trojan_Win32_Plaklog : Platinum {
+meta:
 		author = "Microsoft"
 		description = "Hook-based keylogger"
 		original_sample_sha1 = "831a5a29d47ab85ee3216d4e75f18d93641a9819"
@@ -236,9 +224,8 @@ rule Trojan_Win32_Plaklog : Platinum
 		$str1 and $str2 and $str3
 }
 
-rule Trojan_Win32_Plapiio : Platinum
-{
-	meta:
+rule Trojan_Win32_Plapiio : Platinum {
+meta:
 		author = "Microsoft"
 		description = "JPin backdoor"
 		original_sample_sha1 = "3119de80088c52bd8097394092847cd984606c88"
@@ -256,9 +243,8 @@ rule Trojan_Win32_Plapiio : Platinum
 		$str1 and $str2 and $str3
 }
 
-rule Trojan_Win32_Plabit : Platinum
-{
-	meta:
+rule Trojan_Win32_Plabit : Platinum {
+meta:
 		author = "Microsoft"
 		description = "Installer component"
 		sample_sha1 = "6d1169775a552230302131f9385135d385efd166"
@@ -275,9 +261,8 @@ rule Trojan_Win32_Plabit : Platinum
 		$str1 and $str2 and $str3
 }
 
-rule Trojan_Win32_Placisc2 : Platinum
-{
-	meta:
+rule Trojan_Win32_Placisc2 : Platinum {
+meta:
 		author = "Microsoft"
 		description = "Dipsind variant"
 		original_sample_sha1 = "bf944eb70a382bd77ee5b47548ea9a4969de0527"
@@ -296,9 +281,8 @@ rule Trojan_Win32_Placisc2 : Platinum
 		$str1 and $str2 and $str3 and $str4
 }
 
-rule Trojan_Win32_Placisc3 : Platinum
-{
-	meta:
+rule Trojan_Win32_Placisc3 : Platinum {
+meta:
 		author = "Microsoft"
 		description = "Dipsind variant"
 		original_sample_sha1 = "1b542dd0dacfcd4200879221709f5fa9683cdcda"
@@ -316,9 +300,8 @@ rule Trojan_Win32_Placisc3 : Platinum
 		$str1 and $str2 and $str3
 }
 
-rule Trojan_Win32_Placisc4 : Platinum
-{
-	meta:
+rule Trojan_Win32_Placisc4 : Platinum {
+meta:
 		author = "Microsoft"
 		description = "Installer for Dipsind variant"
 		original_sample_sha1 = "3d17828632e8ff1560f6094703ece5433bc69586"
@@ -336,9 +319,8 @@ rule Trojan_Win32_Placisc4 : Platinum
 		$str1 and $str2 and $str3
 }
 
-rule Trojan_Win32_Plakpers : Platinum
-{
-	meta:
+rule Trojan_Win32_Plakpers : Platinum {
+meta:
 		author = "Microsoft"
 		description = "Injector / loader component"
 		original_sample_sha1 = "fa083d744d278c6f4865f095cfd2feabee558056"
@@ -356,9 +338,8 @@ rule Trojan_Win32_Plakpers : Platinum
 		$str1 and $str2 and $str3
 }
 
-rule Trojan_Win32_Plainst2 : Platinum
-{
-	meta:
+rule Trojan_Win32_Plainst2 : Platinum {
+meta:
 		author = "Microsoft"
 		description = "Zc tool"
 		original_sample_sha1 = "3f2ce812c38ff5ac3d813394291a5867e2cddcf2"
@@ -376,9 +357,8 @@ rule Trojan_Win32_Plainst2 : Platinum
 		$str1 and $str2 and $str3
 }
 
-rule Trojan_Win32_Plakpeer : Platinum
-{
-	meta:
+rule Trojan_Win32_Plakpeer : Platinum {
+meta:
 		author = "Microsoft"
 		description = "Zc tool v2"
 		original_sample_sha1 = "2155c20483528377b5e3fde004bb604198463d29"
@@ -396,3 +376,4 @@ rule Trojan_Win32_Plakpeer : Platinum
 	condition:
 		$str1 and $str2 and $str3 and $str4
 }
+

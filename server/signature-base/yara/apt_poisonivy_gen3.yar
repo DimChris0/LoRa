@@ -1,6 +1,5 @@
-
 rule PoisonIvy_Generic_3 {
-	meta:
+meta:
 		description = "PoisonIvy RAT Generic Rule"
 		author = "Florian Roth"
 		date = "2015-05-14"
@@ -28,3 +27,4 @@ rule PoisonIvy_Generic_3 {
 				$k1 or all of ($s*) or all of ($h*)
 			)
 }
+

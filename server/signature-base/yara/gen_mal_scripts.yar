@@ -1,8 +1,5 @@
-
-/* Various rules - see the references */
-
 rule PS_AMSI_Bypass {
-   meta:
+meta:
       description = "Detects PowerShell AMSI Bypass"
       author = "Florian Roth"
       reference = "https://gist.github.com/mattifestation/46d6a2ebb4a1f4f0e7229503dc012ef1"
@@ -15,7 +12,7 @@ rule PS_AMSI_Bypass {
 }
 
 rule JS_Suspicious_Obfuscation_Dropbox {
-   meta:
+meta:
       description = "Detects PowerShell AMSI Bypass"
       author = "Florian Roth"
       reference = "https://twitter.com/ItsReallyNick/status/887705105239343104"
@@ -29,7 +26,7 @@ rule JS_Suspicious_Obfuscation_Dropbox {
 }
 
 rule JS_Suspicious_MSHTA_Bypass {
-   meta:
+meta:
       description = "Detects MSHTA Bypass"
       author = "Florian Roth"
       reference = "https://twitter.com/ItsReallyNick/status/887705105239343104"
@@ -44,7 +41,7 @@ rule JS_Suspicious_MSHTA_Bypass {
 }
 
 rule JavaScript_Run_Suspicious {
-   meta:
+meta:
       description = "Detects a suspicious Javascript Run command"
       author = "Florian Roth"
       reference = "https://twitter.com/craiu/status/900314063560998912"
@@ -57,17 +54,15 @@ rule JavaScript_Run_Suspicious {
       all of them
 }
 
-/* Certutil Rule Improved */
-
 private rule MSI {
-   strings:
+strings:
       $r1 = "SummaryInformation" wide
    condition:
       uint16(0) == 0xCFD0 and $r1
 }
 
 rule Certutil_Decode_OR_Download {
-   meta:
+meta:
       description = "Certutil Decode"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -85,7 +80,7 @@ rule Certutil_Decode_OR_Download {
 }
 
 rule Suspicious_JS_script_content {
-   meta:
+meta:
       description = "Detects suspicious statements in JavaScript files"
       author = "Florian Roth"
       reference = "Research on Leviathan https://goo.gl/MZ7dRg"
@@ -102,7 +97,7 @@ rule Suspicious_JS_script_content {
 }
 
 rule Universal_Exploit_Strings {
-   meta:
+meta:
       description = "Detects a group of strings often used in exploit codes"
       author = "Florian Roth"
       reference = "not set"
@@ -118,8 +113,8 @@ rule Universal_Exploit_Strings {
       ( filesize < 2KB and 3 of them )
 }
 
-rule VBS_Obfuscated_Mal_Feb18_1  {
-   meta:
+rule VBS_Obfuscated_Mal_Feb18_1 {
+meta:
       description = "Detects malicious obfuscated VBS observed in February 2018"
       author = "Florian Roth"
       reference = "https://goo.gl/zPsn83"
@@ -139,3 +134,4 @@ rule VBS_Obfuscated_Mal_Feb18_1  {
    condition:
       filesize < 600KB and ( 1 of ($x*) or 3 of them )
 }
+

@@ -1,13 +1,5 @@
-/*
-    Yara Rule Set
-    Author: Kudelski Security (modified by Florian Roth)
-    Reference: https://www.kudelskisecurity.com/sites/default/files/sphinx_moth_cfc_report.pdf
-    Date: 2015-11-23
-    Identifier: Sphinx Moth
-*/
-
-rule Sphinx_Moth_cudacrt { 
-    meta:
+rule Sphinx_Moth_cudacrt {
+meta:
         description = "sphinx moth threat group file cudacrt.dll" 
         author = "Kudelski Security - Nagravision SA"
         reference = "www.kudelskisecurity.com"
@@ -17,15 +9,15 @@ rule Sphinx_Moth_cudacrt {
         $s1 = "255.255.255.254" fullword wide
         $s2 = "SOFTWARE\\SsoAuth\\Service" fullword wide
 
-        $op0 = { ff 15 5f de 00 00 48 8b f8 48 85 c0 75 0d 48 8b } /* Opcode */ 
-        $op1 = { 45 33 c9 4c 8d 05 a7 07 00 00 33 d2 33 c9 ff 15 } /* Opcode */ 
-        $op2 = { e8 7a 1c 00 00 83 f8 01 74 17 b9 03 } /* Opcode */
+        $op0 = { ff 15 5f de 00 00 48 8b f8 48 85 c0 75 0d 48 8b }  
+        $op1 = { 45 33 c9 4c 8d 05 a7 07 00 00 33 d2 33 c9 ff 15 }  
+        $op2 = { e8 7a 1c 00 00 83 f8 01 74 17 b9 03 } 
     condition:
         uint16(0) == 0x5a4d and filesize < 243KB and all of ($s*) and 1 of ($op*)
 }
 
-rule Sphinx_Moth_h2t { 
-    meta:
+rule Sphinx_Moth_h2t {
+meta:
         description = "sphinx moth threat group file h2t.dat" 
         author = "Kudelski Security - Nagravision SA (modified by Florian Roth)" 
         reference = "www.kudelskisecurity.com"
@@ -42,8 +34,8 @@ rule Sphinx_Moth_h2t {
         uint16(0) == 0x5a4d and filesize < 156KB and ($x1 or all of ($s*))
 }
 
-rule Sphinx_Moth_iastor32 { 
-    meta:
+rule Sphinx_Moth_iastor32 {
+meta:
         description = "sphinx moth threat group file iastor32.exe" 
         author = "Kudelski Security - Nagravision SA"
         reference = "www.kudelskisecurity.com"
@@ -56,7 +48,7 @@ rule Sphinx_Moth_iastor32 {
 }
 
 rule Sphinx_Moth_kerberos32 {
-    meta:
+meta:
         description = "sphinx moth threat group file kerberos32.dll" 
         author = "Kudelski Security - Nagravision SA (modified by Florian Roth)"
         reference = "www.kudelskisecurity.com"
@@ -80,8 +72,8 @@ rule Sphinx_Moth_kerberos32 {
         uint16(0) == 0x5a4d and filesize < 300KB and (2 of ($x*) or all of ($s*))
 }
 
-rule Sphinx_Moth_kerberos64 { 
-    meta:
+rule Sphinx_Moth_kerberos64 {
+meta:
         description = "sphinx moth threat group file kerberos64.dll" 
         author = "Kudelski Security - Nagravision SA (modified by Florian Roth)"
         reference = "www.kudelskisecurity.com"
@@ -91,24 +83,25 @@ rule Sphinx_Moth_kerberos64 {
         $s1 = "zeSecurityDescriptor" fullword ascii
         $s2 = "SpGetInfo" fullword ascii
         $s3 = "SpShutdown" fullword ascii
-        $op0 = { 75 05 e8 6a c7 ff ff 48 8b 1d 47 d6 00 00 33 ff } /* Opcode */ 
-        $op1 = { 48 89 05 0c 2b 01 00 c7 05 e2 29 01 00 09 04 00 } /* Opcode */ 
-        $op2 = { 48 8d 3d e3 ee 00 00 ba 58 } /* Opcode */
+        $op0 = { 75 05 e8 6a c7 ff ff 48 8b 1d 47 d6 00 00 33 ff }  
+        $op1 = { 48 89 05 0c 2b 01 00 c7 05 e2 29 01 00 09 04 00 }  
+        $op2 = { 48 8d 3d e3 ee 00 00 ba 58 } 
     condition:
         uint16(0) == 0x5a4d and filesize < 406KB and all of ($s*) and 1 of ($op*)
 }
 
-rule Sphinx_Moth_nvcplex { 
-    meta:
+rule Sphinx_Moth_nvcplex {
+meta:
         description = "sphinx moth threat group file nvcplex.dat" 
         author = "Kudelski Security - Nagravision SA"
         reference = "www.kudelskisecurity.com"
         date = "2015-08-06"
     strings:
         $s0 = "mshtaex.exe" fullword wide
-        $op0 = { 41 8b cc 44 89 6c 24 28 48 89 7c 24 20 ff 15 d3 } /* Opcode */ 
-        $op1 = { 48 3b 0d ad 8f 00 00 74 05 e8 ba f5 ff ff 48 8b } /* Opcode */ 
-        $op2 = { 8b ce e8 49 47 00 00 90 8b 43 04 89 05 93 f1 00 } /* Opcode */
+        $op0 = { 41 8b cc 44 89 6c 24 28 48 89 7c 24 20 ff 15 d3 }  
+        $op1 = { 48 3b 0d ad 8f 00 00 74 05 e8 ba f5 ff ff 48 8b }  
+        $op2 = { 8b ce e8 49 47 00 00 90 8b 43 04 89 05 93 f1 00 } 
     condition:
         uint16(0) == 0x5a4d and filesize < 214KB and all of them
 }
+

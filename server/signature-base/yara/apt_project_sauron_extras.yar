@@ -1,5 +1,5 @@
 rule APT_Project_Sauron_Scripts {
-	meta:
+meta:
 		description = "Detects scripts (mostly LUA) from Project Sauron report by Kaspersky"
 		author = "Florian Roth"
 		reference = "https://goo.gl/eFoP4A"
@@ -24,7 +24,7 @@ rule APT_Project_Sauron_Scripts {
 }
 
 rule APT_Project_Sauron_arping_module {
-	meta:
+meta:
 		description = "Detects strings from arping module - Project Sauron report by Kaspersky"
 		author = "Florian Roth"
 		reference = "https://goo.gl/eFoP4A"
@@ -38,7 +38,7 @@ rule APT_Project_Sauron_arping_module {
 }
 
 rule APT_Project_Sauron_kblogi_module {
-	meta:
+meta:
 		description = "Detects strings from kblogi module - Project Sauron report by Kaspersky"
 		author = "Florian Roth"
 		reference = "https://goo.gl/eFoP4A"
@@ -52,7 +52,7 @@ rule APT_Project_Sauron_kblogi_module {
 }
 
 rule APT_Project_Sauron_basex_module {
-	meta:
+meta:
 		description = "Detects strings from basex module - Project Sauron report by Kaspersky"
 		author = "Florian Roth"
 		reference = "https://goo.gl/eFoP4A"
@@ -66,7 +66,7 @@ rule APT_Project_Sauron_basex_module {
 }
 
 rule APT_Project_Sauron_dext_module {
-	meta:
+meta:
 		description = "Detects strings from dext module - Project Sauron report by Kaspersky"
 		author = "Florian Roth"
 		reference = "https://goo.gl/eFoP4A"
@@ -81,7 +81,7 @@ rule APT_Project_Sauron_dext_module {
 }
 
 rule Hacktool_This_Cruft {
-	meta:
+meta:
 		description = "Detects string 'This cruft' often used in hack tools like netcat or cryptcat and also mentioned in Project Sauron report"
 		author = "Florian Roth"
 		reference = "https://goo.gl/eFoP4A"
@@ -93,17 +93,8 @@ rule Hacktool_This_Cruft {
 		( uint16(0) == 0x5a4d and filesize < 200KB and $x1 )
 }
 
-/*
-	Yara Rule Set
-	Author: FLorian Roth
-	Date: 2016-08-09
-	Identifier: Project Sauron - my own ruleset
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule APT_Project_Sauron_Custom_M1 {
-	meta:
+meta:
 		description = "Detects malware from Project Sauron APT"
 		author = "FLorian Roth"
 		reference = "https://goo.gl/eFoP4A"
@@ -113,15 +104,15 @@ rule APT_Project_Sauron_Custom_M1 {
 		$s1 = "ncnfloc.dll" fullword wide
 		$s4 = "Network Configuration Locator" fullword wide
 
-		$op0 = { 80 75 6e 85 c0 79 6a 66 41 83 38 0a 75 63 0f b7 } /* Opcode */
-		$op1 = { 80 75 29 85 c9 79 25 b9 01 } /* Opcode */
-		$op2 = { 2b d8 48 89 7c 24 38 44 89 6c 24 40 83 c3 08 89 } /* Opcode */
+		$op0 = { 80 75 6e 85 c0 79 6a 66 41 83 38 0a 75 63 0f b7 } 
+		$op1 = { 80 75 29 85 c9 79 25 b9 01 } 
+		$op2 = { 2b d8 48 89 7c 24 38 44 89 6c 24 40 83 c3 08 89 } 
 	condition:
 		( uint16(0) == 0x5a4d and filesize < 200KB and ( all of ($s*) ) and 1 of ($op*) ) or ( all of them )
 }
 
 rule APT_Project_Sauron_Custom_M2 {
-	meta:
+meta:
 		description = "Detects malware from Project Sauron APT"
 		author = "FLorian Roth"
 		reference = "https://goo.gl/eFoP4A"
@@ -130,15 +121,15 @@ rule APT_Project_Sauron_Custom_M2 {
 	strings:
 		$s2 = "\\*\\3vpn" fullword ascii
 
-		$op0 = { 55 8b ec 83 ec 0c 53 56 33 f6 39 75 08 57 89 75 } /* Opcode */
-		$op1 = { 59 59 c3 8b 65 e8 ff 75 88 ff 15 50 20 40 00 ff } /* Opcode */
-		$op2 = { 8b 4f 06 85 c9 74 14 83 f9 12 0f 82 a7 } /* Opcode */
+		$op0 = { 55 8b ec 83 ec 0c 53 56 33 f6 39 75 08 57 89 75 } 
+		$op1 = { 59 59 c3 8b 65 e8 ff 75 88 ff 15 50 20 40 00 ff } 
+		$op2 = { 8b 4f 06 85 c9 74 14 83 f9 12 0f 82 a7 } 
 	condition:
 		( uint16(0) == 0x5a4d and filesize < 400KB and ( all of ($s*) ) and all of ($op*) )
 }
 
 rule APT_Project_Sauron_Custom_M3 {
-	meta:
+meta:
 		description = "Detects malware from Project Sauron APT"
 		author = "FLorian Roth"
 		reference = "https://goo.gl/eFoP4A"
@@ -147,15 +138,15 @@ rule APT_Project_Sauron_Custom_M3 {
 	strings:
 		$s1 = "ExampleProject.dll" fullword ascii
 
-		$op0 = { 8b 4f 06 85 c9 74 14 83 f9 13 0f 82 ba } /* Opcode */
-		$op1 = { ff 15 34 20 00 10 85 c0 59 a3 60 30 00 10 75 04 } /* Opcode */
-		$op2 = { 55 8b ec ff 4d 0c 75 09 ff 75 08 ff 15 00 20 00 } /* Opcode */
+		$op0 = { 8b 4f 06 85 c9 74 14 83 f9 13 0f 82 ba } 
+		$op1 = { ff 15 34 20 00 10 85 c0 59 a3 60 30 00 10 75 04 } 
+		$op2 = { 55 8b ec ff 4d 0c 75 09 ff 75 08 ff 15 00 20 00 } 
 	condition:
 		( uint16(0) == 0x5a4d and filesize < 1000KB and ( all of ($s*) ) and all of ($op*) )
 }
 
 rule APT_Project_Sauron_Custom_M4 {
-	meta:
+meta:
 		description = "Detects malware from Project Sauron APT"
 		author = "FLorian Roth"
 		reference = "https://goo.gl/eFoP4A"
@@ -165,15 +156,15 @@ rule APT_Project_Sauron_Custom_M4 {
 		$s1 = "xpsmngr.dll" fullword wide
 		$s2 = "XPS Manager" fullword wide
 
-		$op0 = { 89 4d e8 89 4d ec 89 4d f0 ff d2 3d 08 00 00 c6 } /* Opcode */
-		$op1 = { 55 8b ec ff 4d 0c 75 09 ff 75 08 ff 15 04 20 5b } /* Opcode */
-		$op2 = { 8b 4f 06 85 c9 74 14 83 f9 13 0f 82 b6 } /* Opcode */
+		$op0 = { 89 4d e8 89 4d ec 89 4d f0 ff d2 3d 08 00 00 c6 } 
+		$op1 = { 55 8b ec ff 4d 0c 75 09 ff 75 08 ff 15 04 20 5b } 
+		$op2 = { 8b 4f 06 85 c9 74 14 83 f9 13 0f 82 b6 } 
 	condition:
 		( uint16(0) == 0x5a4d and filesize < 90KB and ( all of ($s*) ) and 1 of ($op*) ) or ( all of them )
 }
 
 rule APT_Project_Sauron_Custom_M6 {
-	meta:
+meta:
 		description = "Detects malware from Project Sauron APT"
 		author = "FLorian Roth"
 		reference = "https://goo.gl/eFoP4A"
@@ -183,15 +174,15 @@ rule APT_Project_Sauron_Custom_M6 {
 		$s1 = "rseceng.dll" fullword wide
 		$s2 = "Remote Security Engine" fullword wide
 
-		$op0 = { 8b 0d d5 1d 00 00 85 c9 0f 8e a2 } /* Opcode */
-		$op1 = { 80 75 6e 85 c0 79 6a 66 41 83 38 0a 75 63 0f b7 } /* Opcode */
-		$op2 = { 80 75 29 85 c9 79 25 b9 01 } /* Opcode */
+		$op0 = { 8b 0d d5 1d 00 00 85 c9 0f 8e a2 } 
+		$op1 = { 80 75 6e 85 c0 79 6a 66 41 83 38 0a 75 63 0f b7 } 
+		$op2 = { 80 75 29 85 c9 79 25 b9 01 } 
 	condition:
 		( uint16(0) == 0x5a4d and filesize < 200KB and ( all of ($s*) ) and 1 of ($op*) ) or ( all of them )
 }
 
 rule APT_Project_Sauron_Custom_M7 {
-	meta:
+meta:
 		description = "Detects malware from Project Sauron APT"
 		author = "FLorian Roth"
 		reference = "https://goo.gl/eFoP4A"
@@ -209,12 +200,12 @@ rule APT_Project_Sauron_Custom_M7 {
 		$sa5 = "AOL Security Package" fullword wide
 		$sa6 = "AOL Client for 32 bit platforms" fullword wide
 
-		$op0 = { 8b ce 5b e9 4b ff ff ff 55 8b ec 51 53 8b 5d 08 } /* Opcode */
-		$op1 = { e8 0a fe ff ff 8b 4d 14 89 46 04 89 41 04 8b 45 } /* Opcode */
-		$op2 = { e9 29 ff ff ff 83 7d fc 00 0f 84 cf 0a 00 00 8b } /* Opcode */
-		$op3 = { 83 f8 0c 0f 85 3a 01 00 00 44 2b 41 6c 41 8b c9 } /* Opcode */
-		$op4 = { 44 39 57 0c 0f 84 d6 0c 00 00 44 89 6f 18 45 89 } /* Opcode */
-		$op5 = { c1 ed 02 83 c6 fe e9 68 fe ff ff 44 39 57 08 75 } /* Opcode */
+		$op0 = { 8b ce 5b e9 4b ff ff ff 55 8b ec 51 53 8b 5d 08 } 
+		$op1 = { e8 0a fe ff ff 8b 4d 14 89 46 04 89 41 04 8b 45 } 
+		$op2 = { e9 29 ff ff ff 83 7d fc 00 0f 84 cf 0a 00 00 8b } 
+		$op3 = { 83 f8 0c 0f 85 3a 01 00 00 44 2b 41 6c 41 8b c9 } 
+		$op4 = { 44 39 57 0c 0f 84 d6 0c 00 00 44 89 6f 18 45 89 } 
+		$op5 = { c1 ed 02 83 c6 fe e9 68 fe ff ff 44 39 57 08 75 } 
 	condition:
 		uint16(0) == 0x5a4d and filesize < 200KB and
 		(
@@ -222,3 +213,4 @@ rule APT_Project_Sauron_Custom_M7 {
 			( 1 of ($sx*) and 1 of ($sa*) )
 		)
 }
+

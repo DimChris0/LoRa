@@ -1,8 +1,5 @@
-/* SKELETON KEY ---------------------------------------------------------------------------- */
-
-rule skeleton_key_patcher
-{
-	meta:
+rule skeleton_key_patcher {
+meta:
 		description = "Skeleton Key Patcher from Dell SecureWorks Report http://goo.gl/aAk3lN"
 		author = "Dell SecureWorks Counter Threat Unit"
 		reference = "http://goo.gl/aAk3lN"
@@ -22,9 +19,8 @@ rule skeleton_key_patcher
 		all of them
 }
 
-rule skeleton_key_injected_code
-{
-	meta:
+rule skeleton_key_injected_code {
+meta:
 		description = "Skeleton Key injected Code http://goo.gl/aAk3lN"
 		author = "Dell SecureWorks Counter Threat Unit"
 		reference = "http://goo.gl/aAk3lN"
@@ -42,3 +38,4 @@ rule skeleton_key_injected_code
 	condition:
 		any of them
 }
+

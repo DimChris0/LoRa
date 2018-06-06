@@ -1,14 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-03-27
-   Identifier: Osiris
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Invoke_OSiRis {
-   meta:
+meta:
       description = "Osiris Device Guard Bypass - file Invoke-OSiRis.ps1"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -24,3 +15,4 @@ rule Invoke_OSiRis {
    condition:
       1 of them
 }
+

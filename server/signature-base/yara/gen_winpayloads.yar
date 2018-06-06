@@ -1,16 +1,5 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-07-11
-   Identifier: WinPayloads
-   Reference: https://github.com/nccgroup/Winpayloads
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule WinPayloads_PowerShell {
-   meta:
+meta:
       description = "Detects WinPayloads PowerShell Payload"
       author = "Florian Roth"
       reference = "https://github.com/nccgroup/Winpayloads"
@@ -26,7 +15,7 @@ rule WinPayloads_PowerShell {
 }
 
 rule WinPayloads_Payload {
-   meta:
+meta:
       description = "Detects WinPayloads Payload"
       author = "Florian Roth"
       reference = "https://github.com/nccgroup/Winpayloads"
@@ -44,3 +33,4 @@ rule WinPayloads_Payload {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 10000KB and all of them )
 }
+

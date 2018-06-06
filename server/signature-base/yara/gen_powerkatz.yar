@@ -1,13 +1,5 @@
-
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-02-05
-	Identifier: Powerkatz
-*/
-
 rule Powerkatz_DLL_Generic {
-	meta:
+meta:
 		description = "Detects Powerkatz - a Mimikatz version prepared to run in memory via Powershell (overlap with other Mimikatz versions is possible)"
 		author = "Florian Roth"
 		reference = "PowerKatz Analysis"
@@ -28,3 +20,4 @@ rule Powerkatz_DLL_Generic {
 	condition:
 		( uint16(0) == 0x5a4d and filesize < 1000KB and 1 of them ) or 2 of them
 }
+

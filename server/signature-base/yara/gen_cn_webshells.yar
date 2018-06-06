@@ -1,14 +1,5 @@
-/*
-    Yara Rule Set
-    Author: Florian Roth
-    Date: 2015-06-13
-    Identifier: CN-Tools Webshells
-    Reference: Diclosed hacktool set at http://w2op.us/ (Mirror: http://tools.zjqhr.com)
-*/
-
-
 rule Tools_cmd {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file cmd.jSp"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -29,9 +20,8 @@ rule Tools_cmd {
         filesize < 3KB and 7 of them
 }
 
-
 rule trigger_drop {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file trigger_drop.php"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -47,7 +37,7 @@ rule trigger_drop {
 }
 
 rule InjectionParameters {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file InjectionParameters.vb"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -61,7 +51,7 @@ rule InjectionParameters {
 }
 
 rule users_list {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file users_list.php"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -76,7 +66,7 @@ rule users_list {
 }
 
 rule trigger_modify {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file trigger_modify.php"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -93,7 +83,7 @@ rule trigger_modify {
 }
 
 rule Customize {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file Customize.aspx"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -109,7 +99,7 @@ rule Customize {
 }
 
 rule oracle_data {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file oracle_data.php"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -124,7 +114,7 @@ rule oracle_data {
 }
 
 rule reDuhServers_reDuh {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file reDuh.jsp"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -139,7 +129,7 @@ rule reDuhServers_reDuh {
 }
 
 rule item_old {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file item-old.php"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -154,7 +144,7 @@ rule item_old {
 }
 
 rule Tools_2014 {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file 2014.jsp"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -169,7 +159,7 @@ rule Tools_2014 {
 }
 
 rule reDuhServers_reDuh_2 {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file reDuh.php"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -184,7 +174,7 @@ rule reDuhServers_reDuh_2 {
 }
 
 rule Customize_2 {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file Customize.jsp"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -198,7 +188,7 @@ rule Customize_2 {
 }
 
 rule ChinaChopper_one {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file one.asp"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -211,7 +201,7 @@ rule ChinaChopper_one {
 }
 
 rule CN_Tools_old {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file old.php"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -227,7 +217,7 @@ rule CN_Tools_old {
 }
 
 rule item_301 {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file item-301.php"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -243,7 +233,7 @@ rule item_301 {
 }
 
 rule CN_Tools_item {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file item.php"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -259,7 +249,7 @@ rule CN_Tools_item {
 }
 
 rule f3_diy {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file diy.asp"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -273,7 +263,7 @@ rule f3_diy {
 }
 
 rule ChinaChopper_temp {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file temp.asp"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -289,7 +279,7 @@ rule ChinaChopper_temp {
 }
 
 rule Tools_2015 {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file 2015.jsp"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -306,7 +296,7 @@ rule Tools_2015 {
 }
 
 rule ChinaChopper_temp_2 {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file temp.php"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -319,7 +309,7 @@ rule ChinaChopper_temp_2 {
 }
 
 rule templatr {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file templatr.php"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -332,7 +322,7 @@ rule templatr {
 }
 
 rule reDuhServers_reDuh_3 {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file reDuh.aspx"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -348,7 +338,7 @@ rule reDuhServers_reDuh_3 {
 }
 
 rule ChinaChopper_temp_3 {
-    meta:
+meta:
         description = "Chinese Hacktool Set - file temp.aspx"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -362,7 +352,7 @@ rule ChinaChopper_temp_3 {
 }
 
 rule Shell_Asp {
-    meta:
+meta:
         description = "Chinese Hacktool Set Webshells - file Asp.html"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -376,9 +366,8 @@ rule Shell_Asp {
         filesize < 100KB and all of them
 }
 
-
 rule Txt_aspxtag {
-    meta:
+meta:
         description = "Chinese Hacktool Set - Webshells - file aspxtag.txt"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -393,7 +382,7 @@ rule Txt_aspxtag {
 }
 
 rule Txt_php {
-    meta:
+meta:
         description = "Chinese Hacktool Set - Webshells - file php.txt"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -409,7 +398,7 @@ rule Txt_php {
 }
 
 rule Txt_aspx1 {
-    meta:
+meta:
         description = "Chinese Hacktool Set - Webshells - file aspx1.txt"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -423,7 +412,7 @@ rule Txt_aspx1 {
 }
 
 rule Txt_shell {
-    meta:
+meta:
         description = "Chinese Hacktool Set - Webshells - file shell.c"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -440,7 +429,7 @@ rule Txt_shell {
 }
 
 rule Txt_asp {
-    meta:
+meta:
         description = "Chinese Hacktool Set - Webshells - file asp.txt"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -454,7 +443,7 @@ rule Txt_asp {
 }
 
 rule Txt_asp1 {
-    meta:
+meta:
         description = "Chinese Hacktool Set - Webshells - file asp1.txt"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -470,7 +459,7 @@ rule Txt_asp1 {
 }
 
 rule Txt_php_2 {
-    meta:
+meta:
         description = "Chinese Hacktool Set - Webshells - file php.html"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -490,7 +479,7 @@ rule Txt_php_2 {
 }
 
 rule Txt_ftp {
-    meta:
+meta:
         description = "Chinese Hacktool Set - Webshells - file ftp.txt"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -509,7 +498,7 @@ rule Txt_ftp {
 }
 
 rule Txt_lcx {
-    meta:
+meta:
         description = "Chinese Hacktool Set - Webshells - file lcx.c"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -526,7 +515,7 @@ rule Txt_lcx {
 }
 
 rule Txt_jspcmd {
-    meta:
+meta:
         description = "Chinese Hacktool Set - Webshells - file jspcmd.txt"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -540,7 +529,7 @@ rule Txt_jspcmd {
 }
 
 rule Txt_jsp {
-    meta:
+meta:
         description = "Chinese Hacktool Set - Webshells - file jsp.txt"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -556,7 +545,7 @@ rule Txt_jsp {
 }
 
 rule Txt_aspxlcx {
-    meta:
+meta:
         description = "Chinese Hacktool Set - Webshells - file aspxlcx.txt"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -572,7 +561,7 @@ rule Txt_aspxlcx {
 }
 
 rule Txt_xiao {
-    meta:
+meta:
         description = "Chinese Hacktool Set - Webshells - file xiao.txt"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -589,7 +578,7 @@ rule Txt_xiao {
 }
 
 rule Txt_aspx {
-    meta:
+meta:
         description = "Chinese Hacktool Set - Webshells - file aspx.jpg"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -605,7 +594,7 @@ rule Txt_aspx {
 }
 
 rule Txt_Sql {
-    meta:
+meta:
         description = "Chinese Hacktool Set - Webshells - file Sql.txt"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -621,7 +610,7 @@ rule Txt_Sql {
 }
 
 rule Txt_hello {
-    meta:
+meta:
         description = "Chinese Hacktool Set - Webshells - file hello.txt"
         author = "Florian Roth"
         reference = "http://tools.zjqhr.com/"
@@ -635,3 +624,4 @@ rule Txt_hello {
     condition:
         filesize < 25KB and all of them
 }
+

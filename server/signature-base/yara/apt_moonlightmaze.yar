@@ -1,15 +1,4 @@
-
-/*
-
-Moonlight Maze Yara rules - TLP_GREEN
-Author: Kaspersky Lab, 2017
-Version: 1.0
-Date: 2017-03-28
-
-*/
-
 rule apt_RU_MoonlightMaze_customlokitools {
-
 meta:
 
 	author = "Kaspersky Lab"
@@ -45,9 +34,7 @@ condition:
 	filesize < 5000KB and 3 of ($a*)
 }
 
-
 rule apt_RU_MoonlightMaze_customsniffer {
-
 meta:
 
 	author = "Kaspersky Lab"
@@ -62,7 +49,7 @@ meta:
 strings:
 
 
-	//strings from ora ->
+	
 	$a1="/var/tmp/gogo" fullword
 	$a2="myfilename= |%s|" fullword
 	$a3="mypid,mygid=" fullword
@@ -76,9 +63,7 @@ condition:
 	2 of ($a*)
 }
 
-
 rule loki2crypto {
-
 meta:
 
 	author = "Costin Raiu, Kaspersky Lab"
@@ -102,11 +87,7 @@ condition:
 
 }
 
-
-
-
 rule apt_RU_MoonlightMaze_de_tool {
-
 meta:
 
 	author = "Kaspersky Lab"
@@ -132,9 +113,7 @@ condition:
 
 }
 
-
 rule apt_RU_MoonlightMaze_cle_tool {
-
 meta:
 
 	author = "Kaspersky Lab"
@@ -161,9 +140,7 @@ condition:
 
 }
 
-
 rule apt_RU_MoonlightMaze_xk_keylogger {
-
 meta:
 
 	author = "Kaspersky Lab"
@@ -196,7 +173,6 @@ condition:
 }
 
 rule apt_RU_MoonlightMaze_encrypted_keylog {
-
 meta:
 
 	author = "Kaspersky Lab"
@@ -217,7 +193,6 @@ condition:
 }
 
 rule apt_RU_MoonlightMaze_IRIX_exploit_GEN {
-
 meta:
 
 	author = "Kaspersky Lab"
@@ -244,9 +219,7 @@ condition:
 
 }
 
-
 rule apt_RU_MoonlightMaze_u_logcleaner {
-
 meta:
 
 	author = "Kaspersky Lab"
@@ -271,9 +244,7 @@ condition:
 
 }
 
-
 rule apt_RU_MoonlightMaze_wipe {
-
 meta:
 
 	author = "Kaspersky Lab"
@@ -297,3 +268,4 @@ condition:
 	(uint32(0)==0x464c457f) and (2 of them)
 
 }
+

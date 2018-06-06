@@ -1,6 +1,5 @@
-
 rule Malware_JS_powershell_obfuscated {
-   meta:
+meta:
       description = "Unspecified malware - file rechnung_3.js"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -11,3 +10,4 @@ rule Malware_JS_powershell_obfuscated {
    condition:
       filesize < 30KB and 1 of them
 }
+

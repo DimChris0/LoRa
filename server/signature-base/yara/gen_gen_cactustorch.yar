@@ -1,15 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-07-31
-   Identifier: CactusTorch
-   Reference: https://github.com/mdsecactivebreach/CACTUSTORCH
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule CACTUSTORCH {
-   meta:
+meta:
       description = "Detects CactusTorch Hacktool"
       author = "Florian Roth"
       reference = "https://github.com/mdsecactivebreach/CACTUSTORCH"
@@ -41,3 +31,4 @@ rule CACTUSTORCH {
          )
       ) or ( 3 of them )
 }
+

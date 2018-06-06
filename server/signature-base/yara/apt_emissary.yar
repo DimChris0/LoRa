@@ -1,12 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-01-02
-	Identifier: Emissary Malware
-*/
-
 rule Emissary_APT_Malware_1 {
-	meta:
+meta:
 		description = "Detect Emissary Malware - from samples A08E81B411.DAT, ishelp.dll"
 		author = "Florian Roth"
 		reference = "http://goo.gl/V0epcf"
@@ -39,3 +32,4 @@ rule Emissary_APT_Malware_1 {
 	condition:
 		uint16(0) == 0x5a4d and filesize < 250KB and 3 of them
 }
+

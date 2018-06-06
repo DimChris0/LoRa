@@ -1,14 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-05-12
-	Identifier:
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule BeepService_Hacktool {
-	meta:
+meta:
 		description = "Detects BeepService Hacktool used by Chinese APT groups"
 		author = "Florian Roth"
 		reference = "https://goo.gl/p32Ozf"
@@ -27,3 +18,4 @@ rule BeepService_Hacktool {
 	condition:
 		uint16(0) == 0x5a4d and filesize < 100KB and $x1 and 1 of ($s*)
 }
+

@@ -1,13 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2015-06-13
-	Identifier: CN-Tools Hacktools
-	Reference: Diclosed hacktool set at http://w2op.us/ (Mirror: http://tools.zjqhr.com)
-*/
-
 rule mswin_check_lm_group {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file mswin_check_lm_group.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -22,7 +14,7 @@ rule mswin_check_lm_group {
 }
 
 rule WAF_Bypass {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file WAF-Bypass.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -40,7 +32,7 @@ rule WAF_Bypass {
 }
 
 rule Guilin_veterans_cookie_spoofing_tool {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file Guilin veterans cookie spoofing tool.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -56,7 +48,7 @@ rule Guilin_veterans_cookie_spoofing_tool {
 }
 
 rule MarathonTool {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file MarathonTool.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -71,7 +63,7 @@ rule MarathonTool {
 }
 
 rule PLUGIN_TracKid {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file TracKid.dll"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -89,7 +81,7 @@ rule PLUGIN_TracKid {
 }
 
 rule Pc_pc2015 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file pc2015.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -104,7 +96,7 @@ rule Pc_pc2015 {
 }
 
 rule sekurlsa {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file sekurlsa.dll"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -120,7 +112,7 @@ rule sekurlsa {
 }
 
 rule mysqlfast {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file mysqlfast.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -138,7 +130,7 @@ rule mysqlfast {
 }
 
 rule DTools2_02_DTools {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file DTools.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -156,7 +148,7 @@ rule DTools2_02_DTools {
 }
 
 rule dll_PacketX {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file PacketX.dll - ActiveX wrapper for WinPcap packet capture library"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -171,7 +163,7 @@ rule dll_PacketX {
 }
 
 rule SqlDbx_zhs {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file SqlDbx_zhs.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -190,7 +182,7 @@ rule SqlDbx_zhs {
 }
 
 rule ms10048_x86 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file ms10048-x86.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -208,7 +200,7 @@ rule ms10048_x86 {
 }
 
 rule Dos_ch {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file ch.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -226,7 +218,7 @@ rule Dos_ch {
 }
 
 rule DUBrute_DUBrute {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file DUBrute.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -242,7 +234,7 @@ rule DUBrute_DUBrute {
 }
 
 rule CookieTools {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file CookieTools.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -259,7 +251,7 @@ rule CookieTools {
 }
 
 rule update_PcInit {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file PcInit.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -277,7 +269,7 @@ rule update_PcInit {
 }
 
 rule dat_NaslLib {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file NaslLib.dll"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -292,7 +284,7 @@ rule dat_NaslLib {
 }
 
 rule Dos_1 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file 1.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -306,7 +298,7 @@ rule Dos_1 {
 }
 
 rule OtherTools_servu {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file svu.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -322,7 +314,7 @@ rule OtherTools_servu {
 }
 
 rule ustrrefadd {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file ustrrefadd.dll"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -339,7 +331,7 @@ rule ustrrefadd {
 }
 
 rule XScanLib {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file XScanLib.dll"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -355,7 +347,7 @@ rule XScanLib {
 }
 
 rule IDTools_For_WinXP_IdtTool {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file IdtTool.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -370,7 +362,7 @@ rule IDTools_For_WinXP_IdtTool {
 }
 
 rule GoodToolset_ms11046 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file ms11046.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -387,7 +379,7 @@ rule GoodToolset_ms11046 {
 }
 
 rule Cmdshell32 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file Cmdshell32.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -402,7 +394,7 @@ rule Cmdshell32 {
 }
 
 rule Sniffer_analyzer_SSClone_1210_full_version {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file Sniffer analyzer SSClone 1210 full version.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -418,7 +410,7 @@ rule Sniffer_analyzer_SSClone_1210_full_version {
 }
 
 rule x64_klock {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file klock.dll"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -434,7 +426,7 @@ rule x64_klock {
 }
 
 rule Dos_Down32 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file Down32.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -449,7 +441,7 @@ rule Dos_Down32 {
 }
 
 rule MarathonTool_2 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file MarathonTool.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -464,7 +456,7 @@ rule MarathonTool_2 {
 }
 
 rule scanms_scanms {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file scanms.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -481,7 +473,7 @@ rule scanms_scanms {
 }
 
 rule CN_Tools_PcShare {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file PcShare.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -500,7 +492,7 @@ rule CN_Tools_PcShare {
 }
 
 rule pw_inspector {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file pw-inspector.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -515,7 +507,7 @@ rule pw_inspector {
 }
 
 rule Dll_LoadEx {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file Dll_LoadEx.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -534,7 +526,7 @@ rule Dll_LoadEx {
 }
 
 rule dat_report {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file report.dll"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -548,7 +540,7 @@ rule dat_report {
 }
 
 rule Dos_iis7 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file iis7.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -565,7 +557,7 @@ rule Dos_iis7 {
 }
 
 rule SwitchSniffer {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file SwitchSniffer.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -579,7 +571,7 @@ rule SwitchSniffer {
 }
 
 rule dbexpora {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file dbexpora.dll"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -594,7 +586,7 @@ rule dbexpora {
 }
 
 rule SQLCracker {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file SQLCracker.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -611,7 +603,7 @@ rule SQLCracker {
 }
 
 rule FreeVersion_debug {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file debug.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -630,7 +622,7 @@ rule FreeVersion_debug {
 }
 
 rule Dos_look {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file look.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -645,7 +637,7 @@ rule Dos_look {
 }
 
 rule NtGodMode {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file NtGodMode.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -662,7 +654,7 @@ rule NtGodMode {
 }
 
 rule WebCrack4_RouterPasswordCracking {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file WebCrack4-RouterPasswordCracking.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -678,25 +670,8 @@ rule WebCrack4_RouterPasswordCracking {
 		uint16(0) == 0x5a4d and filesize < 5000KB and 2 of them
 }
 
-rule HScan_v1_20_oncrpc {
-	meta:
-		description = "Chinese Hacktool Set - file oncrpc.dll"
-		author = "Florian Roth"
-		reference = "http://tools.zjqhr.com/"
-		date = "2015-06-13"
-		hash = "e8f047eed8d4f6d2f5dbaffdd0e6e4a09c5298a2"
-	strings:
-		$s1 = "clnt_raw.c - Fatal header serialization error." fullword ascii
-		$s2 = "svctcp_.c - cannot getsockname or listen" fullword ascii
-		$s3 = "too many connections (%d), compilation constant FD_SETSIZE was only %d" fullword ascii
-		$s4 = "svc_run: - select failed" fullword ascii
-		$s5 = "@(#)bindresvport.c" fullword ascii
-	condition:
-		uint16(0) == 0x5a4d and filesize < 340KB and 4 of them
-}
-
 rule hscan_gui {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file hscan-gui.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -711,7 +686,7 @@ rule hscan_gui {
 }
 
 rule S_MultiFunction_Scanners_s {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file s.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -735,7 +710,7 @@ rule S_MultiFunction_Scanners_s {
 }
 
 rule Dos_GetPass {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file GetPass.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -752,7 +727,7 @@ rule Dos_GetPass {
 }
 
 rule update_PcMain {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file PcMain.dll"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -776,7 +751,7 @@ rule update_PcMain {
 }
 
 rule Dos_sys {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file sys.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -792,7 +767,7 @@ rule Dos_sys {
 }
 
 rule dat_xpf {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file xpf.sys"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -807,7 +782,7 @@ rule dat_xpf {
 }
 
 rule Project1 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file Project1.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -822,7 +797,7 @@ rule Project1 {
 }
 
 rule Arp_EMP_v1_0 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file Arp EMP v1.0.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -835,7 +810,7 @@ rule Arp_EMP_v1_0 {
 }
 
 rule CN_Tools_MyUPnP {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file MyUPnP.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -850,7 +825,7 @@ rule CN_Tools_MyUPnP {
 }
 
 rule CN_Tools_Shiell {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file Shiell.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -866,7 +841,7 @@ rule CN_Tools_Shiell {
 }
 
 rule cndcom_cndcom {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file cndcom.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -886,7 +861,7 @@ rule cndcom_cndcom {
 }
 
 rule IsDebug_V1_4 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file IsDebug V1.4.dll"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -906,7 +881,7 @@ rule IsDebug_V1_4 {
 }
 
 rule HTTPSCANNER {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file HTTPSCANNER.EXE"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -920,7 +895,7 @@ rule HTTPSCANNER {
 }
 
 rule HScan_v1_20_PipeCmd {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file PipeCmd.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -941,7 +916,7 @@ rule HScan_v1_20_PipeCmd {
 }
 
 rule Dos_fp {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file fp.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -957,7 +932,7 @@ rule Dos_fp {
 }
 
 rule Dos_netstat {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file netstat.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -973,7 +948,7 @@ rule Dos_netstat {
 }
 
 rule CN_Tools_xsniff {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file xsniff.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -990,7 +965,7 @@ rule CN_Tools_xsniff {
 }
 
 rule MSSqlPass {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file MSSqlPass.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1005,7 +980,7 @@ rule MSSqlPass {
 }
 
 rule WSockExpert {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file WSockExpert.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1023,7 +998,7 @@ rule WSockExpert {
 }
 
 rule Ms_Viru_racle {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file racle.dll"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1039,7 +1014,7 @@ rule Ms_Viru_racle {
 }
 
 rule lamescan3 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file lamescan3.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1055,7 +1030,7 @@ rule lamescan3 {
 }
 
 rule CN_Tools_pc {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file pc.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1071,7 +1046,7 @@ rule CN_Tools_pc {
 }
 
 rule Dos_Down64 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file Down64.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1089,7 +1064,7 @@ rule Dos_Down64 {
 }
 
 rule epathobj_exp32 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file epathobj_exp32.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1106,7 +1081,7 @@ rule epathobj_exp32 {
 }
 
 rule Tools_unknown {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file unknown.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1123,7 +1098,7 @@ rule Tools_unknown {
 }
 
 rule PLUGIN_AJunk {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file AJunk.dll"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1138,7 +1113,7 @@ rule PLUGIN_AJunk {
 }
 
 rule IISPutScanner {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file IISPutScanner.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1181,7 +1156,7 @@ rule IISPutScanner {
 }
 
 rule IDTools_For_WinXP_IdtTool_2 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file IdtTool.sys"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1198,7 +1173,7 @@ rule IDTools_For_WinXP_IdtTool_2 {
 }
 
 rule hkmjjiis6 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file hkmjjiis6.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1219,7 +1194,7 @@ rule hkmjjiis6 {
 }
 
 rule Dos_lcx {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file lcx.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1243,7 +1218,7 @@ rule Dos_lcx {
 }
 
 rule x_way2_5_X_way {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file X-way.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1264,7 +1239,7 @@ rule x_way2_5_X_way {
 }
 
 rule tools_Sqlcmd {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file Sqlcmd.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1283,7 +1258,7 @@ rule tools_Sqlcmd {
 }
 
 rule Sword1_5 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file Sword1.5.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1302,7 +1277,7 @@ rule Sword1_5 {
 }
 
 rule Tools_scan {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file scan.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1317,7 +1292,7 @@ rule Tools_scan {
 }
 
 rule Dos_c {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file c.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1336,7 +1311,7 @@ rule Dos_c {
 }
 
 rule arpsniffer {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file arpsniffer.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1353,7 +1328,7 @@ rule arpsniffer {
 }
 
 rule pw_inspector_2 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file pw-inspector.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1369,7 +1344,7 @@ rule pw_inspector_2 {
 }
 
 rule datPcShare {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file datPcShare.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1385,7 +1360,7 @@ rule datPcShare {
 }
 
 rule Tools_xport {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file xport.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1406,7 +1381,7 @@ rule Tools_xport {
 }
 
 rule Pc_xai {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file xai.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1425,7 +1400,7 @@ rule Pc_xai {
 }
 
 rule Radmin_Hash {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file Radmin_Hash.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1442,7 +1417,7 @@ rule Radmin_Hash {
 }
 
 rule OSEditor {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file OSEditor.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1459,7 +1434,7 @@ rule OSEditor {
 }
 
 rule GoodToolset_ms11011 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file ms11011.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1475,7 +1450,7 @@ rule GoodToolset_ms11011 {
 }
 
 rule FreeVersion_release {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file release.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1493,7 +1468,7 @@ rule FreeVersion_release {
 }
 
 rule churrasco {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file churrasco.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1508,8 +1483,9 @@ rule churrasco {
 	condition:
 		uint16(0) == 0x5a4d and filesize < 150KB and 2 of them
 }
+
 rule x64_KiwiCmd {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file KiwiCmd.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1524,23 +1500,23 @@ rule x64_KiwiCmd {
 }
 
 rule sql1433_SQL {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file SQL.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
 		date = "2015-06-13"
 		hash = "025e87deadd1c50b1021c26cb67b76b476fafd64"
 	strings:
-		/* WIDE: ProductName 1433 */
+		
 		$s0 = { 50 00 72 00 6F 00 64 00 75 00 63 00 74 00 4E 00 61 00 6D 00 65 00 00 00 00 00 31 00 34 00 33 00 33 }
-		/* WIDE: ProductVersion 1,4,3,3 */
+		
 		$s1 = { 50 00 72 00 6F 00 64 00 75 00 63 00 74 00 56 00 65 00 72 00 73 00 69 00 6F 00 6E 00 00 00 31 00 2C 00 34 00 2C 00 33 00 2C 00 33 }
 	condition:
 		uint16(0) == 0x5a4d and filesize < 90KB and all of them
 }
 
 rule CookieTools2 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file CookieTools2.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1556,7 +1532,7 @@ rule CookieTools2 {
 }
 
 rule cyclotron {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file cyclotron.sys"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1573,7 +1549,7 @@ rule cyclotron {
 }
 
 rule xscan_gui {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file xscan_gui.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1589,7 +1565,7 @@ rule xscan_gui {
 }
 
 rule CN_Tools_hscan {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file hscan.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1609,7 +1585,7 @@ rule CN_Tools_hscan {
 }
 
 rule GoodToolset_pr {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file pr.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1627,7 +1603,7 @@ rule GoodToolset_pr {
 }
 
 rule hydra_7_4_1_hydra {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file hydra.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1645,7 +1621,7 @@ rule hydra_7_4_1_hydra {
 }
 
 rule CN_Tools_srss_2 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file srss.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1667,7 +1643,7 @@ rule CN_Tools_srss_2 {
 }
 
 rule Dos_NtGod {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file NtGod.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1683,7 +1659,7 @@ rule Dos_NtGod {
 }
 
 rule CN_Tools_VNCLink {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file VNCLink.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1698,7 +1674,7 @@ rule CN_Tools_VNCLink {
 }
 
 rule tools_NTCmd {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file NTCmd.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1716,7 +1692,7 @@ rule tools_NTCmd {
 }
 
 rule mysql_pwd_crack {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file mysql_pwd_crack.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1733,7 +1709,7 @@ rule mysql_pwd_crack {
 }
 
 rule CmdShell64 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file CmdShell64.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1752,7 +1728,7 @@ rule CmdShell64 {
 }
 
 rule Ms_Viru_v {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file v.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1770,7 +1746,7 @@ rule Ms_Viru_v {
 }
 
 rule CN_Tools_Vscan {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file Vscan.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1787,7 +1763,7 @@ rule CN_Tools_Vscan {
 }
 
 rule Dos_iis {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file iis.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1806,7 +1782,7 @@ rule Dos_iis {
 }
 
 rule IISPutScannesr {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file IISPutScannesr.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1820,7 +1796,7 @@ rule IISPutScannesr {
 }
 
 rule Generate {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file Generate.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1837,7 +1813,7 @@ rule Generate {
 }
 
 rule Pc_rejoice {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file rejoice.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1855,7 +1831,7 @@ rule Pc_rejoice {
 }
 
 rule ms11080_withcmd {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file ms11080_withcmd.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1872,7 +1848,7 @@ rule ms11080_withcmd {
 }
 
 rule OtherTools_xiaoa {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file xiaoa.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1890,7 +1866,7 @@ rule OtherTools_xiaoa {
 }
 
 rule unknown2 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file unknown2.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1909,7 +1885,7 @@ rule unknown2 {
 }
 
 rule hydra_7_3_hydra {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file hydra.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1926,7 +1902,7 @@ rule hydra_7_3_hydra {
 }
 
 rule OracleScan {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file OracleScan.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1942,7 +1918,7 @@ rule OracleScan {
 }
 
 rule SQLTools {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file SQLTools.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1961,7 +1937,7 @@ rule SQLTools {
 }
 
 rule portscanner {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file portscanner.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1977,7 +1953,7 @@ rule portscanner {
 }
 
 rule kappfree {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file kappfree.dll"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -1992,7 +1968,7 @@ rule kappfree {
 }
 
 rule Smartniff {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file Smartniff.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -2007,7 +1983,7 @@ rule Smartniff {
 }
 
 rule ChinaChopper_caidao {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file caidao.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -2025,7 +2001,7 @@ rule ChinaChopper_caidao {
 }
 
 rule KiwiTaskmgr_2 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file KiwiTaskmgr.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -2040,7 +2016,7 @@ rule KiwiTaskmgr_2 {
 }
 
 rule kappfree_2 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file kappfree.dll"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -2056,7 +2032,7 @@ rule kappfree_2 {
 }
 
 rule x_way2_5_sqlcmd {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file sqlcmd.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -2084,7 +2060,7 @@ rule x_way2_5_sqlcmd {
 }
 
 rule Win32_klock {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file klock.dll"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -2099,7 +2075,7 @@ rule Win32_klock {
 }
 
 rule ipsearcher {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file ipsearcher.dll"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -2115,7 +2091,7 @@ rule ipsearcher {
 }
 
 rule ms10048_x64 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file ms10048-x64.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -2131,7 +2107,7 @@ rule ms10048_x64 {
 }
 
 rule hscangui {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file hscangui.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -2147,7 +2123,7 @@ rule hscangui {
 }
 
 rule GoodToolset_ms11080 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file ms11080.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -2165,7 +2141,7 @@ rule GoodToolset_ms11080 {
 }
 
 rule epathobj_exp64 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file epathobj_exp64.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -2183,7 +2159,7 @@ rule epathobj_exp64 {
 }
 
 rule kelloworld_2 {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file kelloworld.dll"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -2198,7 +2174,7 @@ rule kelloworld_2 {
 }
 
 rule HScan_v1_20_hscan {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - file hscan.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -2215,7 +2191,7 @@ rule HScan_v1_20_hscan {
 }
 
 rule _Project1_Generate_rejoice {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - from files Project1.exe, Generate.exe, rejoice.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -2236,7 +2212,7 @@ rule _Project1_Generate_rejoice {
 }
 
 rule _hscan_hscan_hscangui {
-	meta:
+meta:
 		description = "Chinese Hacktool Set - from files hscan.exe, hscan.exe, hscangui.exe"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -2256,7 +2232,7 @@ rule _hscan_hscan_hscangui {
 }
 
 rule kiwi_tools {
-	meta:
+meta:
 		description = "Chinese Hacktool Set"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -2289,7 +2265,7 @@ rule kiwi_tools {
 }
 
 rule kiwi_tools_gentil_kiwi {
-	meta:
+meta:
 		description = "Chinese Hacktool Set"
 		author = "Florian Roth"
 		reference = "http://tools.zjqhr.com/"
@@ -2318,3 +2294,4 @@ rule kiwi_tools_gentil_kiwi {
 	condition:
 		uint16(0) == 0x5a4d and filesize < 1000KB and all of them
 }
+

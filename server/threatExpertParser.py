@@ -3,24 +3,10 @@ import sys
 import tempfile
 import urllib2
 import re
-import winpaths
 import datetime
 from bs4 import BeautifulSoup, SoupStrainer
 from sets import Set
 
-
-#for windows
-_WINDIR = os.environ['WINDIR']
-_TEMPDIR = tempfile.gettempdir()
-# Notice: this method may probably fail if you're running a 32 bit Python on a 64 bit machine
-if sys.maxint > 32:
-    _PROGRAMS = os.environ["ProgramFiles(x86)"]
-else:
-    _PROGRAMS = os.environ["ProgramFiles"]
-_APPDATA = winpaths.get_local_appdata()
-_COMMONAPPDATA = winpaths.get_common_appdata()
-_COMMONPROGRAMS = winpaths.get_program_files_common()
-_FONTS = os.path.join(os.environ['WINDIR'], 'Fonts')
 records = []
 
 class ThreatExpertParser(object):

@@ -1,17 +1,6 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-10-23
-   Identifier: Sofacy Malware
-   Reference: http://blog.talosintelligence.com/2017/10/cyber-conflict-decoy-document.html
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 import "pe"
-
 rule Sofacy_Oct17_1 {
-   meta:
+meta:
       description = "Detects Sofacy malware reported in October 2017"
       author = "Florian Roth"
       reference = "http://blog.talosintelligence.com/2017/10/cyber-conflict-decoy-document.html"
@@ -45,7 +34,7 @@ rule Sofacy_Oct17_1 {
 }
 
 rule Sofacy_Oct17_2 {
-   meta:
+meta:
       description = "Detects Sofacy malware reported in October 2017"
       author = "Florian Roth"
       reference = "http://blog.talosintelligence.com/2017/10/cyber-conflict-decoy-document.html"
@@ -65,3 +54,4 @@ rule Sofacy_Oct17_2 {
          )
       ) or ( all of them )
 }
+

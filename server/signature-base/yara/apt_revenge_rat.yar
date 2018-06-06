@@ -1,15 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-09-04
-   Identifier: RevengeRAT
-   Reference: Internal Research
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule RevengeRAT_Sep17 {
-   meta:
+meta:
       description = "Detects RevengeRAT malware"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -30,3 +20,4 @@ rule RevengeRAT_Sep17 {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 500KB and 1 of ($x*) ) or ( 3 of them )
 }
+

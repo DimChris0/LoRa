@@ -59,7 +59,7 @@ class LoRaUpdater(object):
                        "https://github.com/fireeye/iocs/archive/master.zip",
                        "https://github.com/jasonmiacono/IOCs/archive/master.zip",
                        "https://github.com/pan-unit42/iocs/archive/master.zip",
-                       "https://github.com/kbandla/APTnotes/archive/master.zip"
+                       #"https://github.com/kbandla/APTnotes/archive/master.zip"
                        ]
 
     UPDATE_URL_LORA = ""
@@ -130,7 +130,6 @@ class LoRaUpdater(object):
 
                         # Extract file
                         source = zipUpdate.open(zipFilePath)
-                        print targetFile
                         target = file(targetFile, "wb")
                         with source, target:
                             shutil.copyfileobj(source, target)
@@ -171,11 +170,11 @@ class LoRaUpdater(object):
                 self.parseExcel(f)
             elif '.csv' == f[-4:]:
                 self.parseCSV(f)
-            elif '.txt' == f[-4:]:
-                if platform == "windows":
-                    txt_parser.parse(self.application_path + "\\signature-base\\misc-txt\\" + f)
-                else:
-                    txt_parser.parse(self.application_path + "/signature-base/misc-txt/" + f)
+            # elif '.txt' == f[-4:]:
+            #     if platform == "windows":
+            #         txt_parser.parse(self.application_path + "\\signature-base\\misc-txt\\" + f)
+            #     else:
+            #         txt_parser.parse(self.application_path + "/signature-base/misc-txt/" + f)
         # this code parses the pdfs inside the folder problematic pdfs, even though there is no difference
         # as the rules created are empty
         # for filename in os.listdir(self.application_path + "\\signature-base\\problematicPDFs\\"):
@@ -341,7 +340,7 @@ def deleteDuplicateRules():
         if "import \"math\"" in text:
             imp += "import \"math\"\n"
 
-        comments = re.findall("(\".*?\"\n|\".*?\".(?:fullword)?(?:ascii)?(?:fullword ascii)?(?:ascii fullword)?\n)|(/\*.*?\*/|//[^\r\n]*$)", text, re.DOTALL, re.MULTILINE )
+        comments = re.findall("(\".*?\"\n|\".*?\".(?:fullword)?(?:ascii)?(?:fullword ascii)?(?:ascii fullword)?\n)|(/\*.*?\*/|//[^\r\n]*$)", text, re.DOTALL | re.MULTILINE )
         for com in comments:
             if com[1] != '':
                 text = text.replace(com[1], "" ) # remove all occurance streamed comments (/*COMMENT */) from text

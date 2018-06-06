@@ -1,12 +1,6 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-04-03
-   Identifier: ROKRAT
-*/
-
+import "pe"
 rule ROKRAT_Malware {
-   meta:
+meta:
       description = "Detects ROKRAT Malware"
       author = "Florian Roth"
       reference = "http://blog.talosintelligence.com/2017/04/introducing-rokrat.html"
@@ -30,20 +24,8 @@ rule ROKRAT_Malware {
       ( uint16(0) == 0x5a4d and filesize < 25000KB and ( 1 of ($x*) or all of ($a*) ) ) or ( 5 of them )
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-11-28
-   Identifier: ROKRAT
-   Reference: http://blog.talosintelligence.com/2017/11/ROKRAT-Reloaded.html
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
-import "pe"
-
 rule ROKRAT_Dropper_Nov17 {
-   meta:
+meta:
       description = "Detects dropper for ROKRAT malware"
       author = "Florian Roth"
       reference = "http://blog.talosintelligence.com/2017/11/ROKRAT-Reloaded.html"
@@ -56,7 +38,7 @@ rule ROKRAT_Dropper_Nov17 {
 }
 
 rule Freeenki_Infostealer_Nov17 {
-   meta:
+meta:
       description = "Detects Freenki infostealer malware"
       author = "Florian Roth"
       reference = "http://blog.talosintelligence.com/2017/11/ROKRAT-Reloaded.html"
@@ -85,7 +67,7 @@ rule Freeenki_Infostealer_Nov17 {
 }
 
 rule Freeenki_Infostealer_Nov17_Export_Sig_Testing {
-   meta:
+meta:
       description = "Detects Freenki infostealer malware"
       author = "Florian Roth"
       reference = "http://blog.talosintelligence.com/2017/11/ROKRAT-Reloaded.html"
@@ -96,10 +78,8 @@ rule Freeenki_Infostealer_Nov17_Export_Sig_Testing {
       pe.exports("getUpdate") and pe.number_of_exports == 1
 }
 
-/* Further Investigations */
-
 rule ROKRAT_Nov17_1 {
-   meta:
+meta:
       description = "Detects ROKRAT malware"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -114,3 +94,4 @@ rule ROKRAT_Nov17_1 {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 15000KB and 1 of them )
 }
+

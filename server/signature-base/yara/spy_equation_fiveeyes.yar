@@ -1,7 +1,5 @@
-/* Equation APT ------------------------------------------------------------ */
-
 rule apt_equation_exploitlib_mutexes {
-    meta:
+meta:
         copyright = "Kaspersky Lab"
         description = "Rule to detect Equation group's Exploitation library http://goo.gl/ivt8EW"
         version = "1.0"
@@ -19,7 +17,7 @@ rule apt_equation_exploitlib_mutexes {
 }
 
 rule apt_equation_doublefantasy_genericresource {
-    meta:
+meta:
         copyright = "Kaspersky Lab"
         description = "Rule to detect DoubleFantasy encoded config http://goo.gl/ivt8EW"
         version = "1.0"
@@ -35,7 +33,7 @@ rule apt_equation_doublefantasy_genericresource {
 }
 
 rule apt_equation_equationlaser_runtimeclasses {
-	meta:
+meta:
 	    copyright = "Kaspersky Lab"
 	    description = "Rule to detect the EquationLaser malware"
 	    version = "1.0"
@@ -53,7 +51,7 @@ rule apt_equation_equationlaser_runtimeclasses {
 }
 
 rule apt_equation_cryptotable {
-	meta:
+meta:
 	    copyright = "Kaspersky Lab"
 	    description = "Rule to detect the crypto library used in Equation group malware"
 	    version = "1.0"
@@ -65,10 +63,8 @@ rule apt_equation_cryptotable {
 	    $a
 }
 
-/* Equation Group - Kaspersky ---------------------------------------------- */
-
 rule Equation_Kaspersky_TripleFantasy_1 {
-	meta:
+meta:
 		description = "Equation Group Malware - TripleFantasy http://goo.gl/ivt8EW"
 		author = "Florian Roth"
 		reference = "http://goo.gl/ivt8EW"
@@ -102,7 +98,7 @@ rule Equation_Kaspersky_TripleFantasy_1 {
 }
 
 rule Equation_Kaspersky_DoubleFantasy_1 {
-	meta:
+meta:
 		description = "Equation Group Malware - DoubleFantasy"
 		author = "Florian Roth"
 		reference = "http://goo.gl/ivt8EW"
@@ -134,7 +130,7 @@ rule Equation_Kaspersky_DoubleFantasy_1 {
 }
 
 rule Equation_Kaspersky_GROK_Keylogger {
-	meta:
+meta:
 		description = "Equation Group Malware - GROK keylogger"
 		author = "Florian Roth"
 		reference = "http://goo.gl/ivt8EW"
@@ -167,7 +163,7 @@ rule Equation_Kaspersky_GROK_Keylogger {
 }
 
 rule Equation_Kaspersky_GreyFishInstaller {
-	meta:
+meta:
 		description = "Equation Group Malware - Grey Fish"
 		author = "Florian Roth"
 		reference = "http://goo.gl/ivt8EW"
@@ -182,7 +178,7 @@ rule Equation_Kaspersky_GreyFishInstaller {
 }
 
 rule Equation_Kaspersky_EquationDrugInstaller {
-	meta:
+meta:
 		description = "Equation Group Malware - EquationDrug installer LUTEUSOBSTOS"
 		author = "Florian Roth"
 		reference = "http://goo.gl/ivt8EW"
@@ -206,7 +202,7 @@ rule Equation_Kaspersky_EquationDrugInstaller {
 }
 
 rule Equation_Kaspersky_EquationLaserInstaller {
-	meta:
+meta:
 		description = "Equation Group Malware - EquationLaser Installer"
 		author = "Florian Roth"
 		reference = "http://goo.gl/ivt8EW"
@@ -228,7 +224,7 @@ rule Equation_Kaspersky_EquationLaserInstaller {
 }
 
 rule Equation_Kaspersky_FannyWorm {
-	meta:
+meta:
 		description = "Equation Group Malware - Fanny Worm"
 		author = "Florian Roth"
 		reference = "http://goo.gl/ivt8EW"
@@ -267,7 +263,7 @@ rule Equation_Kaspersky_FannyWorm {
 }
 
 rule Equation_Kaspersky_HDD_reprogramming_module {
-	meta:
+meta:
 		description = "Equation Group Malware - HDD reprogramming module"
 		author = "Florian Roth"
 		reference = "http://goo.gl/ivt8EW"
@@ -286,7 +282,7 @@ rule Equation_Kaspersky_HDD_reprogramming_module {
 }
 
 rule Equation_Kaspersky_EOP_Package {
-	meta:
+meta:
 		description = "Equation Group Malware - EoP package and malware launcher"
 		author = "Florian Roth"
 		reference = "http://goo.gl/ivt8EW"
@@ -306,7 +302,7 @@ rule Equation_Kaspersky_EOP_Package {
 }
 
 rule Equation_Kaspersky_TripleFantasy_Loader {
-	meta:
+meta:
 		description = "Equation Group Malware - TripleFantasy Loader"
 		author = "Florian Roth"
 		reference = "http://goo.gl/ivt8EW"
@@ -329,10 +325,8 @@ rule Equation_Kaspersky_TripleFantasy_Loader {
 		( $mz at 0 ) and filesize < 50000 and ( all of ($x*) and all of ($s*) )
 }
 
-/* Rule generated from the mentioned keywords */
-
 rule Equation_Kaspersky_SuspiciousString {
-	meta:
+meta:
 		description = "Equation Group Malware - suspicious string found in sample"
 		author = "Florian Roth"
 		reference = "http://goo.gl/ivt8EW"
@@ -351,10 +345,8 @@ rule Equation_Kaspersky_SuspiciousString {
 		( $mz at 0 ) and filesize < 500000 and all of ($s*)
 }
 
-/* EquationDrug Update 11.03.2015 - http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/ */
-
 rule EquationDrug_NetworkSniffer1 {
-	meta:
+meta:
 		description = "EquationDrug - Backdoor driven by network sniffer - mstcp32.sys, fat32.sys"
 		author = "Florian Roth @4nc4p"
 		reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
@@ -374,7 +366,7 @@ rule EquationDrug_NetworkSniffer1 {
 }
 
 rule EquationDrug_CompatLayer_UnilayDLL {
-	meta:
+meta:
 		description = "EquationDrug - Unilay.DLL"
 		author = "Florian Roth @4nc4p"
 		reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
@@ -388,7 +380,7 @@ rule EquationDrug_CompatLayer_UnilayDLL {
 }
 
 rule EquationDrug_HDDSSD_Op {
-	meta:
+meta:
 		description = "EquationDrug - HDD/SSD firmware operation - nls_933w.dll"
 		author = "Florian Roth @4nc4p"
 		reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
@@ -401,7 +393,7 @@ rule EquationDrug_HDDSSD_Op {
 }
 
 rule EquationDrug_NetworkSniffer2 {
-	meta:
+meta:
 		description = "EquationDrug - Network Sniffer - tdip.sys"
 		author = "Florian Roth @4nc4p"
 		reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
@@ -421,7 +413,7 @@ rule EquationDrug_NetworkSniffer2 {
 }
 
 rule EquationDrug_NetworkSniffer3 {
-	meta:
+meta:
 		description = "EquationDrug - Network Sniffer - tdip.sys"
 		author = "Florian Roth @4nc4p"
 		reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
@@ -437,7 +429,7 @@ rule EquationDrug_NetworkSniffer3 {
 }
 
 rule EquationDrug_VolRec_Driver {
-	meta:
+meta:
 		description = "EquationDrug - Collector plugin for Volrec - msrstd.sys"
 		author = "Florian Roth @4nc4p"
 		reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
@@ -452,7 +444,7 @@ rule EquationDrug_VolRec_Driver {
 }
 
 rule EquationDrug_KernelRootkit {
-	meta:
+meta:
 		description = "EquationDrug - Kernel mode stage 0 and rootkit (Windows 2000 and above) - msndsrv.sys"
 		author = "Florian Roth @4nc4p"
 		reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
@@ -472,7 +464,7 @@ rule EquationDrug_KernelRootkit {
 }
 
 rule EquationDrug_Keylogger {
-	meta:
+meta:
 		description = "EquationDrug - Key/clipboard logger driver - msrtvd.sys"
 		author = "Florian Roth @4nc4p"
 		reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
@@ -488,7 +480,7 @@ rule EquationDrug_Keylogger {
 }
 
 rule EquationDrug_NetworkSniffer4 {
-	meta:
+meta:
 		description = "EquationDrug - Network-sniffer/patcher - atmdkdrv.sys"
 		author = "Florian Roth @4nc4p"
 		reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
@@ -512,7 +504,7 @@ rule EquationDrug_NetworkSniffer4 {
 }
 
 rule EquationDrug_PlatformOrchestrator {
-	meta:
+meta:
 		description = "EquationDrug - Platform orchestrator - mscfg32.dll, svchost32.dll"
 		author = "Florian Roth @4nc4p"
 		reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
@@ -530,7 +522,7 @@ rule EquationDrug_PlatformOrchestrator {
 }
 
 rule EquationDrug_NetworkSniffer5 {
-	meta:
+meta:
 		description = "EquationDrug - Network-sniffer/patcher - atmdkdrv.sys"
 		author = "Florian Roth @4nc4p"
 		reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
@@ -548,7 +540,7 @@ rule EquationDrug_NetworkSniffer5 {
 }
 
 rule EquationDrug_FileSystem_Filter {
-	meta:
+meta:
 		description = "EquationDrug - Filesystem filter driver - volrec.sys, scsi2mgr.sys"
 		author = "Florian Roth @4nc4p"
 		reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
@@ -563,7 +555,7 @@ rule EquationDrug_FileSystem_Filter {
 }
 
 rule apt_equation_keyword {
-    meta:
+meta:
         description = "Rule to detect Equation group's keyword in executable file"
         last_modified = "2015-09-26"
         reference = "http://securelist.com/blog/research/68750/equation-the-death-star-of-malware-galaxy/"
@@ -573,3 +565,4 @@ rule apt_equation_keyword {
     condition:
          uint16(0) == 0x5a4d and 1 of ($a*)
 }
+

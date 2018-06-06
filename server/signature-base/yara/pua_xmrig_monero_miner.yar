@@ -1,15 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2018-01-04
-   Identifier: XMRIG
-   Reference: https://github.com/xmrig/xmrig/releases
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule XMRIG_Monero_Miner {
-   meta:
+meta:
       description = "Detects Monero mining software"
       author = "Florian Roth"
       reference = "https://github.com/xmrig/xmrig/releases"
@@ -28,7 +18,7 @@ rule XMRIG_Monero_Miner {
 }
 
 rule XMRIG_Monero_Miner_Config {
-   meta:
+meta:
       description = "Auto-generated rule - from files config.json, config.json"
       author = "Florian Roth"
       reference = "https://github.com/xmrig/xmrig/releases"
@@ -42,3 +32,4 @@ rule XMRIG_Monero_Miner_Config {
    condition:
       ( uint16(0) == 0x0a7b or uint16(0) == 0x0d7b ) and filesize < 5KB and 1 of them
 }
+

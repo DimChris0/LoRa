@@ -1,13 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Ahmed Zaki
-   Date: 2017-05-04
-   Identifier: ISM RAT
-   Reference: https://www.nccgroup.trust/us/about-us/newsroom-and-events/blog/2017/february/ism-rat/
-*/
-
 rule Trojan_ISMRAT_gen {
-   meta:
+meta:
       description = "ISM RAT"
       author = "Ahmed Zaki"
       reference = "https://www.nccgroup.trust/us/about-us/newsroom-and-events/blog/2017/february/ism-rat/"
@@ -22,3 +14,4 @@ rule Trojan_ISMRAT_gen {
    condition:
       uint16(0) == 0x5A4D and all of them
 }
+

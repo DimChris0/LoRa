@@ -1,14 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-02-09
-   Identifier: MSF Payloads
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Msfpayloads_msf {
-   meta:
+meta:
       description = "Metasploit Payloads - file msf.sh"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -21,7 +12,7 @@ rule Msfpayloads_msf {
 }
 
 rule Msfpayloads_msf_2 {
-   meta:
+meta:
       description = "Metasploit Payloads - file msf.asp"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -36,7 +27,7 @@ rule Msfpayloads_msf_2 {
 }
 
 rule Msfpayloads_msf_psh {
-   meta:
+meta:
       description = "Metasploit Payloads - file msf-psh.vba"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -51,7 +42,7 @@ rule Msfpayloads_msf_psh {
 }
 
 rule Msfpayloads_msf_exe {
-   meta:
+meta:
       description = "Metasploit Payloads - file msf-exe.vba"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -69,7 +60,7 @@ rule Msfpayloads_msf_exe {
 }
 
 rule Msfpayloads_msf_3 {
-   meta:
+meta:
       description = "Metasploit Payloads - file msf.psh"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -92,7 +83,7 @@ rule Msfpayloads_msf_3 {
 }
 
 rule Msfpayloads_msf_4 {
-   meta:
+meta:
       description = "Metasploit Payloads - file msf.aspx"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -109,7 +100,7 @@ rule Msfpayloads_msf_4 {
 }
 
 rule Msfpayloads_msf_exe_2 {
-   meta:
+meta:
       description = "Metasploit Payloads - file msf-exe.aspx"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -125,7 +116,7 @@ rule Msfpayloads_msf_exe_2 {
 }
 
 rule Msfpayloads_msf_5 {
-   meta:
+meta:
       description = "Metasploit Payloads - file msf.msi"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -140,7 +131,7 @@ rule Msfpayloads_msf_5 {
 }
 
 rule Msfpayloads_msf_6 {
-   meta:
+meta:
       description = "Metasploit Payloads - file msf.vbs"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -159,7 +150,7 @@ rule Msfpayloads_msf_6 {
 }
 
 rule Msfpayloads_msf_7 {
-   meta:
+meta:
       description = "Metasploit Payloads - file msf.vba"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -174,7 +165,7 @@ rule Msfpayloads_msf_7 {
 }
 
 rule Msfpayloads_msf_8 {
-   meta:
+meta:
       description = "Metasploit Payloads - file msf.ps1"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -193,7 +184,7 @@ rule Msfpayloads_msf_8 {
 }
 
 rule Msfpayloads_msf_cmd {
-   meta:
+meta:
       description = "Metasploit Payloads - file msf-cmd.ps1"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -206,7 +197,7 @@ rule Msfpayloads_msf_cmd {
 }
 
 rule Msfpayloads_msf_9 {
-   meta:
+meta:
       description = "Metasploit Payloads - file msf.war - contents"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -225,7 +216,7 @@ rule Msfpayloads_msf_9 {
 }
 
 rule Msfpayloads_msf_10 {
-   meta:
+meta:
       description = "Metasploit Payloads - file msf.exe"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -240,7 +231,7 @@ rule Msfpayloads_msf_10 {
 }
 
 rule Msfpayloads_msf_svc {
-   meta:
+meta:
       description = "Metasploit Payloads - file msf-svc.exe"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -254,7 +245,7 @@ rule Msfpayloads_msf_svc {
 }
 
 rule Msfpayloads_msf_11 {
-   meta:
+meta:
       description = "Metasploit Payloads - file msf.hta"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -269,7 +260,7 @@ rule Msfpayloads_msf_11 {
 }
 
 rule Msfpayloads_msf_ref {
-   meta:
+meta:
       description = "Metasploit Payloads - file msf-ref.ps1"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -286,3 +277,4 @@ rule Msfpayloads_msf_ref {
    condition:
       5 of them
 }
+

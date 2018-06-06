@@ -1,15 +1,5 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-02-03
-   Identifier: ZeroT CN APT
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule PP_CN_APT_ZeroT_1 {
-   meta:
+meta:
       description = "Detects malware from the Proofpoint CN APT ZeroT incident"
       author = "Florian Roth"
       reference = "https://www.proofpoint.com/us/threat-insight/post/APT-targets-russia-belarus-zerot-plugx"
@@ -22,7 +12,7 @@ rule PP_CN_APT_ZeroT_1 {
 }
 
 rule PP_CN_APT_ZeroT_2 {
-   meta:
+meta:
       description = "Detects malware from the Proofpoint CN APT ZeroT incident"
       author = "Florian Roth"
       reference = "https://www.proofpoint.com/us/threat-insight/post/APT-targets-russia-belarus-zerot-plugx"
@@ -35,7 +25,7 @@ rule PP_CN_APT_ZeroT_2 {
 }
 
 rule PP_CN_APT_ZeroT_3 {
-   meta:
+meta:
       description = "Detects malware from the Proofpoint CN APT ZeroT incident"
       author = "Florian Roth"
       reference = "https://www.proofpoint.com/us/threat-insight/post/APT-targets-russia-belarus-zerot-plugx"
@@ -53,7 +43,7 @@ rule PP_CN_APT_ZeroT_3 {
 }
 
 rule PP_CN_APT_ZeroT_4 {
-   meta:
+meta:
       description = "Detects malware from the Proofpoint CN APT ZeroT incident"
       author = "Florian Roth"
       reference = "https://www.proofpoint.com/us/threat-insight/post/APT-targets-russia-belarus-zerot-plugx"
@@ -67,7 +57,7 @@ rule PP_CN_APT_ZeroT_4 {
 }
 
 rule PP_CN_APT_ZeroT_5 {
-   meta:
+meta:
       description = "Detects malware from the Proofpoint CN APT ZeroT incident"
       author = "Florian Roth"
       reference = "https://www.proofpoint.com/us/threat-insight/post/APT-targets-russia-belarus-zerot-plugx"
@@ -85,7 +75,7 @@ rule PP_CN_APT_ZeroT_5 {
 }
 
 rule PP_CN_APT_ZeroT_6 {
-   meta:
+meta:
       description = "Detects malware from the Proofpoint CN APT ZeroT incident"
       author = "Florian Roth"
       reference = "https://www.proofpoint.com/us/threat-insight/post/APT-targets-russia-belarus-zerot-plugx"
@@ -98,7 +88,7 @@ rule PP_CN_APT_ZeroT_6 {
 }
 
 rule PP_CN_APT_ZeroT_7 {
-   meta:
+meta:
       description = "Detects malware from the Proofpoint CN APT ZeroT incident"
       author = "Florian Roth"
       reference = "https://www.proofpoint.com/us/threat-insight/post/APT-targets-russia-belarus-zerot-plugx"
@@ -114,7 +104,7 @@ rule PP_CN_APT_ZeroT_7 {
 }
 
 rule PP_CN_APT_ZeroT_8 {
-   meta:
+meta:
       description = "Detects malware from the Proofpoint CN APT ZeroT incident"
       author = "Florian Roth"
       reference = "https://www.proofpoint.com/us/threat-insight/post/APT-targets-russia-belarus-zerot-plugx"
@@ -130,7 +120,7 @@ rule PP_CN_APT_ZeroT_8 {
 }
 
 rule PP_CN_APT_ZeroT_9 {
-   meta:
+meta:
       description = "Detects malware from the Proofpoint CN APT ZeroT incident"
       author = "Florian Roth"
       reference = "https://www.proofpoint.com/us/threat-insight/post/APT-targets-russia-belarus-zerot-plugx"
@@ -144,7 +134,7 @@ rule PP_CN_APT_ZeroT_9 {
 }
 
 rule CN_APT_ZeroT_nflogger {
-   meta:
+meta:
       description = "Chinese APT by Proofpoint ZeroT RAT  - file nflogger.dll"
       author = "Florian Roth"
       reference = "https://www.proofpoint.com/us/threat-insight/post/APT-targets-russia-belarus-zerot-plugx"
@@ -157,7 +147,7 @@ rule CN_APT_ZeroT_nflogger {
 }
 
 rule CN_APT_ZeroT_extracted_Go {
-   meta:
+meta:
       description = "Chinese APT by Proofpoint ZeroT RAT  - file Go.exe"
       author = "Florian Roth"
       reference = "https://www.proofpoint.com/us/threat-insight/post/APT-targets-russia-belarus-zerot-plugx"
@@ -179,7 +169,7 @@ rule CN_APT_ZeroT_extracted_Go {
 }
 
 rule CN_APT_ZeroT_extracted_Mcutil {
-   meta:
+meta:
       description = "Chinese APT by Proofpoint ZeroT RAT  - file Mcutil.dll"
       author = "Florian Roth"
       reference = "https://www.proofpoint.com/us/threat-insight/post/APT-targets-russia-belarus-zerot-plugx"
@@ -197,7 +187,7 @@ rule CN_APT_ZeroT_extracted_Mcutil {
 }
 
 rule CN_APT_ZeroT_extracted_Zlh {
-   meta:
+meta:
       description = "Chinese APT by Proofpoint ZeroT RAT - file Zlh.exe"
       author = "Florian Roth"
       reference = "https://www.proofpoint.com/us/threat-insight/post/APT-targets-russia-belarus-zerot-plugx"
@@ -211,3 +201,4 @@ rule CN_APT_ZeroT_extracted_Zlh {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 300KB and 3 of them )
 }
+

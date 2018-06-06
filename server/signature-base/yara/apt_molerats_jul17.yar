@@ -1,29 +1,19 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-07-07
-   Identifier: Molerats Jul17
-   Reference: https://mymalwareparty.blogspot.de/2017/07/operation-desert-eagle.html
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Molerats_Jul17_Sample_1 {
-   meta:
+meta:
       description = "Detects Molerats sample - July 2017"
       author = "Florian Roth"
       reference = "https://mymalwareparty.blogspot.de/2017/07/operation-desert-eagle.html"
       date = "2017-07-07"
       hash1 = "ebf2423b9de131eab1c61ac395cbcfc2ac3b15bd9c83b96ae0a48619a4a38d0a"
    strings:
-      /* {11804ce4-930a-4b09-bf70-9f1a95d0d70d}, Culture=neutral, PublicKeyToken=3e56350693f7355e */
+      
       $s1 = "ezExODA0Y2U0LTkzMGEtNGIwOS1iZjcwLTlmMWE5NWQwZDcwZH0sIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49M2U1NjM1MDY5M2Y3MzU1ZQ==,[z]{c00" wide
    condition:
       ( uint16(0) == 0x5a4d and filesize < 200KB and all of them )
 }
 
 rule Molerats_Jul17_Sample_2 {
-   meta:
+meta:
       description = "Detects Molerats sample - July 2017"
       author = "Florian Roth"
       reference = "https://mymalwareparty.blogspot.de/2017/07/operation-desert-eagle.html"
@@ -38,7 +28,7 @@ rule Molerats_Jul17_Sample_2 {
 }
 
 rule Molerats_Jul17_Sample_3 {
-   meta:
+meta:
       description = "Detects Molerats sample - July 2017"
       author = "Florian Roth"
       reference = "https://mymalwareparty.blogspot.de/2017/07/operation-desert-eagle.html"
@@ -53,7 +43,7 @@ rule Molerats_Jul17_Sample_3 {
 }
 
 rule Molerats_Jul17_Sample_4 {
-   meta:
+meta:
       description = "Detects Molerats sample - July 2017"
       author = "Florian Roth"
       reference = "https://mymalwareparty.blogspot.de/2017/07/operation-desert-eagle.html"
@@ -68,7 +58,7 @@ rule Molerats_Jul17_Sample_4 {
 }
 
 rule Molerats_Jul17_Sample_5 {
-   meta:
+meta:
       description = "Detects Molerats sample - July 2017"
       author = "Florian Roth"
       reference = "https://mymalwareparty.blogspot.de/2017/07/operation-desert-eagle.html"
@@ -85,7 +75,7 @@ rule Molerats_Jul17_Sample_5 {
 }
 
 rule Molerats_Jul17_Sample_Dropper {
-   meta:
+meta:
       description = "Detects Molerats sample dropper SFX - July 2017"
       author = "Florian Roth"
       reference = "https://mymalwareparty.blogspot.de/2017/07/operation-desert-eagle.html"
@@ -98,3 +88,4 @@ rule Molerats_Jul17_Sample_Dropper {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 1000KB and all of them )
 }
+

@@ -1,15 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2015-08-04
-	Identifier: Terracotta APT
-	Comment: Reduced Rule Set
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Apolmy_Privesc_Trojan {
-	meta:
+meta:
 		description = "Apolmy Privilege Escalation Trojan used in APT Terracotta"
 		author = "Florian Roth"
 		reference = "https://blogs.rsa.com/terracotta-vpn-enabler-of-advanced-threat-anonymity/"
@@ -25,7 +15,7 @@ rule Apolmy_Privesc_Trojan {
 }
 
 rule Mithozhan_Trojan {
-	meta:
+meta:
 		description = "Mitozhan Trojan used in APT Terracotta"
 		author = "Florian Roth"
 		reference = "https://blogs.rsa.com/terracotta-vpn-enabler-of-advanced-threat-anonymity/"
@@ -41,7 +31,7 @@ rule Mithozhan_Trojan {
 }
 
 rule RemoteExec_Tool {
-	meta:
+meta:
 		description = "Remote Access Tool used in APT Terracotta"
 		author = "Florian Roth"
 		reference = "https://blogs.rsa.com/terracotta-vpn-enabler-of-advanced-threat-anonymity/"
@@ -58,10 +48,8 @@ rule RemoteExec_Tool {
 		uint16(0) == 0x5a4d and filesize < 75KB and 4 of ($s*)
 }
 
-/* Super Rules ------------------------------------------------------------- */
-
 rule LiuDoor_Malware_1 {
-	meta:
+meta:
 		description = "Liudoor Trojan used in Terracotta APT"
 		author = "Florian Roth"
 		reference = "https://blogs.rsa.com/terracotta-vpn-enabler-of-advanced-threat-anonymity/"
@@ -81,7 +69,7 @@ rule LiuDoor_Malware_1 {
 }
 
 rule LiuDoor_Malware_2 {
-	meta:
+meta:
 		description = "Liudoor Trojan used in Terracotta APT"
 		author = "Florian Roth"
 		reference = "https://blogs.rsa.com/terracotta-vpn-enabler-of-advanced-threat-anonymity/"
@@ -96,3 +84,4 @@ rule LiuDoor_Malware_2 {
 	condition:
 		uint16(0) == 0x5a4d and filesize < 100KB and all of them
 }
+

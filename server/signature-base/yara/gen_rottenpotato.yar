@@ -1,14 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-02-07
-   Identifier: Rotten Potato
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule RottenPotato_Potato {
-   meta:
+meta:
       description = "Detects a component of privilege escalation tool Rotten Potato - file Potato.exe"
       author = "Florian Roth"
       reference = "https://github.com/foxglovesec/RottenPotato"
@@ -29,3 +20,4 @@ rule RottenPotato_Potato {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 200KB and 1 of ($x*) ) or ( 2 of them )
 }
+

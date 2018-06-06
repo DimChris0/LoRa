@@ -1,15 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-07-15
-   Identifier: CHAOS
-   Reference: https://github.com/tiagorlampert/CHAOS
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule CHAOS_Payload {
-   meta:
+meta:
       description = "Detects a CHAOS back connect payload"
       author = "Florian Roth"
       reference = "https://github.com/tiagorlampert/CHAOS"
@@ -22,3 +12,4 @@ rule CHAOS_Payload {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 15000KB and all of them )
 }
+

@@ -1,15 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2018-01-21
-   Identifier: Envrial
-   Reference: https://twitter.com/malwrhunterteam/status/953313514629853184
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule MAL_Envrial_Jan18_1 {
-   meta:
+meta:
       description = "Detects Encrial credential stealer malware"
       author = "Florian Roth"
       reference = "https://twitter.com/malwrhunterteam/status/953313514629853184"
@@ -36,3 +26,4 @@ rule MAL_Envrial_Jan18_1 {
         2 of ($s*)
       )
 }
+

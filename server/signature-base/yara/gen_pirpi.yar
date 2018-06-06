@@ -1,14 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-09-08
-	Identifier: Pirpi
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Pirpi_1609_A {
-	meta:
+meta:
 		description = "Detects Pirpi Backdoor - and other malware (generic rule)"
 		author = "Florian Roth"
 		reference = "http://goo.gl/igxLyF"
@@ -41,7 +32,7 @@ rule Pirpi_1609_A {
 }
 
 rule Pirpi_1609_B {
-	meta:
+meta:
 		description = "Detects Pirpi Backdoor"
 		author = "Florian Roth"
 		reference = "http://goo.gl/igxLyF"
@@ -59,3 +50,4 @@ rule Pirpi_1609_B {
 	condition:
 		( uint16(0) == 0x5a4d and filesize < 1000KB and 2 of them ) or ( 4 of them )
 }
+

@@ -1,17 +1,6 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-09-12
-   Identifier: DragonFly
-   Reference: https://www.symantec.com/connect/blogs/dragonfly-western-energy-sector-targeted-sophisticated-attack-group
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 import "pe"
-
 rule Unspecified_Malware_Sep1_A1 {
-   meta:
+meta:
       description = "Detects malware from DrqgonFly APT report"
       author = "Florian Roth"
       reference = "https://www.symantec.com/connect/blogs/dragonfly-western-energy-sector-targeted-sophisticated-attack-group"
@@ -25,7 +14,7 @@ rule Unspecified_Malware_Sep1_A1 {
 }
 
 rule DragonFly_APT_Sep17_1 {
-   meta:
+meta:
       description = "Detects malware from DrqgonFly APT report"
       author = "Florian Roth"
       reference = "https://www.symantec.com/connect/blogs/dragonfly-western-energy-sector-targeted-sophisticated-attack-group"
@@ -40,7 +29,7 @@ rule DragonFly_APT_Sep17_1 {
 }
 
 rule DragonFly_APT_Sep17_2 {
-   meta:
+meta:
       description = "Detects malware from DrqgonFly APT report"
       author = "Florian Roth"
       reference = "https://www.symantec.com/connect/blogs/dragonfly-western-energy-sector-targeted-sophisticated-attack-group"
@@ -60,7 +49,7 @@ rule DragonFly_APT_Sep17_2 {
 }
 
 rule DragonFly_APT_Sep17_3 {
-   meta:
+meta:
       description = "Detects malware from DrqgonFly APT report"
       author = "Florian Roth"
       reference = "https://www.symantec.com/connect/blogs/dragonfly-western-energy-sector-targeted-sophisticated-attack-group"
@@ -81,7 +70,7 @@ rule DragonFly_APT_Sep17_3 {
 }
 
 rule DragonFly_APT_Sep17_4 {
-   meta:
+meta:
       description = "Detects malware from DrqgonFly APT report"
       author = "Florian Roth"
       reference = "https://www.symantec.com/connect/blogs/dragonfly-western-energy-sector-targeted-sophisticated-attack-group"
@@ -97,3 +86,4 @@ rule DragonFly_APT_Sep17_4 {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 60KB and all of them )
 }
+

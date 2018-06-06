@@ -1,7 +1,5 @@
-/* WATERBUG ----------------------------------------------------------------- */
-
 rule WaterBug_wipbot_2013_core_PDF {
-	meta:
+meta:
 		description = "Symantec Waterbug Attack - Trojan.Wipbot 2014 core PDF"
 		author = "Symantec Security Response"
 		date = "22.01.2015"
@@ -15,7 +13,7 @@ rule WaterBug_wipbot_2013_core_PDF {
 }
 
 rule WaterBug_wipbot_2013_dll {
-	meta:
+meta:
 		description = "Symantec Waterbug Attack - Trojan.Wipbot 2014 Down.dll component"
 		author = "Symantec Security Response"
 		date = "22.01.2015"
@@ -24,14 +22,14 @@ rule WaterBug_wipbot_2013_dll {
 		$string1 = "/%s?rank=%s"
 		$string2 = "ModuleStart\x00ModuleStop\x00start"
 		$string3 = "1156fd22-3443-4344-c4ffff"
-		//read file... error..
+		
 		$string4 = "read\x20file\x2E\x2E\x2E\x20error\x00\x00"
 	condition:
 		2 of them
 }
 
 rule WaterBug_wipbot_2013_core {
-	meta:
+meta:
 		description = "Symantec Waterbug Attack - Trojan.Wipbot core + core; garbage appended data (PDF Exploit leftovers) + wipbot dropper; fake AdobeRd32 Error"
 		author = "Symantec Security Response"
 		date = "22.01.2015"
@@ -46,7 +44,7 @@ rule WaterBug_wipbot_2013_core {
 }
 
 rule WaterBug_turla_dropper {
-	meta:
+meta:
 		description = "Symantec Waterbug Attack - Trojan Turla Dropper"
 		author = "Symantec Security Response"
 		date = "22.01.2015"
@@ -58,8 +56,8 @@ rule WaterBug_turla_dropper {
 		all of them
 }
 
-rule WaterBug_fa_malware { 
-	meta: 
+rule WaterBug_fa_malware {
+meta: 
 		description = "Symantec Waterbug Attack - FA malware variant"
 		author = "Symantec Security Response"
 		date = "22.01.2015"
@@ -76,38 +74,8 @@ rule WaterBug_fa_malware {
 		($mz at 0) and (any of ($string*))
 }
 
-/* pe module memory leak problem
-
-
-rule WaterBug_turla_dll {
-	meta: 
-		description = "Symantec Waterbug Attack - Trojan Turla DLL"
-		author = "Symantec Security Response"
-		date = "22.01.2015"
-		reference = "http://t.co/rF35OaAXrl"	
-	strings:
-		$a = /([A-Za-z0-9]{2,10}_){,2}Win32\.dll\x00/
-	condition:
-		pe.exports("ee") and $a
-}
-
-rule WaterBug_sav_dropper {
-	meta: 
-		description = "Symantec Waterbug Attack - SAV Dropper"
-		author = "Symantec Security Response"
-		date = "22.01.2015"
-		reference = "http://t.co/rF35OaAXrl" 
-	strings:
-		$mz = "MZ"
-		$a = /[a-z]{,10}_x64.sys\x00hMZ\x00/
-	condition:
-		($mz at 0) and uint32(0x400) == 0x000000c3 and pe.number_of_sections == 6 and $a 
-}
-
-*/ 
-
 rule WaterBug_sav {
-	meta: 
+meta: 
 		description = "Symantec Waterbug Attack - SAV Malware"
 		author = "Symantec Security Response"
 		date = "22.01.2015"
@@ -121,3 +89,4 @@ rule WaterBug_sav {
 	condition:
 		($mz at 0) and (($code1a or $code1b or $code1c) and $code2) 
 }
+

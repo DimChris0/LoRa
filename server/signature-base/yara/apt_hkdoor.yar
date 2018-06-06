@@ -1,15 +1,6 @@
 import "pe"
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-10-18
-   Identifier: HKDoor
-   Reference: https://www.cylance.com/en_us/blog/threat-spotlight-opening-hackers-door.html
-*/
-
 rule hkdoor_backdoor_dll {
-   meta:
+meta:
       description = "Hacker's Door Backdoor DLL"
       author = "Cylance Inc."
       reference = "https://www.cylance.com/en_us/blog/threat-spotlight-opening-hackers-door.html"
@@ -29,7 +20,7 @@ rule hkdoor_backdoor_dll {
 }
 
 rule hkdoor_backdoor {
-   meta:
+meta:
       description = "Hacker's Door Backdoor"
       author = "Cylance Inc."
       reference = "https://www.cylance.com/en_us/blog/threat-spotlight-opening-hackers-door.html"
@@ -49,7 +40,7 @@ rule hkdoor_backdoor {
 }
 
 rule hkdoor_dropper {
-   meta:
+meta:
       description = "Hacker's Door Dropper"
       author = "Cylance Inc."
       reference = "https://www.cylance.com/en_us/blog/threat-spotlight-opening-hackers-door.html"
@@ -74,7 +65,7 @@ rule hkdoor_dropper {
 }
 
 rule hkdoor_driver {
-   meta:
+meta:
       description = "Hacker's Door Driver"
    strings:
       $s1 = "ipfltdrv.sys" fullword ascii
@@ -87,3 +78,4 @@ rule hkdoor_driver {
       pe.subsystem == pe.SUBSYSTEM_NATIVE and
       ( 4 of ($s*) )
 }
+

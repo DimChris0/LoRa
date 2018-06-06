@@ -1,6 +1,5 @@
-
 rule SVG_LoadURL {
-	meta:
+meta:
 		description = "Detects a tiny SVG file that loads an URL (as seen in CryptoWall malware infections)"
 		author = "Florian Roth"
 		reference = "http://goo.gl/psjCCc"
@@ -18,5 +17,3 @@ rule SVG_LoadURL {
 		all of ($s*) and filesize < 600
 }
 
-		
-		

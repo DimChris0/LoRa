@@ -1,6 +1,5 @@
-
 rule ce_enfal_cmstar_debug_msg {
-	meta:
+meta:
 		author = "rfalcone"
 		description = "Detects the static debug strings within CMSTAR"
 		reference = "http://goo.gl/JucrP9"
@@ -17,3 +16,4 @@ rule ce_enfal_cmstar_debug_msg {
 	condition:
 		uint16(0) == 0x5a4d and all of ($d*)
 }
+

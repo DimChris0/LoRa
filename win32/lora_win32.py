@@ -135,7 +135,7 @@ class LoRa():
         for key, value in (tmpDict.iteritems()):
             for k, v in (value.iteritems()):
                 if k == "regex" or k == "regex_fp":
-                    if v:
+                    if v != "null":
                         value[k] = re.compile(v)
             self.filename_iocs.append(value)
 
@@ -440,6 +440,10 @@ class LoRa():
                         except Exception, e:
                             logger.log("ERROR", "Cannot YARA scan file: %s" % filePathCleaned)
 
+                    if args.clamav:
+                        clamavScan(filePath, extension)
+
+
                     # Info Line -----------------------------------------------------------------------
                     fileInfo = "FILE: %s SCORE: %s TYPE: %s SIZE: %s FIRST_BYTES: %s %s %s " % (
                         filePath, total_score, fileType, fileSize, firstBytesString, hashString, getAgeString(filePath))
@@ -462,10 +466,6 @@ class LoRa():
                             message_body += "REASON_{0}: {1}".format(i+1, r.encode('ascii', errors='replace'))
 
                     logger.log(message_type, message_body)
-
-
-                    if checkfor_clamav_sigs:
-                        clamavScan(filePath, extension)
 
                 except Exception, e:
                     if logger.debug:
@@ -1438,15 +1438,17 @@ def prefetch(tool_server, output_server, silent):
 
 
 def clamavScan(hexFile_to_check, extension):
-
     content = ""
+    hex_collection = ""
     clamDict = post('http://'+server+':'+str(server_port)+'/initclamsigs',  data={'client': t_hostname})
-    if clamDict.text == "":
-        content = []
+    tmp = ast.literal_eval(clamDict.text)
+    if tmp == None:
+        return
     else:
-        tmp = ast.literal_eval(clamDict.text)
-        content = tmp['entry']
+        hex_collection = tmp['entry']
 
+    with open(hexFile_to_check, 'rb') as f:
+        content = f.read()
 
     hexDump = (binascii.hexlify(content)).upper()
     #print hexDump
@@ -1455,10 +1457,8 @@ def clamavScan(hexFile_to_check, extension):
     dumpLen = len(hexDump)
     #file length in nibbles
     #print dumpLen
-    with open(sigFile, 'r') as s:
-    	sigs = s.read()
 
-    signature = re.split('\n',sigs) #create array split elements by new line
+    signature = re.split('\n', hex_collection) #create array split elements by new line
     #print len(signature)
 
     progress = [10,20,30,40,50,60,70,80,90,100]
@@ -1477,7 +1477,7 @@ def clamavScan(hexFile_to_check, extension):
     			sigLen = len(signature[x])
     			found = hexDump[i:i+sigLen]
     			if(hexDump[i:i+sigLen] == signature[x]): #found match
-    				print "Found possible ",extension," at byte offset ",i/2," with signature ",signature[x]
+    				logger.log('WARNING', "Possible Hex sig found in %s file, at byte offset %d with signature %s" % (hexFile_to_check, i/2, signature[x]))
 
 
 def walk_error(err):

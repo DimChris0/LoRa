@@ -1,8 +1,5 @@
-
-/* SnowGlobe Babar ---------------------------------------------------------- */
-
 rule SNOWGLOBE_Babar_Malware {
-	meta:
+meta:
 		description = "Detects the Babar Malware used in the SNOWGLOBE attacks - file babar.exe"
 		author = "Florian Roth"
 		reference = "http://motherboard.vice.com/read/meet-babar-a-new-malware-almost-certainly-created-by-france"
@@ -34,3 +31,4 @@ rule SNOWGLOBE_Babar_Malware {
 			( 3 of ($s*) and 4 of ($x*) )
 		)
 }
+

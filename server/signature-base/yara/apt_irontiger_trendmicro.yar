@@ -1,6 +1,5 @@
-rule IronTiger_ASPXSpy
-{
-	meta:
+rule IronTiger_ASPXSpy {
+meta:
 		author = "Cyber Safety Solutions, Trend Micro"
 		description = "ASPXSpy detection. It might be used by other fraudsters"
 		reference = "http://goo.gl/T5fSJC"
@@ -11,9 +10,8 @@ rule IronTiger_ASPXSpy
 		any of ($str*)
 }
 
-rule IronTiger_ChangePort_Toolkit_driversinstall
-{
-	meta:
+rule IronTiger_ChangePort_Toolkit_driversinstall {
+meta:
 		author = "Cyber Safety Solutions, Trend Micro"
 		description = "Iron Tiger Malware - Changeport Toolkit driverinstall"
 		reference = "http://goo.gl/T5fSJC"
@@ -26,9 +24,8 @@ rule IronTiger_ChangePort_Toolkit_driversinstall
 		uint16(0) == 0x5a4d and (2 of ($str*))
 }
 
-rule IronTiger_ChangePort_Toolkit_ChangePortExe
-{
-	meta:
+rule IronTiger_ChangePort_Toolkit_ChangePortExe {
+meta:
 		author = "Cyber Safety Solutions, Trend Micro"
 		description = "Iron Tiger Malware - Toolkit ChangePort"
 		reference = "http://goo.gl/T5fSJC"
@@ -42,9 +39,8 @@ rule IronTiger_ChangePort_Toolkit_ChangePortExe
 		uint16(0) == 0x5a4d and (2 of ($str*))
 }
 
-rule IronTiger_dllshellexc2010
-{
-	meta:
+rule IronTiger_dllshellexc2010 {
+meta:
 		author = "Cyber Safety Solutions, Trend Micro"
 		description = "dllshellexc2010 Exchange backdoor + remote shell"
 		reference = "http://goo.gl/T5fSJC"
@@ -58,9 +54,8 @@ rule IronTiger_dllshellexc2010
 		(uint16(0) == 0x5a4d) and ((any of ($str*)) or (all of ($bla*)))
 }
 
-rule IronTiger_dnstunnel
-{
-	meta:
+rule IronTiger_dnstunnel {
+meta:
 		author = "Cyber Safety Solutions, Trend Micro"
 		description = "This rule detects a dns tunnel tool used in Operation Iron Tiger"
 		reference = "http://goo.gl/T5fSJC"
@@ -78,9 +73,8 @@ rule IronTiger_dnstunnel
 		(uint16(0) == 0x5a4d) and ((any of ($str*)) or (any of ($mistake*)))
 }
 
-rule IronTiger_EFH3_encoder
-{
-	meta:
+rule IronTiger_EFH3_encoder {
+meta:
 		author = "Cyber Safety Solutions, Trend Micro"
 		description = "Iron Tiger EFH3 Encoder"
 		reference = "http://goo.gl/T5fSJC"
@@ -92,9 +86,8 @@ rule IronTiger_EFH3_encoder
 		uint16(0) == 0x5a4d and (any of ($str*))
 }
 
-rule IronTiger_GetPassword_x64
-{
-	meta:
+rule IronTiger_GetPassword_x64 {
+meta:
 		author = "Cyber Safety Solutions, Trend Micro"
 		description = "Iron Tiger Malware - GetPassword x64"
 		reference = "http://goo.gl/T5fSJC"
@@ -110,25 +103,8 @@ rule IronTiger_GetPassword_x64
 		uint16(0) == 0x5a4d and ((any of ($str*)) or (all of ($bla*)))
 }
 
-rule IronTiger_Gh0stRAT_variant
-{
-	meta:
-		author = "Cyber Safety Solutions, Trend Micro"
-		description = "This is a detection for a s.exe variant seen in Op. Iron Tiger"
-		reference = "http://goo.gl/T5fSJC"
-	strings:
-		$str1 = "Game Over Good Luck By Wind" nocase wide ascii
-		$str2 = "ReleiceName" nocase wide ascii
-		$str3 = "jingtisanmenxiachuanxiao.vbs" nocase wide ascii
-		$str4 = "Winds Update" nocase wide ascii
-	condition:
-		uint16(0) == 0x5a4d and (any of ($str*))
-		and not filename == "UpdateSystemMib.exe"
-}
-
-rule IronTiger_GTalk_Trojan
-{
-	meta:
+rule IronTiger_GTalk_Trojan {
+meta:
 		author = "Cyber Safety Solutions, Trend Micro"
 		description = "Iron Tiger Malware - GTalk Trojan"
 		reference = "http://goo.gl/T5fSJC"
@@ -141,9 +117,8 @@ rule IronTiger_GTalk_Trojan
 		uint16(0) == 0x5a4d and (2 of ($str*))
 }
 
-rule IronTiger_HTTP_SOCKS_Proxy_soexe
-{
-	meta:
+rule IronTiger_HTTP_SOCKS_Proxy_soexe {
+meta:
 		author = "Cyber Safety Solutions, Trend Micro"
 		description = "Iron Tiger Toolset - HTTP SOCKS Proxy soexe"
 		reference = "http://goo.gl/T5fSJC"
@@ -157,9 +132,8 @@ rule IronTiger_HTTP_SOCKS_Proxy_soexe
 		uint16(0) == 0x5a4d and (3 of ($str*))
 }
 
-rule IronTiger_NBDDos_Gh0stvariant_dropper
-{
-	meta:
+rule IronTiger_NBDDos_Gh0stvariant_dropper {
+meta:
 		author = "Cyber Safety Solutions, Trend Micro"
 		description = "Iron Tiger Malware - NBDDos Gh0stvariant Dropper"
 		reference = "http://goo.gl/T5fSJC"
@@ -173,9 +147,8 @@ rule IronTiger_NBDDos_Gh0stvariant_dropper
 		uint16(0) == 0x5a4d and ((any of ($str*)) or (all of ($bla*)))
 }
 
-rule IronTiger_PlugX_DosEmulator
-{
-	meta:
+rule IronTiger_PlugX_DosEmulator {
+meta:
 		author = "Cyber Safety Solutions, Trend Micro"
 		description = "Iron Tiger Malware - PlugX DosEmulator"
 		reference = "http://goo.gl/T5fSJC"
@@ -188,9 +161,8 @@ rule IronTiger_PlugX_DosEmulator
 		uint16(0) == 0x5a4d and (any of ($str*))
 }
 
-rule IronTiger_PlugX_FastProxy
-{
-	meta:
+rule IronTiger_PlugX_FastProxy {
+meta:
 		author = "Cyber Safety Solutions, Trend Micro"
 		description = "Iron Tiger Malware - PlugX FastProxy"
 		reference = "http://goo.gl/T5fSJC"
@@ -205,9 +177,8 @@ rule IronTiger_PlugX_FastProxy
 		uint16(0) == 0x5a4d and (any of ($str*))
 }
 
-rule IronTiger_PlugX_Server
-{
-	meta:
+rule IronTiger_PlugX_Server {
+meta:
 		author = "Cyber Safety Solutions, Trend Micro"
 		description = "Iron Tiger Malware - PlugX Server"
 		reference = "http://goo.gl/T5fSJC"
@@ -226,9 +197,8 @@ rule IronTiger_PlugX_Server
 		uint16(0) == 0x5a4d and (2 of ($str*))
 }
 
-rule IronTiger_ReadPWD86
-{
-	meta:
+rule IronTiger_ReadPWD86 {
+meta:
 		author = "Cyber Safety Solutions, Trend Micro"
 		description = "Iron Tiger Malware - ReadPWD86"
 		reference = "http://goo.gl/T5fSJC"
@@ -240,9 +210,8 @@ rule IronTiger_ReadPWD86
 		uint16(0) == 0x5a4d and (all of ($str*))
 }
 
-rule IronTiger_Ring_Gh0stvariant
-{
-	meta:
+rule IronTiger_Ring_Gh0stvariant {
+meta:
 		author = "Cyber Safety Solutions, Trend Micro"
 		description = "Iron Tiger Malware - Ring Gh0stvariant"
 		reference = "http://goo.gl/T5fSJC"
@@ -256,9 +225,8 @@ rule IronTiger_Ring_Gh0stvariant
 		uint16(0) == 0x5a4d and ((any of ($str*)) or (all of ($bla*)))
 }
 
-rule IronTiger_wmiexec
-{
-	meta:
+rule IronTiger_wmiexec {
+meta:
 		author = "Cyber Safety Solutions, Trend Micro"
 		description = "Iron Tiger Tool - wmi.vbs detection"
 		reference = "http://goo.gl/T5fSJC"
@@ -273,3 +241,4 @@ rule IronTiger_wmiexec
 	condition:
 		2 of ($str*)
 }
+

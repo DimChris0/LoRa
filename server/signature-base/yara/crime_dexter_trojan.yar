@@ -1,5 +1,5 @@
 rule Dexter_Malware {
-	meta:
+meta:
 		description = "Detects the Dexter Trojan/Agent http://goo.gl/oBvy8b"
 		author = "Florian Roth"
 		reference = "http://goo.gl/oBvy8b"
@@ -13,3 +13,4 @@ rule Dexter_Malware {
 	condition:
 		all of them
 }
+

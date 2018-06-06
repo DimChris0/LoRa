@@ -1,17 +1,6 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-09-08
-   Identifier: Rehashed RAT
-   Reference: https://blog.fortinet.com/2017/09/05/rehashed-rat-used-in-apt-campaign-against-vietnamese-organizations
-*/
-
 import "pe"
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Rehashed_RAT_1 {
-   meta:
+meta:
       description = "Detects malware from Rehashed RAT incident"
       author = "Florian Roth"
       reference = "https://blog.fortinet.com/2017/09/05/rehashed-rat-used-in-apt-campaign-against-vietnamese-organizations"
@@ -37,7 +26,7 @@ rule Rehashed_RAT_1 {
 }
 
 rule Rehashed_RAT_2 {
-   meta:
+meta:
       description = "Detects malware from Rehashed RAT incident"
       author = "Florian Roth"
       reference = "https://blog.fortinet.com/2017/09/05/rehashed-rat-used-in-apt-campaign-against-vietnamese-organizations"
@@ -63,7 +52,7 @@ rule Rehashed_RAT_2 {
 }
 
 rule Rehashed_RAT_3 {
-   meta:
+meta:
       description = "Detects malware from Rehashed RAT incident"
       author = "Florian Roth"
       reference = "https://blog.fortinet.com/2017/09/05/rehashed-rat-used-in-apt-campaign-against-vietnamese-organizations"
@@ -76,3 +65,4 @@ rule Rehashed_RAT_3 {
    condition:
       uint16(0) == 0x5a4d and filesize < 100KB and ( 1 of ($x*) or 2 of them )
 }
+

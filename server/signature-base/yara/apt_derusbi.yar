@@ -1,14 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Airbus Defence and Space Cybersecurity CSIRT - Fabien Perigaud
-	Date: 2015-12-09
-   Reference = http://blog.airbuscybersecurity.com/post/2015/11/Newcomers-in-the-Derusbi-family
-	Identifier: Derusbi Dez 2015
-*/
-
-rule derusbi_kernel
-{
-    meta:
+rule derusbi_kernel {
+meta:
         description = "Derusbi Driver version"
         date = "2015-12-09"
         author = "Airbus Defence and Space Cybersecurity CSIRT - Fabien Perigaud"
@@ -21,9 +12,8 @@ rule derusbi_kernel
         uint16(0) == 0x5A4D and $token1 and $token2 and $cfg and $class
 }
 
-rule derusbi_linux
-{
-    meta:
+rule derusbi_linux {
+meta:
         description = "Derusbi Server Linux version"
         date = "2015-12-09"
         author = "Airbus Defence and Space Cybersecurity CSIRT - Fabien Perigaud"
@@ -37,15 +27,8 @@ rule derusbi_linux
         $ELF at 0 and $PS1 and $cmd and $pname and $rkfile
 }
 
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2015-12-15
-	Identifier: Derusbi Dez 2015
-*/
-
 rule Derusbi_Kernel_Driver_WD_UDFS {
-	meta:
+meta:
 		description = "Detects Derusbi Kernel Driver"
 		author = "Florian Roth"
 		reference = "http://blog.airbuscybersecurity.com/post/2015/11/Newcomers-in-the-Derusbi-family"
@@ -76,7 +59,7 @@ rule Derusbi_Kernel_Driver_WD_UDFS {
 }
 
 rule Derusbi_Code_Signing_Cert {
-	meta:
+meta:
 		description = "Detects an executable signed with a certificate also used for Derusbi Trojan - suspicious"
 		author = "Florian Roth"
 		reference = "http://blog.airbuscybersecurity.com/post/2015/11/Newcomers-in-the-Derusbi-family"
@@ -91,30 +74,22 @@ rule Derusbi_Code_Signing_Cert {
 }
 
 rule XOR_4byte_Key {
-	meta:
+meta:
 		description = "Detects an executable encrypted with a 4 byte XOR (also used for Derusbi Trojan)"
 		author = "Florian Roth"
 		reference = "http://blog.airbuscybersecurity.com/post/2015/11/Newcomers-in-the-Derusbi-family"
 		date = "2015-12-15"
 		score = 60
    strings:
-      /* Op Code */
+      
       $s1 = { 85 C9 74 0A 31 06 01 1E 83 C6 04 49 EB F2 }
-      /*
-      test    ecx, ecx
-      jz      short loc_590170
-      xor     [esi], eax
-      add     [esi], ebx
-      add     esi, 4
-      dec     ecx
-      jmp     short loc_590162
-      */
+      
    condition:
       uint16(0) == 0x5a4d and filesize < 900KB and all of them
 }
 
 rule Derusbi_Backdoor_Mar17_1 {
-   meta:
+meta:
       description = "Detects a variant of the Derusbi backdoor"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -132,3 +107,4 @@ rule Derusbi_Backdoor_Mar17_1 {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 400KB and 1 of them )
 }
+

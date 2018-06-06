@@ -1,17 +1,6 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-10-03
-   Identifier: CMStar Threat Actor
-   Reference: https://goo.gl/pTffPA
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 import "pe"
-
 rule CMStar_Malware_Sep17 {
-   meta:
+meta:
       description = "Detects CMStar Malware"
       author = "Florian Roth"
       reference = "https://goo.gl/pTffPA"
@@ -27,3 +16,4 @@ rule CMStar_Malware_Sep17 {
          all of them
       )
 }
+

@@ -1,6 +1,5 @@
-
 rule PUP_InstallRex_AntiFWb {
-	meta:
+meta:
 		description = "Malware InstallRex / AntiFW"
 		author = "Florian Roth"
 		date = "2015-05-13"
@@ -15,3 +14,4 @@ rule PUP_InstallRex_AntiFWb {
 	condition:
 		uint16(0) == 0x5a4d and all of them
 }
+

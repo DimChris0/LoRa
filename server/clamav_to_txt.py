@@ -3,12 +3,6 @@
 #
 # Tested on Linux (Ubuntu), Windows XP/7, and Mac OS X
 #
-"""
-clamav_to_yara.py
-
-Created by Matthew Richard on 2010-03-12.
-Copyright (c) 2010 __MyCompanyName__. All rights reserved.
-"""
 
 import sys
 import os

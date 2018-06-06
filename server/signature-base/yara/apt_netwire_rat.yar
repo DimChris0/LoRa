@@ -1,15 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2018-01-05
-   Identifier: NetWire
-   Reference: https://pastebin.com/8qaiyPxs
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Susp_Indicators_EXE {
-   meta:
+meta:
       description = "Detects packed NullSoft Inst EXE with characteristics of NetWire RAT"
       author = "Florian Roth"
       reference = "https://pastebin.com/8qaiyPxs"
@@ -28,7 +18,7 @@ rule Susp_Indicators_EXE {
 }
 
 rule Suspicious_BAT_Strings {
-   meta:
+meta:
       description = "Detects a string also used in Netwire RAT auxilliary"
       author = "Florian Roth"
       score = 60
@@ -41,7 +31,7 @@ rule Suspicious_BAT_Strings {
 }
 
 rule Malicious_BAT_Strings {
-   meta:
+meta:
       description = "Detects a string also used in Netwire RAT auxilliary"
       author = "Florian Roth"
       score = 60
@@ -52,3 +42,4 @@ rule Malicious_BAT_Strings {
    condition:
       filesize < 600KB and 1 of them
 }
+

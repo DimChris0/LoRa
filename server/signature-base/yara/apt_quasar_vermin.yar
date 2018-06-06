@@ -1,15 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2018-01-29
-   Identifier: Vermin Keylogger and Quasar RAT
-   Reference: https://researchcenter.paloaltonetworks.com/2018/01/unit42-vermin-quasar-rat-custom-malware-used-ukraine/
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Quasar_RAT_Jan18_1 {
-   meta:
+meta:
       description = "Detects Quasar RAT"
       author = "Florian Roth"
       reference = "https://researchcenter.paloaltonetworks.com/2018/01/unit42-vermin-quasar-rat-custom-malware-used-ukraine/"
@@ -31,7 +21,7 @@ rule Quasar_RAT_Jan18_1 {
 }
 
 rule Vermin_Keylogger_Jan18_1 {
-   meta:
+meta:
       description = "Detects Vermin Keylogger"
       author = "Florian Roth"
       reference = "https://researchcenter.paloaltonetworks.com/2018/01/unit42-vermin-quasar-rat-custom-malware-used-ukraine/"
@@ -65,3 +55,4 @@ rule Vermin_Keylogger_Jan18_1 {
         3 of them
       )
 }
+

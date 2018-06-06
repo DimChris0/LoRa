@@ -1,18 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2014-11-23
-	Identifier: Regin
-
-	Warning: Don't use this rule set without excluding the false positive hashes listed in
-	         the file falsepositive-hashes.txt
-
-*/
-
-/* REGIN ---------------------------------------------------------------------------------- */
-
 rule Regin_APT_KernelDriver_Generic_A {
-	meta:
+meta:
 		description = "Generic rule for Regin APT kernel driver Malware - Symantec http://t.co/qu53359Cb2"
 		author = "@Malwrsignatures - included in APT Scanner THOR"
 		date = "23.11.14"
@@ -40,7 +27,7 @@ rule Regin_APT_KernelDriver_Generic_A {
 }
 
 rule Regin_APT_KernelDriver_Generic_B {
-	meta:
+meta:
 		description = "Generic rule for Regin APT kernel driver Malware - Symantec http://t.co/qu53359Cb2"
 		author = "@Malwrsignatures - included in APT Scanner THOR"
 		date = "23.11.14"
@@ -91,7 +78,7 @@ rule Regin_APT_KernelDriver_Generic_B {
 }
 
 rule Regin_APT_KernelDriver_Generic_C {
-	meta:
+meta:
 		description = "Generic rule for Regin APT kernel driver Malware - Symantec http://t.co/qu53359Cb2"
 		author = "@Malwrsignatures - included in APT Scanner THOR"
 		date = "23.11.14"
@@ -116,10 +103,8 @@ rule Regin_APT_KernelDriver_Generic_C {
 		and filesize < 20KB
 }
 
-/* Update 27.11.14 */
-
 rule Regin_sig_svcsstat {
-	meta:
+meta:
 		description = "Detects svcstat from Regin report - file svcsstat.exe_sample"
 		author = "@MalwrSignatures"
 		date = "26.11.14"
@@ -137,7 +122,7 @@ rule Regin_sig_svcsstat {
 }
 
 rule Regin_Sample_1 {
-	meta:
+meta:
 		description = "Auto-generated rule - file-3665415_sys"
 		author = "@MalwrSignatures"
 		date = "26.11.14"
@@ -164,7 +149,7 @@ rule Regin_Sample_1 {
 }
 
 rule Regin_Sample_2 {
-	meta:
+meta:
 		description = "Auto-generated rule - file hiddenmod_hookdisk_and_kdbg_8949d000.bin"
 		author = "@MalwrSignatures"
 		date = "26.11.14"
@@ -192,7 +177,7 @@ rule Regin_Sample_2 {
 }
 
 rule Regin_Sample_3 {
-	meta:
+meta:
 		description = "Detects Regin Backdoor sample fe1419e9dde6d479bd7cda27edd39fafdab2668d498931931a2769b370727129"
 		author = "@Malwrsignatures"
 		date = "27.11.14"
@@ -220,7 +205,7 @@ rule Regin_Sample_3 {
 }
 
 rule Regin_Sample_Set_1 {
-	meta:
+meta:
 		description = "Auto-generated rule - file SHF-000052 and ndisips.sys"
 		author = "@MalwrSignatures"
 		date = "26.11.14"
@@ -253,7 +238,7 @@ rule Regin_Sample_Set_1 {
 }
 
 rule Regin_Sample_Set_2 {
-	meta:
+meta:
 		description = "Detects Regin Backdoor sample"
 		author = "@MalwrSignatures"
 		date = "27.11.14"
@@ -284,7 +269,7 @@ rule Regin_Sample_Set_2 {
 }
 
 rule apt_regin_legspin {
-	meta:
+meta:
 	    copyright = "Kaspersky Lab"
 	    description = "Rule to detect Regin's Legspin module"
 	    version = "1.0"
@@ -306,7 +291,7 @@ rule apt_regin_legspin {
 }
 
 rule apt_regin_hopscotch {
-	meta:
+meta:
 	    copyright = "Kaspersky Lab"
 	    description = "Rule to detect Regin's Hopscotch module"
 	    version = "1.0"
@@ -330,7 +315,7 @@ rule apt_regin_hopscotch {
 }
 
 rule Regin_Related_Malware {
-	meta:
+meta:
 		description = "Malware Sample - maybe Regin related"
 		author = "Florian Roth"
 		score = 70
@@ -338,16 +323,17 @@ rule Regin_Related_Malware {
 		date = "2015-06-03"
 		hash = "76c355bfeb859a347e38da89e3d30a6ff1f94229"
 	strings:
-		$s1 = "%c%s%c -p %d -e %d -pv -c \"~~[%x] s; .%c%c%s %s /u %s_%d.dmp; q\"" fullword wide /* score: '22.015' */
+		$s1 = "%c%s%c -p %d -e %d -pv -c \"~~[%x] s; .%c%c%s %s /u %s_%d.dmp; q\"" fullword wide 
 
-		$s0 = "Software\\Microsoft\\Windows NT\\CurrentVersion\\HotFix" fullword wide /* PEStudio Blacklist: os */ /* score: '26.02' */
-		$s2 = "%x:%x:%x:%x:%x:%x:%x:%x%c" fullword ascii /* score: '13.01' */
-		$s3 = "disp.dll" fullword ascii /* score: '11.01' */
-		$s4 = "msvcrtd.dll" fullword ascii /* score: '11.005' */
-		$s5 = "%d.%d.%d.%d%c" fullword ascii /* score: '11.0' */
-		$s6 = "%ls_%08x" fullword wide /* score: '8.0' */
-		$s8 = "d%ls%ls" fullword wide /* score: '7.005' */
-		$s9 = "Memory location: 0x%p, size 0x%08x" fullword wide /* score: '6.025' */
+		$s0 = "Software\\Microsoft\\Windows NT\\CurrentVersion\\HotFix" fullword wide  
+		$s2 = "%x:%x:%x:%x:%x:%x:%x:%x%c" fullword ascii 
+		$s3 = "disp.dll" fullword ascii 
+		$s4 = "msvcrtd.dll" fullword ascii 
+		$s5 = "%d.%d.%d.%d%c" fullword ascii 
+		$s6 = "%ls_%08x" fullword wide 
+		$s8 = "d%ls%ls" fullword wide 
+		$s9 = "Memory location: 0x%p, size 0x%08x" fullword wide 
 	condition:
 		$s1 or 3 of ($s*)
 }
+

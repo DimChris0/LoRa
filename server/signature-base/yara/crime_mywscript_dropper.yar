@@ -1,14 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-07-27
-   Identifier: MyWScript
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule MyWScript_CompiledScript {
-   meta:
+meta:
       description = "Detects a scripte with default name Mywscript compiled with Script2Exe (can also be a McAfee tool https://community.mcafee.com/docs/DOC-4124)"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -22,3 +13,4 @@ rule MyWScript_CompiledScript {
    condition:
       uint16(0) == 0x5a4d and filesize < 800KB and ( $x1 or 2 of them )
 }
+

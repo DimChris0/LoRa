@@ -1,17 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-08-09
-   Identifier: Cobalt Gang
-   Reference: Internal Research
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
-/* Removed Beacon rules - only in THOR */
-
 rule CobaltStrike_CN_Group_BeaconDropper_Aug17 {
-   meta:
+meta:
       description = "Detects Script Dropper of Cobalt Gang used in August 2017"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -35,7 +23,7 @@ rule CobaltStrike_CN_Group_BeaconDropper_Aug17 {
 }
 
 rule CobaltGang_Malware_Aug17_1 {
-   meta:
+meta:
       description = "Detects a Cobalt Gang malware"
       author = "Florian Roth"
       reference = "https://sslbl.abuse.ch/intel/6ece5ece4192683d2d84e25b0ba7e04f9cb7eb7c"
@@ -51,7 +39,7 @@ rule CobaltGang_Malware_Aug17_1 {
 }
 
 rule CobaltGang_Malware_Aug17_2 {
-   meta:
+meta:
       description = "Detects a Cobalt Gang malware"
       author = "Florian Roth"
       reference = "https://sslbl.abuse.ch/intel/6ece5ece4192683d2d84e25b0ba7e04f9cb7eb7c"
@@ -62,3 +50,4 @@ rule CobaltGang_Malware_Aug17_2 {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 80KB and all of them )
 }
+

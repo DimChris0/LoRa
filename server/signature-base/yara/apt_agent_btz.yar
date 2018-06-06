@@ -1,17 +1,6 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-08-07
-   Identifier: Agent BTZ
-   Reference: http://www.intezer.com/new-variants-of-agent-btz-comrat-found/
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 import "pe"
-
 rule Agent_BTZ_Proxy_DLL_1 {
-   meta:
+meta:
       description = "Detects Agent-BTZ Proxy DLL - activeds.dll"
       author = "Florian Roth"
       reference = "http://www.intezer.com/new-variants-of-agent-btz-comrat-found/"
@@ -25,7 +14,7 @@ rule Agent_BTZ_Proxy_DLL_1 {
 }
 
 rule Agent_BTZ_Proxy_DLL_2 {
-   meta:
+meta:
       description = "Detects Agent-BTZ Proxy DLL - activeds.dll"
       author = "Florian Roth"
       reference = "http://www.intezer.com/new-variants-of-agent-btz-comrat-found/"
@@ -49,7 +38,7 @@ rule Agent_BTZ_Proxy_DLL_2 {
 }
 
 rule Agent_BTZ_Aug17 {
-   meta:
+meta:
       description = "Detects Agent.BTZ"
       author = "Florian Roth"
       reference = "http://www.intezer.com/new-variants-of-agent-btz-comrat-found/"
@@ -67,3 +56,4 @@ rule Agent_BTZ_Aug17 {
          pe.exports("Entry") and pe.exports("InstallW") and pe.exports("UnInstallW")
       )
 }
+

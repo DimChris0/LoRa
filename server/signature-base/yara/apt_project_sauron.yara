@@ -1,8 +1,7 @@
 import "pe"
 import "math"
-
-rule apt_ProjectSauron_pipe_backdoor  {
-	meta:
+rule apt_ProjectSauron_pipe_backdoor {
+meta:
 		copyright = "Kaspersky Lab"
 		description = "Rule to detect ProjectSauron pipe backdoors"
 		version = "1.0"
@@ -19,7 +18,7 @@ rule apt_ProjectSauron_pipe_backdoor  {
 		and filesize < 100000
 }
 
-rule apt_ProjectSauron_encrypted_LSA  {
+rule apt_ProjectSauron_encrypted_LSA {
 meta:
 	copyright = "Kaspersky Lab"
 	description = "Rule to detect ProjectSauron encrypted LSA samples"
@@ -44,7 +43,7 @@ condition:
 	and filesize < 1000000
 }
 
-rule apt_ProjectSauron_encrypted_SSPI  {
+rule apt_ProjectSauron_encrypted_SSPI {
 meta:
 	copyright = "Kaspersky Lab"
 	description = "Rule to detect encrypted ProjectSauron SSPI samples"
@@ -59,7 +58,7 @@ condition:
 	math.entropy(0x400, filesize) >= 7.5
 }
 
-rule apt_ProjectSauron_MyTrampoline  {
+rule apt_ProjectSauron_MyTrampoline {
 meta:
 	copyright = "Kaspersky Lab"
 	description = "Rule to detect ProjectSauron MyTrampoline module"
@@ -78,7 +77,7 @@ condition:
 	(all of ($a*) or any of ($b*))
 }
 
-rule apt_ProjectSauron_encrypted_container  {
+rule apt_ProjectSauron_encrypted_container {
 meta:
 	copyright = "Kaspersky Lab"
 	description = "Rule to detect ProjectSauron samples encrypted container"
@@ -97,7 +96,7 @@ condition:
 	(filesize > 0x400) and filesize < 10000000
 }
 
-rule apt_ProjectSauron_encryption  {
+rule apt_ProjectSauron_encryption {
 meta:
 	copyright = "Kaspersky Lab"
 	description = "Rule to detect ProjectSauron string encryption"
@@ -135,3 +134,4 @@ condition:
 	(all of them) and
 	filesize < 400000
 }
+

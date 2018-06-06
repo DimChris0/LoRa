@@ -1,6 +1,5 @@
-
 rule merlinAgent {
-	meta:
+meta:
 		description = "Detects Merlin agent"
 		filetype = "pe, elf, mach"
 		author = "Hilko Bengen"
@@ -24,3 +23,4 @@ rule merlinAgent {
 	condition:
 		1 of ($x*) or 4 of them
 }
+

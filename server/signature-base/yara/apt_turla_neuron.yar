@@ -1,13 +1,5 @@
-/*
-   Yara Rule Set
-   Author: NCSC UK
-   Date: 2017-11-23
-   Identifier: Turla Neuron
-   Reference: https://www.ncsc.gov.uk/alerts/turla-group-malware
-*/
-
 rule Neuron_common_strings {
-    meta:
+meta:
         description = "Rule for detection of Neuron based on commonly used strings"
         author = "NCSC UK"
         hash = "d1d7a96fcadc137e80ad866c838502713db9cdfe59939342b8e3beacf9c7fe29"
@@ -31,7 +23,7 @@ rule Neuron_common_strings {
 }
 
 rule Neuron_standalone_signature {
-    meta:
+meta:
         description = "Rule for detection of Neuron based on a standalone signature from .NET metadata"
         author = "NCSC UK"
         hash = "d1d7a96fcadc137e80ad866c838502713db9cdfe59939342b8e3beacf9c7fe29"
@@ -45,7 +37,7 @@ rule Neuron_standalone_signature {
 }
 
 rule Nautilus_modified_rc4_loop {
-    meta:
+meta:
         description = "Rule for detection of Nautilus based on assembly code for a modified RC4 loop"
         author = "NCSC UK"
         hash = "a415ab193f6cd832a0de4fcc48d5f53d6f0b06d5e13b3c359878c6c31f3e7ec3"
@@ -58,7 +50,7 @@ rule Nautilus_modified_rc4_loop {
 }
 
 rule Nautilus_rc4_key {
-    meta:
+meta:
         description = "Rule for detection of Nautilus based on a hardcoded RC4 key"
         author = "NCSC UK"
         hash = "a415ab193f6cd832a0de4fcc48d5f53d6f0b06d5e13b3c359878c6c31f3e7ec3"
@@ -71,7 +63,7 @@ rule Nautilus_rc4_key {
 }
 
 rule Nautilus_common_strings {
-    meta:
+meta:
         description = "Rule for detection of Nautilus based on common plaintext strings"
         author = "NCSC UK"
         hash = "a415ab193f6cd832a0de4fcc48d5f53d6f0b06d5e13b3c359878c6c31f3e7ec3"
@@ -88,10 +80,8 @@ rule Nautilus_common_strings {
         (uint16(0) == 0x5A4D and uint16(uint32(0x3c)) == 0x4550) and 3 of them
 }
 
-/* Forensic Artifacts */
-
 rule Nautilus_forensic_artificats {
-    meta:
+meta:
         description = "Rule for detection of Nautilus related strings"
         author = "NCSC UK / Florian Roth"
         date = "2017/11/23"
@@ -105,8 +95,6 @@ rule Nautilus_forensic_artificats {
         $ = "Convert.FromBase64String(temp[1])" fullword ascii
         $ = "D68gq#5p0(3Ndsk!" fullword ascii
         $ = "dcomnetsrv" fullword ascii
-        $ = "errorFE.aspx" fullword ascii
-        $ = "errorfe.aspx.f5dba9b9.compiled" fullword ascii
         $ = "ERRORF~1.ASP" fullword ascii
         $ = "intelliAdminRpc" fullword ascii
         $ = "J8fs4F4rnP7nFl#f" fullword ascii
@@ -120,3 +108,4 @@ rule Nautilus_forensic_artificats {
     condition:
         1 of them
 }
+

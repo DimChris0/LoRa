@@ -1,16 +1,5 @@
-/*
-
-   Generic Anomalies
-
-   Florian Roth
-   BSK Consulting GmbH
-
-	License: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
-	Copyright and related rights waived via https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-*/
 rule Embedded_EXE_Cloaking {
-        meta:
+meta:
                 description = "Detects an embedded executable in a non-executable file"
                 author = "Florian Roth"
                 date = "2015/02/27"
@@ -37,7 +26,7 @@ rule Embedded_EXE_Cloaking {
 }
 
 rule Cloaked_as_JPG {
-   meta:
+meta:
       description = "Detects a cloaked file as JPG"
       author = "Florian Roth (eval section from Didier Stevens)"
       date = "2015/02/29"
@@ -47,22 +36,15 @@ rule Cloaked_as_JPG {
    condition:
       uint16be(0x00) != 0xFFD8 and
       extension matches /\.jpg/i and
-      filetype != "GIF" and
+      not uint32be(0) == 0x4749463839 and /* GIF Header */
       /* and
       not filepath contains "ASP.NET" */
       not $fp1 in (0..30) and
       not uint32be(0) == 0x89504E47 /* PNG Header */
 }
 
-/*
-    Yara Rule Set
-    Author: Florian Roth
-    Date: 2015-12-21
-    Identifier: Uncommon File Sizes
-*/
-
 rule Suspicious_Size_explorer_exe {
-    meta:
+meta:
         description = "Detects uncommon file size of explorer.exe"
         author = "Florian Roth"
         score = 60
@@ -75,7 +57,7 @@ rule Suspicious_Size_explorer_exe {
 }
 
 rule Suspicious_Size_chrome_exe {
-    meta:
+meta:
         description = "Detects uncommon file size of chrome.exe"
         author = "Florian Roth"
         score = 60
@@ -87,7 +69,7 @@ rule Suspicious_Size_chrome_exe {
 }
 
 rule Suspicious_Size_csrss_exe {
-    meta:
+meta:
         description = "Detects uncommon file size of csrss.exe"
         author = "Florian Roth"
         score = 60
@@ -99,7 +81,7 @@ rule Suspicious_Size_csrss_exe {
 }
 
 rule Suspicious_Size_iexplore_exe {
-    meta:
+meta:
         description = "Detects uncommon file size of iexplore.exe"
         author = "Florian Roth"
         score = 60
@@ -112,7 +94,7 @@ rule Suspicious_Size_iexplore_exe {
 }
 
 rule Suspicious_Size_firefox_exe {
-    meta:
+meta:
         description = "Detects uncommon file size of firefox.exe"
         author = "Florian Roth"
         score = 60
@@ -124,7 +106,7 @@ rule Suspicious_Size_firefox_exe {
 }
 
 rule Suspicious_Size_java_exe {
-    meta:
+meta:
         description = "Detects uncommon file size of java.exe"
         author = "Florian Roth"
         score = 60
@@ -136,7 +118,7 @@ rule Suspicious_Size_java_exe {
 }
 
 rule Suspicious_Size_lsass_exe {
-    meta:
+meta:
         description = "Detects uncommon file size of lsass.exe"
         author = "Florian Roth"
         score = 60
@@ -148,7 +130,7 @@ rule Suspicious_Size_lsass_exe {
 }
 
 rule Suspicious_Size_svchost_exe {
-    meta:
+meta:
         description = "Detects uncommon file size of svchost.exe"
         author = "Florian Roth"
         score = 60
@@ -160,7 +142,7 @@ rule Suspicious_Size_svchost_exe {
 }
 
 rule Suspicious_Size_winlogon_exe {
-    meta:
+meta:
         description = "Detects uncommon file size of winlogon.exe"
         author = "Florian Roth"
         score = 60
@@ -172,7 +154,7 @@ rule Suspicious_Size_winlogon_exe {
 }
 
 rule Suspicious_Size_igfxhk_exe {
-    meta:
+meta:
         description = "Detects uncommon file size of igfxhk.exe"
         author = "Florian Roth"
         score = 60
@@ -184,7 +166,7 @@ rule Suspicious_Size_igfxhk_exe {
 }
 
 rule Suspicious_Size_servicehost_dll {
-    meta:
+meta:
         description = "Detects uncommon file size of servicehost.dll"
         author = "Florian Roth"
         score = 60
@@ -196,7 +178,7 @@ rule Suspicious_Size_servicehost_dll {
 }
 
 rule Suspicious_Size_rundll32_exe {
-    meta:
+meta:
         description = "Detects uncommon file size of rundll32.exe"
         author = "Florian Roth"
         score = 60
@@ -208,7 +190,7 @@ rule Suspicious_Size_rundll32_exe {
 }
 
 rule Suspicious_Size_taskhost_exe {
-    meta:
+meta:
         description = "Detects uncommon file size of taskhost.exe"
         author = "Florian Roth"
         score = 60
@@ -216,11 +198,11 @@ rule Suspicious_Size_taskhost_exe {
     condition:
         uint16(0) == 0x5a4d
         and filename == "taskhost.exe"
-        and ( filesize < 45KB or filesize > 85KB )
+        and ( filesize < 45KB or filesize > 120KB )
 }
 
 rule Suspicious_Size_spoolsv_exe {
-    meta:
+meta:
         description = "Detects uncommon file size of spoolsv.exe"
         author = "Florian Roth"
         score = 60
@@ -232,7 +214,7 @@ rule Suspicious_Size_spoolsv_exe {
 }
 
 rule Suspicious_Size_smss_exe {
-    meta:
+meta:
         description = "Detects uncommon file size of smss.exe"
         author = "Florian Roth"
         score = 60
@@ -244,7 +226,7 @@ rule Suspicious_Size_smss_exe {
 }
 
 rule Suspicious_Size_wininit_exe {
-    meta:
+meta:
         description = "Detects uncommon file size of wininit.exe"
         author = "Florian Roth"
         score = 60
@@ -256,7 +238,7 @@ rule Suspicious_Size_wininit_exe {
 }
 
 rule Suspicious_AutoIt_by_Microsoft {
-   meta:
+meta:
       description = "Detects a AutoIt script with Microsoft identification"
       author = "Florian Roth"
       reference = "Internal Research - VT"
@@ -269,3 +251,4 @@ rule Suspicious_AutoIt_by_Microsoft {
    condition:
       uint16(0) == 0x5a4d and filesize < 2000KB and all of them
 }
+

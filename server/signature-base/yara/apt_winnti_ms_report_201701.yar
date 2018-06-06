@@ -1,14 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-01-25
-   Identifier: Winnti MS Report
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Winnti_fonfig {
-   meta:
+meta:
       description = "Winnti sample - file fonfig.exe"
       author = "Florian Roth"
       reference = "https://goo.gl/VbvJtL"
@@ -22,7 +13,7 @@ rule Winnti_fonfig {
 }
 
 rule Winnti_NlaifSvc {
-   meta:
+meta:
       description = "Winnti sample - file NlaifSvc.dll"
       author = "Florian Roth"
       reference = "https://goo.gl/VbvJtL"
@@ -36,3 +27,4 @@ rule Winnti_NlaifSvc {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 900KB and ( 1 of ($x*) or 2 of them ) ) or ( 3 of them )
 }
+

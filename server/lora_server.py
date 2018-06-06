@@ -75,7 +75,6 @@ app_path = get_application_path()
 # Yara rule directories
 yara_rule_directories = []
 yara_rule_directories.append(os.path.join(app_path, 'signature-base\\yara'))
-yara_rule_directories.append(os.path.join(app_path, 'signature-base\\clamav-unofficial-sigs'))
 
 
 # Set IOC path
@@ -193,7 +192,8 @@ def index():
                                 })
                                 (loggers[client]).log("INFO", "Initializing Yara rule %s" % file)
                             except Exception, e:
-                                (loggers[client]).log("ERROR", "Error while initializing Yara rule %s" % file)
+                                (loggers[client]).log("ERROR", "Error while initializing Yara rule %s, deleting it..." % file)
+                                os.remove("./signature-base/yara/" + file)
                                 traceback.print_exc()
                                 if (loggers[client]).debug:
                                     sys.exit(1)
@@ -240,7 +240,7 @@ def index():
         f.close()
     except IOError:
         (loggers[client]).log( "ERROR", "The output file requested doesn't exist.")
-    return""
+    return ""
 
 @post('/putpid')
 def index():
@@ -260,7 +260,7 @@ def index():
         f.close()
     except IOError:
         (loggers[client]).log( "ERROR", "The output file requested doesn't exist")
-    return""
+    return ""
 
 
 @post('/getfilenameiocs')
@@ -322,7 +322,6 @@ def index():
                                 fioc = {'regex': regex, 'score': score, 'description': desc, 'regex_fp': "null"}
                             else:
                                 fioc = {'regex': regex, 'score': score, 'description': desc, 'regex_fp': regex_fp_comp}
-
                             filename_iocs["a" + str(counter)] = fioc
                             counter += 1
 
@@ -519,7 +518,7 @@ def index():
 
 
 @post('/initclamsigs')
-def index:
+def index():
     client = request.forms.get('client')
     result = {}
     try:

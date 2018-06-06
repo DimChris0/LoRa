@@ -1,15 +1,6 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-10-18
-   Identifier: OilRig
-   Reference: https://researchcenter.paloaltonetworks.com/2017/10/unit42-oilrig-group-steps-attacks-new-delivery-documents-new-injector-trojan/
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
+import "pe"
 rule OilRig_Strings_Oct17 {
-   meta:
+meta:
       description = "Detects strings from OilRig malware and malicious scripts"
       author = "Florian Roth"
       reference = "https://researchcenter.paloaltonetworks.com/2017/10/unit42-oilrig-group-steps-attacks-new-delivery-documents-new-injector-trojan/"
@@ -24,20 +15,8 @@ rule OilRig_Strings_Oct17 {
       filesize < 800KB and 1 of them
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-10-18
-   Identifier: OilRig
-   Reference: https://goo.gl/JQVfFP
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
-import "pe"
-
 rule OilRig_ISMAgent_Campaign_Samples1 {
-   meta:
+meta:
       description = "Detects OilRig malware from Unit 42 report in October 2017"
       author = "Florian Roth"
       reference = "https://goo.gl/JQVfFP"
@@ -56,7 +35,7 @@ rule OilRig_ISMAgent_Campaign_Samples1 {
 }
 
 rule OilRig_ISMAgent_Campaign_Samples2 {
-   meta:
+meta:
       description = "Detects OilRig malware from Unit 42 report in October 2017"
       author = "Florian Roth"
       reference = "https://goo.gl/JQVfFP"
@@ -75,7 +54,7 @@ rule OilRig_ISMAgent_Campaign_Samples2 {
 }
 
 rule OilRig_ISMAgent_Campaign_Samples3 {
-   meta:
+meta:
       description = "Detects OilRig malware from Unit 42 report in October 2017"
       author = "Florian Roth"
       reference = "https://goo.gl/JQVfFP"
@@ -105,3 +84,4 @@ rule OilRig_ISMAgent_Campaign_Samples3 {
          ( 1 of ($x*) or 3 of them )
       )
 }
+

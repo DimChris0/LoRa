@@ -1,16 +1,5 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-12-07
-   Identifier: APT 34
-   Reference: https://www.fireeye.com/blog/threat-research/2017/12/targeted-attack-in-middle-east-by-apt34.html
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule APT34_Malware_HTA {
-   meta:
+meta:
       description = "Detects APT 34 malware"
       author = "Florian Roth"
       reference = "https://www.fireeye.com/blog/threat-research/2017/12/targeted-attack-in-middle-east-by-apt34.html"
@@ -30,7 +19,7 @@ rule APT34_Malware_HTA {
 }
 
 rule APT34_Malware_Exeruner {
-   meta:
+meta:
       description = "Detects APT 34 malware"
       author = "Florian Roth"
       reference = "https://www.fireeye.com/blog/threat-research/2017/12/targeted-attack-in-middle-east-by-apt34.html"
@@ -53,3 +42,4 @@ rule APT34_Malware_Exeruner {
    condition:
       uint16(0) == 0x5a4d and filesize < 100KB and 1 of them
 }
+

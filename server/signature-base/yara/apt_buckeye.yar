@@ -1,14 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-09-05
-	Identifier: Buckeye
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Buckeye_Osinfo {
-	meta:
+meta:
 		description = "Detects OSinfo tool used by the Buckeye APT group"
 		author = "Florian Roth"
 		reference = "http://www.symantec.com/connect/blogs/buckeye-cyberespionage-group-shifts-gaze-us-hong-kong"
@@ -26,7 +17,7 @@ rule Buckeye_Osinfo {
 }
 
 rule RemoteCmd {
-	meta:
+meta:
 		description = "Detects a remote access tool used by APT groups - file RemoteCmd.exe"
 		author = "Florian Roth"
 		reference = "http://goo.gl/igxLyF"
@@ -44,7 +35,7 @@ rule RemoteCmd {
 }
 
 rule ChromePass {
-	meta:
+meta:
 		description = "Detects a tool used by APT groups - file ChromePass.exe"
 		author = "Florian Roth"
 		reference = "http://goo.gl/igxLyF"
@@ -66,3 +57,4 @@ rule ChromePass {
 	condition:
 		( uint16(0) == 0x5a4d and filesize < 700KB and 1 of ($x*) ) or ( 5 of them )
 }
+

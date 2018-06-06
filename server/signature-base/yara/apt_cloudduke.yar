@@ -1,14 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2015-07-22
-	Identifier: CloudDuke
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule CloudDuke_Malware {
-	meta:
+meta:
 		description = "Detects CloudDuke Malware"
 		author = "Florian Roth"
 		reference = "https://www.f-secure.com/weblog/archives/00002822.html"
@@ -35,29 +26,8 @@ rule CloudDuke_Malware {
 		uint16(0) == 0x5a4d and filesize < 720KB and 4 of ($s*) and 1 of ($op*)
 }
 
-/* Inverse Rules ----------------------------------------------------------- */
-/* Warning: this rule works with the external variable 'filename' only       */
-
-rule Acrotray_Anomaly {
-	meta:
-		description = "Detects an acrotray.exe that does not contain the usual strings"
-		author = "Florian Roth"
-		score = 75
-	strings:
-		$s1 = "PDF/X-3:2002" fullword wide
-		$s2 = "AcroTray - Adobe Acrobat Distiller helper application" fullword wide
-		$s3 = "MS Sans Serif" fullword wide
-		$s4 = "COOLTYPE.DLL" fullword ascii
-	condition:
-		uint16(0) == 0x5a4d and filesize < 3000KB 
-		and ( filename == "acrotray.exe" or filename == "AcroTray.exe" )
-		and not all of ($s*) 	
-}
-
-/* Super Rules ------------------------------------------------------------- */
-
 rule SFXRAR_Acrotray {
-	meta:
+meta:
 		description = "Most likely a malicious file acrotray in SFX RAR / CloudDuke APT 5442.1.exe, 5442.2.exe"
 		author = "Florian Roth"
 		reference = "https://www.f-secure.com/weblog/archives/00002822.html"
@@ -68,10 +38,11 @@ rule SFXRAR_Acrotray {
 		hash2 = "5d695ff02202808805da942e484caa7c1dc68e6d9c3d77dc383cfa0617e61e48"
 		hash3 = "56531cc133e7a760b238aadc5b7a622cd11c835a3e6b78079d825d417fb02198"
 	strings:
-		$s1 = "winrarsfxmappingfile.tmp" fullword wide /* PEStudio Blacklist: strings */
-		$s2 = "GETPASSWORD1" fullword wide /* PEStudio Blacklist: strings */
+		$s1 = "winrarsfxmappingfile.tmp" fullword wide 
+		$s2 = "GETPASSWORD1" fullword wide 
 		$s3 = "acrotray.exe" fullword ascii
-		$s4 = "CryptUnprotectMemory failed" fullword wide /* PEStudio Blacklist: strings */
+		$s4 = "CryptUnprotectMemory failed" fullword wide 
 	condition:
 		uint16(0) == 0x5a4d and filesize < 2449KB and all of them
 }
+

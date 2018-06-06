@@ -1,17 +1,6 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-08-15
-   Identifier: ShadowPad
-   Reference: https://securelist.com/shadowpad-in-corporate-networks/81432/
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 import "pe"
-
 rule ShadowPad_nssock2 {
-   meta:
+meta:
       description = "Detects malicious nssock2.dll from ShadowPad incident - file nssock2.dll"
       author = "Florian Roth"
       reference = "https://securelist.com/shadowpad-in-corporate-networks/81432/"
@@ -31,3 +20,4 @@ rule ShadowPad_nssock2 {
         )
       )
 }
+

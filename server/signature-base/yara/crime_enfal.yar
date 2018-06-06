@@ -1,5 +1,5 @@
 rule Enfal_Malware {
-	meta:
+meta:
 		description = "Detects a certain type of Enfal Malware"
 		author = "Florian Roth"
 		reference = "not set"
@@ -21,7 +21,7 @@ rule Enfal_Malware {
 }
 
 rule Enfal_Malware_Backdoor {
-	meta:
+meta:
 		description = "Generic Rule to detect the Enfal Malware"
 		author = "Florian Roth"
 		date = "2015/02/10"
@@ -51,3 +51,4 @@ rule Enfal_Malware_Backdoor {
 			( all of ($s*) and all of ($z*) )
 		)
 }
+

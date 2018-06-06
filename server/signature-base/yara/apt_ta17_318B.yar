@@ -1,13 +1,6 @@
-/*
-   Yara Rule Set
-   Author: US CERT
-   Date: 2017-11-15
-   Identifier: Hidden Cobra Fall Chill
-   Reference: https://www.us-cert.gov/ncas/alerts/TA17-318B
-*/
-
+import "pe"
 rule TA17_318B_volgmer {
-   meta:
+meta:
       description = "Malformed User Agent in Volgmer malware"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/alerts/TA17-318B"
@@ -18,20 +11,8 @@ rule TA17_318B_volgmer {
       ( uint16(0) == 0x5A4D and uint16(uint32(0x3c)) == 0x4550 ) and $s
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-11-15
-   Identifier:
-   Reference: https://www.us-cert.gov/ncas/alerts/TA17-318B
-*/
-
-import "pe"
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Volgmer_Malware {
-   meta:
+meta:
       description = "Detects Volgmer malware as reported in US CERT TA17-318B"
       author = "Florian Roth"
       reference = "https://www.us-cert.gov/ncas/alerts/TA17-318B"
@@ -60,9 +41,10 @@ rule Volgmer_Malware {
       $s8 = "DLL_Spider.dll" fullword ascii
    condition:
       filesize < 400KB and (
-         1 of ($x*) or /* Very specific strings */
-         ( uint16(0) == 0x5a4d and 2 of them ) /* Others combined with the MZ header */
+         1 of ($x*) or 
+         ( uint16(0) == 0x5a4d and 2 of them ) 
       ) or
-      /* Imphash */
+      
       ( uint16(0) == 0x5a4d and pe.imphash() == "ea42395e901b33bad504798e0f0fd74b" )
 }
+

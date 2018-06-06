@@ -1,16 +1,6 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2016-10-12
-   Identifier: OilRig Malware Campaign
-*/
-
 import "pe"
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule OilRig_Malware_Campaign_Gen1 {
-   meta:
+meta:
       description = "Detects malware from OilRig Campaign"
       author = "Florian Roth"
       reference = "https://goo.gl/QMRZ8K"
@@ -65,7 +55,7 @@ rule OilRig_Malware_Campaign_Gen1 {
 }
 
 rule OilRig_Malware_Campaign_Mal1 {
-   meta:
+meta:
       description = "Detects malware from OilRig Campaign"
       author = "Florian Roth"
       reference = "https://goo.gl/QMRZ8K"
@@ -82,7 +72,7 @@ rule OilRig_Malware_Campaign_Mal1 {
 }
 
 rule OilRig_Malware_Campaign_Gen2 {
-   meta:
+meta:
       description = "Detects malware from OilRig Campaign"
       author = "Florian Roth"
       reference = "https://goo.gl/QMRZ8K"
@@ -104,7 +94,7 @@ rule OilRig_Malware_Campaign_Gen2 {
 }
 
 rule OilRig_Malware_Campaign_Gen3 {
-   meta:
+meta:
       description = "Detects malware from OilRig Campaign"
       author = "Florian Roth"
       reference = "https://goo.gl/QMRZ8K"
@@ -121,7 +111,7 @@ rule OilRig_Malware_Campaign_Gen3 {
 }
 
 rule OilRig_Malware_Campaign_Mal2 {
-   meta:
+meta:
       description = "Detects malware from OilRig Campaign"
       author = "Florian Roth"
       reference = "https://goo.gl/QMRZ8K"
@@ -139,7 +129,7 @@ rule OilRig_Malware_Campaign_Mal2 {
 }
 
 rule OilRig_Campaign_Reconnaissance {
-   meta:
+meta:
       description = "Detects Windows discovery commands - known from OilRig Campaign"
       author = "Florian Roth"
       reference = "https://goo.gl/QMRZ8K"
@@ -154,7 +144,7 @@ rule OilRig_Campaign_Reconnaissance {
 }
 
 rule OilRig_Malware_Campaign_Mal3 {
-   meta:
+meta:
       description = "Detects malware from OilRig Campaign"
       author = "Florian Roth"
       reference = "https://goo.gl/QMRZ8K"
@@ -169,7 +159,7 @@ rule OilRig_Malware_Campaign_Mal3 {
 }
 
 rule OilRig_Malware_Nov17_13 {
-   meta:
+meta:
       description = ""
       author = "Florian Roth"
       reference = "https://twitter.com/ClearskySec/status/933280188733018113"
@@ -190,7 +180,7 @@ rule OilRig_Malware_Nov17_13 {
 }
 
 rule Oilrig_IntelSecurityManager_macro {
-   meta:
+meta:
       description = "Detects OilRig malware"
       author = "Eyal Sela (slightly modified by Florian Roth)"
       reference = "Internal Research"
@@ -216,7 +206,7 @@ rule Oilrig_IntelSecurityManager_macro {
 }
 
 rule Oilrig_IntelSecurityManager {
-   meta:
+meta:
       description = "Detects OilRig malware"
       author = "Eyal Sela"
       reference = "Internal Research"
@@ -235,3 +225,4 @@ rule Oilrig_IntelSecurityManager {
    condition:
       filesize < 300KB and any of them
 }
+

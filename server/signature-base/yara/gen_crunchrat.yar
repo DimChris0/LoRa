@@ -1,6 +1,5 @@
-
 rule CrunchRAT {
-   meta:
+meta:
       description = "Detects CrunchRAT - file CrunchRAT.exe"
       author = "Florian Roth"
       reference = "https://github.com/t3ntman/CrunchRAT"
@@ -19,3 +18,4 @@ rule CrunchRAT {
    condition:
       uint16(0) == 0x5a4d and filesize < 40KB and ( 1 of ($x*) and 3 of them )
 }
+

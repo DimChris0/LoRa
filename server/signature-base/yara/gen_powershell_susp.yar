@@ -1,14 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-02-23
-   Identifier: Suspicious PowerShell Script Code
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule WordDoc_PowerShell_URLDownloadToFile {
-   meta:
+meta:
       description = "Detects Word Document with PowerShell URLDownloadToFile"
       author = "Florian Roth"
       reference = "https://www.arbornetworks.com/blog/asert/additional-insights-shamoon2/"
@@ -28,7 +19,7 @@ rule WordDoc_PowerShell_URLDownloadToFile {
 }
 
 rule Suspicious_PowerShell_Code_1 {
-   meta:
+meta:
       description = "Detects suspicious PowerShell code"
       author = "Florian Roth"
 		score = 60
@@ -46,7 +37,7 @@ rule Suspicious_PowerShell_Code_1 {
 }
 
 rule Suspicious_PowerShell_WebDownload_1 {
-   meta:
+meta:
       description = "Detects suspicious PowerShell code that downloads from web sites"
       author = "Florian Roth"
 		score = 60
@@ -61,19 +52,8 @@ rule Suspicious_PowerShell_WebDownload_1 {
       1 of ($s*) and not 1 of ($fp*)
 }
 
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-06-27
-   Identifier: Misc
-   Reference: Internal Research
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule PowerShell_in_Word_Doc {
-   meta:
+meta:
       description = "Detects a powershell and bypass keyword in a Word document"
       author = "Florian Roth"
       reference = "Internal Research - ME"
@@ -87,18 +67,8 @@ rule PowerShell_in_Word_Doc {
       ( uint16(0) == 0xcfd0 and filesize < 1000KB and all of them )
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-09-30
-   Identifier: PowerShell with VBS and JS
-   Reference: Internal Research
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Susp_PowerShell_Sep17_1 {
-   meta:
+meta:
       description = "Detects suspicious PowerShell script in combo with VBS or JS "
       author = "Florian Roth"
       reference = "Internal Research"
@@ -115,7 +85,7 @@ rule Susp_PowerShell_Sep17_1 {
 }
 
 rule Susp_PowerShell_Sep17_2 {
-   meta:
+meta:
       description = "Detects suspicious PowerShell script in combo with VBS or JS "
       author = "Florian Roth"
       reference = "Internal Research"
@@ -135,7 +105,7 @@ rule Susp_PowerShell_Sep17_2 {
 }
 
 rule WScript_Shell_PowerShell_Combo {
-   meta:
+meta:
       description = "Detects malware from Middle Eastern campaign reported by Talos"
       author = "Florian Roth"
       reference = "http://blog.talosintelligence.com/2018/02/targeted-attacks-in-middle-east.html"
@@ -151,3 +121,38 @@ rule WScript_Shell_PowerShell_Combo {
    condition:
       filesize < 400KB and $s1 and 1 of ($p*)
 }
+
+rule SUSP_PowerShell_String_K32_RemProcess {
+meta:
+      description = "Detects suspicious PowerShell code that uses Kernel32, RemoteProccess handles or shellcode"
+      author = "Florian Roth"
+      reference = "https://github.com/nccgroup/redsnarf"
+      date = "2018-03-31"
+      hash3 = "54a8dd78ec4798cf034c7765d8b2adfada59ac34d019e77af36dcaed1db18912"
+      hash4 = "6d52cdd74edea68d55c596554f47eefee1efc213c5820d86e64de0853a4e46b3"
+   strings:
+      $x1 = "Throw \"Unable to allocate memory in the remote process for shellcode\"" fullword ascii
+      $x2 = "$Kernel32Handle = $Win32Functions.GetModuleHandle.Invoke(\"kernel32.dll\")" fullword ascii
+      $s3 = "$RSCAddr = $Win32Functions.VirtualAllocEx.Invoke($RemoteProcHandle, [IntPtr]::Zero, [UIntPtr][UInt64]$SCLength, $Win32Constants." ascii
+      $s7 = "if ($RemoteProcHandle -eq [IntPtr]::Zero)" fullword ascii
+      $s8 = "if (($Success -eq $false) -or ([UInt64]$NumBytesWritten -ne [UInt64]$SCLength))" fullword ascii
+      $s9 = "$Success = $Win32Functions.WriteProcessMemory.Invoke($RemoteProcHandle, $RSCAddr, $SCPSMemOriginal, [UIntPtr][UInt64]$SCLength, " ascii
+      $s15 = "$TypeBuilder.DefineField('Characteristics', [UInt32], 'Public') | Out-Null" fullword ascii
+   condition:
+      uint16(0) == 0x7566 and filesize < 6000KB and 1 of them
+}
+
+rule PowerShell_JAB_B64 {
+meta:
+      description = "Detects base464 encoded $ sign at the beginning of a string"
+      author = "Florian Roth"
+      reference = "https://twitter.com/ItsReallyNick/status/980915287922040832"
+      date = "2018-04-02"
+      score = 60
+   strings:
+      $s1 = "('JAB" ascii wide
+      $s2 = "powershell" nocase
+   condition:
+      filesize < 30KB and all of them
+}
+

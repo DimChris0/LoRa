@@ -1,17 +1,6 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-10-03
-   Identifier: APT17 Oct 10
-   Reference: https://goo.gl/puVc9q
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 import "pe"
-
 rule APT17_Malware_Oct17_1 {
-   meta:
+meta:
       description = "Detects APT17 malware"
       author = "Florian Roth"
       reference = "https://goo.gl/puVc9q"
@@ -27,7 +16,7 @@ rule APT17_Malware_Oct17_1 {
 }
 
 rule APT17_Malware_Oct17_2 {
-   meta:
+meta:
       description = "Detects APT17 malware"
       author = "Florian Roth"
       reference = "https://goo.gl/puVc9q"
@@ -55,7 +44,7 @@ rule APT17_Malware_Oct17_2 {
 }
 
 rule APT17_Unsigned_Symantec_Binary_EFA {
-   meta:
+meta:
       description = "Detects APT17 malware"
       author = "Florian Roth"
       reference = "https://goo.gl/puVc9q"
@@ -69,7 +58,7 @@ rule APT17_Unsigned_Symantec_Binary_EFA {
 }
 
 rule APT17_Malware_Oct17_Gen {
-   meta:
+meta:
       description = "Detects APT17 malware"
       author = "Florian Roth"
       reference = "https://goo.gl/puVc9q"
@@ -97,3 +86,4 @@ rule APT17_Malware_Oct17_Gen {
          )
       )
 }
+

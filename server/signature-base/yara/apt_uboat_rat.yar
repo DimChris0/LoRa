@@ -1,13 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-11-28
-   Identifier: UBoatRAT
-   Reference: https://researchcenter.paloaltonetworks.com/2017/11/unit42-uboatrat-navigates-east-asia/
-*/
-
 rule UBoatRAT {
-   meta:
+meta:
       description = "Detects UBoat RAT Samples"
       author = "Florian Roth"
       reference = "https://researchcenter.paloaltonetworks.com/2017/11/unit42-uboatrat-navigates-east-asia/"
@@ -48,7 +40,7 @@ rule UBoatRAT {
 }
 
 rule UBoatRAT_Dropper {
-   meta:
+meta:
       description = "Detects UBoatRAT Dropper"
       author = "Florian Roth"
       reference = "https://researchcenter.paloaltonetworks.com/2017/11/unit42-uboatrat-navigates-east-asia/"
@@ -63,3 +55,4 @@ rule UBoatRAT_Dropper {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 200KB and all of them )
 }
+

@@ -1,15 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-07-15
-   Identifier: APT29 POSHSPY
-   Reference: https://www.fireeye.com/blog/threat-research/2017/03/dissecting_one_ofap.html
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule POSHSPY_Malware {
-   meta:
+meta:
       description = "Detects"
       author = "Florian Roth"
       reference = "https://www.fireeye.com/blog/threat-research/2017/03/dissecting_one_ofap.html"
@@ -24,3 +14,4 @@ rule POSHSPY_Malware {
    condition:
       1 of them
 }
+

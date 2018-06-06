@@ -1,18 +1,5 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-12-24
-   Identifier: Armitage
-   Reference: Internal Research
-
-   This is a subset of the Armitage rule set included in THOR APT Scanner
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Armitage_msfconsole {
-   meta:
+meta:
       description = "Detects Armitage component"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -29,10 +16,8 @@ rule Armitage_msfconsole {
       ) or ( all of them )
 }
 
-/* Removed 7 rules */
-
 rule Armitage_MeterpreterSession_Strings {
-   meta:
+meta:
       description = "Detects Armitage component"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -50,7 +35,7 @@ rule Armitage_MeterpreterSession_Strings {
 }
 
 rule Armitage_OSX {
-   meta:
+meta:
       description = "Detects Armitage component"
       author = "Florian Roth"
       reference = "Internal Research"
@@ -64,3 +49,4 @@ rule Armitage_OSX {
    condition:
       filesize < 6000KB and 1 of them
 }
+

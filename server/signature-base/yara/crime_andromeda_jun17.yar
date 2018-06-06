@@ -1,16 +1,5 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-06-30
-   Identifier: WORM_RETADUP
-   Reference: http://blog.trendmicro.com/trendlabs-security-intelligence/information-stealer-found-hitting-israeli-hospitals/
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Andromeda_MalBot_Jun_1A {
-   meta:
+meta:
       description = "Detects a malicious Worm Andromeda / RETADUP"
       author = "Florian Roth"
       reference = "http://blog.trendmicro.com/trendlabs-security-intelligence/information-stealer-found-hitting-israeli-hospitals/"
@@ -33,3 +22,4 @@ rule Andromeda_MalBot_Jun_1A {
    condition:
       uint16(0) == 0x5a4d and filesize < 2000KB and ( 1 of ($x*) or 2 of them )
 }
+

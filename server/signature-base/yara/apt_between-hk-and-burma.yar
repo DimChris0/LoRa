@@ -1,6 +1,5 @@
-rule dubseven_file_set
-{
-	meta:
+rule dubseven_file_set {
+meta:
 		author = "Matt Brooks, @cmatthewbrooks"
 		date = "2016/04/18"
 		score = 75
@@ -17,19 +16,18 @@ rule dubseven_file_set
 		$file8 = "\\Microsoft\\Internet Explorer\\runas.exe"
 
 	condition:
-		//MZ header
+		
 		uint16(0) == 0x5A4D and
 
-		//PE signature
+		
 		uint32(uint32(0x3C)) == 0x00004550 and
 
-		//Just a few of these as they differ
+		
 		3 of ($file*)
 }
 
-rule dubseven_dropper_registry_checks
-{
-	meta:
+rule dubseven_dropper_registry_checks {
+meta:
 		author = "Matt Brooks, @cmatthewbrooks"
 		date = "2016/04/18"
 		score = 75
@@ -45,18 +43,17 @@ rule dubseven_dropper_registry_checks
 		$reg7 = "SOFTWARE\\Micropoint\\Anti-Attack"
 
 	condition:
-		//MZ header
+		
 		uint16(0) == 0x5A4D and
 
-		//PE signature
+		
 		uint32(uint32(0x3C)) == 0x00004550 and
 
 		all of ($reg*)
 }
 
-rule dubseven_dropper_dialog_remains
-{
-	meta:
+rule dubseven_dropper_dialog_remains {
+meta:
 		author = "Matt Brooks, @cmatthewbrooks"
 		date = "2016/04/18"
 		score = 75
@@ -67,19 +64,17 @@ rule dubseven_dropper_dialog_remains
 		$dia2 = "Rundll 1.0" wide
 
 	condition:
-		//MZ header
+		
 		uint16(0) == 0x5A4D and
 
-		//PE signature
+		
 		uint32(uint32(0x3C)) == 0x00004550 and
 
 		any of them
 }
 
-
-rule maindll_mutex
-{
-	meta:
+rule maindll_mutex {
+meta:
 		author = "Matt Brooks, @cmatthewbrooks"
 		date = "2016/04/18"
 		score = 75
@@ -89,19 +84,17 @@ rule maindll_mutex
 		$mutex = "h31415927tttt"
 
 	condition:
-		//MZ header
+		
 		uint16(0) == 0x5A4D and
 
-		//PE signature
+		
 		uint32(uint32(0x3C)) == 0x00004550 and
 
 		$mutex
 }
 
-
-rule SLServer_dialog_remains
-{
-	meta:
+rule SLServer_dialog_remains {
+meta:
 		author = "Matt Brooks, @cmatthewbrooks / modified by Florian Roth"
 		date = "2016/04/18"
 		score = 75
@@ -117,10 +110,10 @@ rule SLServer_dialog_remains
 		$extra2 = "\\SLServer.pdb" ascii
 
 	condition:
-		//MZ header
+		
 		uint16(0) == 0x5A4D and
 
-		//PE signature
+		
 		uint32(uint32(0x3C)) == 0x00004550 and
 
 		// Reduce false positives
@@ -130,9 +123,8 @@ rule SLServer_dialog_remains
 		$slserver
 }
 
-rule SLServer_mutex
-{
-	meta:
+rule SLServer_mutex {
+meta:
 		author = "Matt Brooks, @cmatthewbrooks"
 		date = "2016/04/18"
 		score = 75
@@ -142,18 +134,17 @@ rule SLServer_mutex
 		$mutex = "M&GX^DSF&DA@F"
 
 	condition:
-		//MZ header
+		
 		uint16(0) == 0x5A4D and
 
-		//PE signature
+		
 		uint32(uint32(0x3C)) == 0x00004550 and
 
 		$mutex
 }
 
-rule SLServer_command_and_control
-{
-	meta:
+rule SLServer_command_and_control {
+meta:
 		author = "Matt Brooks, @cmatthewbrooks"
 		date = "2016/04/18"
 		score = 75
@@ -163,18 +154,17 @@ rule SLServer_command_and_control
 		$c2 = "safetyssl.security-centers.com"
 
 	condition:
-		//MZ header
+		
 		uint16(0) == 0x5A4D and
 
-		//PE signature
+		
 		uint32(uint32(0x3C)) == 0x00004550 and
 
 		$c2
 }
 
-rule SLServer_campaign_code
-{
-	meta:
+rule SLServer_campaign_code {
+meta:
 		author = "Matt Brooks, @cmatthewbrooks"
 		date = "2016/04/18"
 		score = 75
@@ -184,18 +174,17 @@ rule SLServer_campaign_code
 		$campaign = "wthkdoc0106"
 
 	condition:
-		//MZ header
+		
 		uint16(0) == 0x5A4D and
 
-		//PE signature
+		
 		uint32(uint32(0x3C)) == 0x00004550 and
 
 		$campaign
 }
 
-rule SLServer_unknown_string
-{
-	meta:
+rule SLServer_unknown_string {
+meta:
 		author = "Matt Brooks, @cmatthewbrooks"
 		date = "2016/04/18"
 		score = 75
@@ -205,11 +194,12 @@ rule SLServer_unknown_string
 		$string = "test-b7fa835a39"
 
 	condition:
-		//MZ header
+		
 		uint16(0) == 0x5A4D and
 
-		//PE signature
+		
 		uint32(uint32(0x3C)) == 0x00004550 and
 
 		$string
 }
+

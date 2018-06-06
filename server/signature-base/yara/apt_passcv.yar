@@ -1,14 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2016-10-20
-   Identifier: PassCV Group (Cylance)
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule PassCV_Sabre_Malware_1 {
-   meta:
+meta:
       description = "PassCV Malware mentioned in Cylance Report"
       author = "Florian Roth"
       reference = "https://blog.cylance.com/digitally-signed-malware-targeting-gaming-companies"
@@ -32,7 +23,7 @@ rule PassCV_Sabre_Malware_1 {
 }
 
 rule PassCV_Sabre_Malware_Signing_Cert {
-   meta:
+meta:
       description = "PassCV Malware mentioned in Cylance Report"
       author = "Florian Roth"
       reference = "https://blog.cylance.com/digitally-signed-malware-targeting-gaming-companies"
@@ -53,7 +44,7 @@ rule PassCV_Sabre_Malware_Signing_Cert {
 }
 
 rule PassCV_Sabre_Malware_2 {
-   meta:
+meta:
       description = "PassCV Malware mentioned in Cylance Report"
       author = "Florian Roth"
       reference = "https://blog.cylance.com/digitally-signed-malware-targeting-gaming-companies"
@@ -76,7 +67,7 @@ rule PassCV_Sabre_Malware_2 {
 }
 
 rule PassCV_Sabre_Malware_Excalibur_1 {
-   meta:
+meta:
       description = "PassCV Malware mentioned in Cylance Report"
       author = "Florian Roth"
       reference = "https://blog.cylance.com/digitally-signed-malware-targeting-gaming-companies"
@@ -97,7 +88,7 @@ rule PassCV_Sabre_Malware_Excalibur_1 {
 }
 
 rule PassCV_Sabre_Malware_3 {
-   meta:
+meta:
       description = "PassCV Malware mentioned in Cylance Report"
       author = "Florian Roth"
       reference = "https://blog.cylance.com/digitally-signed-malware-targeting-gaming-companies"
@@ -114,7 +105,7 @@ rule PassCV_Sabre_Malware_3 {
 }
 
 rule PassCV_Sabre_Malware_4 {
-   meta:
+meta:
       description = "PassCV Malware mentioned in Cylance Report"
       author = "Florian Roth"
       reference = "https://blog.cylance.com/digitally-signed-malware-targeting-gaming-companies"
@@ -129,7 +120,7 @@ rule PassCV_Sabre_Malware_4 {
 }
 
 rule PassCV_Sabre_Tool_NTScan {
-   meta:
+meta:
       description = "PassCV Malware mentioned in Cylance Report"
       author = "Florian Roth"
       reference = "https://blog.cylance.com/digitally-signed-malware-targeting-gaming-companies"
@@ -145,7 +136,7 @@ rule PassCV_Sabre_Tool_NTScan {
 }
 
 rule PassCV_Sabre_Malware_5 {
-   meta:
+meta:
       description = "PassCV Malware mentioned in Cylance Report"
       author = "Florian Roth"
       reference = "https://blog.cylance.com/digitally-signed-malware-targeting-gaming-companies"
@@ -158,9 +149,10 @@ rule PassCV_Sabre_Malware_5 {
 
       $s1 = "NEL32.DLL" fullword ascii
       $s2 = "BitLocker.exe" fullword wide
-      $s3 = "|xtplhd" fullword ascii /* reversed goodware string 'dhlptx|' */
+      $s3 = "|xtplhd" fullword ascii 
       $s4 = "SERVICECORE" fullword wide
       $s5 = "SHARECONTROL" fullword wide
    condition:
       ( uint16(0) == 0x5a4d and filesize < 4000KB and 1 of ($x*) or all of ($s*) )
 }
+

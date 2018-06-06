@@ -1,16 +1,5 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-06-02
-   Identifier: Fireball
-   Reference: https://goo.gl/4pTkGQ
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Fireball_de_svr {
-   meta:
+meta:
       description = "Detects Fireball malware - file de_svr.exe"
       author = "Florian Roth"
       reference = "https://goo.gl/4pTkGQ"
@@ -27,7 +16,7 @@ rule Fireball_de_svr {
 }
 
 rule Fireball_lancer {
-   meta:
+meta:
       description = "Detects Fireball malware - file lancer.dll"
       author = "Florian Roth"
       reference = "https://goo.gl/4pTkGQ"
@@ -47,7 +36,7 @@ rule Fireball_lancer {
 }
 
 rule QQBrowser {
-   meta:
+meta:
       description = "Not malware but suspicious browser - file QQBrowser.exe"
       author = "Florian Roth"
       reference = "https://goo.gl/4pTkGQ"
@@ -64,7 +53,7 @@ rule QQBrowser {
 }
 
 rule chrome_elf {
-   meta:
+meta:
       description = "Detects Fireball malware - file chrome_elf.dll"
       author = "Florian Roth"
       reference = "https://goo.gl/4pTkGQ"
@@ -82,7 +71,7 @@ rule chrome_elf {
 }
 
 rule Fireball_regkey {
-   meta:
+meta:
       description = "Detects Fireball malware - file regkey.exe"
       author = "Florian Roth"
       reference = "https://goo.gl/4pTkGQ"
@@ -97,7 +86,7 @@ rule Fireball_regkey {
 }
 
 rule Fireball_winsap {
-   meta:
+meta:
       description = "Detects Fireball malware - file winsap.dll"
       author = "Florian Roth"
       reference = "https://goo.gl/4pTkGQ"
@@ -115,7 +104,7 @@ rule Fireball_winsap {
 }
 
 rule Fireball_archer {
-   meta:
+meta:
       description = "Detects Fireball malware - file archer.dll"
       author = "Florian Roth"
       reference = "https://goo.gl/4pTkGQ"
@@ -133,7 +122,7 @@ rule Fireball_archer {
 }
 
 rule clearlog {
-   meta:
+meta:
       description = "Detects Fireball malware - file clearlog.dll"
       author = "Florian Roth"
       reference = "https://goo.gl/4pTkGQ"
@@ -153,7 +142,7 @@ rule clearlog {
 }
 
 rule Fireball_gubed {
-   meta:
+meta:
       description = "Detects Fireball malware - file gubed.exe"
       author = "Florian Roth"
       reference = "https://goo.gl/4pTkGQ"
@@ -168,3 +157,4 @@ rule Fireball_gubed {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 300KB and 1 of them )
 }
+

@@ -1,16 +1,6 @@
-/*
-   Yara Rule Set
-   Author: US CERT
-   Date: 2017-02-10
-   Identifier: US CERT Report on Grizzly Steppe - APT28/APT29
-*/
-
 import "pe"
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule IMPLANT_1_v1 {
-   meta:
+meta:
       description = "Downrage Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -25,7 +15,7 @@ rule IMPLANT_1_v1 {
 }
 
 rule IMPLANT_1_v2 {
-   meta:
+meta:
       description = "Downrage Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -41,7 +31,7 @@ rule IMPLANT_1_v2 {
 }
 
 rule IMPLANT_1_v3 {
-   meta:
+meta:
       description = "Downrage Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -55,7 +45,7 @@ rule IMPLANT_1_v3 {
 }
 
 rule IMPLANT_1_v4 {
-   meta:
+meta:
       description = "Downrage Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -69,7 +59,7 @@ rule IMPLANT_1_v4 {
 }
 
 rule IMPLANT_1_v5 {
-   meta:
+meta:
       description = "Downrage Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -85,27 +75,8 @@ rule IMPLANT_1_v5 {
       uint32(0) == 0x46445025 or uint32(1) == 0x6674725C) and any of them
 }
 
-/* TOO MANY FALSE POSITIVES
-
-rule IMPLANT_1_v6 {
-   meta:
-      description = "Downrage Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
-   strings:
-      $XORopcodes_eax = { 35 (22 07 15 0e|56 d7 a7 0a) }
-      $XORopcodes_others = { 81 (F1|F2|F3|F4|F5|F6|F7) (22 07 15 0E|56 D7 A7 0A) }
-   condition:
-      (uint16(0) == 0x5A4D or uint16(0) == 0xCFD0 or uint16(0) == 0xC3D4 or
-      uint32(0) == 0x46445025) and any of them
-}
-
-*/
-
 rule IMPLANT_1_v7 {
-   meta:
+meta:
       description = "Downrage Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -118,7 +89,7 @@ rule IMPLANT_1_v7 {
 }
 
 rule IMPLANT_2_v1 {
-   meta:
+meta:
       description = "CORESHELL/SOURFACE Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -131,7 +102,7 @@ rule IMPLANT_2_v1 {
 }
 
 rule IMPLANT_2_v2 {
-   meta:
+meta:
       description = "CORESHELL/SOURFACE Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -145,7 +116,7 @@ rule IMPLANT_2_v2 {
 }
 
 rule IMPLANT_2_v3 {
-   meta:
+meta:
       description = "CORESHELL/SOURFACE Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -161,7 +132,7 @@ rule IMPLANT_2_v3 {
 }
 
 rule IMPLANT_2_v4 {
-   meta:
+meta:
       description = "CORESHELL/SOURFACE Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -176,7 +147,7 @@ rule IMPLANT_2_v4 {
 }
 
 rule IMPLANT_2_v5 {
-   meta:
+meta:
       description = "CORESHELL/SOURFACE Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -191,7 +162,7 @@ rule IMPLANT_2_v5 {
 }
 
 rule IMPLANT_2_v6 {
-   meta:
+meta:
       description = "CORESHELL/SOURFACE Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -205,7 +176,7 @@ rule IMPLANT_2_v6 {
 }
 
 rule IMPLANT_2_v7 {
-   meta:
+meta:
       description = "CORESHELL/SOURFACE Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -226,7 +197,7 @@ rule IMPLANT_2_v7 {
 }
 
 rule IMPLANT_2_v8 {
-   meta:
+meta:
       description = "CORESHELL/SOURFACE Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -251,7 +222,7 @@ rule IMPLANT_2_v8 {
 }
 
 rule IMPLANT_2_v9 {
-   meta:
+meta:
       description = "CORESHELL/SOURFACE Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -278,7 +249,7 @@ rule IMPLANT_2_v9 {
 }
 
 rule IMPLANT_2_v10 {
-   meta:
+meta:
       description = "CORESHELL/SOURFACE Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -292,7 +263,7 @@ rule IMPLANT_2_v10 {
 }
 
 rule IMPLANT_2_v11 {
-   meta:
+meta:
       description = "CORESHELL/SOURFACE Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -307,7 +278,7 @@ rule IMPLANT_2_v11 {
 }
 
 rule IMPLANT_2_v12 {
-   meta:
+meta:
       description = "CORESHELL/SOURFACE Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -322,7 +293,7 @@ rule IMPLANT_2_v12 {
 }
 
 rule IMPLANT_2_v13 {
-   meta:
+meta:
       description = "CORESHELL/SOURFACE Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -336,7 +307,7 @@ rule IMPLANT_2_v13 {
 }
 
 rule IMPLANT_2_v14 {
-   meta:
+meta:
       description = "CORESHELL/SOURFACE Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -361,7 +332,7 @@ rule IMPLANT_2_v14 {
 }
 
 rule IMPLANT_2_v15 {
-   meta:
+meta:
       description = "CORESHELL/SOURFACE Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -377,7 +348,7 @@ rule IMPLANT_2_v15 {
 }
 
 rule IMPLANT_2_v16 {
-   meta:
+meta:
       description = "CORESHELL/SOURFACE Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -394,8 +365,8 @@ rule IMPLANT_2_v16 {
       uint32(0) == 0x46445025 or uint32(1) == 0x6674725C) and $OBF_FUNCT
 }
 
-rule IMPLANT_2_v17  {
-   meta:
+rule IMPLANT_2_v17 {
+meta:
       description = "CORESHELL/SOURFACE Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -412,7 +383,7 @@ rule IMPLANT_2_v17  {
 }
 
 rule IMPLANT_2_v18 {
-   meta:
+meta:
       description = "CORESHELL/SOURFACE Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -440,7 +411,7 @@ rule IMPLANT_2_v18 {
 }
 
 rule IMPLANT_2_v19 {
-   meta:
+meta:
       description = "CORESHELL/SOURFACE Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -467,7 +438,7 @@ rule IMPLANT_2_v19 {
 }
 
 rule IMPLANT_2_v20 {
-   meta:
+meta:
       description = "CORESHELL/SOURFACE Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -485,7 +456,7 @@ rule IMPLANT_2_v20 {
 }
 
 rule IMPLANT_3_v1 {
-   meta:
+meta:
       description = "X-Agent/CHOPSTICK Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -503,7 +474,7 @@ rule IMPLANT_3_v1 {
 }
 
 rule IMPLANT_3_v2 {
-   meta:
+meta:
       description = "X-Agent/CHOPSTICK Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -524,7 +495,7 @@ rule IMPLANT_3_v2 {
 }
 
 rule IMPLANT_3_v3 {
-   meta:
+meta:
       description = "X-Agent/CHOPSTICK Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -540,7 +511,7 @@ rule IMPLANT_3_v3 {
 }
 
 rule IMPLANT_4_v1 {
-   meta:
+meta:
       description = "BlackEnergy / Voodoo Bear Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -557,7 +528,7 @@ rule IMPLANT_4_v1 {
 }
 
 rule IMPLANT_4_v2 {
-   meta:
+meta:
       description = "BlackEnergy / Voodoo Bear Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -572,274 +543,8 @@ rule IMPLANT_4_v2 {
       uint32(0) == 0x46445025 or uint32(1) == 0x6674725C) and all of them
 }
 
-/* Some false positives - replaced with alternative rule (see below)
-
-rule IMPLANT_4_v3 {
-   meta:
-      description = "BlackEnergy / Voodoo Bear Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
-   strings:
-      $a1 = "Adobe Flash Player Installer" wide nocase
-      $a3 = "regedt32.exe" wide nocase
-      $a4 = "WindowsSysUtility" wide nocase
-      $a6 = "USB MDM Driver" wide nocase
-      $b1 = {00 05 34 00 00 00 56 00 53 00 5F 00 56 00 45 00 52 00 53 00 49 00
-         4F 00 4E 00 5F 00 49 00 4E 00 46 00 4F 00 00 00 00 00 BD 04 EF FE 00
-         00 01 00 01 00 05 00 88 15 28 0A 01 00 05 00 88 15 28 0A 3F 00 00 00
-         00 00 00 00 04 00 04 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-         00 5C 04 00 00 01 00 53 00 74 00 72 00 69 00 6E 00 67 00 46 00 69 00
-         6C 00 65 00 49 00 6E 00 66 00 6F 00 00 00 1C 02 00 00 01 00 30 00 30
-         00 31 00 35 00 30 00 34 00 62 00 30 00 00 00 4C 00 16 00 01 00 43 00
-         6F 00 6D 00 70 00 61 00 6E 00 79 00 4E 00 61 00 6D 00 65 00 00 00 00
-         00 4D 00 69 00 63 00 72 00 6F 00 73 00 6F 00 66 00 74 00 20 00 43 00
-         6F 00 72 00 70 00 6F 00 72 00 61 00 74 00 69 00 6F 00 6E 00 00 00 46
-         00 0F 00 01 00 46 00 69 00 6C 00 65 00 44 00 65 00 73 00 63 00 72 00
-         69 00 70 00 74 00 69 00 6F 00 6E 00 00 00 00 00 55 00 53 00 42 00 20
-         00 4D 00 44 00 4D 00 20 00 44 00 72 00 69 00 76 00 65 00 72 00 00 00
-         00 00 3C 00 0E 00 01 00 46 00 69 00 6C 00 65 00 56 00 65 00 72 00 73
-         00 69 00 6F 00 6E 00 00 00 00 00 35 00 2E 00 31 00 2E 00 32 00 36 00
-         30 00 30 00 2E 00 35 00 35 00 31 00 32 00 00 00 4A 00 13 00 01 00 4C
-         00 65 00 67 00 61 00 6C 00 43 00 6F 00 70 00 79 00 72 00 69 00 67 00
-         68 00 74 00 00 00 43 00 6F 00 70 00 79 00 72 00 69 00 67 00 68 00 74
-         00 20 00 28 00 43 00 29 00 20 00 32 00 30 00 31 00 33 00 00 00 00 00
-         3E 00 0B 00 01 00 4F 00 72 00 69 00 67 00 69 00 6E 00 61 00 6C 00 46
-         00 69 00 6C 00 65 00 6E 00 61 00 6D 00 65 00 00 00 75 00 73 00 62 00
-         6D 00 64 00 6D 00 2E 00 73 00 79 00 73 00 00 00 00 00 66 00 23 00 01
-         00 50 00 72 00 6F 00 64 00 75 00 63 00 74 00 4E 00 61 00 6D 00 65 00
-         00 00 00 00 4D 00 69 00 63 00 72 00 6F 00 73 00 6F 00 66 00 74 00 20
-         00 57 00 69 00 6E 00 64 00 6F 00 77 00 73 00 20 00 4F 00 70 00 65 00
-         72 00 61 00 74 00 69 00 6E 00 67 00 20 00 53 00 79 00 73 00 74 00 65
-         00 6D 00 00 00 00 00 40 00 0E 00 01 00 50 00 72 00 6F 00 64 00 75 00
-         63 00 74 00 56 00 65 00 72 00 73 00 69 00 6F 00 6E 00 00 00 35 00 2E
-         00 31 00 2E 00 32 00 36 00 30 00 30 00 2E 00 35 00 35 00 31 00 32 00
-         00 00 1C 02 00 00 01 00 30 00 34 00 30 00 39 00 30 00 34 00 62 00 30
-         00 00 00 4C 00 16 00 01 00 43 00 6F 00 6D 00 70 00 61 00 6E 00 79 00
-         4E 00 61 00 6D 00 65 00 00 00 00 00 4D 00 69 00 63 00 72 00 6F 00 73
-         00 6F 00 66 00 74 00 20 00 43 00 6F 00 72 00 70 00 6F 00 72 00 61 00
-         74 00 69 00 6F 00 6E 00 00 00 46 00 0F 00 01 00 46 00 69 00 6C 00 65
-         00 44 00 65 00 73 00 63 00 72 00 69 00 70 00 74 00 69 00 6F 00 6E 00
-         00 00 00 00 55 00 53 00 42 00 20 00 4D 00 44 00 4D 00 20 00 44 00 72
-         00 69 00 76 00 65 00 72 00 00 00 00 00 3C 00 0E 00 01 00 46 00 69 00
-         6C 00 65 00 56 00 65 00 72 00 73 00 69 00 6F 00 6E 00 00 00 00 00 35
-         00 2E 00 31 00 2E 00 32 00 36 00 30 00 30 00 2E 00 35 00 35 00 31 00
-         32 00 00 00 4A 00 13 00 01 00 4C 00 65 00 67 00 61 00 6C 00 43 00 6F
-         00 70 00 79 00 72 00 69 00 67 00 68 00 74 00 00 00 43 00 6F 00 70 00
-         79 00 72 00 69 00 67 00 68 00 74 00 20 00 28 00 43 00 29 00 20 00 32
-         00 30 00 31 00 33 00 00 00 00 00 3E 00 0B 00 01 00 4F 00 72 00 69 00
-         67 00 69 00 6E 00 61 00 6C 00 46 00 69 00 6C 00 65 00 6E 00 61 00 6D
-         00 65 00 00 00 75 00 73 00 62 00 6D 00 64 00 6D 00 2E 00 73 00 79 00
-         73 00 00 00 00 00 66 00 23 00 01 00 50 00 72 00 6F 00 64 00 75 00 63
-         00 74 00 4E 00 61 00 6D 00 65 00 00 00 00 00 4D 00 69 00 63 00 72 00
-         6F 00 73 00 6F 00 66 00 74 00 20 00 57 00 69 00 6E 00 64 00 6F 00 77
-         00 73 00 20 00 4F 00 70 00 65 00 72 00 61 00 74 00 69 00 6E 00 67 00
-         20 00 53 00 79 00 73 00 74 00 65 00 6D 00 00 00 00 00 40 00 0E 00 01
-         00 50 00 72 00 6F 00 64 00 75 00 63 00 74 00 56 00 65 00 72 00 73 00
-         69 00 6F 00 6E 00 00 00 35 00 2E 00 31 00 2E 00 32 00 36 00 30 00 30
-         00 2E 00 35 00 35 00 31 00 32 00 00 00 48 00 00 00 01 00 56 00 61 00
-         72 00 46 00 69 00 6C 00 65 00 49 00 6E 00 66 00 6F 00 00 00 00 00 28
-         00 08 00 00 00 54 00 72 00 61 00 6E 00 73 00 6C 00 61 00 74 00 69 00
-         6F 00 6E 00 00 00 00 00 15 00 B0 04 09 04 B0 04}
-      $b2 = {34 03 34 00 00 00 56 00 53 00 5F 00 56 00 45 00 52 00 53 00 49 00
-         4F 00 4E 00 5F 00 49 00 4E 00 46 00 4F 00 00 00 00 00 BD 04 EF FE 00
-         00 01 00 03 00 03 00 04 00 02 00 03 00 03 00 04 00 02 00 3F 00 00 00
-         00 00 00 00 04 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-         00 94 02 00 00 00 00 53 00 74 00 72 00 69 00 6E 00 67 00 46 00 69 00
-         6C 00 65 00 49 00 6E 00 66 00 6F 00 00 00 70 02 00 00 00 00 30 00 34
-         00 30 00 39 00 30 00 34 00 65 00 34 00 00 00 4A 00 15 00 01 00 43 00
-         6F 00 6D 00 70 00 61 00 6E 00 79 00 4E 00 61 00 6D 00 65 00 00 00 00
-         00 53 00 6F 00 6C 00 69 00 64 00 20 00 53 00 74 00 61 00 74 00 65 00
-         20 00 4E 00 65 00 74 00 77 00 6F 00 72 00 6B 00 73 00 00 00 00 00 62
-         00 1D 00 01 00 46 00 69 00 6C 00 65 00 44 00 65 00 73 00 63 00 72 00
-         69 00 70 00 74 00 69 00 6F 00 6E 00 00 00 00 00 41 00 64 00 6F 00 62
-         00 65 00 20 00 46 00 6C 00 61 00 73 00 68 00 20 00 50 00 6C 00 61 00
-         79 00 65 00 72 00 20 00 49 00 6E 00 73 00 74 00 61 00 6C 00 6C 00 65
-         00 72 00 00 00 00 00 30 00 08 00 01 00 46 00 69 00 6C 00 65 00 56 00
-         65 00 72 00 73 00 69 00 6F 00 6E 00 00 00 00 00 33 00 2E 00 33 00 2E
-         00 32 00 2E 00 34 00 00 00 32 00 09 00 01 00 49 00 6E 00 74 00 65 00
-         72 00 6E 00 61 00 6C 00 4E 00 61 00 6D 00 65 00 00 00 68 00 6F 00 73
-         00 74 00 2E 00 65 00 78 00 65 00 00 00 00 00 76 00 29 00 01 00 4C 00
-         65 00 67 00 61 00 6C 00 43 00 6F 00 70 00 79 00 72 00 69 00 67 00 68
-         00 74 00 00 00 43 00 6F 00 70 00 79 00 72 00 69 00 67 00 68 00 74 00
-         20 00 28 00 43 00 29 00 20 00 41 00 64 00 6F 00 62 00 65 00 20 00 53
-         00 79 00 73 00 74 00 65 00 6D 00 73 00 20 00 49 00 6E 00 63 00 6F 00
-         72 00 70 00 6F 00 72 00 61 00 74 00 65 00 64 00 00 00 00 00 3A 00 09
-         00 01 00 4F 00 72 00 69 00 67 00 69 00 6E 00 61 00 6C 00 46 00 69 00
-         6C 00 65 00 6E 00 61 00 6D 00 65 00 00 00 68 00 6F 00 73 00 74 00 2E
-         00 65 00 78 00 65 00 00 00 00 00 5A 00 1D 00 01 00 50 00 72 00 6F 00
-         64 00 75 00 63 00 74 00 4E 00 61 00 6D 00 65 00 00 00 00 00 41 00 64
-         00 6F 00 62 00 65 00 20 00 46 00 6C 00 61 00 73 00 68 00 20 00 50 00
-         6C 00 61 00 79 00 65 00 72 00 20 00 49 00 6E 00 73 00 74 00 61 00 6C
-         00 6C 00 65 00 72 00 00 00 00 00 34 00 08 00 01 00 50 00 72 00 6F 00
-         64 00 75 00 63 00 74 00 56 00 65 00 72 00 73 00 69 00 6F 00 6E 00 00
-         00 33 00 2E 00 33 00 2E 00 32 00 2E 00 34 00 00 00 44 00 00 00 00 00
-         56 00 61 00 72 00 46 00 69 00 6C 00 65 00 49 00 6E 00 66 00 6F 00 00
-         00 00 00 24 00 04 00 00 00 54 00 72 00 61 00 6E 00 73 00 6C 00 61 00
-         74 00 69 00 6F 00 6E 00 00 00 00 00 09 04 E4 04 46 45 32 58}
-      $b3 = {C8 02 34 00 00 00 56 00 53 00 5F 00 56 00 45 00 52 00 53 00 49 00
-         4F 00 4E 00 5F 00 49 00 4E 00 46 00 4F 00 00 00 00 00 BD 04 EF FE 00
-         00 01 00 01 00 05 00 88 15 28 0A 01 00 05 00 88 15 28 0A 17 00 00 00
-         00 00 00 00 04 00 04 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-         00 28 02 00 00 01 00 53 00 74 00 72 00 69 00 6E 00 67 00 46 00 69 00
-         6C 00 65 00 49 00 6E 00 66 00 6F 00 00 00 04 02 00 00 01 00 30 00 34
-         00 30 00 39 00 30 00 34 00 65 00 34 00 00 00 4C 00 16 00 01 00 43 00
-         6F 00 6D 00 70 00 61 00 6E 00 79 00 4E 00 61 00 6D 00 65 00 00 00 00
-         00 4D 00 69 00 63 00 72 00 6F 00 73 00 6F 00 66 00 74 00 20 00 43 00
-         6F 00 72 00 70 00 6F 00 72 00 61 00 74 00 69 00 6F 00 6E 00 00 00 48
-         00 10 00 01 00 46 00 69 00 6C 00 65 00 44 00 65 00 73 00 63 00 72 00
-         69 00 70 00 74 00 69 00 6F 00 6E 00 00 00 00 00 49 00 44 00 45 00 20
-         00 50 00 6F 00 72 00 74 00 20 00 44 00 72 00 69 00 76 00 65 00 72 00
-         00 00 62 00 21 00 01 00 46 00 69 00 6C 00 65 00 56 00 65 00 72 00 73
-         00 69 00 6F 00 6E 00 00 00 00 00 35 00 2E 00 31 00 2E 00 32 00 36 00
-         30 00 30 00 2E 00 35 00 35 00 31 00 32 00 20 00 28 00 78 00 70 00 73
-         00 70 00 2E 00 30 00 38 00 30 00 34 00 31 00 33 00 2D 00 30 00 38 00
-         35 00 32 00 29 00 00 00 00 00 4A 00 13 00 01 00 4C 00 65 00 67 00 61
-         00 6C 00 43 00 6F 00 70 00 79 00 72 00 69 00 67 00 68 00 74 00 00 00
-         43 00 6F 00 70 00 79 00 72 00 69 00 67 00 68 00 74 00 20 00 28 00 43
-         00 29 00 20 00 32 00 30 00 30 00 39 00 00 00 00 00 66 00 23 00 01 00
-         50 00 72 00 6F 00 64 00 75 00 63 00 74 00 4E 00 61 00 6D 00 65 00 00
-         00 00 00 4D 00 69 00 63 00 72 00 6F 00 73 00 6F 00 66 00 74 00 20 00
-         57 00 69 00 6E 00 64 00 6F 00 77 00 73 00 20 00 4F 00 70 00 65 00 72
-         00 61 00 74 00 69 00 6E 00 67 00 20 00 53 00 79 00 73 00 74 00 65 00
-         6D 00 00 00 00 00 40 00 0E 00 01 00 50 00 72 00 6F 00 64 00 75 00 63
-         00 74 00 56 00 65 00 72 00 73 00 69 00 6F 00 6E 00 00 00 35 00 2E 00
-         31 00 2E 00 32 00 36 00 30 00 30 00 2E 00 35 00 35 00 31 00 32 00 00
-         00 44 00 00 00 01 00 56 00 61 00 72 00 46 00 69 00 6C 00 65 00 49 00
-         6E 00 66 00 6F 00 00 00 00 00 24 00 04 00 00 00 54 00 72 00 61 00 6E
-         00 73 00 6C 00 61 00 74 00 69 00 6F 00 6E 00 00 00 00 00 09 04 E4 04 }
-      $b4 = {9C 03 34 00 00 00 56 00 53 00 5F 00 56 00 45 00 52 00 53 00 49 00
-         4F 00 4E 00 5F 00 49 00 4E 00 46 00 4F 00 00 00 00 00 BD 04 EF FE 00
-         00 01 00 01 00 06 00 01 40 B0 1D 01 00 06 00 01 40 B0 1D 3F 00 00 00
-         00 00 00 00 04 00 04 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-         00 FA 02 00 00 01 00 53 00 74 00 72 00 69 00 6E 00 67 00 46 00 69 00
-         6C 00 65 00 49 00 6E 00 66 00 6F 00 00 00 D6 02 00 00 01 00 30 00 34
-         00 30 00 39 00 30 00 34 00 42 00 30 00 00 00 4C 00 16 00 01 00 43 00
-         6F 00 6D 00 70 00 61 00 6E 00 79 00 4E 00 61 00 6D 00 65 00 00 00 00
-         00 4D 00 69 00 63 00 72 00 6F 00 73 00 6F 00 66 00 74 00 20 00 43 00
-         6F 00 72 00 70 00 6F 00 72 00 61 00 74 00 69 00 6F 00 6E 00 00 00 58
-         00 18 00 01 00 46 00 69 00 6C 00 65 00 44 00 65 00 73 00 63 00 72 00
-         69 00 70 00 74 00 69 00 6F 00 6E 00 00 00 00 00 52 00 65 00 67 00 69
-         00 73 00 74 00 72 00 79 00 20 00 45 00 64 00 69 00 74 00 6F 00 72 00
-         20 00 55 00 74 00 69 00 6C 00 69 00 74 00 79 00 00 00 6C 00 26 00 01
-         00 46 00 69 00 6C 00 65 00 56 00 65 00 72 00 73 00 69 00 6F 00 6E 00
-         00 00 00 00 36 00 2E 00 31 00 2E 00 37 00 36 00 30 00 30 00 2E 00 31
-         00 36 00 33 00 38 00 35 00 20 00 28 00 77 00 69 00 6E 00 37 00 5F 00
-         72 00 74 00 6D 00 2E 00 30 00 39 00 30 00 37 00 31 00 33 00 2D 00 31
-         00 32 00 35 00 35 00 29 00 00 00 3A 00 0D 00 01 00 49 00 6E 00 74 00
-         65 00 72 00 6E 00 61 00 6C 00 4E 00 61 00 6D 00 65 00 00 00 72 00 65
-         00 67 00 65 00 64 00 74 00 33 00 32 00 2E 00 65 00 78 00 65 00 00 00
-         00 00 80 00 2E 00 01 00 4C 00 65 00 67 00 61 00 6C 00 43 00 6F 00 70
-         00 79 00 72 00 69 00 67 00 68 00 74 00 00 00 A9 00 20 00 4D 00 69 00
-         63 00 72 00 6F 00 73 00 6F 00 66 00 74 00 20 00 43 00 6F 00 72 00 70
-         00 6F 00 72 00 61 00 74 00 69 00 6F 00 6E 00 2E 00 20 00 41 00 6C 00
-         6C 00 20 00 72 00 69 00 67 00 68 00 74 00 73 00 20 00 72 00 65 00 73
-         00 65 00 72 00 76 00 65 00 64 00 2E 00 00 00 42 00 0D 00 01 00 4F 00
-         72 00 69 00 67 00 69 00 6E 00 61 00 6C 00 46 00 69 00 6C 00 65 00 6E
-         00 61 00 6D 00 65 00 00 00 72 00 65 00 67 00 65 00 64 00 74 00 33 00
-         32 00 2E 00 65 00 78 00 65 00 00 00 00 00 6A 00 25 00 01 00 50 00 72
-         00 6F 00 64 00 75 00 63 00 74 00 4E 00 61 00 6D 00 65 00 00 00 00 00
-         4D 00 69 00 63 00 72 00 6F 00 73 00 6F 00 66 00 74 00 AE 00 20 00 57
-         00 69 00 6E 00 64 00 6F 00 77 00 73 00 AE 00 20 00 4F 00 70 00 65 00
-         72 00 61 00 74 00 69 00 6E 00 67 00 20 00 53 00 79 00 73 00 74 00 65
-         00 6D 00 00 00 00 00 42 00 0F 00 01 00 50 00 72 00 6F 00 64 00 75 00
-         63 00 74 00 56 00 65 00 72 00 73 00 69 00 6F 00 6E 00 00 00 36 00 2E
-         00 31 00 2E 00 37 00 36 00 30 00 30 00 2E 00 31 00 36 00 33 00 38 00
-         35 00 00 00 00 00 44 00 00 00 01 00 56 00 61 00 72 00 46 00 69 00 6C
-         00 65 00 49 00 6E 00 66 00 6F 00 00 00 00 00 24 00 04 00 00 00 54 00
-         72 00 61 00 6E 00 73 00 6C 00 61 00 74 00 69 00 6F 00 6E 00 00 00 00
-         00 09 04 B0 04}
-      $b5 = {78 03 34 00 00 00 56 00 53 00 5F 00 56 00 45 00 52 00 53 00 49 00
-         4F 00 4E 00 5F 00 49 00 4E 00 46 00 4F 00 00 00 00 00 BD 04 EF FE 00
-         00 01 00 00 00 05 00 6A 44 B1 1D 00 00 05 00 6A 44 B1 1D 3F 00 00 00
-         00 00 00 00 04 00 04 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-         00 D6 02 00 00 01 00 53 00 74 00 72 00 69 00 6E 00 67 00 46 00 69 00
-         6C 00 65 00 49 00 6E 00 66 00 6F 00 00 00 B2 02 00 00 01 00 30 00 34
-         00 30 00 39 00 30 00 34 00 42 00 30 00 00 00 4C 00 16 00 01 00 43 00
-         6F 00 6D 00 70 00 61 00 6E 00 79 00 4E 00 61 00 6D 00 65 00 00 00 00
-         00 4D 00 69 00 63 00 72 00 6F 00 73 00 6F 00 66 00 74 00 20 00 43 00
-         6F 00 72 00 70 00 6F 00 72 00 61 00 74 00 69 00 6F 00 6E 00 00 00 4E
-         00 13 00 01 00 46 00 69 00 6C 00 65 00 44 00 65 00 73 00 63 00 72 00
-         69 00 70 00 74 00 69 00 6F 00 6E 00 00 00 00 00 57 00 69 00 6E 00 64
-         00 6F 00 77 00 73 00 AE 00 53 00 79 00 73 00 55 00 74 00 69 00 6C 00
-         69 00 74 00 79 00 00 00 00 00 72 00 29 00 01 00 46 00 69 00 6C 00 65
-         00 56 00 65 00 72 00 73 00 69 00 6F 00 6E 00 00 00 00 00 35 00 2E 00
-         30 00 2E 00 37 00 36 00 30 00 31 00 2E 00 31 00 37 00 35 00 31 00 34
-         00 20 00 28 00 77 00 69 00 6E 00 37 00 73 00 70 00 31 00 5F 00 72 00
-         74 00 6D 00 2E 00 31 00 30 00 31 00 31 00 31 00 39 00 2D 00 31 00 38
-         00 35 00 30 00 29 00 00 00 00 00 30 00 08 00 01 00 49 00 6E 00 74 00
-         65 00 72 00 6E 00 61 00 6C 00 4E 00 61 00 6D 00 65 00 00 00 6D 00 73
-         00 69 00 65 00 78 00 65 00 63 00 00 00 80 00 2E 00 01 00 4C 00 65 00
-         67 00 61 00 6C 00 43 00 6F 00 70 00 79 00 72 00 69 00 67 00 68 00 74
-         00 00 00 A9 00 20 00 4D 00 69 00 63 00 72 00 6F 00 73 00 6F 00 66 00
-         74 00 20 00 43 00 6F 00 72 00 70 00 6F 00 72 00 61 00 74 00 69 00 6F
-         00 6E 00 2E 00 20 00 41 00 6C 00 6C 00 20 00 72 00 69 00 67 00 68 00
-         74 00 73 00 20 00 72 00 65 00 73 00 65 00 72 00 76 00 65 00 64 00 2E
-         00 00 00 40 00 0C 00 01 00 4F 00 72 00 69 00 67 00 69 00 6E 00 61 00
-         6C 00 46 00 69 00 6C 00 65 00 6E 00 61 00 6D 00 65 00 00 00 6D 00 73
-         00 69 00 65 00 78 00 65 00 63 00 2E 00 65 00 78 00 65 00 00 00 58 00
-         1C 00 01 00 50 00 72 00 6F 00 64 00 75 00 63 00 74 00 4E 00 61 00 6D
-         00 65 00 00 00 00 00 57 00 69 00 6E 00 64 00 6F 00 77 00 73 00 53 00
-         79 00 73 00 55 00 74 00 69 00 6C 00 69 00 74 00 79 00 20 00 2D 00 20
-         00 55 00 6E 00 69 00 63 00 6F 00 64 00 65 00 00 00 42 00 0F 00 01 00
-         50 00 72 00 6F 00 64 00 75 00 63 00 74 00 56 00 65 00 72 00 73 00 69
-         00 6F 00 6E 00 00 00 35 00 2E 00 30 00 2E 00 37 00 36 00 30 00 31 00
-         2E 00 31 00 37 00 35 00 31 00 34 00 00 00 00 00 44 00 00 00 01 00 56
-         00 61 00 72 00 46 00 69 00 6C 00 65 00 49 00 6E 00 66 00 6F 00 00 00
-         00 00 24 00 04 00 00 00 54 00 72 00 61 00 6E 00 73 00 6C 00 61 00 74
-         00 69 00 6F 00 6E 00 00 00 00 00 09 04 B0 04}
-      $b6 = {D4 02 34 00 00 00 56 00 53 00 5F 00 56 00 45 00 52 00 53 00 49 00
-         4F 00 4E 00 5F 00 49 00 4E 00 46 00 4F 00 00 00 00 00 BD 04 EF FE 00
-         00 01 00 01 00 05 00 88 15 28 0A 01 00 05 00 88 15 28 0A 17 00 00 00
-         00 00 00 00 04 00 04 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-         00 34 02 00 00 01 00 53 00 74 00 72 00 69 00 6E 00 67 00 46 00 69 00
-         00 65 00 49 00 6E 00 66 00 6F 00 00 00 10 02 00 00 01 00 30 00 34 00
-         30 00 39 00 30 00 34 00 65 00 34 00 00 00 4C 00 16 00 01 00 43 00 6F
-         00 6D 00 70 00 61 00 6E 00 79 00 4E 00 61 00 6D 00 65 00 00 00 00 00
-         4D 00 69 00 63 00 72 00 6F 00 73 00 6F 00 66 00 74 00 20 00 43 00 6F
-         00 72 00 70 00 6F 00 72 00 61 00 74 00 69 00 6F 00 6E 00 00 00 4E 00
-         13 00 01 00 46 00 69 00 6C 00 65 00 44 00 65 00 73 00 63 00 72 00 69
-         00 70 00 74 00 69 00 6F 00 6E 00 00 00 00 00 53 00 65 00 72 00 69 00
-         61 00 6C 00 20 00 50 00 6F 00 72 00 74 00 20 00 44 00 72 00 69 00 76
-         00 65 00 72 00 00 00 00 00 62 00 21 00 01 00 46 00 69 00 6C 00 65 00
-         56 00 65 00 72 00 73 00 69 00 6F 00 6E 00 00 00 00 00 35 00 2E 00 31
-         00 2E 00 32 00 36 00 30 00 30 00 2E 00 35 00 35 00 31 00 32 00 20 00
-         28 00 78 00 70 00 73 00 70 00 2E 00 30 00 38 00 30 00 34 00 31 00 33
-         00 2D 00 30 00 38 00 35 00 32 00 29 00 00 00 00 00 4A 00 13 00 01 00
-         4C 00 65 00 67 00 61 00 6C 00 43 00 6F 00 70 00 79 00 72 00 69 00 67
-         00 68 00 74 00 00 00 43 00 6F 00 70 00 79 00 72 00 69 00 67 00 68 00
-         74 00 20 00 28 00 43 00 29 00 20 00 32 00 30 00 30 00 34 00 00 00 00
-         00 6A 00 25 00 01 00 50 00 72 00 6F 00 64 00 75 00 63 00 74 00 4E 00
-         61 00 6D 00 65 00 00 00 00 00 4D 00 69 00 63 00 72 00 6F 00 73 00 6F
-         00 66 00 74 00 AE 00 20 00 57 00 69 00 6E 00 64 00 6F 00 77 00 73 00
-         AE 00 20 00 4F 00 70 00 65 00 72 00 61 00 74 00 69 00 6E 00 67 00 20
-         00 53 00 79 00 73 00 74 00 65 00 6D 00 00 00 00 00 40 00 0E 00 01 00
-         50 00 72 00 6F 00 64 00 75 00 63 00 74 00 56 00 65 00 72 00 73 00 69
-         00 6F 00 6E 00 00 00 35 00 2E 00 31 00 2E 00 32 00 36 00 30 00 30 00
-         2E 00 35 00 35 00 31 00 32 00 00 00 44 00 00 00 01 00 56 00 61 00 72
-         00 46 00 69 00 6C 00 65 00 49 00 6E 00 66 00 6F 00 00 00 00 00 24 00
-         04 00 00 00 54 00 72 00 61 00 6E 00 73 00 6C 00 61 00 74 00 69 00 6F
-         00 6E 00 00 00 00 00 09 04 E4 04}
-   condition:
-      (uint16(0) == 0x5A4D and uint32(uint32(0x3C)) == 0x00004550) and
-      (((any of ($a*)) and (uint32(uint32(0x3C)+8) == 0x00000000)) or
-      (for any of ($b*): ($ in (uint32(uint32(0x3C)+248+(40*(uint16(uint32(0x3C)+6)-1)+20))..(uint32(uint32(0x3C)+248+(40*(uint16(uint32(0x3C)+6)-1)+20))+uint32(uint32(0x3C)+248+(40*(uint16(uint32(0x3C)+6)-1)+16)))))))
-}
-
-*/
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-02-12
-   Identifier: Grizzly Steppe Alternatives
-*/
-
-/* Alternative Rule Set ---------------------------------------------------- */
-
 rule IMPLANT_4_v3_AlternativeRule {
-   meta:
+meta:
       description = "BlackEnergy / Voodoo Bear Implant by APT28"
       comment = "Alternative rule - not based on the original samples but samples on which the original rule matched"
       author = "Florian Roth"
@@ -847,16 +552,14 @@ rule IMPLANT_4_v3_AlternativeRule {
       date = "2017-02-12"
       hash1 = "2244fe9c5d038edcb5406b45361613cf3909c491e47debef35329060b00c985a"
    strings:
-      $op1 = { 33 c9 41 ff 13 13 c9 ff 13 72 f8 c3 53 1e 01 00 } /* Opcode */
-      $op2 = { 21 da 40 00 00 a0 40 00 08 a0 40 00 b0 70 40 00 } /* Opcode */
+      $op1 = { 33 c9 41 ff 13 13 c9 ff 13 72 f8 c3 53 1e 01 00 } 
+      $op2 = { 21 da 40 00 00 a0 40 00 08 a0 40 00 b0 70 40 00 } 
    condition:
       ( uint16(0) == 0x5a4d and all of them )
 }
 
-/* Alternative Rule Set ---------------------------------------------------- */
-
 rule IMPLANT_4_v4 {
-   meta:
+meta:
       description = "BlackEnergy / Voodoo Bear Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -872,7 +575,7 @@ rule IMPLANT_4_v4 {
 }
 
 rule IMPLANT_4_v5 {
-   meta:
+meta:
       description = "BlackEnergy / Voodoo Bear Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -886,27 +589,8 @@ rule IMPLANT_4_v5 {
       uint32(1) == 0x6674725C) and all of them
 }
 
-/* TOO MANY FALSE POSITIVES
-
-rule IMPLANT_4_v6 {
-   meta:
-      description = "BlackEnergy / Voodoo Bear Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
-   strings:
-      $STR1 = "DispatchCommand" wide ascii
-      $STR2 = "DispatchEvent" wide ascii
-   condition:
-      (uint16(0) == 0x5A4D or uint16(0) == 0xCFD0 or uint16(0) == 0xC3D4 or
-      uint32(0) == 0x46445025 or uint32(1) == 0x6674725C) and all of them
-}
-
-*/
-
 rule IMPLANT_4_v7 {
-   meta:
+meta:
       description = "BlackEnergy / Voodoo Bear Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -929,7 +613,7 @@ rule IMPLANT_4_v7 {
 }
 
 rule IMPLANT_4_v8 {
-   meta:
+meta:
       description = "BlackEnergy / Voodoo Bear Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -958,7 +642,7 @@ rule IMPLANT_4_v8 {
 }
 
 rule IMPLANT_4_v9 {
-   meta:
+meta:
       description = "BlackEnergy / Voodoo Bear Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -979,7 +663,7 @@ rule IMPLANT_4_v9 {
 }
 
 rule IMPLANT_4_v10 {
-   meta:
+meta:
       description = "BlackEnergy / Voodoo Bear Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -1011,7 +695,7 @@ rule IMPLANT_4_v10 {
 }
 
 rule IMPLANT_4_v11 {
-   meta:
+meta:
       description = "BlackEnergy / Voodoo Bear Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -1028,10 +712,8 @@ rule IMPLANT_4_v11 {
       uint32(0) == 0x46445025 or uint32(1) == 0x6674725C) and 2 of them
 }
 
-/* Deactivated - Slowing down scanning
-
 rule IMPLANT_4_v12 {
-   meta:
+meta:
       description = "BlackEnergy / Voodoo Bear Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -1049,10 +731,9 @@ rule IMPLANT_4_v12 {
    uint32(0) == 0x46445025 or uint32(1) == 0x6674725C) and ($CMP1 or $CMP2)
    and ($SUB1 or $SUB2) and $OUT and $HAL
 }
-*/
 
 rule IMPLANT_4_v13 {
-   meta:
+meta:
       description = "BlackEnergy / Voodoo Bear Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -1074,7 +755,7 @@ rule IMPLANT_4_v13 {
 }
 
 rule IMPLANT_5_v1 {
-   meta:
+meta:
       description = "XTunnel Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -1092,7 +773,7 @@ rule IMPLANT_5_v1 {
 }
 
 rule IMPLANT_5_v2 {
-   meta:
+meta:
       description = "XTunnel Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -1232,7 +913,7 @@ rule IMPLANT_5_v2 {
 }
 
 rule IMPLANT_5_v3 {
-   meta:
+meta:
       description = "XTunnel Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -1246,7 +927,7 @@ rule IMPLANT_5_v3 {
 }
 
 rule IMPLANT_5_v4 {
-   meta:
+meta:
       description = "XTunnel Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -1262,9 +943,8 @@ rule IMPLANT_5_v4 {
       all of them
 }
 
-rule IMPLANT_6_v1
-{
-   meta:
+rule IMPLANT_6_v1 {
+meta:
       description = "Sednit / EVILTOSS Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -1280,7 +960,7 @@ rule IMPLANT_6_v1
 }
 
 rule IMPLANT_6_v2 {
-   meta:
+meta:
       description = "Sednit / EVILTOSS Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -1294,7 +974,7 @@ rule IMPLANT_6_v2 {
 }
 
 rule IMPLANT_6_v3 {
-   meta:
+meta:
       description = "Sednit / EVILTOSS Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -1310,7 +990,7 @@ rule IMPLANT_6_v3 {
 }
 
 rule IMPLANT_6_v4 {
-   meta:
+meta:
       description = "Sednit / EVILTOSS Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -1325,7 +1005,7 @@ rule IMPLANT_6_v4 {
 }
 
 rule IMPLANT_6_v5 {
-   meta:
+meta:
       description = "Sednit / EVILTOSS Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -1360,7 +1040,7 @@ rule IMPLANT_6_v5 {
 }
 
 rule IMPLANT_6_v6 {
-   meta:
+meta:
       description = "Sednit / EVILTOSS Implant by APT28"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -1374,31 +1054,8 @@ rule IMPLANT_6_v6 {
       uint32(0) == 0x46445025 or uint32(1) == 0x6674725C) and all of them
 }
 
-/* TOO MANY FALSE POSITIVES
-
-rule IMPLANT_6_v7 {
-   meta:
-      description = "Sednit / EVILTOSS Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
-   strings:
-      $STR1 = "Init1"
-      $OPT1 = "ServiceMain"
-      $OPT2 = "netids" nocase wide ascii
-      $OPT3 = "netui" nocase wide ascii
-      $OPT4 = "svchost.exe" wide ascii
-      $OPT5 = "network" nocase wide ascii
-   condition:
-      (uint16(0) == 0x5A4D or uint16(0) == 0xCFD0 or uint16(0) == 0xC3D4 or
-      uint32(0) == 0x46445025 or uint32(1) == 0x6674725C) and $STR1 and 2 of ($OPT*)
-}
-
-*/
-
 rule IMPLANT_7_v1 {
-   meta:
+meta:
       description = "Implant 7 by APT29"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -1411,9 +1068,8 @@ rule IMPLANT_7_v1 {
       (uint16(0) == 0x5A4D) and ($STR1 or $STR2)
 }
 
-rule IMPLANT_8_v1
-{
-   meta:
+rule IMPLANT_8_v1 {
+meta:
       description = "HAMMERTOSS / HammerDuke Implant by APT29"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -1438,10 +1094,8 @@ rule IMPLANT_8_v1
       (3 of ($REF_var*)) and (1 of ($REF_value*))
 }
 
-/* TOO MANY FALSE POSITIVES
-
 rule IMPLANT_8_v2 {
-   meta:
+meta:
       description = "HAMMERTOSS / HammerDuke Implant by APT29"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -1454,10 +1108,8 @@ rule IMPLANT_8_v2 {
       (uint16(0) == 0x5A4D) and all of them
 }
 
-*/
-
 rule IMPLANT_9_v1 {
-   meta:
+meta:
       description = "Onion Duke Implant by APT29"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -1473,27 +1125,8 @@ rule IMPLANT_9_v1 {
       (uint16(0) == 0x5A4D or uint16(0)) and all of them
 }
 
-/* TOO MANY FALSE POSITIVES
-
-rule IMPLANT_10_v1 {
-   meta:
-      description = "CozyDuke / CozyCar / CozyBear Implant by APT29"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
-   strings:
-      $STR1 = {33 ?? 83 F2 ?? 81 E2 FF 00 00 00}
-      $STR2 = {0F BE 14 01 33 D0 ?? F2 [1-4] 81 E2 FF 00 00 00 66 89 [6] 40 83
-         F8 ?? 72}
-   condition:
-      uint16(0) == 0x5A4D and ($STR1 or $STR2)
-}
-
-*/
-
 rule IMPLANT_10_v2 {
-   meta:
+meta:
       description = "CozyDuke / CozyCar / CozyBear Implant by APT29"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -1506,45 +1139,8 @@ rule IMPLANT_10_v2 {
       uint16(0) == 0x5A4D and $xor and $nop
 }
 
-/* Deactivated - Slowing down scanning
-
-rule IMPLANT_11_v12 {
-   meta:
-      description = "Mini Duke Implant by APT29"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
-   strings:
-      $STR1 = {63 74 00 00} // ct
-      $STR2 = {72 6F 74 65} // rote
-      $STR3 = {75 61 6C 50} // triV
-      $STR4 = {56 69 72 74} // Plau
-      $STR5 = { e8 00 00 00 00 }
-      $STR6 = { 64 FF 35 00 00 00 00 }
-      $STR7 = {D2 C0}
-      $STR8 = /\x63\x74\x00\x00.{3,20}\x72\x6F\x74\x65.{3,20}\x75\x61\x6C\x50.{3,20}\x56\x69\x72\x74/
-   condition:
-      (uint16(0) == 0x5A4D) and #STR5 > 4 and all of them
-}
-
-rule IMPLANT_12_v1 {
-   meta:
-      description = "Cosmic Duke Implant by APT29"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
-   strings:
-      $FUNC = {A1 [3-5] 33 C5 89 [2-3] 56 57 83 [4-6] 64}
-   condition:
-      (uint16(0) == 0x5A4D) and $FUNC
-}
-
-*/
-
 rule Unidentified_Malware_Two {
-   meta:
+meta:
       description = "Unidentified Implant by APT29"
       author = "US CERT"
       reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
@@ -1565,3 +1161,4 @@ rule Unidentified_Malware_Two {
       or ($my_string_three or $my_string_four)
       or ($my_string_five and $my_string_six)
 }
+

@@ -1,15 +1,6 @@
-/*
-    Yara Rule Set
-    Author: Dragos Inc
-    Date: 2016-06-12
-    Identifier: Crash Override
-*/
-
 import "pe"
-
-rule dragos_crashoverride_suspcious
-{
-    meta: 
+rule dragos_crashoverride_suspcious {
+meta: 
         description = "CRASHOVERRIDE v1 Wiper" 
         author = "Dragos Inc"
         reference = "https://t.co/h8QaIP4FU8"
@@ -24,7 +15,7 @@ rule dragos_crashoverride_suspcious
 }
 
 rule dragos_crashoverride_exporting_dlls {
-    meta: 
+meta: 
         description = "CRASHOVERRIDE v1 Suspicious Export"
         author = "Dragos Inc"
         reference = "https://t.co/h8QaIP4FU8"
@@ -33,7 +24,7 @@ rule dragos_crashoverride_exporting_dlls {
 }
 
 rule dragos_crashoverride_name_search {
-    meta:
+meta:
         description = "CRASHOVERRIDE v1 Suspicious Strings and Export"
         author = "Dragos Inc"
         reference = "https://t.co/h8QaIP4FU8"
@@ -56,5 +47,3 @@ rule dragos_crashoverride_name_search {
         any of ($s*) and pe.exports("Crash")
 }
 
-  
-   

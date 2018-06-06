@@ -1,15 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-06-20
-   Identifier: HTA Anomalies
-   Reference: Internal Research
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule HTA_with_WScript_Shell {
-   meta:
+meta:
       description = "Detects WScript Shell in HTA"
       author = "Florian Roth"
       reference = "https://twitter.com/msftmmpc/status/877396932758560768"
@@ -24,7 +14,7 @@ rule HTA_with_WScript_Shell {
 }
 
 rule HTA_Embedded {
-   meta:
+meta:
       description = "Detects an embedded HTA file"
       author = "Florian Roth"
       reference = "https://twitter.com/msftmmpc/status/877396932758560768"
@@ -36,3 +26,4 @@ rule HTA_Embedded {
    condition:
       $s1 and not $s1 in (0..50000)
 }
+

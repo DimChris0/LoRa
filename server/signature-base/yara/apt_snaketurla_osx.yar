@@ -1,15 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-05-04
-   Identifier: Snake / Turla
-   Reference: https://goo.gl/QaOh4V
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule SnakeTurla_Malware_May17_1 {
-   meta:
+meta:
       description = "Detects Snake / Turla Sample"
       author = "Florian Roth"
       reference = "https://goo.gl/QaOh4V"
@@ -22,7 +12,7 @@ rule SnakeTurla_Malware_May17_1 {
 }
 
 rule SnakeTurla_Malware_May17_2 {
-   meta:
+meta:
       description = "Detects Snake / Turla Sample"
       author = "Florian Roth"
       reference = "https://goo.gl/QaOh4V"
@@ -37,7 +27,7 @@ rule SnakeTurla_Malware_May17_2 {
 }
 
 rule SnakeTurla_Malware_May17_3 {
-   meta:
+meta:
       description = "Detects Snake / Turla Sample"
       author = "Florian Roth"
       reference = "https://goo.gl/QaOh4V"
@@ -51,7 +41,7 @@ rule SnakeTurla_Malware_May17_3 {
 }
 
 rule SnakeTurla_Malware_May17_4 {
-   meta:
+meta:
       description = "Detects Snake / Turla Sample"
       author = "Florian Roth"
       reference = "https://goo.gl/QaOh4V"
@@ -64,7 +54,7 @@ rule SnakeTurla_Malware_May17_4 {
 }
 
 rule SnakeTurla_Installd_SH {
-   meta:
+meta:
       description = "Detects Snake / Turla Sample"
       author = "Florian Roth"
       reference = "https://goo.gl/QaOh4V"
@@ -77,7 +67,7 @@ rule SnakeTurla_Installd_SH {
 }
 
 rule SnakeTurla_Install_SH {
-   meta:
+meta:
       description = "Detects Snake / Turla Sample"
       author = "Florian Roth"
       reference = "https://goo.gl/QaOh4V"
@@ -88,3 +78,4 @@ rule SnakeTurla_Install_SH {
    condition:
    ( uint16(0) == 0x2123 and filesize < 20KB and all of them )
 }
+

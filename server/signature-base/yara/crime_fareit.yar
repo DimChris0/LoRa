@@ -1,12 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2015-10-18
-	Identifier: Fareit Oct 2015
-*/
-
 rule Fareit_Trojan_Oct15 {
-	meta:
+meta:
 		description = "Detects Fareit Trojan from Sep/Oct 2015 Wave"
 		author = "Florian Roth"
 		reference = "http://goo.gl/5VYtlU"
@@ -26,3 +19,4 @@ rule Fareit_Trojan_Oct15 {
 	condition:
 		uint16(0) == 0x5a4d and $s1 in (0..30000) and $s2 in (0..30000)
 }
+

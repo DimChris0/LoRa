@@ -1,16 +1,6 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-07-08
-   Identifier: ZxShell Related Malware (same C2)
-   Reference: https://blogs.rsa.com/cat-phishing/
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
+import "pe"
 rule ZxShell_Related_Malware_CN_Group_Jul17_1 {
-   meta:
+meta:
       description = "Detects a ZxShell related sample from a CN threat group"
       author = "Florian Roth"
       reference = "https://blogs.rsa.com/cat-phishing/"
@@ -28,7 +18,7 @@ rule ZxShell_Related_Malware_CN_Group_Jul17_1 {
 }
 
 rule ZxShell_Related_Malware_CN_Group_Jul17_2 {
-   meta:
+meta:
       description = "Detects a ZxShell related sample from a CN threat group"
       author = "Florian Roth"
       reference = "https://blogs.rsa.com/cat-phishing/"
@@ -54,7 +44,7 @@ rule ZxShell_Related_Malware_CN_Group_Jul17_2 {
 }
 
 rule ZxShell_Related_Malware_CN_Group_Jul17_3 {
-   meta:
+meta:
       description = "Detects a ZxShell related sample from a CN threat group"
       author = "Florian Roth"
       reference = "https://blogs.rsa.com/cat-phishing/"
@@ -68,7 +58,7 @@ rule ZxShell_Related_Malware_CN_Group_Jul17_3 {
 }
 
 rule ZxShell_Jul17 {
-   meta:
+meta:
       description = "Detects a ZxShell - CN threat group"
       author = "Florian Roth"
       reference = "https://blogs.rsa.com/cat-phishing/"
@@ -92,20 +82,8 @@ rule ZxShell_Jul17 {
       ( filesize < 10000KB and 1 of them ) or 3 of them
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-12-11
-   Identifier: ZxShell
-   Reference: https://goo.gl/snc85M
-*/
-
-import "pe"
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule ZXshell_20171211_chrsben {
-   meta:
+meta:
       description = "Detects ZxShell variant surfaced in Dec 17"
       author = "Florian Roth"
       reference = "https://goo.gl/snc85M"
@@ -126,3 +104,4 @@ rule ZXshell_20171211_chrsben {
         2 of them
       )
 }
+

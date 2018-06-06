@@ -1,5 +1,5 @@
-rule CrowdStrike_Shamoon_DroppedFile { 
-	meta:
+rule CrowdStrike_Shamoon_DroppedFile {
+meta:
 		description = "Rule to detect Shamoon malware http://goo.gl/QTxohN"
 		reference = "http://www.rsaconference.com/writable/presentations/file_upload/exp-w01-hacking-exposed-day-of-destruction.pdf"
 	strings:
@@ -10,3 +10,4 @@ rule CrowdStrike_Shamoon_DroppedFile {
 	condition:
 		(any of ($testn*) or $pingcmd) and $testdomain
 }
+

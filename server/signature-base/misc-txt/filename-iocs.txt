@@ -1706,7 +1706,7 @@ AppData\\Adobe\\qpbqrx\.dat;80
 \\eof\.exe;100
 
 # Suspicious EXE DLL in Non-Executable directory
-\\(images|img|js|fonts|css|swf|templates|themes|log|error_docs)\\[^\\]{,20}\.(exe|dll)$;60
+\\(images|img|js|fonts|css|swf|themes|log|error_docs)\\[^\\]{,20}\.(exe|dll)$;60
 \\(wp-admin|wp-content|wp-includes)\\[^\\]{,20}\.(exe|dll);60
 
 # APT29 Post-Election Acitivty https://goo.gl/4nyX1e
@@ -1933,7 +1933,6 @@ ystem32\\lcsvsvc\.dll;80
 \\run\.dll;60
 \\Vba32ar\.exe;80
 \\runsna\.dll;80
-\\dragon\.exe;80
 \\dragon\.dll;80
 \\GeekBuddyRSP\.exe;80
 \\cif\.exe;80
@@ -2106,9 +2105,12 @@ ystem32\\lcsvsvc\.dll;80
 #\\(procdump|pdump|pc)(64)+\\.exe;50;(?i)(\\SysInternals\\)
 
 # Cred Dumping
-\\(q32|q64|wceaux|w86|q86|quarkpwd[^\\]*|m64|m32|hash32|hash64|64|32|w32|w64|wce32|wce64|w32|w64|wce|p32|p64|ps32|ps64|mimikatz|mimilove|mm32|mm64|pw32|pw64|g32|g64|gs32|gs64|hash|hashdump|dumpsvc)\.exe;60
+\\(q32|q64|wceaux|w86|q86|quarkpwd[^\\]*|m64|m32|hash32|hash64|64|32|wce32|wce64|w32|w64|wce|p32|p64|ps32|ps64|mimikatz|mimilove|mm32|mm64|pw32|pw64|g32|g64|gs32|gs64|hash|hashdump|dumpsvc)\.exe;60;\\distlib\\
 \\(g64\-|\\g32\-|\\gsecdump\.exe|gcx64\.|\\gcx32\.|\\gec\.|\\gse\.exe);60
-\\(pwhash|fgdump);60
+\\pwhash;60;\\python\\
+\\fgdump;60
+\\w32\.exe;50
+\\w64\.exe;50
 
 # Generic methodology - 1 character executable / script in short path
 #[a-zA-Z]:[.]{0,10}\\[.]\.(exe|dll|vbs|ps1|bat|sh)$;60;(?i)(\\cygwin\\|\\GnuWin32\\|Opera\\k\.(exe|bat)|\\R\\r-|\\Git\\usr|\\adobe after effects|\\perl)
@@ -2684,7 +2686,6 @@ ystem32\\DumpExt\.dll;75
 \\xwk32\.exe;50
 \\Youtube\.exe;50
 \\YoutubeInstaller\.exe;50
-\\mozilla\.exe;70
 
 # Malware sample https://goo.gl/FDwDTw
 AppData\\svchost\.exe;80
@@ -2768,7 +2769,6 @@ ystem32\\drivers\\kifes\.sys;70
 \\scr\.exe;70
 \\upd\.bat;50
 \\~1171694\.dll;70
-\\mozilla\.exe;70
 \\httpconf\.aspx;50
 \\zervit32;70
 \\Chromex64\.exe;50
@@ -2803,5 +2803,236 @@ AppData\\Local\\cdnver\.dll;90
 # Middle East Campaign http://blog.talosintelligence.com/2018/02/targeted-attacks-in-middle-east.html
 \\AppData\\Roaming\\sys\.ps1;100
 \\AppData\\Local\\4s\.exe;100
+
+# Turla Mosquito https://www.welivesecurity.com/wp-content/uploads/2018/01/ESET_Turla_Mosquito.pdf
+AppData\\Local\\kb6867\.bin;80
+AppData\\Roaming\\kb6867\.bin;80
+
+# Sofacy Activity https://researchcenter.paloaltonetworks.com/2018/02/unit42-sofacy-attacks-multiple-government-entities/
+\\AppData\\Local\\cdnver\.dll;100
+\\AppData\\Local\\cdnver\.bat;100
+
+# FinFisher https://cloudblogs.microsoft.com/microsoftsecure/2018/03/01/finfisher-exposed-a-researchers-tale-of-defeating-traps-tricks-and-complex-virtual-machines/
+\\ProgramData\\AuditApp\\d3d9\.dll;85
+\\wsecedit\.rar;80
+
+# NSA report https://blog.crysys.hu/2018/03/territorial-dispute-nsas-perspective-on-apt-landscape/
+\\atmarpd.sys;65
+ystem32\\driver32\\ldf\\;50
+\\syswpsvc\.sys;65
+ystem32\\ipmontr.exe;80
+ystem32\\ipconfhlp.dll;80
+ystem32\\internat32.exe;80
+ystem32\\sbool\\msadp32.exe;80
+ystem32\\Internat.dll;80
+ystem32\\s7otbxsx.dll;80
+\\Windows\\inf\\mdmcpq3.inf;80
+\\mrxcls\.sys;60
+\\mrxnet\.sys;60
+\\s7otbxsx\.sys;60
+\\s7otbxdxa\.sys;60
+\\jmidebs\.sys;60
+\\jmidebs\.sys;60
+\\micfosoft shared\\;60
+\\Program Files\\Common Files\\microsoft shared\\mssecuritymgr\\;55
+\\Program Files\\Common Files\\microsoft shared\\MSAPackages\\;55
+\\Windows\\System32\\icsvnt32.dll;65
+\\utilman32.exe;65
+\\utliman32.exe;65
+\\ups32.exe;65
+\\Windows\\System32\\drivers\\ups.exe;65
+\\w3ssl\.sys;60
+ystem32\\winview.ocs;65
+ystem32\\Mfc42l00.pdb;65
+ystem32\\ISUninst.bin;65
+ystem32\\mswmpdat.tlb;65
+ystem32\\wmmini.swp;65
+ystem32\\wowmgr.exe;65
+\\Windows\\winstat.pdr;65
+\\msserv\.exe;60
+ystem32\\taskbar\.exe;60
+ystem32\\sed\.exe;60
+\\drivers\\slidebar.exe;80
+\\SndTray.exe;70
+\\appdata1\\logFile.txt;70
+\\MyHood\\btmn\\system\\temp\\cnf.txt;90
+\\012tg7\\system\\cnf.txt;80
+ystem32\\tlbcon32.exe;65
+ystem32\\con32.nls;65
+ystem32\\indsvc32.ocx;65
+\\Windows\\temp\\indsvc32.ocx;65
+ystem32\\secur16.dll;65
+ystem32\\SECUR16.DLL;65
+ystem32\\EXPLORED.DLL;65
+ystem32\\HDBACK4.DLL;65
+ystem32\\CFGKRNL3.DLL;65
+\\ndisalex\.sys;60
+\\ndisio32\.sys;60
+\\paravdm\.sys;60
+\\AppData\\msncp.exe;80
+\\AppData\\netsvc.exe;80
+ystem32\\msprnt\.exe;70
+ystem32\\fmem\.dll;70
+\\Triedit\\dhtmled.dll;70
+\\Triedit\\TRIEDIT.TLB;70
+\\ntdos505.sys;70
+\\triedit.sys;80
+ystem32\\nsecm\.dll;65
+\\nsecm\.sys;65
+\\All Users\\update.msi;80
+\\All Users\\Application Data\\update.msi;80
+\\Public\\update.msi;80
+\\AppData\\update.msi;80
+\\ProgramData\\MSI\\update.msi;80
+\\Common Files\\wusvcd.exe;70
+\\Common Files\\wusvcd\\wusvcd.exe;70
+\\temp\\temp56273.pdf;75
+\\drivers\\mfc64comm.sys;75
+\\drivers\\adap64info.sys;75
+\\Application Data\\winver32.exe;100
+\\AppData\\winver32.exe;100
+ystem32\\boof\.sys;65
+\\Local Settings\\Temp\\Acrobat.dll;65
+\\Local Settings\\Temp\\first.tmp;65
+Windows\\qtlib.sqt;80
+Windows\\zl4vq.sqt;80
+Windows\\dfrgntfs5.sqt;80
+Windows\\msvcrt58.sqt;80
+ystem32\\ieloader.dll;80
+ystem32\\orepst.dll;80
+ystem32\\msdxofg.dll;60
+ystem32\\ocmsiecon.hlp;60
+ystem32\\atllib.dll;60
+\\ndisxapi.sys;60
+Windows\\temp\\~MS1E.tmp$;60
+Windows\\temp\\~FMIFEN.tmp;60
+ystem32\\wpa.dbl.bak;80
+ystem32\\sslkey.exe;80
+\\Windows\\WindowsUpdate.old\\;55
+\\adpu321.sys;60
+\\hpnd5x86.sys;60
+\\igdkmd16b.sys;60
+\\msgdi32.sys;60
+\\ntrbos.sys;60
+\\qd240x86.sys;60
+\\qd260x86.sys;60
+\\Windows\\godown.dll;80
+ystem32\\godown.dll;80
+ystem32\\winns.exe;65
+ystem32\\kbdarpe.dll;65
+Windows\\winns.exe;65
+Windows\\kbdarpe.dll;65
+\\AppData\\Local\\Help\\system32\\cryptapi32.dll;65
+ystem32\\mtmon.sdb;65
+\\Windows\\mtmon.sdb;65
+ystem32\\rasmgr.dll;65
+\\Windows\\rasmgr.dll;65
+ystem32\\raseap.dll;65
+\\Windows\\raseap.dll;65
+\\Windows\\AppPatch\\rasmain.sdb;85
+\\Common Files\\System\\ado\\msado29.tlb;80
+\\Common Files\\System\\ado\\msado39.tlb;80
+\\svshost.exe;80
+ystem32\\Microsoft\\Protect\\Windows\\svchost.exe;80
+
+# TA18-074A https://www.us-cert.gov/ncas/alerts/TA18-074A
+\\Temp\\scr\.exe;80
+\\Temp\\scr\.jpg;80
+\\completed_dclist\.txt;70
+\\conditional_forwarders\.txt;70
+\\admins\.txt$;45
+\\dirsb\.bat;60
+
+# PrivEsc Tools https://github.com/rmusser01/Infosec_Reference/blob/master/Draft/Privilege%20Escalation%20%26%20Post-Exploitation.md
+\\evilmaid\.py;80
+\\LinEnum\.sh;80
+\\Linux_Exploit_Suggester\.pl;80
+\\adsecretsdump\.py;80
+\\dump\.ps1;80
+\\Invoke-SMBExec\.ps1;80
+\\Invoke-TheHash\.ps1;80
+\\Invoke-WCMDump\.ps1;80
+\\Invoke-WMIExec\.ps1;80
+\\nps_payload\.py;80
+\\autodane\.py;80
+\\Babadook\.ps1;80
+\\beRoot\.exe;80
+\\kernelpop\.py;80
+\\LAPSToolkit\.ps1;80
+\\lsadomaindump\.py;80
+\\MSFRottenPotato\.exe;80
+\\pompem\.py;80
+\\PowerLine\.exe;80
+\\PowerOps\.exe;80
+\\Powershdll\.exe;80
+\\psgetsys\.ps1;80
+\\PSReflect\.psm1;80
+\\SmashedPotato\.exe;80
+
+# Comnie campaign https://goo.gl/jrjPzj
+\\AppData\\Local\\wscript.exe;100
+\\AppData\\Roaming\\wscript.exe;100
+
+# Agent.BTZ https://www.gdatasoftware.com/blog/2014/11/23937-the-uroburos-case-new-sophisticated-rat-identified
+\\AppData\\Local\\Microsoft\\credprov.tlb;90
+\\AppData\\Local\\Microsoft\\shdocvw.tlp;90
+\\AppData\\Roaming\\Microsoft\\credprov.tlb;90
+\\AppData\\Roaming\\Microsoft\\shdocvw.tlp;90
+
+# NCCGroup Ghost Report https://goo.gl/i3prxY
+\\Mozilla\.exe;80
+\\Updateproxy\.dll;60
+\\Noodles\.exe:70
+\\Coal\.exe;70
+\\23d\.exe;70
+\\89d\.exe;70
+
+# Orange Worm https://www.symantec.com/blogs/threat-intelligence/orangeworm-targets-healthcare-us-europe-asia
+\\Windows\\inf\\mkdiawb3\.PNF;65
+\\Windows\\inf\\mtmndkb32\.PNF;65
+\\Windows\\inf\\digirps\.PNF;65
+\\Windows\\inf\\e11\.PNF;65
+
+# Malicious sample https://app.any.run/tasks/b8f0a5d3-343f-47e2-b287-abbba9174d2a
+\\AppData\\Local\\Temp\\HelperNT\.txt;80
+\\AppData\\Local\\Temp\\HelperNT\.cab;80
+\\AppData\\Local\\Temp\\Gameover\.php;100
+
+# RedLeaves Hogfish Threat Analysis https://www.accenture.com/t20180423T055005Z__w__/se-en/_acnmedia/PDF-76/Accenture-Hogfish-Threat-Analysis.pdf
+\\Temp\\AYRUNSC\.exe;80
+\\Temp\\PTL\.AYM;80
+\\Startup\\GppiTEMms\.lnk;100
+\\Startup\\EaahLDRej\.lnk;100
+\\Startup\\BnorTEPkh\.lnk;100
+
+# File names found in Alina PoS malware https://goo.gl/xgFtwr
+\\icsicli\.exe;45
+\\zcopy\.exe;45
+\\mrc\.exe;45
+\\RcpPing\.exe;45
+\\sthc\.exe;45
+\\certutils\.exe;45
+\\upnpcnt\.exe;45
+\\systkey\.exe;45
+\\ktmutils\.exe;45
+\\findstg\.exe;45
+\\appidt\.exe;45
+\\autoch\.exe;45
+\\TmpInit\.exe;45
+\\winrcs\.exe;45
+\\dxtdiag\.exe;45
+\\wmusa\.exe;45
+\\sbdinst\.exe;45
+\\bcastdvs\.exe;45
+\\WAWHost\.exe;45
+\\OneDriveUi\.exe;45
+\\fontdvrhost\.exe;45
+\\tmcsetup\.exe;45
+\\esentut\.exe;45
+\\hdwiz\.exe;45
+\\dcmcnfg\.exe;45
+\\gscript\.exe;45
+\\ntlookup\.exe;45
+\\wxtract\.ex;45
 
 # End

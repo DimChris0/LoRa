@@ -1,6 +1,5 @@
-
 rule Fidelis_Advisory_Purchase_Order_pps {
-    meta:
+meta:
         description = "Detects a string found in a malicious document named Purchase_Order.pps"
         author = "Florian Roth"
         reference = "http://goo.gl/ZjJyti"
@@ -12,7 +11,7 @@ rule Fidelis_Advisory_Purchase_Order_pps {
 }
 
 rule Fidelis_Advisory_cedt370 {
-    meta:
+meta:
         description = "Detects a string found in memory of malware cedt370r(3).exe"
         author = "Florian Roth"
         reference = "http://goo.gl/ZjJyti"
@@ -25,3 +24,4 @@ rule Fidelis_Advisory_cedt370 {
     condition:
         all of them
 }
+

@@ -1,12 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-04-23
-	Identifier: Ghost Dragon Gh0st RAT
-*/
-
 rule GhostDragon_Gh0stRAT {
-	meta:
+meta:
 		description = "Detects Gh0st RAT mentioned in Cylance' Ghost Dragon Report"
 		author = "Florian Roth"
 		reference = "https://blog.cylance.com/the-ghost-dragon"
@@ -51,7 +44,7 @@ rule GhostDragon_Gh0stRAT {
 }
 
 rule GhostDragon_Gh0stRAT_Sample2 {
-	meta:
+meta:
 		description = "Detects Gh0st RAT mentioned in Cylance' Ghost Dragon Report"
 		author = "Florian Roth"
 		reference = "https://blog.cylance.com/the-ghost-dragon"
@@ -72,7 +65,7 @@ rule GhostDragon_Gh0stRAT_Sample2 {
 }
 
 rule GhostDragon_Gh0stRAT_Sample3 {
-	meta:
+meta:
 		description = "Detects Gh0st RAT mentioned in Cylance' Ghost Dragon Report"
 		author = "Florian Roth"
 		reference = "https://blog.cylance.com/the-ghost-dragon"
@@ -85,3 +78,4 @@ rule GhostDragon_Gh0stRAT_Sample3 {
 	condition:
 		all of them
 }
+

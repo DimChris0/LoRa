@@ -1,16 +1,7 @@
-
-/*
-   Yara Rule Set
-   Author: Kaspersky
-   Date: 2017-03-07
-   Identifier: Stone Drill Report by Kaspersky
-*/
-
 import "pe"
 import "math"
-
 rule susp_file_enumerator_with_encrypted_resource_101 {
-   meta:
+meta:
       copyright = "Kaspersky Lab"
       description = "Generic detection for samples that enumerate files with encrypted resource called 101"
       hash = "2cd0a5f1e9bcce6807e57ec8477d222a"
@@ -40,7 +31,7 @@ rule susp_file_enumerator_with_encrypted_resource_101 {
 }
 
 rule StoneDrill_main_sub {
-   meta:
+meta:
       author = "Kaspersky Lab"
       description = "Rule to detect StoneDrill (decrypted) samples"
       hash1 = "d01781f1246fd1b64e09170bd6600fe1"
@@ -53,15 +44,8 @@ rule StoneDrill_main_sub {
       uint16(0) == 0x5A4D and $code and filesize < 5000000
 }
 
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-03-07
-   Identifier: Stone Drill Report by Kaspersky
-*/
-
 rule StoneDrill_BAT_1 {
-   meta:
+meta:
       author = "Florian Roth"
       description = "Rule to detect Batch file from StoneDrill report"
       reference = "https://securelist.com/blog/research/77725/from-shamoon-to-stonedrill/"
@@ -76,7 +60,7 @@ rule StoneDrill_BAT_1 {
 }
 
 rule StoneDrill_Service_Install {
-   meta:
+meta:
       author = "Florian Roth"
       description = "Rule to detect Batch file from StoneDrill report"
       reference = "https://securelist.com/blog/research/77725/from-shamoon-to-stonedrill/"
@@ -90,7 +74,7 @@ rule StoneDrill_Service_Install {
 }
 
 rule StoneDrill_ntssrvr32 {
-   meta:
+meta:
       description = "Detects malware from StoneDrill threat report"
       author = "Florian Roth"
       reference = "https://securelist.com/blog/research/77725/from-shamoon-to-stonedrill/"
@@ -109,7 +93,7 @@ rule StoneDrill_ntssrvr32 {
 }
 
 rule StoneDrill_Malware_2 {
-   meta:
+meta:
       description = "Detects malware from StoneDrill threat report"
       author = "Florian Roth"
       reference = "https://securelist.com/blog/research/77725/from-shamoon-to-stonedrill/"
@@ -134,7 +118,7 @@ rule StoneDrill_Malware_2 {
 }
 
 rule StoneDrill {
-   meta:
+meta:
       description = "Detects malware from StoneDrill threat report"
       author = "Florian Roth"
       reference = "https://securelist.com/blog/research/77725/from-shamoon-to-stonedrill/"
@@ -157,7 +141,7 @@ rule StoneDrill {
 }
 
 rule StoneDrill_VBS_1 {
-   meta:
+meta:
       description = "Detects malware from StoneDrill threat report"
       author = "Florian Roth"
       reference = "https://securelist.com/blog/research/77725/from-shamoon-to-stonedrill/"
@@ -175,3 +159,4 @@ rule StoneDrill_VBS_1 {
    condition:
       ( filesize < 1KB and 1 of ($x*) or 2 of ($s*) )
 }
+

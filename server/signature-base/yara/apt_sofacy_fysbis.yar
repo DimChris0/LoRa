@@ -1,13 +1,5 @@
-
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-02-13
-	Identifier: Sofacy Fysbis
-*/
-
 rule Sofacy_Fybis_ELF_Backdoor_Gen1 {
-	meta:
+meta:
 		description = "Detects Sofacy Fysbis Linux Backdoor_Naikon_APT_Sample1"
 		author = "Florian Roth"
 		reference = "http://researchcenter.paloaltonetworks.com/2016/02/a-look-into-fysbis-sofacys-linux-backdoor/"
@@ -32,7 +24,7 @@ rule Sofacy_Fybis_ELF_Backdoor_Gen1 {
 }
 
 rule Sofacy_Fysbis_ELF_Backdoor_Gen2 {
-	meta:
+meta:
 		description = "Detects Sofacy Fysbis Linux Backdoor"
 		author = "Florian Roth"
 		reference = "http://researchcenter.paloaltonetworks.com/2016/02/a-look-into-fysbis-sofacys-linux-backdoor/"
@@ -48,3 +40,4 @@ rule Sofacy_Fysbis_ELF_Backdoor_Gen2 {
 	condition:
 		uint16(0) == 0x457f and filesize < 500KB and all of them
 }
+

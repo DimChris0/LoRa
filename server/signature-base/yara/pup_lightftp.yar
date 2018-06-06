@@ -1,6 +1,5 @@
-
 rule LightFTP_fftp_x86_64 {
-	meta:
+meta:
 		description = "Detects a light FTP server"
 		author = "Florian Roth"
 		reference = "https://github.com/hfiref0x/LightFTP"
@@ -19,7 +18,7 @@ rule LightFTP_fftp_x86_64 {
 }
 
 rule LightFTP_Config {
-	meta:
+meta:
 		description = "Detects a light FTP server - config file"
 		author = "Florian Roth"
 		reference = "https://github.com/hfiref0x/LightFTP"
@@ -35,3 +34,4 @@ rule LightFTP_Config {
 	condition:
 		uint16(0) == 0xfeff and filesize < 1KB and all of them
 }
+

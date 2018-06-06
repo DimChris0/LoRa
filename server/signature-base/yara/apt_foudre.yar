@@ -1,17 +1,6 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-08-01
-   Identifier: Foudre
-   Reference: https://goo.gl/Nbqbt6
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 import "pe"
-
 rule Foudre_Backdoor_1 {
-   meta:
+meta:
       description = "Detects Foudre Backdoor"
       author = "Florian Roth"
       reference = "https://goo.gl/Nbqbt6"
@@ -27,7 +16,7 @@ rule Foudre_Backdoor_1 {
 }
 
 rule Foudre_Backdoor_Dropper_1 {
-   meta:
+meta:
       description = "Detects Foudre Backdoor"
       author = "Florian Roth"
       reference = "https://goo.gl/Nbqbt6"
@@ -47,7 +36,7 @@ rule Foudre_Backdoor_Dropper_1 {
 }
 
 rule Foudre_Backdoor_Component_1 {
-   meta:
+meta:
       description = "Detects Foudre Backdoor"
       author = "Florian Roth"
       reference = "https://goo.gl/Nbqbt6"
@@ -55,8 +44,8 @@ rule Foudre_Backdoor_Component_1 {
       hash1 = "7c6206eaf0c5c9c6c8d8586a626b49575942572c51458575e51cba72ba2096a4"
       hash2 = "db605d501d3a5ca2b0e3d8296d552fbbf048ee831be21efca407c45bf794b109"
    strings:
-      /* $s1 = "Project1.dll" fullword ascii */
-      /* Better: Project1.dll\x00D1 */
+      
+      
       $s1 = { 50 72 6F 6A 65 63 74 31 2E 64 6C 6C 00 44 31 }
       $s2 = "winmgmts:\\\\localhost\\root\\SecurityCenter2" fullword wide
       $s3 = "C:\\Documents and Settings\\All Users\\" fullword wide
@@ -68,7 +57,7 @@ rule Foudre_Backdoor_Component_1 {
 }
 
 rule Foudre_Backdoor_SFX {
-   meta:
+meta:
       description = "Detects Foudre Backdoor SFX"
       author = "Florian Roth"
       reference = "https://goo.gl/Nbqbt6"
@@ -82,3 +71,4 @@ rule Foudre_Backdoor_SFX {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 2000KB and all of them )
 }
+

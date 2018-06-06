@@ -1,18 +1,6 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2018-01-28
-   Identifier: Suckfly
-   Reference: https://www.symantec.com/connect/blogs/suckfly-revealing-secret-life-your-code-signing-certificates
-*/
-
 import "pe"
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Suckfly_Nidiran_Gen_1 {
-   meta:
+meta:
       description = "Detects Suckfly Nidiran Trojan"
       author = "Florian Roth"
       reference = "https://www.symantec.com/connect/blogs/suckfly-revealing-secret-life-your-code-signing-certificates"
@@ -27,7 +15,7 @@ rule Suckfly_Nidiran_Gen_1 {
 }
 
 rule Suckfly_Nidiran_Gen_2 {
-   meta:
+meta:
       description = "Detects Suckfly Nidiran Trojan"
       author = "Florian Roth"
       reference = "https://www.symantec.com/connect/blogs/suckfly-revealing-secret-life-your-code-signing-certificates"
@@ -55,7 +43,7 @@ rule Suckfly_Nidiran_Gen_2 {
 }
 
 rule Suckfly_Nidiran_Gen_3 {
-   meta:
+meta:
       description = "Detects Suckfly Nidiran Trojan"
       author = "Florian Roth"
       reference = "https://www.symantec.com/connect/blogs/suckfly-revealing-secret-life-your-code-signing-certificates"
@@ -80,3 +68,4 @@ rule Suckfly_Nidiran_Gen_3 {
         2 of them
       )
 }
+

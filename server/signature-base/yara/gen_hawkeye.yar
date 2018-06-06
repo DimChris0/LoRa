@@ -1,6 +1,5 @@
-
 rule HawkEye_Keylogger_Feb18_1 {
-   meta:
+meta:
       description = "Detects HawkEye keylogger variante observed in February 2018"
       author = "Florian Roth"
       reference = "https://app.any.run/tasks/ae2521dd-61aa-4bc7-b0d8-8c85ddcbfcc9"
@@ -13,3 +12,4 @@ rule HawkEye_Keylogger_Feb18_1 {
    condition:
       uint16(0) == 0x5a4d and filesize < 2000KB and all of them
 }
+

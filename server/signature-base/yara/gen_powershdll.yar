@@ -1,13 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-08-03
-   Identifier: PowerShell Hacktools
-   Reference: https://github.com/p3nt4/PowerShdll
-*/
-
 rule PowerShdll {
-   meta:
+meta:
       description = "Detects hack tool PowerShdll"
       author = "Florian Roth"
       reference = "https://github.com/p3nt4/PowerShdll"
@@ -21,3 +13,4 @@ rule PowerShdll {
    condition:
       1 of them
 }
+

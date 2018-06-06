@@ -1,18 +1,6 @@
-
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-09-08
-   Identifier:
-   Reference: http://blog.fortinet.com/2017/04/05/in-depth-look-at-new-variant-of-monsoon-apt-backdoor-part-2
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 import "pe"
-
 rule Monsoon_APT_Malware_1 {
-   meta:
+meta:
       description = "Detects malware from Monsoon APT"
       author = "Florian Roth"
       reference = "http://blog.fortinet.com/2017/04/05/in-depth-look-at-new-variant-of-monsoon-apt-backdoor-part-2"
@@ -33,7 +21,7 @@ rule Monsoon_APT_Malware_1 {
 }
 
 rule Monsoon_APT_Malware_2 {
-   meta:
+meta:
       description = "Detects malware from Monsoon APT"
       author = "Florian Roth"
       reference = "http://blog.fortinet.com/2017/04/05/in-depth-look-at-new-variant-of-monsoon-apt-backdoor-part-2"
@@ -58,3 +46,4 @@ rule Monsoon_APT_Malware_2 {
         filesize < 400KB and ( 1 of ($x*) or 3 of them )
       )
 }
+

@@ -1,12 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-01-25
-	Identifier: FakeM
-*/
-
 rule FakeM_Generic {
-	meta:
+meta:
 		description = "Detects FakeM malware samples"
 		author = "Florian Roth"
 		reference = "http://researchcenter.paloaltonetworks.com/2016/01/scarlet-mimic-years-long-espionage-targets-minority-activists/"
@@ -44,3 +37,4 @@ rule FakeM_Generic {
 		uint16(0) == 0x5a4d and filesize < 100KB and
 		( all of ($a*) or all of ($b*) or all of ($c*) or all of ($e*) or 1 of ($f*) )
 }
+

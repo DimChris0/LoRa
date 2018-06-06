@@ -1,14 +1,5 @@
-/*
-	Yara Rule Set
-	Author: YarGen Rule Generator
-	Date: 2016-04-20
-	Identifier: Metasploit Loader
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Metasploit_Loader_RSMudge {
-	meta:
+meta:
 		description = "Detects a Metasploit Loader by RSMudge - file loader.exe"
 		author = "Florian Roth"
 		reference = "https://github.com/rsmudge/metasploit-loader"
@@ -23,3 +14,4 @@ rule Metasploit_Loader_RSMudge {
 	condition:
 		( uint16(0) == 0x5a4d and filesize < 200KB and ( 3 of ($s*) ) ) or ( all of them )
 }
+

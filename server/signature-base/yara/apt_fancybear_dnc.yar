@@ -1,14 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-06-14
-	Identifier: Fancy Bear and Cozy Bear Report - CrowdStrike
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule COZY_FANCY_BEAR_Hunt {
-	meta:
+meta:
 		description = "Detects Cozy Bear / Fancy Bear C2 Server IPs"
 		author = "Florian Roth"
 		reference = "https://www.crowdstrike.com/blog/bears-midst-intrusion-democratic-national-committee/"
@@ -26,7 +17,7 @@ rule COZY_FANCY_BEAR_Hunt {
 }
 
 rule COZY_FANCY_BEAR_pagemgr_Hunt {
-	meta:
+meta:
 		description = "Detects a pagemgr.exe as mentioned in the CrowdStrike report"
 		author = "Florian Roth"
 		reference = "https://www.crowdstrike.com/blog/bears-midst-intrusion-democratic-national-committee/"
@@ -37,18 +28,3 @@ rule COZY_FANCY_BEAR_pagemgr_Hunt {
 		uint16(0) == 0x5a4d and 1 of them
 }
 
-rule COZY_FANCY_BEAR_modified_VmUpgradeHelper {
-	meta:
-		description = "Detects a malicious VmUpgradeHelper.exe as mentioned in the CrowdStrike report"
-		author = "Florian Roth"
-		reference = "https://www.crowdstrike.com/blog/bears-midst-intrusion-democratic-national-committee/"
-		date = "2016-06-14"
-	strings:
-		$s1 = "VMware, Inc." wide fullword
-		$s2 = "Virtual hardware upgrade helper service" fullword wide
-		$s3 = "vmUpgradeHelper\\vmUpgradeHelper.pdb" ascii
-	condition:
-		uint16(0) == 0x5a4d and
-		filename == "VmUpgradeHelper.exe" and
-		not all of ($s*)
-}

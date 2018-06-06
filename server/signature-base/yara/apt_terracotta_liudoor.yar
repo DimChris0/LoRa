@@ -1,5 +1,5 @@
 rule APT_Liudoor {
-    meta:
+meta:
         author = "RSA FirstWatch"
         date = "2015-07-23"
         description = "Detects Liudoor daemon backdoor"
@@ -22,3 +22,4 @@ rule APT_Liudoor {
     condition:
         all of them
 }
+

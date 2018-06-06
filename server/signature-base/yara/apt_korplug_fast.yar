@@ -1,5 +1,5 @@
 rule Korplug_FAST {
-    meta:
+meta:
         description = "Rule to detect Korplug/PlugX FAST variant"
         author = "Florian Roth"
         date = "2015-08-20"
@@ -23,3 +23,4 @@ rule Korplug_FAST {
             4 of ($s*)
         )
 }
+

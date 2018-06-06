@@ -1,12 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Florian Roth
-	Date: 2016-05-24
-	Identifier: TidePool (Ke3chang)
-*/
-
 rule TidePool_Malware {
-	meta:
+meta:
 		description = "Detects TidePool malware mentioned in Ke3chang report by Palo Alto Networks"
 		author = "Florian Roth"
 		reference = "http://goo.gl/m2CXWR"
@@ -28,3 +21,4 @@ rule TidePool_Malware {
 	condition:
 		( uint16(0) == 0x5a4d and filesize < 200KB and ( 1 of ($x*) ) ) or ( 4 of them )
 }
+

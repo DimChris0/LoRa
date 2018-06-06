@@ -1,12 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Symantec
-	Date: 2016-08-08
-	Identifier: Strider
-*/
-
 rule remsec_executable_blob_32 {
-   meta:
+meta:
       copyright = "Symantec"
       description = "Detects malware from Symantec's Strider APT report"
       score = 80
@@ -19,7 +12,7 @@ rule remsec_executable_blob_32 {
 }
 
 rule remsec_executable_blob_64 {
-   meta:
+meta:
       copyright = "Symantec"
       description = "Detects malware from Symantec's Strider APT report"
       score = 80
@@ -32,7 +25,7 @@ rule remsec_executable_blob_64 {
 }
 
 rule remsec_executable_blob_parser {
-   meta:
+meta:
       copyright = "Symantec"
       description = "Detects malware from Symantec's Strider APT report"
       score = 80
@@ -45,7 +38,7 @@ rule remsec_executable_blob_parser {
 }
 
 rule remsec_encrypted_api {
-   meta:
+meta:
       copyright = "Symantec"
       description = "Detects malware from Symantec's Strider APT report"
       score = 80
@@ -58,7 +51,7 @@ rule remsec_encrypted_api {
 }
 
 rule remsec_packer_A {
-   meta:
+meta:
       copyright = "Symantec"
       description = "Detects malware from Symantec's Strider APT report"
       score = 80
@@ -71,7 +64,7 @@ rule remsec_packer_A {
 }
 
 rule remsec_packer_B {
-   meta:
+meta:
       copyright = "Symantec"
       description = "Detects malware from Symantec's Strider APT report"
       score = 80
@@ -82,3 +75,4 @@ rule remsec_packer_B {
    condition:
       all of them
 }
+

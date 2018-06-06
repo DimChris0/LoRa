@@ -1,15 +1,5 @@
-/*
-   Yara Rule Set
-   Author: Florian Roth
-   Date: 2017-06-23
-   Identifier: Waterbear
-   Reference: https://goo.gl/L9g9eR
-*/
-
-/* Rule Set ----------------------------------------------------------------- */
-
 rule Waterbear_1_Jun17 {
-   meta:
+meta:
       description = "Detects malware from Operation Waterbear"
       author = "Florian Roth"
       reference = "https://goo.gl/L9g9eR"
@@ -23,7 +13,7 @@ rule Waterbear_1_Jun17 {
 }
 
 rule Waterbear_2_Jun17 {
-   meta:
+meta:
       description = "Detects malware from Operation Waterbear"
       author = "Florian Roth"
       reference = "https://goo.gl/L9g9eR"
@@ -39,7 +29,7 @@ rule Waterbear_2_Jun17 {
 }
 
 rule Waterbear_4_Jun17 {
-   meta:
+meta:
       description = "Detects malware from Operation Waterbear"
       author = "Florian Roth"
       reference = "https://goo.gl/L9g9eR"
@@ -62,7 +52,7 @@ rule Waterbear_4_Jun17 {
 }
 
 rule Waterbear_5_Jun17 {
-   meta:
+meta:
       description = "Detects malware from Operation Waterbear"
       author = "Florian Roth"
       reference = "https://goo.gl/L9g9eR"
@@ -82,7 +72,7 @@ rule Waterbear_5_Jun17 {
 }
 
 rule Waterbear_6_Jun17 {
-   meta:
+meta:
       description = "Detects malware from Operation Waterbear"
       author = "Florian Roth"
       reference = "https://goo.gl/L9g9eR"
@@ -96,7 +86,7 @@ rule Waterbear_6_Jun17 {
 }
 
 rule Waterbear_7_Jun17 {
-   meta:
+meta:
       description = "Detects malware from Operation Waterbear"
       author = "Florian Roth"
       reference = "https://goo.gl/L9g9eR"
@@ -113,7 +103,7 @@ rule Waterbear_7_Jun17 {
 }
 
 rule Waterbear_8_Jun17 {
-   meta:
+meta:
       description = "Detects malware from Operation Waterbear"
       author = "Florian Roth"
       reference = "https://goo.gl/L9g9eR"
@@ -131,7 +121,7 @@ rule Waterbear_8_Jun17 {
 }
 
 rule Waterbear_9_Jun17 {
-   meta:
+meta:
       description = "Detects malware from Operation Waterbear"
       author = "Florian Roth"
       reference = "https://goo.gl/L9g9eR"
@@ -150,7 +140,7 @@ rule Waterbear_9_Jun17 {
 }
 
 rule Waterbear_10_Jun17 {
-   meta:
+meta:
       description = "Detects malware from Operation Waterbear"
       author = "Florian Roth"
       reference = "https://goo.gl/L9g9eR"
@@ -163,9 +153,8 @@ rule Waterbear_10_Jun17 {
       ( uint16(0) == 0x5a4d and filesize < 30KB and all of them )
 }
 
-
 rule Waterbear_11_Jun17 {
-   meta:
+meta:
       description = "Detects malware from Operation Waterbear"
       author = "Florian Roth"
       reference = "https://goo.gl/L9g9eR"
@@ -181,7 +170,7 @@ rule Waterbear_11_Jun17 {
 }
 
 rule Waterbear_12_Jun17 {
-   meta:
+meta:
       description = "Detects malware from Operation Waterbear"
       author = "Florian Roth"
       reference = "https://goo.gl/L9g9eR"
@@ -195,7 +184,7 @@ rule Waterbear_12_Jun17 {
 }
 
 rule Waterbear_13_Jun17 {
-   meta:
+meta:
       description = "Detects malware from Operation Waterbear"
       author = "Florian Roth"
       reference = "https://goo.gl/L9g9eR"
@@ -220,7 +209,7 @@ rule Waterbear_13_Jun17 {
 }
 
 rule Waterbear_14_Jun17 {
-   meta:
+meta:
       description = "Detects malware from Operation Waterbear"
       author = "Florian Roth"
       reference = "https://goo.gl/L9g9eR"
@@ -234,3 +223,4 @@ rule Waterbear_14_Jun17 {
    condition:
       ( uint16(0) == 0x5a4d and filesize < 8000KB and all of them )
 }
+

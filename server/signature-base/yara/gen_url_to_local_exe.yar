@@ -1,5 +1,5 @@
 rule URL_File_Local_EXE {
-   meta:
+meta:
       description = "Detects an .url file that points to a local executable"
       author = "Florian Roth"
       reference = "https://twitter.com/malwareforme/status/915300883012870144"
@@ -11,3 +11,4 @@ rule URL_File_Local_EXE {
    condition:
       filesize < 400 and all of them
 }
+

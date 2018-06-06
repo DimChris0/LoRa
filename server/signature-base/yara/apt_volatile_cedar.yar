@@ -1,5 +1,5 @@
 rule Explosive_EXE : APT {
-	meta:
+meta:
 		description = "Explosion/Explosive Malware - Volatile Cedar APT"
 		author = "Check Point Software Technologies Inc."
 	strings:
@@ -11,7 +11,7 @@ rule Explosive_EXE : APT {
 }
 
 rule Explosion_Sample_1 {
-	meta:
+meta:
 		description = "Explosion/Explosive Malware - Volatile Cedar APT"
 		author = "Florian Roth"
 		reference = "http://goo.gl/5vYaNb"
@@ -35,7 +35,7 @@ rule Explosion_Sample_1 {
 }
 
 rule Explosion_Sample_2 {
-	meta:
+meta:
 		description = "Explosion/Explosive Malware - Volatile Cedar APT"
 		author = "Florian Roth"
 		reference = "http://goo.gl/5vYaNb"
@@ -52,7 +52,7 @@ rule Explosion_Sample_2 {
 }
 
 rule Explosion_Generic_1 {
-	meta:
+meta:
 		description = "Generic Rule for Explosion/Explosive Malware - Volatile Cedar APT"
 		author = "Florian Roth"
 		reference = "not set"
@@ -81,7 +81,7 @@ rule Explosion_Generic_1 {
 }
 
 rule Explosive_UA {
-	meta:
+meta:
 		description = "Explosive Malware Embedded User Agent - Volatile Cedar APT http://goo.gl/HQRCdw"
 		author = "Florian Roth"
 		reference = "http://goo.gl/HQRCdw"
@@ -95,7 +95,7 @@ rule Explosive_UA {
 }
 
 rule Webshell_Caterpillar_ASPX {
-	meta:
+meta:
 		description = "Volatile Cedar Webshell - from file caterpillar.aspx"
 		author = "Florian Roth"
 		reference = "http://goo.gl/emons5"
@@ -113,3 +113,4 @@ rule Webshell_Caterpillar_ASPX {
 	condition:
 		all of them
 }
+

@@ -1,14 +1,5 @@
-/*
-	Yara Rule Set
-	Author: Mixed - Kasperksy & Florian Roth
-	Date: 2015-06-10
-	Identifier: Duqu2
-*/
-
-/* Rules by Kaspersky ------------------------------------------------------ */
-
-rule apt_duqu2_loaders { 
-	meta:
+rule apt_duqu2_loaders {
+meta:
 		copyright = "Kaspersky Lab"
 		description = "Rule to detect Duqu 2.0 samples"
 		last_modified = "2015-06-09"
@@ -36,8 +27,8 @@ rule apt_duqu2_loaders {
 		( (uint32(0) == 0xe011cfd0) and ( (any of ($a*)) or (all of ($b*)) or (all of ($c*)) or (any of ($d*)) ) and filesize < 20000000 )
 }
 
-rule apt_duqu2_drivers { 
-	meta:
+rule apt_duqu2_drivers {
+meta:
 		copyright = "Kaspersky Lab"
 		description = "Rule to detect Duqu 2.0 drivers"
 		last_modified = "2015-06-09"
@@ -54,10 +45,8 @@ rule apt_duqu2_drivers {
 		uint16(0) == 0x5A4D and (any of ($a*) ) and (2 of ($b*)) and filesize < 100000
 }
 
-/* Action Loader Samples --------------------------------------------------- */
-
 rule Duqu2_Generic1 {
-	meta:
+meta:
 		description = "Kaspersky APT Report - Duqu2 Sample - Generic Rule"
 		author = "Florian Roth"
 		reference = "https://goo.gl/7yKyOj"
@@ -77,16 +66,16 @@ rule Duqu2_Generic1 {
 		hash11 = "dfe1cb775719b529138e054e7246717304db00b1"
 	strings:
 		$s0 = "Global\\{B54E3268-DE1E-4c1e-A667-2596751403AD}" fullword wide
-		$s1 = "SetSecurityDescriptorSacl" fullword ascii /* PEStudio Blacklist: strings */ /* Goodware String - occured 189 times */
+		$s1 = "SetSecurityDescriptorSacl" fullword ascii  /* Goodware String - occured 189 times */
 		$s2 = "msisvc_32@" fullword wide
-		$s3 = "CompareStringA" fullword ascii /* PEStudio Blacklist: strings */ /* Goodware String - occured 1392 times */
-		$s4 = "GetCommandLineW" fullword ascii /* PEStudio Blacklist: strings */ /* Goodware String - occured 1680 times */
+		$s3 = "CompareStringA" fullword ascii  /* Goodware String - occured 1392 times */
+		$s4 = "GetCommandLineW" fullword ascii  /* Goodware String - occured 1680 times */
 	condition:
 		uint16(0) == 0x5a4d and filesize < 150KB and all of them
 }
 
 rule APT_Kaspersky_Duqu2_procexp {
-	meta:
+meta:
 		description = "Kaspersky APT Report - Duqu2 Sample - Malicious MSI"
 		author = "Florian Roth"
 		reference = "https://goo.gl/7yKyOj"
@@ -101,21 +90,21 @@ rule APT_Kaspersky_Duqu2_procexp {
 		$x4 = "MSI.dll" fullword ascii
 
 		$s1 = "SELECT `Data` FROM `Binary` WHERE `Name`='%s%i'" fullword wide
-		$s2 = "Sysinternals installer" fullword wide /* PEStudio Blacklist: strings */
-		$s3 = "Process Explorer" fullword wide /* PEStudio Blacklist: strings */ /* Goodware String - occured 5 times */
+		$s2 = "Sysinternals installer" fullword wide 
+		$s3 = "Process Explorer" fullword wide  /* Goodware String - occured 5 times */
 	condition:
 		uint16(0) == 0x5a4d and filesize < 100KB and ( 1 of ($x*) ) and ( all of ($s*) )
 }
 
 rule APT_Kaspersky_Duqu2_SamsungPrint {
-	meta:
+meta:
 		description = "Kaspersky APT Report - Duqu2 Sample - file 2a9a5afc342cde12c6eb9a91ad29f7afdfd8f0fb17b983dcfddceccfbc17af69"
 		author = "Florian Roth"
 		reference = "https://goo.gl/7yKyOj"
 		date = "2015-06-10"
 		hash = "ce39f41eb4506805efca7993d3b0b506ab6776ca"
 	strings:
-		$s0 = "Installer for printer drivers and applications" fullword wide /* PEStudio Blacklist: strings */
+		$s0 = "Installer for printer drivers and applications" fullword wide 
 		$s1 = "msi4_32.dll" fullword wide
 		$s2 = "HASHVAL" fullword wide
 		$s3 = "SELECT `%s` FROM `%s` WHERE `%s`='CAData%i'" fullword wide
@@ -126,22 +115,23 @@ rule APT_Kaspersky_Duqu2_SamsungPrint {
 }
 
 rule APT_Kaspersky_Duqu2_msi3_32 {
-	meta:
+meta:
 		description = "Kaspersky APT Report - Duqu2 Sample - file d8a849654ab97debaf28ae5b749c3b1ff1812ea49978713853333db48c3972c3"
 		author = "Florian Roth"
 		reference = "https://goo.gl/7yKyOj"
 		date = "2015-06-10"
 		hash = "53d9ef9e0267f10cc10f78331a9e491b3211046b"
 	strings:
-		$s0 = "ProcessUserAccounts" fullword ascii /* PEStudio Blacklist: strings */
-		$s1 = "SELECT `UserName`, `Password`, `Attributes` FROM `CustomUserAccounts`" fullword wide /* PEStudio Blacklist: strings */
-		$s2 = "SELECT `UserName` FROM `CustomUserAccounts`" fullword wide /* PEStudio Blacklist: strings */
+		$s0 = "ProcessUserAccounts" fullword ascii 
+		$s1 = "SELECT `UserName`, `Password`, `Attributes` FROM `CustomUserAccounts`" fullword wide 
+		$s2 = "SELECT `UserName` FROM `CustomUserAccounts`" fullword wide 
 		$s3 = "SELECT `Data` FROM `Binary` WHERE `Name`='CryptHash%i'" fullword wide
 		$s4 = "msi3_32.dll" fullword wide
 		$s5 = "RunDLL" fullword ascii
 		$s6 = "MSI Custom Action v3" fullword wide
 		$s7 = "msi3_32" fullword wide
-		$s8 = "Operating System" fullword wide /* PEStudio Blacklist: strings */ /* Goodware String - occured 9203 times */
+		$s8 = "Operating System" fullword wide  
 	condition:
 		uint16(0) == 0x5a4d and filesize < 72KB and all of them
 }
+
